@@ -12,3 +12,13 @@
 - Arrow Functions
 - User Interaction
 - Console
+
+## Data Structures [Done]
+- Arrays
+- Array Functions
+- Maps
+- Maps Iteration and Methods,
+- Objects, Methods, this Keyword, 
+- Sets Methods and Use Cases
+- Which Data Structure to use
+
