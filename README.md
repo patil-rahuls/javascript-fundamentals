@@ -12,6 +12,10 @@
 - Arrow Functions
 - User Interaction
 - Console
+- [ES6 Features]
+- Destructuring Arrays and Objects
+- Spread Operator
+- Rest Operator
 
 ## Data Structures [Done]
 - Arrays
