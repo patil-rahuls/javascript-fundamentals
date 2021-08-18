@@ -26,3 +26,7 @@
 - Sets Methods and Use Cases
 - Which Data Structure to use
 
+## FUnctions *
+- setTimeout()
+- setInterval()
+- 
