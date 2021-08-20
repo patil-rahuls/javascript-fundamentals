@@ -31,7 +31,7 @@
 - Object Methods - forEach()
 - Set Methods - forEach(), throwaway variable ‘_’, 
 
-## FUnctions *
+## Functions [Done]
 - Default parameters
 - Pass by Value OR Pass by Reference
 - setTimeout()
@@ -39,7 +39,11 @@
 - Optional Chaining
 - Closures
 - Higher Order Functions
-- 
 
+## How Javascript Works
+- Javascript Engine
+- Javascript Runtime
+- Hoisting and TDZ
+- this Keyword
 
 _* some of the codes are collected from various sources like stackoverflow answers, udemy, and some blogs._
