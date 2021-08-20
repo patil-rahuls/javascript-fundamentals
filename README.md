@@ -32,10 +32,14 @@
 - Set Methods - forEach(), throwaway variable ‘_’, 
 
 ## FUnctions *
+- Default parameters
+- Pass by Value OR Pass by Reference
 - setTimeout()
 - setInterval()
 - Optional Chaining
 - Closures
+- Higher Order Functions
+- 
 
 
 _* some of the codes are collected from various sources like stackoverflow answers, udemy, and some blogs._
