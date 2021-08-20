@@ -27,7 +27,7 @@
 - Sets Methods and Use Cases
 - Which Data Structure to use
 - Array Methods - slice(), splice(), concat(), reverse(), forEach(), map(), filter() and reduce()
-- Array Methods - find(), 
+- Array Methods - find(), some(), flat(), flatMap(), find(), findIndex(), fill(), sort()
 - Object Methods - forEach()
 - Set Methods - forEach(), throwaway variable ‘_’, 
 
