@@ -45,5 +45,6 @@
 - Javascript Runtime
 - Hoisting and TDZ
 - this Keyword
+- Arrow Functions Vs Regular Functions
 
 _* some of the codes are collected from various sources like stackoverflow answers, udemy, and some blogs._
