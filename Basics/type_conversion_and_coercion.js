@@ -12,9 +12,10 @@ console.log(typeof age); // string
 let str = "I am " + age; // age gets converted from number type to string type (only for this statement)
 console.log(typeof age); // number
 
-// When one of the operands of + is a string, the result is a string(type conversion).
+// When one of the operands of + is a string, the operands following the '+' result in a string(type conversion).
 console.log('23' + '10' + 3 ); // 23103
 console.log('23' + '10' + 3+5);// 231035
+console.log(4 + 1 + '5' + 6);  // 556
 
 // Rest all mathematical operations work normally with coercion applied automatically by javascript.
 console.log('23' - '10' - 3); // 10

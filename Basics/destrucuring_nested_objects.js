@@ -37,10 +37,12 @@ const restaurant = {
 
 // Destructuring weekend timings
 const {
-   weekends : {
-       open: a,
-       close: b,
-   }
+    workingHours:{
+        weekends : {
+            open: a,
+            close: b,
+        }
+    }
 } = restaurant;
 console.log( a , b );               // 8 , 23
 // We destructured weekends timings to variables a and b. 

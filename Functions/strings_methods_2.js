@@ -94,3 +94,4 @@ name.repeat(4); // "Rahul Rahul Rahul Rahul Rahul"
 let rating = 4;
 console.log( `You have got ${rating} rating \n ${'🌟'.repeat(rating)}` );
 
+restaurant
