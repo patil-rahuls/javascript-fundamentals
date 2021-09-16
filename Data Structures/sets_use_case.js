@@ -20,4 +20,4 @@ console.log(chars);			// 12
 // 4. Convert Set to an Array.
 // Useful when we want to remove duplicates from an array and want to use it later.
 // spread operator works for any iterables and the set is also an iterable.
-const usersUniq = [...new Set(unq)];
+const usersUniq = [...new Set(users)];

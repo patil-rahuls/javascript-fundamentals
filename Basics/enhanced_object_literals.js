@@ -29,7 +29,7 @@ console.log(laptop.make3);          //"HP"
 const myObj = {
     myFunc:function(param1, param2){
         return [param1 , param2];
-    }
+    },
 
     // method myFunc() can be re-written as follows.
     myFunc(param1, param2){

@@ -32,7 +32,7 @@ console.log(Object.entries(weekendMeetings));
 // ]
 
 // Maps are Iterable
-for (const [key, value] of question) {
+for (const [key, value] of question) {    //  Object.entries() not required for Map
    if (typeof key === 'number'){
       console.log(`Option : ${key} : ${value}`);
    }
