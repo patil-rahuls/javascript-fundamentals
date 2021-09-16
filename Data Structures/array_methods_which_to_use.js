@@ -10,6 +10,9 @@ forEach();
 // To Implode an array to string.
 join();
 
+// To Explode a string to an Array
+split();
+
 // To get ONE element based on a condition.
 find();
 
@@ -32,7 +35,7 @@ reduce();
 // To get a new array
 // 1. part of an array
 slice();
-// 2. filtered using a conditioin
+// 2. filtered using a condition
 filter();
 // 3. apply certain logic to all elements of an array
 map();
@@ -49,6 +52,8 @@ unshift();
 // 2. Remove from orignal array
 pop();
 shift();
+// Part of array
+splice();
 // Others:
 reverse();
 sort();

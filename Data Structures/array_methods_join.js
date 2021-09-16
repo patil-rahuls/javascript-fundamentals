@@ -2,7 +2,9 @@
 // DATA STRUCTURES - ARRAY METHODS - JOIN() //////////////////
 //////////////////////////////////////////////////////////////
 
-// JOIN: Implodes an array. (this is similar to implode in PHP)
+// ARRAY -> STRING
+
+// JOIN: Implodes an array (this is similar to implode in PHP)
 // IMP: returns a string NOT ARRAY.
 const arr = [11,22,33,44,55,66];
 const result = arr.join('-');

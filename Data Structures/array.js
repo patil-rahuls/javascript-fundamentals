@@ -9,6 +9,8 @@ const howMany = myArr.length;         // no parenthesis after length
 
 console.log(myArr[myArr.length - 1]); // expressions allowed inside [ ]
 
+console.log(typeof myArr);            // "object" Because Array is still an Object. (a special one)
+
 // An array as an array element is allowed. 
 // An expression as an array element allowed.
 const newArr = ['rahul', hitesh, 1990-1000, myArr];

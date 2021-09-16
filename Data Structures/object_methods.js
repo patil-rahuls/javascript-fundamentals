@@ -44,7 +44,7 @@ sayHi();
 // Notice, there is no receiver here. The receiver is what separates a function from a method.
 
 // Method call using DOT notation
-myObj.greet("Reader");
+myObj.greet("Reader");     // Easy to read
 
 // Method call using BRACKET notation
-myObj['greet']("Reader");
+myObj['greet']("Reader");  // Difficult to read

@@ -8,7 +8,7 @@
 // IMP: its 2nd parameter is not index, but length (i.e. no. of items to be removed)
 
 const arr = [11, 22, 33, 44, 55, 66];
-arr.slice(4);       // This returns [55,66] and mutates "arr"
+arr.splice(4);       // This returns [55,66] and mutates "arr"
 console.log(arr);   // [11 , 22, 33, 44]
 
 // The extracted elements are now gone ! Whatever is taken out is gone, the remaining elements are what our array is mutated with.
