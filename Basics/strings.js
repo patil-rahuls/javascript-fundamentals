@@ -4,17 +4,16 @@
 
 const myName = "Rahul";
 const exp = 6;
-
-// Use template literal strings for multiline
 console.log('String with \n\
 multiple \n\
 lines');
 
+// Use template literal strings `...` for multiline
 console.log(`String
 multiple
 lines`);
 
-// variables in a template literal string
+// Using Variables in a template literal string
 const myName = 'Rahul';
 const exp = 10;
 const show = `Hello. 

@@ -43,7 +43,7 @@ const sayHi = () => console.log(`Hi there !!`);
 sayHi();
 // Notice, there is no receiver here. The receiver is what separates a function from a method.
 
-// Method call using DOT notation
+// Method call using DOT notation - Preferred.
 myObj.greet("Reader");     // Easy to read
 
 // Method call using BRACKET notation

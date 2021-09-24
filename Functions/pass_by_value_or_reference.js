@@ -53,6 +53,5 @@ checkIn(flight, meee);              // "Invalid Passport"
 // When we pass an object to a function, we are actually passing its reference, 
 // However, that reference is still a value in memory.
 
-
 // We do pass references, but not pass 'by' references in javascript. That's the distinction.
 

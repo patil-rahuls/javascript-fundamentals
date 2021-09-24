@@ -9,7 +9,7 @@
 // filter() filters out elements from an array that do not satisfy a certain condition.
 const txn = [122,24,355,-55,780,-999];
 const positives = txn.filter(function(amount, index, arr){
-   amount > 0;                      // no return statement for single line arrow fn.
+   amount > 0;
 });
 
 console.log(positives);              // [122,24,355,780]

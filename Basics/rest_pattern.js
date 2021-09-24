@@ -5,6 +5,12 @@
 // (three dots "..." on LHS OF assignment operator "=")
 // This is similar to the spread operator. 
 // The subtle difference is that we use the three dots "..."  on the LHS of the assignment operator "=".
+
+// Packs comma separated values into an Iterable
+// Rest operator can "only" be used in following 2 cases:
+        //    1. packing an Iterable into one variable.
+        //    2. as a function parameter.
+        
 const arr = [1,2,3,4,5,6,7];
 const [a,b,c,d, ...rest_values ] = arr;
 // ‘rest_values’ will be an array of the rest of the elements of arr. Hence the name "REST" operator(I believe).

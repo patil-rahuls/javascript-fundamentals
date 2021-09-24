@@ -98,9 +98,8 @@ bookEW ( 56 , 'Rahul Patil' ) ;
 
 // This is how we simply copy a method from an object and 'bind' it to another object (eurowings in our case).
 // We can do this for all the airlines/objects in our example.
-const bookEW = book.bind(eurowings);
-const bookEW = book.bind(lufthansa);      // actually no need to do this, lufthansa already have its book()
-const bookEW = book.bind(swiss);
+const bookEW = book.bind(lufthansa);
+const bookSW = book.bind(swiss);
 
 // Let’s modify the book method for one object. (lets say-  to accept only name)
 const bookNewEW = book.bind(eurowings, 45);

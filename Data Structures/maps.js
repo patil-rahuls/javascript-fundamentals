@@ -8,7 +8,7 @@
 
 const param = [['yes', 1] , ['no', 2] , ['may be', 3]];
 const myMap = new Map( param );
-// param - Any iterable which stores a key value pair.
+// param should be in this format [ [k,v], [k,v], [k,v] , ...]
 
 // An example of a Map
 const question = new Map ([

@@ -6,6 +6,11 @@
 // This is similar to the spread operator. 
 // The subtle difference is that we use the three dots "..."  on the LHS of the assignment operator "=".
 
+// Packs comma separated values into an Iterable
+// Rest operator can "only" be used in following 2 cases:
+        //    1. packing an Iterable into one variable.
+        //    2. as a function parameter.
+
 const add = function(...varArgs){
    // varArgs will be an packed into an array
    let sum = 0;

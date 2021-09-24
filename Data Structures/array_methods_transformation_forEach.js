@@ -14,7 +14,7 @@ const arr = [11,22,33,44,55,66];
 arr.forEach( function(item) {
    console.log( item );
 });
-// Observe that the callback function parameter 'item' is the current array elementin each iteration.
+// Observe that the callback function parameter 'item' is the current array element in each iteration.
 
 // forEach() takes 3 parameters.
 // current_item, current_index, and entire array

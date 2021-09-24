@@ -22,6 +22,8 @@ brand.lastIndexOf('p');             // 2
 
 // slice() - works same as for array
 // slice(start_index , end_index):  element at 'end_index' is not included in the returned result.
+model.slice(1);
+model.slice(-1);
 
 // splice() - 
 // No, there is no such thing as a String.splice, but you can try this:

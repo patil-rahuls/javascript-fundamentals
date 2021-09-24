@@ -11,7 +11,7 @@ const newName = name[0].toUpperCase() + name.slice(1);
 // "RAHUL"
 
 	
-// trim(): trims start and ends of a string:
+// trim(): trims empty spaces at the start and ends of a string:
 const newStr = myStr.trim();
 
 

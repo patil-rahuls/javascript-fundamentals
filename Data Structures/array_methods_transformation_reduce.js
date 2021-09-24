@@ -30,6 +30,6 @@ const max = numbers2.reduce(
            else
                  return curr_amount;
      }
-, txn[0]);                 // here this is the starting item
+, txn[0]);                 // here this parameter is the starting item
 console.log(max);          // 100
 

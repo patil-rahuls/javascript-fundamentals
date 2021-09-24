@@ -14,8 +14,8 @@ console.log(`Waiting...`);
 
 // This mechanism is called asynchronous javascript.
 
-// setTimeout() with parameters
-// SYNTAX : setTimeout( function(params) { ...  } , timeout , params );
+// setTimeout() with parameters and arguments
+// SYNTAX : setTimeout( function(params) { ...  } , timeout , arguments );
 setTimeout(
    (val1, val2) => console.log(
        `Values passed here are

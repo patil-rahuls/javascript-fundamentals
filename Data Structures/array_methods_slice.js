@@ -18,3 +18,10 @@ arr.slice(1, -2); // [ 22,33,44 ]
 // It's also important to observe that the slice() array method can be used to copy arrays by not passing any arguments 
 const arr1 = arr.slice();
 
+// Observe this : 
+const arr = [1,2,3];
+const brr = arr;
+arr[0] = 99;            // Changed arr
+console.log(brr);       // brr also gets changed, because both have same references.
+                        // Hence use slice to get an independent 'COPY' of an array.
+const crr = arr.slice();
