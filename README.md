@@ -8,15 +8,17 @@
 - Falsy Values 
 - Short Circuiting
 - Nullish Coalescing Operator
-- Strings
-- Arrow Functions
-- User Interaction
 - Console
+- for-of loop
+- typeof
+- User Interaction
 - _[ES6 Features]_
+- Arrow Functions
 - Destructuring Arrays and Objects
 - Spread Operator
 - Rest Operator
 - Enhanced Object Literal
+- Template Literals
 
 ## Data Structures [Done]
 - Arrays
