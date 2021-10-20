@@ -2,12 +2,12 @@
 
 ## Basic Concepts [Done]
 - let, var and const and their Comparision
-- Falsy Values 
-- Function Declaration and Expression
 - Type Conversion and Coercion
+- Function Declaration and Expression
 - Equality Operators
-- Nullish Coalescing Operator
+- Falsy Values 
 - Short Circuiting
+- Nullish Coalescing Operator
 - Strings
 - Arrow Functions
 - User Interaction
