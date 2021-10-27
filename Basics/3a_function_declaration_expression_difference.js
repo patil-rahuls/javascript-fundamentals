@@ -3,14 +3,14 @@
 //////////////////////////////////////////////////////////////
 
 // In usage, the key difference is that function declarations are hoisted, while function expressions are not.
-// With Function Declaration, a function can be called before its declaration.
+// With a function declaration, a function can be called before its declaration.
 const a1 = calcArea (34);
 
 function calcArea ( side ) {     // Function declared later.
    return side**2;
 }
  
-// But the same DOES NOT work with Function Expression.
+// But the same DOES NOT work with a function expression.
 const a1 = calcArea2(34);        // Error "Cannot Access 'calcArea2' before initialization."
 
 const calcArea2 = function(side){ // Function declared later.

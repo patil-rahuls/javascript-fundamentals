@@ -51,4 +51,3 @@ const ingredients = [
 // console.log(ingredients);
 
 restaurant.orderPasta(...ingredients);
-

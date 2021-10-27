@@ -2,7 +2,7 @@
 // LOOPING OVER OBJECTS //////////////////////////////////////
 //////////////////////////////////////////////////////////////
 
-// keys(), values() and entries()
+// Object.keys(), Object.values() and Object.entries()
 const performance = {
    rahul: { startedAt : 72 , high : 99} ,
    hitesh:{ startedAt : 51 , high : 98} ,
@@ -30,13 +30,13 @@ console.log(values);
 // { startedAt : 83 , high : 100},
 
 
-// 3. GET Object ENTRIES [property , value]
+// 3. GET Object ENTRIES [property , value] (Returns Array)
 const entries = Object.entries(performance);
 // array(1) [ "rahul" ,  { startedAt : 72 , high : 99} ]
 // array(2) [ "hitesh" , { startedAt : 51 , high : 98} ]
 // array(3) [ "aajesh" , { startedAt : 83 , high : 100}]
 
-// Loop over Object.entries (Destructuring used)
+// Loop over Object.entries (Destructuring used, remember the object properties should match with each entry's)
 for (const [key, {startedAt,high}] of Object.entries(openingHours)){
    console.log(`${key}'s score opened at ${startedAt} and closed at ${high}`);
 }

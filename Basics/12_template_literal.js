@@ -20,4 +20,5 @@ const show = `Hello.
 I am ${myName}.
 I am a ${exp} years experienced IT Professional.`;
 
-// Tip: Use template strings to create multiline HTML code snippets dynamically from code.
+// TIP: 
+// Use template strings to create multiline HTML code snippets dynamically from code.

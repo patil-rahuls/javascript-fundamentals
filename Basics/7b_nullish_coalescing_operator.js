@@ -2,10 +2,10 @@
 // NULLISH COALESCING OPERATOR ?? ////////////////////////////
 //////////////////////////////////////////////////////////////
 
-// It works same as || except that it does not consider 0, NaN and '' as falsy values. 
+// It works same as || except that it does not consider 0, NaN and '' as falsy values.
 // Nullish : null and undefined. (NOT 0, NaN and ''). Only null and undefined will be considered falsy.
 
-usersCount = 0;
+const usersCount = 0;
 const maxUsers = usersCount || 10;
 console.log(maxUsers);
 // 10
@@ -18,8 +18,8 @@ console.log(maxUsers);
 
 // NULLISH COALESCING OPERATOR ?? is useful when you are considering 0 or '' as truthy value.
 
-// Using ?? with NaN is not worth to use. Always use || to handle NaN
-minUsers = NaN;
+// Using ?? with NaN is not worth to use, because it will be returning NaN. Always use || to handle NaN
+const minUsers = NaN;
 const totalUsers = minUsers ?? 23;
 console.log(totalUsers);
 // NaN

@@ -16,10 +16,10 @@ const arr = [200, 450, -400, 3000, -650, -130, 70, 1300];
 console.log(arr.sort());   //  [-130, -400, -650, 1300, 200, 3000, 450, 70]
 
 // The numbers are converted to strings and then sorted.
-// This type of sorting is commonly seen in our machines file manager.
+// This type of sorting is commonly seen in our machines' file manager.
 
 // IMP: sort() accepts a callback function.
-// It accepts two parameters - two consecutive elements of the given array 
+// It accepts two parameters - two consecutive elements of the given array
 // If the callback function returns true, then, the two consecutive elements are swapped.
 
 const arr = [200, 450, -400, 3000, -650, -130, 70, 1300];

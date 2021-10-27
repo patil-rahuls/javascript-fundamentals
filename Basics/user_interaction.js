@@ -13,5 +13,5 @@ alert(`You are ${age} years old!`);       // You are 28 years old!
 // confirm():
 // Shows a modal window with a question string and two buttons: OK and Cancel. 
 // returns true if OK is pressed or false otherwise.
-let isDev = confirm("Are you a developer?");
-alert( isDev );
+if(confirm("Are you a developer?"))
+    alert("LOL");

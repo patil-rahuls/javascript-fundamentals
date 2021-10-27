@@ -4,7 +4,7 @@
 
 // VERY IMP : || and && operators do not always return boolean
 
-// 1. SHORT CIRCUITING || - Keeps evaluating until a 'Truthy' value is found and short-circuits at that value. Returns last value otherwise.
+// 1. SHORT CIRCUITING || - Keeps evaluating until a 'Truthy' value is found and returns it. Returns last value otherwise.
 console.log(undefined || 0 || "" || 'Hello' || 23 || null);
 // Outputs 'Hello'
 // In OR operation, the first truthy value is printed. 
@@ -18,7 +18,8 @@ console.log(3 || 'Rahul');      // 3
 console.log(true || 0);         // true
 console.log(undefined || null); // null - as no truthy value found, so the last value is returned.
 
-// 2. SHORT CIRCUITING && - Keeps evaluating until a 'FALSY' value is found and short-circuits at that value. Returns last value otherwise.
+
+// 2. SHORT CIRCUITING && - Keeps evaluating until a 'FALSY' value is found and returns it. Returns last value otherwise.
 console.log(undefined && 0 && "" && 'Hello' && 23 && null);
 // Outputs undefined
 // In AND operation, the first falsy value is printed.
@@ -28,7 +29,9 @@ console.log(3 && 'Rahul');
 // Outputs 'Rahul'
 // as no falsy value found, so the last value is returned.
 
-console.log(0 && 'Rahul');     // 0 - short circuited at 0 - falsy value.
+console.log(0 && 'Rahul');     
+// Outputs 0
+
 console.log('Hello' && 23 && null && "rest"); 
 // null. The first Falsy value where the short circuit happened.
 

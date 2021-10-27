@@ -7,6 +7,7 @@
 // Spread operator can "only" be used in following 2 cases:
         //    1. expanding an Iterable
         //    2. as a function argument.
+        // There can be more than one spread element in an expression.
 
 const arr = [4,5,6,7];
 const badnewArr = [1,2, arr[0] , arr[1] , arr[2]];

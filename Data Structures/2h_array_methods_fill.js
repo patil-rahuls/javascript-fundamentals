@@ -10,7 +10,6 @@ const x = new Array(7);
 x.fill(1, 3, 6);
 console.log(x) ;                       // [empty x 3 , 1,1,1, empty]
 
-
 // Array.from():
 // Array here is a constructor. and from() is just another function. So it's a chain.
 const y = Array.from({length : 7} , () => 1);

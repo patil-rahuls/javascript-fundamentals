@@ -42,9 +42,12 @@ const newCategories = [ ...restaurant.categories , 'Non-Veg'];
 console.log(newCategories);
 // ['North Indian', 'Chinese', 'South Indian', 'Italian' , 'Non-Veg']
 
+
+// TIP#1:
 // Copy array
 const copyCategories =  [...restaurant.categories];       // creates a shallow copy.
 
+// TIP#2:
 // Join 2 arrays or more:
 const allItems = [...restaurant.categories, ...restaurant.starters];
 

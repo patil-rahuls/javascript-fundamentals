@@ -31,7 +31,9 @@ e == f            // true
 e === f           // true
 
 // string primitive and String Object
-"abc" == new String("abc")    // true
-"abc" === new String("abc")   // false
+"abc" == new String("abc")                  // true
+"abc" === new String("abc")                 // false
+new String("rahul") == new String("rahul")  // false
+new String("rahul") === new String("rahul") // false
 
 // More on this here :https://stackoverflow.com/questions/359494/which-equals-operator-vs-should-be-used-in-javascript-comparisons

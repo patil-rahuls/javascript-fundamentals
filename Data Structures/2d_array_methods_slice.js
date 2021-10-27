@@ -17,7 +17,7 @@ arr.slice(1, -2); // [ 22,33,44 ]
 // IMP & USEFUL : Copying an array
 // It's also important to observe that the slice() array method can be used to copy arrays by not passing any arguments 
 const arr1 = arr.slice();
-
+// But Why?
 // Observe this : 
 const arr = [1,2,3];
 const brr = arr;

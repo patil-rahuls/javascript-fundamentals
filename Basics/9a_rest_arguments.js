@@ -26,7 +26,7 @@ const result = add(...arr);
 // Advantage of REST ARGUMENTS: 
 // The function can now accept both a single value as well as a spread-array as its input.
 add (2,3,4);
-add (...arr) ;
+add (...arr);   //  This is spread operator. Remember Spread Operator is used as an fn argument.
 
 // Another example
 const someObj = {

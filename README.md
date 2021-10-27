@@ -1,33 +1,32 @@
 # Important Javascript Concepts with Codes
 
 ## Basic Concepts [Done]
-- let, var and const and their Comparision
+- var, let _[ES6]_ and const _[ES6]_, and their comparision
 - Type Conversion and Coercion
 - Function Declaration and Expression
 - Equality Operators
 - Falsy Values 
+- _[ES6]_ Destructuring Assignment
 - Short Circuiting
 - Nullish Coalescing Operator
+- _[ES6]_ Spread Operator
+- _[ES6]_ Rest Operator
+- _[ES6]_ Arrow Functions
+- _[ES6]_ Enhanced Object Literal
+- _[ES6]_ Template Literals
+- _[ES6]_ for-of loop
+- _[ES6]_ Default Parameters
 - Console
-- for-of loop
 - typeof
 - User Interaction
-- _[ES6 Features]_
-- Arrow Functions
-- Destructuring Arrays and Objects
-- Spread Operator
-- Rest Operator
-- Enhanced Object Literal
-- Template Literals
 
 ## Data Structures [Done]
 - Arrays
 - Array Functions
-- Maps
-- Maps Iteration and Methods,
-- Objects, Methods, this Keyword, 
-- Sets Methods and Use Cases
-- Which Data Structure to use
+- Objects, Methods, this Keyword
+- _[ES6]_ Maps, iteration and methods
+- _[ES6]_ Sets, methods and use cases
+- Which data structure to use?
 - Array Methods - slice(), splice(), concat(), reverse(), forEach(), map(), filter() and reduce()
 - Array Methods - find(), some(), flat(), flatMap(), find(), findIndex(), fill(), sort()
 - Object Methods - forEach()

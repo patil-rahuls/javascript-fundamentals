@@ -17,4 +17,3 @@ for( const item of Object.entries(menu) ){
 for (const  [index , item ] of Object.entries(menu)){
    console.log(`${index+1} : ${item}`);
 }
-

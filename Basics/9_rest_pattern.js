@@ -10,6 +10,7 @@
 // Rest operator can "only" be used in following 2 cases:
         //    1. packing an Iterable into one variable.
         //    2. as a function parameter.
+        // There can only be ONE rest element in any destructuring assignment.
         
 const arr = [1,2,3,4,5,6,7];
 const [a,b,c,d, ...rest_values ] = arr;
@@ -21,7 +22,7 @@ console.log(a,b,c,d,...rest_values);        // 1,2,3,4,5,6,7
 const [dish1 , dish2 , , ...restDishes] = [...restaurant.starters , ...restaurant.categories];
 
 // "restDishes" gets the 'rest' of the menu items
-// IMP: The rest operator has to be at the end of any destructuring assignment. 
+// IMP: The rest operator has to be at the end of any destructuring assignment.
 // (The example shown above), else how will Javascript know until when it has to take the elements?
 // Also there can only be one rest element in any destructuring assignment.
 

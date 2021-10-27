@@ -2,7 +2,7 @@
 // ENHANCED OBJECT LITERALS [ES 6] ///////////////////////////
 //////////////////////////////////////////////////////////////
 
-// A Better way to write javascript objects (es6 new syntax).
+// A Better way to write javascript objects (new es6 syntax).
 
 // Computed Properties and Object Literals
 var name = "make";
@@ -38,7 +38,5 @@ const myObj = {
     //i.e. removed the colon and function keyword
 
    workingHrsObj,                   // An outside object
-   newWorkingHours : workingHrsObj, // Used a different property name.
-
+   newWorkingHours : workingHrsObj, // An outside object using a different property name.
 };
-

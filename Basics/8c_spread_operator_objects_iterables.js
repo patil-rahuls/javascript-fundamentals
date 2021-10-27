@@ -54,6 +54,7 @@ const newRestaurantWithMoreInfo = {
 const copyRestaurant = {...restaurant};
 copyRestaurant.name = "Rahul's Cafe";
 
+// TIP:
 // Spread operators work on all sorts of ITERABLES like ARRAYS, MAPS, SETS, STRINGS, OBJECTS. Spread operator on string.
 // And it works the same way for all of 'em
 const str = "rahul";

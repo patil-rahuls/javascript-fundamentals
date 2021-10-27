@@ -2,7 +2,7 @@
 // DESTRUCTURING ASSIGNMENT  /////////////////////////////////
 //////////////////////////////////////////////////////////////
 
-// [ ], { } is at the LHS of = 
+// [ ] and { } is at the LHS of = 
 
 // Example 1
 const arr = [2,3,4];
@@ -21,7 +21,7 @@ const restaurant = {
    categories:['North Indian', 'Chinese', 'South Indian', 'Italian'],
    
    order:function(starter_index, cat_index){
-       return [this.starters[starter_index] , this.categories[cat_index]];                  
+       return [this.starters[starter_index] , this.categories[cat_index]];
        // Returns 2 values
    }
 };
