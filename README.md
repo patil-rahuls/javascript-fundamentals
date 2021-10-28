@@ -53,13 +53,13 @@
 - Storage location of primitives and objects
 
 ## Object Oriented Javascript
-- Prototype Object
-- Prototypes
-- Prototypal Inheritance
+- Object Oriented Programming in Javascript
+- Constructor Functions and Prototypes
+- Prototypal Inheritance & Prototype Chain
 - ES6 Classes
 - ES6 Classes - getters and setters
 - Object.create
-- static
+- Static Methods
 
 ## Modules
 - Introduction

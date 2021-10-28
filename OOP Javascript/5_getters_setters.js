@@ -4,6 +4,7 @@
 
 // Every Object in Javascript has two important properies : 
 // getter and setter
+// Remember they are properties, not methods.
 
 const myObj = {
     firstName : 'Rahul',

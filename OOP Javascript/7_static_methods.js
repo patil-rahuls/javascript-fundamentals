@@ -8,7 +8,7 @@
 
 // [1,2,3,4].from(); will not work
 
-// More rexample of sttic methods
+// More example of sttic methods
 Number.parseFloat(12);
 
 // These(static methods) are made so as to keep them linked to Array only.

@@ -44,10 +44,10 @@ Student.prototype.greet = function(){
 
 // Classes In Javascript actually hide the true nature of prototypal inheritance
 
-// 1. classes are not hoisted, even if they are declarations
+// 1. classes are not hoisted, even if they are declared
 // 2. like functions, classes are also first class citizens.
 //      that means, we can pass them to functions and return them from functions.
-//      this happens because classes are basically special kinds of functions behind the scenes.
+//      this happens because classes are basically special kinds of functions(Contructor Functions) behind the scenes.
 // 3. Classes are executed in "strict mode". even though u haven't activated the strict mode.
 
 // Constructor functions vs es6 classes ?
