@@ -12,6 +12,7 @@ Student.prototype;
 // Now we can add function to this prototype object.
 Student.prototype.show = function(){
     console.log("Roll No: " + this.rollNo + " _ Name: " + this.name);
+    // 'this' points to the object which is calling this method.
 };
 // Now show() is accessible from the prototype property.
 console.log(Student.prototype);
@@ -22,7 +23,7 @@ Student.show();
 // Using prototype there exists only one copy of show() available to all instances of Student.
 
 // Exaplanation:
-// In "Student.prototype" the "prototype" is not the Student's prototype. Its a property. Its a property of objects created from Student constructor.
+// In "Student.prototype" the "prototype" is not the Student's prototype. Its a property. Its a property of objects that will be created from Student's constructor.
 // Usng isPrototypeOf() we can check which property is a prototype of an Object.
 
 s1 = new Student('Hitesh', 33);
@@ -33,7 +34,7 @@ console.log( Student.prototype.isPrototypeOf(s2) );                 // true
 console.log( Student.prototype.isPrototypeOf(s3) );                 // true
 console.log( Student.prototype.isPrototypeOf(Student) );            // false
 
-// "Student.prototype" is a prototype of the created objects Not the "Student". 
+// "Student.prototype" is a prototype of the created objects Not the "Student".
 // See it as 'Student.prototypeOfLinkedObject'
 
 // Also see __proto__
@@ -41,11 +42,10 @@ console.log( Student.prototype.isPrototypeOf(Student) );            // false
 // It creates __proto__ property.
 
 
-
 // Not just methods, we can also set properties on prototype
 Student.prototype.school = "KV INS HAMLA, MUMBAI";
 console.log(s1.school);
-console.log(s1.school);
+console.log(s2.school);
 
 // Remember this property "school" is not seen in Student Object.
 // 
@@ -53,6 +53,19 @@ console.log(Student.hasOwnProperty('name'));        // true
 console.log(Student.hasOwnProperty('school'));      // false
 // false because "school" is not inside Student object. 
 // It simply has access to it because its in prototype property of Student.
+
+// Every object in javascrpt has a property called __proto__
+// It is not a prototype property, but simply is a prototype.
+
+console.log(s1.__proto__ === Student.prototype); // true;
+// __proto__ of objects created from constructor functions are same as prototype property of the constructor.
+
+// in "Student.prototype", the prototype is not os Student, but its the prototype of the obejcts that are going to be created from the Student.
+console.log(Student.prototype.isPrototypeOf(Student));  // false
+console.log(Student.prototype.isPrototypeOf(s1));       // true
+
+// in "s1.__proto__" the __proto__ is actually prototype of s1 object.
+
 
 //////////////////////////////////////////////////////////////
 

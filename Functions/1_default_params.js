@@ -6,8 +6,7 @@ const bookings  = [];
 const createBooking = function(
    flightNum,
    numPassngrs = 1,              // parameter's default value
-   fareTotal = 1999*numPassngrs  // We can have an expression here, if 
-                                 // variable numPassngrs is defined earlier.
+   fareTotal = 1999*numPassngrs  // We can have an expression as a default param value
    ){
       const booking = {
          flightNum,

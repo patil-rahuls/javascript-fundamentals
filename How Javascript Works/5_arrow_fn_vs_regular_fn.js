@@ -2,6 +2,8 @@
 // ARROW Fn. VS REGULAR Fn. //////////////////////////////////
 //////////////////////////////////////////////////////////////
 
+// 'this' keyword in arrow function references its outer scope.
+
 const obj = {
     name: 'Rahul',
 
@@ -35,7 +37,7 @@ const obj = {
         // ...   
         const innerFn = function(){
             // ...
-            console.log(this.name);         // Cannot read property 'year' of undefined
+            console.log(this.name);         // Cannot read property 'name' of undefined
         };
         innerFn();                          // Because it's called just like a regular function and not using an object.
     }

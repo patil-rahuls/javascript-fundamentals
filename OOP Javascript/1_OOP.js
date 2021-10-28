@@ -7,11 +7,11 @@
 // methods - behaviour
 // all into one block.
 
-// we use Obejcts to model real world or abstract fatures.
+// we use Objects to model real world or abstract fatures.
 
-// OOP's goal is to  organize code, make it flexibleand easier to maintain.
+// OOP's goal is to organize code, make it flexible and easier to maintain.
 
-// Traditional OOP - Classes and Instanes.
+// Traditional OOP - Classes and Instances.
 
 // How we model real world data into classes?
 // 1. Abstraction - hide details of implementation.
@@ -33,7 +33,7 @@ Instantiation             |    Prototypal Inheritance/Delegation
      |                    |               |
   Instance                |             Object
 
-// In javascript, we say Objects are linked to a Prototype Object 
+// In javascript, Objects are linked to a Prototype Object.
 
 // The Prototype Object contains properties and methods.
 // These properties and methods can be accessed by all objects that are linked to the prototype.
@@ -49,13 +49,12 @@ Instantiation             |    Prototypal Inheritance/Delegation
 // Array.prototype.indexOf()
 // ... etc.
 
-// Array.prototype is the prototype of all array objects that we create in javascript.
+// Array.prototype is the prototype object of all arrays that we create in javascript.
 // Therefore all arrays have access to the prototype methods.
 
-****// array delegates the method ... complete this sentence..
 
 //////////////////////////////////////////////////////////////
-// How do we create objects ?
+// How do we create prototype objects ?
 //////////////////////////////////////////////////////////////
 // 1. constructor functions
 // 2. ES6 Classes
@@ -67,9 +66,9 @@ Instantiation             |    Prototypal Inheritance/Delegation
 // new Array(...), new Set(...) , new Map(...) These are all constructers.
 
 // 2. ES6 Classes
-// work exactly like constructor functions.
+// work exactly like constructor functions, but with a cleaner syntax.
 // Not like traditional OOP classes.
-// They are just an abstraction over the constructor functions.
+// They are just an abstraction over the constructor functions.(syntactic sugar)
 
 // 3. Object.create()
 // Easiest and straightforward way to link an object to a prototype object.

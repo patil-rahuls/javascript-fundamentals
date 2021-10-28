@@ -23,7 +23,7 @@ const myObj = {
 };
 
 // The "this" keyword:
-// Just like most the programming languages, "this" refers to the Object context.
+// Just like most the programming languages, "this" refers to the current Object.
 // i.e. it points to the current object.
 
 // We use this keyword to access the current object’s properties.

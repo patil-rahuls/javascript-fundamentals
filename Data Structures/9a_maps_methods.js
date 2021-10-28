@@ -72,7 +72,6 @@ myMap.size; // no parentheses () after size.
 // 6. clear()
 // Truncates Map
 myMap.clear();
-myMap.size;             // 0
 
 
 // 7. keys()

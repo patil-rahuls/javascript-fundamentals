@@ -40,6 +40,9 @@
 - Optional Chaining
 - Closures
 - Higher Order Functions
+- call, apply and bind methods
+- IIFE
+- string methods
 
 ## How Javascript Works
 - Javascript Engine
@@ -47,5 +50,19 @@
 - Hoisting and TDZ
 - this Keyword
 - Arrow Functions Vs Regular Functions
+- Storage location of primitives and objects
+
+## Object Oriented Javascript
+- Prototype Object
+- Prototypes
+- Prototypal Inheritance
+- ES6 Classes
+- ES6 Classes - getters and setters
+- Object.create
+- static
+
+## Modules
+- Introduction
+- 
 
 _* some of the codes are collected from various sources like stackoverflow answers, udemy, and some blogs._

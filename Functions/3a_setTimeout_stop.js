@@ -10,9 +10,8 @@ const myTimerFn = setTimeout(
    () => { console.log("Handler fn.") },
    3000 
 );
-
+// ...
 stop = true;
-
 if(stop)
    clearTimeout(myTimerFn);
 

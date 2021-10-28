@@ -2,6 +2,8 @@
 // TIMER FUNCTIONS - setTimeout() ////////////////////////////
 //////////////////////////////////////////////////////////////
 
+// SYNTAX : setTimeout( callback_function, timeout);
+
 setTimeout(() => console.log(`I started after 3 seconds`) , 3000);
 console.log(`Waiting...`);
 // 'Waiting...'

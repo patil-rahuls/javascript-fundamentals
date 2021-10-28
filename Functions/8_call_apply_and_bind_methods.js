@@ -149,7 +149,7 @@ const VAT = addTax.bind( null , 0.23 ) ;
 // we set the rate as 0.23(second parameter above) and the object passed is null. 
 // In addTax() there is no ‘this’ keyword, hence we simply passed null.
 
-// VAT(3299); // 3299 + 3299*0.23
+VAT(3299); // 3299 + 3299*0.23
 
 // Using bind() gives us a new function.
 // There might be cases where you need a specific function instead of default params. 

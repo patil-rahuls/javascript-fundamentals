@@ -93,12 +93,12 @@ test(3);
 // 3. and the last console.log is executed. It won't wait for the timer’s callback.
 // 4. after 2 seconds, the callback function is called and executed.
 
-// Observe that the callback function of the timer was executed completely independently of the test(). 
+// Observe that the callback function of the timer was executed completely independent of the test(). 
 // But still the callback function was able to access all the variables which were created in the test(). 
 // This happens because closures have priority over scope chain.
 
 
-// Example : 3
+// Example : 3 (IIFE)
 (function() {
    const header = document.querySelector('h1');
    header.style.color = 'red';

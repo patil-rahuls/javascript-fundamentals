@@ -42,7 +42,7 @@ new Student('Rahul', 1);
 // 4. function now returns the object {} (which no longer remains empty by now)
 
 const Student = function (name , rollNo) {
-    // This will print an empty object
+    // This will print an empty object of type "Student"
     console.log(this);                  // Student {}
 };
 // We call it with the "new" operator.
@@ -57,9 +57,9 @@ const Student = function (name , rollNo) {
     // Method inside a constructor function. 
     // NEVER DO THIS - Because if we create 1000s of instances of Student using this constructor,
     // then each of these 1000 obj would have this function's copy.
-    this.show{
+    this.show = function(){
         console.log("Roll No: " + this.rollNo + " _ Name: " + this.name);
-    };
+    }
 };
 // We call it with the "new" operator.
 const s1 = new Student('Rahul', 1);

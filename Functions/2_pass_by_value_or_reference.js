@@ -2,6 +2,8 @@
 // PASS BY VALUES AND PASS BY REFERENCE //////////////////////
 //////////////////////////////////////////////////////////////
 
+// Objects are passed by reference***, primitives are passed by value.
+
 // Pass by values and pass by reference:
 let flight = 'STD__223';            // a primitive
 let meee = {                        // an Object
@@ -41,8 +43,8 @@ const newObj = meee;
 
 // Example.
 const newPassport = (person) => {
-   meee.passport = Math.trunc(Math.rando()*1000000000);
-   // Changing meee's property
+   person.passport = Math.trunc(Math.rando()*1000000000);
+   // Changing person's property
 }
 
 newPassport(meee);                  // object 'meee' gets changed.
