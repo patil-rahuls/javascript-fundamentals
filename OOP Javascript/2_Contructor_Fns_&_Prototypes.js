@@ -1,45 +1,38 @@
 //////////////////////////////////////////////////////////////
-// How do we create objects ?
-//////////////////////////////////////////////////////////////
-// 1. constructor functions
-// 2. ES6 Classes
-// 3. Object.create()
-
-// 1. constructor functions
-// creates objects from function.
-// This is how built-in objects like Arrays, Maps or Sets are actualy implemented.
-// new Array(...), new Set(...) , new Map(...) These are all constructers.
-
-// 2. ES6 Classes
-// work exactly like constructor functions.
-// Not like traditional OOP classes.
-// They are just an abstraction over the constructor functions.
-
-// 3. Object.create()
-// Easiest and straightforward way to link an object to a prototype object.
-//////////////////////////////////////////////////////////////
-
-
-//////////////////////////////////////////////////////////////
 // 1. constructor functions
 //////////////////////////////////////////////////////////////
 
 // We can create our own constructor functions.
 // Convention - Constructor functions start with Capital letter. (new Map() , new Array(), new Set() .. etc.)
-// Arrow Functions are not used to create constructor functions, because they dont have their own 'this' keyword.
+// IMP: Arrow Functions are not used to create constructor functions, because they dont have their own 'this' keyword.
+// in Arrow functions, 'this' points to global object.
 
-// We create a constructor functions like a regular function (First Letter Capital)
+// We create a constructor functions like a regular function.
+// The only distinction is that the first letter is capital and 
 const Student = function (name , rollNo) {
-    // ...
+    this.name = name;
+    this.rollNo = rollNo;
 };
 // We call it with the "new" operator.
-new Student('Rahul', 1);
+const stu = new Student('Rahul', 1);
 
-// The Magic is in "new" keyword above. 4 things hapepn:
-// 1. New {} empty obj is created.
-// 2. The function is called. And this referes to the empty obj {}
-// 3. {} empty obj is linked to the prototype.
-// 4. function now returns the object {} (which no longer remains empty by now)
+// The Magic is in "new" keyword above. 4 things happen:
+// Before looking into these 4 events, lets understand that every object has a property.
+// Student() constructor function will have a proerty ".prototype". Its value is nothing but prototype of the objects created using Student() constructor function.
+// We can access it like this : "Student.prototype"
+
+// Similarly, "Student.prototype" itself has a property called ".constructor". Its value is nothing but the constructor function itself i.e. Student().
+
+// And, again, the object created using constructor funtion "stu" also has a property called ".__proto__" which is "linked" to constructor function's prototype i.e. "Student.prototype"
+
+// So here are the 4 events that happen.
+// 1. An {} empty obj is created. [ Object [stu] ]
+// 2. The 'this' object is linked to this newly created obj {} and its properties now point to 'this' object.
+//    That means, inside the execution context of the constructor fn, 'this' points to that empty object.
+//    And because we have the parameters 'Rahul' and '1', eventually, these are set to the 'this' object.
+// 3. Then this newly created object is linked to the constructor function's prototype property. "Student.prototype"
+// 4. function now returns the object {} (which no longer remains empty by now) to the object 'stu'.
+// The Student.prototype is now the prototype of "stu" object.
 
 const Student = function (name , rollNo) {
     // This will print an empty object of type "Student"

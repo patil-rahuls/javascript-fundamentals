@@ -23,7 +23,7 @@ Student.show();
 // Using prototype there exists only one copy of show() available to all instances of Student.
 
 // Exaplanation:
-// In "Student.prototype" the "prototype" is not the Student's prototype. Its a property. Its a property of objects that will be created from Student's constructor.
+// In "Student.prototype" the "prototype" is not the Student's prototype. Its a property. Its a Prototype of objects that will be created from Student's constructor.
 // Usng isPrototypeOf() we can check which property is a prototype of an Object.
 
 s1 = new Student('Hitesh', 33);
