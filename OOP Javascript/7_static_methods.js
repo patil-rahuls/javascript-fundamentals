@@ -22,6 +22,7 @@ const Student = function(){
 // Static method.
 Student.hey = function(){
     console.log("Hey There !");
+    this.age = 29;  // this inside static method points to current CLASS/Constructor Function.
 }
 // Static method call
 Student.hey();      // We are calling it through Class and not by any object.
@@ -31,7 +32,6 @@ s1.hey();       // Error: s1.hey is not a function.
 // Because hey() is simply not in Student prototype object.
 
 // Static methods just like any other programming languages, are called by the Class directly.
-
 
 // 'this' in static method.
 Student.hey = function(){
@@ -69,4 +69,4 @@ Student.hey();
 // On the other hand, hey() is a static method and it is added to the Student Class iself
 
 // Same aplies to classes defined using constructor functions.
-
+// We use static methods to create helpers of class/constructor fns.

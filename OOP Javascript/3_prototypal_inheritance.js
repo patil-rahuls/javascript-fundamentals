@@ -66,6 +66,22 @@ console.log(Student.prototype.isPrototypeOf(s1));       // true
 
 // in "s1.__proto__" the __proto__ is actually prototype of s1 object.
 
+// Example:
+const Car = function(make, speed){
+    this.speed = speed;
+    this.make = make;
+};
+
+Car.prototype.accelerate = function(){
+    this.speed++ && console.log(this.speed);
+};
+Car.prototype.break = function(){
+    this.speed-- && console.log(this.speed);
+};
+
+const BMW = new Car("BMW", 120);
+const Mercedes = new Car("Mercedes", 95);
+
 
 //////////////////////////////////////////////////////////////
 

@@ -42,6 +42,24 @@ Student.prototype.greet = function(){
     console.log(` Hii ${this.name} !!`);
 };
 
+// Example:
+class Car {
+    constructor(make, speed){
+        this.speed = speed;
+        this.make = make;
+    }
+    accelerate(){
+        this.speed++ && console.log(this.speed);
+    }
+
+    break(){
+        this.speed-- && console.log(this.speed);
+    }
+};
+
+const BMW = new Car("BMW", 120);
+const Mercedes = new Car("Mercedes", 95);
+
 // Classes In Javascript actually hide the true nature of prototypal inheritance
 
 // 1. classes are not hoisted, even if they are declared
