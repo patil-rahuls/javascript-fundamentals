@@ -17,7 +17,7 @@ const myObj = {
         return `Full Name : ${this.lastName}  ${this.firstName}`;
     },
 
-    //setter - at least one parameter required.
+    //setter should have ONE parameter COMPULSORY
     set info(lName){
         this.lastName = lName;
     }
@@ -77,3 +77,4 @@ class User {
 const u1 = new User("Deepika");
 const u1 = new User("Deepika@123");
  
+// TIP: We can have more than one getters and setters in an ES6 class/Constructor function.

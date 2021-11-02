@@ -60,6 +60,8 @@
 - ES6 Classes - getters and setters
 - Object.create
 - Static Methods
+- Inheritance
+- Encapsulation
 
 ## Modules
 - Introduction
