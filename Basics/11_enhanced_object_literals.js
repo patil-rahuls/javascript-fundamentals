@@ -1,18 +1,17 @@
 //////////////////////////////////////////////////////////////
-// ENHANCED OBJECT LITERALS [ES 6] ///////////////////////////
+// ENHANCED OBJECT LITERALS [ES6] ////////////////////////////
 //////////////////////////////////////////////////////////////
 
-// A Better way to write javascript objects (new es6 syntax).
+// A better way to write javascript objects with the new ES6 syntax.
 
 // Computed Properties and Object Literals
 var name = "make";
 const laptop = {
     [name]: "Apple"
 }
-
 console.log(laptop.make);           //"Apple"
 
-// Another example:
+//  Example
 var name = "make";
 var i = 0;
 const laptop = {

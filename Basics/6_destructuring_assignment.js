@@ -1,19 +1,20 @@
 //////////////////////////////////////////////////////////////
-// DESTRUCTURING ASSIGNMENT  /////////////////////////////////
+// DESTRUCTURING ASSIGNMENT [ES6] ////////////////////////////
 //////////////////////////////////////////////////////////////
 
 // [ ] and { } is at the LHS of = 
 
-// Example 1
+//  Example #1
 const arr = [2,3,4];
 const a = arr[0];
 const c = arr[2];
 
 // Using Destructuring
 const [x,y,z] = arr;
-console.log(x,y,z);                        // 2 , 3 , 4
+console.log(x,y,z);                        
+// 2 , 3 , 4
 
-// Example 2
+//  Example #2
 const restaurant = {
    name:'Rahul’s Cafe',
    location:'Madh-Island Mumbai India',
@@ -35,12 +36,15 @@ const [first_cat, second_cat] = restaurant.categories;
 
 const [ , , third_cat] = restaurant.categories;
 
-// IMP: Swap two values WITHOUT using a temporary variable
+//  Example #3
+// IMP: Swap two values WITHOUT using a temporary variable.
 [first, second] = [second, first];
 
-// Mutate variable values
+//  Example #4
+// Mutate variable values by Destructuring an Array.
 const arr = [7 , 8];
 let a = 111, b = 999;
 
 [a  , b ] = arr;
-console.log(a,b);                     // 7 , 8
+console.log(a,b);
+// 7 , 8

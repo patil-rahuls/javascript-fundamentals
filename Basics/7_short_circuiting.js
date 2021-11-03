@@ -2,9 +2,10 @@
 // SHORT CIRCUITING && and || ////////////////////////////////
 //////////////////////////////////////////////////////////////
 
-// VERY IMP : || and && operators do not always return boolean
+// TIP: || and && operators do not always return boolean
 
-// 1. SHORT CIRCUITING || - Keeps evaluating until a 'Truthy' value is found and returns it. Returns last value otherwise.
+// 1. SHORT CIRCUITING ||
+// Keeps evaluating until a 'Truthy' value is found and returns it. Returns last value otherwise.
 console.log(undefined || 0 || "" || 'Hello' || 23 || null);
 // Outputs 'Hello'
 // In OR operation, the first truthy value is printed. 
@@ -19,7 +20,8 @@ console.log(true || 0);         // true
 console.log(undefined || null); // null - as no truthy value found, so the last value is returned.
 
 
-// 2. SHORT CIRCUITING && - Keeps evaluating until a 'FALSY' value is found and returns it. Returns last value otherwise.
+// 2. SHORT CIRCUITING &&
+// Keeps evaluating until a 'FALSY' value is found and returns it. Returns last value otherwise.
 console.log(undefined && 0 && "" && 'Hello' && 23 && null);
 // Outputs undefined
 // In AND operation, the first falsy value is printed.

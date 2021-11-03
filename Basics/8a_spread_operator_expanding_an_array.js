@@ -1,14 +1,16 @@
 //////////////////////////////////////////////////////////////
-// SPREAD OPERATOR - EXPANDING AN ARRAY //////////////////////
+// SPREAD OPERATOR [ES6] - EXPANDING AN ARRAY ////////////////
 //////////////////////////////////////////////////////////////
 
 // (three dots "..." on RHS OF assignment operator "=")
-// Returns comma separated values of an Iterable
-// Spread operator can "only" be used in following 2 cases:
-        //    1. expanding an Iterable
-        //    2. as a function argument.
+// The Spread Operator unpacks elements of iterable objects such as Arrays, Sets, Maps and Objects into a list.
+// Spread Operator can "ONLY" be used in following 2 cases:
+        //    1. Expanding an Iterable.
+        //    2. As function argument.
 
-// Consider the following object as an example.
+// There can be more than one spread element in an expression.
+
+// 1. Expanding an Iterable.
 const restaurant = {
    name:'Rahul’s Cafe',
    location:'Madh-Island Mumbai India',
@@ -48,6 +50,5 @@ console.log(newCategories);
 const copyCategories =  [...restaurant.categories];       // creates a shallow copy.
 
 // TIP#2:
-// Join 2 arrays or more:
+// Join 2 Arrays or more:
 const allItems = [...restaurant.categories, ...restaurant.starters];
-

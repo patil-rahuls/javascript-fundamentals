@@ -1,16 +1,17 @@
 //////////////////////////////////////////////////////////////
-// REST ARGUMENTS ////////////////////////////////////////////
+// REST ARGUMENTS [ES6] //////////////////////////////////////
 //////////////////////////////////////////////////////////////
 
 // (three dots "..." on LHS OF assignment operator "=")
-// This is similar to the spread operator. 
-// The subtle difference is that we use the three dots "..."  on the LHS of the assignment operator "=".
+// The Rest Operator packs elements of a LIST into an iterable objects such as Arrays, Sets, Maps and Objects.
+// Rest Operator can "ONLY" be used in following 2 cases:
+        //    1. Packing an Iterable.
+        //    2. As function parameter.
 
-// Packs comma separated values into an Iterable
-// Rest operator can "only" be used in following 2 cases:
-        //    1. packing an Iterable into one variable.
-        //    2. as a function parameter.
+// There can only be ONE Rest element in an expression.
+// The Rest Operator has to be at the end of any destructuring assignment.
 
+// 2. As function parameter
 const add = function(...varArgs){
    // varArgs will be an packed into an array
    let sum = 0;
@@ -23,12 +24,12 @@ const arr = [1,2,3,4,5];
 const result = add(...arr);
 // The function defined above takes comma separated n number of arguments and packs them into an array (varArgs).
 
-// Advantage of REST ARGUMENTS: 
+// Advantage of Rest Operator: 
 // The function can now accept both a single value as well as a spread-array as its input.
 add (2,3,4);
 add (...arr);   //  This is spread operator. Remember Spread Operator is used as an fn argument.
 
-// Another example
+//  Example
 const someObj = {
    expand : function(val1 , ...restValues){
        console.log(val1 , restValues);
@@ -37,4 +38,3 @@ const someObj = {
 
 someObj.expand("Hi" , "Hello" , "There" , "Hey");
 // "Hi" , ["Hello" , "There" , "Hey"]
-

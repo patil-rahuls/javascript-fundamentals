@@ -18,11 +18,11 @@
 - _[ES6]_ Default Parameters
 - Console
 - typeof
-- User Interaction
+- User Interaction (Browser)
 
 ## Data Structures [Done]
 - Arrays
-- Array Functions
+- Array Methods
 - Objects, Methods, this Keyword
 - _[ES6]_ Maps, iteration and methods
 - _[ES6]_ Sets, methods and use cases
@@ -62,6 +62,7 @@
 - Static Methods
 - Inheritance
 - Encapsulation
+- Chaining Class Methods
 
 ## Modules
 - Introduction

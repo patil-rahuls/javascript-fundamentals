@@ -2,11 +2,11 @@
 // DESTRUCTURING OBJECTS /////////////////////////////////////
 //////////////////////////////////////////////////////////////
 
-// Useful in destructuring the APIs data. 
-// We need to specify the correct property name in the destructuring assignment
-// Use { } for objects. [ ] for arrays.
+// Useful in destructuring the APIs data.
+// We need to specify the correct property name in the destructuring assignment.
+// Use { } for objects and [ ] for arrays.
 
-// Consider the following object as an example.
+//  Example #1
 const restaurant = {
     name:'Rahul’s Cafe',
     location:'Madh-Island Mumbai India',
@@ -24,7 +24,6 @@ const restaurant = {
 
     order:function(starter_index, cat_index){
         return [this.starters[starter_index] , this.categories[cat_index]];                  
-        // Returns 2 values
     }
 };
 
@@ -47,13 +46,15 @@ console.log( name , timings , offers );
 // },
 // Array(4) ['North Indian', 'Chinese', 'South Indian', 'Italian']
 
-// Default data with destructuring objects. We might not know whether data will be present or not in an object just in case(like API responses)
+// Default Data with destructuring objects.
+// We might not know whether data will be present or not in an object just in case(API responses)
 const { menu : [] , starters : myNameForStarters = []  } = restaurant;
 console.log(menu, myNameForStarters);
 // Array(0) [],
 // Array(4) ['Crispy Corn Chaat', 'Hara Bhara Kebab', 'All Paneer Starters', 'Corn Kabab']
 
-// Mutating variables:
+//  Example #2
+// Mutate variables values by Destructuring an Object.
 const myObj = {a:91 , b:2 , c:3 , d:4 , e:5};
 let a = 111;
 let b = 999;

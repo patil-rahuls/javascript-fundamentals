@@ -4,7 +4,7 @@
 
 // [ ] is at the LHS of = 
 
-// Nested destructuring:
+// Nested Destructuring
 const arr = [ 2,4,6, [1,3,5] ] ;
 const [ i , , , j ]  = arr;
 console.log(i, j);                 // 2 , [1,3,5] ;

@@ -3,14 +3,15 @@
 //////////////////////////////////////////////////////////////
 
 // Abstract equality operator "=="
-// aka loose equality operator and type coercion occurs here.
+// AKA loose equality operator .
+// Type Coercion occurs here.
 console.log('18' == 18);   // true because of implicit type coercion.
 
 // Strict equality operator "===" 
-// is a strict equality check operator. It does not perform type coercion.
+// NO Type Coercion.
 console.log('18' === 18);  // false
 
-// Objects and Arrays are references in the memory and references are always different
+// Objects and Arrays are references in the HEAP and references are always different.
 var a = [1,2,3];
 var b = [1,2,3];
 
@@ -23,17 +24,18 @@ a === b           // false
 c == d            // false
 c === d           // false
 
-// strings with same values are equal if they are primitives.
+// Strings with same values are equal if they are Primitive.
 var e = "text";
 var f = "te" + "xt";
 
 e == f            // true
 e === f           // true
 
-// string primitive and String Object
+// String Primitive and String Object Comparision.
 "abc" == new String("abc")                  // true
 "abc" === new String("abc")                 // false
+
 new String("rahul") == new String("rahul")  // false
 new String("rahul") === new String("rahul") // false
 
-// More on this here :https://stackoverflow.com/questions/359494/which-equals-operator-vs-should-be-used-in-javascript-comparisons
+//https://stackoverflow.com/questions/359494/which-equals-operator-vs-should-be-used-in-javascript-comparisons

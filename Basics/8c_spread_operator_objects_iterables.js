@@ -1,14 +1,16 @@
 //////////////////////////////////////////////////////////////
-// SPREAD OPERATOR - OBJECTS AND ITERABLES ///////////////////
+// SPREAD OPERATOR [ES6] - OBJECTS ///////////////////////////
 //////////////////////////////////////////////////////////////
 
 // (three dots "..." on RHS OF assignment operator "=")
-// Returns comma separated values of an Iterable
-// Spread operator can "only" be used in following 2 cases:
-        //    1. expanding an Iterable
-        //    2. as a function argument.
+// The Spread Operator unpacks elements of iterable objects such as Arrays, Sets, Maps and Objects into a list.
+// Spread Operator can "ONLY" be used in following 2 cases:
+        //    1. Expanding an Iterable.
+        //    2. As function argument.
 
-// Consider the following object as an example.
+// There can be more than one spread element in an expression.
+
+// Spread Operator on Objects.
 const restaurant = {
    name:'Rahul’s Cafe',
    location:'Madh-Island Mumbai India',
@@ -55,9 +57,7 @@ const copyRestaurant = {...restaurant};
 copyRestaurant.name = "Rahul's Cafe";
 
 // TIP:
-// Spread operators work on all sorts of ITERABLES like ARRAYS, MAPS, SETS, STRINGS, OBJECTS. Spread operator on string.
-// And it works the same way for all of 'em
+// Spread Operators work on all sorts of ITERABLES like ARRAYS, MAPS, SETS, STRINGS, OBJECTS.
 const str = "rahul";
 const letters = [...str , ' ' , 'P.'];
 console.log(letters);                           // rahul P.
-

@@ -4,7 +4,7 @@
 
 // Useful in destructuring the APIs data. 
 // We need to specify the correct property name in the destructuring assignment
-// Use { } for objects. [ ] for arrays.
+// Use { } for objects and [ ] for arrays.
 
 // Consider the following object as an example.
 const restaurant = {

@@ -3,11 +3,11 @@
 //////////////////////////////////////////////////////////////
 
 // 2. Scope
-// let and const are block scoped while var is function scoped.
+// *let* and *const* are block scoped while *var* is function scoped.
 
-// From a stackoverflow answer, 
-// variables declared by var keyword are scoped to the immediate function body (hence the function scope) 
-// while let variables are scoped to the immediate enclosing block denoted by { } (hence the block scope). 
+// Variables declared by *var* are scoped to the immediate function body (hence the function-scope).
+// While *let* and *const* variables are scoped to the immediate enclosing block denoted by { } (hence the block-scope).
+
 // In general, a block is any code within curly braces { }, including functions, loops and conditional statements.
 
 //  Example #1
@@ -40,7 +40,7 @@ foo();             // "functional scope"
 console.log(x);    // "global scope"
 
 //  Example #3
-// Scope changes when a variable is declared without let, var or const keyword.
+// Scope changes when a variable is declared without *let*, *var* or *const* keyword.
 {
    let a = 9;
    b= 8;        // b is not declared using any of 'let' or 'const' or 'var' keywords.

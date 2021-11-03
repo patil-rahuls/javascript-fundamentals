@@ -1,14 +1,16 @@
 //////////////////////////////////////////////////////////////
-// SPREAD OPERATOR - FUNCTION ARGUMENTS //////////////////////
+// SPREAD OPERATOR [ES6] - FUNCTION ARGUMENTS ////////////////
 //////////////////////////////////////////////////////////////
 
 // (three dots "..." on RHS OF assignment operator "=")
-// Returns comma separated values of an Iterable
-// Spread operator can "only" be used in following 2 cases:
-        //    1. expanding an Iterable
-        //    2. as a function argument.
+// The Spread Operator unpacks elements of iterable objects such as Arrays, Sets, Maps and Objects into a list.
+// Spread Operator can "ONLY" be used in following 2 cases:
+        //    1. Expanding an Iterable.
+        //    2. As function argument.
 
-// Consider the following object as an example.
+// There can be more than one spread element in an expression.
+
+// 2. As function argument
 const restaurant = {
    name:'Rahul’s Cafe',
    location:'Madh-Island Mumbai India',

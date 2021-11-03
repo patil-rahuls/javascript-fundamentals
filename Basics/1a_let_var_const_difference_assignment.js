@@ -3,22 +3,25 @@
 //////////////////////////////////////////////////////////////
 	
 // 1. Assignment
-// Variables declared using let and var can be re-assigned.
+// Variables declared using *let* and *var* can be re-assigned.
 let a = 10;
 a = 20;
 
 var b = 'rahul';
 b = 'I got re-assigned';
 
-// while variables declared using const cannot
+// Variables declared using *const* cannot be re-assigned.
 const c = 4.5;
 c = false;    // Uncaught TypeError: Assignment to constant variable.
 
-// This makes const the best choice for variables that don’t need to change, and it prevents mistakes such as accidental re-assignment.
+// This makes *const* the best choice for declaring variables that don’t need to change.
+// Tt prevents mistakes such as accidental re-assignment.
 
-// However, for arrays and objects const does ALLOW mutations, which means that their elements can change using methods (push(), pop(), shift() etc. for arrays).
+// However, for Objects *const* does ALLOW mutation NOT re-assignment.
+// re-assignment not allowed for Objects.
 const myArr = [];
 myArr = [1,2,3]; // Uncaught TypeError: Assignment to constant variable
 
+// Mutation allowed for Objects.
 myArr.push(1);   // This works.
 myArr[9] = 10;   // This works too
