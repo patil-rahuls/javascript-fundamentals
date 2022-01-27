@@ -2,6 +2,7 @@
 // DESTRUCTURING NESTED OBJECTS //////////////////////////////
 //////////////////////////////////////////////////////////////
 
+// Unpacks(and assigns) values from arrays, or properties from objects, into distinct variables.
 // Useful in destructuring the APIs data. 
 // We need to specify the correct property name in the destructuring assignment
 // Use { } for objects and [ ] for arrays.

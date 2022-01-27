@@ -5,10 +5,10 @@
 // Initializing an Array.
 const myArr = ['rahul', 'hitesh', 'aajesh'];
 
-// Initializing an Array using constructor.
+// Initializing an Array using constructor function.
 const birthYears = new Array(1992, 1991, 1993);
 
-// legth of an Array 
+// length of an Array 
 const howMany = myArr.length;         // no parenthesis after length
 
 console.log(myArr[myArr.length - 1]); // expressions allowed inside [ ]

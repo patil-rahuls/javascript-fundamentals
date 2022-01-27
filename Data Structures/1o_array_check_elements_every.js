@@ -7,7 +7,7 @@
 // Hence the name every.
 
 const check = wallet.every( acc => acc.bal >0 );
-if(check) 
+if(check)
    alert(`All Wallet balance are positive.`);
 
 

@@ -13,7 +13,7 @@
 
 // 2. As function parameter
 const add = function(...varArgs){
-   // varArgs will be an packed into an array
+   // varArgs will be an packed into an array (provided we pass an array to this fn)
    let sum = 0;
    for (const i=0; i< varArgs.length ; i++)
        sum += varArgs[i];

@@ -3,6 +3,9 @@
 //////////////////////////////////////////////////////////////
 
 // To iterate over an Iterable.
+// for..of returns a list of "values" of the numeric properties of the object being iterated
+// This is a more standardised way of iterating over an iterable in javascript.
+
 for (const item of menu){
    console.log(item);
 }

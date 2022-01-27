@@ -6,4 +6,3 @@
 const arr = [11,22,33,44,55,66];
 arr.reverse();
 console.log(arr);          // [66,55,44,33,22,11]
-

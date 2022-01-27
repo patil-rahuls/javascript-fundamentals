@@ -16,7 +16,8 @@ console.log(typeof true);           // "boolean"
 
 // Despite being not a number, it is considered to be a Number type.
 console.log(typeof NaN);            // "number"
-// So in JS, Numbers range is like this : ... -2, -1, 0, NAN, 1, 2, 3, 4, ...
+console.log(typeof Infinity);       // "number"
+// So in JS, Numbers range is like this : NAN, ..., -2, -1, 0, 1, 2, ... , Infinity
 
 const square = num => num*num;
 console.log(typeof square);         // "function"

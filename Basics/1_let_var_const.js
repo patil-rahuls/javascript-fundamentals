@@ -12,6 +12,6 @@
 
 // A *const* variable for primitive data needs to be initialized while declaring.
 const a;        // Error "Missing initializer in const declaration."
-const a = 2021; // This is correct for primitive.
-const b = {};   // This is allowed in case of Objects.
-const c = [];   // An array is a special type of Object, hence allowed.
+const b = 2021; // This is correct for primitive.
+const c = {};   // This is allowed in case of Objects.
+const d = [];   // An array is a special type of Object, hence allowed.

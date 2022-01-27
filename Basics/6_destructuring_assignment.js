@@ -2,6 +2,7 @@
 // DESTRUCTURING ASSIGNMENT [ES6] ////////////////////////////
 //////////////////////////////////////////////////////////////
 
+// Unpacks(and assigns) values from arrays, or properties from objects, into distinct variables.
 // [ ] and { } is at the LHS of = 
 
 //  Example #1

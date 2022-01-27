@@ -2,6 +2,7 @@
 // DESTRUCTURING OBJECTS /////////////////////////////////////
 //////////////////////////////////////////////////////////////
 
+// Unpacks(and assigns) values from arrays, or properties from objects, into distinct variables.
 // Useful in destructuring the APIs data.
 // We need to specify the correct property name in the destructuring assignment.
 // Use { } for objects and [ ] for arrays.
@@ -46,7 +47,7 @@ console.log( name , timings , offers );
 // },
 // Array(4) ['North Indian', 'Chinese', 'South Indian', 'Italian']
 
-// Default Data with destructuring objects.
+// *Default Data with destructuring objects.
 // We might not know whether data will be present or not in an object just in case(API responses)
 const { menu : [] , starters : myNameForStarters = []  } = restaurant;
 console.log(menu, myNameForStarters);

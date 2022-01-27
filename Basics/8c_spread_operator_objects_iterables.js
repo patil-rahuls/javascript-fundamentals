@@ -42,7 +42,7 @@ const restaurant = {
     return `Here is your Pasta with ${ing1} , ${ing2} and ${ing3}`;
   }
 };
-    
+
 const newRestaurant = {...restaurant};
 // Copies all properties of the "restaurant" object to "newRestaurant" object.
 

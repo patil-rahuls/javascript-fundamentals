@@ -3,17 +3,17 @@
 //////////////////////////////////////////////////////////////
 
 // Type Conversion
-let age = 28;         
+let age = 28;
 console.log(typeof age); // number
 age = '28';
 console.log(typeof age); // string
 
 // Type Coercion (implicit type conversion)
-let str = "I am " + age; // age gets converted from number type to string type (only for this statement)
+let str = "I am " + age; // age gets converted from number type to string type (only for this assignment)
 console.log(typeof age); // number
 
 // When one of the operands of + is a string,
-// the operands following the '+' are converted into string(Type Coercion).
+// the operands after FIRST string operand, are converted into string(Type Coercion).
 console.log('23' + '10' + 3 ); // 23103
 console.log('23' + '10' + 3+5);// 231035 and NOT 23108
 console.log(4 + 1 + '5' + 6);  // 556

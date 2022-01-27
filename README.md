@@ -15,6 +15,7 @@
 - _[ES6]_ Enhanced Object Literal
 - _[ES6]_ Template Literals
 - _[ES6]_ for-of loop
+- for-in loop
 - _[ES6]_ Default Parameters
 - Console
 - typeof

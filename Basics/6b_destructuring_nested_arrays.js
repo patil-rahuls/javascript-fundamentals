@@ -2,6 +2,7 @@
 // NESTED DESTRUCTURING ASSIGNMENT  //////////////////////////
 //////////////////////////////////////////////////////////////
 
+// Unpacks(and assigns) values from arrays, or properties from objects, into distinct variables.
 // [ ] is at the LHS of = 
 
 // Nested Destructuring

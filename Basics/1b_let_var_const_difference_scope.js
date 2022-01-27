@@ -18,26 +18,26 @@ function run() {               // function scope.
    {                           // Block scope.
       var moo = "Mooo"
       let baz = "Bazz";
-      console.log(moo, baz);  // Mooo Bazz
+      console.log(moo, baz);   // Mooo Bazz
    }
    console.log(moo);           // Mooo
-   console.log(baz);           // ReferenceError
+   console.log(baz);           // Uncaught ReferenceError: baz is not defined
 }
 run();
 
 //  Example #2
-var x = "global scope";
+var x = "global scope";       
 function foo() {
    var x = "functional scope";
    console.log(x);
 }
 
 {
-   let x = "block scope"; // Only accessible in this enclosing block
+   let x = "block scope";      // Only accessible in this enclosing block
 }
 
-foo();             // "functional scope"
-console.log(x);    // "global scope"
+foo();                         // "functional scope"
+console.log(x);                // "global scope"
 
 //  Example #3
 // Scope changes when a variable is declared without *let*, *var* or *const* keyword.

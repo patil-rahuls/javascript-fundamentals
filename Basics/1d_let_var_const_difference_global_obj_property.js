@@ -13,3 +13,5 @@ console.log(window.bar); // undefined - ‘window’ object is a global object
 
 // Variables declared using *let* are not accessible to global objects like the *window* object. 
 // The purpose of *let* statements is only to free up memory when not needed in a certain block.
+
+// In HTML, the global scope is the window object. All global variables belong to the window object.
