@@ -2,9 +2,9 @@
 // SHORT CIRCUITING && and || ////////////////////////////////
 //////////////////////////////////////////////////////////////
 
-// TIP: || and && operators do not always return boolean
+// The operators || and && do not always return boolean.
 
-// 1. SHORT CIRCUITING ||
+// 1. SHORT CIRCUITING LOGICAL OR - ||
 // Keeps evaluating until a 'Truthy' value is found and returns it. Returns last value otherwise.
 console.log(undefined || 0 || "" || 'Hello' || 23 || null);
 // Outputs 'Hello'
@@ -39,3 +39,5 @@ console.log('Hello' && 23 && null && "rest");
 
 // From the above examples, we observed that the || and && operations do not always return a boolean, 
 // instead they return the data based on the operands (where the short circuiting happens).
+
+

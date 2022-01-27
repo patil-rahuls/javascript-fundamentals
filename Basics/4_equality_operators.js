@@ -2,8 +2,7 @@
 // EQUALITY OPERATORS ("==" and "===") ///////////////////////
 //////////////////////////////////////////////////////////////
 
-// Abstract equality operator "=="
-// AKA loose equality operator .
+// Abstract(loose) equality operator "=="
 // Type Coercion occurs here.
 console.log('18' == 18);   // true because of implicit type coercion.
 
@@ -24,6 +23,8 @@ a === b           // false
 c == d            // false
 c === d           // false
 
+JSON.stringify(a) === JSON.stringify(b); // true
+
 // Strings with same values are equal if they are Primitive.
 var e = "text";
 var f = "te" + "xt";
@@ -39,3 +40,5 @@ new String("rahul") == new String("rahul")  // false
 new String("rahul") === new String("rahul") // false
 
 //https://stackoverflow.com/questions/359494/which-equals-operator-vs-should-be-used-in-javascript-comparisons
+
+

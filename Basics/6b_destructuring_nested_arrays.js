@@ -12,3 +12,5 @@ console.log(i, j);                 // 2 , [1,3,5] ;
 
 const [  , x , ,  [ , , y]] = arr; 
 console.log(x , y);                // 4 , 5 
+
+

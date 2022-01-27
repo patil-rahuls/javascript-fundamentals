@@ -18,3 +18,5 @@ console.log(Boolean(NaN));       // false
 // Empty objects are not Falsy 
 console.log(Boolean({}));        // true
 console.log(Boolean([]));        // true
+
+

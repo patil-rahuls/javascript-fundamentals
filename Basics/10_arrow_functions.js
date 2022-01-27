@@ -28,3 +28,5 @@ const someFunction = ( x, y, parameter3) => {  // Accepts 3 parameters x , y and
    return x*y*parameter3;
 }
 console.log(someFunction(4,5,7));
+
+

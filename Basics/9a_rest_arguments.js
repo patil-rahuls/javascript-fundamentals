@@ -27,7 +27,7 @@ const result = add(...arr);
 // Advantage of Rest Operator: 
 // The function can now accept both a single value as well as a spread-array as its input.
 add (2,3,4);
-add (...arr);   //  This is spread operator. Remember Spread Operator is used as an fn argument.
+add (...arr);   //  This is spread operator. Remember Spread Operator is used as fn call argument.
 
 //  Example
 const someObj = {
@@ -38,3 +38,5 @@ const someObj = {
 
 someObj.expand("Hi" , "Hello" , "There" , "Hey");
 // "Hi" , ["Hello" , "There" , "Hey"]
+
+

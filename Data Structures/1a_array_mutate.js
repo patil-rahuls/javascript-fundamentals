@@ -37,3 +37,5 @@ console.log(myArr);  // ['kisan', 'rahul', 'hitesh', 'aajesh']
 let scholar = myArr.shift();
 console.log(myArr);  // ['rahul', 'hitesh', 'aajesh']
 console.log(scholar);// 'kisan'
+
+

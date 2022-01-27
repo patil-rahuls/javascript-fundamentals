@@ -15,3 +15,5 @@ alert(`You are ${age} years old!`);       // You are 28 years old!
 // returns true if OK is pressed or false otherwise.
 if(confirm("Are you a developer?"))
     alert("LOL");
+
+

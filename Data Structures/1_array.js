@@ -23,3 +23,5 @@ const newArr = ['rahul', hitesh, 1990-1000, myArr];
 myArr + 10;           // Appends the '10' to the last element of array
                       // myArr becomes ['rahul', 'hitesh', 'aajesh10']
 myarr - 10;           // "NaN"
+
+

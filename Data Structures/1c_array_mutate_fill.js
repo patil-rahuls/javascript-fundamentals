@@ -23,3 +23,5 @@ const yyy = Array.from ({length : 7} , ( _ , i ) => i+1);
 
 // Select all of the HTML elements that has a specific class name
 const users = Array.from(document.querySelectorAll('.user_name'));
+
+

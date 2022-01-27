@@ -3,6 +3,7 @@
 //////////////////////////////////////////////////////////////
 
 // 3. Hoisting
+
 // Variables declared using *var* are always hoised to the top of their respective scope
 // with value 'undefined' before the code is run.
 // They are accessible in their enclosing function scope even before they are declared.
@@ -14,7 +15,7 @@ function foo() {
 
 foo();
 
-// *const* and *let* variables are not initialized until their definition is evaluated.
+// *let* variables are not initialized until their definition is evaluated.
 // They are said to be in ‘temporal dead zone’ from the start of the block 
 // until the initialization is processed.
 function checkHoisting() {
@@ -26,3 +27,5 @@ function checkHoisting() {
 checkHoisting();
 
 // This is a useful behaviour, since *var* can be more prone to errors.
+
+

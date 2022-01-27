@@ -46,5 +46,8 @@ console.log(x);                // "global scope"
    b= 8;        // b is not declared using any of 'let' or 'const' or 'var' keywords.
                 // and will by default become globally scoped.
 }
-console.log(b); // 8, because b became globally scoped in the block above.
 console.log(a); // ReferenceError: a is not defined. (let is block scoped)
+console.log(b); // 8, because b became globally scoped in the block above.
+console.log(window.b); // 8, because *window* is a global object.
+
+

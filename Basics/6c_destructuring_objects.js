@@ -65,3 +65,5 @@ let b = 999;
 // Solution: Just enclose this in parentheses. (parens syntax)
 ({ a , b } = myObj); // values of a and b now mutated. 
 console.log(a,b);                   // 91 , 2
+
+

@@ -28,3 +28,5 @@ const age = myAge || 26;
 // For function call short circuiting use &&
 calcSq && calcSq(34);
 // if calcSq() exists, then the second expression calcSq(34) will be executed.
+
+

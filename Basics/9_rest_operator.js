@@ -31,3 +31,5 @@ const [dish1 , dish2 , , ...restDishes, someOTherDish] = [...restaurant.allItems
 
 // Same applies for Objects:
 const {weekdays , ...restDays} = restaurant.workingHours;
+
+

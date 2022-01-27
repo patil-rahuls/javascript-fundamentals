@@ -6,7 +6,7 @@
 // The Spread Operator unpacks elements of iterable objects such as Arrays, Sets, Maps and Objects into a list.
 // Spread Operator can "ONLY" be used in following 2 cases:
         //    1. Expanding an Iterable.
-        //    2. As function argument.
+        //    2. As a function call argument.
 
 // There can be more than one spread element in an expression.
 
@@ -53,3 +53,5 @@ const ingredients = [
 // console.log(ingredients);
 
 restaurant.orderPasta(...ingredients);
+
+

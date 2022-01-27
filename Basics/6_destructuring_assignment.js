@@ -49,3 +49,5 @@ let a = 111, b = 999;
 [a  , b ] = arr;
 console.log(a,b);
 // 7 , 8
+
+

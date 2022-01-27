@@ -39,3 +39,5 @@ const myObj = {
    workingHrsObj,                   // An outside object
    newWorkingHours : workingHrsObj, // An outside object using a different property name.
 };
+
+
