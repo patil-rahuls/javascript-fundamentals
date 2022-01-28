@@ -1,7 +1,8 @@
 # Important Javascript Concepts with Codes
 
-## Basic Concepts [Done]
+## Basic Concepts [Complete]
 - var, let _[ES6]_ and const _[ES6]_, and their comparision
+- typeof
 - Type Conversion and Coercion
 - Function Declaration and Expression
 - Equality Operators
@@ -12,29 +13,25 @@
 - _[ES6]_ Spread Operator
 - _[ES6]_ Rest Operator
 - _[ES6]_ Arrow Functions
-- _[ES6]_ Enhanced Object Literal
+- _[ES6]_ Enhanced Object Literals
 - _[ES6]_ Template Literals
 - _[ES6]_ for-of loop
 - for-in loop
-- _[ES6]_ Default Parameters
+- _[ES6]_ Default Parameters (Function)
 - Console
-- typeof
 - User Interaction (Browser)
 
-## Data Structures [Done]
+## Data Structures [Complete]
 - Arrays
 - Array Methods
-- Objects, Methods, this Keyword
+- Objects properties retrieval, iteration and methods
+- Objects' _[this]_ keyword
 - _[ES6]_ Maps, iteration and methods
 - _[ES6]_ Sets, methods and use cases
 - Which data structure to use?
-- Array Methods - slice(), splice(), concat(), reverse(), forEach(), map(), filter() and reduce()
-- Array Methods - find(), some(), flat(), flatMap(), find(), findIndex(), fill(), sort()
-- Object Methods - forEach()
-- Set Methods - forEach(), throwaway variable ‘_’, 
 
-## Functions [Done]
-- Default parameters
+## Functions [Complete]
+- _[ES6]_ Default parameters
 - Pass by Value OR Pass by Reference
 - setTimeout()
 - setInterval()
@@ -45,18 +42,21 @@
 - IIFE
 - string methods
 
-## How Javascript Works
-- Javascript Engine
+## How Javascript Works [Completed]
+- Compilation, Interpretation and JIT-Compilation
 - Javascript Runtime
+- Javascript Engine
+- Function Execution Context
 - Hoisting and TDZ
-- this Keyword
+- _[this]_ Keyword
 - Arrow Functions Vs Regular Functions
-- Storage location of primitives and objects
+- Primitives Values and Reference Values
 
-## Object Oriented Javascript
+## Object Oriented Javascript [WIP]
 - Object Oriented Programming in Javascript
 - Constructor Functions and Prototypes
-- Prototypal Inheritance & Prototype Chain
+- Prototype Chain
+- Prototypal Inheritance
 - ES6 Classes
 - ES6 Classes - getters and setters
 - Object.create
@@ -65,8 +65,11 @@
 - Encapsulation
 - Chaining Class Methods
 
-## Modules
+## Modules [WIP]
 - Introduction
-- 
+- Common modules
+- Modules behind the scenes
 
-_* some of the codes are collected from various sources like stackoverflow answers, udemy, and some blogs._
+## Asychronous Javascript [WIP]
+- Promises & fetch API
+
