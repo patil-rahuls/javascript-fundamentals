@@ -2,13 +2,11 @@
 // OOP Basics ////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////
 
-// Objects
-// properties - data
-// methods - behaviour
-// all into one block.
+// Objects    - Real World Entity
+// properties - state
+// methods    - behaviour
 
-// we use Objects to model real world or abstract features.
-
+// We use Objects to model real world or abstract features.
 // OOP's goal is to organize code, make it flexible and easier to maintain.
 
 // Traditional OOP - Classes and Instances.
@@ -23,20 +21,21 @@
 // OOP IN Javascript /////////////////////////////////////////
 //////////////////////////////////////////////////////////////
 
-Traditional OOP           |     Javascript OOP
+// Traditional OOP           |          Javascript OOP
+// 
+//    Class                  |             Prototype (Contain methods)
+//      |                    |                 ^  
+//      |                    |                 |
+//      |                    |                 |
+// Instantiation             |    Prototypal Inheritance/Delegation
+//      |                    |                 |
+//      |                    |                 |
+//   Instance                |               Object (Can access methods)
 
-   Class                  |           Prototype 
-     |                    |               |
-     |                    |               |
-Instantiation             |    Prototypal Inheritance/Delegation
-     |                    |               |
-     |                    |               |
-  Instance                |             Object
+// In Javascript, we say "Objects are linked to a Prototype Object".
 
-// In javascript, Objects are linked to a Prototype Object.
-
-// The Prototype Object contains properties and methods.
-// These properties and methods can be accessed by all objects that are linked to the prototype.
+// The "Prototype Object" contains properties and methods (behaviour)
+// that are accessible to all objects linked to that prototype.
 // This is called Prototypal Inheritance. (This is not the Inheritance in OOP priciple.)
 
 // DELEGATION:

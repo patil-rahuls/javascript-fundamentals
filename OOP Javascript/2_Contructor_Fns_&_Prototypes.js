@@ -2,37 +2,68 @@
 // CONSTRUCTOR FUNCTIONS /////////////////////////////////////
 //////////////////////////////////////////////////////////////
 
-// We can create our own constructor functions.
-// Convention - Constructor functions start with Capital letter. (new Map() , new Array(), new Set() .. etc.)
-// IMP: Arrow Functions are not used to create constructor functions, because they dont have their own 'this' keyword.
-// in Arrow functions, 'this' points to global object.
+// IMP: Arrow Functions are not used to create constructor functions, 
+// because they dont have their own 'this' keyword.
 
-// We create a constructor functions like a regular function.
-// The only distinction is that the first letter is capital and 
+// We create a constructor function like regular function.
+// The only conventional distinction is that the first letter is capital.
+
 const Student = function (name , rollNo) {
     this.name = name;
     this.rollNo = rollNo;
 };
-// We call it with the "new" operator.
 const stu = new Student('Rahul', 1);
 
-// The Magic is in "new" keyword above. 4 things happen:
-// Before looking into these 4 events, lets understand that every object has a property.
-// Student() constructor function will have a proerty ".prototype". Its value is nothing but prototype of the objects created using Student() constructor function.
-// We can access it like this : "Student.prototype"
+// 'Student' is a Constructor Function.
+// 'stu' is a newly created Object of 'Student'.
+// 'this' refers to the Object 'stu'.
+// Before looking into this code's execution, lets understand *prototype*.
 
-// Similarly, "Student.prototype" itself has a property called ".constructor". Its value is nothing but the constructor function itself i.e. Student().
+// Each and every function in javascript automatically has a property called "prototype".
 
-// And, again, the object created using constructor funtion "stu" also has a property called ".__proto__" which is "linked" to constructor function's prototype i.e. "Student.prototype"
+// Student Constructor Function too will have a prototype property. "Student.prototype".
+// "Student.prototype" is NOT the prototype of Student Constructor Function.
+// It is a prototype of objects  created using Student Constructor Function, i.e. "stu".
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//  _________________                                          _______________________
+// |                 |----------- Student.prototype --------->|                       |
+// | Constructor Fn. |                                        | Prototype (of "stu")  |
+// |  [ Student() ]  |<---- Student.prototype.constructor ----|  [Student.prototype]  |
+// |_________________|                                        |_______________________|
+//                                                                        ^                                 
+//                                                         Prototypal     |
+//                                            ^            Inheritance/   |  .__proto__
+//                                            |             Delegation    |
+//                            Prototype Chain |              _____________|________________
+//                                            |             |                              |
+//                                            |             |           Object             |
+//                                                          |          ["stu"]             |
+//                                                          | name     : "Rahul"           |
+//                                                          | rollNo   : 1                 |
+//                                                          | __proto__: Student.prototype |
+//                                                          |______________________________|
+// 
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// "Student.prototype" itself has a property called ".constructor". 
+// Its nothing but the constructor function itself i.e. Student().
+
+// In Javascript, any object's prototype is actually "__proto__" property.
+// So, "stu.__proto__" i.e. "Student.prototype" is a prototype of "stu" Object.
+// And this way, an Object is linked to the Constructor Function's prototype object.
 
 // So here are the 4 events that happen.
-// 1. An {} empty obj is created. [ Object [stu] ]
-// 2. The 'this' object is linked to this newly created obj {} and its properties now point to 'this' object.
-//    That means, inside the execution context of the constructor fn, 'this' points to that empty object.
-//    And because we have the parameters 'Rahul' and '1', eventually, these are set to the 'this' object.
-// 3. Then this newly created object is linked to the constructor function's prototype property. "Student.prototype"
-// 4. function now returns the object {} (which no longer remains empty by now) to the object 'stu'.
-// The Student.prototype is now the prototype of "stu" object.
+
+// 1. An {} empty obj ("stu") is created.
+
+// 2. 'this' keyword in the Constructor Function call is set to the new object "stu".
+//    That means, the 'this' object inside the execution context of the constructor fn,now points to that new object "stu".
+
+// 3. The new object "stu" is linked to the constructor function's prototype property as a result of __proto__ property.
+
+// 4. The new object "stu" is returned from the constructor function call.
+
 
 const Student = function (name , rollNo) {
     // This will print an empty object of type "Student"
@@ -41,7 +72,7 @@ const Student = function (name , rollNo) {
 // We call it with the "new" operator.
 new Student('Rahul', 1);
 
-// Lets create some properties in the object.
+// Lets create a method in the object.
 const Student = function (name , rollNo) {
     // Instance Properties
     this.name = name;
@@ -60,8 +91,9 @@ const s1 = new Student('Rahul', 1);
 console.log(s1);                        // Prints the Student Object.
 
 // We didnt technically created a class here and didn't instantiated it.
-// However we did create a object from a constructor function. 
+// However, it looks like we are instantiating a class, as compared to other programming langs.
 
 // So we can say s1 is an instance of Student.
 console.log(s1 instanceof Student);     // true
+
 
