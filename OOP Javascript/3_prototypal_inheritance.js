@@ -3,11 +3,11 @@
 //////////////////////////////////////////////////////////////
 
 // Earlier we saw that its a bad practice to have a function iside a constructor function.
-// To tackle that sitation, we use Prototype object.
+// To tackle that situation, we use Prototype object.
 
 // *Prototype*
 // Each and every function in javascript automatically has a property called "prototype".
-// So the constructor function also has a prototype property.
+// So the "Student" constructor function also has a prototype property.
 Student.prototype;
 
 // Now we can add function to this prototype object.
@@ -26,7 +26,7 @@ Student.show();
 // Exaplanation:
 // In "Student.prototype" the "prototype" is not the Student's prototype. 
 // Its a property. Its a Prototype of objects that will be created from Student's constructor.
-// Usng isPrototypeOf() we can check which property is a prototype of an Object.
+// Using isPrototypeOf() we can check which property is a prototype of an Object.
 
 s1 = new Student('Hitesh', 33);
 s2 = new Student('Aajesh', 28);
@@ -51,7 +51,7 @@ console.log(Student.hasOwnProperty('school'));      // false
 // false because "school" is not inside Student object. 
 // It simply has access to it because its in prototype property of Student.
 
-// Every object in javascrpt has a property called __proto__
+// Every object in javascript has a property called __proto__
 // It is not a prototype property, but simply is a prototype.
 
 // Remember the step 3 : {} empty object is linked to prototype.
@@ -60,11 +60,8 @@ console.log(Student.hasOwnProperty('school'));      // false
 console.log(s1.__proto__ === Student.prototype); // true;
 // __proto__ of objects created from constructor functions are same as prototype property of the constructor.
 
-// in "Student.prototype", the prototype is not of Student, but of the objects that are going to be created from the Student.
-console.log(Student.prototype.isPrototypeOf(Student));  // false
-console.log(Student.prototype.isPrototypeOf(s1));       // true
-
-// in "s1.__proto__" the __proto__ is actually prototype of s1 object.
+// in the statement "s1.__proto__" 
+// the "__proto__" is called actual prototype of "s1" object.
 
 // Example:
 const Car = function(make, speed){

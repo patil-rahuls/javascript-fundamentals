@@ -74,3 +74,4 @@ const Mercedes = new Car("Mercedes", 95);
 // even though the class's methods point to .prototype property, still they are kept inside class, 
 // so the code looks good.
 
+

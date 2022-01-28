@@ -8,7 +8,7 @@
 
 // [1,2,3,4].from(); will not work
 
-// More example of sttic methods
+// More example of static methods
 Number.parseFloat(12);
 
 // These(static methods) are made so as to keep them linked to Array only.
@@ -70,3 +70,5 @@ Student.hey();
 
 // Same aplies to classes defined using constructor functions.
 // We use static methods to create helpers of class/constructor fns.
+
+
