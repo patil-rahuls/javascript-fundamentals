@@ -32,7 +32,8 @@ ShoppingCart.addToCart("item1", 10);        // ShoppingCart.cart keeps getting u
 ShoppingCart.addToCart("item2", 2);
 ShoppingCart.addToCart("item3", 1);
 
-console.log(ShoppingCart.cart);     // the 
-// Observe, that by now, the IIFFE has been executed, but still the array "ShoppingCart.cart" keeps getting updated,
-// This hapens because, again, CLOSURES.
+console.log(ShoppingCart.cart);
+// Observe, that by now, the IIFE has been executed, but still the array "ShoppingCart.cart" keeps getting updated,
+// This hapens because of, again, CLOSURES.
+
 
