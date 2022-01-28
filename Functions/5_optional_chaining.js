@@ -2,9 +2,11 @@
 // OPTIONAL CHAINING [ES 2020] ///////////////////////////////
 //////////////////////////////////////////////////////////////
 
+// It checks for a truthy value.
+
 // Scenarios, when checking nested objects, 
-// We might come to a point where we have to check if a property exists, and if it exists, 
-// return its value. but then our code gets really messy and cluttered.
+// We might come to a point where we have to check if a property/method exists, and if it exists, 
+// call/return its value. But then our code gets really messy and cluttered.
 // 
 // Directly accessing a property which we don't know whether exists or not is a bad idea.
 console.log(restaurant.workingHours.fri.open);
@@ -21,9 +23,7 @@ console.log(restaurant.openingHours.fri?.open);
 // We can chain the checking of object properties like this.
 console.log(restaurant.openingHours?.fri?.open);
 
-// We can use this in if statements or in conditional expressions.
-// Example:
-
+// Example #1
 const days = ['mon' , 'tue' , 'wed' , 'thu', 'fri' , 'sat' , 'sun'];
 for (const [i , day] of days.entries()){
    const isOpen = restaurant.openingHours[day]?.open ?? 'closed';
@@ -49,3 +49,5 @@ consle.log(  users[1]?.name ?? "user 1 not found..."  );
 
 // rahul
 // user 1 not found...
+
+

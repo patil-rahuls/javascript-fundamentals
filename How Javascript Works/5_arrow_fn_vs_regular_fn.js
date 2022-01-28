@@ -13,7 +13,7 @@ const obj = {
 obj.show();                 // 'Hi undefined'
 
 // Because in arrow functions, the 'this' keyword DOES NOT points to current Object.
-// It points to global object (window).
+// It points to outer scope. (global object - window in this case)
 
 var name = "Hitesh";
 const obj = {
@@ -23,6 +23,7 @@ const obj = {
 };
 
 obj.show();                 // 'Hi Hitesh'
+
 
 // This is because in the first line "var name = "Hitesh";" we have declared a variable on global object (window object)
 // That means now "name" is globally available. So below will work.

@@ -26,12 +26,12 @@ model.slice(1);
 model.slice(-1);
 
 // splice() - 
-// No, there is no such thing as a String.splice, but you can try this:
+// No, there is no such thing as a String.splice, but you can convert string to Array and use splice().
 myStr = [...model];
 myStr.splice(7);                          // Air
 myStr.splice(3,7);                        // book
 myStr.splice(0 , myStr.lastIndexOf(' ')); // Mac
-myStr = myStr.join('');
+myStr = myStr.join('');                   // And convert the Array back to string.
 
 // IMP: Javascript automatically converts a string primitive into a string Object and operates on it wth different methods.
 console.log( typeof new String("rahul") ); // Object
@@ -39,5 +39,6 @@ console.log( typeof new String("rahul") ); // Object
 // On calling slice(), string primitive is converted into object, 
 // the method is applied on that object,
 // and then the obejct is converted back into string primitive and returned.
-console.log( typeof new String("Rahul").slice(-1) ) ; // returns string
+console.log( typeof new String("Rahul").slice(-1) ) ; // string
+
 

@@ -24,7 +24,7 @@ const UpperFirstWord = function (str) {
    return [first.toUpperCase(), ...restWords];     // SPREAD Operator. This becomes a string.
 }
 // The higher order function that takes one of the two functions above as parameter.
-const transform = function (str, fn) { 
+const transform = function (str, fn) {
    console.log(`Original string : ${str} `);
    console.log(`Modified string : ${fn(str)} `);
    console.log( `Modified by function : ${fn.name}` );
@@ -63,7 +63,8 @@ const greet = greeting => {
       console.log( ` ${greeting} ${name}` );
    }
 }
-// or 
+// OR
 const greetArrow = greeting => name => console.log( ` ${greeting} ${name}` );
 // See the cleanliness in our code. One arrow function returning another arrow function
+
 

@@ -14,14 +14,13 @@ const newName = name[0].toUpperCase() + name.slice(1);
 // trim(): trims empty spaces at the start and ends of a string:
 const newStr = myStr.trim();
 
-
 // replace():
 const newStr = myStr.replace("to_b_replaced", "replaces_with_this");
 
 // replaceAll():
 const newStr = myStr.replaceAll(" ", "_"); // replaces all occurrences.
 
-// Advantage of using string functions is that, we can chain functions like this.
+// Advantage of using string methods is that, we can chain functions like this.
 const newStr = myStr.replace(" ", "_").replace("$", "Rs.");
 
 // Alternate to replaceAll using regex.
@@ -57,34 +56,35 @@ const newName = ['Mr.' , 'Rahul' , 'Patil'.toUpperCase()].join( '---' );
 // Mr.---Rahul---PATIL
 
 
-// padStart(): padds a string with given string:
+// padStart(): padds a string with given string in the benninging. LOL
 // Padding changes the length of the string by adding extra string specified by the user at the end or starting.
 const lol = "Barney Stinson";
 let newStr = lol.padStart(15, '+');
-console.log(newStr);				// "+Barney Stinson"
+console.log(newStr);				// "+Barney Stinson" (Total length become 15)
 
 newStr = lol.padStart(25, '+');
-console.log(newStr);				// "+++++++++++Barney Stinson"
+console.log(newStr);				// "+++++++++++Barney Stinson"  (Total length become 25)
 
 
-newStr = go.padEnd(25, '-'); 
-// we have already made the string 15 chars long in the above step.. this will add 10 '+' at the END , so totalling the string length 25. 
+// padEnd(): padds a string with given string at the end.
+newStr = go.padEnd(25, '-');
 
 // Real life example:
 // debit/credit card number on web pages. Show only last four digits and mask all starting digits by '*'
 const maskCreditCard = function(number){
    let given = '' + number;
-   // parameter converted to a string. (See its advantage in the function call below.)
+   // parameter converted to a string.
+   // Now we can pass a number as well as a string to this function.
       
    // Get the last 4 digits and length.
    const last = given.slice(-4); 			// start from last 4th char.
    const len = given.length-4;
-   console.log( last.padStart(len, '*') );
+   const newVal = last.padStart(len, '*');
+   console.log( newVal );
 }
 
 maskCreditCard(5674657210978324);   		// will accept number type.
 maskCreditCard('1200987564738523'); 		// will accept string too.
-	
 
 // repeat(): Repeats strings given number of times
 // Use-case: Useful to show icons like ratings, stars etc.)
@@ -94,4 +94,4 @@ name.repeat(4); // "Rahul Rahul Rahul Rahul Rahul"
 let rating = 4;
 console.log( `You have got ${rating} rating \n ${'🌟'.repeat(rating)}` );
 
-restaurant
+

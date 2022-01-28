@@ -15,3 +15,4 @@ stop = true;
 if(stop)
    clearTimeout(myTimerFn);
 
+

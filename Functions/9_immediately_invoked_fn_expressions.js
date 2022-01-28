@@ -2,7 +2,7 @@
 // IMMEDIATELY INVOKED FUNCTION EXPRESSIONS //////////////////
 //////////////////////////////////////////////////////////////
 
-// Functions that can be executed ONLY ONCE AND disappear to not run again ever. 
+// Functions that can be executed ONLY ONCE AND disappear to not run again ever.
 // OR
 // To call a function immediately WITHOUT having to SAVE IT SOMEWHERE.
 
@@ -31,4 +31,5 @@ const show = function (){
 //      Ans. "Variables Scope"
 // We use IIFE to just keep some variables hidden in the function scope and not make it available in global scope.
 // IIFE creates a scope. Every function creates its own scope in which variables are confined.
+
 

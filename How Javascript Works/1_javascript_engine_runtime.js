@@ -2,7 +2,7 @@
 // JAVASCRIPT ENGINE /////////////////////////////////////////
 //////////////////////////////////////////////////////////////
 
-// An engine executes js code.
+// An engine executes JS code.
 // All browsers have their own Javascript Engines that execute Javascript.
 // Well known is v8 used in Google Chrome and Node.js(Javascript Runtime)
 
@@ -47,4 +47,5 @@
 
 // All these processes happen in special threads that we can't access. 
 // Completely separated from the main thread which executes code in the Call Stack.
+
 

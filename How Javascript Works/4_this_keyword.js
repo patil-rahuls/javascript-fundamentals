@@ -9,4 +9,3 @@
 
 // 'this' is NOT STATIC. Its value is ONLY assigned when the function is actually called.
 
-// 

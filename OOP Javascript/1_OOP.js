@@ -7,7 +7,7 @@
 // methods - behaviour
 // all into one block.
 
-// we use Objects to model real world or abstract fatures.
+// we use Objects to model real world or abstract features.
 
 // OOP's goal is to organize code, make it flexible and easier to maintain.
 
@@ -63,7 +63,7 @@ Instantiation             |    Prototypal Inheritance/Delegation
 // 1. constructor functions
 // creates objects from function.
 // This is how built-in objects like Arrays, Maps or Sets are actualy implemented.
-// new Array(...), new Set(...) , new Map(...) These are all constructers.
+// new Array(...), new Set(...) , new Map(...) These are all constructer functions.
 
 // 2. ES6 Classes
 // work exactly like constructor functions, but with a cleaner syntax.
@@ -74,4 +74,5 @@ Instantiation             |    Prototypal Inheritance/Delegation
 // Easiest and straightforward way to link an object to a prototype object.
 
 // IMP: The 4 pillars of OOP are still valid with prototypal inheritance.
+
 

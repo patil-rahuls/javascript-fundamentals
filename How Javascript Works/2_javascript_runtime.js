@@ -2,7 +2,7 @@
 // Javascript Runtime 
 //////////////////////////////////////////////////////////////
 
-// JS Runtime - browsers, Node.js
+// JS Runtime - used by Browsers, Node.js
 
 // Inside JS Runtime in the browsers we have 
 // 1. JS Engine
@@ -37,7 +37,7 @@
 // After compilation, when the code is ready to be executed(Machine Code)
 // 1. ONE Global Execution Context is created. (For top level code - everything(declarations/definitions) except function calls.)
 // 2. That top-level-code is executed.
-// 3. Execution of Functions and waiting for callbacks
+// 3. Execution of Functions and waiting for callbacks 
 //    For each function call, a new execution context is created. All function contexts together form a call stack.
 //    Now the functions are waiting to be executed. e.g. a click event callback is waiting for its execution.
 //    
@@ -81,7 +81,7 @@
 //      Earlier we had 'var' which only cared about global scope and function scope (var).
 
 // Scope of a Variable - Region of code, where a certain variable can be accessed.
-// Any Scope has access to variables from all outer scopes.
+// Any Scope has access to variables from all of its outer scopes.
 
 let age = 28;
 function parent(){

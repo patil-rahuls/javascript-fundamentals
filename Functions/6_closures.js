@@ -3,10 +3,10 @@
 //////////////////////////////////////////////////////////////
 
 const parentFn = function () {
-   let users = 0;
+   let i = 0;
    return function () {
-       users++;
-       console.log(users);
+       i++;
+       console.log(i);
    }
 };
 const booker = parentFn(); 
@@ -114,4 +114,5 @@ test(3);
 // This is an IIFE, and it is invoked immediately. But the eventlistner's callback function will be on call 
 // stack and waiting for the 'click' event to occur and even though the IIFE has finished executing, the 
 // callback function will still have access to the 'header' element.
+
 

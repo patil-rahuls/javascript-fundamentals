@@ -3,6 +3,9 @@
 //////////////////////////////////////////////////////////////
 
 // Call, Apply and Bind Methods:
+// *call* and *apply* call a function.
+// while *bind* creates a function.
+
 // Remember the this keyword ? We use it to access object properties inside the object? 
 // Consider this airline example:
 const lufthansa = {
@@ -12,12 +15,11 @@ const lufthansa = {
   
    book ( flightNum , name ) {
       console.log(`${name}
-         ${this.iata}${flightNum}   // ‘this’ points to the "lufthansa" object
+         ${this.iata}${flightNum}   // ‘this’ points to the current object i.e. "lufthansa".
       `);
       this.bookings.push( { flight: `${this.iata}${flightNum}` , name} );
    }
 };
-
 lufthansa.book( 342 , 'Rahul' );    // flight details pushed to bookings[]
 lufthansa.book( 635 , 'Anish' );    // flight details pushed to bookings[]
    
@@ -35,7 +37,7 @@ const eurowings = {
 const bookFn = lufthansa.book;
 // Stored lufthansa's book() in a new global variable/function.
 
-// Remember lufthansa.book() is a method. But now bookFn() is a regular function and not related to any object.
+// Remember lufthansa.book() is a method. But now, after copying, bookFn() is a regular function and not related to any object.
 // Since lufthansa.book() uses 'this' keyword wich refers to an object, 
 // We can't simply use the regular bookFn() outside an object's context.
 
@@ -67,6 +69,7 @@ bookFn.call( eurowings , 23 , 'Rahul Patil' );
 
 //////////////////////////////////////////////////////////////
 // 2. apply():
+const bookFn = lufthansa.book;
 // Exactly the same as the call(), except that we pass the arguments in an array after the first parameter.
 bookFn.apply ( lufthansa , [56 , 'Anish Sasi'] );
 // arguments - 56 and 'anish sasi' are in an array.
@@ -86,6 +89,7 @@ bookFn.call({ someProprty:itsVal }, 45);
 
 //////////////////////////////////////////////////////////////
 // 3. bind():
+const bookFn = lufthansa.book;
 // Just like the apply() and call(), the bind method also allows us to manipulate the this keyword.
 
 // Using call()
@@ -93,16 +97,18 @@ const args = [ 56 , 'Rahul Patil' ];
 bookFn.call(eurowings , ...args) ;
 
 // Using bind()
-const bookEW = book.bind(eurowings);
+const bookEW = bookFn.bind(eurowings);
+// OR
+const bookEW = lufthansa.book.bind(eurowings);
 bookEW ( 56 , 'Rahul Patil' ) ;
 
 // This is how we simply copy a method from an object and 'bind' it to another object (eurowings in our case).
 // We can do this for all the airlines/objects in our example.
-const bookEW = book.bind(lufthansa);
-const bookSW = book.bind(swiss);
+const bookEW = bookFn.bind(lufthansa);
+const bookSW = bookFn.bind(swiss);
 
 // Let’s modify the book method for one object. (lets say-  to accept only name)
-const bookNewEW = book.bind(eurowings, 45);
+const bookNewEW = bookFn.bind(eurowings, 45);
 
 // Now if I call bookNewEW, I just need to pass the name. 
 // Because I have preset 45 as the first argument USING BIND()
@@ -167,4 +173,5 @@ const EducationCess = addTax (0.05);   // A fn for edu cess.
 
 GST(3499);                             // 66481
 EducationCess(3499);                   // 3673.95
+
 

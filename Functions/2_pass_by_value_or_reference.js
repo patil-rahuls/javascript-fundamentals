@@ -27,7 +27,7 @@ console.log(meee);                  // Mutated
 // The primitive 'flight' remains same as 'STD__223'.
 // Because, primitives are passed by value. i.e. a new copy of that value gets created inside function.
 // However, 'meee' object gets changed, 
-// because objects are passed by reference***
+// Because objects are passed by reference***
 
 // Object reference
 const newObj = meee;
@@ -56,4 +56,5 @@ checkIn(flight, meee);              // "Invalid Passport"
 // However, that reference is still a value in memory.
 
 // We do pass references, but not pass 'by' references in javascript. That's the distinction.
+
 
