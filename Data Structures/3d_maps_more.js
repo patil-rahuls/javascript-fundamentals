@@ -10,10 +10,12 @@
 myMap.set( [1,2] , 'Test');
 
 myMap.get([1,2]);             // undefined. Due to incorrect referencing
-// The array [1,2] in myMap.get( ) and the array in myMap.set( ) are at different locations in Heap.
+// The array [1,2] passed to myMap.get() and the array used in myMap.set() are at different locations in Heap.
 
 // Correct way:
 const arr = [1,2];
 myMap.set(arr, 'Test');
 myMap.get(arr);
 // Now the 'arr' passed in both myMap.set() and myMap.get() refer to the same location in Heap.
+
+

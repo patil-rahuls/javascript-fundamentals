@@ -10,8 +10,8 @@ const performance = {
 };
 
 // 1. GET Object PROPERTIES / KEYS
-const perfromers = Object.keys(performance) ; 
-console.log(perfromers);           
+const perfromers = Object.keys(performance);
+console.log(perfromers);
 // ['rahul' , 'hitesh' , 'aajesh']
 
 // Obv we can loop over the properties 
@@ -23,7 +23,7 @@ for (const perfromer of Object.keys(performance))
 
 // 2. GET Object VALUES
 const values = Object.values(performance);
-// returns the value of "openingHours", be it array or object or just a value.
+// returns the value of "performance", be it array or object or just a value.
 console.log(values);
 // { startedAt : 72 , high : 99} ,
 // { startedAt : 51 , high : 98} ,
@@ -40,4 +40,5 @@ const entries = Object.entries(performance);
 for (const [key, {startedAt,high}] of Object.entries(openingHours)){
    console.log(`${key}'s score opened at ${startedAt} and closed at ${high}`);
 }
+
 

@@ -18,3 +18,4 @@ const fetchedObj = accounts.splice(acc_indx, 1);
 // Fundamental difference between findIndex() and indexOf():
 // In indexOf() we check for equality, whereas in findIndex() we check for an expression.
 
+

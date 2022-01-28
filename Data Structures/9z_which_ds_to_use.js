@@ -11,7 +11,7 @@
 // Used to remove duplicates from arrays.
 
 // 3. Objects:
-// key-value pairs with methods. (
+// key-value pairs with methods.
 // keys can only be string type.
 // Use when working with JSON (can be converted to Map later)
 
@@ -20,3 +20,5 @@
 // Easy to compute size and iterate.
 // Use when you need keys other than string type.
 // Use when you simply need to map keys to values.
+
+

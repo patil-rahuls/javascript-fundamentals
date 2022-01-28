@@ -12,3 +12,5 @@ myArr.indexOf('milan'); // -1 because element not found
 myArr.indexOf('55');    // -1 (string ‘55’ is passed. No Type Coercion occurs)
 
 // indexOf() use strict equality checking.
+
+

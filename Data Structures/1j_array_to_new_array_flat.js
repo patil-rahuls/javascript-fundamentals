@@ -1,5 +1,5 @@
 //////////////////////////////////////////////////////////////
-// DATA STRUCTURES - ARRAY - METHODS TO GET NEW ARRAYS ///////
+// DATA STRUCTURES - ARRAY - METHODS TO GET NEW ARRAY ////////
 //////////////////////////////////////////////////////////////
 
 // flat(): [ES 2019]
@@ -21,4 +21,5 @@ console.log(arr.flat());
 const arr = [ [ [1, 2], 3, 4], 5 , 6 , [ [7,0], 8 ], 9, 10];
 console.log(arr.flat(2));              // 2 is a depth argument
 // [1,2,3,4,5,6,7,0,8,9,10]
+
 

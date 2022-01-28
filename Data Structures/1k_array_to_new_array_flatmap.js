@@ -11,11 +11,10 @@
 
 const totalUsersWalletBalance = accounts
    .map(acc => acc.walletBalance)
-   .flat()
-   .reduce((acc, mov) =>  acc+mov , 0);
+   .flat();
 
 
-// same example using flatMap() method
+// Example #1
 const totalUsersWalletBalance2 = accounts
    .flatMap(acc => acc.walletBalance)
    .reduce((acc, mov) =>  acc+mov , 0);
@@ -24,4 +23,5 @@ const totalUsersWalletBalance2 = accounts
 
 // IMP: flatMap() goes only one level deep. 
 // Hence if you need to go deeper, then you still need to use the flat() method with depth argument.
+
 

@@ -12,3 +12,4 @@ const result = arr.join('-');
 console.log(result);              // "11-22-33-44-55-66"
 console.log( typeof result);      // "string"
 
+

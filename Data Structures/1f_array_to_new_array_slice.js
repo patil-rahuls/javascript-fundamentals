@@ -24,4 +24,6 @@ const brr = arr;
 arr[0] = 99;            // Changed arr
 console.log(brr);       // brr also gets changed, because both have same references.
                         // Hence use slice to get an independent 'COPY' of an array.
-const crr = arr.slice();
+const crr = arr.slice();// Also called "Deep copy"
+
+

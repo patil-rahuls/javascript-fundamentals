@@ -34,5 +34,7 @@ myObj.'last'+proprty;                // this won't work in DOT notation.
 const selected = prompt("Choose : firstName, lastName, age.", "firstName");
 
 // Log respective value of the property from object.
-console.log ( myObj.selected ) ;  // undefined.
-console.log ( myObj[selected] ) ; // returns property value
+console.log ( myObj.selected ) ;     // undefined.
+console.log ( myObj[selected] ) ;    // returns property value
+
+

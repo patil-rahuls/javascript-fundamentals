@@ -1,5 +1,5 @@
 //////////////////////////////////////////////////////////////
-// DATA STRUCTURES - ARRAY - METHODS TO GET NEW ARRAYS ///////
+// DATA STRUCTURES - ARRAY - METHODS TO GET NEW ARRAY ////////
 //////////////////////////////////////////////////////////////
 
 // Array data transformation methods: map(), filter() and reduce()
@@ -25,4 +25,5 @@ const newArr = numbers.map( (curr, key, arr) => {
 
 console.log(newArr);    
 // ["0 : 2", "1 : 4", "2 : 3", "3 : 0", "4 : 10", "5 : 20", "6 : 30", "7 : 40"]
+
 

@@ -18,8 +18,7 @@ const question = new Map ([
    [false , 'Try Again'],
 ]);
 
-// Convert an Object to Map
-// use Object.entries()
+// Convert an Object to Map - Object.entries()
 const weekendMeetings = {
    sat:{ start : 1200 , end : 1300} ,
    sun:{ start : 1100 , end : 1300} ,
@@ -38,8 +37,7 @@ for (const [key, value] of question) {    //  Object.entries() not required for 
    }
 }
 
-// Convert Map to Array:
-// use spread operator
+// Convert Map to Array - spread operator
 const questionArray = [...question];
 
 
@@ -47,3 +45,5 @@ const questionArray = [...question];
 console.log([...myMap.entries()]);
 console.log([...myMap.keys()]);
 console.log([...myMap.values()]);
+
+

@@ -48,3 +48,5 @@ myObj.greet("Reader");     // Easy to read
 
 // Method call using BRACKET notation
 myObj['greet']("Reader");  // Difficult to read
+
+

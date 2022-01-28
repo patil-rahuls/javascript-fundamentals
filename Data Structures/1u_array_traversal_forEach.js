@@ -20,10 +20,11 @@ arr.forEach( function(item) {
 // current_item, current_index, and entire array
 arr.forEach( function(item, index, entireArr) {
    console.log( `At position ${index} : Element - ${item}` );
-} );
+});
 
 // Disadvantage:
 // break and continue does not work! So if you need to break out of the loop, then use the ordinary for-of loop.
 
 // Also see forEach on Maps and Sets.
+
 

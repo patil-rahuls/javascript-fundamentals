@@ -18,3 +18,4 @@ myArr.find( itm =>  itm < 0 );
 // acc = [  { owner:"user1", ... } , { owner:"Rahul Patil", , ... } , { ... }];
 const account = accounts.find(acc => acc.owner === "Rahul Patil");
 
+

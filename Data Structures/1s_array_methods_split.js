@@ -11,3 +11,5 @@ const result = str.split(',');
 
 console.log(result);              // [11,22,33,44,55,66]
 console.log(typeof result);       // "object" (Javascript wants to say "array" here, but array is an object)
+
+

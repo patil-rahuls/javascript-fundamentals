@@ -45,3 +45,5 @@ names.clear();
 for (const itm of names) {
    console.log(itm);
 }
+
+

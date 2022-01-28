@@ -12,3 +12,5 @@ myArr.includes('anish');   // false
 myArr.includes('55');      // false (string ‘55’ is passed. No Type Coercion occurs)
 
 // includes() use strict equality checking.
+
+
