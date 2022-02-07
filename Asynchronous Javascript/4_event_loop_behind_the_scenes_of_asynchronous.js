@@ -18,4 +18,15 @@
 // Also, Timer functions do not always gaurantee the passed delay execution. because there might be other 
 // callback function waiting to be executed before the timer in the Callback Queue.
 
+console.log("Test Starts");
+setTimeout(()=>console.log("0 Sec Timer"), 0);
+// Promise.resolve(); // Builds a promise and immediately resolve.
+Promise.resolve("Resolved Promise 1").then(res => console.log(res));
+console.log("Test Ends");
+
+// Output:
+// Test Starts
+// Test Ends
+// Resolved Promise 1
+// 0 Sec Timer
 
