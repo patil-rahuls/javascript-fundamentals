@@ -17,3 +17,13 @@ arr.splice(1, 2);   // 2 is no. of values to take out. Returns [ 22, 33 ]
 console.log(arr);   // arr is now [11 , 44]
 
 
+// Example : Remove a specific item from an array.
+const array = [2, 5, 9];
+
+const index = array.indexOf(5);
+if (index > -1) {
+  array.splice(index, 1); // 2nd parameter means remove one item only
+}
+
+console.log(array); 
+// [2, 9]

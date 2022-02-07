@@ -14,6 +14,6 @@
 const a;        // Error "Missing initializer in const declaration."
 const b = 2021; // This is correct for primitive.
 const c = {};   // This is allowed in case of Objects.
-const d = [];   // An array is a special type of Object, hence allowed.
+const d = [];   // An array is an Object type too, hence allowed.
 
 

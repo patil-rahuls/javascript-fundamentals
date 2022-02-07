@@ -3,6 +3,7 @@
 //////////////////////////////////////////////////////////////
 
 // Objects are passed by reference***, primitives are passed by value.
+// Please see the topic "PRIMITIVES VS OBJECT REFERENCES" in "How Javascript Works" section.
 
 // Pass by values and pass by reference:
 let flight = 'STD__223';            // a primitive

@@ -15,7 +15,7 @@
 // their value is <uninitialized>TDZ (The variable is said to be in Temporal Dead Zone)
 
 // WHY TDZ ?
-// Observer the different types of error messages.
+// Observe the different types of error messages.
 {
     console.log(`My name is ${name}`);        // ReferenceError: Cannot access 'name' before initialization.
     let name = "Rahul";

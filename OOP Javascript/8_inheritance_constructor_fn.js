@@ -29,15 +29,15 @@ const s1 = new Sofa('Neelkamal', 15, false);
 
 // Now we link the Sofa.prototype to Furniture.prototype object.
 
-Furniture.prototype
-        |
-        | [.__proto__]
-        |
-  Sofa.prototype
-        |
-        | [.__proto__]
-        |
-    Obj - s1 
+// Furniture.prototype
+//      |
+//      | [.__proto__]
+//      |
+//  Sofa.prototype
+//      |
+//      | [.__proto__]
+//      |
+//   Obj - s1 
 
 // So, we say Sofa.prototype is linked to Furniture.prototype, and we do that using Object.create
 

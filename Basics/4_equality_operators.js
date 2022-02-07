@@ -18,11 +18,12 @@ var c = { x: 1, y: 2 };
 var d = { x: 1, y: 2 };
 
 a == b            // false
-a === b           // false
+a === b           // false (type is same, but values (References) are different)
 
 c == d            // false
-c === d           // false
+c === d           // false (type is same, but values (References) are different)
 
+// A handy way to compare two objects in JS : 
 JSON.stringify(a) === JSON.stringify(b); // true
 
 // Strings with same values are equal if they are Primitive.
