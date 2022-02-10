@@ -2,15 +2,16 @@
 // SPREAD OPERATOR [ES6] - OBJECTS ///////////////////////////
 //////////////////////////////////////////////////////////////
 
-// (three dots "..." on RHS OF assignment operator "=")
+// "..." on RHS OF "="
 // The Spread Operator unpacks elements of iterable objects such as Arrays, Sets, Maps and Objects into a list.
+
 // Spread Operator can "ONLY" be used in following 2 cases:
         //    1. Expanding an Iterable.
         //    2. As a function call argument.
 
 // There can be more than one spread element in an expression.
 
-// Spread Operator on Objects.
+// Example #1 (Spread Operator on Objects)
 const restaurant = {
    name:'Rahul’s Cafe',
    location:'Madh-Island Mumbai India',
@@ -43,9 +44,10 @@ const restaurant = {
   }
 };
 
+// Copy Object
 const newRestaurant = {...restaurant};
-// Copies all properties of the "restaurant" object to "newRestaurant" object.
 
+// Exanding an Iterable.
 const newRestaurantWithMoreInfo = {
        ...restaurant ,
        foundedIn : 1992,
@@ -58,8 +60,9 @@ copyRestaurant.name = "Rahul's Cafe";
 
 // TIP:
 // Spread Operators work on all sorts of ITERABLES like ARRAYS, MAPS, SETS, STRINGS, OBJECTS.
+// string is also an iterable in Javascript.
 const str = "rahul";
-const letters = [...str , ' ' , 'P.'];
+const letters = [...str , ' ' , 'P.'];          // Expanding string
 console.log(letters);                           // rahul P.
 
 

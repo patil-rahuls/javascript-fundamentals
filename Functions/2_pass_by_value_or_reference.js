@@ -54,7 +54,7 @@ checkIn(flight, meee);              // "Invalid Passport"
 // ***Actually, In javascript, there is no pass by reference.
 // Only passing by values. But in the case of objects, it looks like pass by reference. 
 // When we pass an object to a function, we are actually passing its reference, 
-// However, that reference is still a value in memory.
+// However, that reference is still a value in memory in Call Stack
 
 // We do pass references, but not pass 'by' references in javascript. That's the distinction.
 

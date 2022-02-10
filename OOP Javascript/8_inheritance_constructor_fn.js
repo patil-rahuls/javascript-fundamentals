@@ -15,7 +15,7 @@ const Sofa = function(brand, margin, returnable){
     // this.brand = brand; 
     // this.margin = margin;    
 
-    // Calling Parent's constructor fn.
+    // Calling Parent's constructor fn. using call method. Remember call(), apply() and bind() ?
     // Furniture(brand, margin); // not correct. because we cant call it like a regular fn. (it has 'this' keyword).
     Furniture.call(this, brand, margin);
     this.returnable = returnable;

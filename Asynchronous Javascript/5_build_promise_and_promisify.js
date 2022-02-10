@@ -2,6 +2,7 @@
 // BUILD PROMISE /////////////////////////////////////////////
 //////////////////////////////////////////////////////////////
 
+// Creating a new Promise
 // Created using Promise Constructor.
 // It takes exactly one argument the 'executor' function. This 'executor' function has 2 parameters
 // these parameters are actually functions - resolve() and reject()
@@ -67,7 +68,7 @@ wait(4).then(function(){
 wait(4).then(function(){
     console.log("I waited for 4 Seconds.");
     wait(1); // This will return another promise.
-}).then(() => console.log("I waited for 1 Second"));
+}).then(() => console.log("I waited for another 1 Second"));
 
 // This Prevents Callback hell, also the code looks readable.
 

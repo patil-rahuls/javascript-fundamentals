@@ -3,14 +3,14 @@
 //////////////////////////////////////////////////////////////
 
 // To iterate over an Iterable.
-// for..of returns a list of "values" of the numeric properties of the object being iterated
-// This is a more standardised way of iterating over an iterable in javascript.
+// "for..of" returns a list of "values" of the numeric properties of the object being iterated.
 
-//  Example #1
+//  Example #1:
 for (const item of menu){
    console.log(item);
 }
 
+//  Example #2:
 // When we want indexes/Properties too.
 for( const item of Object.entries(menu) ){
    console.log(item);               // [ index  , array item]

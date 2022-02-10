@@ -30,7 +30,7 @@ arr.sort((a,b) => {
 
 console.log(arr);            //  [-650, -400, -130, 70, 200, 450, 1300, 3000]
 
-// Can also be written as:
+// Can also be written using arrow function as:
 arr.sort((a,b) => a - b);
 
 

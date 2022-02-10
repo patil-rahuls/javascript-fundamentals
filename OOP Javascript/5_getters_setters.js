@@ -4,7 +4,8 @@
 
 // Every Object in Javascript has two important properies : 
 // getter "get()" and setter "set()"
-// Remember they are properties, not methods.
+
+// IMP: Remember! they are "properties", not "methods"
 
 const myObj = {
     firstName : 'Rahul',
@@ -60,7 +61,7 @@ s4.info;
 // TIP: Use setters for input validation.
 // Condition: the setter method name should be same as the parameter's name in contructor() which need to be validated.
 // Also, if valid, we need to set the value to new property, 
-// because we cant use the same property name because it will result in 
+// because we cant use the same property name because it will result in Error.
 
 class User {
     constructor(username){

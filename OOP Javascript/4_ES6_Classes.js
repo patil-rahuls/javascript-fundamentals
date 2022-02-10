@@ -28,7 +28,7 @@ class Student {
     }
 };
 
-// show() is stored in the Student class's prototype and not in the Student class.
+// show() is stored in the Student class's prototype object and not in the Student class.
 // 
 
 const s3 = new Student("Aajesh", 29);
@@ -37,7 +37,7 @@ s3.show();
 console.log(s3.__proto__ === Student.prototype); 
 // true
 
-// Manually add a method to the prototype.
+// Manually add a method to ES6 class' prototype property.
 Student.prototype.greet = function(){
     console.log(` Hii ${this.name} !!`);
 };

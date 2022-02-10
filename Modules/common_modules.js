@@ -4,7 +4,7 @@
 
 // USED IN Node.JS FOR ALMOST ALL OF ITS IMPLEMENTATION.
 
-// sometimes we need to write like this. like in node js.
+// Sometimes we need to write like this. like in node js.
 const {addToCart} = require('./shoppingCart.js');
 
 // this is same as import. Just the syntax difference.
@@ -22,8 +22,8 @@ const state = {
     user : {loggedIn : true},
 };
 
-// Suppose we need to create a deep copy of this object .
-// Deep copy means, whatever changes we do in original, same should reflect in copied objs
+// Suppose we need to create a deep copy of this object.
+// Deep copy means, whatever changes we do in original, same should not reflect in copied objs
 // using javascript builtin method
 const state2 = Object.create({} , state);
 

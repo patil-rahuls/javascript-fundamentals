@@ -4,14 +4,8 @@
 
 // A better way to write javascript objects with the new ES6 syntax.
 
+//  Example #1:
 // Computed Properties and Object Literals
-var name = "make";
-const laptop = {
-    [name]: "Apple"
-}
-console.log(laptop.make);           //"Apple"
-
-//  Example
 var name = "make";
 var i = 0;
 const laptop = {
@@ -24,7 +18,9 @@ console.log(laptop.make1);          //"Apple"
 console.log(laptop.make2);          //"Dell"
 console.log(laptop.make3);          //"HP"
 
+//  Example #2:
 // Shorthand for writing Methods and Properties
+let name = 'Twilight';
 const myObj = {
     myFunc:function(param1, param2){
         return [param1 , param2];
@@ -36,8 +32,8 @@ const myObj = {
     }, 
     //i.e. removed the colon and function keyword
 
-   workingHrsObj,                   // An outside object
-   newWorkingHours : workingHrsObj, // An outside object using a different property name.
+    name,                           // An outside object
+    newName : name,                 // An outside object using a different property name.
 };
 
 

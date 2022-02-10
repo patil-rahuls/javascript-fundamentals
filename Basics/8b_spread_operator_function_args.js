@@ -2,15 +2,16 @@
 // SPREAD OPERATOR [ES6] - FUNCTION ARGUMENTS ////////////////
 //////////////////////////////////////////////////////////////
 
-// (three dots "..." on RHS OF assignment operator "=")
+// "..." on RHS OF "="
 // The Spread Operator unpacks elements of iterable objects such as Arrays, Sets, Maps and Objects into a list.
+
 // Spread Operator can "ONLY" be used in following 2 cases:
         //    1. Expanding an Iterable.
         //    2. As a function call argument.
 
 // There can be more than one spread element in an expression.
 
-// 2. As function argument
+//  Example #2 (As function call argument)
 const restaurant = {
    name:'Rahul’s Cafe',
    location:'Madh-Island Mumbai India',
@@ -43,15 +44,8 @@ const restaurant = {
   }
 };
 
-// We will call orderPasta() using spread operator.
-// Let's get the data for this function from a prompt.
-const ingredients = [
-   prompt("Let's make pasta. Ingredient 1 ?") , 
-   prompt("Ingredient 2? ") ,
-   prompt("Ingredient 3?")
-];                                          // yes we can do this.
-// console.log(ingredients);
-
+// We will call restaurant.orderPasta() using spread operator.
+const ingredients = ["Ingredient 1",  "Ingredient 2", "Ingredient 3"];
 restaurant.orderPasta(...ingredients);
 
 

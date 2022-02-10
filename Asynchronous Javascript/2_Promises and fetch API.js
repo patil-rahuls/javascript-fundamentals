@@ -5,16 +5,17 @@
 // Promises : Its a powerful and elegant soution to handle asyncrounous code.
 // Also a better way to write Ajax calls is using fetch() function which returns a Promise.
 
-// Example # 1: 
+//  Example #1: 
 const result = fetch("https://xyz.com/api/somedata");
 console.log(result);
 // Promise {<pending>}
+
 // We see that fetch() returns a "Promise" and inside curly braces, we see its state - pending
 // That means it is fetching the data from the url in the background.
 // If we console.log(result) after sometime, we may get (if the request has been completed in the background).
 // Promise {<fulfilled> : Response}
 
-// Formal Definition: An Object that is used as a placeholder for the future result of an asynchronous operation.
+// Formal Definition: Promise is an object, used as a placeholder for the future result of an asynchronous operation.
 // Informal Definition: A container for a value that will be delivered asynchronously in the future.
 // OR simply "a container/placeholder for a future value".
 // And a perfect example of a future value is response from an AJAX call.

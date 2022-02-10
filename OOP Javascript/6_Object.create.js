@@ -7,7 +7,7 @@
 
 // prototype 'StudentProto' is created 
 const StudentProto = {
-    age(){
+    showAge(){
         console.log(`Age : ${this.age}`);
     }
 };
@@ -18,9 +18,11 @@ console.log(s5);
 
 // Now we can set the property of the individual objects
 s5.age = 20;
-s5.age();
+s5.showAge();
+// 20
 
 console.log(s5.__proto__ === StudentProto);
+// true
 
 // Better way to set poperties in this case:
 const StudentProto = {

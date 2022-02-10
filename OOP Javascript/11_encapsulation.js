@@ -6,7 +6,7 @@
 
 // Protected Methods and Properties.
 
-// just use underscore before the properties and methods and add a Comment.
+// Just use underscore before the properties and methods and add a Comment.
 // Encapsulation is not yet supported in JS. But letting developers know is a good idea.
 
 class User {

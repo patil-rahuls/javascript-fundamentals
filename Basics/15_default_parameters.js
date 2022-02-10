@@ -7,4 +7,6 @@ function sum(x, y = 10) {
 }
 console.log(sum(5));          // 15
 
+// TIP: Always keep parameters with default values at the end while defining a function.
+
 

@@ -2,15 +2,16 @@
 // SPREAD OPERATOR [ES6] - EXPANDING AN ARRAY ////////////////
 //////////////////////////////////////////////////////////////
 
-// (three dots "..." on RHS OF assignment operator "=")
+// "..." on RHS OF "="
 // The Spread Operator unpacks elements of iterable objects such as Arrays, Sets, Maps and Objects into a list.
+
 // Spread Operator can "ONLY" be used in following 2 cases:
         //    1. Expanding an Iterable.
         //    2. As a function call argument.
 
 // There can be more than one spread element in an expression.
 
-// 1. Expanding an Iterable.
+//  Example #1 (Expanding an Iterable)
 const restaurant = {
    name:'Rahul’s Cafe',
    location:'Madh-Island Mumbai India',
@@ -39,7 +40,7 @@ const restaurant = {
   },
 };
 
-// Use the spread operator to expand newCategories.
+// Use the spread operator to expand restaurant.categories and save to a new variable.
 const newCategories = [ ...restaurant.categories , 'Non-Veg'];
 console.log(newCategories);
 // ['North Indian', 'Chinese', 'South Indian', 'Italian' , 'Non-Veg']

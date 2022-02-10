@@ -5,6 +5,10 @@
 // Earlier we saw that its a bad practice to have a function iside a constructor function.
 // To tackle that situation, we use Prototype object.
 
+// Prototypes allow you to easily define methods to all instances of a particular object. 
+// The beauty is that the method is applied to the prototype, so it is only stored in the memory ONCE,
+// but every instance of the object has access to it.
+
 // *Prototype*
 // Each and every function in javascript automatically has a property called "prototype".
 // So the "Student" constructor function also has a prototype property.

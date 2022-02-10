@@ -2,7 +2,7 @@
 // CHAINED PROMISES [ES 6] ///////////////////////////////////
 //////////////////////////////////////////////////////////////
 
-// Formal Definition: An Object that is used as a placeholder for the future result of an asynchronous operation.
+// Formal Definition: Promise is an object that is used as a placeholder for the future result of an asynchronous operation.
 // Informal Definition: A container for a value that will be delivered asynchronously in the future.
 // OR simply "a container/placeholder for a future value".
 // And a perfect example of a future value is response from an AJAX call.

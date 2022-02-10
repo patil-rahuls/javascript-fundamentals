@@ -24,7 +24,7 @@ const obj = {
 obj.show();                 // 'Hi Hitesh'
 
 // This is because in the first line "var name = "Hitesh";" 
-// we have declared a variable on global object (window object)
+// we have declared a variable on global object (window object in case of Browser)
 // That means now "name" is globally available.
 console.log(this);          // window { ... }
 console.log(this.name);     // window { ... , name:Hitesh, ... }

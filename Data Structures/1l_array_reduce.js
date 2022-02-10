@@ -33,4 +33,6 @@ const max = numbers2.reduce(
 , txn[0]);                 // here this parameter is the starting item
 console.log(max);          // 100
 
+// The accumulator holds the net result of the function.
+
 

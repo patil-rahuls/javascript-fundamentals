@@ -3,6 +3,7 @@
 //////////////////////////////////////////////////////////////
 
 // Call, Apply and Bind Methods:
+// Used to reuse an Object's method with different Objects.
 // *call* and *apply* call a function.
 // while *bind* creates a function.
 
@@ -74,6 +75,7 @@ const bookFn = lufthansa.book;
 bookFn.apply ( lufthansa , [56 , 'Anish Sasi'] );
 // arguments - 56 and 'anish sasi' are in an array.
 
+//////////////////////////////////////////////////////////////
 // Better approach is to put params into an array and then we can re-use it.
 const args = [ 56 , 'Rahul Patil' ];
 // Now we can use this arguments array with both apply() as well as bind()
@@ -110,7 +112,7 @@ const bookSW = bookFn.bind(swiss);
 // Let’s modify the book method for one object. (lets say-  to accept only name)
 const bookNewEW = bookFn.bind(eurowings, 45);
 
-// Now if I call bookNewEW, I just need to pass the name. 
+// Now if I call bookNewEW, I just need to pass the name.
 // Because I have preset 45 as the first argument USING BIND()
 bookNewEW('Rahul');
 // this is same as book.call(eurowings, 45, 'Rahul');
@@ -157,7 +159,7 @@ const VAT = addTax.bind( null , 0.23 ) ;
 
 VAT(3299); // 3299 + 3299*0.23
 
-// Using bind() gives us a new function.
+// IMP: Using bind() gives us a new function.
 // There might be cases where you need a specific function instead of default params. 
 // Like the above case, one function for calculating VAT, one for GST, etc.
 

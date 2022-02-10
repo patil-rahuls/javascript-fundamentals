@@ -4,15 +4,15 @@
 
 // TIP: || and && operators do not always return boolean
 
-//  Example #1
-// Default value if first operand is falsy.
+//  Example #1 (Default value if first operand is falsy)
 const myObj = {  };
 
-// Getting a property of which we have no idea whether it exists in "myObj".
+// getting a property of which we have no idea whether it exists in "myObj".
 const val1 = myObj.property1 ? myObj.property1 : 10;
 
 // Better Solution: We can use short circuiting the OR operator to shorten this code.
 const val2 = myObj.property1 || 10;
+// If first operand is falsy, we will have default value 10 assigned to val2.
 
 //  Example #2
 const calcSq = function (val){
@@ -20,12 +20,12 @@ const calcSq = function (val){
 }
 calcSq && calcSq(34);
 
-// TIP:
-// For variables short circuiting use ||
+// TIP:-
+// For variables, use ||
 const age = myAge || 26;
 // if myAge exists, age = myAge, else age = 26
 
-// For function call short circuiting use &&
+// For function calls, use &&
 calcSq && calcSq(34);
 // if calcSq() exists, then the second expression calcSq(34) will be executed.
 

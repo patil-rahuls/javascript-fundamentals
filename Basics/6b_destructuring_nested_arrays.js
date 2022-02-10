@@ -3,7 +3,7 @@
 //////////////////////////////////////////////////////////////
 
 // Unpacks(and assigns) values from arrays, or properties from objects, into distinct variables.
-// [ ] is at the LHS of = 
+// TIP: [ ] and { } is at the LHS of = 
 
 // Nested Destructuring
 const arr = [ 2,4,6, [1,3,5] ] ;

@@ -13,7 +13,7 @@
 // The promises' callbacks are called microtasks, hence their queue is called so.
 
 // May be it can happen, that if there are many mirotasks in their queue, then callbacks from callback Q
-// may never get executed or get executed with delay. 
+// may never get executed or get executed with huge delay. 
 
 // Also, Timer functions do not always gaurantee the passed delay execution. because there might be other 
 // callback function waiting to be executed before the timer in the Callback Queue.

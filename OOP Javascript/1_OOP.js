@@ -23,14 +23,14 @@
 
 // Traditional OOP           |          Javascript OOP
 // 
-//    Class                  |             Prototype (Contain methods)
+//    Class                  |        Prototype (Contain methods)
 //      |                    |                 ^  
 //      |                    |                 |
 //      |                    |                 |
 // Instantiation             |    Prototypal Inheritance/Delegation
 //      |                    |                 |
 //      |                    |                 |
-//   Instance                |               Object (Can access methods)
+//   Instance                |         Object (Can access methods)
 
 // In Javascript, we say "Objects are linked to a Prototype Object".
 

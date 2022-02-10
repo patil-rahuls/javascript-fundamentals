@@ -41,6 +41,8 @@ const myFunc = async function(page) {
     console.log(data);
 };
 myFunc(2);
+// Promise {<pending>}
+// {...}  // printed after 5 seconds once data is fetched from the API.
 
 // And we can always write try catch block to catch any errors in any of the promis states.
 // try {

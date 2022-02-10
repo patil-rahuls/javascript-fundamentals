@@ -3,11 +3,13 @@
 //////////////////////////////////////////////////////////////
 
 // Unpacks(and assigns) values from arrays, or properties from objects, into distinct variables.
+// TIP: [ ] and { } is at the LHS of = 
+
 // Useful in destructuring the APIs data. 
 // We need to specify the correct property name in the destructuring assignment
 // Use { } for objects and [ ] for arrays.
 
-// Consider the following object as an example.
+//  Example #1
 const restaurant = {
     name:'Rahul’s Cafe',
     location:'Madh-Island Mumbai India',
@@ -47,7 +49,7 @@ const {
 } = restaurant;
 console.log( a , b );               // 8 , 23
 // We destructured weekends timings to variables a and b. 
-// Use correct property names ('weekends' , 'open', 'close' in above example) to avoid errors.
+// IMP: Use correct property names ('weekends' , 'open', 'close' in above example) to avoid errors.
 
 // Calling an object method whcih takes a destructured object as parameter. "orderDelivery()"
 restaurant.orderDelivery({

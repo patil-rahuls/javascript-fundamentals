@@ -3,6 +3,8 @@
 //////////////////////////////////////////////////////////////
 
 // Unpacks(and assigns) values from arrays, or properties from objects, into distinct variables.
+// TIP: [ ] and { } is at the LHS of = 
+
 // Useful in destructuring the APIs data.
 // We need to specify the correct property name in the destructuring assignment.
 // Use { } for objects and [ ] for arrays.
@@ -61,7 +63,6 @@ let a = 111;
 let b = 999;
 
 { a , b } = myObj;                  // Syntax Error
-
 // Solution: Just enclose this in parentheses. (parens syntax)
 ({ a , b } = myObj); // values of a and b now mutated. 
 console.log(a,b);                   // 91 , 2

@@ -14,12 +14,12 @@ const age2 = calcAge(1992);
 // Explanation : 
 // calcAge is the function name.
 // birthYear is a function parameter. In case of multiple parameters we use parenthesis ()
-// 2037 - birthYear is the expression which is evaluated and the result of which is returned.
+// "2037 - birthYear" is the expression which is evaluated and the result of which is returned.
 
 // We need to explicitly return value from an arrow function when using function blocks { }
 const someFunction = parameter => {
    const x = 5;
-   return x*parameter;                // Explicitly return value
+   return x*parameter;                // Explicitly returned value
 }
 console.log(someFunction(4));
 

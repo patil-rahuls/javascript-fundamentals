@@ -18,7 +18,7 @@ booker(); // 3
 // booker() still has access to the variable 'users' which was declared in parent function parentFn(). 
 // And parentFn() has already been executed and has returned to booker().
 // A closure gives a function access to all the variables of its parent function, 
-// even after that parent function has finished executing and returned. 
+// Even after that parent function has finished executing and returned. 
 // The function keeps a reference to its outer scope, which preserves the scope chain throughout the time.
 // A closure ensures that a function doesn't lose connection to variables that existed at the function's creation scope.
 

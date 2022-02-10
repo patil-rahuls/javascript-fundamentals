@@ -3,7 +3,7 @@
 //////////////////////////////////////////////////////////////
 
 // Unpacks(and assigns) values from arrays, or properties from objects, into distinct variables.
-// [ ] and { } is at the LHS of = 
+// TIP: [ ] and { } is at the LHS of = 
 
 //  Example #1
 const arr = [2,3,4];
@@ -24,7 +24,7 @@ const restaurant = {
    
    order:function(starter_index, cat_index){
        return [this.starters[starter_index] , this.categories[cat_index]];
-       // Returns 2 values
+       // Returns an Array
    }
 };
 
@@ -32,10 +32,11 @@ const [starter , mainCourse ] = restaurant.order(2 , 0);
 console.log(starter , mainCourse);
 // 'All Paneer Starters' , 'North Indian'
 
-// More examples using the same "restaurant" object
 const [first_cat, second_cat] = restaurant.categories;
+// 'North Indian', 'Chinese'
 
 const [ , , third_cat] = restaurant.categories;
+// 'South Indian'
 
 //  Example #3
 // IMP: Swap two values WITHOUT using a temporary variable.

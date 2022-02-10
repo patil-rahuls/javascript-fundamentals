@@ -22,9 +22,19 @@ function checkHoisting() {
    console.log(x);    // Uncaught ReferenceError: Cannot access 'x' before initialization
    let x = "Rahul";
    console.log(x);
+   console.log(y);    // Uncaught ReferenceError: 'y' is not defined.
 }
 
 checkHoisting();
+
+// WHY TDZ exist ? (Answer : to identify the type of issue/bug)
+// Observe the first error message: "Cannot access 'x' before initialization"
+// It is because the code is certain that 'name' is initialized later in the code.
+// Hence it is kept in TDZ. Thus we can identify the issue from error message created by TDZ and 
+// it makes it easier to avoid errors/bugs which are hard to find.
+
+// Also, another reason why TDZ exists, is to make *const* variables work as intended. i.e. 
+// to throw error if *const* variable is not initialized while defining. 
 
 // This is a useful behaviour, since *var* can be more prone to errors.
 

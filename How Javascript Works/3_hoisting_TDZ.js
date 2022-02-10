@@ -7,8 +7,9 @@
 // Hoisting: Before Execution, code is scanned for variable declarations and for each variable,
 // a new property is created in the Variable Environment.
 
-// So, the function declarations (NOT function expressions), 
-// variables declared using 'var' in global scope are all first stored in the Variable Environment.
+// IMP: How Hoisting Works.
+// So, the function declarations (NOT function expressions) and variables 
+// declared using 'var', in global scope, are all first stored in the Variable Environment.
 // This is how Hoisting actually works.
 
 // *let* and *const* variables also said to be hoisted but in block scope AND
@@ -29,7 +30,7 @@
 // Also, another reason why TDZ exists, is to make *const* variables work as intended.  
 
 // Why Hoisting?
-// Sometimes we might need to use functions before actual decalration.
+// Sometimes we might need to use functions before actual declaration.
 // *var* hoisting is just a byproduct.
 // Code can be cleaner and useful.
 

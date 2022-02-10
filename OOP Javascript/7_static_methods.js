@@ -2,13 +2,16 @@
 // STATIC ////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////
 
-// Array.from()
+//  Example #1: 
+Array.from()
 
 // the .from() is connected to Array's constructor and not to the prototype of Array.
 
 // [1,2,3,4].from(); will not work
+// meaning, its not accesible to objects created from Array constructor fn.
+// But it is accesible directly from Array constructor fn.
 
-// More example of static methods
+//  Example #2: 
 Number.parseFloat(12);
 
 // These(static methods) are made so as to keep them linked to Array only.
@@ -28,12 +31,12 @@ Student.hey = function(){
 Student.hey();      // We are calling it through Class and not by any object.
 // Just like normal static methods we have in c++ java and php.
 
-s1.hey();       // Error: s1.hey is not a function.
+s1.hey();           // Error: s1.hey is not a function.
 // Because hey() is simply not in Student prototype object.
 
 // Static methods just like any other programming languages, are called by the Class directly.
 
-// 'this' in static method.
+// 'this' in static method points to the constructor fn.
 Student.hey = function(){
     console.log("Hey There !");
     console.log(this);              // Prints the constructor function. Because, its the constructor that's calling this method.
