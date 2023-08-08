@@ -10,12 +10,12 @@
 //  Example #1
 console.log(undefined || 0 || "" || 'Hello' || 23 || null);
 // Outputs 'Hello'
-// In OR operation, the first truthy value is printed. 
+// In OR operation, the first truthy value is printed.
 // It will be short circuited at the first truthy value 'Hello' in the expression above.
 
 //  Example #2
 console.log(3 || '');           // 3
-// 3 is a truthy value, so the next expression is not evaluated 
+// 3 is a truthy value, so the next expression is not evaluated
 console.log(3 || 'Rahul');      // 3
 console.log(true || 0);         // true
 
@@ -41,11 +41,9 @@ console.log(3 && 'Rahul');      // 'Rahul'
 console.log(0 && 'Rahul');      // 0
 
 //  Example #6
-console.log('Hello' && 23 && null && "rest"); 
+console.log('Hello' && 23 && null && "rest");
 // null
 // The first Falsy value where the short circuit happened.
 
-// From the above examples, we observed that the || and && operations do not always return a boolean, 
+// From the above examples, we observed that the || and && operations do not always return a boolean,
 // instead they return the data based on the operands (where the short circuiting happens).
-
-

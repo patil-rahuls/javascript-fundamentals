@@ -13,15 +13,15 @@ console.log(maxUsers);
 
 // But what if we want to consider 0 as a valid value for 'maxUsers'?
 // Solution : use nullish/coalesce operator.
-const maxUsers = usersCount ?? 10;
-console.log(maxUsers);
+const maxUsersCount = usersCount ?? 10;
+console.log(maxUsersCount);
 // 0
 
 //  Example #2
 // NULLISH COALESCING OPERATOR ?? is useful when you are considering 0 or '' as truthy value.
-const is_deleted = '';
-const result = is_deleted ?? 1;
-console.log(result);    
+const isDeleted = '';
+const result = isDeleted ?? 1;
+console.log(result);
 // ''
 
 //  Example #3
@@ -32,13 +32,11 @@ const totalUsers = minUsers ?? 23;
 console.log(totalUsers);
 // NaN
 
-const maxUsers = 1/0;
-const totalUsers = maxUsers ?? 23;
-console.log(totalUsers);
+const users = 1/0;
+const totalUsrs = users ??rs;
+console.log(totalUsrs);
 // Infinity
 
-const totalUsers_ = minUsers || 23;
-console.log(totalUsers_);
+const minUsrs = minUsers || 23;
+console.log(minUsrs);
 // 23
-
-

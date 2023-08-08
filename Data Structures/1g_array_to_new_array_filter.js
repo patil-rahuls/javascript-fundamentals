@@ -16,5 +16,3 @@ console.log(positives);              // [122,24,355,780]
 
 // Observe that filter’s Callback function need to return a Boolean and NOT a value.
 // If that condition is true for the current item then that item is returned to the new array.
-
-

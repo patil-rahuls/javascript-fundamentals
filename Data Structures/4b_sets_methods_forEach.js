@@ -16,11 +16,11 @@ names.forEach(function( val, key, set){
 // aajesh : aajesh
 // rahul : rahul
 
-// The key in forEach() over a Set does not make any sense there. 
-// But to make this as a common function available to all iterables, its signature remains the same for all iterables. 
+// The key in forEach() over a Set does not make any sense there.
+// But to make this as a common function available to all iterables, its signature remains the same for all iterables.
 
 // For such values we can use the throwaway variable ‘_’
-uniqCurrencies.forEach(function( val , _ , set){
+names.forEach(function( val , _ , set){
    console.log(`${val}`);
 });
 // hitesh
@@ -29,5 +29,3 @@ uniqCurrencies.forEach(function( val , _ , set){
 
 // Disadvantage:
 // break and continue does not work! So if you need to break out of the loop, then use the ordinary for-of loop.
-
-

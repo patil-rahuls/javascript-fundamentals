@@ -13,7 +13,6 @@ const laptop = {
     [name + ++i]: "Dell",
     [name + ++i]: "HP"
 }
-
 console.log(laptop.make1);          //"Apple"
 console.log(laptop.make2);          //"Dell"
 console.log(laptop.make3);          //"HP"
@@ -28,12 +27,10 @@ const myObj = {
 
     // method myFunc() can be re-written as follows.
     myFunc(param1, param2){
-        return [param1 , param2];     
-    }, 
+        return [param1 , param2];
+    },
     //i.e. removed the colon and function keyword
 
     name,                           // An outside object
     newName : name,                 // An outside object using a different property name.
 };
-
-

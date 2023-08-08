@@ -5,7 +5,7 @@
 // Promises : Its a powerful and elegant soution to handle asyncrounous code.
 // Also a better way to write Ajax calls is using fetch() function which returns a Promise.
 
-//  Example #1: 
+//  Example #1:
 const result = fetch("https://xyz.com/api/somedata");
 console.log(result);
 // Promise {<pending>}
@@ -39,4 +39,3 @@ console.log(result);
 
 // We first "Build a Promise" e.g. fetch()
 // and then "Consume a Promise" when we already have a promise returned from Fetch API.
-

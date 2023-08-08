@@ -3,7 +3,7 @@
 //////////////////////////////////////////////////////////////
 
 // Unpacks(and assigns) values from arrays, or properties from objects, into distinct variables.
-// TIP: [ ] and { } is at the LHS of = 
+// TIP: [ ] and { } is at the LHS of =
 
 // Default values
 // When we don't know what and how many elements are there in the array to be destructured,
@@ -13,8 +13,6 @@ console.log(p,q,r);
 // 8, 9, undefined
 
 // Solution : We define Default values while destructuring an Array to avoid the 'undefined'.
-const [p = 1, q = 1, r = 1]  = [8,9];
-console.log(p,q,r);
+const [P = 1, Q = 1, R = 1]  = [8,9];
+console.log(P,Q,R);
 // 8 , 9 , 1
-
-

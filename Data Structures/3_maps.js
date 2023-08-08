@@ -7,8 +7,8 @@
 // More here : https://dmitripavlutin.com/maps-vs-plain-objects-javascript/
 
 // Syntax :  [ [k,v], [k,v], [k,v] , ...]
-const param = [['yes', 1] , ['no', 2] , ['may be', 3]];
-const myMap = new Map( param );
+const options = [['yes', 1] , ['no', 2] , ['may be', 3]];
+const myMap = new Map( options );
 
 // Example #1
 const question = new Map ([
@@ -33,5 +33,3 @@ console.log(question);
 //    true , 'Correct answer',
 //    false , 'Try Again',
 // }
-
-

@@ -3,7 +3,7 @@
 //////////////////////////////////////////////////////////////
 
 // To iterate over an Iterable.
-// "for..of" returns a list of "values" of the numeric properties of the object being iterated.
+// "for..of" iterate over a list of "values" of the numeric properties of the object being iterated.
 
 //  Example #1:
 for (const item of menu){
@@ -21,5 +21,3 @@ for( const item of Object.entries(menu) ){
 for (const  [index , item ] of Object.entries(menu)){
    console.log(`${index+1} : ${item}`);
 }
-
-

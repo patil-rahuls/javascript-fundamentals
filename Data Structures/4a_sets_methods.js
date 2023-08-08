@@ -37,13 +37,11 @@ console.log(names);			// set(5) {'hitesh', 'aajesh' , 'rahul', 'anil', 'milan'}
 names.clear();
 
 
-// There is no method to get a specific item from a set. 
-// Because, there is no order defined in which the items are stored in a Set unlike arrays. 
+// There is no method to get a specific item from a set.
+// Because, there is no order(index) defined in which the items are stored in a Set unlike arrays.
 // When using Sets, we just care about uniqueness and whether the item is present or not(in the Set).
 
 // But since Sets are iterables too. We can loop over them.
 for (const itm of names) {
    console.log(itm);
 }
-
-

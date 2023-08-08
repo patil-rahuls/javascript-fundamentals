@@ -22,5 +22,3 @@ createBooking('AB123', undefined, 4000);
 
 // setting default param value as 'undefined' is the same as not setting the value.
 // This means that parameters(without a default value) in a function are set to 'undefined' initialy.
-
-

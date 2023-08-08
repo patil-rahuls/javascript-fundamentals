@@ -14,7 +14,7 @@ const perfromers = Object.keys(performance);
 console.log(perfromers);
 // ['rahul' , 'hitesh' , 'aajesh']
 
-// Obv we can loop over the properties 
+// Obv we can loop over the properties
 for (const perfromer of Object.keys(performance))
    console.log(perfromer);
 // 'rahul'
@@ -40,5 +40,3 @@ const entries = Object.entries(performance);
 for (const [key, {startedAt,high}] of Object.entries(openingHours)){
    console.log(`${key}'s score opened at ${startedAt} and closed at ${high}`);
 }
-
-

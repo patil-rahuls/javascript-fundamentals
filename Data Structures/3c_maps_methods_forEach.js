@@ -23,5 +23,3 @@ currencies.forEach(function( val , key , map ){
 
 // Disadvantage:
 // break and continue does not work! So if you need to break out of the loop, then use the ordinary for-of loop.
-
-

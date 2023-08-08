@@ -18,18 +18,6 @@ const question = new Map ([
    [false , 'Try Again'],
 ]);
 
-// Convert an Object to Map - Object.entries()
-const weekendMeetings = {
-   sat:{ start : 1200 , end : 1300} ,
-   sun:{ start : 1100 , end : 1300} ,
-};
-
-console.log(Object.entries(weekendMeetings));
-// [
-//    ["sat", {start : 1200 , end : 1300}],
-//    ["sun" ,{start : 1100 , end : 1300}]
-// ]
-
 // Maps are Iterable
 for (const [key, value] of question) {    //  Object.entries() not required for Map
    if (typeof key === 'number'){
@@ -42,8 +30,19 @@ const questionArray = [...question];
 
 
 // To Iterate, use the following methods.
-console.log([...myMap.entries()]);
-console.log([...myMap.keys()]);
-console.log([...myMap.values()]);
+console.log([...question.entries()]);
+console.log([...question.keys()]);
+console.log([...question.values()]);
 
 
+// Convert an Object to Map - Object.entries()
+const weekendMeetings = {
+   sat:{ start : 1200 , end : 1300} ,
+   sun:{ start : 1100 , end : 1300} ,
+};
+
+console.log(Object.entries(weekendMeetings));
+// [
+//    ["sat", {start : 1200 , end : 1300}],
+//    ["sun" ,{start : 1100 , end : 1300}]
+// ]

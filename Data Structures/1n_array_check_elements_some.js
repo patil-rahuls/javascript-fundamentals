@@ -12,5 +12,3 @@ const higherSalariesExists = movements.some( mov => mov > 100000 );
 
 // Fundamental difference between includes() and some() :
 // Includes() checks equality whereas some() checks for an expression.
-
-

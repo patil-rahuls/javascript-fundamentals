@@ -3,7 +3,7 @@
 //////////////////////////////////////////////////////////////
 
 // every():
-// Returns true ONLY if ALL the elements of the array satisfy the condition. 
+// Returns true ONLY if ALL the elements of the array satisfy the condition.
 // Hence the name every.
 
 const check = wallet.every( acc => acc.bal >0 );
@@ -18,5 +18,3 @@ const deposit = mov => mov > 0;
 // Now we can reuse the same function as a callback to different fn.
 wallet.some(deposit);
 wallet.filter(deposit);
-
-

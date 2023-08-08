@@ -11,43 +11,51 @@
 // In general, a block is any code within curly braces { }, including functions, loops and conditional statements.
 
 //  Example #1
-function run() {               // function scope.
-   var foo = "Foo";
-   let bar = "Bar";
-   console.log(foo, bar);      // Foo Bar
-   {                           // Block scope.
-      var moo = "Mooo"
-      let baz = "Bazz";
-      console.log(moo, baz);   // Mooo Bazz
-   }
-   console.log(moo);           // Mooo
-   console.log(baz);           // Uncaught ReferenceError: baz is not defined
+function run() {
+  // function scope.
+  var foo = "Foo";
+  let bar = "Bar";
+  console.log(foo, bar);    // Foo Bar
+  {
+    // Block scope.
+    var moo = "Mooo";
+    let baz = "Bazz";
+    console.log(moo, baz);  // Mooo Bazz
+  }
+  console.log(moo);         // Mooo
+  console.log(baz);         // Uncaught ReferenceError: baz is not defined
 }
 run();
 
 //  Example #2
-var x = "global scope";       
+var x = "global scope";
 function foo() {
-   var x = "functional scope";
-   console.log(x);
+  var x = "functional scope";
+  console.log(x);
 }
 
 {
-   let x = "block scope";      // Only accessible in this enclosing block
+  let x = "block scope";    // Only accessible in this enclosing block
 }
 
-foo();                         // "functional scope"
-console.log(x);                // "global scope"
+foo();                      // "functional scope"
+console.log(x);             // "global scope"
 
 //  Example #3
 // Scope changes when a variable is declared without *let*, *var* or *const* keyword.
 {
-   let a = 9;
-   b= 8;        // b is not declared using any of 'let' or 'const' or 'var' keywords.
-                // and will by default become globally scoped.
+  let a = 9;
+  b = 8;                // b is not declared using any of 'let' or 'const' or 'var' keywords.
+                        // and will by default become globally scoped.
 }
-console.log(a); // ReferenceError: a is not defined. (let is block scoped)
-console.log(b); // 8, because b became globally scoped in the block above.
-console.log(window.b); // 8, because *window* is a global object.
+console.log(a);         // ReferenceError: a is not defined. (let is block scoped)
+console.log(b);         // 8 (because b became globally scoped in the block above)
+// In Browser, we can access 'b' using *window* object.
+console.log(window.b);  // 8 (Because *window* is a global object in browser)
+// In Node JS runtime, we can access 'b' using *global* object.
+console.log(global.b);  // 8
 
-
+//  Example #4 - *var* variables appear error prone.
+var name = "Rahul";
+var name = "Raj";        // This works without giving any error.
+// The example above looks bad and erroneous, but works. That shouldn't happen.

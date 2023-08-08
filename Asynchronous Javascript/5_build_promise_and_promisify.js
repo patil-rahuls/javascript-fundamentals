@@ -7,7 +7,7 @@
 // It takes exactly one argument the 'executor' function. This 'executor' function has 2 parameters
 // these parameters are actually functions - resolve() and reject()
 
-const newPromise = new Promise(function(resolve, reject){
+const myPromise = new Promise(function(resolve, reject){
     // This executor fn should return a resolved value.
 
     if( true ){ // just for example.
@@ -25,7 +25,7 @@ const newPromise = new Promise(function(resolve, reject){
 });
 
 // Consuming the Promise.
-newPromise.then(result=>console.log(result)).catch(err=>console.error(err));
+myPromise.then(result=>console.log(result)).catch(err=>console.error(err));
 // Observe that We didn't use .json() function here.
 
 // However, this is not asynchronous.
@@ -39,10 +39,10 @@ const newPromise = new Promise(function(resolve, reject){
         else
             reject(new Error("My Error Message")); // This is a good idea, as it prints out on console like error.
     }, 2000);
-    
+
 });
 
-// Output: 
+// Output:
 // Processing...
 // 'My Name is Rahul' // this gets printed after 2 seconds.
 
@@ -52,22 +52,22 @@ const newPromise = new Promise(function(resolve, reject){
 // Promisifying - converting callback based asynchronous behaviour into promise based.
 
 // Promisifying setTimeout()
-const wait = function(seconds){
+const waitForNSecond = function(seconds){
     return new Promise(function(resolve){
         setTimeout(resolve, seconds*1000);
     });
 };
 // Using arrow fn.
-const wait = seconds => new Promise(resolve=>setTimeout(resolve, seconds*1000)); 
+const waitForNSeconds = seconds => new Promise(resolve=>setTimeout(resolve, seconds*1000));
 
-wait(4).then(function(){
+waitForNSeconds(4).then(function(){
     console.log("I waited for 4 Seconds.");
 });
 
 // More Fun :
-wait(4).then(function(){
+waitForNSeconds(4).then(function(){
     console.log("I waited for 4 Seconds.");
-    wait(1); // This will return another promise.
+    waitForNSeconds(1); // This will return another promise.
 }).then(() => console.log("I waited for another 1 Second"));
 
 // This Prevents Callback hell, also the code looks readable.
@@ -75,5 +75,3 @@ wait(4).then(function(){
 // Build a Promise and Resolve immediately.
 Promise.resolve('abc').then((x)=>{ console.log(x) }); // abc
 Promise.reject(new Error('something')).then((x)=>{ console.log(x) }); // Error: something
-
-

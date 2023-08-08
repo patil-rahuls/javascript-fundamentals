@@ -3,8 +3,8 @@
 //////////////////////////////////////////////////////////////
 
 // Using a for-of loop
-const arr = [11,22,33,44,55,66];
-for (const [i, item] of arr.entries()) {
+const arr1 = [11,22,33,44,55,66];
+for (const [i, item] of arr1.entries()) {
    console.log( `At position ${index} - ${item}` );
 }
 
@@ -26,5 +26,3 @@ arr.forEach( function(item, index, entireArr) {
 // break and continue does not work! So if you need to break out of the loop, then use the ordinary for-of loop.
 
 // Also see forEach on Maps and Sets.
-
-

@@ -10,5 +10,3 @@ const myObj = {
    age : 2049-2021,      // expression inside an object definition
    frnds: myArr          // array as a value
 };
-
-

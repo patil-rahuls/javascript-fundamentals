@@ -37,7 +37,7 @@ console.log(myObj);
 
 // Object method call
 myObj.greet("Reader");
-// In this context, "myObj" is the receiver, while the "greet()" is the method. 
+// In this context, "myObj" is the receiver, while the "greet()" is the method.
 // Compare that with a function invocation:
 const sayHi = () => console.log(`Hi there !!`);
 sayHi();
@@ -48,5 +48,3 @@ myObj.greet("Reader");     // Easy to read
 
 // Method call using BRACKET notation
 myObj['greet']("Reader");  // Difficult to read
-
-

@@ -8,7 +8,7 @@
 // Method signature is similar to the forEach() method.
 
 myArr.find( itm =>  itm < 0 );
-// But find() method does not return an array. 
+// But find() method does not return an array.
 // Instead it returns THE FIRST ELEMENT which satisfies the mentioned condition in the callback function.
 
 // The fundamental difference between filter() and find()
@@ -17,5 +17,3 @@ myArr.find( itm =>  itm < 0 );
 // Lets say we have an object array like this.
 // acc = [  { owner:"user1", ... } , { owner:"Rahul Patil", , ... } , { ... }];
 const account = accounts.find(acc => acc.owner === "Rahul Patil");
-
-

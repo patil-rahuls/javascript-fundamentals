@@ -13,7 +13,7 @@ const newValues = numbers.map(function(val){
    return val ** power; // modify each item and put in new array
 });
 console.log(numbers);      // [2, 4, 3, 0, 10, 20, 30, 40]
-console.log(newValues);    // [8, 64, 27, 0, 1000, 8000, 27000, 64000] 
+console.log(newValues);    // [8, 64, 27, 0, 1000, 8000, 27000, 64000]
 
 // Use the arrow function to simplify our code.
 const newValues2 = numbers.map(mov => mov * power);
@@ -23,7 +23,5 @@ const newArr = numbers.map( (curr, key, arr) => {
    return `${key} : ${curr}`;       // will store these strings to the newArr array.
 });
 
-console.log(newArr);    
+console.log(newArr);
 // ["0 : 2", "1 : 4", "2 : 3", "3 : 0", "4 : 10", "5 : 20", "6 : 30", "7 : 40"]
-
-

@@ -3,28 +3,27 @@
 //////////////////////////////////////////////////////////////
 
 // Unpacks(and assigns) values from arrays, or properties from objects, into distinct variables.
-// TIP: [ ] and { } is at the LHS of = 
+// TIP: [ ] and { } is at the LHS of =
 
 //  Example #1
 const arr = [2,3,4];
-const a = arr[0];
-const c = arr[2];
+const A = arr[0];
+const B = arr[2];
 
 // Using Destructuring
 const [x,y,z] = arr;
-console.log(x,y,z);                        
+console.log(x,y,z);
 // 2 , 3 , 4
 
 //  Example #2
 const restaurant = {
-   name:'Rahul’s Cafe',
-   location:'Madh-Island Mumbai India',
-   starters:['Crispy Corn Chaat', 'Hara Bhara Kebab', 'All Paneer Starters', 'Corn Kabab'],
-   categories:['North Indian', 'Chinese', 'South Indian', 'Italian'],
-   
+   name: 'Rahul’s Cafe',
+   location: 'Madh-Island Mumbai India',
+   starters: ['Crispy Corn Chaat', 'Hara Bhara Kebab', 'All Paneer Starters', 'Corn Kabab'],
+   categories: ['North Indian', 'Chinese', 'South Indian', 'Italian'],
+
    order:function(starter_index, cat_index){
        return [this.starters[starter_index] , this.categories[cat_index]];
-       // Returns an Array
    }
 };
 
@@ -44,11 +43,9 @@ const [ , , third_cat] = restaurant.categories;
 
 //  Example #4
 // Mutate variable values by Destructuring an Array.
-const arr = [7 , 8];
+const myArr = [7 , 8];
 let a = 111, b = 999;
 
-[a  , b ] = arr;
+[a  , b ] = myArr;
 console.log(a,b);
 // 7 , 8
-
-

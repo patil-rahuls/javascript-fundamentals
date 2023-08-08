@@ -3,7 +3,7 @@
 //////////////////////////////////////////////////////////////
 
 // To iterate over an Iterable.
-// "for..in" returns a list of "keys/index" on the object being iterated.
+// "for..in" iterate over a list of "keys/index" on the object being iterated.
 
 //  Example #1:
 let list = [4, 5, 6];
@@ -24,5 +24,3 @@ for(const i in employee)
 // employee_name
 // employee_address
 // salary
-
-

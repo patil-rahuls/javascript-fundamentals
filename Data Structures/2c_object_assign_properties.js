@@ -42,5 +42,3 @@ myObj = {    // Error "Assignment to constant variable." coz its a const
     3:'may be',
     4:'cancel'
 };
-
-

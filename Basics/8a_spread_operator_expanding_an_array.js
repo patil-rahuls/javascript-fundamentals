@@ -13,31 +13,29 @@
 
 //  Example #1 (Expanding an Iterable)
 const restaurant = {
-   name:'Rahul’s Cafe',
-   location:'Madh-Island Mumbai India',
-   starters:['Crispy Corn Chaat', 'Hara Bhara Kebab', 'All Paneer Starters', 'Corn Kabab'],
-   categories:['North Indian', 'Chinese', 'South Indian', 'Italian'],
-   
-   workingHours : {
-       weekdays:{
-           open:10, close:22,
-       },
-       weekends:{
-           open:8, close:23,
-       }  
-   },
+    name: 'Rahul’s Cafe',
+    location: 'Madh-Island Mumbai India',
+    starters: ['Crispy Corn Chaat', 'Hara Bhara Kebab', 'All Paneer Starters', 'Corn Kabab'],
+    categories: ['North Indian', 'Chinese', 'South Indian', 'Italian'],
 
-   order:function(starter_index, cat_index){
-       return [this.starters[starter_index] , this.categories[cat_index]];                  
-       // Returns 2 values
-   },
+    workingHours : {
+        weekdays:{
+            open:10, close:22,
+        },
+        weekends:{
+            open:8, close:23,
+        }
+    },
 
-   orderDelivery : function ({starterIndex=1 , mainIndex , time , address}){          
-      // starterIndex=1  is default param value
-      return `Your order ${this.starters[starterIndex]}
-         and ${this.categories[mainIndex]} will be delivered to
-         ${address} by ${time}`;
-  },
+    order:function(starter_index, cat_index){
+        return [this.starters[starter_index] , this.categories[cat_index]];
+    },
+
+    orderDelivery : function ({starterIndex=1 , mainIndex , time , address}){
+        return `Your order ${this.starters[starterIndex]}
+            and ${this.categories[mainIndex]} will be delivered to
+            ${address} by ${time}`;
+    },
 };
 
 // Use the spread operator to expand restaurant.categories and save to a new variable.
@@ -53,5 +51,3 @@ const copyCategories =  [...restaurant.categories];       // creates a shallow c
 // TIP#2:
 // Join 2 Arrays or more:
 const allItems = [...restaurant.categories, ...restaurant.starters];
-
-

@@ -20,5 +20,3 @@
 // Easy to compute size and iterate.
 // Use when you need keys other than string type.
 // Use when you simply need to map keys to values.
-
-

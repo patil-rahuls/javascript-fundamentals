@@ -3,7 +3,6 @@
 //////////////////////////////////////////////////////////////
 
 // "..." on LHS OF "="
-
 // The Rest Operator packs elements of a LIST into an iterable objects such as Arrays, Sets, Maps and Objects.
 
 // Rest Operator can "ONLY" be used in following 2 cases:
@@ -15,7 +14,7 @@
 
 //  Example #1 (As function parameter)
 const add = function(...varArgs){
-   // varArgs will be an packed into an array (provided we pass an array to this fn)
+   // varArgs will be packed into an array.
    let sum = 0;
    for (const i=0; i< varArgs.length ; i++)
        sum += varArgs[i];
@@ -26,7 +25,7 @@ const arr = [1,2,3,4,5];
 const result = add(...arr);
 // The function defined above takes comma separated n number of arguments and packs them into an array (varArgs).
 
-// Advantage of Rest Operator: 
+// Advantage of Rest Operator:
 // The function above can now accept both a single value as well as a spread-array as its input.
 add (2,3,4);
 add (...arr);   //  This is spread operator. Remember Spread Operator is used as fn call argument.
@@ -39,5 +38,3 @@ const someObj = {
 };
 someObj.expand("Hi" , "Hello" , "There" , "Hey");
 // "Hi" , ["Hello" , "There" , "Hey"]
-
-

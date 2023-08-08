@@ -17,5 +17,3 @@ const arr = [1,2];
 myMap.set(arr, 'Test');
 myMap.get(arr);
 // Now the 'arr' passed in both myMap.set() and myMap.get() refer to the same location in Heap.
-
-

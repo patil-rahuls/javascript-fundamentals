@@ -49,5 +49,3 @@ const getData = () => {
 // Fetching Data asynchronously...
 // Fetched Data // Prints after 5 seconds.
 // {...}
-
-

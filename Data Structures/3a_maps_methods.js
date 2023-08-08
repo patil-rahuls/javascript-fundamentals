@@ -16,12 +16,12 @@ myMap.set(2 , 'India');
 myMap.set(true , 'I am free now.');
 myMap.set(false , 'I am busy.');
 
-console.log(myMap);     
+console.log(myMap);
 // Map(3) {
-//    "name" => "Rahul", 
-//    1 => "Mumbai", 
-//    2 => "India", 
-//    true => 'I am free now.', 
+//    "name" => "Rahul",
+//    1 => "Mumbai",
+//    2 => "India",
+//    true => 'I am free now.',
 //    false => 'I am busy.',
 // }
 
@@ -30,11 +30,11 @@ myMap = myMap.set('freeTime' , '1100');    // Uncaught TypeError: Assignment to 
 const newMap = myMap.set('freeTime' , 1100);
 console.log(myMap);
 // Map(3) {
-//    "name" => "Rahul", 
-//    1 => "Mumbai", 
-//    2 => "India", 
-//    true => 'I am free now.', 
-//    false => 'I am busy.', 
+//    "name" => "Rahul",
+//    1 => "Mumbai",
+//    2 => "India",
+//    true => 'I am free now.',
+//    false => 'I am busy.',
 //    'freeTime' => 1100,
 // }
 
@@ -46,7 +46,7 @@ myMap.set('myUsernames',['rahulp','rahul.p','p.rahul_']).set('age' , 28).set('li
 // Gets data from a Map
 myMap.get(true);        // undefined. key true not in "myMap"
 myMap.get('age');       // 28
-   
+
 // Some fun here.
 const currTime = 1100;
 console.log(myMap.get(currTime === myMap.get('freeTime')));
@@ -56,7 +56,7 @@ console.log(myMap.get(currTime === myMap.get('freeTime')));
 // 3. has()
 // Checks if a key exists in a Map
 myMap.has('hobbies');   // false
-   
+
 
 // 4. delete()
 // Deletes an item from a Map
@@ -64,7 +64,7 @@ myMap.delete(2);
 myMap.delete(1);
 
 
-// 5. size() - This is not a method. no parens ( ) 
+// 5. size() - This is not a method. no parens ( )
 // returns size of Map
 myMap.size; // no parentheses () after size.
 
@@ -84,5 +84,3 @@ myMap.values();
 
 // 9. entries()
 myMap.entries();
-
-

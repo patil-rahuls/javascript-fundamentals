@@ -15,8 +15,6 @@ console.log(Boolean(undefined)); // false
 console.log(Boolean(null));      // false
 console.log(Boolean(NaN));       // false
 
-// Empty objects are not Falsy 
+// Empty objects are not Falsy
 console.log(Boolean({}));        // true
 console.log(Boolean([]));        // true
-
-
