@@ -27,19 +27,19 @@ function run() {
 }
 run();
 
+
 //  Example #2
 var x = "global scope";
 function foo() {
   var x = "functional scope";
   console.log(x);
 }
-
 {
   let x = "block scope";    // Only accessible in this enclosing block
 }
-
 foo();                      // "functional scope"
 console.log(x);             // "global scope"
+
 
 //  Example #3
 // Scope changes when a variable is declared without *let*, *var* or *const* keyword.
@@ -50,10 +50,12 @@ console.log(x);             // "global scope"
 }
 console.log(a);         // ReferenceError: a is not defined. (let is block scoped)
 console.log(b);         // 8 (because b became globally scoped in the block above)
+
 // In Browser, we can access 'b' using *window* object.
 console.log(window.b);  // 8 (Because *window* is a global object in browser)
 // In Node JS runtime, we can access 'b' using *global* object.
 console.log(global.b);  // 8
+
 
 //  Example #4 - *var* variables appear error prone.
 var name = "Rahul";

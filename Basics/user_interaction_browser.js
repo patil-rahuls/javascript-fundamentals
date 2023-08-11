@@ -2,8 +2,6 @@
 // USER INTERACTION alert(), prompt() and confirm() //////////
 //////////////////////////////////////////////////////////////
 
-// alert() - Come'on !! You know this.
-
 // prompt()
 // Accepts two arguments: prompt string and a default value.
 // Returns the text(converted to string) from the input field or null or default value(if set) if the input was canceled.

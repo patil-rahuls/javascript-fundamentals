@@ -2,7 +2,7 @@
 // LET, CONST, VAR COMPARISION ///////////////////////////////
 //////////////////////////////////////////////////////////////
 
-// 1. Re-Assignment
+// 1. Re-assignment
 // Variables declared using *let* and *var* can be re-assigned.
 let a = 10;
 a = 20;

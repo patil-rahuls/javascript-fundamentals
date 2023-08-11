@@ -7,6 +7,20 @@ function sum(x, y = 10) {
 }
 console.log(sum(5));             // 15
 
+// By default, the default value of params is undefined.
+function show(a, b) {
+   if(a){
+      console.log('this');
+   }
+   if(b){
+      console.log('that');
+   }
+}
+show();                          // undefined
+show(1);                         // this
+show(undefined,1);               // that
+show(1,1);                       // this that
+
 function sum(x = 10, y) {
    return x + y;
 }

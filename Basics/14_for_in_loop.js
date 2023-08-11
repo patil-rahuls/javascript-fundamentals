@@ -3,7 +3,7 @@
 //////////////////////////////////////////////////////////////
 
 // To iterate over an Iterable.
-// "for..in" iterate over a list of "keys/index" on the object being iterated.
+// "for..in" iterates over a list of "keys/index" on the object being iterated.
 
 //  Example #1:
 let list = [4, 5, 6];
