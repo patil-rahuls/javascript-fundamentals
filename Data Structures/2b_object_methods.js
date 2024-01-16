@@ -38,6 +38,8 @@ console.log(myObj);
 // Object method call
 myObj.greet("Reader");
 // In this context, "myObj" is the receiver, while the "greet()" is the method.
+// In layman's terms - a method is associated with an Object
+
 // Compare that with a function invocation:
 const sayHi = () => console.log(`Hi there !!`);
 sayHi();

@@ -13,8 +13,8 @@ console.log(countUnique);	// 7
 
 // 2b. String is also an iterable, so we can make a set out of it.
 // (creates a unique set of characters)
-let name = 'Rahul is awesome';
-const chars = new Set(name).size;
+let myName = 'Rahul is awesome';
+const chars = new Set(myName).size;
 console.log(chars);			// 12
 
 // 3. Convert Set to an Array.

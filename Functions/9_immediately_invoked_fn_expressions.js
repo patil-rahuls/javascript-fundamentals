@@ -23,13 +23,12 @@ const show = function (){
 // It's now interpreted as a function call to our function expression.
 
 
-// Note that it is not stored in any variable, and it is immediately invoked while declared. 
+// Note that it is not stored in any variable, and it is immediately invoked while declared.
 // Same works with an arrow function
 ( () => alert("This IIFE is written in arrow form") )();
 
-// IMP: Why are these in javascript ? 
+// IMP: Why are these in javascript ?
 //      Ans. "Variables Scope"
-// We use IIFE to just keep some variables hidden in the function scope and not make it available in global scope.
+// We use IIFE to just keep some variables hidden in the function scope and not make it available in
+// global scope hence prventing the global scope from getting polluted.
 // IIFE creates a scope. Every function creates its own scope in which variables are confined.
-
-

@@ -20,6 +20,9 @@ for (const perfromer of Object.keys(performance))
 // 'rahul'
 // 'hitesh'
 // 'aajesh'
+// This is same as we do with for-in loop. It loops through the properties.
+for (const perfromer in performance)
+   console.log(perfromer);
 
 // 2. GET Object VALUES
 const values = Object.values(performance);
@@ -28,7 +31,6 @@ console.log(values);
 // { startedAt : 72 , high : 99} ,
 // { startedAt : 51 , high : 98} ,
 // { startedAt : 83 , high : 100},
-
 
 // 3. GET Object ENTRIES [property , value] (Returns Array)
 const entries = Object.entries(performance);

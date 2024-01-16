@@ -17,6 +17,7 @@ const total = numbers.reduce(function(acc, val, index, arr){
 // In the Callback function 'acc' is a new parameter here which is an accumulator.
 //    It accumulates the data on every Iteration.
 //    It keeps holding and/or changing a value throughout the iterations.
+//    A value needs to be returned (on every iteration). It can be the 'acc' Or any calculations with acc.
 
 // Same using arrow fn.
 const total2 = numbers.reduce((acc,val) => acc+val, 0);

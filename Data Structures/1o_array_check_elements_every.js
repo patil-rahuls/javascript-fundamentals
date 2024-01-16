@@ -6,7 +6,7 @@
 // Returns true ONLY if ALL the elements of the array satisfy the condition.
 // Hence the name every.
 
-const check = wallet.every( acc => acc.bal >0 );
+const check = wallet.every( acc => acc.bal > 0 );
 if(check)
    alert(`All Wallet balance are positive.`);
 

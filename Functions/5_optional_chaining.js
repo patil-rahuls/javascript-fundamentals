@@ -4,10 +4,10 @@
 
 // It checks for a truthy value.
 
-// Scenarios, when checking nested objects, 
-// We might come to a point where we have to check if a property/method exists, and if it exists, 
+// Scenarios, when checking nested objects,
+// We might come to a point where we have to check if a property/method exists, and if it exists,
 // call/return its value. But then our code gets really messy and cluttered.
-// 
+//
 // Directly accessing a property which we don't know whether exists or not is a bad idea.
 console.log(restaurant.workingHours.fri.open);
 //  If obj "fri" doesn't exist, we get error: "cannot read property of type 'undefined'"
@@ -49,5 +49,3 @@ consle.log(  users[1]?.name ?? "user 1 not found..."  );
 
 // rahul
 // user 1 not found...
-
-

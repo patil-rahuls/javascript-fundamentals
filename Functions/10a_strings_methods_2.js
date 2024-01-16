@@ -7,10 +7,10 @@ model.toLowerCase();
 model.toUpperCase();
 
 const name = "rAHUL";
-const newName = name[0].toUpperCase() + name.slice(1); 
+const newName = name[0].toUpperCase() + name.slice(1);
 // "RAHUL"
 
-	
+
 // trim(): trims empty spaces at the start and ends of a string:
 const newStr = myStr.trim();
 
@@ -25,7 +25,7 @@ const newStr = myStr.replace(" ", "_").replace("$", "Rs.");
 
 // Alternate to replaceAll using regex.
 const newStr = myStr.replaceAll(/ /g, "_");
-// g stands for global. means apply to the entire string.
+// g stands for global. Means apply to the entire string.
 
 
 // includes(): Checks if a string contains a substring.
@@ -46,7 +46,7 @@ const str = "Ubuntu's UI is ACTUALLY slow, Admit it!";
 const resultArray = str.split(' ');
 
 // Remember to use destructuring wherever we get arrays
-const [firstLine, lastLine] = 'Rahul Patil'.split(",");
+const [firstName, lastName] = 'Rahul Patil'.split(" ");
 
 
 // join(): implodes an array into a string. (same as implode in php)
@@ -56,7 +56,9 @@ const newName = ['Mr.' , 'Rahul' , 'Patil'.toUpperCase()].join( '---' );
 // Mr.---Rahul---PATIL
 
 
-// padStart(): padds a string with given string in the benninging. LOL
+// padStart(): padds a string with given string in the benninging(LOL)
+// Syntax - padStart(fixedLength, char)
+//          padEnd(fixedLength, char)
 // Padding changes the length of the string by adding extra string specified by the user at the end or starting.
 const lol = "Barney Stinson";
 let newStr = lol.padStart(15, '+');
@@ -75,10 +77,10 @@ const maskCreditCard = function(number){
    let given = '' + number;
    // parameter converted to a string.
    // Now we can pass a number as well as a string to this function.
-      
+
    // Get the last 4 digits and length.
    const last = given.slice(-4); 			// start from last 4th char.
-   const len = given.length-4;
+   const len = given.length;
    const newVal = last.padStart(len, '*');
    console.log( newVal );
 }
@@ -89,9 +91,7 @@ maskCreditCard('1200987564738523'); 		// will accept string too.
 // repeat(): Repeats strings given number of times
 // Use-case: Useful to show icons like ratings, stars etc.)
 const name = "Rahul";
-name.repeat(4); // "Rahul Rahul Rahul Rahul Rahul"
+name.repeat(4); // "RahulRahulRahulRahul"
 
 let rating = 4;
 console.log( `You have got ${rating} rating \n ${'🌟'.repeat(rating)}` );
-
-

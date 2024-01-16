@@ -9,7 +9,7 @@
 
 // Lets say we have an object array like this.
 // accounts = [  { username:"user1", ... } , { username:"Rahul Patil", , ... } , { ... }];
-const acc_indx = accounts.findIndex( acc => acc.username==="RahulPatil" );
+const acc_indx = accounts.findIndex( acc => acc.username === "RahulPatil" );
 const fetchedObj = accounts.splice(acc_indx, 1);
 
 // This looks similar to indexOf() to find an array element’s index.

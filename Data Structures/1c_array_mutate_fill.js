@@ -3,7 +3,7 @@
 //////////////////////////////////////////////////////////////
 
 // fill():
-// Mutatues the array.
+// Mutates the array.
 // fill( val , startIndex , endIndex);
 // endIndex is not included in the result.
 

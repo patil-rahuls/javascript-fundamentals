@@ -7,13 +7,13 @@
 // *call* and *apply* call a function.
 // while *bind* creates a function.
 
-// Remember the this keyword ? We use it to access object properties inside the object? 
+// Remember the this keyword ? We use it to access object properties inside the object?
 // Consider this airline example:
 const lufthansa = {
    airline : 'Lufthansa',
    iata : 'LH',
    bookings : [],
-  
+
    book ( flightNum , name ) {
       console.log(`${name}
          ${this.iata}${flightNum}   // ‘this’ points to the current object i.e. "lufthansa".
@@ -23,27 +23,27 @@ const lufthansa = {
 };
 lufthansa.book( 342 , 'Rahul' );    // flight details pushed to bookings[]
 lufthansa.book( 635 , 'Anish' );    // flight details pushed to bookings[]
-   
+
 // Suppose a new airline comes.
 const eurowings = {
    airline : 'Eurowings',
    iata : 'EW',
-   bookings : []  
+   bookings : []
    //  I AM NOT COPYING THE SAME book() method here because I want to reuse code.
 };
-   
-// How do we achieve code reusability here for book() for eurowings object? 
+
+// How do we achieve code reusability here for book() for eurowings object?
 
 // What if we copy the book() from lufthansa outside in a variable ?
 const bookFn = lufthansa.book;
 // Stored lufthansa's book() in a new global variable/function.
 
 // Remember lufthansa.book() is a method. But now, after copying, bookFn() is a regular function and not related to any object.
-// Since lufthansa.book() uses 'this' keyword wich refers to an object, 
+// Since lufthansa.book() uses 'this' keyword wich refers to an object,
 // We can't simply use the regular bookFn() outside an object's context.
 
 // To make the book() a common function available to both airlines/objects.
-// Solution: call(), apply() and bind() methods. 
+// Solution: call(), apply() and bind() methods.
 // Functions (be it regular like bookFn) are still JS objects.
 // These JS objects (the functions) have some 'methods' like call(), apply() and bind().
 //////////////////////////////////////////////////////////////
@@ -58,19 +58,18 @@ bookFn.call( eurowings , 23 , 'Rahul Patil' );
 
 // We didn't call the book() ourselves, instead we called the call() which will call the book() with the passed object.
 
-// Also note that the first argument of call() is the "eurowings" object, 
-// so that the this keyword in book() method can refer to that object. 
-// After the first argument which is the "eurowings" object, 
+// Also note that the first argument of call() is the "eurowings" object,
+// so that the this keyword in book() method can refer to that object.
+// After the first argument which is the "eurowings" object,
 // the rest of the arguments are exactly the same as the parameters of the book().
 
-// Now, we can create any number of flights-carriers/objects. like AirIndia, Swiss Airlines etc. 
+// Now, we can create any number of flights-carriers/objects. like AirIndia, Swiss Airlines etc.
 // Make sure the property names are exactly the same as those of lufthansa.
 //////////////////////////////////////////////////////////////
 
 
 //////////////////////////////////////////////////////////////
 // 2. apply():
-const bookFn = lufthansa.book;
 // Exactly the same as the call(), except that we pass the arguments in an array after the first parameter.
 bookFn.apply ( lufthansa , [56 , 'Anish Sasi'] );
 // arguments - 56 and 'anish sasi' are in an array.
@@ -82,21 +81,24 @@ const args = [ 56 , 'Rahul Patil' ];
 bookFn.apply(eurowings , args) ;
 bookFn.call(eurowings , ...args) ;  // using the same array using call()
 // Always prefer the above format, so that in future if we need to change any of the two apply() or call(),
-// we to do a very little change in our code.
+// we need to do a very little change in our code.
 
 // We can also create an "anonymous" object while using apply() or call()
-bookFn.call({ someProprty:itsVal }, 45);
+bookFn.call({
+   airline : 'Suisse Airlines',
+   iata : 'AS',
+   bookings : [],
+}, 45, 'Omkar');
 //////////////////////////////////////////////////////////////
 
 
 //////////////////////////////////////////////////////////////
 // 3. bind():
-const bookFn = lufthansa.book;
 // Just like the apply() and call(), the bind method also allows us to manipulate the this keyword.
 
 // Using call()
-const args = [ 56 , 'Rahul Patil' ];
-bookFn.call(eurowings , ...args) ;
+const bookArgs = [ 56 , 'Rahul Patil' ];
+bookFn.call(eurowings , ...bookArgs) ;
 
 // Using bind()
 const bookEW = bookFn.bind(eurowings);
@@ -131,13 +133,13 @@ lufthansa.buyPlane = function () {
 
 // Now attach buyPlane() to a button click action
 document.querSelector('.buy').addEventListener('click', lufthansa.buyPlane());
-// This prints NAN. Because the 'this' keyword in buyPlane() is now the button element which is pressed. 
+// This prints NAN. Because the 'this' keyword in buyPlane() is now the button element which is pressed.
 
 // In an eventhandler function, the 'this' keyword always points to the html element on which the handler is attached to.
 
 // So in the above case, 'this' refers to the button element, and not the lufthansa object.
 
-// Solution: bind(), as it returns a function. (not call() because call simply calls the function. 
+// Solution: bind(), as it returns a function. (not call() because call simply calls the function.
 // We just need function value as event handler function()
 document.querSelector('.buy').addEventListener('click', lufthansa.buyPlane.bind(lufthansa));
 // now the 'this keyword in buyPlane() will point to the 'lufthansa' object.
@@ -148,19 +150,20 @@ document.querSelector('.buy').addEventListener('click', lufthansa.buyPlane.bind(
 
 
 //////////////////////////////////////////////////////////////
-// Another example. 
+// Another example. - Creating new functions using bind().
+
 // A big use case for the bind()
 const addTax = (rate , val) => rate + rate*val;
 console.log(addTax(0.1 , 200));
 
 const VAT = addTax.bind( null , 0.23 ) ;
-// we set the rate as 0.23(second parameter above) and the object passed is null. 
+// we set the rate as 0.23(second parameter above) and the object passed is null.
 // In addTax() there is no ‘this’ keyword, hence we simply passed null.
 
 VAT(3299); // 3299 + 3299*0.23
 
 // IMP: Using bind() gives us a new function.
-// There might be cases where you need a specific function instead of default params. 
+// There might be cases where you need a specific function instead of default params.
 // Like the above case, one function for calculating VAT, one for GST, etc.
 
 
@@ -175,5 +178,3 @@ const EducationCess = addTax (0.05);   // A fn for edu cess.
 
 GST(3499);                             // 66481
 EducationCess(3499);                   // 3673.95
-
-

@@ -7,7 +7,7 @@ const myObj = {
     firstName : 'Rahul',
     lastName : 'Patil',
     age : 0,
-    veg:true,
+    veg: true,
     greet: function(user){
         console.log(`Hello '${user}' !! What up !`);
     },

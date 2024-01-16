@@ -33,7 +33,7 @@ console.log(names);			// set(5) {'hitesh', 'aajesh' , 'rahul', 'anil', 'milan'}
 
 
 // 4. clear()
-// Empty the Set.
+// Empty/Truncate the Set.
 names.clear();
 
 

@@ -64,7 +64,7 @@ myMap.delete(2);
 myMap.delete(1);
 
 
-// 5. size() - This is not a method. no parens ( )
+// 5. size - This is not a method. no parens ( )
 // returns size of Map
 myMap.size; // no parentheses () after size.
 

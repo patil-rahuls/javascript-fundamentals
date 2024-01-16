@@ -12,7 +12,7 @@ let meee = {                        // an Object
    passport: '3435435435435',
 };
 
-const checkIn = function ( flightNum , passenger ) { 
+const checkIn = function ( flightNum , passenger ) {
    flightNum = 'GOAIR223';
    passenger.name = 'Mr.' + passenger.name;
    if(passenger.passport === '3435435435435')
@@ -23,11 +23,11 @@ const checkIn = function ( flightNum , passenger ) {
 
 checkIn( flight , meee );
 console.log(flight);                // 'STD__223'
-console.log(meee);                  // Mutated
+console.log(meee);                  // Mr. Rahul (Mutated)
 
 // The primitive 'flight' remains same as 'STD__223'.
 // Because, primitives are passed by value. i.e. a new copy of that value gets created inside function.
-// However, 'meee' object gets changed, 
+// However, 'meee' object gets changed,
 // Because objects are passed by reference***
 
 // Object reference
@@ -39,7 +39,7 @@ const newObj = meee;
 //  Summary:
 // 1. passing a primitive to a function is the same as creating a copy of it inside that function.
 // 2. In the case of Object, we pass the reference.
-//    Whatever changes we do with the copy, it reflects in the original object. 
+//    Whatever changes we do with the object in the function, it reflects in the original object.
 //    WE NEED TO BE CAREFUL WITH THIS BEHAVIOUR.
 
 // Example.
@@ -52,10 +52,8 @@ newPassport(meee);                  // object 'meee' gets changed.
 checkIn(flight, meee);              // "Invalid Passport"
 
 // ***Actually, In javascript, there is no pass by reference.
-// Only passing by values. But in the case of objects, it looks like pass by reference. 
-// When we pass an object to a function, we are actually passing its reference, 
+// Only passing by values. But in the case of objects, it looks like pass by reference.
+// When we pass an object to a function, we are actually passing its reference,
 // However, that reference is still a value in memory in Call Stack
 
 // We do pass references, but not pass 'by' references in javascript. That's the distinction.
-
-

@@ -9,7 +9,7 @@ const names = new Set (
 console.log(names);         // set(3) {'hitesh', 'aajesh' , 'rahul'}
 
 // While defining duplicates can be added, but it boils down to an unordered set of unique values.
-// Mixed data type allowed.
+// Mixed data type allowed. (Heterogenous elements)
 
 // Size of a Set
 names.size;                 // 3

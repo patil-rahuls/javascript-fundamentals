@@ -3,13 +3,13 @@
 //////////////////////////////////////////////////////////////
 
 // Fundamental property of js.
-// Higher Order function - a function that receives a function as argument, or/and returns a function. 
+// Higher Order function - a function that receives a function as argument, or/and returns a function.
 // e.g. addEventListener() is a higher order function.
 function count() {
    let counter = 0;
    return function(){                        // returns a function.
       counter++;
-   }  
+   }
 }
 
 // More examples:
@@ -35,14 +35,14 @@ const transform = function (str, fn) {
 transform("Rahul is greater", UpperFirstWord);
 transform("Rahul is greater", oneWord);
 
-// In the above example, Abstraction is achieved i.e. hiding the details of implementation. 
+// In the above example, Abstraction is achieved i.e. hiding the details of implementation.
 // This allows us to think more on an abstract level.
 
 // 2. Functions returning functions:
 const greet = function (greeting) {
    return function (name) {
        console.log( `${greeting} ${name}` );
-   }  
+   }
 };
 
 const greeterHey = greet('Heyy');
@@ -50,7 +50,7 @@ const greeterHey = greet('Heyy');
 
 // Let's observe the function call now
 greeterHey('Rahul');                                  // "Heyy Rahul"
-   
+
 // How is the greeting 'heyy' coming in the function which is already returned.
 // It's because of 'closures'.
 
@@ -67,4 +67,14 @@ const greet = greeting => {
 const greetArrow = greeting => name => console.log( ` ${greeting} ${name}` );
 // See the cleanliness in our code. One arrow function returning another arrow function
 
+// 3. Creating related functions by returning functions.
+const addTax = (rate) => {
+   return function (val) {
+       return val+ val*rate;
+   }
+};
+const GST = addTax (18);               // A fn for GST
+const EducationCess = addTax (0.05);   // A fn for edu cess.
 
+GST(3499);                             // 66481
+EducationCess(3499);                   // 3673.95

@@ -13,7 +13,7 @@ const howMany = myArr.length;           // no parenthesis after length
 
 console.log(myArr[myArr.length - 1]);   // expressions are allowed inside [ ]
 
-console.log(typeof myArr);              // "object" Because Array is still an Object. (a special one)
+console.log(typeof myArr);              // "object" Because Array is special type of Object.
 
 // Arrays in JavaScript may be homogeneous or heterogeneous — that is,
 // composed of just one data type(homogeneous), or a mix of data types(heterogeneous).
