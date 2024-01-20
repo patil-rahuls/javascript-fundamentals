@@ -33,5 +33,4 @@ class User {
 
 const user2 = new User("rahul.p","Rahul",0,'Valid');
 user2.name().license();
-
-
+// My Name is Rahul.My License is Valid

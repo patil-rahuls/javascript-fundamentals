@@ -2,18 +2,17 @@
 // ENCAPSULATION [ protected & private ] /////////////////////
 //////////////////////////////////////////////////////////////
 
+// Protected Methods and Properties.
+// Encapsulation is not yet supported in JS.
 // Proposal for this feature is not finished yet. Its at stage 3 of development.
 
-// Protected Methods and Properties.
-
-// Just use underscore before the properties and methods and add a Comment.
-// Encapsulation is not yet supported in JS. But letting developers know is a good idea.
+// Just use underscore before the properties and methods and add a comment.
 
 class User {
     constructor(username, name, passkey, license){
         this.name = name;
         this.license = license;
-        
+
         // Protected Property
         this._username = username;
         this._passkey = passkey;
@@ -23,14 +22,11 @@ class User {
 
 // That's all we can do for now.
 
-// Public fields and methods
-// Private fields and methods
-
 class User {
 
     // Public fields
     created_at = new Date();
-    
+
     // Private Field
     // All private fields must be written outside the constructor() in the class.
     #username;
@@ -41,7 +37,7 @@ class User {
     constructor(username, name, passkey, license){
         this.name = name;
         this.license = license;
-        
+
         // Protected Property
         // this._username = username;
         // this._passkey = passkey;
@@ -66,7 +62,7 @@ const user1 = new User('default', 'root', '---', false);
 user1.#txns; // error.private fields should be declared inside a class definition. strange error because its still in development.
 user1.#login();// error.
 
-// IMP : 
+// IMP :
 // 1. All private fields must be written outside the constructor() in the class.
 // 2. All fields (properties) in a class are instance properties and not prototype's.
 // 3. However methods are linked to prototype property.

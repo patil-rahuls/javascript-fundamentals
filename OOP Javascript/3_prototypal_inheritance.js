@@ -2,10 +2,10 @@
 // PROTOTYPES & PROTOTYPAL INHERITANCE ///////////////////////
 //////////////////////////////////////////////////////////////
 
-// Earlier we saw that its a bad practice to have a function iside a constructor function.
+// Earlier we saw that its a bad practice to have a function inside a constructor function.
 // To tackle that situation, we use Prototype object.
 
-// Prototypes allow you to easily define methods to all instances of a particular object. 
+// Prototypes allow you to easily define methods to all instances of a particular object.
 // The beauty is that the method is applied to the prototype, so it is only stored in the memory ONCE,
 // but every instance of the object has access to it.
 
@@ -28,7 +28,7 @@ Student.show();
 // Using prototype there exists only one copy of show() available to all instances of Student.
 
 // Exaplanation:
-// In "Student.prototype" the "prototype" is not the Student's prototype. 
+// In "Student.prototype" the "prototype" is not the Student's prototype.
 // Its a property. Its a Prototype of objects that will be created from Student's constructor.
 // Using isPrototypeOf() we can check which property is a prototype of an Object.
 
@@ -40,7 +40,7 @@ console.log( Student.prototype.isPrototypeOf(s2) );                 // true
 console.log( Student.prototype.isPrototypeOf(s3) );                 // true
 console.log( Student.prototype.isPrototypeOf(Student) );            // false
 
-// "Student.prototype" is a prototype of the created objects Not the "Student".
+// "Student.prototype" is a prototype of the created objects Not the "Student" constructor fn.
 // See it as 'Student.prototypeOfLinkedObject'
 
 // Not just methods, we can also set properties on prototype
@@ -52,7 +52,7 @@ console.log(s2.school);
 // To check whether a Constructor Function has its own property, we use this.
 console.log(Student.hasOwnProperty('name'));        // true
 console.log(Student.hasOwnProperty('school'));      // false
-// false because "school" is not inside Student object. 
+// false because "school" is not inside Student object.
 // It simply has access to it because its in prototype property of Student.
 
 // Every object in javascript has a property called __proto__
@@ -64,7 +64,7 @@ console.log(Student.hasOwnProperty('school'));      // false
 console.log(s1.__proto__ === Student.prototype); // true;
 // __proto__ of objects created from constructor functions are same as prototype property of the constructor.
 
-// in the statement "s1.__proto__" 
+// in the statement "s1.__proto__"
 // the "__proto__" is called actual prototype of "s1" object.
 
 // Example:
@@ -88,7 +88,7 @@ const Mercedes = new Car("Mercedes", 95);
 // Extending a prototype of a Built-in object - NOT RECOMMENDED.
 Array.prototype.unique = function(){
     console.log(`This is my custom function which can be accessed by all the arrays.`);
-    return [...new Set(this)]; // this points to 
+    return [...new Set(this)]; // this points to
 }
 
 const arr = [3,43,8,547,58,87,8,32,21,23,75,8,8,3,2,];
@@ -96,8 +96,6 @@ console.log(arr.unique());
 // This is my custom function which can be accessed by all the arrays.
 // (11) [3, 43, 8, 547, 58, 87, 32, 21, 23, 75, 2]
 
-// NOT RECOMMENDED - 
+// NOT RECOMMENDED -
 // Next JS version may get a new method with same name as yours, Your code will use that new method.
 // AVOID IT. And try to use the built in functions and methods.
-
-

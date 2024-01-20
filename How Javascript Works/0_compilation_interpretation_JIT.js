@@ -1,18 +1,18 @@
 //////////////////////////////////////////////////////////////
-// Side Note - Compilation, Interpretation and JIT 
+// Side Note - Compilation, Interpretation and JIT
 //////////////////////////////////////////////////////////////
 
 // *Compilation*
-// Entire Source Code is compiled into Machine Code(Assembly Code) at once and 
+// Entire Source Code is compiled into Machine Code(Assembly Code) at once and
 // written to a binary file that can be executed by a computer.
 // This binary file(Machine Code) is portable and can be executed way after compilation.
 // Much faster.
 
 
 // *Interpretation*
-// Interpreter runs through the source code and compiles into Machine Code and executes it directly line by line.
-// During execution it still needs to convert the source code to Machine Code (line by line), 
-// however it happens RIGHT BEFORE its executed, and not AHEAD OF TIME.
+// Interpreter runs line by line through the source code and compiles into Machine Code and executes.
+// During execution it still needs to convert the source code to Machine Code (line by line),
+// However it happens RIGHT BEFORE its executed, and not AHEAD OF TIME.
 // So, NO portable file exists to be executed way after compilation unlike in compiled languages.
 // Much Much Slower than Compiled Language.
 
@@ -35,5 +35,3 @@
 
 // All these JIT processes happen in special threads that we can't access.
 // which are completely separated from the main thread which executes code in the Call Stack.
-
-

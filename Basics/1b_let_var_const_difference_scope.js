@@ -3,6 +3,9 @@
 //////////////////////////////////////////////////////////////
 
 // 2. Scope
+// Scope refers to the visibility or accessibility of variables, functions, and objects within different parts of a program.
+// It determines where in the program a particular variable or function can be accessed and manipulated.
+
 // *let* and *const* are block scoped while *var* is function scoped.
 
 // Variables declared by *var* are scoped to the immediate function body (hence the function-scope).

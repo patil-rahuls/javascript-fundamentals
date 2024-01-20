@@ -45,7 +45,7 @@ const restaurant = {
 // Copy Object
 const newRestaurant = {...restaurant};
 
-// Exanding an Iterable.
+// Expanding an Iterable.
 const newRestaurantWithMoreInfo = {
        ...restaurant ,
        foundedIn : 1992,

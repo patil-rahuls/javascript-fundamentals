@@ -17,24 +17,24 @@ class Student {
         this.rollNo = rollNo;
     }
 
-    // Methods in ES6 classes are added to .prototype property of the Student Class
+    // Methods in ES6 classes are automatically added to .prototype property of the Student Class
     show(){
         console.log(`${this.name}'s Roll No. is ${this.rollNo}`);
     }
 
-    // No comma here OR after a method in es6 class
+    // No comma here OR after a method in es6 class. It is a class declaration, not an Object declaration.
     show2(){
         // ...
     }
 };
 
 // show() is stored in the Student class's prototype object and not in the Student class.
-// 
+//
 
 const s3 = new Student("Aajesh", 29);
 s3.show();
 
-console.log(s3.__proto__ === Student.prototype); 
+console.log(s3.__proto__ === Student.prototype);
 // true
 
 // Manually add a method to ES6 class' prototype property.
@@ -60,18 +60,16 @@ class Car {
 const BMW = new Car("BMW", 120);
 const Mercedes = new Car("Mercedes", 95);
 
-// Classes In Javascript actually hide the true nature of prototypal inheritance
+// Classes in Javascript actually hide the true nature of prototypal inheritance
 
-// 1. classes are not hoisted, even if they are declared
-// 2. like functions, classes are also first class citizens.
+// 1. Classes are not hoisted, even if they are declared
+// 2. Like functions, classes are also first class citizens.
 //      that means, we can pass them to functions and return them from functions.
 //      this happens because classes are basically special kinds of functions(Contructor Functions) behind the scenes.
-// 3. Classes are executed in "strict mode". even though u haven't activated the strict mode.
+// 3. Classes are executed in "strict mode". Even though u haven't activated the strict mode.
 
-// Constructor functions vs es6 classes ?
+// Constructor functions vs ES6 Classes ?
 // Its a personal preference.
-// Classes looks a lot better as everything is in one block, 
-// even though the class's methods point to .prototype property, still they are kept inside class, 
+// Classes looks a lot better as everything is in one block,
+// Even though the class's methods point to .prototype property, still they are kept inside class,
 // so the code looks good.
-
-

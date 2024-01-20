@@ -2,7 +2,9 @@
 // OPTIONAL CHAINING [ES 2020] ///////////////////////////////
 //////////////////////////////////////////////////////////////
 
-// It checks for a truthy value.
+// It checks if a property or a method exists on an Object
+// OR
+// if any value exists on a index of an Array.
 
 // Scenarios, when checking nested objects,
 // We might come to a point where we have to check if a property/method exists, and if it exists,

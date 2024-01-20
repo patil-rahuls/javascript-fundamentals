@@ -3,6 +3,10 @@
 //////////////////////////////////////////////////////////////
 
 // SLICE:  It returns an array (shallow copy).
+// A shallow copy in JavaScript creates a new object that points to the same memory
+// location as the original object.
+// This means that if you make a change to the original object, it will also affect the copied object.
+
 // array.slice(start_index , end_index)
 // element at start_index is included in result
 // element at end_index is not included in result

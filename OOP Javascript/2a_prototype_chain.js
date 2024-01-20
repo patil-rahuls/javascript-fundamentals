@@ -8,7 +8,7 @@
 // | Constructor Fn. |                                        | Prototype (of "stu")  |
 // |  [ Student() ]  |<---- Student.prototype.constructor ----|  [Student.prototype]  |
 // |_________________|                                        |_______________________|
-//                                                                        ^                                 
+//                                                                        ^
 //                                                         Prototypal     |
 //                                            ^            Inheritance/   |  .__proto__
 //                                            |             Delegation    |
@@ -20,15 +20,15 @@
 //                                                          | rollNo   : 1                 |
 //                                                          | __proto__: Student.prototype |
 //                                                          |______________________________|
-// 
+//
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-// Lets zoom out this diagram, to view more detailed explanation of Prototype Chain.
+// Lets zoom into this diagram, to view more detailed explanation of Prototype Chain.
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //         _________________            _______________________
 //        |                 |          |                       | Object.prototype
-//  ----> | Constructor Fn. |--------->|      Prototype        |  > constructor f                               
+//  ----> | Constructor Fn. |--------->|      Prototype        |  > constructor f
 //  |     |  [ Object() ]   |          |  [ Object.prototype ] |  > ...                                             ^
 //  |     |_________________|          |   __proto__ : null    |  > hasOwnProperty f <----------                    |
 //  |                                  |_______________________|                               |                    |
@@ -50,21 +50,19 @@
 //    when we write an object literal  |      __proto__ :      |                     "stu" Object, because it       |
 //     {...} = new Object(...);        |   Student.prototype   |                       is inherited from the        |
 //                                     |_______________________|                      built-in Object.prototype     |
-// 
+//
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 console.log(stu.hasOwnProperty('name'));
 // From the above diagram, the method hasOwnProperty() is called using the "stu" Object.
 // So it is checked/looked up for existence in the "stu" Object, where it is not found.
-// Then, just like Scope chain, here too, it looks UP for the method definition in "stu" 
+// Then, just like Scope chain, here too, it looks UP for the method definition in "stu"
 // object's prototype
-// 
-// "stu" prototype means stu.__proto and that is Student.prototype (see the above diagram)
-// Again, the method hasOwnProperty() is not found in Student.prototype too, so it is looked 
-// Up the Student.prototype's prototype, i.e. the built-in Object's prototype property
+//
+// "stu" prototype means stu.__proto__ and that is Student.prototype (see the above diagram)
+// Again, the method hasOwnProperty() is not found in Student.prototype too, so it is looked
+// Up the Student.prototype's prototype i.e. its .__proto__ property, i.e. the built-in Object's prototype property
 // Object.property has most of the methods like hasOwnProperty(), as it is built-in.
 
-// Also, note that there is no prototype of Object.prototype (Object.prototype.__proto__ : null). 
+// Also, note that there is no prototype of Object.prototype (Object.prototype.__proto__ : null).
 // So, this becomes the end of our Prototype Chain.
-
-

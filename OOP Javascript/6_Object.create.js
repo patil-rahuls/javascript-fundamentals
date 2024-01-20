@@ -5,7 +5,7 @@
 // Works differently than constructor functions and es6 classes.
 // We directly create a prototype Object ONLY, and link objects to the newly created prototype.
 
-// prototype 'StudentProto' is created 
+// prototype 'StudentProto' is created
 const StudentProto = {
     showAge(){
         console.log(`Age : ${this.age}`);
@@ -39,7 +39,5 @@ s6.init("rahul", 27);
 s6.age();
 
 // The distinction here is that, we did not create any constructor function.
-// The ".prototype" property which is automatically created in the case of constructor function, 
+// The ".prototype" property which is automatically created in the case of constructor function,
 // is what we manually create when using Object.create().
-
-

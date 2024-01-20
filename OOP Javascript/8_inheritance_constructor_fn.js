@@ -2,18 +2,22 @@
 // INHERITANCE - CONSTRUCT FUNCTION //////////////////////////
 //////////////////////////////////////////////////////////////
 
+// 1. Creating Objects using constructor functions.
+
+// Create a constructor function.
 const Furniture = function(brand, margin){
-    this.brand = brand; 
+    this.brand = brand;
     this.margin = margin;
 };
-
+// Add a method to its prototype object.
 Furniture.prototype.getCommisionTax = function(){
     console.log(.18*this.margin);
 };
 
+// A subclass 'Sofa' that will inherit Furniture.
 const Sofa = function(brand, margin, returnable){
-    // this.brand = brand; 
-    // this.margin = margin;    
+    // this.brand = brand;
+    // this.margin = margin;
 
     // Calling Parent's constructor fn. using call method. Remember call(), apply() and bind() ?
     // Furniture(brand, margin); // not correct. because we cant call it like a regular fn. (it has 'this' keyword).
@@ -22,7 +26,8 @@ const Sofa = function(brand, margin, returnable){
 };
 
 Sofa.prototype.info = function(){
-    console.log(`Product Sofa of Brand ${this.brand} has a commision margin of ${this.margin} and it is ${this.returnable?'returnable':'not returnable'}.`);
+    console.log(`Product Sofa of Brand ${this.brand} has a commision margin of ${this.margin}
+    and it is ${this.returnable?'returnable':'not returnable'}.`);
 };
 
 const s1 = new Sofa('Neelkamal', 15, false);
@@ -37,12 +42,14 @@ const s1 = new Sofa('Neelkamal', 15, false);
 //      |
 //      | [.__proto__]
 //      |
-//   Obj - s1 
+//   Obj - s1
 
 // So, we say Sofa.prototype is linked to Furniture.prototype, and we do that using Object.create
 
 Sofa.prototype = Object.create(Furniture.prototype);
-// Sofa.prototype = Furniture.prototype; // this is incorrect. If we do this, the constructor functions Furniture and Sofa will both share same prototype. This is because we are simply assigning an object to another. Remember obj1 = obj2; (only reference is copied, not the content)
+// Sofa.prototype = Furniture.prototype; // this is incorrect. If we do this,
+// the constructor functions Furniture and Sofa will both share same prototype.
+// This is because we are simply assigning an object to another. Remember obj1 = obj2; (only reference is copied, not the content)
 
 // What we do here is that we LINK Sofa.prototype object using a Furniture prototype. (Furniture.prototype in this case.)
 // Now, objects created using Sofa cnstructor fn, will have direct access to Furniture prototype methods.
@@ -68,7 +75,7 @@ Sofa.prototype.constructor = Sofa; // As simple as that. All we are doing is tha
 console.log(s1 instanceof Sofa);
 //  true
 console.log(s1 instanceof Furniture);
-// true 
+// true
 // this is correct because Sofa has inherited from Furniture.
 
 // Example:

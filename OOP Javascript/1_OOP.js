@@ -22,9 +22,9 @@
 //////////////////////////////////////////////////////////////
 
 // Traditional OOP           |          Javascript OOP
-// 
+//
 //    Class                  |        Prototype (Contain methods)
-//      |                    |                 ^  
+//      |                    |                 ^
 //      |                    |                 |
 //      |                    |                 |
 // Instantiation             |    Prototypal Inheritance/Delegation
@@ -73,5 +73,3 @@
 // Easiest and straightforward way to link an object to a prototype object.
 
 // IMP: The 4 pillars of OOP are still valid with prototypal inheritance.
-
-

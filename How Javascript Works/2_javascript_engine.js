@@ -2,7 +2,7 @@
 // JAVASCRIPT ENGINE /////////////////////////////////////////
 //////////////////////////////////////////////////////////////
 
-// An engine executes Javascript code.
+// An engine/software that executes Javascript code.
 // All browsers have their own Javascript Engines that execute Javascript code.
 // Well known is v8 used in Google Chrome and Node.js(Javascript Runtime)
 
@@ -13,6 +13,4 @@
 //////////////////////////////////////////////////////////////
 
 // Call Stack - is where our code is executed using *Execution Contexts*.
-// Heap - is an unstructured memory pool which stores all the objects that our application uses.
-
-
+// Heap - is an unstructured memory pool which stores all the Objects(not primitives) that our application uses.

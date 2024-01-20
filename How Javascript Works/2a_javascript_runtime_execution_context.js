@@ -2,7 +2,7 @@
 // Execution
 //////////////////////////////////////////////////////////////
 
-// An Execution Context is an environment where the code executes. 
+// An Execution Context is an environment where the code executes.
 // This environment contains information about the code necessary to execute the code.
 
 // After compilation, when the code is ready to be executed(Machine Code)
@@ -34,17 +34,17 @@ const x = first();
 //////////////////////////
 
 // 2. That top-level-code is executed in the Global Execution Context.
-// 3. Execution of Functions(function calls) and waiting for callbacks. 
-//    For each function call, a NEW Execution Context is created. 
+// 3. Execution of Functions(function calls) and waiting for callbacks.
+//    For each function call, a NEW Execution Context is created.
 //    All function execution contexts in sequence together form a call stack.
 //    Now the functions are waiting to be executed. e.g. a click event callback is waiting for its execution.
 
 
 //////////////////////////////////////////////////////////////
-// Execution Context 
+// Execution Context
 //////////////////////////////////////////////////////////////
 
-// An Execution Context is an environment where the function executes. 
+// An Execution Context is an internal data structure/environment where the function executes.
 // This environment contains all the information necessary to execute the function.
 
 ////////////////////////////////////////////////////////////////////////////////////////////
@@ -55,27 +55,27 @@ const x = first();
 //                 -let, const and var declarations inside the function.                  //
 //                 -Functions                                                             //
 //                 -'arguments' object - all arguments passed into the function.          //
-//          2. Scope Chain - reference to variables located outside of this function.     //
+//          2. Scope Chain - A reference to variables located outside of this function.   //
 //          3. 'this' keyword                                                             //
-//                                                                                        //      
+//                                                                                        //
 ////////////////////////////////////////////////////////////////////////////////////////////
 
 // IMP: Execution Contexts of *Arrow Functions* do not get the 'this' keyword and 'arguments' object.
 // However, they can use 'this' and 'arguments' from their closest REGULAR parent function's execution context.
 
 //////////////////////////////////////////////////////////////
-// CALL STACK 
+// CALL STACK
 //////////////////////////////////////////////////////////////
 
-// The place where Execution Contexts get stacked on top of each other, 
+// It is a data structure where Execution Contexts get stacked on top of each other,
 // to keep track of where we are in the execution.
 
 // When a function is finished executing, it's Execution Context is popped off the Call Stack,
 // so, that the next Execution Context's function can be executed.
- 
+
 // The Execution Context which is on the top of Call Stack is the currently running function's.
- 
-// Because, the Execution Contexts are in stack, once the top most Execution Context's function call is finished, 
+
+// Because, the Execution Contexts are in stack, once the top most Execution Context's function call is finished,
 // the previous Execution Context's function call will be on hold. Because, JS has A SINGLE THREAD of execution.
 
 
@@ -83,11 +83,16 @@ const x = first();
 //////////////////////////////////////////////////////////////
 // The SCOPE
 //////////////////////////////////////////////////////////////
-// Scope in layman : Region of code where a certain variable can be accessed.
+// Scope refers to the visibility or accessibility of variables, functions, and objects within different parts of a program.
+// It determines where in the program a particular variable or function can be accessed and manipulated.
+
+// Simply put : Region of code where a certain variable can be accessed.
 
 // Scope is simply an environment in which a certain variable is declared. (Variable Environment in case of functions).
 
-// 3 types of scopes.
+//////////////////////////////////////////////////////////////
+// TYPES OF SCOPE
+//////////////////////////////////////////////////////////////
 // 1. Global Scope
 // 2. Function/Local Scope
 // 3. Block Scope [ES6]
@@ -117,13 +122,13 @@ let age = 28;
 function parent(){
     let name = "Rahul";
     function child (){
-        return `Hi ${name}, you are ${age}`; 
+        return `Hi ${name}, you are ${age}`;
         // name and age both are accessible because they are from their outer scopes.
     }
 }
 
 // *VARIABLE LOOKUP*
-// 
+//
 // In child(), variables 'name' and 'age' are used but not defined inside child().
 // They are looked up for in their outer scopes, if found they are used, else we get error.
 // This process is called *variable lookup* in scope chain. (It forms a chain.)
@@ -132,16 +137,16 @@ function parent(){
 // child()'s scope will only look UP in it's 'parent' scope.
 
 // In the above example, the variable lookup will be like this. (Read from Bottom-to-Up)
- 
+
 // (Read from Bottom-to-Up)
 // for variable `name` :
-//                Global Scope         
+//                Global Scope
 //                      ^
 //                      |
 //               parent() Scope     found `name`. No need to look up anymore.
 //                      |
 //                child() Scope    `name` not found. Let's look up.
-// 
+//
 
 // (Read from Bottom-to-Up)
 // for variable `age` :
@@ -151,13 +156,11 @@ function parent(){
 //               parent() Scope    `age` not found.  Let's look up again.
 //                      |
 //                child() Scope    `age` not found. Let's look up.
-// 
+//
 
 //////////////////////////////////////////////////////////////
 // Scope Chain and Call Stack Relation
 //////////////////////////////////////////////////////////////
 
-// Scope Chain - the order in which functions are WRITTEN.
-// Call Stack - the order in which functions are CALLED.
-
-
+// Scope Chain - determines the order in which functions are WRITTEN.
+// Call Stack - determines the order in which functions are CALLED.

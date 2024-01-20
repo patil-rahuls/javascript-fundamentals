@@ -2,8 +2,8 @@
 // MODULES PATTERNS [ES 6] ///////////////////////////////////
 //////////////////////////////////////////////////////////////
 
-// How are modules implemented inside/behind the scenes.
-
+// How are modules implemented inside/behind the scenes. IIFE which returns data that we
+// export from the module. Simple.
 const ShoppingCart = (function(product, qty){
     const cart = [];
     const shippingCost = [];
@@ -35,5 +35,3 @@ ShoppingCart.addToCart("item3", 1);
 console.log(ShoppingCart.cart);
 // Observe, that by now, the IIFE has been executed, but still the array "ShoppingCart.cart" keeps getting updated,
 // This hapens because of, again, CLOSURES.
-
-

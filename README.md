@@ -6,7 +6,7 @@
 - Type Conversion and Coercion
 - Function Declaration and Expression
 - Equality Operators
-- Falsy Values 
+- Falsy Values
 - _[ES6]_ Destructuring Assignment
 - Short Circuiting
 - Nullish Coalescing Operator
@@ -20,6 +20,7 @@
 - _[ES6]_ Default Parameters (Function)
 - Console
 - User Interaction (Browser)
+- Error Types
 
 ## Data Structures [Complete]
 - Arrays
@@ -42,7 +43,7 @@
 - IIFE
 - string methods
 
-## How Javascript Works [Completed]
+## How Javascript Works [Complete]
 - Compilation, Interpretation and JIT-Compilation
 - Javascript Runtime
 - Javascript Engine
@@ -51,8 +52,9 @@
 - _[this]_ Keyword
 - Arrow Functions Vs Regular Functions
 - Primitives Values and Reference Values
+- Event Loop
 
-## Object Oriented Javascript [WIP]
+## Object Oriented Javascript [Complete]
 - Object Oriented Programming in Javascript
 - Constructor Functions and Prototypes
 - Prototype Chain
@@ -65,11 +67,10 @@
 - Encapsulation
 - Chaining Class Methods
 
-## Modules [WIP]
+## Modules [Complete]
 - Introduction
 - Common modules
 - Modules behind the scenes
 
-## Asychronous Javascript [WIP]
+## Asychronous Javascript [Complete]
 - Promises & fetch API
-

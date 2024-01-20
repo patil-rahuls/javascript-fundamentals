@@ -2,11 +2,12 @@
 // CONSTRUCTOR FUNCTIONS /////////////////////////////////////
 //////////////////////////////////////////////////////////////
 
-// IMP: Arrow Functions are not used to create constructor functions, 
+// IMP: Arrow Functions are not used to create constructor functions,
 // because they dont have their own 'this' keyword.
 
 // We create a constructor function like regular function.
 // The only conventional distinction is that the first letter is capital.
+// and we get a 'this' keyword inside them.
 
 const Student = function (name , rollNo) {
     this.name = name;
@@ -23,7 +24,7 @@ const stu = new Student('Rahul', 1);
 
 // Student Constructor Function too will have a prototype property. "Student.prototype".
 // "Student.prototype" is NOT the prototype of Student Constructor Function.
-// It is a prototype of objects  created using Student Constructor Function, i.e. "stu".
+// It is a prototype of objects created using Student Constructor Function, i.e. "stu".
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //  _________________                                          _______________________
@@ -31,7 +32,7 @@ const stu = new Student('Rahul', 1);
 // | Constructor Fn. |                                        | Prototype (of "stu")  |
 // |  [ Student() ]  |<---- Student.prototype.constructor ----|  [Student.prototype]  |
 // |_________________|                                        |_______________________|
-//                                                                        ^                                 
+//                                                                        ^
 //                                                         Prototypal     |
 //                                            ^            Inheritance/   |  .__proto__
 //                                            |             Delegation    |
@@ -43,10 +44,10 @@ const stu = new Student('Rahul', 1);
 //                                                          | rollNo   : 1                 |
 //                                                          | __proto__: Student.prototype |
 //                                                          |______________________________|
-// 
+//
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-// "Student.prototype" itself has a property called ".constructor". 
+// "Student.prototype" itself has a property called ".constructor".
 // Its nothing but the constructor function itself i.e. Student().
 
 // In Javascript, any object's prototype is actually "__proto__" property.
@@ -78,7 +79,7 @@ const Student = function (name , rollNo) {
     this.name = name;
     this.rollNo = rollNo;
 
-    // Method inside a constructor function. 
+    // Method inside a constructor function.
     // NEVER DO THIS - Because if we create 1000s of instances of Student using this constructor,
     // then each of these 1000 obj would have this function's copy.
     this.show = function(){
@@ -95,5 +96,3 @@ console.log(s1);                        // Prints the Student Object.
 
 // So we can say s1 is an instance of Student.
 console.log(s1 instanceof Student);     // true
-
-

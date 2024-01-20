@@ -47,6 +47,9 @@ console.log(newCategories);
 // TIP#1:
 // Copy array
 const copyCategories =  [...restaurant.categories];       // creates a shallow copy.
+// A shallow copy in JavaScript creates a new object that points to the same memory
+// location as the original object.
+// This means that if you make a change to the original object, it will also affect the copied object.
 
 // TIP#2:
 // Join 2 Arrays or more:

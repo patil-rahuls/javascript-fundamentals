@@ -2,11 +2,14 @@
 // INHERITANCE - Object.create() /////////////////////////////
 //////////////////////////////////////////////////////////////
 
+// 3. Creating Objects using Prototype Objects.
+
+// Create a prototype Object.
 const ParentProto = {
     calcAge(){
         console.log(2037 - this.birthYear);
     },
-    init(fullName, birthYear){
+    init(fullName, birthYear){          // plz dont get confused. init() is user defined fn.
         this.fullName = fullName;
         this.birthYear = birthYear;
     }
@@ -34,13 +37,13 @@ user1.show();
 
 // The prototype chain formed looks like this:
 ParentProto (prototype)
+        ^
         |
         | [.__proto__]
         |
   UserProto (prototype)
+        ^
         |
         | [.__proto__]
         |
       user1
-
-

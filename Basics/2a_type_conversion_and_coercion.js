@@ -12,8 +12,8 @@ console.log(typeof age); // string
 let str = "I am " + age; // In this assignment, "age" gets converted from "number" type to "string" type.
 console.log(typeof age); // "age" is still a "number" type.
 
-// When one of the operands of + is a string,
-// the operands after FIRST-string operand, are converted autmatically into string(Type Coercion).
+// When ALL operands are '+' AND when one of the operands of + is a string,
+// the operands after FIRST string operand, are converted autmatically into string(Type Coercion).
 console.log("23" + "10" + 3);       // 23103
 console.log("23" + "10" + 3 + 5);   // 231035 and NOT 23108
 console.log(4 + 1 + "5" + 6);       // 556
