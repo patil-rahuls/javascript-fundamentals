@@ -2,10 +2,17 @@
 // BUILD PROMISE /////////////////////////////////////////////
 //////////////////////////////////////////////////////////////
 
-// Creating a new Promise
+// 1. Creating a new Promise
 // Created using Promise Constructor.
 // It takes exactly one argument the 'executor' function. This 'executor' function has 2 parameters
 // these parameters are actually functions - resolve() and reject()
+
+// Syntax:
+const aPromise = new Promise((resolve, reject) => {
+    // Do some asynchronous operation here
+    // If successful, call resolve()
+    // If there's an error, call reject()
+  });
 
 const myPromise = new Promise(function(resolve, reject){
     // This executor fn should return a resolved value.
@@ -24,7 +31,10 @@ const myPromise = new Promise(function(resolve, reject){
     }
 });
 
-// Consuming the Promise.
+
+
+//////////////////////////////////////////////////////////////
+// 2. Consuming the Promise. (then())
 myPromise.then(result=>console.log(result)).catch(err=>console.error(err));
 // Observe that We didn't use .json() function here.
 
@@ -48,8 +58,7 @@ const newPromise = new Promise(function(resolve, reject){
 
 //////////////////////////////////////////////////////////////
 // Promisifying
-
-// Promisifying - converting callback based asynchronous behaviour into promise based.
+// Converting callback based asynchronous behaviour into promise based.
 
 // Promisifying setTimeout()
 const waitForNSecond = function(seconds){

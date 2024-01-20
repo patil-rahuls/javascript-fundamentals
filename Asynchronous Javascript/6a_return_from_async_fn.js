@@ -19,7 +19,7 @@ console.log("Last");
 // Promise {<pending>}
 // Last
 
-// It prints Promise and not the final value, because at this point of code,
+// It prints 'Promise {<pending>}' and not the final value, because at this point of code,
 // javascript has no way of knowing the value of 'data' variable yet.
 // Hence it returns a promise.
 

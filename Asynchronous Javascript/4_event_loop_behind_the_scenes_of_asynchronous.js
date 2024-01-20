@@ -3,9 +3,9 @@
 //////////////////////////////////////////////////////////////
 
 // Microtasks Queue
-// Callbacks of promises do not go in the Callback Queue. instead they go in a special queue called
+// Callbacks of promises do not go in the Callback Queue, instead they go in a special queue called
 // "Microtasks Queue"
-// This queue has priorotiy over the callback queue.
+// This queue has prioritiy over the callback queue.
 
 // The Evet loop FIRST checks if there are any callbacks in microtasks queue, and executes them all at once
 // before taking callbacks from the regular callback queue.

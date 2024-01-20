@@ -2,8 +2,7 @@
 // ASYNC/AWAIT ///////////////////////////////////////////////
 //////////////////////////////////////////////////////////////
 
-// Special kind of function.
-
+// async-await is simply a syntactic sugar to the then() method.
 const myFunc1 = async function(param){
     // Here inside async fn, we can have one or more await function.
     // Syntax:
@@ -15,7 +14,7 @@ const myFunc1 = async function(param){
 // Does this block the execution ? No, because this is running asynchronously in the background.
 // This makes our code(function) look clean like regular function.
 
-// once the result from await is achieved, it can be stored to a variable.
+// Once the result from await is achieved, it can be stored to a variable.
 // The above fn can be re-written as
 const myFunc2 = async function(page){
     const val = await fetch("https://deelay.me/5000/https://reqres.in/api/users?page="+page);
@@ -44,7 +43,14 @@ myFunc4(2);
 // Promise {<pending>}
 // {...}  // printed after 5 seconds once data is fetched from the API.
 
-// And we can always write try catch block to catch any errors in any of the promis states.
+//////////////////////////////////////////////////////////////
+// IMP: Try-Catch Block using async-await.
+// Why try catch?
+//
+// When we use then(), we can chain catch() method to then().
+// However, we cannot chain catch method to an await statement.
+
+// Hence to catch errors in async await fashion code, we use try-catch block.
 // try {
 //     await ...
             // if(some condition)
@@ -54,3 +60,5 @@ myFunc4(2);
 // }catch(err){
 //      console.log(err.message);
 // }
+
+// This is same as chaining .catch to the then() as we saw in previous examples.
