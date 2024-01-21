@@ -2,14 +2,11 @@
 // MODULES [ES 6] ////////////////////////////////////////////
 //////////////////////////////////////////////////////////////
 
-//////////////////////////////////////////////////////////////
-// Syntax:
-//////////////////////////////////////////////////////////////
-
+// 1. Named Exports ( curly braecs {  } )
 // New file : shoppingCart.js ////////////////////////////////////
 //// Exporting module                                           //
     console.log('Exorting Module');                             //
-    const shippingCost= 50;                                    //
+    const shippingCost= 50;                                     //
     const cart = [];                                            //
                                                                 //
     const addToCart = function(product , quantity){             //
@@ -28,7 +25,7 @@
     const qtyLimit = 5;                                         //
                                                                 //
     // These variables/methods are scoped to only this module.  //
-    export{ shippingCost, addToCart, chkPinCode, qtyLimit };    //
+    export { shippingCost, addToCart, chkPinCode, qtyLimit };   //
     /* Aliases can be also used in exports                      //
     export { totalPrice, qtyLimit as maxQty };                  //
     */                                                          //
@@ -39,7 +36,7 @@
     import {                                                    //
         addToCart,                                              //
         shippingCost,                                           //
-        chkPinCode} from './shoppingCart.js';                   //
+        chkPinCode } from './shoppingCart.js';                  //
     /* using Aliases for imported values.                       //
     import {                                                    //
         addToCart,                                              //
@@ -58,8 +55,10 @@
 //////////////////////////////////////////////////////////////////
 
 
-// Default exports
-// When we want to export only one item from a module.
+// 2. Default exports ( no curly braecs {  } )
+// A module can only have ONE default export,
+// but as many named exports as you'd like.
+// And You can import them all together:
 
 // Suppose u want to export a function by default., then default export looks like :
 export default function(product , quantity){
@@ -73,9 +72,22 @@ import add from './shoppingCart.js';
 add('pizzza',2);
 
 // Never mix default with named imported items.
-import add , { addToCart, totalPrice as price, totalQty} from './shoppingCart.js'; // bad idea
+// import add , { addToCart, totalPrice as price, totalQty} from './shoppingCart.js'; // bad idea
 
-// If a module only exports a single function or object,
-// that function or object is automatically the default export.
-// In this case, you can import it without using braces:
-import myFunction from './myModule.js';
+// 3. MIXED default with named exports
+// B.js
+import A, { myA, Something } from './A'
+// Here, we import the default export as A, and
+// named exports called myA and Something, respectively.
+
+// A.js
+export default 42
+export const myA = 43
+export const Something = 44
+
+// We can also assign them all different names when importing:
+// B.js
+import X, { myA as myX, Something as XSomething } from './A'
+
+// Remember, the curly braces are used only for named exports,
+// while the default exports are imported directly i.e. without the curly braces.

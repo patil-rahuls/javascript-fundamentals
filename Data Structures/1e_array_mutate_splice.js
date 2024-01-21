@@ -3,7 +3,6 @@
 //////////////////////////////////////////////////////////////
 
 // SPLICE: Slightly same as slice + Mutates the array
-// Works like slice() except that it not only returns result but also mutates the array.
 // array.splice(startIndex, deleteCount)
 // IMP: its 2nd parameter is not index, but count of items to be removed.
 
@@ -27,3 +26,11 @@ if (index > -1) {
 
 console.log(array);
 // [2, 9]
+
+//////////////////////////////////////////////////////////////
+// SPLICE: Also inserts an element at a given index.
+// array.splice(startIndex, deleteCount, newValue);
+
+const newArr = [11, 22, 33, 44, 55, 66];
+arr.splice(4, 0, 99);   // This deletes 0 items at 4th index and inserts 99 there.
+console.log(arr);    // [11 , 22, 33, 44, 99, 66]

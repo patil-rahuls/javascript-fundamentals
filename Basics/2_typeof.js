@@ -2,10 +2,6 @@
 // TYPEOF OPERATOR ///////////////////////////////////////////
 //////////////////////////////////////////////////////////////
 
-console.log(typeof [2,4,6]);        // "object" NOT "array"
-
-console.log(typeof {});             // "object"
-
 console.log(typeof x);              // "undefined" (if x is not defined)
 
 console.log(typeof "arr");          // "string"
@@ -21,3 +17,19 @@ console.log(typeof Infinity);       // "number"
 
 const square = num => num*num;
 console.log(typeof square);         // "function"
+
+console.log(typeof [2,4,6]);        // "object" NOT "array"
+
+console.log(typeof {});             // "object"
+
+//////////////////////////////////////////////////////////////
+// How to check if a given object is an Array or Object.
+const givenVariable = [];           // Array
+Object.prototype.toString.call(givenVariable);
+// Outputs a string: '[object Array]'
+
+const givenVariable2 = {};           // Object
+Object.prototype.toString.call(givenVariable2);
+// Outputs a string: '[object Object]'
+
+// Observe this difference 'object' and 'Object' in the output.

@@ -32,3 +32,32 @@ const show = function (){
 // We use IIFE to just keep some variables hidden in the function scope and not make it available in
 // global scope hence prventing the global scope from getting polluted.
 // IIFE creates a scope. Every function creates its own scope in which variables are confined.
+
+// IIFE can be written to function same as a Namespace in PHP and other langs.
+
+// One great example can be an implementation of Modules system in JS.
+// Behind the scenes, Modules are nothing but IIFEs.
+const myObj = {};
+(function(outsideObj, b){
+   // Private Property
+   let c = 0;
+
+   // Private Method
+   function show_c(){
+      console.log(`Value of c is ${c}`);
+   }
+
+   //Public Property
+   outsideObj.cart = [];
+
+   //Public Method
+   outsideObj.checkC = function(){
+      c++;
+      outsideObj.cart.push(c);
+      show_c();
+   };
+})( myObj );
+myObj.checkC();
+// Outputs: Value of c is 1
+// We achieved encapsulation here. Keeping some properties( c and show_c() ) private and
+// exposing only required properties( obj.cart[], obj.checkC() ) to the outside world.

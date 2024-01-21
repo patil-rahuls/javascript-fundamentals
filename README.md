@@ -1,6 +1,6 @@
 # Important Javascript Concepts with Codes
 
-## Basic Concepts [Complete]
+## Basic Concepts
 - var, let _[ES6]_ and const _[ES6]_, and their comparision
 - typeof
 - Type Conversion and Coercion
@@ -18,20 +18,20 @@
 - _[ES6]_ for-of loop
 - for-in loop
 - _[ES6]_ Default Parameters (Function)
+- Error Types
 - Console
 - User Interaction (Browser)
-- Error Types
 
-## Data Structures [Complete]
+## Data Structures
 - Arrays
 - Array Methods
-- Objects properties retrieval, iteration and methods
+- Objects properties retrieval, removal, iteration, clones and methods
 - Objects' _[this]_ keyword
 - _[ES6]_ Maps, iteration and methods
 - _[ES6]_ Sets, methods and use cases
 - Which data structure to use?
 
-## Functions [Complete]
+## Functions
 - _[ES6]_ Default parameters
 - Pass by Value OR Pass by Reference
 - setTimeout()
@@ -43,7 +43,7 @@
 - IIFE
 - string methods
 
-## How Javascript Works [Complete]
+## How Javascript Works
 - Compilation, Interpretation and JIT-Compilation
 - Javascript Runtime
 - Javascript Engine
@@ -54,7 +54,13 @@
 - Primitives Values and Reference Values
 - Event Loop
 
-## Object Oriented Javascript [Complete]
+## Modules
+- Introduction & Module Types
+- ES6 Modules
+- Module Pattern & Modules behind the scenes
+- import vs require
+
+## Object Oriented Javascript
 - Object Oriented Programming in Javascript
 - Constructor Functions and Prototypes
 - Prototype Chain
@@ -67,10 +73,15 @@
 - Encapsulation
 - Chaining Class Methods
 
-## Modules [Complete]
-- Introduction
-- Common modules
-- Modules behind the scenes
-
-## Asychronous Javascript [Complete]
+## Asychronous Javascript
+- synchronous vs asynchronous
 - Promises & fetch API
+- Event loop
+- Promisify
+- _[ES2017]_ async/await
+- Promise static methods - race, all, any & allSettled
+
+## NPM
+- Package
+- Package.json
+- Local and Global package installation
