@@ -25,13 +25,14 @@ Packages & Specifications
 Differences -
                                 Common JS               ES
         import a module         require()               import
-        export from a module    module.exorts           export
+        export from a module    module.exports          export
 
     1.  calling - require() can be called from anywhere in the code, whereas import can only be called at the begining.
     2.  require() can be called within conditionals and functions, whereas import cannot be called like that.
     3.  require() is bound dynamically. whereas, import is bound static
         This means, the binding errors are not identified untill run-time. For import the binding errors are identified at compile time.
     5.  require() are synchrounous in nature, means, modules will be loaded in sequence(linear fashion). import modules are asynchrounous. Import runs faster in large scale applications where we need to import a large no. modules.
+    6. If the module is not found, require() will automatically scan 'node_modules' folder to find modules, but import won't.
 
 //////////////////////////////////////////////////////////////
 Example - require

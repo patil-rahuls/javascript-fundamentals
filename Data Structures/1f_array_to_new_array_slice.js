@@ -2,11 +2,6 @@
 // DATA STRUCTURES - ARRAY - METHODS TO GET NEW ARRAYS ///////
 //////////////////////////////////////////////////////////////
 
-// SLICE:  It returns an array (shallow copy).
-// A shallow copy in JavaScript creates a new object that points to the same memory
-// location as the original object.
-// This means that if you make a change to the original object, it will also affect the copied object.
-
 // array.slice(start_index , end_index)
 // element at start_index is included in result
 // element at end_index is not included in result
@@ -21,7 +16,8 @@ arr.slice(1, -2); // [ 22,33,44 ]
 
 //  Example #1 (Deep Clone)
 // IMP & USEFUL : Copying an array
-// It's also important to observe that the slice() array method can be used to copy arrays by not passing any arguments
+// It's also important to observe that the slice() array method can be used to copy arrays by
+// not passing any arguments
 const arr1 = arr.slice();
 // But Why?
 // Observe this :
