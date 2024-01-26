@@ -41,3 +41,6 @@ new String("rahul") == new String("rahul")  // false
 new String("rahul") === new String("rahul") // false
 
 //https://stackoverflow.com/questions/359494/which-equals-operator-vs-should-be-used-in-javascript-comparisons
+
+// IMP - Switch stmt performs an ‘===’ based comparison,
+// when the switch statement matches the expression with the given case '...'
