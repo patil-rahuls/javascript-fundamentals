@@ -36,6 +36,7 @@ const getData = () => {
 // This is a lot simpler and minimal to use instead of the traditional AJAX using XMLHTTPREQUEST
 // Also we avoid the Callback Hell (Callback Hell is nested callbacks in case of executing asynchrounous events in sequence.)
 
+//////////////////////////////////////////////////////////////
 // IMP: Whatever we return from a then(), it is treated as a fulfilled value of that promise.
 
 // Try this example :
@@ -49,3 +50,15 @@ const getData = () => {
 // Fetching Data asynchronously...
 // Fetched Data // Prints after 5 seconds.
 // {...}
+
+//////////////////////////////////////////////////////////////
+// IMP - If we do not pass any callback to a then(), then it is ignored and the next chained then method is executed.
+var p = new Promise(function(resolve, reject) {
+   resolve("OK");
+});
+p.then().then().then(function(data) {
+   console.log(data);
+});
+// We chained the empty then() method twice.
+// But the non empty then will be operating on the promise object 'p'
+// Output - "OK"
