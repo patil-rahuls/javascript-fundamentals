@@ -2,6 +2,13 @@
 // STRINGS AND TEMPLATE LITERALS [ES6]////////////////////////
 //////////////////////////////////////////////////////////////
 
+// Literals represent values in JavaScript.
+// These are fixed values not variables that you literally provide in your script.
+// e.g. "foo", "bar", "1234" are string literals.
+
+// Template literals are literals delimited with backtick ( ` ) characters,
+// allowing for multi-line strings, string interpolation with embedded expressions.
+
 const firstName = "Rahul";
 const developmentExperience = 6;
 console.log('String with \n\
