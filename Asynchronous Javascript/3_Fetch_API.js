@@ -52,7 +52,7 @@ const getData = () => {
 // {...}
 
 //////////////////////////////////////////////////////////////
-// IMP - If we do not pass any callback to a then(), then it is ignored and the next chained then method is executed.
+// IMP - If we do not pass any callback to a then(), it is ignored and the next chained then() method is executed.
 var p = new Promise(function(resolve, reject) {
    resolve("OK");
 });
@@ -60,5 +60,5 @@ p.then().then().then(function(data) {
    console.log(data);
 });
 // We chained the empty then() method twice.
-// But the non empty then will be operating on the promise object 'p'
+// But the last non empty then() will be operating on the promise object 'p'
 // Output - "OK"

@@ -17,6 +17,7 @@ console.log(laptop.make1);          //"Apple"
 console.log(laptop.make2);          //"Dell"
 console.log(laptop.make3);          //"HP"
 
+
 //  Example #2:
 // Shorthand for writing Methods and Properties
 let name = 'Twilight';

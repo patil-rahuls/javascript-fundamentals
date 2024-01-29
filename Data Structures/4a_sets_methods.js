@@ -15,7 +15,7 @@ names.has("hitesh"); 		// true
 
 
 // 2. add()
-// Add an item to a Set.
+// Add an item to a Set. // In Map we have map.set() method. That's the only distinction in their methods.
 names.add("anil");
 names.add("milan");
 console.log(names);			// set(5) {'hitesh', 'aajesh' , 'rahul', 'anil', 'milan'}

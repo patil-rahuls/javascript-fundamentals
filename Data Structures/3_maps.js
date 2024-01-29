@@ -45,7 +45,7 @@ console.log(question);
    for(const property in myObj){
       console.log(typeof property);
    }
-   // Outputs - 2 string. The properties(i.e. 1, 2) were converted to strings.
+   // Outputs - 'string'. The properties(i.e. 1, 2) were converted to strings.
    // Implicit conversion of keys is tricky because you lose the consistency of the types.
 
    // But if you use a number as a key inside a map, it will remain a number:

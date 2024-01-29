@@ -63,7 +63,7 @@ const res = await Promise.race([
 // Promise 1
 
 // IMP -
-// The order of the promises in the array you give Promise.race DOES NOT MATTER.
+// The order of the promises in the array you provide to Promise.race() DOES NOT MATTER.
 // In the above code, the first promise (time-wise) to settle is Promise 1,
 // because you're scheduling three timeouts in a row, all of them with a timeout of 2000ms,
 // so the first one scheduled is the first one that gets called,

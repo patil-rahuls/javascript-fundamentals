@@ -4,7 +4,7 @@
 
 // async-await is simply a syntactic sugar to the then() method.
 const myFunc1 = async function(param){
-    // Here inside async fn, we can have one or more await function.
+    // Here inside async fn, we can have one or more await function calls.
     // Syntax:
     // await <Promise Object>
     await fetch("https://deelay.me/5000/https://reqres.in/api/users?page=2"); // fetch will return a promise.

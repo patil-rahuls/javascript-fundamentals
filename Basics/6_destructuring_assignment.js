@@ -15,6 +15,7 @@ const [x,y,z] = arr;
 console.log(x,y,z);
 // 2 , 3 , 4
 
+
 //  Example #2
 const restaurant = {
    name: 'Rahul’s Cafe',
@@ -37,9 +38,11 @@ const [first_cat, second_cat] = restaurant.categories;
 const [ , , third_cat] = restaurant.categories;
 // 'South Indian'
 
+
 //  Example #3
 // IMP: Swap two values WITHOUT using a temporary variable.
 [first, second] = [second, first];
+
 
 //  Example #4
 // Mutate variable values by Destructuring an Array.

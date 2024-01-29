@@ -139,7 +139,8 @@ document.querSelector('.buy').addEventListener('click', lufthansa.buyPlane());
 
 // So in the above case, 'this' refers to the button element, and not the lufthansa object.
 
-// Solution: bind(), as it returns a function. (not call() because call simply calls the function.
+// Solution: bind(), as it returns a function.
+// Here, we are not using call() & apply() because they both simply calls the function.
 // We just need function value as event handler function()
 document.querSelector('.buy').addEventListener('click', lufthansa.buyPlane.bind(lufthansa));
 // now the 'this keyword in buyPlane() will point to the 'lufthansa' object.
@@ -157,7 +158,7 @@ const addTax = (rate , val) => rate + rate*val;
 console.log(addTax(0.1 , 200));
 
 const VAT = addTax.bind( null , 0.23 ) ;
-// we set the rate as 0.23(second parameter above) and the object passed is null.
+// we set the rate(default param) as 0.23(second parameter above) and the object passed is null.
 // In addTax() there is no ‘this’ keyword, hence we simply passed null.
 
 VAT(3299); // 3299 + 3299*0.23

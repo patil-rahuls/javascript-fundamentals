@@ -55,8 +55,8 @@ const myFunc2 = async function(page1, page2, page3) {
             data[2].json()
         ]);
         // OR
-        const finalData = await Promise.all( data.map(d => d.json()) );
-        console.log(finalData);
+        const finalData_ = await Promise.all( data.map(d => d.json()) );
+        console.log(finalData_);
 
         /*
         Old way - using then()

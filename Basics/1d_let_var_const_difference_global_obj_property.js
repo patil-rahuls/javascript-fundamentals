@@ -16,7 +16,7 @@ console.log(window.foo);    // Foo
 console.log(window.baz);    // Baz
 console.log(window.bar);    // undefined
 
-// In Node JS runtime, using global object.
+// In Node JS runtime, using 'global' object.
 console.log(global.foo);    // Foo
 console.log(global.baz);    // Baz
 console.log(global.bar);    // undefined

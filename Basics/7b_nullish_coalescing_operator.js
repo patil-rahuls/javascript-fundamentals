@@ -33,7 +33,7 @@ console.log(totalUsers);
 // NaN
 
 const users = 1/0;
-const totalUsrs = users ??rs;
+const totalUsrs = users ?? 0;
 console.log(totalUsrs);
 // Infinity
 

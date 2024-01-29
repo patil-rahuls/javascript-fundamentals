@@ -8,6 +8,16 @@ const myArr = ["rahul", "hitesh", "aajesh"];
 // Initializing an Array using constructor function.
 const birthYears = new Array(1992, 1991, 1993);
 
+// Initializing an Array using static method 'Array.from()'
+// Array here is a constructor. and from() is Array's static function.
+const y = Array.from({length : 7} , () => 1);
+// [1,1,1,1,1,1,1]
+
+const yy = Array.from({length : 7} , (curr , i ) => i+1);
+// [1,2,3,4,5,6,7]
+// We can omit the curr parameter above and rewrite the expression as :
+const yyy = Array.from ({length : 7} , ( _ , i ) => i+1);
+
 // length of an Array
 const howMany = myArr.length;           // no parenthesis after length
 

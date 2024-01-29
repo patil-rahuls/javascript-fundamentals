@@ -2,6 +2,9 @@
 // STRINGS - STRING METHODS //////////////////////////////////
 //////////////////////////////////////////////////////////////
 
+// Just like 'Array' constructor,
+// We have a constructor for strings - 'String'
+// and we have access to several methods that we can use on strings.
 const brand = 'Apple';
 const model = 'Macbook Air';
 

@@ -8,7 +8,7 @@
 
 // Consider the following function as an example:
 const show = function (){
-   alert("this is an IIFE");
+   alert("this is not an IIFE");
 }
 
 // Put parens ( ) around it to make it a function expression without assigning to any variable.
@@ -30,7 +30,7 @@ const show = function (){
 // IMP: Why are these in javascript ?
 //      Ans. "Variables Scope"
 // We use IIFE to just keep some variables hidden in the function scope and not make it available in
-// global scope hence prventing the global scope from getting polluted.
+// global scope hence preventing the global scope from getting polluted.
 // IIFE creates a scope. Every function creates its own scope in which variables are confined.
 
 // IIFE can be written to function same as a Namespace in PHP and other langs.

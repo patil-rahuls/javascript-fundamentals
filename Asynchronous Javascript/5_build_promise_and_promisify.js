@@ -10,8 +10,8 @@
 // Syntax:
 const aPromise = new Promise((resolve, reject) => {
     // Do some asynchronous operation here
-    // If successful, call resolve()
-    // If there's an error, call reject()
+    // If successful, call resolve('to be' fulfilled value)
+    // If there's an error, call reject('Error Message/Value')
   });
 
 const myPromise = new Promise(function(resolve, reject){
@@ -38,7 +38,7 @@ const myPromise = new Promise(function(resolve, reject){
 myPromise.then(result=>console.log(result)).catch(err=>console.error(err));
 // Observe that We didn't use .json() function here.
 
-// However, this is not asynchronous.
+// However, this is not asynchronous, as there is only one task in it.
 
 // Let's Modify it.
 const newPromise = new Promise(function(resolve, reject){

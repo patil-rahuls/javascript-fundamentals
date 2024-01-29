@@ -38,14 +38,16 @@ booker(); // 3
 console.dir(booker);
 
 // It gives the function details. where it shows the 'scopes' property which is the variable environment.
-// We can see which variables exist in that VE and that variables are changing in it based on the no. of times I am calling booker().
+// We can see which variables exist in that VE and
+// that the variables are changing in it based on the no. of times I am calling booker().
 
 /*
   [[Scopes]] : Scopes[3] // [[Scopes]] double bracket = internal js property
   0: Closure (parentFn) {users:...}
 */
 
-// The above line means that we have the variable 'users' available from parentFn’s execution context
+// The above line means that we have the variable 'users' is available from parentFn’s execution context
+// Scopes[3] -> here 3 means the child function has been called 3 times.
 //////////////////////////////////////////////////////////////
 
 
