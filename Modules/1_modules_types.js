@@ -6,9 +6,9 @@
 // Modules are a way to organize code into separate files or units of functionality.
 
 // Benfits are-
-// Reusable code
-// Maintainability and
-// Scalability
+//    1. Reusable code
+//    2. Maintainability and
+//    3. Scalability
 
 // There are two main types of modules in JavaScript based on specifications:
 //    1. CommonJS modules:
@@ -33,8 +33,8 @@
 
 // By default "strict mode" is used in Modules.
 
-// Top Level "this" points to undefined in a Module, whereas in a script,
-// it point to window(Browser)/global(NodeJS) object.
+// Top Level "this" points to undefined in a Module,
+// whereas in a script, it point to window(Browser)/global(NodeJS) object.
 
 // We should write only 1 module per file.
 // Imports are at the top level.

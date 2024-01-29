@@ -1,5 +1,5 @@
 //////////////////////////////////////////////////////////////
-// Execution
+// Execution Context
 //////////////////////////////////////////////////////////////
 
 // An Execution Context is an environment where the code executes.
@@ -37,8 +37,6 @@ const x = first();
 // 3. Execution of Functions(function calls) and waiting for callbacks.
 //    For each function call, a NEW Execution Context is created.
 //    All function execution contexts in sequence together form a call stack.
-//    Now the functions are waiting to be executed. e.g. a click event callback is waiting for its execution.
-
 
 //////////////////////////////////////////////////////////////
 // Execution Context
@@ -97,7 +95,7 @@ const x = first();
 // 2. Function/Local Scope
 // 3. Block Scope [ES6]
 
-// Earlier we had 'var' which only cared about *global* scope and *function* scope.
+// Prior to ES6, we had 'var' which only cared about *global* scope and *function* scope.
 
 // 1. Global Scope
 // Outside of any Function or Block.

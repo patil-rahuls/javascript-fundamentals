@@ -10,6 +10,7 @@ const result = fetch("https://xyz.com/api/somedata");
 console.log(result);
 // Promise {<pending>}
 
+
 // We see that fetch() returns a "Promise" and inside curly braces, we see its state - pending
 // That means it is fetching the data from the url in the background.
 // If we console.log(result) after sometime, we may get (if the request has been completed in the background).

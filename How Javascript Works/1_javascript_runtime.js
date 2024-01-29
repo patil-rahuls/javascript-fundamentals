@@ -26,4 +26,6 @@
 //      A non blocking concurrency model is achieved using this.
 
 
-// Event Loop - Once call stack is empty, THEN ONLY it takes a callback function from Callback Queue and put in Call Stack for execution.
+// Event Loop -
+// Once call stack is empty, THEN ONLY it takes a callback function from Callback Queue
+// and puts in Call Stack for execution.

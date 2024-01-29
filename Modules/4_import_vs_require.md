@@ -31,8 +31,8 @@ Differences -
     2.  require() can be called within conditionals and functions, whereas import cannot be called like that.
     3.  require() is bound dynamically. whereas, import is bound static
         This means, the binding errors are not identified untill run-time. For import the binding errors are identified at compile time.
-    5.  require() are synchrounous in nature, means, modules will be loaded in sequence(linear fashion). import modules are asynchrounous. Import runs faster in large scale applications where we need to import a large no. modules.
-    6. If the module is not found, require() will automatically scan 'node_modules' folder to find modules, but import won't.
+    4.  require() are synchrounous in nature, means, modules will be loaded in sequence(linear fashion). import modules are asynchrounous. Import runs faster in large scale applications where we need to import a large no. modules.
+    5.  If the module is not found, require() will automatically scan 'node_modules' folder to find modules, but import won't.
 
 //////////////////////////////////////////////////////////////
 Example - require

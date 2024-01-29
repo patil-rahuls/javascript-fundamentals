@@ -3,7 +3,7 @@
 //////////////////////////////////////////////////////////////
 
 // Hoisting - Refers to the behavior of variable and function declarations being moved to the top of their scope.
-// This means that a variable or a function can be used before it is declared in the code.
+// This means that a variable or a function declaration can be used before it is declared in the code.
 // However, it is important to note that only the declarations themselves are hoisted, not the assignments.
 // So, if a variable is assigned a value(using *var* keyword) before it is declared,
 // the value will be undefined when accessed before the assignment.

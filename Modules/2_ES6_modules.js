@@ -55,7 +55,7 @@
 //////////////////////////////////////////////////////////////////
 
 
-// 2. Default exports ( no curly braecs {  } )
+// 2. Default exports ( no curly braces {  } )
 // A module can only have ONE default export,
 // but as many named exports as you'd like.
 // And You can import them all together:

@@ -10,8 +10,9 @@
 //  Example # 1:
 console.log('One');
 console.log('Two');
-console.log('Three');
+console.log('Three');``
 // LOGS: 'One', 'Two', 'Three'
+
 
 // 2. ASYNCHRONOUS
 // Long runing operations "execute in the background".
@@ -23,6 +24,7 @@ console.log('One');
 setTimeout(() => console.log('Two'), 100);
 console.log('Three');
 // LOGS: 'One', 'Three', 'Two'
+
 
 // AJAX(Asynchronous Javascript and XML) execution is asynchronous.
 // Some examples of this are network requests, long-running calculations, file system operations etc.
