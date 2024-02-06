@@ -11,11 +11,12 @@
 console.log('One');
 console.log('Two');
 console.log('Three');``
-// LOGS: 'One', 'Two', 'Three'
+// Outputs:
+// 'One', 'Two', 'Three'
 
 
 // 2. ASYNCHRONOUS
-// Long runing operations "execute in the background".
+// Long runing operations can be made to "execute in the background".
 // While rest of the code executes normally without ever being blocked.
 // Asynchronous code is "non blocking".
 
@@ -23,7 +24,8 @@ console.log('Three');``
 console.log('One');
 setTimeout(() => console.log('Two'), 100);
 console.log('Three');
-// LOGS: 'One', 'Three', 'Two'
+// Outputs:
+// 'One', 'Three', 'Two'
 
 
 // AJAX(Asynchronous Javascript and XML) execution is asynchronous.
@@ -33,8 +35,15 @@ console.log('Three');
 
 // Not all callback functions make code asynchronous.
 
-// Callback Hell
-// When we have multiple asynchronous operations one after the other by "nesting" the callbacks,
-// we get into callback hell.
 
-// We avoid it using Promises.
+//////////////////////////////////////////////////////////////
+// CALLBACK HELL /////////////////////////////////////////////
+//////////////////////////////////////////////////////////////
+// When we have multiple asynchronous operations one after the other by "nesting" the callbacks,
+// we get a a pyramid structure like code called 'callback hell'.
+
+// It is essentially nested callbacks stacked below one another.
+// Every callback depends/waits for the previous callback.
+// Affects the readability and maintainability of the code.
+
+// We avoid it by using 'Promises'.
