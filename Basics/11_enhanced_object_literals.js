@@ -2,6 +2,10 @@
 // ENHANCED OBJECT LITERALS [ES6] ////////////////////////////
 //////////////////////////////////////////////////////////////
 
+// Literals represent values in JavaScript.
+// These are fixed values not variables that you literally provide in your script.
+// e.g. "foo", "bar", "1234" are string literals.
+
 // A better way to write javascript objects with the new ES6 syntax.
 
 //  Example #1:
