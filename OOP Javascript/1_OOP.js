@@ -9,13 +9,13 @@
 // We use Objects to model real world or abstract features.
 // OOP's goal is to organize code, make it flexible and easier to maintain.
 
-// Traditional OOP - Classes and Instances.
-
 // How we model real world data into classes?
 // 1. Abstraction - hide details of implementation.
 // 2. Encapsulation - keeping some properties and methods PRIVATE inside a class, so that they are not accessible from outside the world. Exposing only essential methods to outside world.
 // 3. Inheritance - Reusing some properties and methods from different classes (real world entities - objects)
 // 4. Polymorphism - Resuing same methods for different purpose. Override methods from parent class.
+// 'poly' means many, 'morph' means forms.
+
 
 //////////////////////////////////////////////////////////////
 // OOP IN Javascript /////////////////////////////////////////
@@ -34,12 +34,12 @@
 
 // In Javascript, we say "Objects are linked to a Prototype Object".
 
-// The "Prototype Object" contains properties and methods (behaviour)
-// that are accessible to all objects linked to that prototype.
+// A *Prototype Object* contains properties and methods (behaviour)
+// that are accessible to all objects linked to it.
 // This is called Prototypal Inheritance. (This is not the Inheritance in OOP priciple.)
 
 // DELEGATION:
-// Behaviour(methods) is delagated to the linked Prototype Object.
+// Behaviour(methods) is delagated to the linked *Prototype Object*.
 // Whereas in classic OOP, the methods are actually *copied* from the class to all instances.
 
 // In mdn web docs, you will see something like this:
@@ -48,7 +48,7 @@
 // Array.prototype.indexOf()
 // ... etc.
 
-// Array.prototype is the prototype object of all arrays that we create in javascript.
+// Array.prototype is the *Prototype Object* of all arrays that we create in javascript.
 // Therefore all arrays have access to the prototype methods.
 
 
@@ -62,7 +62,7 @@
 // 1. constructor functions
 // creates objects from function.
 // This is how built-in objects like Arrays, Maps or Sets are actualy implemented.
-// new Array(...), new Set(...) , new Map(...) These are all constructer functions.
+// new Array(...), new Set(...) , new Map(...) These are all constructer function calls.
 
 // 2. ES6 Classes
 // work exactly like constructor functions, but with a cleaner syntax.

@@ -14,7 +14,7 @@ Array.from()
 Number.parseFloat(12);
 // These(static methods) are made so as to keep them linked to Array only.
 
-// We can have such static methods in our user defined es6 classes or constructor functions.
+// We can have such static methods in our user defined ES6 classes or constructor functions.
 // Class using constructor function.
 const Student = function(){
     // ...
@@ -32,7 +32,7 @@ Student.hey();      // We are calling it through Class and not by any object.
 s1.hey();           // Error: s1.hey is not a function.
 // Because hey() is simply not in Student prototype object.
 
-// Static methods just like any other programming languages, are called by the Class directly.
+// Static methods just like in any other programming languages, are called by the Class directly.
 
 // 'this' in static method points to the constructor fn.
 Student.hey = function(){
@@ -42,22 +42,18 @@ Student.hey = function(){
 
 // static methods in es6 classes
 class Student {
-
     constructor(name, rollNo) {
         this.name = name;
         this.rollNo = rollNo;
     }
-
     // Methods in ES6 classes are added to .prototype property of the Student Class
     show(){
         console.log(`${this.name}'s Roll No. is ${this.rollNo}`);
     }
-
-    // No comma here OR after a method in es6 class
+    // No comma here OR after a method in ES6 class
     show2(){
         // ...
     }
-
     // static mehod
     static hey(){
         console.log("Heyy");
@@ -70,3 +66,6 @@ Student.hey();
 
 // Same aplies to classes defined using constructor functions.
 // We use static methods to create helpers of class/constructor fns.
+
+// For Arrays, why there are static methods like .from(), .filter() etc? Why they were not added 
+// to prototype property of Array constructor function? - Homework :)

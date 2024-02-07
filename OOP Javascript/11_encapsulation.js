@@ -6,14 +6,13 @@
 // Encapsulation is not yet supported in JS.
 // Proposal for this feature is not finished yet. Its at stage 3 of development.
 
-// Just use underscore before the properties and methods and add a comment.
-
+// Convention - Just use underscore before the properties and methods and add a comment.
 class User {
     constructor(username, name, passkey, license){
         this.name = name;
         this.license = license;
 
-        // Protected Property
+        // Protected Properties
         this._username = username;
         this._passkey = passkey;
         this._txns = [];
@@ -21,26 +20,26 @@ class User {
 };
 
 // That's all we can do for now.
-
 class User {
-
     // Public fields
     created_at = new Date();
 
-    // Private Field
+    // Private Fields
     // All private fields must be written outside the constructor() in the class.
     #username;
     #passkey;
     #txns = [];
-    // That's it. syntaxt for private fields is append a # before the variable name EVERYWHERE IN THE CODE.
+    // That's it. syntax for private fields is append a '#' before the variable name EVERYWHERE IN THE CODE.
 
     constructor(username, name, passkey, license){
         this.name = name;
         this.license = license;
 
-        // Protected Property
+        // Protected Properties
         // this._username = username;
         // this._passkey = passkey;
+
+        // Private properties
         this.#username = username;
         this.#passkey = passkey;
         // this._txns = [];

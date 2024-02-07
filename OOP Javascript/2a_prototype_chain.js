@@ -53,16 +53,18 @@
 //
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+// Lets understand the execution of the following code -
 console.log(stu.hasOwnProperty('name'));
-// From the above diagram, the method hasOwnProperty() is called using the "stu" Object.
+
+// See the above diagram; the method hasOwnProperty() is called using the "stu" Object.
 // So it is checked/looked up for existence in the "stu" Object, where it is not found.
 // Then, just like Scope chain, here too, it looks UP for the method definition in "stu"
 // object's prototype
 //
-// "stu" prototype means stu.__proto__ and that is Student.prototype (see the above diagram)
+// "stu" prototype means "stu.__proto__" and that is Student.prototype (see the above diagram)
 // Again, the method hasOwnProperty() is not found in Student.prototype too, so it is looked
-// Up the Student.prototype's prototype i.e. its .__proto__ property, i.e. the built-in Object's prototype property
-// Object.property has most of the methods like hasOwnProperty(), as it is built-in.
+// up in the Student.prototype's prototype i.e. its "__proto__" property, i.e. the built-in Object's prototype property
+// i.e. Object.prototype. It has most of the methods like hasOwnProperty(), as it is built-in.
 
 // Also, note that there is no prototype of Object.prototype (Object.prototype.__proto__ : null).
 // So, this becomes the end of our Prototype Chain.

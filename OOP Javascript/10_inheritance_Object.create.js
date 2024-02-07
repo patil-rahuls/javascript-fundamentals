@@ -36,14 +36,17 @@ user1.init("Rahul Patil", 92, 'rahulp123');
 user1.show();
 
 // The prototype chain formed looks like this:
-ParentProto (prototype)
-        ^
-        |
-        | [.__proto__]
-        |
-  UserProto (prototype)
-        ^
-        |
-        | [.__proto__]
-        |
-      user1
+// ParentProto (prototype)          //
+//         ^                        //
+//         |                        //
+//         | [.__proto__]           //
+//         |                        //
+//   UserProto (prototype)          //
+//         ^                        //
+//         |                        //
+//         | [.__proto__]           //
+//         |                        //
+//       user1                      //
+//  //////////////////////////////////
+
+// Observe that this is also, a lot simpler than using constructor functions.

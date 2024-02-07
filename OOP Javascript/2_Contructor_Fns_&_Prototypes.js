@@ -3,11 +3,11 @@
 //////////////////////////////////////////////////////////////
 
 // IMP: Arrow Functions are not used to create constructor functions,
-// because they dont have their own 'this' keyword.
+// because they don't have their own 'this' keyword.
 
-// We create a constructor function like regular function.
+// We create a constructor function like a regular function.
 // The only conventional distinction is that the first letter is capital.
-// and we get a 'this' keyword inside them.
+// and we get a 'this' keyword inside it.
 
 const Student = function (name , rollNo) {
     this.name = name;
@@ -20,11 +20,11 @@ const stu = new Student('Rahul', 1);
 // 'this' refers to the Object 'stu'.
 // Before looking into this code's execution, lets understand *prototype*.
 
-// Each and every function in javascript automatically has a property called "prototype".
+// Each and every function(object) in javascript automatically has a property called "prototype".
 
-// Student Constructor Function too will have a prototype property. "Student.prototype".
-// "Student.prototype" is NOT the prototype of Student Constructor Function.
-// It is a prototype of objects created using Student Constructor Function, i.e. "stu".
+// Student constructor function too will have a prototype property "Student.prototype".
+// "Student.prototype" is NOT the *Prototype Object* of Student constructor function.
+// It is a prototype of objects created using Student constructor function, i.e. "stu".
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //  _________________                                          _______________________
@@ -50,18 +50,20 @@ const stu = new Student('Rahul', 1);
 // "Student.prototype" itself has a property called ".constructor".
 // Its nothing but the constructor function itself i.e. Student().
 
-// In Javascript, any object's prototype is actually "__proto__" property.
-// So, "stu.__proto__" i.e. "Student.prototype" is a prototype of "stu" Object.
-// And this way, an Object is linked to the Constructor Function's prototype object.
+// In Javascript, any object's *Prototype* is actually "__proto__" property.
+// So, "stu.__proto__" i.e. "Student.prototype" is a *Prototype* of "stu" Object.
+// And this way, an object is linked to the Constructor function's prototype property.
 
 // So here are the 4 events that happen.
 
 // 1. An {} empty obj ("stu") is created.
 
-// 2. 'this' keyword in the Constructor Function call is set to the new object "stu".
-//    That means, the 'this' object inside the execution context of the constructor fn,now points to that new object "stu".
+// 2. 'this' keyword in the Constructor function call is set to the newly created object "stu".
+//    That means, the 'this' object inside the execution context of the constructor fn
+//    now points to that new object "stu".
 
-// 3. The new object "stu" is linked to the constructor function's prototype property as a result of __proto__ property.
+// 3. The new object "stu" is linked to the constructor function's prototype property as a result 
+//    of creation of a new property called "__proto__" property.
 
 // 4. The new object "stu" is returned from the constructor function call.
 

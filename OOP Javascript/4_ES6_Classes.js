@@ -2,34 +2,32 @@
 // ES6 CLASSES ///////////////////////////////////////////////
 //////////////////////////////////////////////////////////////
 
-// Classes in javascript are just syntactic sugars.
+// Classes in ES6 javascript are just syntactic sugars to Constructor functions.
 
-// class expression - just like function expression
+// Class Expression - 
 Student = class{
     // ...
 };
 
-// class declaration  - just like function declaration
+// Class Declaration
 class Student {
-
+    // Behind the scenes, Student is nothing but the constructor function.
     constructor(name, rollNo) {
         this.name = name;
         this.rollNo = rollNo;
     }
 
-    // Methods in ES6 classes are automatically added to .prototype property of the Student Class
+    // Methods in ES6 classes are automatically added to .prototype property of the Student Constructor Fn.
     show(){
         console.log(`${this.name}'s Roll No. is ${this.rollNo}`);
     }
 
-    // No comma here OR after a method in es6 class. It is a class declaration, not an Object declaration.
+    // No comma here OR after a method in ES6 Class. 
+    // Remember, it is a class declaration, not an object declaration.
     show2(){
         // ...
     }
 };
-
-// show() is stored in the Student class's prototype object and not in the Student class.
-//
 
 const s3 = new Student("Aajesh", 29);
 s3.show();
@@ -41,8 +39,10 @@ console.log(s3.__proto__ === Student.prototype);
 Student.prototype.greet = function(){
     console.log(` Hii ${this.name} !!`);
 };
+// This proves that ES6 Classes are actually Constructor functions behind the scenes.
 
-// Example:
+
+//  Example:
 class Car {
     constructor(make, speed){
         this.speed = speed;
@@ -51,17 +51,16 @@ class Car {
     accelerate(){
         this.speed++ && console.log(this.speed);
     }
-
     break(){
         this.speed-- && console.log(this.speed);
     }
 };
-
 const BMW = new Car("BMW", 120);
 const Mercedes = new Car("Mercedes", 95);
 
-// Classes in Javascript actually hide the true nature of prototypal inheritance
 
+// Some points to remember - 
+// Classes in Javascript actually hide the true nature of prototypal inheritance
 // 1. Classes are not hoisted, even if they are declared
 // 2. Like functions, classes are also first class citizens.
 //      that means, we can pass them to functions and return them from functions.

@@ -22,6 +22,8 @@ const Sofa = function(brand, margin, returnable){
     // Calling Parent's constructor fn. using call method. Remember call(), apply() and bind() ?
     // Furniture(brand, margin); // not correct. because we cant call it like a regular fn. (it has 'this' keyword).
     Furniture.call(this, brand, margin);
+    // OR
+    Furniture.apply(this, [brand, margin]);
     this.returnable = returnable;
 };
 
@@ -44,23 +46,29 @@ const s1 = new Sofa('Neelkamal', 15, false);
 //      |
 //   Obj - s1
 
+// We need to make Furniture.prototype a prototype(__proto__) of Sofa.prototype
 // So, we say Sofa.prototype is linked to Furniture.prototype, and we do that using Object.create
 
 Sofa.prototype = Object.create(Furniture.prototype);
 // Sofa.prototype = Furniture.prototype; // this is incorrect. If we do this,
 // the constructor functions Furniture and Sofa will both share same prototype.
-// This is because we are simply assigning an object to another. Remember obj1 = obj2; (only reference is copied, not the content)
+// This is because we are simply assigning an object to another. 
+// Remember obj1 = obj2; (only reference is copied, not the content)
 
-// What we do here is that we LINK Sofa.prototype object using a Furniture prototype. (Furniture.prototype in this case.)
+// What we do here is that we LINK Sofa.prototype object using a Furniture prototype. (Furniture.prototype in this case)
 // Now, objects created using Sofa cnstructor fn, will have direct access to Furniture prototype methods.
 
-s1.getCommisionTax(); // Sofa object accessing Furniture.prototype method.
-// When we call a method using an object, it does a method lookup through prototype chain. it checks if it is available in object's prototype?(Sofa.prototype). if not then it checks in the prototype of object's prototype. i.e. prototype of Sofa.prototype.
+s1.getCommisionTax(); 
+// Sofa object accessing Furniture.prototype method.
+// When we call a method using an object, it does a method lookup through prototype chain. 
+// It checks if it is available in object's prototype?(Sofa.prototype). if not then it checks
+// in the prototype of Sofa.prototype i.e. Furniture.prototype
 // Hence making a chain of prototypes.
 
 //  We can visualize it like this.
 console.log(s1.__proto);            // Sofa.prototype
 console.log(s1.__proto.__proto__);  // Furniture.prototype
+
 
 // Another IMP point here:
 // If we check the constructor property of Sofa.prototype object, it should point back to Sofa constructor.
@@ -69,14 +77,15 @@ console.log(s1.__proto.__proto__);  // Furniture.prototype
 console.dir(Sofa.prototype.constructor); // Furniture
 
 // Solution:
-Sofa.prototype.constructor = Sofa; // As simple as that. All we are doing is that resetting back the '.constructor' property of Sofa.prototype.
+Sofa.prototype.constructor = Sofa; // As simple as that. 
+// All we are doing is that resetting back the '.constructor' property of Sofa.prototype.
 
-// check
+// Now Lets check.
 console.log(s1 instanceof Sofa);
 //  true
 console.log(s1 instanceof Furniture);
-// true
-// this is correct because Sofa has inherited from Furniture.
+// true - this is correct because Sofa has inherited from Furniture.
+
 
 // Example:
 const Car = function(make, currentSpeed){
@@ -95,7 +104,9 @@ const EV = function(this, make, charge){
 
 // Link the prototypes
 EV.prototype = Object.create(Car.prototype);
+// this also changes the .constructor property of EV class to 'Car'
 
+// Reset child class's .constructor property back to its original. i.e. 'EV'
 EV.prototype.constructor = EV;
 
 EV.prototype.chargeBattery = function(chargeTo){
@@ -109,4 +120,4 @@ EV.prototype.accelerate = function(){           // Fn overriding.
 };
 
 // In the scope chain, "EV.prototype.accelerate" will come first, and it will be called. because as I said earlier,
-// it does a method lookup through prototype chain, up till parent's prototype property.
+// it does a method lookUP through prototype chain, up till parent's prototype property.

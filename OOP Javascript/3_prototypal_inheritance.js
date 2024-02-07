@@ -10,20 +10,17 @@
 // but every instance of the object has access to it.
 
 // *Prototype*
-// Each and every function in javascript automatically has a property called "prototype".
+// Each and every function(object) in javascript automatically has a property called "prototype".
 // So the "Student" constructor function also has a prototype property.
 Student.prototype;
 
 // Now we can add function to this prototype object.
 Student.prototype.show = function(){
     console.log("Roll No: " + this.rollNo + " _ Name: " + this.name);
-    // 'this' points to the object which is calling this method.
+    // 'this' will point to the object which will be calling this method.
 };
-// Now show() is accessible from the prototype property.
-console.log(Student.prototype);
-
 // Now all instance of Student will have direct access to the show() of the prototype property.
-Student.show();
+stu.show();
 
 // Using prototype there exists only one copy of show() available to all instances of Student.
 
@@ -40,7 +37,7 @@ console.log( Student.prototype.isPrototypeOf(s2) );                 // true
 console.log( Student.prototype.isPrototypeOf(s3) );                 // true
 console.log( Student.prototype.isPrototypeOf(Student) );            // false
 
-// "Student.prototype" is a prototype of the created objects Not the "Student" constructor fn.
+// "Student.prototype" is a prototype of the created objects Not the prototype of "Student" constructor fn.
 // See it as 'Student.prototypeOfLinkedObject'
 
 // Not just methods, we can also set properties on prototype
@@ -49,14 +46,16 @@ console.log(s1.school);
 console.log(s2.school);
 // Remember this property "school" is not seen in Student Object. i.e. its not School's own property.
 // But it is School.prototype's property.
-// To check whether a Constructor Function has its own property, we use this.
+// Using hasOwnProperty() we can check whether a Constructor function has its own property
 console.log(Student.hasOwnProperty('name'));        // true
 console.log(Student.hasOwnProperty('school'));      // false
 // false because "school" is not inside Student object.
-// It simply has access to it because its in prototype property of Student.
+// It simply has access to it because it is in the prototype property of Student.
 
-// Every object in javascript has a property called __proto__
-// It is not a prototype property, but simply is a prototype.
+
+// __proto__
+// Every object in javascript has a property called "__proto__"
+// It is called a *Prototype*
 
 // Remember the step 3 : {} empty object is linked to prototype.
 // It creates __proto__ property.
@@ -64,10 +63,8 @@ console.log(Student.hasOwnProperty('school'));      // false
 console.log(s1.__proto__ === Student.prototype); // true;
 // __proto__ of objects created from constructor functions are same as prototype property of the constructor.
 
-// in the statement "s1.__proto__"
-// the "__proto__" is called actual prototype of "s1" object.
 
-// Example:
+//  Example:
 const Car = function(make, speed){
     this.speed = speed;
     this.make = make;
@@ -79,12 +76,11 @@ Car.prototype.accelerate = function(){
 Car.prototype.break = function(){
     this.speed-- && console.log(this.speed);
 };
+// Similarly you can add different functions to existing Object prototypes.
 
 const BMW = new Car("BMW", 120);
 const Mercedes = new Car("Mercedes", 95);
 
-//////////////////////////////////////////////////////////////
-// Now you can add a new function to existing Object prototypes.
 // Extending a prototype of a Built-in object - NOT RECOMMENDED.
 Array.prototype.unique = function(){
     console.log(`This is my custom function which can be accessed by all the arrays.`);
