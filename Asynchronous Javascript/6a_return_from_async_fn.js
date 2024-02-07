@@ -23,6 +23,7 @@ console.log("Last");
 // javascript has no way of knowing the value of 'data' variable yet.
 // Hence it returns a promise.
 
+// Compare that with the .then() version of the same code and observe the order in which the output is printed.
 
 console.log("First");
 // const d = myFunc(2);
