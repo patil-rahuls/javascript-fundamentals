@@ -2,6 +2,8 @@
 // FUNCTION DECLARATION AND EXPRESSIONS //////////////////////
 //////////////////////////////////////////////////////////////
 
+// Functions are still Objects in javascript. Callable Objects.
+
 // 1. Function declaration
 // Are always hoisted.
 function calcAge(birthYear) {

@@ -29,7 +29,7 @@ JSON.stringify(a) === JSON.stringify(b); // true
 // Strings with same resulting values are equal if they are Primitive.
 //  Example #3
 var e = "text";
-var f = "te" + "xt";
+var f = "te" + "xt";                        // "te" & "xt" are both Primitive
 e == f            // true
 e === f           // true
 
