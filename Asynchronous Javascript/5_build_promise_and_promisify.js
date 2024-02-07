@@ -28,6 +28,8 @@ const myPromise = new Promise(function(resolve, reject){
         reject("My Error Message"); // "My Error Message" string will be available to the catch() function.
         // reject() is called to set the Promise as Rejected.
         // and the Error Message/Value is passed to the reject() function.
+        // the string "My Error Message" passed to reject() will be available to the catch() method chained to this promise.
+
     }
 });
 
