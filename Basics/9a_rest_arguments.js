@@ -13,27 +13,28 @@
 // The Rest Operator has to be at the end of any destructuring assignment.
 
 //  Example #1 (As function parameter)
+// This function takes comma separated any number of arguments(LIST) and packs them into an array(varArgs).
 const add = function(...varArgs){
-   // varArgs will be packed into an array.
+   // any number of values(LIST) passed to this method will be packed into an array named 'varArgs'
    let sum = 0;
-   for (const i=0; i< varArgs.length ; i++)
+   for (const i=0; i < varArgs.length ; i++)
        sum += varArgs[i];
    console.log(sum);
    return sum;
 }
 const arr = [1,2,3,4,5];
 const result = add(...arr);
-// The function defined above takes comma separated n number of arguments and packs them into an array (varArgs).
 
 // Advantage of Rest Operator:
 // The function above can now accept both a single value as well as a spread-array as its input.
 add (2,3,4);
 add (...arr);   //  This is spread operator. Remember Spread Operator is used as fn call argument.
 
+
 //  Example #2
 const someObj = {
    expand : function(val1 , ...restValues){
-       console.log(val1 , restValues);
+       console.log(val1 , restValues); // 'restValues' will be an array here.
    }
 };
 someObj.expand("Hi" , "Hello" , "There" , "Hey");

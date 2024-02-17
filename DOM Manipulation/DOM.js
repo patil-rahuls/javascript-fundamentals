@@ -2,7 +2,20 @@
 // SELECTING HTML ELEMENTS ///////////////////////////////////
 //////////////////////////////////////////////////////////////
 
+// 1.  What is DOM ?
+// Document Object Model. It's an interface between the javascript code and the browser.
+// DOM tree is generated from an HTML document, which we can then interact with, using javascript.
+// We write javascript code to create, modify and delete HTML elements, set styles, set classes 
+// and attributes, and listen and respond to events attached to them.
+
+
+// 2.  Document API OR DOM API ?
+// Allows you to modify a DOM tree in any way you want.
+// We can edit the DOM of a document using JavaScript to access the 'document' property of the global object.
+
 // 1. querySelector()
+// We provide CSS selctors to these methods.
+
 //  Selecting by class
 document.querySelector('.messageDiv');
 
@@ -92,10 +105,6 @@ document.addEventListener('keydown',
 
 
 31). DOM
-Document Object Model. It's an interface between the javascript code and the browser.
-DOM tree is generated from an HTML document, which can then interact with, using javascript.
-We write javascript code to create, modify and delete HTML elements, set styles, classes and attributes, and listen and respond to events.
-
 
 32). HTML ELEMENTS
 Both the NodeList and HTMLCollection contain HTML elements that we query from javascript. The HTMLCollection changes in real time when we make changes in the DOM. But the same does not happen with NodeList.

@@ -2,23 +2,23 @@
 // FUNCTION DEFAULT PARAMETERS ///////////////////////////////
 //////////////////////////////////////////////////////////////
 
-const bookings  = [];
-const createBooking = function(
-   flightNum,
-   numPassngrs = 1,              // parameter's default value
-   fareTotal = 1999*numPassngrs  // We can have an expression as a default param value
+const defaultGrade = 'NA';
+const myFunc = function(
+   name, 
+   id = 0,                          // parameter's default value
+   grades = 'Grade ' + defaultGrade // We can have an expression to compute default value
    ){
-      const booking = {
-         flightNum,
-         numPassngrs,
-         fareTotal
-      }
-      bookings.push(booking);
-};
+   console.log(name, id, grades);
+}
 
-createBooking('AB123', 4, 4000);
-createBooking('AB123');
-createBooking('AB123', undefined, 4000);
+myFunc('rahul', 12);
+// rahul 12 Grade NA
+
+myFunc('hitesh');
+// hitesh 0 Grade NA
+
+myFunc('aajesh', undefined , A++);
+// aajesh 0 Grade A++
 
 // setting default param value as 'undefined' is the same as not setting the value.
 // This means that parameters(without a default value) in a function are set to 'undefined' initialy.

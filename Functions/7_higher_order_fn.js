@@ -3,7 +3,9 @@
 //////////////////////////////////////////////////////////////
 
 // Fundamental property of js.
-// Higher Order function - a function that receives a function as argument, or/and returns a function.
+// Higher Order function - a function that receives a function as an argument, 
+// or/and returns a function.
+
 // e.g. addEventListener() is a higher order function.
 function count() {
    let counter = 0;
@@ -27,7 +29,7 @@ const UpperFirstWord = function (str) {
 const transform = function (str, fn) {
    console.log(`Original string : ${str} `);
    console.log(`Modified string : ${fn(str)} `);
-   console.log( `Modified by function : ${fn.name}` );
+   console.log(`Modified by function : ${fn.name}`);
    // A function is also an object and it has ‘name’ as one of its internal properties.
 }
 

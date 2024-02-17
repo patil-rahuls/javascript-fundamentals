@@ -3,7 +3,7 @@
 //////////////////////////////////////////////////////////////
 
 // To iterate over an Iterable.
-// "for..of" iterates over a list of "values" of the numeric properties of the object being iterated.
+// "for..of" iterates over a list of "values" of the numeric properties("keys/index") of the object being iterated.
 
 //  Example #1:
 for (const item of menu){

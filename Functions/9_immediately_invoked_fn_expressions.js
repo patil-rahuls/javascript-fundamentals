@@ -38,7 +38,7 @@ const show = function (){
 // One great example can be an implementation of Modules system in JS.
 // Behind the scenes, Modules are nothing but IIFEs.
 const myObj = {};
-(function(outsideObj, b){
+(function(outsideObj){
    // Private Property
    let c = 0;
 

@@ -32,7 +32,7 @@ function checkHoisting() {
 checkHoisting();
 
 // WHY TDZ exist ? (Answer : to identify the type of issue/bug)
-// Observe the error message in Example #2: "Cannot access 'x' before initialization"
+// Observe the error message in the Example #2: "Cannot access 'x' before initialization"
 // It is because the code is certain that 'name' is initialized later in the code.
 // Hence it is kept in TDZ. Thus we can identify the issue from error message created by TDZ and
 // it makes it easier to avoid errors/bugs which are hard to find.

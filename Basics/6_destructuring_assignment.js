@@ -9,6 +9,8 @@
 const arr = [2,3,4];
 const A = arr[0];
 const B = arr[2];
+console.log(A,B);
+// 2 , 3
 
 // Using Destructuring
 const [x,y,z] = arr;
@@ -19,16 +21,17 @@ console.log(x,y,z);
 //  Example #2
 const restaurant = {
    name: 'Rahul’s Cafe',
-   location: 'Madh-Island Mumbai India',
+   location: 'Madh-Island, Mumbai, India',
    starters: ['Crispy Corn Chaat', 'Hara Bhara Kebab', 'All Paneer Starters', 'Corn Kabab'],
    categories: ['North Indian', 'Chinese', 'South Indian', 'Italian'],
 
-   order:function(starter_index, cat_index){
-       return [this.starters[starter_index] , this.categories[cat_index]];
+   order: function(starter_index, cat_index){
+       // this method returns an array.
+       return [ this.starters[starter_index] , this.categories[cat_index] ];
    }
 };
 
-const [starter , mainCourse ] = restaurant.order(2 , 0);
+const [starter , mainCourse] = restaurant.order(2 , 0);
 console.log(starter , mainCourse);
 // 'All Paneer Starters' , 'North Indian'
 

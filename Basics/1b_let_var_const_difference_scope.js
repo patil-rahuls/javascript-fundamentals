@@ -4,7 +4,7 @@
 
 // 2. Scope
 // Scope refers to the visibility or accessibility of variables, functions, and objects within different parts of a program.
-// It determines where in the program a particular variable or function can be accessed and manipulated.
+// It determines where in the program a particular variable or a function can be accessed and manipulated.
 
 // *let* and *const* are block scoped while *var* is function scoped.
 
@@ -58,6 +58,8 @@ console.log(b);         // 8 (because b became globally scoped in the block abov
 console.log(window.b);  // 8 (Because *window* is a global object in browser)
 // In Node JS runtime, we can access 'b' using *global* object.
 console.log(global.b);  // 8
+// the "global" keyword above is the name of the global object in node js runtime, 
+// just like "window" in browser context.
 
 
 //  Example #4 - *var* variables appear error prone.

@@ -2,13 +2,14 @@
 // EQUALITY OPERATORS ("==" and "===") ///////////////////////
 //////////////////////////////////////////////////////////////
 
-// Abstract(loose) equality operator "=="
+// "==" Abstract(loose) equality operator 
 // Type Coercion occurs here.
 console.log('18' == 18);   // true because of implicit type coercion.
 
-// Strict equality operator "==="
+// "===" Strict equality operator 
 // NO Type Coercion.
 console.log('18' === 18);  // false
+
 
 // Objects and Arrays are references in the HEAP and references are always different.
 //  Example #1

@@ -7,7 +7,7 @@
 // e.g. "foo", "bar", "1234" are string literals.
 
 // Template literals are literals delimited with backtick ( ` ) characters,
-// allowing for multi-line strings, string interpolation with embedded expressions.
+// allowing for multi-line strings, 
 
 const firstName = "Rahul";
 const developmentExperience = 6;
@@ -20,7 +20,7 @@ console.log(`String
 multiple
 lines`);
 
-// Using Variables in a template literal string
+// String interpolation with embedded expressions i.e. using variables in a template literal string
 const lastName = 'P';
 const managemenExperience = 2;
 const show = `Hello.

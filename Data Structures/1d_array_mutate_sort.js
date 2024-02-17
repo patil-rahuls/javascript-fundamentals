@@ -9,7 +9,7 @@ const users = ['Rahul' , 'Hitesh' , 'Aajesh'];
 console.log(users.sort());  // ['Aajesh', 'Hitesh', 'Rahul']
 console.log(users);         // ['Aajesh', 'Hitesh', 'Rahul']
 
-// sort() does not work on numbers.
+// sort() does not work on numbers properly.
 // The numbers are converted into strings internally and then sorted.
 
 const arr = [200, 450, -400, 3000, -650, -130, 70, 1300];
