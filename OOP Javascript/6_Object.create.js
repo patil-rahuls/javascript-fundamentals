@@ -42,4 +42,4 @@ s6.age();
 
 // The distinction here is that, we did not create any constructor function.
 // The ".prototype" property which is automatically created in the case of constructor function,
-// is what we manually create when using Object.create().
+// is what we manually create and use Object.create() to create objects.
