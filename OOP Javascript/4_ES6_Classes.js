@@ -61,7 +61,7 @@ const Mercedes = new Car("Mercedes", 95);
 
 // Some points to remember - 
 // Classes in Javascript actually hide the true nature of prototypal inheritance
-// 1. Classes are not hoisted, even if they are declared
+// 1. Class declarations are not hoisted.
 // 2. Like functions, classes are also first class citizens.
 //      that means, we can pass them to functions and return them from functions.
 //      this happens because classes are basically special kinds of functions(Contructor Functions) behind the scenes.
