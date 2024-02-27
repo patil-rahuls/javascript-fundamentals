@@ -27,11 +27,12 @@ Differences -
         import a module         require()               import
         export from a module    module.exports          export
 
-    1.  calling - require() can be called from anywhere in the code, whereas import can only be called at the begining.
-    2.  require() can be called within conditionals and functions, whereas import cannot be called like that.
+    1.  calling - require() can be called from anywhere in the code(including within conditionals and functions), whereas import
+        can only be called at the begining.
     3.  require() is bound dynamically. whereas, import is bound static
-        This means, the binding errors are not identified untill run-time. For import the binding errors are identified at compile time.
-    4.  require() are synchrounous in nature, means, modules will be loaded in sequence(linear fashion). import modules are asynchrounous. Import runs faster in large scale applications where we need to import a large no. modules.
+        This means, for *require* the binding errors are not identified untill run-time. For *import* the binding errors are identified at compile time.
+    4.  require() are synchrounous in nature, means, modules will be loaded in sequence(linear fashion). import modules are
+        asynchrounous. Import runs faster in large scale applications where we need to import a large no. modules in a file.
     5.  If the module is not found, require() will automatically scan 'node_modules' folder to find modules, but import won't.
 
 //////////////////////////////////////////////////////////////
@@ -62,5 +63,5 @@ Node.js will treat *.cjs* files as CommonJS modules and *.mjs* files as ECMAScri
 
 IMP - It will treat *.js* files as whatever the *default module system for the project* is (which is CommonJS UNLESS package.json says "type": "module").
 
-Hence, as long as Node JS doesn't consider *.js* files as import BY DEFAULT, we need to keep specifying
+Hence, as long as Node JS doesn't consider *.js* files as *ES Modules* BY DEFAULT, we need to keep specifying
 "type": "module" inside the package.json file of our project.

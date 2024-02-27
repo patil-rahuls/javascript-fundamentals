@@ -40,3 +40,5 @@
 // Imports are at the top level.
 // Imports are hoisted.
 // Imports are the first thing that happen in a module.
+
+// In Node JS, every file that we create is considered as a Module.

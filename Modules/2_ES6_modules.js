@@ -27,7 +27,12 @@
     // These variables/methods are scoped to only this module.  //
     export { shippingCost, addToCart, chkPinCode, qtyLimit };   //
     /* Aliases can be also used in exports                      //
-    export { totalPrice, qtyLimit as maxQty };                  //
+    export {                                                    //
+        shippingCost,                                           //
+        addToCart,                                              //
+        chkPinCode,                                             //
+        qtyLimit as maxQty                                      //
+    };                                                          //
     */                                                          //
 //////////////////////////////////////////////////////////////////
 
@@ -72,7 +77,8 @@ import add from './shoppingCart.js';
 add('pizzza',2);
 
 // Never mix default with named imported items.
-// import add , { addToCart, totalPrice as price, totalQty} from './shoppingCart.js'; // bad idea
+// import add , { addToCart, totalPrice as price, totalQty} from './shoppingCart.js'; 
+// peolpe say its a bad idea, dont know why. Please correct me :)
 
 // 3. MIXED default with named exports
 // B.js

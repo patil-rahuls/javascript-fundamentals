@@ -59,7 +59,7 @@
 // 2. ES6 Classes
 // 3. Object.create()
 
-// 1. constructor functions
+// 1. Constructor functions
 // creates objects from function.
 // This is how built-in objects like Arrays, Maps or Sets are actualy implemented.
 // new Array(...), new Set(...) , new Map(...) These are all constructer function calls.
