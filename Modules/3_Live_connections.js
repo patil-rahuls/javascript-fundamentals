@@ -13,4 +13,9 @@ add('eggs', 12);
 add('dry-ice', 1);
 
 console.log(cart); // We get the updated cart[]. Because its a live connection and not a copy.
-// Imports are not copys of exports, they are live connections. Thus saving memory.
+// Imports are not copys of exports, they are read-only live bindings/connections. Thus saving memory.
+
+// IMP Note: The imported values are read-only views of the features that were exported. 
+// Similar to *const* variables, you cannot re-assign the variable that was imported, 
+// but you can still modify properties of object values. 
+// The value can only be re-assigned by the module exporting it.

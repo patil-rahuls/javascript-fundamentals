@@ -49,6 +49,7 @@
     } from './shoppingCart.js';                                 //
                                                                 //
     // Importing all values from a module                       //
+    // a.k.a Namespace import                                   //
     import * as shoppingCartDetails from "./shoppingCart.js";   //
     shoppingCartDetails.addToCart(10, "rubber");                //
     */                                                          //
@@ -97,3 +98,8 @@ import X, { myA as myX, Something as XSomething } from './A'
 
 // Remember, the curly braces are used only for named exports,
 // while the default exports are imported directly i.e. without the curly braces.
+
+// To Summarise -
+// Named import: import { export1, export2 } from "module-name";
+// Default import: import defaultExport from "module-name";
+// Namespace import: import * as name from "module-name";
