@@ -19,55 +19,57 @@
 - Best suited for microservices development.
 
 #### Glossary
-- Anonymous Function
+- Anonymous Function - 
 A function that is not named. An anonymous function is often passed into another function as a parameter.
 
-- Callback Function
+- Callback Function - 
 A function passed into another function as a parameter, which is then invoked inside the outer function to complete an action. Instead of blocking on asynchronous I/O operations, callback functions are used to handle results when the operations complete.
 
-- Dependencies
+- Dependencies - 
 Code, usually in the form of libraries and packages, that are called from other modules and reused in a program.
 
-- Event-Driven
+- Event-Driven - 
 	Where the flow of a program is determined by particular events such as user input.
 
-- Express.js
+- Express.js - 
 	A highly configurable web framework for building applications on - Node.js.
 
-- Framework
+- Framework - 
 	Generates code that cannot be altered to perform common tasks. Examples include Django, Ruby on Rails, and Express.js.
 
-- HTTP Server
+- HTTP Server - 
 	A type of software-based server that understands URLs and hypertext transfer protocol.
 
-- Module
+- Module - 
 	Files containing related, encapsulated JavaScript code that serve a specific purpose.
 
-- Node.js
+- Node.js - 
 	A JavaScript runtime environment that runs on Google Chrome’s V8 engine.
-- Non-Blocking
+
+- Non-Blocking - 
 	Failure of a given thread does not cause failure in another, and the execution of a task is not blocked until execution of another task is completed.
 
-- Npm
+- Npm - 
 	Stands for node package manager. It is the default package manager for the Node.js runtime environment.
 
-- Package
+- Package - 
 	A directory with one or more modules bundled together.
 
-- Package.json
+- Package.json - 
 	Contains metadata information about the project, including dependencies and scripts.
 
-- Payload
+- Payload - 
 	The data transmitted between client and server.
 
-- Runtime Environment
+- Runtime Environment - 
 	Behaves similarly to a mini operating system that provides the resources necessary for an application to run. It is the infrastructure that supports the execution of a codebase. It is the hardware and software environment in which an application gets executed. Node.js is an example of a backend runtime environment.
 
-- Load
+- Load - 
 	Refers to the number of concurrent users, the number of transactions, and the amount of data transferred back and forth between the clients and servers.
 
-- Scalability
+- Scalability - 
 	The application’s ability to dynamically handle the load as is or shrinks without it affecting the application’s performance.
 
-- Web Service
+- Web Service - 
 	A type of web API that communicates using HTTP requests. It is the web service in the programming interface that sends and receives requests using HTTP among web servers and the client.
+	

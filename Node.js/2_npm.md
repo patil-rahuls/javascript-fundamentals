@@ -29,24 +29,20 @@
 
 #### Package installation
 - Installing a package from npm
-`npm install <packageName>` 
-`npm i <packageName>`
-`npm i <packageName>@10.2.2` (10.2.2 is the version)
+    - `npm install <packageName>` 
+    - `npm i <packageName>`
+    - `npm i <packageName>@10.2.2` (10.2.2 is the version)
 - After running this command, 3 things happen.
-    1. a 'package.json' file is updated. The installed package/dependency is listed in the 'dependencies' node.
-    2. The code for the installed package/dependency is added to 'node-modules' folder. _('node-modules' is created if it doesn't exist.)_
-    3. and a file called package-lock.json is created.
+    - a 'package.json' file is updated. The installed package/dependency is listed in the 'dependencies' node.
+    - The code for the installed package/dependency is added to 'node-modules' folder. _('node-modules' is created if it doesn't exist.)_
+    - and a file called package-lock.json is created.
 
 - Now to import/require the installed package in any file _(let's say we installed the package called 'validator')_
-    `const validator = require('validator')` // observe that we didn't use './' in require statement.
-    `console.log(validator.isEmail('rahul@gmail.com'))`
+    - `const validator = require('validator')` // observe that we didn't use './' in require statement.
+    - `console.log(validator.isEmail('rahul@gmail.com'))`
     - When we import/require a npm package, it checks that package's code in 'node_modules' folder.
-
     - This is useful because, suppose we delete that 'node_modules' folder, then the script will definately throw error.
-    - To install all those dependencies back, we hit this command:
-    `npm install`
-    OR 
-    `npm i`
+    - To install all those dependencies back, we hit this command: `npm install` OR  `npm i`.
     - This will, based on the context of 'package.json' and 'package-lock.json' (dependencies mentioned in these json files),
     recreate the packages required for our application in 'node_modules' folder.
 
