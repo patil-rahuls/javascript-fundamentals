@@ -35,3 +35,6 @@
 
 // All these JIT processes happen in special threads that we can't access.
 // which are completely separated from the main thread which executes code in the Call Stack.
+
+// More about javascript JIT here - 
+// https://medium.com/@aamchora/what-exactly-just-in-time-jit-compilation-is-in-javascript-f7aea482843f

@@ -11,6 +11,7 @@
 
 // In case of arrow functions' execution context, they do not have their own 'this' object.
 // They get it from their outer regular function's execution context.
+// Same with the 'arguments' object.
 
 // In case of Browser's Event Listener's Execution Context, 'this' object points to DOM
 // element that the handler is attached to.

@@ -71,3 +71,16 @@
         - for example - nodemon
 
 - NPM keeps dependencies' files separate from your app, and Node.js automatically searches the node_modules folder when you require/import something.
+
+#### Types of Dependencies
+1. Production dependency
+    - Dependencies required to run our project.
+2. Development dependency
+    - Dependencies that are required for the project's development and not for 'running' the project.
+        - `npm i --save-dev eslint prettier`
+        - OR
+        - `npm i -D eslint prettier`
+
+#### To do - 
+- NPX
+- package-lock.json
