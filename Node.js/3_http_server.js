@@ -6,7 +6,7 @@
 // Creating a web-server with NodeJS from scratch.
 // 'http' module
 // There are many built-in utility modules in node js, such as http module.
-// With http mdule, you can create an appliaction that listens to http requests and returns http message.
+// With http mdule, you can create an application that listens to http requests and returns http messages.
 
 // Here is sample code that creates an instance of a server using the http module. 
 // This code makes use of the http.createServer() method to create the server instance.

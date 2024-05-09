@@ -81,6 +81,20 @@
         - OR
         - `npm i -D eslint prettier`
 
-#### To do - 
-- NPX
-- package-lock.json
+#### NPX
+- NPX stands for Node Package eXecute. It runs a javascript package/app without having to install it.
+- NPX comes already with npm.
+- For example
+    - `npx create-react-app my-app`
+    - The `create-react-app` is a javascript package. npx goes to the internet, downloading the package temporarily so it could execute it (npx).
+    - One common way to use npx is to download and run a package temporarily or for trials.
+    - `create-react-app` is an npm package that is expected to be run only once in a project's lifecycle. Hence, it is preferred to use npx to install and run it in a single step.
+- From stackoverflow -
+    - NPM - Manages packages but doesn't make life easy executing any.
+    - NPX - A tool for executing Node packages.
+- npM - Manager
+- npX - Execute - easy to remember
+
+
+#### package-lock.json
+- to do 

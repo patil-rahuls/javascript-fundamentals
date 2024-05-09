@@ -19,8 +19,8 @@ try {
     console.error('there was an error:', error.message);
 }
 
-//  Example #3 - Delete a fileawait.
-import { unlink } from 'node:fs/promises';
+//  Example #3 - Delete a file
+import { unlink } from 'fs/promises';
 try {
   await unlink('/tmp/hello');
   console.log('successfully deleted /tmp/hello');
