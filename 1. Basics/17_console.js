@@ -8,4 +8,4 @@ console.table(myObject);            // prints tabular form of object
 console.log("Server Logs");
 console.info("General Information");
 console.dir(object);                // prints Object's properties hierarchically.
-                                    // Use this observe "Closure"
+                                    // Use this to observe "Closure"

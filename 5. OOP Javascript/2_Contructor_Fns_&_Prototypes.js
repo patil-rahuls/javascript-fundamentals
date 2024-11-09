@@ -93,7 +93,7 @@ const s1 = new Student('Rahul', 1);
 
 console.log(s1);                        // Prints the Student Object.
 
-// We didnt technically created a class here and didn't instantiated it.
+// We didnt technically create a class here and didn't instantiated it.
 // However, it looks like we are instantiating a class, as compared to other programming langs.
 
 // So we can say s1 is an instance of Student.

@@ -22,7 +22,7 @@ console.log(4 + 1 + "5" + 6);       // 556
 
 // Rest all mathematical operations work normally with Type Coercion applied automatically.
 console.log("23" - "10" - 3);   // 10
-console.log("23" + "10" - 3);   // 2307 // Observe the 0 appended before 7. weird :/
+console.log("23" + "10" - 3);   // 2307
 console.log(1 + 3 + 5 + "5");   // Becomes : 9 + '5' which results in 95
 let xx = Number("5");           // String "5" converted to number explicitly.
 
