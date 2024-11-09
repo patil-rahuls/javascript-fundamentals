@@ -2,7 +2,7 @@
 // FUNCTION DECLARATION AND EXPRESSIONS //////////////////////
 //////////////////////////////////////////////////////////////
 
-// Functions are still Objects in javascript. Callable Objects.
+// Functions are still Objects in javascript(callable objects).
 
 // 1. Function declaration
 // Are always hoisted.

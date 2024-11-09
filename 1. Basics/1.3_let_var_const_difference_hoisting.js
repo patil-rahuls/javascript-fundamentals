@@ -7,7 +7,7 @@
 // A *var* variable or a function declaration can be used before it is declared in the code.
 
 // Variables declared using *var* are always hoised to the top of their respective scope with
-// value 'undefined' before the code is run.
+// the value 'undefined' before the code is run.
 // They are accessible in their enclosing function scope even before they are declared.
 
 //  Example #1:
@@ -19,7 +19,7 @@ function foo() {
 foo();
 
 // *let* variables are not initialized until their definition is evaluated.
-// They are said to be in ‘temporal dead zone’ from the start of the block
+// They are said to be in ‘Temporal Dead Zone’ from the start of the block
 // until the initialization is processed.
 
 //  Example #2:

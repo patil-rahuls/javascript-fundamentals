@@ -2,15 +2,17 @@
 // TYPE CONVERSION AND COERCION //////////////////////////////
 //////////////////////////////////////////////////////////////
 
-// Type Conversion
+// 1. Type Conversion
 let age = 28;
 console.log(typeof age); // number
 age = "28";
 console.log(typeof age); // string
 
-// Type Coercion (Implicit type conversion)
+
+// 2. Type Coercion (Implicit type conversion)
 let str = "I am " + age; // In this assignment, "age" gets converted from "number" type to "string" type.
 console.log(typeof age); // "age" is still a "number" type.
+
 
 // When ALL operands are '+' AND when one of the operands of + is a string,
 // the operands after FIRST string operand, are converted autmatically into string(Type Coercion).

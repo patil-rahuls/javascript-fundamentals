@@ -18,7 +18,6 @@ c = false;          // Uncaught TypeError: Assignment to constant variable.
 // It prevents mistakes such as accidental re-assignment.
 
 // However, for Objects *const* does ALLOW mutation (NOT re-assignment).
-// Mutation is allowed for Objects declared using *const*.
 const myArr = [];
 myArr.push(1);      // This works.
 myArr[9] = 10;      // This works.

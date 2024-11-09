@@ -2,6 +2,7 @@
 // IMPORT VS REQUIRE /////////////////////////////////////////
 //////////////////////////////////////////////////////////////
 
+/*
 Modules -
     Related encapsulated js code.
     Serves a single purpose.
@@ -65,3 +66,5 @@ IMP - It will treat *.js* files as whatever the *default module system for the p
 
 Hence, as long as Node JS doesn't consider *.js* files as *ES Modules* BY DEFAULT, we need to keep specifying
 "type": "module" inside the package.json file of our project.
+
+*/

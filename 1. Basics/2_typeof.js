@@ -24,12 +24,16 @@ console.log(typeof {});             // "object"
 
 //////////////////////////////////////////////////////////////
 // How to check if a given object is an Array or Object.
-const givenVariable = [];           // Array
+//////////////////////////////////////////////////////////////
+
+// 1. Array
+const givenVariable = [];
 Object.prototype.toString.call(givenVariable);
 // Outputs a string: '[object Array]'
 
-const givenVariable2 = {};           // Object
+// 2. Object
+const givenVariable2 = {};
 Object.prototype.toString.call(givenVariable2);
 // Outputs a string: '[object Object]'
 
-// Observe this difference 'object' and 'Object' in the output.
+// Observe this difference 'object' and 'Object' in both the outputs.

@@ -9,13 +9,14 @@
 // Template literals are literals delimited with backtick ( ` ) characters,
 // allowing for multi-line strings, 
 
+// Old way - 
 const firstName = "Rahul";
 const developmentExperience = 6;
 console.log('String with \n\
 multiple \n\
 lines');
 
-// Use template literal strings for multiline
+// Use template literal for multiline strings.
 console.log(`String
 multiple
 lines`);

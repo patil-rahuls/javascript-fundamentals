@@ -2,7 +2,7 @@
 // ENHANCED OBJECT LITERALS [ES6] ////////////////////////////
 //////////////////////////////////////////////////////////////
 
-// Literals represent values in JavaScript.
+// Literals represent values in javascript.
 // These are fixed values not variables that you literally provide in your script.
 // e.g. "foo", "bar", "1234" are string literals.
 
@@ -23,7 +23,7 @@ console.log(laptop.attribute3);          // "HP"
 
 
 //  Example #2:
-// Shorthand for writing Methods and Properties
+// Shorthand for writing Object Methods and Properties
 let film = 'Twilight';
 const myObj = {
     myFunc: function(param1, param2){

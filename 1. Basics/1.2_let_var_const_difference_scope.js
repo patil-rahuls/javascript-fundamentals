@@ -6,10 +6,11 @@
 // Scope refers to the visibility or accessibility of variables, functions, and objects within different parts of a program.
 // It determines where in the program a particular variable or a function can be accessed and manipulated.
 
-// *let* and *const* are block scoped while *var* is function scoped.
+// *let* and *const* variables are "BLOCK" scoped.
+// *var* variables are "FUNCTION" scoped.
 
-// Variables declared by *var* are scoped to the immediate function body (hence the function-scope).
-// While *let* and *const* variables are scoped to the immediate enclosing block denoted by { } (hence the block-scope).
+// *let* and *const* variables are scoped to the immediate enclosing block denoted by { } (hence the "BLOCK"-scope).
+// *var* variables are scoped to the immediate function body (hence the "FUNCTION"-scope).
 
 // In general, a block is any code within curly braces { }, including functions, loops and conditional statements.
 
@@ -62,7 +63,7 @@ console.log(global.b);  // 8
 // just like "window" in browser context.
 
 
-//  Example #4 - *var* variables appear error prone.
+//  Example #4 - use of *var* appear error prone.
 var name = "Rahul";
 var name = "Raj";        // This works without giving any error.
 // The example above looks bad and erroneous, but works. That shouldn't happen.

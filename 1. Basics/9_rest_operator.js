@@ -21,7 +21,7 @@ const [ a,b,c,d, ...restValues ] = arr;
 console.log(a,b,c,d,restValues);           // 1,2,3,4,[5,6,7]
 console.log(a,b,c,d,...restValues);        // 1,2,3,4,5,6,7
 
-const [dish1, dish2, , ...restDishes] = [...restaurant.starters, ...restaurant.categories];
+const [dishA, dishB, , ...restAllDishes] = [...restaurant.starters, ...restaurant.categories];
 //          <REST OPERATOR>                             <SPREAD OPERATOR>
 // "restDishes" above, gets the 'rest' of the menu items
 

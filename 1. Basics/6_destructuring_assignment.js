@@ -3,7 +3,7 @@
 //////////////////////////////////////////////////////////////
 
 // Unpacks(and assigns) values from arrays, or properties from objects, into distinct variables.
-// TIP: [ ] and { } is at the LHS of =
+// TIP: [ ] and { } is at the LHS of '='
 
 //  Example #1
 const arr = [2,3,4];
