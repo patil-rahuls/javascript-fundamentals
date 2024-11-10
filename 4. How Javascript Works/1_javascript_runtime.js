@@ -15,6 +15,7 @@
 //      When an event occur (like click), the eventhandler function is put into the Callback Queue.
 //      Then, a mechanism, called *Event Loop*, takes a callback function from Callback Queue and puts in Call Stack for execution.
 //      A non blocking concurrency model is achieved using this.
+// 4. Microtask Queue - A Queue that holds all promises' callbacks.
 
 // Inside JS Runtime in *Node.js* -
 // 1. JS Engine
@@ -24,8 +25,13 @@
 // 3. Callback Queue. (timer(), data())
 //      Event Loop - A mechanism that takes a callback function from Callback Queue and puts in Call Stack for execution.
 //      A non blocking concurrency model is achieved using this.
+// 4. Microtask Queue - A Queue that holds all promises' callbacks.
 
 
-// Event Loop -
-// Once call stack is empty, THEN ONLY it takes a callback function from Callback Queue
+// Event Loop - 
+// When an asynchronous operation like setTimeout() occurs, it is 'registered' by the Web APIs in case of browser OR it is executed in the Thread Pool in case of Node.js.
+// Once it's timer is up, it's callback function is added to the Callback Queue for execution.
+// And once the call stack is empty, THEN ONLY it takes a callback function from Callback Queue
 // and puts in Call Stack for execution.
+
+// We also have Microtasks Queue, which is prioritised over callback Queue.
