@@ -2,6 +2,8 @@
 // DOM MANIPULATION //////////////////////////////////////////
 //////////////////////////////////////////////////////////////
 
+// HTML Page <---> DOM Tree <---> DOM API <---> Javascript
+
 // 1.  What is DOM ?
 // Document Object Model. It's an interface between the javascript code and the browser.
 // DOM tree is generated from an HTML document, which we can then interact with, using javascript.

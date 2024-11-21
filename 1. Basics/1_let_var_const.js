@@ -12,7 +12,7 @@
 // That's the reason the *let* keyword was born !
 
 // A *const* variable for primitive data needs to be initialized with a value while declaring.
-const a;        // Error "Missing initializer in const declaration."
+const a;        // Uncaught Syntax Error "Missing initializer in const declaration."
 const b = 2021; // This is correct for primitive.
 const c = {};   // This is allowed in case of Objects.
 const d = [];   // Arrays are a special type of Object, hence allowed.

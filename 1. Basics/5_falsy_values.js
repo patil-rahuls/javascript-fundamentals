@@ -31,3 +31,16 @@ console.log(testVar);             // null
 console.log(typeof testVar);      // object
 
 // *undefined* is a type itself (undefined) while *null* is an object.
+// *undefined* and *null* are two distinct types.
+console.log(null === undefined)   // false (not the same type)
+console.log(null == undefined)    // true (but the "same value")
+console.log(null === null)        // true (both type and value are the same)
+
+// Quote from the book Professional JS For Web Developers (Wrox): 
+// "You may wonder why the typeof operator returns 'object' for a value that is null. 
+// This was actually an error in the original JavaScript implementation that was then copied in ECMAScript. 
+// Today, it is rationalized that null is considered a 'placeholder for an object',
+// even though, technically, it is a primitive value."
+
+// *undefined* represents a variable has not been assigned a value.
+// *null* represents the null, empty, or non-existent reference for a variable.

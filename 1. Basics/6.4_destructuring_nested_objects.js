@@ -17,7 +17,6 @@ const restaurant = {
     categories: ['North Indian', 'Chinese', 'South Indian', 'Italian'],
  
     order: function(starter_index, cat_index){
-        // this method returns an array.
         return [ this.starters[starter_index] , this.categories[cat_index] ];
     },
 

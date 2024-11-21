@@ -17,7 +17,6 @@ const restaurant = {
     categories: ['North Indian', 'Chinese', 'South Indian', 'Italian'],
  
     order: function(starter_index, cat_index){
-        // this method returns an array.
         return [ this.starters[starter_index] , this.categories[cat_index] ];
     },
 
@@ -50,7 +49,7 @@ console.log(Name, Timings, Courses);
 // },
 // Array(4) ['North Indian', 'Chinese', 'South Indian', 'Italian']
 
-// *Default Data with destructuring objects.
+// Default Data with destructuring objects.
 // We might not know whether data will be present or not in an object just in case(API responses)
 const { menu: [] , starters: aliasForStarters = []  } = restaurant;
 console.log(menu, aliasForStarters);
@@ -65,6 +64,10 @@ let a = 111;
 let b = 999;
 
 { a , b } = myObj;                  // Syntax Error
+// { a, b } = myObj is not a valid syntax, 
+// as the { a, b } on the left-hand side is considered a 'block'
+// and not an object literal according to the ES6 Specifications.
+
 // Solution: Just enclose this in parentheses.
 ({ a , b } = myObj); // values of a and b now mutated.
 console.log(a,b);                   // 91 , 2

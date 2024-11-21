@@ -1,18 +1,19 @@
 //////////////////////////////////////////////////////////////
-// REST ARGUMENTS [ES6] //////////////////////////////////////
+// REST PARAMETER [ES6] //////////////////////////////////////
 //////////////////////////////////////////////////////////////
 
-// "..." on LHS OF "="
+// LHS
+// "..." is seen on the LHS of the assignment expression "="s
 // The Rest Operator packs elements of a LIST into an iterable objects such as Arrays, Sets, Maps and Objects.
 
 // Rest Operator can "ONLY" be used in following 2 cases:
         //    1. Packing an Iterable.
-        //    2. As function parameter.
+        //    2. As a function parameter.
 
 // There can only be ONE Rest element in an expression.
 // The Rest Operator has to be at the end of any destructuring assignment.
 
-//  Example #1 (As function parameter)
+//  Example #1 (As a function parameter)
 // This function takes comma separated any number of arguments(LIST) and packs them into an array(varArgs).
 const add = function(...varArgs){
    // any number of values(LIST) passed to this method will be packed into an array named 'varArgs'
@@ -25,10 +26,10 @@ const add = function(...varArgs){
 const arr = [1,2,3,4,5];
 const result = add(...arr);
 
-// Advantage of Rest Operator:
+// Advantage of Rest Operator as a function parameter:
 // The function above can now accept both a single value as well as a spread-array as its input.
 add (2,3,4);
-add (...arr);   //  This is spread operator. Remember Spread Operator is used as fn call argument.
+add (...arr);   //  This is spread operator. Remember Spread Operator is used as Fn call argument.
 
 
 //  Example #2

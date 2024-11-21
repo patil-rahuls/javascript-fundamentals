@@ -2,12 +2,13 @@
 // REST OPERATOR [ES6] ///////////////////////////////////////
 //////////////////////////////////////////////////////////////
 
-// "..." on LHS OF "="
+// LHS
+// "..." is seen on the LHS of the assignment expression "="
 // The Rest Operator packs elements of a LIST into an iterable objects such as Arrays, Sets, Maps and Objects.
 
 // Rest Operator can "ONLY" be used in following 2 cases:
         //    1. Packing an Iterable.
-        //    2. As function parameter.
+        //    2. As a function parameter.
 
 // There can only be ONE Rest element in an expression.
 // The Rest Operator has to be at the end of any destructuring assignment.

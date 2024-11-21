@@ -35,13 +35,13 @@ run();
 //  Example #2
 var x = "global scope";
 function foo() {
-  var x = "functional scope";
+  var x = "function scope";
   console.log(x);
 }
 {
   let x = "block scope";    // Only accessible in this enclosing block
 }
-foo();                      // "functional scope"
+foo();                      // "function scope"
 console.log(x);             // "global scope"
 
 
@@ -61,9 +61,3 @@ console.log(window.b);  // 8 (Because *window* is a global object in browser)
 console.log(global.b);  // 8
 // the "global" keyword above is the name of the global object in node js runtime, 
 // just like "window" in browser context.
-
-
-//  Example #4 - use of *var* appear error prone.
-var name = "Rahul";
-var name = "Raj";        // This works without giving any error.
-// The example above looks bad and erroneous, but works. That shouldn't happen.

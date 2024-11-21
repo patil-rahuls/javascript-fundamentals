@@ -4,8 +4,9 @@
 
 // 4. Creating global object property
 
-// At the top level, *let* and *const*, unlike *var*,
-// do not create a property on the global object.
+// At the top level, 
+// *var* variables create a property on the global object.
+// *let* and *const* variables do not.
 
 var foo = "Foo";            // globally scoped
 let bar = "Bar";            // not allowed to be globally scoped
@@ -21,5 +22,5 @@ console.log(global.foo);    // Foo
 console.log(global.baz);    // Baz
 console.log(global.bar);    // undefined
 
-// Variables declared using *let* are not accessible to global objects like the *window* or *global* object.
-// The purpose of *let* statements is only to free up memory when not needed in a certain block.
+// Variables declared using *let* and *const* are not accessible to global objects like the *window* or *global* object.
+// The purpose of *let* and *const* statements is only to free up memory when not needed in a certain block.
