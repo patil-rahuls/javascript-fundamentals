@@ -24,7 +24,7 @@ booker(); // 3
 
 // Formal explanation :
 // A closure is the closed-over variable environment of the execution context in which a function was created,
-// even after that function execution context is gone.
+// and it exists even after that function execution context is gone.
 
 // BEST LAYMAN EXPLANATION:
 // A closure is like a backpack that a function carries around wherever it goes(from wherever it is being called).

@@ -23,4 +23,5 @@ const totalUsersWalletBalance2 = accounts
 // pass to the map method.
 
 // IMP: flatMap() goes only one level deep.
-// Hence if you need to go deeper, then you still need to use the flat() method with depth argument.
+// Hence if you need to go deeper, then you still need to use the flat() method separately
+// with depth argument.

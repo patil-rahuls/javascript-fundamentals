@@ -3,11 +3,11 @@
 //////////////////////////////////////////////////////////////
 
 // SPLICE: Mutates the array
-// array.splice(startIndex, deleteCount)
+// array.splice(startIndex, deleteCount, replacementValue)
 // IMP: its 2nd parameter is not index, but count of items to be removed.
 
-// IMP: splice() also inserts an element at a given index using a third optional parameter.
-// array.splice(startIndex, deleteCount, newValue);
+// IMP - Third parameter 'replacementValue' is optional. If provided, it is 
+// inserted at the startIndex.
 
 //  Example #1:
 const arr = [11, 22, 33, 44, 55, 66];
@@ -35,10 +35,15 @@ console.log(array);
 //  Example #3 (Replace a specific item from an array)
 const arr1 = [11, 22, 33, 44, 55, 66];
 arr1.splice(4, 1, 99);   // This deletes 1 item at 4th index and inserts 99 there.
-console.log(arr1);       // [11 , 22, 33, 44, 99, 66]
+console.log(arr1);       // [11, 22, 33, 44, 99, 66]
 
 
 //  Example #4 (Inserts a specific item inside an array)
 const arr2 = [11, 22, 33, 44, 55, 66];
 arr2.splice(4, 0, 99);   // This deletes 0 item at 4th index and inserts 99 there. i.e. replaces.
-console.log(arr2);       // [11 , 22, 33, 44, 99, 55, 66]
+console.log(arr2);       // [11, 22, 33, 44, 99, 55, 66]
+
+//  Example #5 (Replace some values with a specific item inside an array)
+const arr3 = [11, 22, 33, 44, 55, 66];
+arr3.splice(4, 2, 99);   // This deletes 2 items from 4th index and inserts 99 there. i.e. replaces.
+console.log(arr3);       // [11, 22, 33, 44, 99, 66]

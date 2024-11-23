@@ -9,6 +9,7 @@ const myObj = {
     age : 2049-2021,
 };
 
+
 // 1. Shallow Copy - Object.assign
 // Syntax - Object.assign(target, ...sources)
 const shallowCopy = Object.assign({}, myObj);
@@ -23,17 +24,24 @@ const shallowCopy = Object.assign({}, myObj);
     // are references.
     x.name = 'patil';
     // x - { name: 'patil', dob : { year : 1990 }}
-    // copy - { name: 'Rahul', dob : { year : 1990 }} // name property is independent.
+    // copy - { name: 'Rahul', dob : { year : 1990 }} 
+    // i.e. name property remains independent.
 
     x.dob.year = 1991;
     // x - { name: 'patil', dob : { year : 1991 }}
-    // copy - { name: 'Rahul', dob : { year : 1991 }} // the nested object property gets changed.
+    // copy - { name: 'Rahul', dob : { year : 1991 }} 
+    // i.e. the nested object property gets changed.
+
 
 // 2. Deep Copy
+// using JSON
 const deepCopy = JSON.parse(JSON.stringify(myObj));
-// OR using structuredClone()
+
+// Using structuredClone()
 const clone = structuredClone(myObj);
 // IMP - does not clones methods and DOM nodes inside the source object.
+
+// We can also use some libraries like lodash or underscore.
 
 // 3. Merge one or more Objects.
 // Using destructuring assignment
@@ -41,5 +49,5 @@ let merged = {...obj1, ...obj2};
 
 // Using Object.assign()
 const allMerged = Object.assign({}, obj1, obj2, obj3, etc);
-// In the above example, the properties of obj1 will be overwritten by properties of obj2,
+// Properties of 'obj1' will be overwritten by properties of 'obj2'
 // and same happens with obj2 and obj3, and so on.

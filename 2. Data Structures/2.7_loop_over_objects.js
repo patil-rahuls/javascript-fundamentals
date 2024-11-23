@@ -9,6 +9,7 @@ const performance = {
    aajesh:{ startedAt : 83 , high : 100},
 };
 
+
 // 1. GET Object PROPERTIES / KEYS
 const perfromers = Object.keys(performance);
 console.log(perfromers);
@@ -24,6 +25,7 @@ for (const perfromer of Object.keys(performance))
 for (const perfromer in performance)
    console.log(perfromer);
 
+
 // 2. GET Object VALUES
 const values = Object.values(performance);
 // returns the value of "performance", be it array or object or just a value.
@@ -31,6 +33,7 @@ console.log(values);
 // { startedAt : 72 , high : 99} ,
 // { startedAt : 51 , high : 98} ,
 // { startedAt : 83 , high : 100},
+
 
 // 3. GET Object ENTRIES [property , value] (Returns Array)
 const entries = Object.entries(performance);

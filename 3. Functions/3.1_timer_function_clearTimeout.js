@@ -14,5 +14,3 @@ const myTimerFn = setTimeout(
 stop = true;
 if(stop)
    clearTimeout(myTimerFn);
-
-

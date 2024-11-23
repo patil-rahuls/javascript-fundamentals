@@ -27,6 +27,10 @@ const show = function (){
 // Same works with an arrow function
 ( () => alert("This IIFE is written in arrow form") )();
 
+
+//////////////////////////////////////////////////////////////
+// IIFE - MODULES & ENCAPSULATION ////////////////////////////
+//////////////////////////////////////////////////////////////
 // IMP: Why are these in javascript ?
 //      Ans. "Variables Scope"
 // We use IIFE to just keep some variables hidden in the function scope and not make it available in

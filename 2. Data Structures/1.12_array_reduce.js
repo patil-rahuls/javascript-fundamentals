@@ -35,3 +35,4 @@ const max = numbers2.reduce(
 console.log(max);          // 100
 
 // The accumulator holds the net result of the function.
+// IMP - We need to return something in the callback which will go into the accumulator.

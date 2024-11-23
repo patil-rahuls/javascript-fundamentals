@@ -17,5 +17,3 @@ const donex = setInterval( () => {
 
 if (max === 0 )
    clearInterval(donex);
-
-

@@ -18,9 +18,8 @@ function foo() {
 }
 foo();
 
-// *let* variables are not initialized until their definition is evaluated.
-// They are said to be in ‘Temporal Dead Zone’ from the start of the block
-// until the initialization is processed.
+// *let* variables are also hoisted but they are said to be in ‘Temporal Dead Zone’ 
+// from the start of the block until the initialization is processed.
 
 //  Example #2:
 function checkHoisting() {
@@ -44,6 +43,8 @@ checkHoisting();
 // to throw error if *const* variable is not initialized while defining.
 
 // This is a useful behaviour, since *var* can be more prone to errors.
+
+// *const* variables are not hoisted.
 
 //  Example #3
 var name = "Rahul";

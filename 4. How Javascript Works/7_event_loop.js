@@ -4,6 +4,7 @@
 
 // A mechanism that takes a callback function from Callback Queue and puts in Call Stack for execution.
 // A non blocking concurrency model is achieved using this.
+// Event Loop uses event emitters and event multiplexers to make this happen.
 
 //////////////////////////////////////////////////////////////
 // EVENT LOOP ////////////////////////////////////////////////
@@ -15,7 +16,7 @@
 // This queue has prioritiy over the callback queue.
 
 // The Evet loop FIRST checks if there are any callbacks in microtasks queue, and executes them all at once
-// before taking callbacks from the regular callback queue.
+// before taking callbacks from the regular callback queue AKA 'task' queue.
 
 // The promises' callbacks are called microtasks, hence their queue is called so.
 

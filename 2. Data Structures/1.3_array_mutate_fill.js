@@ -9,11 +9,11 @@
 
 const x = new Array(7);
 x.fill(1, 3, 6);
-console.log(x) ;                       // [empty x 3 , 1,1,1, empty]
+console.log(x) ;                       // [<3 empty items> x 3 , 1,1,1, <1 empty item>]
 
 
 // Alternatives to fill()
-// Array.from():
+// Static function - Array.from()-
 const y = Array.from({length : 7} , () => 1);
 // [1,1,1,1,1,1,1]
 

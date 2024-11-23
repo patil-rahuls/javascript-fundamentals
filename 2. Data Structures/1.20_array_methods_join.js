@@ -8,6 +8,10 @@
 // IMP: returns a STRING not ARRAY.
 const arr = [11,22,33,44,55,66];
 const result = arr.join('-');
+const result2 = arr.join('');
+const result3 = arr.join();
 
-console.log(result);              // "11-22-33-44-55-66"
-console.log(typeof result);      // "string"
+console.log(result);             // "11-22-33-44-55-66"
+console.log(result2);            // "112233445566"
+console.log(result3);            // "11,22,33,44,55,66"
+console.log(typeof result);      // "string"; same for result2 and result2.

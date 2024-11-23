@@ -15,16 +15,16 @@ const newName = name[0].toUpperCase() + name.slice(1);
 const newStr = myStr.trim();
 
 // replace():
-const newStr = myStr.replace("to_b_replaced", "replaces_with_this");
+newStr = myStr.replace("to_b_replaced", "replaces_with_this");
 
 // replaceAll():
-const newStr = myStr.replaceAll(" ", "_"); // replaces all occurrences.
+newStr = myStr.replaceAll(" ", "_"); // replaces all occurrences.
 
 // Advantage of using string methods is that, we can chain functions like this.
-const newStr = myStr.replace(" ", "_").replace("$", "Rs.");
+newStr = myStr.replace(" ", "_").replace("$", "Rs.");
 
 // Alternate to replaceAll using regex.
-const newStr = myStr.replaceAll(/ /g, "_");
+newStr = myStr.replaceAll(/ /g, "_");
 // g stands for global. Means apply to the entire string.
 
 
@@ -61,7 +61,7 @@ const newName = ['Mr.' , 'Rahul' , 'Patil'.toUpperCase()].join( '---' );
 //          padEnd(fixedLength, char)
 // Padding changes the length of the string by adding extra string specified by the user at the end or starting.
 const lol = "Barney Stinson";
-let newStr = lol.padStart(15, '+');
+newStr = lol.padStart(15, '+');
 console.log(newStr);				// "+Barney Stinson" (Total length become 15)
 
 newStr = lol.padStart(25, '+');
@@ -90,7 +90,7 @@ maskCreditCard('1200987564738523'); 		// will accept string too.
 
 // repeat(): Repeats strings given number of times
 // Use-case: Useful to show icons like ratings, stars etc.)
-const name = "Rahul";
+name = "Rahul";
 name.repeat(4); // "RahulRahulRahulRahul"
 
 let rating = 4;

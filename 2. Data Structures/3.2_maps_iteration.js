@@ -41,7 +41,7 @@ const weekendMeetings = {
    sun:{ start : 1100 , end : 1300} ,
 };
 
-console.log(Object.entries(weekendMeetings));
+console.log(new Map(Object.entries(weekendMeetings)));
 // [
 //    ["sat", {start : 1200 , end : 1300}],
 //    ["sun" ,{start : 1100 , end : 1300}]

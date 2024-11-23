@@ -27,7 +27,7 @@ console.log(restaurant.openingHours?.fri?.open);
 
 // Example #1
 const days = ['mon' , 'tue' , 'wed' , 'thu', 'fri' , 'sat' , 'sun'];
-for (const [i , day] of days.entries()){
+for (const day of days){
    const isOpen = restaurant.openingHours[day]?.open ?? 'closed';
    // nullish coalescing operator and optional chaining together.
    console.log(` on ${day} we are ${isOpen} `);

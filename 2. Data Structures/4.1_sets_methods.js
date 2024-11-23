@@ -8,14 +8,8 @@ const names = new Set (
 );                          // duplicate item 'rahul'
 console.log(names);         // set(3) {'hitesh', 'aajesh' , 'rahul'}
 
-// 1. has()
-// Checks if an element exists in a Set.
-names.has("anil");   		// false
-names.has("hitesh"); 		// true
-
-
-// 2. add()
-// Add an item to a Set. // In Map we have map.set() method. That's the only distinction in their methods.
+// 1. add()
+// In Map we have map.set() method. That's the only distinction in their methods.
 names.add("anil");
 names.add("milan");
 console.log(names);			// set(5) {'hitesh', 'aajesh' , 'rahul', 'anil', 'milan'}
@@ -24,6 +18,13 @@ names.add("kisan");
 names.add("kisan");			// Will get added only once (Set has to have unique values)
 
 console.log(names);			// set(6) {'hitesh', 'aajesh' , 'rahul', 'anil', 'milan', 'kisan'}
+
+
+// 2. has()
+// Checks if an element exists in a Set.
+names.has("anil");   		// false
+names.has("hitesh"); 		// true
+
 
 
 // 3. delete()

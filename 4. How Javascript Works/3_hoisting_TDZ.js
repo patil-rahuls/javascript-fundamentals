@@ -3,23 +3,17 @@
 //////////////////////////////////////////////////////////////
 
 // Hoisting - Refers to the behavior of variable and function declarations being moved to the top of their scope.
-// This means that a variable or a function declaration can be used before it is declared in the code.
-// However, it is important to note that only the declarations themselves are hoisted, not the assignments.
+// This means that a *var* variable or a function declaration can be accessed before it is declared in the code.
 // So, if a variable is assigned a value(using *var* keyword) before it is declared,
 // the value will be undefined when accessed before the assignment.
 
-// In the Execution Context's - Variable Environment
-
-// Hoisting: Before Execution, code is scanned for variable declarations and for each variable,
-// a new property is created in the Variable Environment.
-
-// IMP: How Hoisting Works.
-// So, the function declarations (NOT function expressions) and variables
-// declared using 'var', in global scope, are all first stored in the Variable Environment.
-// This is how Hoisting actually works.
-
 // *let* and *const* variables also said to be hoisted but in block scope AND
 // their value is <uninitialized>TDZ (The variable is said to be in Temporal Dead Zone)
+
+// In the Execution Context's - Variable Environment
+// Hoisting: Before Execution of a block/function, code is scanned for variable declarations 
+// and for each variable, a new property(without any value) is created in the Variable Environment.
+// This is how Hoisting actually works.
 
 // WHY TDZ ?
 // Observe the different types of error messages.

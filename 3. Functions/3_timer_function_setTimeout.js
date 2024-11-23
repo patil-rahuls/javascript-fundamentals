@@ -29,5 +29,3 @@ console.log(`Waiting...`);
 // 'Waiting...'
 // 'Values passed here are 
 //  orange and mango'
-
-
