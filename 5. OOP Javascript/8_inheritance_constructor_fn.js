@@ -1,10 +1,11 @@
 //////////////////////////////////////////////////////////////
-// INHERITANCE - CONSTRUCT FUNCTION //////////////////////////
+// INHERITANCE - CONSTRUCTOR FUNCTION ////////////////////////
 //////////////////////////////////////////////////////////////
 
-// 1. Creating Objects using constructor functions.
+// 1. Inheritance using constructor functions.
 
-// Create a constructor function.
+//  Example#   
+// Class - Furniture
 const Furniture = function(brand, margin){
     this.brand = brand;
     this.margin = margin;
@@ -14,7 +15,7 @@ Furniture.prototype.getCommisionTax = function(){
     console.log(.18*this.margin);
 };
 
-// A subclass 'Sofa' that will inherit Furniture.
+// Class - Sofa
 const Sofa = function(brand, margin, returnable){
     // this.brand = brand;
     // this.margin = margin;
@@ -26,7 +27,6 @@ const Sofa = function(brand, margin, returnable){
     Furniture.apply(this, [brand, margin]);
     this.returnable = returnable;
 };
-
 Sofa.prototype.info = function(){
     console.log(`Product Sofa of Brand ${this.brand} has a commision margin of ${this.margin}
     and it is ${this.returnable?'returnable':'not returnable'}.`);
@@ -87,7 +87,7 @@ console.log(s1 instanceof Furniture);
 // true - this is correct because Sofa has inherited from Furniture.
 
 
-// Example:
+//  Example# 2
 const Car = function(make, currentSpeed){
     this.make = make;
     this.currentSpeed = currentSpeed;

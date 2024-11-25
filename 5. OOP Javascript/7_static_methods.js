@@ -4,7 +4,8 @@
 
 //  Example #1:
 Array.from()
-// the .from() is connected to Array's constructor and not to the prototype of Array.
+// the *Array.from()* is a static function of Array constructor function 
+// it is not present on the prototype property of Array.
 
 // [1,2,3,4].from(); will not work
 // meaning, its not accesible to objects created from Array constructor fn.
@@ -15,11 +16,12 @@ Number.parseFloat(12);
 // These(static methods) are made so as to keep them linked to Array only.
 
 // We can have such static methods in our user defined ES6 classes or constructor functions.
-// Class using constructor function.
+
+//  Example #3: Static method in constructor function.
 const Student = function(){
     // ...
 }
-// Static method.
+// Add a static method.
 Student.hey = function(){
     console.log("Hey There !");
     this.age = 29;  // this inside static method points to current CLASS/Constructor Function.
@@ -27,7 +29,7 @@ Student.hey = function(){
 
 // Static method call
 Student.hey();      // We are calling it through Class and not by any object.
-// Just like normal static methods we have in c++ java and php.
+// Just like normal static methods we have in C++ Java and PHP.
 
 s1.hey();           // Error: s1.hey is not a function.
 // Because hey() is simply not in Student prototype object.
@@ -40,7 +42,7 @@ Student.hey = function(){
     console.log(this);              // Prints the constructor function. Because, its the constructor that's calling this method.
 }
 
-// static methods in es6 classes
+//  Example #4: Static method in ES6 Classes
 class Student {
     constructor(name, rollNo) {
         this.name = name;

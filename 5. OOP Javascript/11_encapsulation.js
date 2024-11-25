@@ -3,10 +3,10 @@
 //////////////////////////////////////////////////////////////
 
 // Protected Methods and Properties.
-// Encapsulation is not yet supported in JS.
+// Encapsulation is not yet supported in JS as on 2024.
 // Proposal for this feature is not finished yet. Its at stage 3 of development.
 
-// Convention - Just use underscore before the properties and methods and add a comment.
+// Convention - Just use underscore before the *protected* properties and methods and add a comment.
 class User {
     constructor(username, name, passkey, license){
         this.name = name;

@@ -2,7 +2,7 @@
 // ES6 CLASSES ///////////////////////////////////////////////
 //////////////////////////////////////////////////////////////
 
-// Classes in ES6 javascript are just syntactic sugars to Constructor functions.
+// *Classes* in ES6 javascript are just syntactic sugars to Constructor functions.
 
 // Class Expression - 
 Student = class{
@@ -11,13 +11,13 @@ Student = class{
 
 // Class Declaration
 class Student {
-    // Behind the scenes, Student is nothing but the constructor function.
+    // Behind the scenes, a *Class* is nothing but the Constructor Fn.
     constructor(name, rollNo) {
         this.name = name;
         this.rollNo = rollNo;
     }
 
-    // Methods in ES6 classes are automatically added to .prototype property of the Student Constructor Fn.
+    // Methods in ES6 classes are automatically added to .prototype property of the Constructor Fn.
     show(){
         console.log(`${this.name}'s Roll No. is ${this.rollNo}`);
     }
@@ -64,11 +64,12 @@ const Mercedes = new Car("Mercedes", 95);
 // 1. Class declarations are not hoisted.
 // 2. Like functions, classes are also first class citizens.
 //      that means, we can pass them to functions and return them from functions.
-//      this happens because classes are basically special kinds of functions(Contructor Functions) behind the scenes.
+//      this happens because classes are basically Contructor Functions behind the scenes.
+//      and Constructor Functions are still functions(special kind).
 // 3. Classes are executed in "strict mode". Even though u haven't activated the strict mode.
 
 // Constructor functions vs ES6 Classes ?
 // Its a personal preference.
 // Classes looks a lot better as everything is in one block,
 // Even though the class's methods point to .prototype property, still they are kept inside class,
-// so the code looks good.
+// so the code looks good and maintainable.

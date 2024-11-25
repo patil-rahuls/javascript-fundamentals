@@ -9,12 +9,12 @@
 // The beauty is that the method is applied to the prototype, so it is only stored in the memory ONCE,
 // but every instance of the object has access to it.
 
-// *Prototype*
+// *Prototype* (Revision)
 // Each and every function(object) in javascript automatically has a property called "prototype".
 // So the "Student" constructor function also has a prototype property.
 Student.prototype;
 
-// Now we can add function to this prototype object.
+// We add methods to this prototype object.
 Student.prototype.show = function(){
     console.log("Roll No: " + this.rollNo + " _ Name: " + this.name);
     // 'this' will point to the object which will be calling this method.
@@ -53,15 +53,15 @@ console.log(Student.hasOwnProperty('school'));      // false
 // It simply has access to it because it is in the prototype property of Student.
 
 
-// __proto__
-// Every object in javascript has a property called "__proto__"
+// *__proto__*
+// Every object in javascript has a property called *__proto__*
 // It is called a *Prototype*
 
 // Remember the step 3 : {} empty object is linked to prototype.
-// It creates __proto__ property.
+// It creates *__proto__* property.
 
 console.log(s1.__proto__ === Student.prototype); // true;
-// __proto__ of objects created from constructor functions are same as prototype property of the constructor.
+// *__proto__* of objects created from constructor functions are same as prototype property of the constructor.
 
 
 //  Example:
@@ -69,14 +69,12 @@ const Car = function(make, speed){
     this.speed = speed;
     this.make = make;
 };
-
 Car.prototype.accelerate = function(){
     this.speed++ && console.log(this.speed);
 };
 Car.prototype.break = function(){
     this.speed-- && console.log(this.speed);
 };
-// Similarly you can add different functions to existing Object prototypes.
 
 const BMW = new Car("BMW", 120);
 const Mercedes = new Car("Mercedes", 95);

@@ -12,6 +12,7 @@
 // Returns a promise
 const result = fetch("https://reqres.in/api/users?page=2");
 console.log(result);
+// Promise {<pending>}
 
 // Consuming a promise.
 // result.then(<callback fn to execute as soon as value is available>);

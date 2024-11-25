@@ -2,8 +2,7 @@
 // ES6 CLASS'S getter and setter /////////////////////////////
 //////////////////////////////////////////////////////////////
 
-// Just like objects, Classes also have getter and setter.
-
+// Just like Objects, Classes also have *getter* and *setter*
 // IMP: Remember! they are "properties", not "methods"
 
 class Student {
@@ -27,7 +26,7 @@ s4.info = "Hitesh";
 s4.info;
 
 
-// TIP: Rea world usage - use setters for input validation.
+// TIP: Real world usage - use setters for input validation.
 // Condition: the setter method name should be same as the parameter's name in contructor() which need to be validated.
 // Also, if valid, we need to set the value to new property,
 // because we can't use the same property name because it will result in Error.
@@ -48,7 +47,7 @@ class User {
     }
 };
 
-// In the above code the commented line will give error because, the same class variable 'username'
+// In the above code(first `this.format.test...` line) will give error because, the same class variable 'username'
 // is being initialized by two methods: the constructor and the setter.
 // This results in  "max stack call size exceed error".
 //

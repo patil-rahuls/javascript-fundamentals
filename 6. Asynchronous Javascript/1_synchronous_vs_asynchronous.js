@@ -18,7 +18,7 @@ console.log('Three');``
 // 2. ASYNCHRONOUS
 // Long runing operations can be made to "execute in the background".
 // While rest of the code executes normally without ever being blocked.
-// Asynchronous code is "non blocking".
+// Asynchronous code is "non-blocking".
 
 //  Example #2:
 console.log('One');
@@ -41,9 +41,28 @@ console.log('Three');
 //////////////////////////////////////////////////////////////
 // When we have multiple asynchronous operations one after the other by "nesting" the callbacks,
 // we get a a pyramid structure like code called 'callback hell'.
-
-// It is essentially nested callbacks stacked below one another.
 // Every callback depends/waits for the previous callback.
 // Affects the readability and maintainability of the code.
 
+// e.g.
+asyncOperation1(function(result1) {
+  asyncOperation2(result1, function(result2) {
+      asyncOperation3(result2, function(result3) {
+          asyncOperation4(result3, function(result4) {
+              // Do something with result4
+          });
+      });
+  });
+});
+
 // We avoid it by using 'Promises'.
+asyncOperation1()
+.then(result1 => asyncOperation2(result1))
+.then(result2 => asyncOperation3(result2))
+.then(result3 => asyncOperation4(result3))
+.then(result4 => {
+  // Do something with result4
+})
+.catch(error => {
+  // Handle errors
+});
