@@ -17,7 +17,7 @@ const shallowCopy = Object.assign({}, myObj);
 // It assigns properties only, not copying or defining new properties.
 // IMP - But be aware this is a shallow copy - 'nested objects' are still copied as reference.
     const x = { name: 'Rahul', dob : { year : 1990 }};
-    const copy = Object.assign({}, myObj);
+    const copy = Object.assign({}, x);
     // copy - { name: 'Rahul', dob : { year : 1990 }}
     // Now, in the 'copy' object, all outer most properties i.e. 'name' in this case,
     // are an independent copy. And all the properties with nested objects as their values

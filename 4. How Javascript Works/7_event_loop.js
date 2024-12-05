@@ -43,7 +43,6 @@
 // 
 // 5. Close Queue 
 //    This queue holds the callbacks of the 'close' event of an async task.
-//    i.e. 'close' event fired on 
 // 
 // It is important to note that the Timer, I/O, Check, and Close Queues are all part of libuv. 
 // The two microtask queues, however, are not part of libuv. They are part of Node.js.
@@ -59,7 +58,8 @@
 // But there is a catch - 
 //      After finishing executing the nextTick queue, Before moving to promise queue, 
 //      the nextTick Queue is again checked for any callbacks.
-//      For a case when a nextTick() callback registers another nextTick() callback, that will also get added to queue at the end.
+//      For a case when a nextTick() callback registers another nextTick() callback, 
+//      that will also get added to the nextTick queue at the end.
 //      so these also need to be executed before moving to the promise queue.
 //      e.g. - 
 //      

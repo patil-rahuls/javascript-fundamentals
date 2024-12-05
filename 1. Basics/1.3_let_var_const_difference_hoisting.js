@@ -46,15 +46,17 @@ checkHoisting();
 
 // *const* variables are not hoisted.
 
+
 //  Example #3
 var name = "Rahul";
 var name = "Raj";        // This works without giving any error.
 // The example above looks bad and erroneous, but works. That shouldn't happen.
 // *var* variables are initialized with the value of 'undefined' and moved to the top of the scope(hoisting).
-// So the above code functionally looks like - 
+// So functionally, the above code looks like - 
 var name = undefined;
 name = "Rahul";
 name = "Raj";
+
 
 //  Example #4
 b = 25;
@@ -65,6 +67,7 @@ var b = undefined;
 b = 25;
 console.log(b);           // 25
 
+
 //  Example #5
 var a = 1;
 var a = 2;
@@ -72,12 +75,14 @@ console.log(a); // 2
 var a;
 console.log(a); // 2
 
+
 //  Example #6 IMP
 var a = 1;
 function a() {}
 console.log(a); // 1
 // function declarations are hoisted before any *var* initializer gets evaluated.
 // So, the initializer(*var* variable) comes later and overrides the value.
+
 
 //  Example #7
 try {

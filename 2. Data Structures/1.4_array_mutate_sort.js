@@ -25,7 +25,7 @@ console.log(arr.sort());    //  [-130, -400, -650, 1300, 200, 3000, 450, 70]
 const arr2 = [200, 450, -400, 3000, -650, -130, 70, 1300];
 arr2.sort((a,b) => {
    if(a<b) return -1;       // position of a and b remain same in the array.(a,b)
-   if(a>b) return 1;        // swap a and b in the array. (b,a)
+   if(a>b) return 1;        // swap a and b in the array.
 } );
 
 console.log(arr2);          //  [-650, -400, -130, 70, 200, 450, 1300, 3000]

@@ -16,7 +16,7 @@
 
 //  Example #1
 function run() {
-  // function scope.
+  // Function scope.
   var foo = "Foo";
   let bar = "Bar";
   console.log(foo, bar);    // Foo Bar

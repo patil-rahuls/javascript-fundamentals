@@ -7,7 +7,7 @@
 // Accepts two arguments: prompt string and a default value.
 // Returns the text(converted to string) from the input field.
 // If clicked 'Cancel' or ESC, it returns null.
-// Else it the entered value OR default value(if set) if the value is not changed.
+// Else it returns the entered value OR default value(if set) if the value is not changed.
 let age = prompt('How old are you?', 28); // 28 is the default value.
 alert(`You are ${age} years old!`);       // You are 28 years old! (If clicked 'OK')
 

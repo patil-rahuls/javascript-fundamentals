@@ -2,6 +2,9 @@
 // this KEYWORD //////////////////////////////////////////////
 //////////////////////////////////////////////////////////////
 
+// *this* refers to the context in which a function is executed.
+// Its value depends on how the function is called.
+
 // *this* is a sepcial object that is created for every function's Execution Context.
 // Its one of the three components of an Execution Context.
 

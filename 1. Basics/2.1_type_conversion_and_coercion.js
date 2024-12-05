@@ -2,7 +2,7 @@
 // TYPE CONVERSION AND COERCION //////////////////////////////
 //////////////////////////////////////////////////////////////
 
-// 1. Type Conversion
+// 1. Type Conversion (Explicit)
 let age = 28;
 console.log(typeof age); // number
 age = "28";
@@ -14,7 +14,7 @@ let str = "I am " + age; // In this assignment, "age" gets converted from "numbe
 console.log(typeof age); // "age" is still a "number" type.
 
 
-// When ALL operands are '+' AND when one of the operands of + is a string,
+// When ALL operands are '+' AND when one of the operands of '+' is a string,
 // the operands after FIRST string operand, are converted autmatically into string(Type Coercion).
 console.log("23" + "10" + 3);       // 23103
 console.log("23" + "10" + 3 + 5);   // 231035 and NOT 23108
@@ -34,8 +34,9 @@ let xx = Number("5");           // String "5" converted to number explicitly.
 
 // 1. parseInt() & parseFloat()
 // converts a string loosely to a number
-parseInt(num)      // extracts a numeric value from the 
-                   // start of the string, or returns NaN.
+parseInt(num)      
+// Extracts a numeric value from the START of the string, or returns NaN.
+
 parseInt('12')     // 12
 parseInt(12.345)   // 12
 parseInt('12.345') // 12
@@ -48,7 +49,6 @@ parseInt('12px')   // 12
 parseInt('foo2')   // NaN      These last three may
 parseInt('12a5')   // 12       be different from what
 parseInt('0x10')   // 16       you expected to see.
-
 // It will allow you to specify a 'radix' for converting the string to an int.
 // Observe the last statement above.
 parseInt('0x10')   // It considers '0x' as radix and considers it as a hex value

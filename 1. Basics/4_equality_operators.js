@@ -2,7 +2,7 @@
 // EQUALITY OPERATORS ("==" and "===") ///////////////////////
 //////////////////////////////////////////////////////////////
 
-// "==" Abstract(loose) equality operator 
+// "==" Abstract/Loose equality operator 
 // Type Coercion occurs here.
 console.log('18' == 18);   // true because of implicit type coercion.
 
@@ -36,8 +36,9 @@ e === f           // true
 
 // String Primitive and String Object Comparision.
 //  Example #4
-"abc" == new String("abc")                  // true. 'new String()' returns an Object
-"abc" === new String("abc")                 // false
+// 'new String()' returns an Object
+"abc" == new String("abc")                  // true. Value is same.
+"abc" === new String("abc")                 // false. 'new String()' returns an Object
 new String("rahul") == new String("rahul")  // false
 new String("rahul") === new String("rahul") // false
 

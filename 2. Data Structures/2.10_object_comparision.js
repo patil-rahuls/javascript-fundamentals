@@ -36,7 +36,7 @@ y = {age: 29, name: 'Rahul'};
 
 // Function to compare any numbers of obj
 function areEqual(...objArr){
-    // Create a deep/independent copy of objArr, so that we dont change the passed objArr.
+    // Create a deep/independent copy of objArr, so that we dont mutate the passed objArr.
     const ipArr = [...objArr];
     console.log(ipArr);
     

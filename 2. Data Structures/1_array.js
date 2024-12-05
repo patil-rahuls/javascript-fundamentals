@@ -32,15 +32,16 @@ const arr = [1,2,3,4,5,6,7,8];
 // using delete
 delete arr[3];
 // [1, 2, 3, <1 empty item>, 5, 6, 7, 8]
-// delete remove the element, BUT doesn't 'reindex' the array or update its length.
+// 'delete' keyword removes the element, BUT doesn't 'reindex' the array or update its length.
 arr[3] = null;
 // [1, 2, 3, null, 5, 6, 7, 8]
 arr[3] = undefined;
 // [1, 2, 3, undefined, 5, 6, 7, 8]
 // Solution - splice
 const arr = [1,2,3,4,5,6,7,8];
-// using delete
+// First delete
 delete arr[3];
+// Then splice.
 const removedItem = arr.splice(3, 1);
 // removedItem -> [ <1 empty item> ] (typeof removedItem will be object)
 // We can also use filter or map.

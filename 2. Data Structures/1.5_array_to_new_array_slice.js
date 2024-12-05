@@ -15,12 +15,14 @@ arr.slice(2,4);   // [33,44] (element at index 4 is not included)
 // Start from end of an array
 arr.slice(-2);    // [ 55,66 ] (Start from 2nd last element.)
 arr.slice(1, -2); // [ 22,33,44 ]
+arr.slice(-2, -1); // [ 55 ]
+
 
 //  Example #1 (Deep Clone)
 // IMP & USEFUL : Copying an array
 // It's also important to observe that the slice() array method can be used to copy arrays by
 // not passing any arguments
-const arr1 = arr.slice();
+const arr1 = arr.slice();// DEEP COPY
 // But why copy arrays this way?
 // Observe this :
 const arr2 = [1,2,3];

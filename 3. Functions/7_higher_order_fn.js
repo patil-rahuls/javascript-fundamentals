@@ -7,9 +7,6 @@
 // or/and returns a function. And the functions that are passed as argument or 
 // returned are called First Class Functions/Citizens.
 
-// Similarly, we have a term *First Class Citizens/Functions*
-// Any Functions that could be passed to functions and/or returned from functions.
-
 // e.g. addEventListener() is a higher order function.
 function count() {
    let counter = 0;
