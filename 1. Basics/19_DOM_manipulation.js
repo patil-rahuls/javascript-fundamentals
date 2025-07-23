@@ -67,7 +67,7 @@ document.querySelector('.myButton').addEventListener('click' ,
        alert("Hi");
    }
 );
-// a more cleaner way iwould be by separately defining a fn and using it-
+// a more cleaner way would be by separately defining a fn and using it-
 const myFunc = function() {
    console.log(document.querSelector('.guess').value);
 }

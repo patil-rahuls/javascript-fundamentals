@@ -2,6 +2,7 @@
 // NUMBER FUNCTIONS //////////////////////////////////////////
 //////////////////////////////////////////////////////////////
 
+// WIP
 // The built-in Number object has properties for numerical constants, 
 // such as maximum value, not-a-number, and infinity. 
 // You cannot change the values of these properties and you use them as follows:

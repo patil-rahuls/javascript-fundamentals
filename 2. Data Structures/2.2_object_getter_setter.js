@@ -3,7 +3,7 @@
 //////////////////////////////////////////////////////////////
 
 // Every Object in Javascript has two important properies :
-// getter "get()" and setter "set()"
+// getter "get" and setter "set"
 
 // IMP: Remember! they are "properties", not "methods"
 

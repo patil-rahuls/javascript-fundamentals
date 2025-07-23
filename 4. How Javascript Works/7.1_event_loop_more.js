@@ -179,3 +179,58 @@ process.nextTick(() => console.log("this is process.nextTick 1"));
 // this is setTimeout 1
 // this is setImmediate 1
 // this is from readableStream close event callback
+
+// 9.
+console.log('Start'); 
+process.nextTick(() => {
+    console.log('Next Tick 1');
+    process.nextTick(() => {
+        console.log('Next Tick 2');
+        process.nextTick(() => {
+            console.log('Next Tick 3');
+        });
+    });
+});
+setImmediate(() => {
+    console.log('Set Immediate 1');
+    setImmediate(() => {
+        console.log('Set Immediate 2');
+    });
+    process.nextTick(() => {
+        console.log('Next Tick inside Set Immediate');
+    });
+});
+Promise.resolve().then(() => {
+    console.log('Promise 1');
+    process.nextTick(() => {
+        console.log('Next Tick inside Promise');
+    });
+});
+setTimeout(() => {
+    console.log('Timeout 1');
+    process.nextTick(() => {
+        console.log('Next Tick inside Timeout');
+    });
+}, 0);
+new Promise((resolve) => {
+    console.log('Promise 2 executor'); 
+    resolve(); 
+}).then(() => { 
+    console.log('Promise 2 then'); 
+});
+console.log('End');
+// Output-
+// Start
+// Promise 2 executor
+// End
+// Next Tick 1
+// Next Tick 2
+// Next Tick 3
+// Promise 1
+// Promise 2 then
+// Next Tick inside Promise
+// Timeout 1
+// Next Tick inside Timeout
+// Set Immediate 1
+// Next Tick inside Set Immediate
+// Set Immediate 2

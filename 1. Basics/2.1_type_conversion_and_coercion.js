@@ -45,7 +45,6 @@ parseInt('')       // NaN
 parseInt('   ')    // NaN
 parseInt(' 2.3')   // 2
 parseInt('1   ')   // 1
-parseInt('12px')   // 12
 parseInt('foo2')   // NaN      These last three may
 parseInt('12a5')   // 12       be different from what
 parseInt('0x10')   // 16       you expected to see.

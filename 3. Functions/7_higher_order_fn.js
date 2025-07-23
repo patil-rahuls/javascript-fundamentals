@@ -4,8 +4,8 @@
 
 // Fundamental property of js.
 // Higher Order function - a function that receives a function as an argument, 
-// or/and returns a function. And the functions that are passed as argument or 
-// returned are called First Class Functions/Citizens.
+// or/and returns a function. 
+// And the functions that are passed/returned are called First Class Functions/Citizens.
 
 // e.g. addEventListener() is a higher order function.
 function count() {

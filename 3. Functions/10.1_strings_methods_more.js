@@ -50,9 +50,9 @@ const [firstName, lastName] = 'Rahul Patil'.split(" ");
 
 
 // join(): implodes an array into a string. (same as implode in php)
-const newName = ['Mr.' , 'Rahul' , 'Patil'.toUpperCase()].join();
+const newName2 = ['Mr.' , 'Rahul' , 'Patil'.toUpperCase()].join();
 // Mr. Rahul PATIL
-const newName = ['Mr.' , 'Rahul' , 'Patil'.toUpperCase()].join( '---' );
+const newName3 = ['Mr.' , 'Rahul' , 'Patil'.toUpperCase()].join( '---' );
 // Mr.---Rahul---PATIL
 
 

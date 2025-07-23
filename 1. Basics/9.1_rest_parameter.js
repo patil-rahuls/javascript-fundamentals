@@ -18,7 +18,7 @@
 const add = function(...varArgs){
    // any number of values(LIST) passed to this method will be packed into an array named 'varArgs'
    let sum = 0;
-   for (const i=0; i < varArgs.length ; i++)
+   for (let i=0; i < varArgs.length ; i++)
        sum += varArgs[i];
    console.log(sum);
    return sum;

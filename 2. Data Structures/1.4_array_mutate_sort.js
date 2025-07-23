@@ -20,7 +20,8 @@ console.log(arr.sort());    //  [-130, -400, -650, 1300, 200, 3000, 450, 70]
 
 // IMP: sort() accepts a callback function.
 // It accepts two parameters - two consecutive elements of the given array.
-// If the callback function returns true, then, the two consecutive elements are swapped.
+// If the callback function returns positive, then the two consecutive elements are swapped.
+// if it returns negative value, the elements remain as is.
 
 const arr2 = [200, 450, -400, 3000, -650, -130, 70, 1300];
 arr2.sort((a,b) => {

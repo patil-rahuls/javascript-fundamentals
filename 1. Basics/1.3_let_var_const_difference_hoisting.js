@@ -18,7 +18,7 @@ function foo() {
 }
 foo();
 
-// *let* variables are also hoisted but they are said to be in ‘Temporal Dead Zone’ 
+// *let* & *const* variables are also hoisted but they are said to be in ‘Temporal Dead Zone’ 
 // from the start of the block until the initialization is processed.
 
 //  Example #2:

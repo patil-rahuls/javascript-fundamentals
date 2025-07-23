@@ -38,6 +38,12 @@ console.log(names);			// set(5) {'hitesh', 'aajesh' , 'rahul', 'anil', 'milan'}
 names.clear();
 
 
+// 5. size
+names.size;                 // 5
+// It gives 'unique' count, hence its called "size", and not "length" unlike arrays. 
+// arrays can have duplicate values, but sets do not.
+
+
 // There is no method to get a specific item from a set.
 // Because, there is no order(index) defined in which the items are stored in a Set unlike arrays.
 // When using Sets, we just care about uniqueness and whether the item is present or not(in the Set).
