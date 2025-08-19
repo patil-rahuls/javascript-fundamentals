@@ -46,3 +46,13 @@ console.log(new Map(Object.entries(weekendMeetings)));
 //    ["sat", {start : 1200 , end : 1300}],
 //    ["sun" ,{start : 1100 , end : 1300}]
 // ]
+
+
+// Convert an entries list(Not Map) to Object
+const nameEntries = [
+   ['fname', 'Sachin' ],
+   ['lname', 'Tendulkar' ]
+];
+const nameObj = Object.fromEntries(nameEntries);
+console.log(nameObj);
+// { fname: 'Sachin', lname: 'Tendulkar' }

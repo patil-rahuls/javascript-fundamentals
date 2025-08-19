@@ -29,6 +29,13 @@ console.log(myObj);
 myObj.9820694183  = 'mobile';  // this fails.
 myObj[9820694183] = 'mobile';  // this works.
 
+// Dynamic property name should always be provided inside []
+const prop = 'name';
+const obj = {};
+// obj.prop = 'Rahul'; // will set the property name as 'prop' resulting in { prop: 'Rahul' }
+obj[prop] = 'Rahul';
+// obj - { name: 'Rahul' }
+
 // When using const, you cannot re-declare objects which are already declared with const.
 const myObj = {
     1:'yes',

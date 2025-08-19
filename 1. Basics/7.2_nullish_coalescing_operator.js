@@ -5,6 +5,9 @@
 // It works same as || except that it does not consider 0, '', Infinity and NaN as falsy values.
 // Nullish means only 'null' and 'undefined' will be considered falsy.
 
+// ??= prevents evaluating valid values like 0, false, or "",
+// which often matter in user input, configs, or database values.
+
 //  Example #1
 const usersCount = 0;
 const maxUsers = usersCount || 10;
