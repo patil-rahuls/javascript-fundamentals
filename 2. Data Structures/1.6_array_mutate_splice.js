@@ -6,7 +6,7 @@
 // array.splice(startIndex, deleteCount, replacementValue)
 // IMP: its 2nd parameter is not index, but count of items to be removed.
 
-// IMP - Third parameter 'replacementValue' is optional. If provided, it is 
+// IMP - Third parameter 'replacementValue' is optional. If provided, it is
 // inserted at the startIndex.
 
 //  Example #1:
@@ -46,4 +46,4 @@ console.log(arr2);       // [11, 22, 33, 44, 99, 55, 66]
 //  Example #5 (Replace some values with a specific item inside an array)
 const arr3 = [11, 22, 33, 44, 55, 66];
 arr3.splice(4, 2, 99);   // This deletes 2 items from 4th index and inserts 99 there. i.e. replaces.
-console.log(arr3);       // [11, 22, 33, 44, 99, 66]
+console.log(arr3);       // [11, 22, 33, 44, 99]

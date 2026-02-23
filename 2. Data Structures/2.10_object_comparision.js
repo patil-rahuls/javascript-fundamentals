@@ -27,7 +27,7 @@ x = {a: 1, b: 2};
 y = {b: 2, a: 1};
 JSON.stringify(x) === JSON.stringify(y); // false
 
-// Excercise - 
+// Excercise -
 // Create a function to compare two objects.
 // The properties in the objects can be in any order.
 // e.g. This should return true
@@ -39,12 +39,12 @@ function areEqual(...objArr){
     // Create a deep/independent copy of objArr, so that we dont mutate the passed objArr.
     const ipArr = [...objArr];
     console.log(ipArr);
-    
+
     // Get first obj from the objArr
     const firstObj = ipArr.shift();
     // Now ipArr will be left with the remaining obj except first.
     console.log(ipArr);
-    
+
     const lengthComparisionResult = ipArr.reduce((acc, obj) => {
         const currObjLen = Object.keys(obj).length;
         if(currObjLen === Number(acc)){
@@ -53,7 +53,7 @@ function areEqual(...objArr){
             return false; // Return boolean type for incorrect obj sizes
         }
     }, Object.keys(ipArr[0]).length);
-    
+
     // This is called a gaurd clause.
     if(!lengthComparisionResult){
         return false;
