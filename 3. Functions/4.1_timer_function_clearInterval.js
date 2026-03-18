@@ -6,14 +6,15 @@
 
 // Example (Countdown Timer):
 let max = 5;
-const donex = setInterval( () => {
-   
+const done = setInterval( () => {
    if(max>0) {
-      max--; 
+      max--;
       console.log(max);
-   } // We still need to clear the timer because even after max > 0, it will still keep running forever.
-   
+   }
+   // We still need to clear the timer because even after max > 0,
+   // it will still keep running forever every 1 second.
 } , 1000);
 
-if (max === 0 )
+if (max === 0 ) {
    clearInterval(donex);
+}

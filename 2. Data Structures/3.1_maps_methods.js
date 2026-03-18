@@ -3,8 +3,11 @@
 //////////////////////////////////////////////////////////////
 
 // Maps are high performance key - value paired data structure.
-// In Objects keys can only be strings (without quotes), but in Maps, keys can be any type.
-// More here : https://dmitripavlutin.com/maps-vs-plain-objects-javascript/
+// In Objects keys can only be strings (without quotes),
+// but in Maps, keys can be any type.
+
+// More here :
+// https://dmitripavlutin.com/maps-vs-plain-objects-javascript/
 
 const myMap = new Map();
 
@@ -25,7 +28,8 @@ console.log(myMap);
 //    false => 'I am busy.',
 // }
 
-myMap = myMap.set('freeTime' , '1100');    // Uncaught TypeError: Assignment to constant variable.
+myMap = myMap.set('freeTime' , '1100');
+// Uncaught TypeError: Assignment to constant variable.
 
 const newMap = myMap.set('freeTime' , 1100);
 console.log(myMap);
@@ -39,7 +43,10 @@ console.log(myMap);
 // }
 
 // Methods allow us to chain them
-myMap.set('myUsernames',['rahulp','rahul.p','p.rahul_']).set('age' , 28).set('likes',['tech', 'piano', 'films']);
+myMap
+    .set('myUsernames',['rahulp','rahul.p','p.rahul_'])
+    .set('age' , 28)
+    .set('likes',['tech', 'piano', 'films']);
 
 
 // 2. get()

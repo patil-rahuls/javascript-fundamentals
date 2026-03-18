@@ -17,7 +17,8 @@ const yourObj = {
 
 // A handy way to compare two objects in JS would be:
 JSON.stringify(a) === JSON.stringify(b); // true
-// Works when you have simple JSON-style objects without methods and DOM nodes inside
+// Works when you have simple JSON-style objects without
+// methods and DOM nodes inside.
 
 // We can also use some libraries like lodash or underscore.
 
@@ -25,36 +26,44 @@ JSON.stringify(a) === JSON.stringify(b); // true
 // Following objects comparision will return false.
 x = {a: 1, b: 2};
 y = {b: 2, a: 1};
-JSON.stringify(x) === JSON.stringify(y); // false
+JSON.stringify(x) === JSON.stringify(y);
+// false
 
-// Excercise -
-// Create a function to compare two objects.
+
+
+//////////////////////////////////////////////////////////////
+// Excercise - (Interview Question)
+// Create a function to compare any number of objects.
 // The properties in the objects can be in any order.
+//////////////////////////////////////////////////////////////
+
 // e.g. This should return true
 x = {name: 'Rahul', age: 29};
 y = {age: 29, name: 'Rahul'};
 
 // Function to compare any numbers of obj
 function areEqual(...objArr){
-    // Create a deep/independent copy of objArr, so that we dont mutate the passed objArr.
+    // Create a deep/independent copy of objArr,
+    // so that we dont mutate the passed objArr.
     const ipArr = [...objArr];
-    console.log(ipArr);
 
     // Get first obj from the objArr
     const firstObj = ipArr.shift();
     // Now ipArr will be left with the remaining obj except first.
-    console.log(ipArr);
 
     const lengthComparisionResult = ipArr.reduce((acc, obj) => {
         const currObjLen = Object.keys(obj).length;
         if(currObjLen === Number(acc)){
-            return currObjLen; // Return actual length of keys if all obj sizes are same
+            return currObjLen;
+            // Return actual length of keys if all obj sizes are same
         } else {
-            return false; // Return boolean type for incorrect obj sizes
+            return false;
+            // Return boolean type for incorrect obj sizes
         }
-    }, Object.keys(ipArr[0]).length);
+    }, Object.keys(firstObj).length);
 
     // This is called a gaurd clause.
+    // i.e. checking for errors early and exiting.
     if(!lengthComparisionResult){
         return false;
     }
@@ -67,8 +76,9 @@ function areEqual(...objArr){
         for(const [prop,val] of Object.entries(obj)){
             if(firstObj?.[prop] === val){
                 keysComparisionResult = true;
+            } else {
+                keysComparisionResult = false;
             }
-            keysComparisionResult = false;
         }
         return keysComparisionResult;
     });

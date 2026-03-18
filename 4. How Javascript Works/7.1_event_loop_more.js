@@ -1,4 +1,7 @@
-// Excercises
+//////////////////////////////////////////////////////////////
+// EVENT LOOP TESTS //////////////////////////////////////////
+//////////////////////////////////////////////////////////////
+
 // Guess the output of the folliwng -
 
 // 1.
@@ -30,7 +33,7 @@ Promise.resolve().then(() => console.log("this is Promise.resolve 3"));
 
 
 
-// 2. 
+// 2.
 setTimeout(() => console.log("this is setTimeout 1"), 0);
 setTimeout(() => {
   console.log("this is setTimeout 2");
@@ -77,7 +80,8 @@ setTimeout(() => console.log("this is setTimeout 1"), 0);
 fs.readFile(__filename, () => {
   console.log("this is readFile 1");
 });
-// Because of I/O Polling and setTimeout with 0 seconds, the order of the op is not certain.
+// Because of I/O Polling and setTimeout with 0 seconds,
+// the order of the output is not certain.
 
 
 
@@ -162,8 +166,8 @@ setImmediate(() => console.log("this is setImmediate 3"));
 
 
 
-// 8. 
-const fs = require("fs");   
+// 8.
+const fs = require("fs");
 const readableStream = fs.createReadStream(__filename);
 readableStream.close();
 readableStream.on("close", () => {
@@ -181,7 +185,7 @@ process.nextTick(() => console.log("this is process.nextTick 1"));
 // this is from readableStream close event callback
 
 // 9.
-console.log('Start'); 
+console.log('Start');
 process.nextTick(() => {
     console.log('Next Tick 1');
     process.nextTick(() => {
@@ -213,10 +217,10 @@ setTimeout(() => {
     });
 }, 0);
 new Promise((resolve) => {
-    console.log('Promise 2 executor'); 
-    resolve(); 
-}).then(() => { 
-    console.log('Promise 2 then'); 
+    console.log('Promise 2 executor');
+    resolve();
+}).then(() => {
+    console.log('Promise 2 then');
 });
 console.log('End');
 // Output-

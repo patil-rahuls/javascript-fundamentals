@@ -24,4 +24,5 @@ const myObj = {
 
 // Size of an object is the number of properties it holds.
 let size = Object.keys(myObj).length;
-console.log(size);              // 6
+console.log(size);
+// 6

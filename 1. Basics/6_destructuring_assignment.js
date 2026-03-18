@@ -2,29 +2,49 @@
 // DESTRUCTURING ASSIGNMENT [ES6] ////////////////////////////
 //////////////////////////////////////////////////////////////
 
-// Unpacks(and assigns) values from arrays, or properties from objects, into distinct variables.
-// TIP: [ ] and { } is at the LHS of '='
+// Unpacks(and assigns) values from arrays, or properties from
+// objects, into distinct variables.
 
+// TIP: [ ] and { } is at the LHS of assignment ('=')
+
+//////////////////////////////////////////////////////////////
 //  Example #1 - Destructuring Array
+//////////////////////////////////////////////////////////////
 const arr = [2,3,4];
 const A = arr[0];
 const B = arr[2];
-console.log(A,B);           // 2 , 3
+console.log(A,B);
+// 2 , 3
 
 // Using Destructuring
 const [x,y,z] = arr;
-console.log(x,y,z);         // 2 , 3 , 4
+console.log(x,y,z);
+// 2 , 3 , 4
 
-
+//////////////////////////////////////////////////////////////
 //  Example #2 - Destructuring Object
+//////////////////////////////////////////////////////////////
 const restaurant = {
    name: 'Rahul’s Cafe',
    location: 'Madh-Island, Mumbai, India',
-   starters: ['Crispy Corn Chaat', 'Hara Bhara Kebab', 'All Paneer Starters', 'Corn Kabab'],
-   categories: ['North Indian', 'Chinese', 'South Indian', 'Italian'],
+   starters: [
+            'Crispy Corn Chaat',
+            'Hara Bhara Kebab',
+            'All Paneer Starters',
+            'Corn Kabab'
+        ],
+   categories: [
+            'North Indian',
+            'Chinese',
+            'South Indian',
+            'Italian'
+        ],
 
    order: function(starter_index, cat_index){
-       return [ this.starters[starter_index] , this.categories[cat_index] ];
+       return [
+            this.starters[starter_index],
+            this.categories[cat_index]
+        ];
    }
 };
 

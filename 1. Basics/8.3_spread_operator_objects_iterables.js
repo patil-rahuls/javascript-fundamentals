@@ -4,7 +4,9 @@
 
 // RHS
 // "..." is seen on the RHS of the assignment expression "="
-// The Spread Operator unpacks elements of iterable objects such as Arrays, Sets, Maps and Objects into a list.
+
+// The Spread Operator unpacks elements of iterable objects
+// such as Arrays, Sets, Maps and Objects into a list.
 
 // Spread Operator can "ONLY" be used in following 2 cases:
         //    1. Expanding an Iterable.
@@ -16,11 +18,22 @@
 const restaurant = {
     name: 'Rahul’s Cafe',
     location: 'Madh-Island, Mumbai, India',
-    starters: ['Crispy Corn Chaat', 'Hara Bhara Kebab', 'All Paneer Starters', 'Corn Kabab'],
-    categories: ['North Indian', 'Chinese', 'South Indian', 'Italian'],
- 
+    starters: [
+        'Crispy Corn Chaat',
+        'Hara Bhara Kebab',
+        'All Paneer Starters',
+        'Corn Kabab'],
+    categories: [
+        'North Indian',
+        'Chinese',
+        'South Indian',
+        'Italian'],
+
     order: function(starter_index, cat_index){
-        return [ this.starters[starter_index] , this.categories[cat_index] ];
+        return [
+            this.starters[starter_index],
+            this.categories[cat_index]
+        ];
     },
 
     workingHours : {
@@ -32,15 +45,20 @@ const restaurant = {
         }
     },
 
-    // orderDelivery - takes an object(Destructured) as a parameter.
-    orderDelivery: function ({ starterIndex=1 , mainIndex , time , address }){
+    // takes a destructured object as a parameter.
+    orderDelivery: function ({
+        starterIndex=1,
+        mainIndex,
+        time,
+        address }){
         return `Your order ${this.starters[starterIndex]}
-           and ${this.categories[mainIndex]} will be delivered to
-           ${address} by ${time} Hours`;
+           and ${this.categories[mainIndex]} will be
+           delivered to ${address} by ${time} Hours`;
     },
 
     orderPasta:function(ing1, ing2, ing3){
-        return `Here is your Pasta with ${ing1} , ${ing2} and ${ing3}`;
+        return `Here's your Dish
+            with ${ing1} , ${ing2} and ${ing3}`;
     }
 };
 
@@ -54,16 +72,7 @@ const newRestaurantWithMoreInfo = {
        founder : "Rahul",
 };
 
-// Updating data copied from restaurant object into new "copyRestaurant" object
+// Updating data copied from restaurant object
+// into new "copyRestaurant" object
 const copyRestaurant = {...restaurant};
 copyRestaurant.name = "Rocking Cafe";
-
-
-// TIP:
-// Spread Operators work on all sorts of ITERABLES like ARRAYS, MAPS, SETS, STRINGS, OBJECTS.
-// string is also an iterable in Javascript.
-const str = "rahul";
-const letters = [...str , ' ' , 'P.'];          // Expanding string
-console.log(letters);                           // ['r', 'a', 'h', 'u', 'l',  ' ', 'P.']
-console.log(...letters);                        // r a h u l  P.
-console.log(letters.join(''));                  // rahul P.

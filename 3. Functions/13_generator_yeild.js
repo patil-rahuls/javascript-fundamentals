@@ -2,19 +2,26 @@
 // GENERATOR FUNCTIONS [ES6] /////////////////////////////////
 //////////////////////////////////////////////////////////////
 
-// A generator function is a special type of function in JavaScript 
-// that allows pausing and resuming its execution during runtime. 
+// "Generators" (function*), are the modern, easier way to
+// create iterators.
 
-// Unlike regular functions, which run to completion, generator functions 
-// can be paused and resumed multiple times, making them particularly useful 
-// for dealing with asynchronous operations, handling large datasets, and writing custom iterators.
+// A generator function is a special type of function in
+// JavaScript that allows pausing and resuming its
+// execution during runtime.
 
-// Generator functions are defined using the function* syntax, and 
-// they use the yield keyword to pause the function's execution and 
-// produce a value. 
+// Unlike regular functions, which run to completion,
+// generator functions can be paused and resumed multiple
+// times, making them particularly useful for dealing with
+// asynchronous operations, handling large datasets, and
+// writing custom iterators.
 
-// When a generator function is called, it returns an iterator object, 
-// which can be used to control the function's execution.
+// Generator functions are defined using the function* syntax,
+// and they use the 'yield' keyword to pause the function's
+// execution and produce(yeild) a value.
+
+// When a generator function is called, it returns an
+// iterator object, which can be used to control the
+// function's execution.
 
 function* generatorFunction() {
   // Generator function body
@@ -24,15 +31,20 @@ function* generatorFunction() {
 }
 
 // RETURNS an *Iterator* Object
-// The *iterator* object has two methods - next() and return()
+// The *iterator* object has two methods -
+//  next()
+//  return()
 
 // *next()*
-// The next() method is used to resume the execution of a generator function
-// from where it was paused. It returns an object with two properties: value and done.
-
-// The *value* property contains the value produced by the yield statement.
-// The *done* property is a boolean indicating whether the generator has completed
-// (true) or is still running (false).
+//  The next() method is used to resume the execution of
+//  a generator function from where it was paused.
+//  It returns an object with two properties:
+//    'value' and 'done'
+//      *value* property contains the value produced by
+//      the yield statement.
+//      *done* property is a boolean indicating whether
+//      the generator has completed (true) or is
+//      still running (false).
 
 //  Example#1
 function* simpleGenerator() {
@@ -41,15 +53,20 @@ function* simpleGenerator() {
   yield 3;
 }
 const iterator1 = simpleGenerator();
-console.log(iterator1.next()); // Output: { value: 1, done: false }
-console.log(iterator1.next()); // Output: { value: 2, done: false }
-console.log(iterator1.next()); // Output: { value: 3, done: false }
-console.log(iterator1.next()); // Output: { value: undefined, done: true }
+console.log(iterator1.next());
+// Output: { value: 1, done: false }
+console.log(iterator1.next());
+// Output: { value: 2, done: false }
+console.log(iterator1.next());
+// Output: { value: 3, done: false }
+console.log(iterator1.next());
+// Output: { value: undefined, done: true }
 
 
 // *return()*
-// The return() method allows us to force a generator to complete before it 
-// reaches the end. It can take an optional argument that will be returned 
+// The return() method allows us to force a generator
+// to complete before it reaches the end.
+// It can take an optional argument that will be returned
 // as the final value of the generator.
 
 //  Example#2
@@ -59,14 +76,18 @@ function* generatorWithReturn() {
   yield 3;
 }
 const iterator2 = generatorWithReturn();
-console.log(iterator2.next());              // Output: { value: 1, done: false }
-console.log(iterator2.return("Finished!")); // Output: { value: "Finished!", done: true }
-console.log(iterator2.next());              // Output: { value: undefined, done: true }
-console.log(iterator2.next());              // Output: { value: undefined, done: true }
+console.log(iterator2.next());
+// Output: { value: 1, done: false }
+console.log(iterator2.return("Finished!"));
+// Output: { value: "Finished!", done: true }
+console.log(iterator2.next());
+// Output: { value: undefined, done: true }
+console.log(iterator2.next());
+// Output: { value: undefined, done: true }
 
 
 
-// Generator function for asynchronous tasks
+//  Example#2 - Generator function for asynchronous tasks
 function fetchData(url) {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
@@ -94,7 +115,7 @@ promise.then((data) => {
   });
 });
 
-// 
+// Infinite Generator Example
 function* counter() {
   let count = 1;
   while (true) {
@@ -103,6 +124,9 @@ function* counter() {
 }
 
 const iterator = counter();
-console.log(iterator.next()); // Output: { value: 1, done: false }
-console.log(iterator.next()); // Output: { value: 2, done: false }
-console.log(iterator.next()); // Output: { value: 3, done: false }
+console.log(iterator.next());
+// Output: { value: 1, done: false }
+console.log(iterator.next());
+// Output: { value: 2, done: false }
+console.log(iterator.next());
+// Output: { value: 3, done: false }

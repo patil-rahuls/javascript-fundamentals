@@ -2,9 +2,8 @@
 // DEBOUNCING  ///////////////////////////////////////////////
 //////////////////////////////////////////////////////////////
 
-// WIP
-
-// To prevent a function from being called multiple times.
+// To prevent a function from being called multiple times
+// in a given time frame.
 function debounce(func, delay){
   let timeout;
   return (...args) => {
@@ -12,3 +11,6 @@ function debounce(func, delay){
     timeout = setTimeout(() => func(...args), delay);
   };
 }
+
+// Usage:
+debounce();

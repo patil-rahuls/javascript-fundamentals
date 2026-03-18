@@ -3,10 +3,14 @@
 //////////////////////////////////////////////////////////////
 
 // Maps are high performance key - value paired data structure.
-// In Objects keys can only be strings (without quotes), but in Maps, keys can be any type.
-// More here : https://dmitripavlutin.com/maps-vs-plain-objects-javascript/
+// In Objects keys can only be strings (without quotes),
+// but in Maps, keys can be any type.
 
-// Let's take this map as an example. See the format of Map in initialization below. [ [ ... ] ]
+// More here :
+// https://dmitripavlutin.com/maps-vs-plain-objects-javascript/
+
+// Let's take this map as an example.
+// See the format of Map in initialization below. [ [ ... ] ]
 const question = new Map ([
    ['question' , 'What is the best programming lang in the world?'] ,
    [1, 'C'] ,
@@ -19,7 +23,8 @@ const question = new Map ([
 ]);
 
 // Maps are Iterable
-for (const [key, value] of question) {    //  Object.entries() not required for Map
+for (const [key, value] of question) {
+   //  Object.entries() not required for Map
    if (typeof key === 'number'){
       console.log(`Option : ${key} : ${value}`);
    }

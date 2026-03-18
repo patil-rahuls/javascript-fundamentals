@@ -5,14 +5,15 @@
 // The operators || and && do not always return boolean.
 
 // 1. SHORT CIRCUITING LOGICAL OR - ||
-// Keeps evaluating until a 'Truthy' value is found and returns it. Returns last value otherwise.
+// Keeps evaluating until a 'Truthy' value is found and
+// returns it else returns last value otherwise.
 
 
 //  Example #1
 console.log(undefined || 0 || "" || 'Hello' || 23 || null);
 // Outputs 'Hello'
 // In OR operation, the first truthy value is printed.
-// It will be short circuited at the first truthy value 'Hello' in the expression above.
+// It will be short circuited at the first truthy value 'Hello'
 
 
 //  Example #2
@@ -28,14 +29,15 @@ console.log(undefined || null); // null
 
 
 // 2. SHORT CIRCUITING &&
-// Keeps evaluating until a 'FALSY' value is found and returns it. Returns last value otherwise.
+// Keeps evaluating until a 'FALSY' value is found and
+// returns it else returns last value otherwise.
 
 
 //  Example #4
 console.log(undefined && 0 && "" && 'Hello' && 23 && null);
 // Outputs undefined
 // In AND operation, the first falsy value is printed.
-// It will be short circuited at the first falsy value 'undefined' in the expression above.
+// It will be short circuited at the first falsy value 'undefined'.
 
 
 //  Example #5
@@ -52,5 +54,6 @@ console.log('Hello' && 23 && null && "rest");
 // null
 // The first Falsy value where the short circuit happened.
 
-// From the above examples, we observed that the || and && operations do not always return a boolean,
-// instead they return the data based on the operands (where the short circuiting happens).
+// From the above examples, we observed that the || and && operations
+// do not always return a boolean, instead they return the data based
+// on the operands (where the short circuiting happens).

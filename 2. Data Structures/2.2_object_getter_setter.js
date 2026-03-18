@@ -22,10 +22,13 @@ const myObj = {
     }
 };
 
-myObj.info;             // We didn't use parens here like this myObj.info();
+myObj.info;
+// We didn't use parens here like this myObj.info();
 // We access the getter just like a property.
 
-myObj.info = "P";       // No parens here too.
+myObj.info = "P";
+// No parens here too.
 
-// Is Poymorphism achieved here? I know 'info' here is a property and not function,
+// Is Poymorphism achieved here?
+// I know 'info' here is a property and not function,
 // but at the end, what we get is a 'functionality' out of it !!

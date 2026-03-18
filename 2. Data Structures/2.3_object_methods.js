@@ -37,13 +37,15 @@ console.log(myObj);
 
 // Object method call
 myObj.greet("Reader");
-// In this context, "myObj" is the receiver, while the "greet()" is the method.
-// In layman's terms - a method is associated with an Object
+// In this context, "myObj" is the receiver,
+// while the "greet()" is the method.
+// In layman's terms - a method is associated with an Object.
 
 // Compare that with a function invocation:
 const sayHi = () => console.log(`Hi there !!`);
 sayHi();
-// Notice, there is no receiver here. The receiver is what separates a function from a method.
+// Notice, there is no receiver here.
+// The receiver is what separates a function from a method.
 
 // Method call using DOT notation - Preferred.
 myObj.greet("Reader");     // Easy to read

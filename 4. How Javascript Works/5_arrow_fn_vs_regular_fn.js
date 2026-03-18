@@ -11,8 +11,9 @@ const obj = {
 };
 obj.show();                 // 'Hi undefined'
 
-// Because in arrow functions, the 'this' keyword DOES NOT points to current Object.
-// It points to outer scope. (global object - window object in this case)
+// Because in arrow functions, the 'this' keyword DOES NOT
+// point to current Object.
+// It points to outer scope; global object in this case.
 
 
 // Example # 2
@@ -23,51 +24,61 @@ const obj = {
 };
 obj.show();                 // 'Hi Hitesh'
 
-// This is because in the first line "var name = "Hitesh";" 
-// we have declared a variable on global object (window object in case of Browser)
+// This is because in the first line "var name = "Hitesh";"
+// we have declared a variable on global object
+// (window object in case of Browser)
 // That means now "name" is globally available.
-console.log(this);          // window { ... }
-console.log(this.name);     // window { ... , name:Hitesh, ... }
+console.log(this);
+// window { ... }
+console.log(this.name);
+// window { ... , name:Hitesh, ... }
 
 
 // Example # 3
 const obj = {
     name: 'Rahul',
     show: function (){
-        // ...   
+        // ...
         const innerFn = function(){
             // ...
-            console.log(this.name);         // Cannot read property 'name' of undefined
+            console.log(this.name);
+            // Cannot read property 'name' of undefined
         };
-        innerFn();                          // Because its not being called using an object.
+        innerFn();
+        // Because its not being called using an object.
     }
 };
 
 // Solution:
 const obj = {
     name: 'Rahul',
-    
+
     show: function (){
-        // ...   
-        const self = this;                  // We still have access to 'this' here
+        // ...
+        const self = this;
+        // We still have access to 'this' here
         const innerFn = function(){
             // ...
             console.log(self.name);
         };
-        innerFn();                          // Now this will work.
+        innerFn();
+        // Now this will work.
     }
 };
 
 // Example # 4
-// ES6 Solution (Modern): - use arrow functions. 
+// ES6 Solution (Modern): - use arrow functions.
 // Because 'this' in arrow function references its outer scope.
 const obj = {
     name: 'Rahul',
-    show: function (){                       // Outer. (a Regular Fn.)
-        // ...   
-        // const self = this;                 // We dont need it now.
-        innerFn = () => { console.log(this.name); }; // Inner. (an Arrow Fn.)
-        innerFn();                            // Now this will work too.
+    show: function (){
+        // ...
+        // const self = this;
+        // We dont need it now.
+        innerFn = () => { console.log(this.name); };
+        // Inner. (an Arrow Fn.)
+        innerFn();
+        // Now this will work too.
     }
 };
 
@@ -76,12 +87,12 @@ const obj = {
 
 // Regular Fn.
 const sum = function(a , b ) {
-    console.log(arguments);                    // Prints the arguments passed to this function
+    console.log(arguments);
+    // Prints the arguments passed to this function
 }
 
 // Arrow Fn.
 const sum = (a , b ) => {
-    console.log(arguments);                    // ReferenceError: arguments is not defined.
+    console.log(arguments);
+    // ReferenceError: arguments is not defined.
 }
-
-

@@ -3,7 +3,8 @@
 //////////////////////////////////////////////////////////////
 
 // To iterate over an Iterable.
-// "for..in" iterates over a list of numeric properties ("keys/index") of the object being iterated.
+// "for..in" iterates over a list of numeric properties
+// ("keys/index") of the object being iterated.
 
 //  Example #1:
 let list = [4, 5, 6];
@@ -18,8 +19,9 @@ var employee = {
    employee_address: "India",
    salary: "LOL"
 }
-for(const i in employee)
+for(const i in employee){
    console.log(i);
+}
 // employee_id
 // employee_name
 // employee_address

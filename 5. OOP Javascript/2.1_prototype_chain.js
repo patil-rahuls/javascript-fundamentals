@@ -78,5 +78,5 @@ console.log(stu.hasOwnProperty('name'));
 //    valueOf()
 //    propertyIsEnumerable()
 //    toLocaleString()
-// these methods are all delegated from built-in Object.prototype, hence available to 
+// these methods are all delegated from built-in Object.prototype, hence available to
 // all objects that we create.

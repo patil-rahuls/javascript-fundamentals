@@ -3,13 +3,15 @@
 //////////////////////////////////////////////////////////////
 
 // Literals represent values in javascript.
-// These are fixed values not variables that you literally provide in your script.
-// e.g. 
+// These are fixed values not variables that you literally
+// provide in your script.
+// e.g.
 let name = "foo"        // "foo" is a string literal
 let age = 29            // 29 is a number literal
-let stu = { name, age}; // { name, age } is an Object Literal
+let stu = { name, age}; // {name, age} is an Object Literal
 
-// A better way to write javascript objects with the new ES6 syntax could be as follows.
+// A better way to write javascript objects with the new
+// ES6 syntax could be as follows.
 
 //  Example #1:
 // Computed Properties
@@ -39,6 +41,8 @@ const myObj = {
     },
     //i.e. removed the colon and function keyword
 
-    film,                           // An outside object
-    movie: film,                    // An outside object using a different property name.
+    film,
+    // An outside object
+    movie: film,
+    // An outside object with a different property name.
 };

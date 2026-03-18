@@ -2,6 +2,8 @@
 // LOGICAL OR ASSIGNMENT ||= /////////////////////////////////
 //////////////////////////////////////////////////////////////
 
+value ||= 'Rahul'; //eq. to -> value = value || 'Rahul';
+
 //  Example #1 - Setting Default values
 let PORT = process.env.PORT;
 PORT ||= 3000;  // Use 3000 if PORT is missing, empty, or 0
@@ -19,6 +21,8 @@ console.log(settings);
 //////////////////////////////////////////////////////////////
 // LOGICAL AND ASSIGNMENT &&= ////////////////////////////////
 //////////////////////////////////////////////////////////////
+
+value &&= 'Rahul'; //eq. to -> value = value && 'Rahul';
 
 //  Example #1 - Conditional object property update
 let user = { name: "Rahul", isActive: true };
@@ -49,7 +53,3 @@ let cache = { items: [1, 2, 3] };
 // Clear cache only if it exists
 cache &&= null;
 console.log(cache); // null
-
-
-
-

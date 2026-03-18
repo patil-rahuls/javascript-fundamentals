@@ -2,22 +2,39 @@
 // DESTRUCTURING NESTED OBJECTS //////////////////////////////
 //////////////////////////////////////////////////////////////
 
-// Unpacks(and assigns) values from arrays, or properties from objects, into distinct variables.
-// TIP: [ ] and { } is at the LHS of =
+// Unpacks(and assigns) values from arrays, or properties from
+// objects, into distinct variables.
+
+// TIP: [ ] and { } is at the LHS of assignment ('=')
 
 // Useful in destructuring the APIs data.
-// We need to specify the correct property name in the destructuring assignment
+// We need to specify the correct property name in the
+// destructuring assignment
+
 // Use { } for objects and [ ] for arrays.
 
 //  Example #1
 const restaurant = {
     name: 'Rahul’s Cafe',
     location: 'Madh-Island, Mumbai, India',
-    starters: ['Crispy Corn Chaat', 'Hara Bhara Kebab', 'All Paneer Starters', 'Corn Kabab'],
-    categories: ['North Indian', 'Chinese', 'South Indian', 'Italian'],
- 
+    starters: [
+        'Crispy Corn Chaat',
+        'Hara Bhara Kebab',
+        'All Paneer Starters',
+        'Corn Kabab'
+    ],
+    categories: [
+        'North Indian',
+        'Chinese',
+        'South Indian',
+        'Italian'
+    ],
+
     order: function(starter_index, cat_index){
-        return [ this.starters[starter_index] , this.categories[cat_index] ];
+        return [
+            this.starters[starter_index],
+            this.categories[cat_index]
+        ];
     },
 
     workingHours : {
@@ -30,7 +47,12 @@ const restaurant = {
     },
 
     // orderDelivery - takes an object(Destructured) as a parameter.
-    orderDelivery: function ({ starterIndex=1 , mainIndex , time , address }){
+    orderDelivery: function({
+        starterIndex=1,
+        mainIndex,
+        time,
+        address
+    }){
         return `Your order ${this.starters[starterIndex]}
            and ${this.categories[mainIndex]} will be delivered to
            ${address} by ${time} Hours`;
@@ -48,9 +70,11 @@ const {
 } = restaurant;
 console.log(a, b );               // 8 , 23
 // We destructured weekends timings to variables a and b.
-// IMP: Use correct property names ('weekends' , 'open', 'close' in above example) to avoid errors.
+// IMP: Use correct property names 'weekends' , 'open',
+// 'close' in above example) to avoid errors.
 
-// Calling an object method which takes a destructured object as its parameter. "orderDelivery()"
+// Calling an object method which takes a destructured object
+// as its parameter.
 const myOrderObj = {
     starterIndex:2 ,
     mainIndex:1 ,
@@ -59,5 +83,5 @@ const myOrderObj = {
 };
 restaurant.orderDelivery(myOrderObj);
 
-// The Object 'myOrderObj' passed to "orderDelivery()" above is destructured in the method definition.
-// orderDelivery : function ({ starterIndex=1 , mainIndex , time , address }) {...}
+// The Object 'myOrderObj' passed to "orderDelivery()" above
+// is destructured in the method definition.

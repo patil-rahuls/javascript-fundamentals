@@ -2,8 +2,10 @@
 // NULLISH COALESCING ASSIGNMENT OPERATOR ??= ////////////////
 //////////////////////////////////////////////////////////////
 
-// It works same as || except that it does not consider 0, '', Infinity and NaN as falsy values.
-// Nullish means only 'null' and 'undefined' will be considered falsy.
+// It works same as || except that it does not consider
+// 0, '', Infinity and NaN as falsy values. Nullish means only
+// 'null' and 'undefined' will be considered falsy.
+
 // This operator not just evaluates, but also, assigns the value.
 
 // ??= prevents overwriting valid values like 0, false, or "",

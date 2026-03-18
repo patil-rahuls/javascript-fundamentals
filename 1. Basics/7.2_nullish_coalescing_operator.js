@@ -2,8 +2,9 @@
 // NULLISH COALESCING OPERATOR ?? ////////////////////////////
 //////////////////////////////////////////////////////////////
 
-// It works same as || except that it does not consider 0, '', Infinity and NaN as falsy values.
-// Nullish means only 'null' and 'undefined' will be considered falsy.
+// It works same as || except that it does not consider
+// 0, '', Infinity and NaN as falsy values. Nullish means only
+// 'null' and 'undefined' will be considered falsy.
 
 // ??= prevents evaluating valid values like 0, false, or "",
 // which often matter in user input, configs, or database values.
@@ -14,21 +15,22 @@ const maxUsers = usersCount || 10;
 console.log(maxUsers);
 // 10
 
-// But what if we want to consider 0 as a valid value for 'maxUsers'?
+// When we want to consider 0 as a valid value for 'maxUsers'
 // Solution : use nullish/coalesce operator.
 const maxUsersCount = usersCount ?? 10;
 console.log(maxUsersCount);
 // 0
 
 //  Example #2
-// NULLISH COALESCING OPERATOR ?? is useful when you are considering 0 or '' as truthy value.
+// Useful when you are considering 0 or '' as truthy value.
 const isDeleted = '';
 const result = isDeleted ?? 1;
 console.log(result);
 // ''
 
 //  Example #3
-// Using ?? with Infinity and NaN is not worth to use, because it will be returning Infinity/NaN.
+// Using ?? with Infinity and NaN is not worth to use,
+// because it will be returning Infinity/NaN.
 // Always use || to handle Infinity and NaN.
 const minUsers = NaN;
 const totalUsers = minUsers ?? 23;

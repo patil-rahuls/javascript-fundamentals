@@ -2,9 +2,9 @@
 // STRINGS - STRING METHODS //////////////////////////////////
 //////////////////////////////////////////////////////////////
 
-// Just like 'Array' constructor,
-// We have a constructor for strings - 'String'
-// and we have access to several methods that we can use on strings.
+// Just like 'Array' constructor, we have a constructor for
+// strings called 'String' and we have access to several
+// methods that we can use on strings primitives.
 const brand = 'Apple';
 const model = 'Macbook Air';
 
@@ -15,8 +15,10 @@ console.log( 'Apple'.length );      //  5
 
 // indexOf()
 // returns index of a string from a string
-brand.indexOf('e');                 // 4 (strings are also 0 based, just like arrays)
-model.indexOf('Air');               // 8
+brand.indexOf('e');
+// 4 (strings are also 0 based, just like arrays)
+model.indexOf('Air');
+// 8
 
 // lastIndexOf()
 // returns last Index Of given string from a string
@@ -24,22 +26,31 @@ brand.lastIndexOf('p');             // 2
 'Mississippi'.lastIndexOf('s');     // 6
 
 // slice() - works same as for array
-// slice(start_index , end_index):  element at 'end_index' is not included in the returned result.
+// slice(start_index , end_index):  element at 'end_index'
+// is not included in the returned result.
 model.slice(1);
 model.slice(-1);
 
 // splice() -
-// No, there is no such thing as a String.splice, but you can convert string to Array and use splice().
+// No, there is no function as String.splice(),
+// but you can convert string to Array and use splice().
 myStr = [...model];
-myStr.splice(7);                          // Air
-myStr.splice(3,7);                        // book
-myStr.splice(0 , myStr.lastIndexOf(' ')); // Mac
-myStr = myStr.join('');                   // And convert the Array back to string.
+myStr.splice(7);
+// Air
+myStr.splice(3,7);
+// book
+myStr.splice(0 , myStr.lastIndexOf(' '));
+// Mac
+myStr = myStr.join('');
+// And convert the Array back to string.
 
-// IMP: Javascript automatically converts a string primitive into a string Object and operates on it wth different methods.
-console.log( typeof new String("rahul") ); // Object
+// IMP: Javascript automatically converts a string primitive
+// into a string Object and operates on it wth different methods.
+console.log( typeof new String("rahul") );
+// Object
 
 // On calling slice(), string primitive is converted into object,
-// the method is applied on that object,
-// and then the obejct is converted back into string primitive and returned.
-console.log( typeof new String("Rahul").slice(-1) ) ; // string
+// the method is applied on that object, and then the obejct
+// is converted back into string primitive and returned.
+console.log( typeof new String("Rahul").slice(-1) ) ;
+// string

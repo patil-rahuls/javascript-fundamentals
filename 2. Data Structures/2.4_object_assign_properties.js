@@ -32,18 +32,21 @@ myObj[9820694183] = 'mobile';  // this works.
 // Dynamic property name should always be provided inside []
 const prop = 'name';
 const obj = {};
-// obj.prop = 'Rahul'; // will set the property name as 'prop' resulting in { prop: 'Rahul' }
+obj.prop = 'Rahul';
+// obj -  { prop: 'Rahul' }
 obj[prop] = 'Rahul';
 // obj - { name: 'Rahul' }
 
-// When using const, you cannot re-declare objects which are already declared with const.
+// When using const, you cannot re-declare objects
+// which are already declared with const.
 const myObj = {
     1:'yes',
     2:'No',
     3:'may be'
 };
 
-myObj = {    // Error "Assignment to constant variable." coz its a const
+// Below will give an Error "Assignment to constant variable."
+myObj = {
     1:'yes',
     2:'No',
     3:'may be',
