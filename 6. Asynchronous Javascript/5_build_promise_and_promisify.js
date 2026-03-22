@@ -4,7 +4,8 @@
 
 // 1. Creating a new Promise
 // Created using Promise Constructor.
-// It takes exactly one argument the 'executor' function. This 'executor' function has 2 parameters
+// It takes exactly one argument the 'executor' function.
+// This 'executor' function has 2 parameters
 // these parameters are actually functions - resolve() and reject()
 
 // Syntax:
@@ -19,16 +20,20 @@ const myPromise = new Promise(function(resolve, reject){
 
     if( true ){ // just for example.
         // Code for Fulfilled Promise goes here.
-        resolve("My Name is Rahul"); // "My Name is Rahul" string will be available to the then() function.
-        // resolve() is called to set the Promise as Fulfilled.
-        // and the 'to be' fulfilled value is passed to the resolve() function.
+        resolve("My Name is Rahul");
+        // "My Name is Rahul" string will be available to
+        // the then() function. resolve() is called to set the
+        // Promise as Fulfilled and the 'to be' fulfilled value
+        // is passed to the resolve() function.
     }
     else{
         // Code for Rejected Promise goes here.
-        reject("My Error Message"); // "My Error Message" string will be available to the catch() function.
-        // reject() is called to set the Promise as Rejected.
-        // and the Error Message/Value is passed to the reject() function.
-        // the string "My Error Message" passed to reject() will be available to the catch() method chained to this promise.
+        reject("My Error Message"); // "My Error Message" string
+        // will be available to the catch() function. reject() is
+        // called to set the Promise as Rejected. and the Error
+        // Message/Value is passed to the reject() function the
+        // string "My Error Message" passed to reject() will be
+        // available to the catch() method chained to this promise.
 
     }
 });
@@ -37,10 +42,15 @@ const myPromise = new Promise(function(resolve, reject){
 
 //////////////////////////////////////////////////////////////
 // 2. Consuming the Promise. (then())
-myPromise.then(result=>console.log(result)).catch(err=>console.error(err));
+myPromise.then(
+    result=>console.log(result)
+).catch(
+    err=>console.error(err)
+);
 // Observe that We didn't use .json() function here.
 
-// However, this is not asynchronous, as there is only one task in it.
+// However, this is not asynchronous,
+// as there is only one task in it.
 
 // Let's Modify it.
 const newPromise = new Promise(function(resolve, reject){
@@ -49,7 +59,8 @@ const newPromise = new Promise(function(resolve, reject){
         if( true )
             resolve("My Name is Rahul");
         else
-            reject(new Error("My Error Message")); // This is a good idea, as it prints out on console like error.
+            reject(new Error("My Error Message"));
+        // This is a good idea, as it prints out on console like error.
     }, 2000);
 
 });
@@ -60,7 +71,8 @@ const newPromise = new Promise(function(resolve, reject){
 
 //////////////////////////////////////////////////////////////
 // Promisifying
-// Converting callback based asynchronous behaviour into promise based.
+// Converting callback based asynchronous behaviour into
+// promise based.
 
 // Promisifying setTimeout()
 const waitForNSecond = function(seconds){
@@ -69,7 +81,9 @@ const waitForNSecond = function(seconds){
     });
 };
 // Using arrow fn.
-const waitForNSeconds = seconds => new Promise(resolve=>setTimeout(resolve, seconds*1000));
+const waitForNSeconds = seconds => new Promise(
+    resolve=>setTimeout(resolve, seconds*1000)
+);
 
 waitForNSeconds(4).then(function(){
     console.log("I waited for 4 Seconds.");
@@ -84,5 +98,9 @@ waitForNSeconds(4).then(function(){
 // This Prevents Callback hell, also the code looks readable.
 
 // Build a Promise and Resolve immediately.
-Promise.resolve('abc').then((x)=>{ console.log(x) }); // abc
-Promise.reject(new Error('something')).then((x)=>{ console.log(x) }); // Error: something
+Promise.
+    resolve('abc').
+    then((x)=>{ console.log(x) }); // abc
+Promise.
+    reject(new Error('something')).
+    then((x)=>{ console.log(x) }); // Error: something

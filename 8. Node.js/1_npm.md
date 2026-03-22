@@ -36,7 +36,7 @@
 #### Package installation
 
 - Installing a package from npm
-    - `npm install <packageName>` 
+    - `npm install <packageName>`
     - `npm i <packageName>`
     - `npm i <packageName>@10.2.2` (10.2.2 is the version)
 - After running this command, 3 things happen.
@@ -68,7 +68,7 @@
     - To install a package globally, use the -g flag:
     `npm install nodemom@1.18.5 -g`
     - Note that after this command finishes, nothing changes in package.json, package-lock.json and 'node_modules' folder of our project. This is because we installed the package globally on our node js server.
-    
+
     - If you use the -g (global) option, the package is installed in a global location. This location varies per the OS.
     e.g. /usr/local/lib/node_modules/packagename on ubuntu.
     - If you’re installing something that you want to use in your shell, on the command line or something, install it globally, so that its binaries end up in your PATH environment variable.
@@ -106,4 +106,35 @@
 
 #### package-lock.json
 
-- _(WIP)_
+- The 'package-lock.json' file is generated automatically the moment you run npm install.
+- It records exactly what was put in 'package.json' file.
+- It lists:
+    - The exact version number (e.g., 1.2.3, not just ^1.2.0).
+    - Where it was downloaded from.
+    - A "hash" (a digital fingerprint) to prove the code hasn't
+    been tampered with.
+- It is edited automatically by npm.
+- Should be commited along with 'package.json' file for team consistency.
+- Your project might only need one library (let's call it "A").
+    But library "A" needs library "B," and "B" needs "C."
+    You don't control those "hidden" libraries. If library "C" updates and breaks, your whole project breaks. The package-lock.json locks down that entire "family tree" so nothing can change without you explicitly choosing to update it.
+    With a lock file: When your teammate runs npm install, Node looks at the package-lock.json and says: "I don't care if there is a newer version available; the lock file says we must use exactly version 1.2.3."
+
+#### Setup project
+- "npm init"
+    Command used to scaffold a project.
+    It shows a series of question that u can answer in order
+    to help setup your project.
+    Result - a package.json file is created.
+
+- "nodemon"
+    "npm install express nodemon"
+    Restarts the server whenever any changes occur in the code.
+    (AKA hot reload)
+
+- "json modules with es6"
+    // To use es6 with json modules we need to add the following
+    // in the scripts section of package.json
+    "scripts": {
+        "start": "nodemon --experimental-json-modules index.js"
+    }

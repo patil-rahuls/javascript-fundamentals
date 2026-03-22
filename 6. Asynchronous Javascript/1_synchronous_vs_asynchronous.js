@@ -3,8 +3,8 @@
 //////////////////////////////////////////////////////////////
 
 // 1. SYNCHRONOUS
-// Synchronous code is executed in sequence.
-// A statement has to wait for the earlier statement to get executed.
+// Synchronous code is executed in sequence. A statement has
+// to wait for the earlier statement to get executed.
 // Long runing operations "block" the code execution.
 
 //  Example # 1:
@@ -16,9 +16,9 @@ console.log('Three');``
 
 
 // 2. ASYNCHRONOUS
-// Long runing operations can be made to "execute in the background".
-// While rest of the code executes normally without ever being blocked.
-// Asynchronous code is "non-blocking".
+// Long runing operations can be made to "execute in the
+// background". While rest of the code executes normally without
+// ever being blocked. Asynchronous code is "non-blocking".
 
 //  Example #2:
 console.log('One');
@@ -28,10 +28,12 @@ console.log('Three');
 // 'One', 'Three', 'Two'
 
 
-// AJAX(Asynchronous Javascript and XML) execution is asynchronous.
-// Some examples of this are network requests, long-running calculations, file system operations etc.
-// Using asynchronous code in the browser ensures the page remains responsive and
-// the user experience is mostly unaffected.
+// AJAX(Asynchronous Javascript and XML) is asynchronous.
+// Some examples of this are network requests, long-running
+// calculations, file system operations etc.
+// Using asynchronous code in the browser ensures that the
+// page remains responsive and the user experience is mostly
+// unaffected.
 
 // Not all callback functions make code asynchronous.
 
@@ -39,8 +41,9 @@ console.log('Three');
 //////////////////////////////////////////////////////////////
 // CALLBACK HELL /////////////////////////////////////////////
 //////////////////////////////////////////////////////////////
-// When we have multiple asynchronous operations one after the other by "nesting" the callbacks,
-// we get a a pyramid structure like code called 'callback hell'.
+// When we have multiple asynchronous operations one after
+// the other by "nesting" the callbacks, we get a a pyramid
+// structure like code called 'callback hell'.
 // Every callback depends/waits for the previous callback.
 // Affects the readability and maintainability of the code.
 

@@ -24,8 +24,8 @@ const stu = new Student('Rahul', 1);
 // Before looking into this code's execution,
 // lets understand *prototype*
 
-// Each and every function(object) in javascript automatically
-// has a property called *prototype*.
+// Each and every function(object) in javascript
+// automatically has a property called *prototype*.
 
 // Student constructor function too will have a prototype
 // property and can be accessed using "Student.prototype".
@@ -95,7 +95,7 @@ const ExStudent = function (name , rollNo) {
     // instances of ExStudent using this constructor then
     // each of these 1000 obj would have this function's copy.
     this.show = function(){
-        console.log("Roll No: " + this.rollNo + " _ Name: " + this.name);
+        console.log(this.rollNo, this.name);
     }
 };
 // We call it with the "new" operator.
@@ -103,7 +103,8 @@ const s1 = new ExStudent('Rahul', 132188);
 console.log(s1);
 // Prints the ExStudent Object.
 
-// We didnt technically create a class here and didn't instantiate it.
+// Here, we didn't technically create a class and
+// didn't instantiate it.
 // However, it looks like we are instantiating a class,
 // as seen in other programming languages.
 

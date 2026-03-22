@@ -15,8 +15,10 @@ Modules -
 
 //////////////////////////////////////////////////////////////
 Packages & Specifications
-    Packages - A directory with one or more Modules.
-    Module Specifications - conventions and specs used to create packages in js code.
+    Packages -
+    A directory with one or more Modules.
+    Module Specifications -
+    conventions and specs used to create packages in js code.
     Two types-
         Common JS
         ES
@@ -24,47 +26,78 @@ Packages & Specifications
 
 //////////////////////////////////////////////////////////////
 Differences -
-                                Common JS               ES
-        import a module         require()               import
-        export from a module    module.exports          export
 
-    1.  calling - require() can be called from anywhere in the code(including within conditionals and functions), whereas import
-        can only be called at the begining.
-    3.  require() is bound dynamically. whereas, import is bound static
-        This means, for *require* the binding errors are not identified untill run-time. For *import* the binding errors are identified at compile time.
-    4.  require() are synchrounous in nature, means, modules will be loaded in sequence(linear fashion). import modules are
-        asynchrounous. Import runs faster in large scale applications where we need to import a large no. modules in a file.
-    5.  If the module is not found, require() will automatically scan 'node_modules' folder to find modules, but import won't.
+                        Common JS               ES
+import a module         "require()"           "import"
+export from a module    "module.exports"      "export"
+                        "exports."
+
+1.  Calling - "require()" can be called from anywhere in the
+    code(including within conditionals and functions), whereas
+    "import" can only be called at the begining.
+3.  "require()" is bound dynamically. whereas, import is bound
+    static.
+    This means, for "require()" the binding errors are not
+    identified untill run-time.
+    For "import" the binding errors are identified at compile time.
+    For "import" the engine "links" the variables before the
+    code even runs.
+    For "require()" it just executes the file and returns whatever
+    object was assigned to module.exports at that specific moment.
+4.  "require()" are synchrounous in nature, means, modules will
+    be loaded in sequence(linear fashion).
+    "imports" are asynchrounous. Import runs faster in large
+    scale applications where we need to import a large number of
+    modules in a file.
+5.  If the relative file is not found, require() automatically
+    scans 'node_modules' folder and project folders recursively
+    to find modules, but import won't.
+
+    "import" only scans 'node_modules' folder when we specify a
+    bare specifier i.e. without '/' or './'
+    e.g. import { add } from 'lodash';
+
+    "require()" follows a aggresive algorithm to search for the
+    file imported. e.g. it first checks if it is a core module,
+    if not found, it checks for a file/folder with the same
+    name in current directory, if found in a folder with the
+    same name, it checks for index.js file in the found
+    directory. If still not found, it checks in 'node_modules'
+    folder in CURRENT directory. If it’s still not there, it
+    moves up to the parent directory's node_modules, and
+    the parent's parent, all the way up to the root of
+    your hard drive.
+
+    let today = require("./today");
+
+    // The require statement above, will assume that the
+    // script 'today' have a file ext of .js
+    // If there is no 'today.js' file in the current directory,
+    // it will assume that 'today' is a sub-directory
+    // and it will search for 'index.js' in that directory.
 
 //////////////////////////////////////////////////////////////
-Example - require
-    File-  msg.js
-        module.exports = 'Hello World';
-    File - main.js
-        let msg = require('./msg.js');
-        console.log(msg);
 
-Example - import
-    File-  msg.mjs  // observe the extension ".mjs"
-        const i = 10;
-        export { i as 'counter' };
-    File - main.js
-        import { counter } from './msg.mjs';
-        console.log(counter);
 
 //////////////////////////////////////////////////////////////
 Why .mjs extension?
 It indicates an ES6 module file.
 
-Node.js's original module system is CommonJs (which uses *require* and *module.exports* ).
+Node.js's original module system is CommonJs
+(which uses *require* and *module.exports* ).
 
-Since Node.js was created, the ECMAScript module system (which uses *import* and *export*) has become standard and Node.js has added support for it.
+Since Node.js was created, the ECMAScript module system
+(which uses *import* and *export*) has become standard and
+Node.js has added support for it.
 
-Node.js will treat *.cjs* files as CommonJS modules and *.mjs* files as ECMAScript modules.
+Node.js will treat *.cjs* files as CommonJS modules and *.mjs*
+files as ECMAScript modules.
 
-IMP - It will treat *.js* files as whatever the *default module system for the project* is (which is CommonJS UNLESS package.json says "type": "module").
+IMP - It will treat *.js* files as whatever the *default module
+system for the project* is (which is CommonJS UNLESS package.json
+says "type": "module").
 
-Hence, as long as Node JS doesn't consider *.js* files as *ES Modules* BY DEFAULT, we need to keep specifying
+Hence, as long as Node JS doesn't consider *.js* files as
+*ES Modules* BY DEFAULT, we need to keep specifying
 "type": "module" inside the package.json file of our project.
-
 */

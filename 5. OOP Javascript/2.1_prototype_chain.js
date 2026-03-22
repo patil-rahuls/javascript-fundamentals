@@ -56,21 +56,28 @@
 // Lets understand the execution of the following code -
 console.log(stu.hasOwnProperty('name'));
 
-// See the above diagram; the method hasOwnProperty() is called using the "stu" Object.
-// So it is checked/looked up for existence in the "stu" Object, where it is not found.
-// Then, just like Scope chain, here too, it looks UP for the method definition in "stu"
-// object's prototype
+// See the above diagram;
+// The method hasOwnProperty() is called using the "stu" Object.
+// So it is checked/looked up for existence in the "stu" Object,
+// where it is not found.
+// Then, just like Scope chain, here too, it looks UP for the
+// method definition in "stu" object's prototype.
 //
-// "stu" prototype means "stu.__proto__" and that is Student.prototype (see the above diagram)
-// Again, the method hasOwnProperty() is not found in Student.prototype too, so it is looked
-// up in the Student.prototype's prototype i.e. its "__proto__" property, i.e. the built-in Object's prototype property
-// i.e. Object.prototype. It has most of the methods like hasOwnProperty(), as it is built-in.
+// "stu" prototype means "stu.__proto__" and that is Student.prototype
+// (see the above diagram)
+// Again, the method hasOwnProperty() is not found in Student.prototype
+// too, so it is looked up in the Student.prototype's prototype i.e.
+// its "__proto__" property, i.e. the built-in Object's prototype
+// property i.e. Object.prototype.
+// It has most of the methods like hasOwnProperty(), as it is built-in.
 
-// Also, note that there is no prototype of Object.prototype (Object.prototype.__proto__ : null).
-// So, this becomes the end of our Prototype Chain.
+// Also, note that there is no prototype of Object.prototype
+// (Object.prototype.__proto__ : null). So, this becomes the end of
+// our Prototype Chain.
 
 // *Object* is a built-in Constructor Function.
-// All objects that we create in JS are instance of this Object Constructor Function.
+// All objects that we create in JS are instance of this Object
+// Constructor Function.
 // And the following methods are present in the *Object.prototype* object.
 //    hasOwnProperty()
 //    isPrototypeOf()
@@ -78,5 +85,5 @@ console.log(stu.hasOwnProperty('name'));
 //    valueOf()
 //    propertyIsEnumerable()
 //    toLocaleString()
-// these methods are all delegated from built-in Object.prototype, hence available to
-// all objects that we create.
+// these methods are all delegated from built-in Object.prototype,
+// hence available to all objects that we create.

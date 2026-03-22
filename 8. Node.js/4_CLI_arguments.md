@@ -8,7 +8,7 @@
 #### process.argv (argv - argument vector)
 
 - argv is an array of the arguents supplied to the script while executing it.
-- for e.g. let's say we have the following code in our app.js. 
+- for e.g. let's say we have the following code in our app.js.
     - `console.log(process.argv);`
 - and we run it by passing some arguments:
     - `node app.js rahul`
@@ -53,5 +53,5 @@
         }
     });
     ```
-    - On running node nma.js add it will print 'adding a note'
+    - On running node index.js add it will print 'adding a note'
     - yargs.parse() // parses the command line arguments and run the appropriate command handler.

@@ -2,102 +2,82 @@
 // MODULES [ES 6] ////////////////////////////////////////////
 //////////////////////////////////////////////////////////////
 
-// 1. Named Exports ( curly braecs {  } )
-// New file : shoppingCart.js ////////////////////////////////////
-//// Exporting module                                           //
-    console.log('Exorting Module');                             //
-    const shippingCost= 50;                                     //
-    const cart = [];                                            //
-                                                                //
-    const addToCart = function(product , quantity){             //
-        cart.push({product , quantity});                        //
-        console.log(`${quantity} ${product} Added !! `);        //
-    }                                                           //
-                                                                //
-    // Named export                                             //
-    // Should be at top level. not inside any                   //
-    // blocks like if/loops etc.                                //
-    export const chkPinCode = function(pincode){                //
-        console.log(`Pincode ${pincode} is servicable.`);       //
-    }                                                           //
-                                                                //
-    // We can export multiple things using named export.        //
-    const qtyLimit = 5;                                         //
-                                                                //
-    // These variables/methods are scoped to only this module.  //
-    export { shippingCost, addToCart, chkPinCode, qtyLimit };   //
-    /* Aliases can be also used in exports                      //
-    export {                                                    //
-        shippingCost,                                           //
-        addToCart,                                              //
-        chkPinCode,                                             //
-        qtyLimit as maxQty                                      //
-    };                                                          //
-    */                                                          //
-//////////////////////////////////////////////////////////////////
+// They use "import" and "export".
+// They are asynchronous, which makes them better for
+// web performance.
+// Always in Strict Mode
+// File extension are usually - .js (or .mjs)
 
-// Main file : script.js /////////////////////////////////////////
-//// Importing module                                           //
-    import {                                                    //
-        addToCart,                                              //
-        shippingCost,                                           //
-        chkPinCode } from './shoppingCart.js';                  //
-    /* using Aliases for imported values.                       //
-    import {                                                    //
-        addToCart,                                              //
-        shippingCost as deliveryCharges                         //
-    } from './shoppingCart.js';                                 //
-                                                                //
-    // Importing all values from a module                       //
-    // a.k.a Namespace import                                   //
-    import * as shoppingCartDetails from "./shoppingCart.js";   //
-    shoppingCartDetails.addToCart(10, "rubber");                //
-    */                                                          //
-                                                                //
-    console.log('Importing Module');                            //
-    // calling method imported from the shoppingCart Module     //
-    addToCart("Shirt", 5);                                      //
-    chkPinCode(400061);                                         //
-//////////////////////////////////////////////////////////////////
+// IMP: In ES6 Modules (import), you get a live connection
+// (also called a "live binding"). If the original file updates
+// the value, your imported variable updates automatically.
 
 
-// 2. Default exports ( no curly braces {  } )
-// A module can only have ONE default export,
-// but as many named exports as you'd like.
-// And You can import them all together:
+// Example 1: Named Exports/Imports
+// A module can have as many names exports.
+//////////////////////////////////////////////////////////////
+// Exporting Module
+// mathUtils.js (The Provider)
+const add = (a, b) => a + b;
+const pi = 3.14;
+export { add, pi };
 
-// Suppose u want to export a function by default., then default export looks like :
-export default function(product , quantity){
-    cart.push({product , quantity});
-    console.log(`${quantity} ${product} Added !! `);
-};  // directly exporting a function.
+// OR we can export individually.
+export const add = (a, b) => a + b;
+export const pi = 3.14;
+//////////////////////////////////////////////////////////////
 
-// And while importing we can give it any name
-import add from './shoppingCart.js';
-// It checks for default export. No curly braces around add.
-add('pizzza',2);
+//////////////////////////////////////////////////////////////
+// Importing Module
+// app.js (The Consumer)
+import { add, pi } from './mathUtils.js';
+console.log(add(10, 20)); // 30
+//////////////////////////////////////////////////////////////
 
-// Never mix default with named imported items.
-// import add , { addToCart, totalPrice as price, totalQty} from './shoppingCart.js'; 
-// peolpe say its a bad idea, dont know why. Please correct me :)
 
-// 3. MIXED default with named exports
-// B.js
-import A, { myA, Something } from './A'
-// Here, we import the default export as A, and
-// named exports called myA and Something, respectively.
 
-// A.js
-export default 42
-export const myA = 43
-export const Something = 44
 
-// We can also assign them all different names when importing:
-// B.js
-import X, { myA as myX, Something as XSomething } from './A'
+// Example 2: Default Export/Imports
+// A module can only have only ONE default export and more than
+// one named exports.
+// We specify Alias' using 'as' keyword.
+//////////////////////////////////////////////////////////////
+// Exporting Module
+// mathUtils.js (The Provider)
+export default (a, b) => a + b;
+const pi = 3.14;
+const K = -273.15;
+export { pi, K as KelvinConstant }; // Exporting Alias
+//////////////////////////////////////////////////////////////
 
-// Remember, the curly braces are used only for named exports,
-// while the default exports are imported directly i.e. without the curly braces.
+//////////////////////////////////////////////////////////////
+// Importing Module
+// app.js (The Consumer)
+import
+    addFunction,
+    {
+        KelvinConstant,  // We can't use 'K' here.
+        pi as PiConstant // Alias while importing.
+    } from './mathUtils.js';
+console.log(addFunction(10, 20)); // 30
+// When no curly braces are given around, it checks for the
+// default export. e.g. for "addFunction" in this case.
+//////////////////////////////////////////////////////////////
+
+
+
+
+// Example 3: Namespace Imports
+// Consider the exporting file from Example:2 for this example.
+// Using '*' and 'as' we can import everything in an alias.
+import * as name from "./mathUtils.js";
+
+const result = name.default(10, 20);
+// name.default would call the default exported fn.
+console.log(name.pi);
+
+
+
 
 // To Summarise -
 // Named import: import { export1, export2 } from "module-name";

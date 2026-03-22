@@ -17,17 +17,16 @@
 - **_[ES6]_** Template Literals
 - **_[ES6]_** for-of loop
 - for-in loop
-- **_[ES6]_** Default Parameters (Function)
 - Error Types
-- Console
+- Console methods
 - User Interaction (Browser)
 - DOM Manipulation (Browser)
 
 ## Data Structures
 - Arrays
 - Array Methods
-- **_[ES6]_** Typed Arrays _(WIP)_
-- Objects, properties retrieval, removal, iteration, clones and methods
+- **_[ES6]_** Typed Arrays
+- Objects, properties retrieval, removal, iteration, clone and methods
 - Objects' **_this_** keyword
 - **_[ES6]_** Maps, iteration and methods
 - **_[ES6]_** Sets, methods and use cases
@@ -45,12 +44,11 @@
 - call, apply and bind methods
 - IIFE
 - String methods
-- Debouncing _(WIP)_
-- **_[ES6]_** Iterables & Iterators _(WIP)_
-- **_[ES6]_** Generators _(WIP)_
+- Debouncing
+- **_[ES6]_** Iterables & Iterators
+- **_[ES6]_** Generators
 - Decorators _(WIP)_
-- Number & Dates in JS _(WIP)_
-- Tail Call Optimization _(WIP)_
+- Number & Dates in JS
 
 ## How Javascript Works
 - Compilation, Interpretation and JIT-Compilation
@@ -58,9 +56,9 @@
 - Javascript Engine
 - Function Execution Context
 - Hoisting and TDZ
-- **_this_** Keyword
+- The **_this_** Keyword
 - Arrow Functions Vs Regular Functions
-- Primitives Values and Reference Values
+- Primitives and References
 - Event Loop
 - Event Loop Queues
 - Memory Management _(WIP)_
@@ -98,7 +96,13 @@
 - Basics
 - NPM and Package.json
 - Local and Global package installation
-- **_http_** module
+- Cluster
+- Worker Threads
 - CLI
 - **_fs_** module
-- More inbuilt modules
+- **_http_** module
+- Event Emitters, CaptureRejection, AbortController
+- Buffer
+- Streams, pipe/pipeline
+- Express.js framework
+- Useful inbuilt node modules

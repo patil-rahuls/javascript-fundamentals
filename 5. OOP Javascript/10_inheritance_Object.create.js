@@ -9,7 +9,8 @@ const ParentProto = {
     calcAge(){
         console.log(2037 - this.birthYear);
     },
-    init(fullName, birthYear){          // plz dont get confused. init() is user defined fn.
+    init(fullName, birthYear){
+        // init() is just any other user defined fn.
         this.fullName = fullName;
         this.birthYear = birthYear;
     }
@@ -25,7 +26,11 @@ UserProto.init = function(fullName, birthYear, userName){
 };
 
 UserProto.show = function(){
-    console.log(`Name is ${this.fullName}, age is ${2029-this.birthYear}. Username is ${this.userName}`);
+    console.log(`
+        Name is ${this.fullName},
+        age is ${2029-this.birthYear}.
+        Username is ${this.userName}`
+    );
 };
 
 
@@ -49,4 +54,5 @@ user1.show();
 //       user1                      //
 //  //////////////////////////////////
 
-// Observe that this is also, a lot simpler than using constructor functions.
+// Observe that this is also, a lot simpler than
+// using constructor functions.

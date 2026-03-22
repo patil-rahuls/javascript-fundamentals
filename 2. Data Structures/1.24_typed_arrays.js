@@ -19,13 +19,15 @@ const buffer = new ArrayBuffer(16); // (Allocates 16 bytes of memory).
 // 2. The Typed Array View (The Interpreter)
 const view = new Uint8Array(buffer); // (Reads from the memory).
 
+/*
 Common Typed Array Views -
-Class           Size(Bytes) Description              Range
-Int8Array           1       8-bit signed integer     -128 to 127
-Uint8Array	        1	    8-bit unsigned integer	 0 to 255
-Uint8ClampedArray	1	    8-bit unsigned (clamped) 0 to 255 (Great for RGB colors)
-Int32Array	        4	    32-bit signed integer	 -2,147,483,648 to 2,147,483,647
-Float64Array	    8	    64-bit floating point	 Same as a standard JS Number
+Class             Bytes   Description               Range
+Int8Array         1       8-bit signed integer      -128 to 127
+Uint8Array	      1	      8-bit unsigned integer	  0 to 255
+Uint8ClampedArray	1	      8-bit unsigned (clamped)  0 to 255 (Great for RGB colors)
+Int32Array	      4	      32-bit signed integer	    -2,147,483,648 to 2,147,483,647
+Float64Array	    8	      64-bit floating point	    Same as a standard JS Number
+*/
 
 // Key Differences:
 // Fixed Length:
@@ -78,10 +80,20 @@ for (let i = 0; i < typedArray.length; i++) {
 }
 console.timeEnd('Typed Array Sum');
 
-// WHy Typed Arrays are faster?
-// 1. Memory Layout: Typed Arrays store data in contiguous blocks of memory,
+//////////////////////////////////////////////////////////////
+// Why Typed Arrays are faster?
+//////////////////////////////////////////////////////////////
+
+// 1. Memory Layout:
+// Typed Arrays store data in contiguous blocks of memory,
 // which allows for better cache performance and faster access.
-// 2. Type Enforcement: Since all elements in a Typed Array are of the same type,
-// the JavaScript engine can optimize operations on them more effectively.
-// 3. Reduced Overhead: Regular arrays can hold mixed types and have dynamic resizing,
-// which adds overhead. Typed Arrays, being fixed in size and type, avoid this overhead.
+
+// 2. Type Enforcement:
+// Since all elements in a Typed Array are of the same type,
+// the JavaScript engine can optimize operations on them more
+// effectively.
+
+// 3. Reduced Overhead:
+// Regular arrays can hold mixed types and have dynamic resizing,
+// which adds overhead. Typed Arrays, being fixed in size and
+// type, avoid this overhead.

@@ -4,7 +4,7 @@
 
 // 1. Inheritance using constructor functions.
 
-//  Example#   
+//  Example#
 // Class - Furniture
 const Furniture = function(brand, margin){
     this.brand = brand;
@@ -20,16 +20,26 @@ const Sofa = function(brand, margin, returnable){
     // this.brand = brand;
     // this.margin = margin;
 
-    // Calling Parent's constructor fn. using call method. Remember call(), apply() and bind() ?
-    // Furniture(brand, margin); // not correct. because we cant call it like a regular fn. (it has 'this' keyword).
+    // Calling Parent's constructor fn. using call method.
+    // Remember call(), apply() and bind() ?
+    // Furniture(brand, margin); // not correct. because we
+    // cant call it like a regular fn. (it has 'this' keyword).
     Furniture.call(this, brand, margin);
     // OR
     Furniture.apply(this, [brand, margin]);
     this.returnable = returnable;
 };
 Sofa.prototype.info = function(){
-    console.log(`Product Sofa of Brand ${this.brand} has a commision margin of ${this.margin}
-    and it is ${this.returnable?'returnable':'not returnable'}.`);
+    console.log(`
+        Product Sofa of Brand ${this.brand} has
+        a commision margin of ${this.margin}
+        and it is
+            ${  this.returnable ?
+                'returnable'
+                :
+                'not returnable'
+            }.
+    `);
 };
 
 const s1 = new Sofa('Neelkamal', 15, false);
@@ -46,23 +56,32 @@ const s1 = new Sofa('Neelkamal', 15, false);
 //      |
 //   Obj - s1
 
-// We need to make Furniture.prototype a prototype(__proto__) of Sofa.prototype
-// So, we say Sofa.prototype is linked to Furniture.prototype, and we do that using Object.create
+// We need to make Furniture.prototype a prototype(__proto__)
+// of Sofa.prototype
+// So, we say Sofa.prototype is linked to Furniture.prototype,
+// and we do that using Object.create
 
 Sofa.prototype = Object.create(Furniture.prototype);
-// Sofa.prototype = Furniture.prototype; // this is incorrect. If we do this,
-// the constructor functions Furniture and Sofa will both share same prototype.
-// This is because we are simply assigning an object to another. 
-// Remember obj1 = obj2; (only reference is copied, not the content)
+// Sofa.prototype = Furniture.prototype; // this is incorrect.
+// If we do this, the constructor functions Furniture and Sofa
+// will both share same prototype.
+// This is because we are simply assigning an object to another.
+// Remember obj1 = obj2;
+// (only reference is copied, not the content)
 
-// What we do here is that we LINK Sofa.prototype object using a Furniture prototype. (Furniture.prototype in this case)
-// Now, objects created using Sofa cnstructor fn, will have direct access to Furniture prototype methods.
+// What we do here is that we LINK Sofa.prototype object using a
+// Furniture prototype. (Furniture.prototype in this case)
+// Now, objects created using Sofa cnstructor fn, will have direct
+// access to Furniture prototype methods.
 
-s1.getCommisionTax(); 
+s1.getCommisionTax();
 // Sofa object accessing Furniture.prototype method.
-// When we call a method using an object, it does a method lookup through prototype chain. 
-// It checks if it is available in object's prototype?(Sofa.prototype). if not then it checks
-// in the prototype of Sofa.prototype i.e. Furniture.prototype
+// When we call a method using an object, it does a method lookup
+// through prototype chain.
+// It checks if it is available in object's prototype?
+// i.e. Sofa.prototype
+// if not then it checks in the prototype of Sofa.prototype i.e.
+// Furniture.prototype
 // Hence making a chain of prototypes.
 
 //  We can visualize it like this.
@@ -71,20 +90,24 @@ console.log(s1.__proto.__proto__);  // Furniture.prototype
 
 
 // Another IMP point here:
-// If we check the constructor property of Sofa.prototype object, it should point back to Sofa constructor.
-// But because we have used Object.create(Furniture.prototype), it points to Furniture.
+// If we check the constructor property of Sofa.prototype
+// object, it should point back to Sofa constructor.
+// But because we have used Object.create(Furniture.prototype),
+// it points to Furniture.
 
 console.dir(Sofa.prototype.constructor); // Furniture
 
 // Solution:
-Sofa.prototype.constructor = Sofa; // As simple as that. 
-// All we are doing is that resetting back the '.constructor' property of Sofa.prototype.
+Sofa.prototype.constructor = Sofa; // As simple as that.
+// All we are doing is that resetting back the '.constructor'
+// property of Sofa.prototype.
 
 // Now Lets check.
 console.log(s1 instanceof Sofa);
 //  true
 console.log(s1 instanceof Furniture);
-// true - this is correct because Sofa has inherited from Furniture.
+// true -
+// this is correct because Sofa has inherited from Furniture.
 
 
 //  Example# 2
@@ -94,7 +117,7 @@ const Car = function(make, currentSpeed){
 };
 Car.prototype.accelerate = function(){
     this.currentSpeed += 20;
-    console.log( `${this.make} is going at ${this.currentSpeed} KM/H`);
+    console.log(`${this.make} is going @ ${this.currentSpeed} KM/H`);
 };
 
 const EV = function(this, make, charge){
@@ -106,18 +129,25 @@ const EV = function(this, make, charge){
 EV.prototype = Object.create(Car.prototype);
 // this also changes the .constructor property of EV class to 'Car'
 
-// Reset child class's .constructor property back to its original. i.e. 'EV'
+// Reset child class's .constructor property back to its original.
+// i.e. 'EV'
 EV.prototype.constructor = EV;
 
 EV.prototype.chargeBattery = function(chargeTo){
     this.charge = chargeTo;
 };
 
-EV.prototype.accelerate = function(){           // Fn overriding.
+EV.prototype.accelerate = function(){ // Fn overriding.
     this.currentSpeed += 20;
     this.charge--;
-    return `${this.make} is going at ${this.currentSpeed} KM/H, with a charge of ${this.charge} %`;
+    return `
+        ${this.make} is going at
+        ${this.currentSpeed} KM/H,
+        with a charge of ${this.charge} %
+        `;
 };
 
-// In the scope chain, "EV.prototype.accelerate" will come first, and it will be called. because as I said earlier,
-// it does a method lookUP through prototype chain, up till parent's prototype property.
+// In the scope chain, "EV.prototype.accelerate" will come
+// first, and it will be called. because as I said earlier,
+// it does a method lookUP through prototype chain, up till
+// parent's prototype property.

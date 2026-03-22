@@ -14,16 +14,18 @@
 // 1. Abstraction   -
 //      Hide details of implementation.
 // 2. Encapsulation -
-//      Keeping some properties and methods PRIVATE inside a class,
-//      so that they are not accessible from outside the world and
-//      exposing only essential methods to outside world.
+//      Keeping some properties and methods PRIVATE inside
+//      a class, so that they are not accessible from
+//      outside the world and exposing only essential methods
+//      to outside world.
 // 3. Inheritance   -
-//      Reusing some properties and methods from different classes
-//      (real world entities - objects)
+//      Reusing some properties and methods from different
+//      classes(real world entities - objects)
 // 4. Polymorphism  -
+//      'poly' means many, 'morph' means forms.
 //      Resuing same methods for different purpose.
 //      Override methods from parent class.
-//      'poly' means many, 'morph' means forms.
+//      JS does not support fn overloading that we see in C++.
 
 
 
@@ -38,9 +40,10 @@
 //      |             |                 |
 //      |             |                 |
 // Instantiation      |    Prototypal Inheritance/Delegation
+//      |             |                 ^
 //      |             |                 |
 //      |             |                 |
-//   Instance         |         Object (Can access methods)
+//   Instance         |       Object (Can access methods)
 
 // In Javascript, we say "Objects are linked to a
 // Prototype Object".
@@ -62,9 +65,10 @@
 // Array.prototype.keys()
 // Array.prototype.indexOf()
 // ... etc.
-// Here "Array.prototype" is the *Prototype Object* of all arrays
-// that we create in javascript.
-// Therefore all arrays have access to the prototype methods.
+// Here "Array.prototype" is the *Prototype Object* of
+// all arrays that we create in javascript.
+// Therefore all arrays have access to the prototype
+// methods.
 
 
 
@@ -86,8 +90,8 @@
 // work exactly like constructor functions,
 // but with a cleaner syntax.
 // Not like traditional OOP classes (in Java/PHP/C++)
-// They are just an abstraction over the constructor functions.
-// (syntactic sugar)
+// They are just an abstraction over the constructor
+// functions. (syntactic sugar)
 
 // 3. Object.create()
 // Easiest and straightforward way to link an object to

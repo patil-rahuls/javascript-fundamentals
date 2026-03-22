@@ -8,6 +8,11 @@
 // Functions that execute immediately WITHOUT being SAVED
 // in a variable.
 
+// Advantages:
+// Avoids polluting the global scope.
+// Provides Encapsulation, allowing you to create private
+// scopes for variables and function.
+
 // Consider the following function as an example:
 const show = function (){
    alert("this is not an IIFE");
