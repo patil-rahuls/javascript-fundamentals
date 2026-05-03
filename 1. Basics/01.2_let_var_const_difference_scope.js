@@ -8,12 +8,12 @@
 // It determines where in the program a particular variable or
 // a function can be accessed and manipulated.
 
-// *let* and *const* variables are "BLOCK" scoped.
-// *var* variables are "FUNCTION" scoped.
+// "let" and "const" variables are "BLOCK" scoped.
+// "var" variables are "FUNCTION" scoped.
 
-// *let* and *const* variables are scoped to the immediate
+// "let" and "const" variables are scoped to the immediate
 // enclosing block denoted by { } (hence the "BLOCK"-scope).
-// *var* variables are scoped to the immediate function
+// "var" variables are scoped to the immediate function
 // body (hence the "FUNCTION"-scope).
 
 // In general, a block is any code within curly braces { },
@@ -24,16 +24,19 @@ function run() {
   // Function scope.
   var foo = "Foo";
   let bar = "Bar";
-  console.log(foo, bar);    // Foo Bar
+  console.log(foo, bar);
+  // 'Foo Bar'
   {
     // Block scope.
     var moo = "Mooo";
     let baz = "Bazz";
-    console.log(moo, baz);  // Mooo Bazz
+    console.log(moo, baz);
+    // 'Mooo Bazz'
   }
-  console.log(moo);         // Mooo
+  console.log(moo);
+  // 'Mooo'
   console.log(baz);
-  // Uncaught ReferenceError: baz is not defined
+  // 'Uncaught ReferenceError: baz is not defined'
 }
 run();
 
@@ -48,13 +51,15 @@ function foo() {
   let x = "block scope";
   // x above is only accessible in this enclosing block
 }
-foo();                      // "function scope"
-console.log(x);             // "global scope"
+foo();
+// 'function scope'
+console.log(x);
+// 'global scope'
 
 
 //  Example #3
 // Scope changes when a variable is declared without
-// *let*, *var* or *const* keyword.
+// "let", "var" or "const" keyword.
 {
   let a = 9;
   b = 8;
@@ -62,16 +67,19 @@ console.log(x);             // "global scope"
   // keywords and by default becomes globally scoped.
 }
 console.log(a);
-// ReferenceError: a is not defined. (let is block scoped)
+// 'ReferenceError: a is not defined'
+// (let is block scoped)
 console.log(b);
-// 8 (because b is globally scoped in the block above)
+// '8'
+// (because b is globally scoped in the block above)
 
-// In Browser, we can access 'b' using *window* object.
+// In Browser, we can access 'b' using "window" object.
 console.log(window.b);
-// 8 (Because *window* is a global object in browser)
+// '8'
+// (Because "window" is a global object in browser)
 
-// In Node JS runtime, we can access 'b' using *global* object.
+// In Node JS runtime, we can access 'b' using "global" object.
 console.log(global.b);
-// 8
+// '8'
 // the "global" keyword above is the name of the global object
 // in node js runtime, just like "window" in browser context.

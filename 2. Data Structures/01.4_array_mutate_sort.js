@@ -19,6 +19,7 @@ console.log(arr.sort());
 // The numbers are converted to strings and then sorted.
 // This type of sorting is commonly seen in our
 // machines' file manager.
+// Its called ASCII/Lexicographical sorting.
 
 // IMP: sort() accepts a callback function.
 // The callback accepts two parameters -

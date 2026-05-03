@@ -4,30 +4,43 @@
 
 // 1. Type Conversion (Explicit)
 let age = 28;
-console.log(typeof age); // number
+console.log(typeof age);
+// "number"
 age = "28";
-console.log(typeof age); // string
+console.log(typeof age);
+// "string"
 
 
 // 2. Type Coercion (Implicit type conversion)
 let str = "I am " + age; // In this assignment, "age" gets
 // converted from "number" type to "string" type.
-console.log(typeof age); // "age" is still a "number" type.
+console.log(typeof age);
+// "number"
 
 
 // When we have ALL '+' operators in an expression AND
 // when one of the operands is a string, the operands after
 // FIRST string operand are coerced autmatically
 // into string (Type Coercion).
-console.log("23" + "10" + 3);       // 23103
-console.log("23" + "10" + 3 + 5);   // 231035 and NOT 23108
-console.log(4 + 1 + "5" + 6);       // 556
+console.log("23" + "10" + 3);
+// '23103'
+console.log("23" + "10" + 3 + 5);
+// '231035'
+// and NOT 23108
+console.log(4 + 1 + "5" + 6);
+// '556'
 
 // Rest all mathematical operations work normally with
 // type Coercion applied automatically.
-console.log("23" - "10" - 3);   // 10 (number)
-console.log("23" + "10" - 3);   // "2307" (string)
-console.log(1 + 3 + 5 + "5");   // becomes 9 + "5" i.e. "95"
+console.log("23" - "10" - 3);
+// 10
+// (number)
+console.log("23" + "10" - 3);
+// '2307'
+// (string)
+console.log(1 + 3 + 5 + "5");
+// '95'
+// 9 + "5" i.e. "95"
 let xx = Number("5");
 // String "5" converted to number explicitly.
 
@@ -35,7 +48,9 @@ let xx = Number("5");
 // Happens with Arrays too.
 let a = [1,2,3];
 let b = a + 10;
-console.log(b); // '1,2,310' (string)
+console.log(b);
+// '1,2,310'
+// (string)
 // The + operator prefers strings if it can't find two
 // numbers to add. Since one side is an array,
 // JavaScript tries to convert that array into a
@@ -45,6 +60,7 @@ console.log(b); // '1,2,310' (string)
 // [1, 2, 3].toString() results in the string "1,2,3"
 // followed by the string concatenation resulting in:
 // '1,2,310' string result.
+
 
 // Type coercion = implicit type conversion.
 
