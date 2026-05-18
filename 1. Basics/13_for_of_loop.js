@@ -12,8 +12,19 @@ for (const item of menu){
    console.log(item);
 }
 
+//  Example #2:
+// When we want indexes/Properties too.
+for(const item of Object.entries(menu)){
+   console.log(item); // [ index  , value ]
+   console.log(`Item number ${item[0]+1} is ${item[1]}`);
+}
 
-//  Example #2: Object (Use for-in)
+// And we can always destructure it.
+for (const [index , item] of Object.entries(menu)){
+   console.log(`${index+1} : ${item}`);
+}
+
+//  Example #3: Object (Use for-in)
 // The for..of loop only supports iterable objects like arrays,
 // and not objects.
 const p = {
@@ -25,17 +36,4 @@ for (var key in p) {
    if (p.hasOwnProperty(key)) {
        console.log(key + " -> " + p[key]);
    }
-}
-
-
-//  Example #3:
-// When we want indexes/Properties too.
-for(const item of Object.entries(menu)){
-   console.log(item); // [ index  , value ]
-   console.log(`Item number ${item[0]+1} is ${item[1]}`);
-}
-
-// And we can always destructure it.
-for (const [index , item] of Object.entries(menu)){
-   console.log(`${index+1} : ${item}`);
 }

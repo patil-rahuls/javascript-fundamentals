@@ -69,6 +69,7 @@ console.log(b);
 // NUMBER TYPE CONVERSIONS ///////////////////////////////////
 //////////////////////////////////////////////////////////////
 
+// Loose Conversion
 // 1. parseInt() & parseFloat()
 // both convert a string loosely to a number
 
@@ -113,6 +114,7 @@ parseFloat('0x10') // 0
 // floating-point number.
 
 
+// Strict Conversion
 // Number() does a strict conversion of a string to a number
 // and returns NaN otherwise.
 Number('12.345') // 12.345

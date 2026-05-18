@@ -1,5 +1,5 @@
 //////////////////////////////////////////////////////////////
-// LOGICAL OR ASSIGNMENT ||= /////////////////////////////////
+// LOGICAL "OR" ASSIGNMENT ||= ///////////////////////////////
 //////////////////////////////////////////////////////////////
 
 value ||= 'Rahul'; //eq. to -> value = value || 'Rahul';
@@ -19,7 +19,7 @@ console.log(settings);
 
 
 //////////////////////////////////////////////////////////////
-// LOGICAL AND ASSIGNMENT &&= ////////////////////////////////
+// LOGICAL "AND" ASSIGNMENT &&= //////////////////////////////
 //////////////////////////////////////////////////////////////
 
 value &&= 'Rahul'; //eq. to -> value = value && 'Rahul';
@@ -34,8 +34,8 @@ console.log(user);
 
 //  Example #2 - Safe event handler cleanup
 let listener = button.addEventListener("click", () => {
-    console.log("Clicked!");
-  });
+  console.log("Clicked!");
+});
 // Later: remove listener if it exists
 listener &&= button.removeEventListener("click", listener);
 

@@ -6,6 +6,7 @@
 
 // 1. Function declaration
 // Are always hoisted.
+// Hoisted before any 'var' variable declaration.
 function calcAge(birthYear) {
   return 2021 - birthYear;
 }

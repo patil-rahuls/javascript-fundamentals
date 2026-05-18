@@ -19,6 +19,8 @@ console.dir(object);
 // prints Object's properties hierarchically.
 // Use this to observe "Closure"
 
+
+
 console.time();
 console.timeLog();
 console.timeEnd();

@@ -60,9 +60,6 @@ checkHoisting();
 // variables work as intended. i.e. to throw error if "const"
 // variables are not initialized while declaring.
 
-// "const" variables are not hoisted.
-
-
 
 // Why "var" varibles can be more prone to errors.
 // All the following examples work without giving any error,

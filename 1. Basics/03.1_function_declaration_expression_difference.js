@@ -8,10 +8,12 @@
 // Function-declarations are hoisted. A function call can be
 // written before its declaration inside a JS file.
 const area = calcArea(34);
-
+// ...
+// some logic
+// ...
 // Function declared later in the source code.
 function calcArea(side) {
-   return side**2;
+  return side**2;
 }
 
 // But the same DOES NOT work with function-expression.
@@ -19,7 +21,7 @@ const square = calcSQ(34);
 // Error "Cannot Access 'calcArea2' before initialization."
 
 const calcSQ = function(side) {  // Function declared later.
-   return side**2;
+  return side**2;
 }
 
 // By contrast, you can only call a function expression
