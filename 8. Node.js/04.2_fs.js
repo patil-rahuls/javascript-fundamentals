@@ -30,7 +30,7 @@ try {
 // Append content to a file "synchronously".
 import fs from 'fs'
 try {
-  fs.appendFileSync('copyFile.txt', '\n\text at the end', 'utf8');
+  fs.appendFileSync('copyFile.txt', '\n\text at end', 'utf8');
 } catch(err)  {
   console.error(err);
 }
@@ -43,7 +43,8 @@ try {
   // fs.mkdir('docs/abc/1'); // wont work.
   fs.mkdirSync('docs/abc/1', { recursive: true });
 
-  fs.rmDirSync('docs'); // error. docs is not an empty directory
+  fs.rmDirSync('docs');
+  // error. docs is not an empty directory
   // We need to manually delete the inner directories.
   fs.rmdirSync('docs/abc/1');
   fs.rmdirSync('docs/abc');

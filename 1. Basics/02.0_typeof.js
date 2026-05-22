@@ -39,6 +39,8 @@ console.log(typeof {});
 // How to check if a given object is an Array or Object.
 //////////////////////////////////////////////////////////////
 
+// Object.prototype.toString.call()
+
 //  Example #1 - Array
 const givenVariable = [];
 Object.prototype.toString.call(givenVariable);

@@ -2,8 +2,8 @@
 // EVENT EMITTER | AbortController ///////////////////////////
 //////////////////////////////////////////////////////////////
 
-// The "AbortController" is a modern way to add a "kill switch"
-// to asynchronous operations or events.
+// The "AbortController" is a modern way to add a
+// "kill switch" to asynchronous operations or events.
 // When combined with an EventEmitter, it allows you to stop
 // listening to events or cancel an ongoing task based on a
 // timeout or a specific user action.
@@ -17,10 +17,11 @@
 //  Example 1:
 // Imagine your backend is waiting for a specific event from
 // a microservice (e.g., inventory_updated).
-// If that microservice is lagging, you don't want your Express
-// route to hang forever.
-// You want to wait for 5 seconds, and if the event hasn't fired
-// by then, "abort" the listener and tell the user "System Busy."
+// If that microservice is lagging, you don't want your
+// Express route to hang forever.
+// You want to wait for 5 seconds, and if the event hasn't
+// fired by then, "abort" the listener and tell the user
+// "System Busy."
 
 const { once, EventEmitter } = require('events');
 
@@ -47,7 +48,7 @@ try {
     console.log("Event received successfully!");
   } catch (err) {
     if (err.name === 'AbortError') {
-      console.error("Operation cancelled: The event took too long.");
+      console.error("Operation cancelled: took too long.");
     } else {
       throw err;
     }
@@ -59,7 +60,8 @@ try {
 //  Example 2:
 // Usage with Fetch, without the use of event emitter.
 const actrl = new AbortController();
-setTimeout(() => actrl.abort(), 5000); // Cancel if longer than 5s
+setTimeout(() => actrl.abort(), 5000);
+// Cancel if longer than 5s
 
 try {
   const response = await fetch(

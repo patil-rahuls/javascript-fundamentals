@@ -15,7 +15,7 @@
 //    3. Notify the Warehouse to pack the box.
 // If you put all this code in one big function, it becomes
 // a mess. Instead, use an Event Emitter to decouple the tasks.
-// One advantage of pub/sub is components can be decoupled
+// One advantage of pub/sub is, components can be decoupled
 // from each other.
 
 const EventEmitter = require('node:events');
@@ -47,7 +47,7 @@ storeInstance.on('order_recieved', (data) => {
 storeInstance.on('order_recieved', (data) => {
   // notify supply chain
   console.log(`
-    [Warehouse] Shipping notification sent for Order#${data.orderId}.
+    [Warehouse] Shipping notif sent for Order#${data.orderId}.
   `);
 });
 // IMP: By default, Node.js's EventEmitter calls each
@@ -83,8 +83,8 @@ storeInstance.createOrder("998877", "customer@example.com");
 
 // Solution:
 // This listener will be invoked whenever an error event is
-// emitted, allowing you to handle the error gracefully, log it,
-// or perform any necessary cleanup operations.
+// emitted, allowing you to handle the error gracefully, log
+// it, or perform any necessary cleanup operations.
 storeInstance.on('error', (err) => {
   console.error('Handled the error safely:', err.message);
 });

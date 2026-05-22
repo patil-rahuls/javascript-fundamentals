@@ -2,6 +2,8 @@
 // DESTRUCTURING ASSIGNMENT [ES6] ////////////////////////////
 //////////////////////////////////////////////////////////////
 
+const [user1, user2, user3] = users;
+
 // Unpacks(and assigns) values from arrays, or properties from
 // objects, into distinct variables.
 

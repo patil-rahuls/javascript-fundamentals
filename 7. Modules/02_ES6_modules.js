@@ -9,7 +9,7 @@
 // File extension are usually - .js (or .mjs)
 
 // IMP: In ES6 Modules (import), you get a live connection
-// (also called a "live binding"). If the original file updates
+// (also called a "live binding"). If original file updates
 // the value, your imported variable updates automatically.
 
 
@@ -38,8 +38,8 @@ console.log(add(10, 20)); // 30
 
 
 // Example 2: Default Export/Imports
-// A module can only have only ONE default export and more than
-// one named exports.
+// A module can only have only ONE default export and more
+// than one named exports.
 // We specify Alias' using 'as' keyword.
 //////////////////////////////////////////////////////////////
 // Exporting Module
@@ -80,6 +80,9 @@ console.log(name.pi);
 
 
 // To Summarise -
-// Named import: import { export1, export2 } from "module-name";
-// Default import: import defaultExport from "module-name";
-// Namespace import: import * as name from "module-name";
+// Named import:
+//    import { export1, export2 } from "module-name";
+// Default import:
+//    import defaultExport from "module-name";
+// Namespace import:
+//    import * as name from "module-name";

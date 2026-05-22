@@ -72,11 +72,12 @@ myEmitter.emit('pizza_ready', 'Large', 'Pepperoni');
 // provided listener.
 
 // .removeAllListeners([event])
-// Clears all listeners (useful for cleanup/memory management).
+// Clears all listeners (useful for cleanup/memory management)
 // If no event name is provided, it removes all listeners for
 // all events associated with the event emitter instance.
-// After calling removeAllListeners(), the event emitter will no
-// longer emit any events associated with the provided event name.
+// After calling removeAllListeners(), the event emitter will
+// no longer emit any events associated with the provided
+// event name.
 
 // .eventNames()
 // returns an array of event names
@@ -92,5 +93,5 @@ if (!emitter.listenerCount('task_done', eventListener)) {
   emitter.on('task_done', eventListener);
 }
 // This prevents memory leaks.
-// Event emitter consume memory. All the listeners take up space
-// in the RAM. So use the event emitter wisely.
+// Event emitter consume memory. All the listeners take up
+// space in the RAM. So use the event emitter wisely.

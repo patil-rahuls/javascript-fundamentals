@@ -109,7 +109,7 @@ app.get(`/sal`, (req, res) => {
 app.get(`/downloads/pdf`, (req, res) => {
     const pdfFile = {
         "MimeType": "application/pdf",
-        "data": "/eqdh9y9va9sac8udausduasdasdoiabusoduaosiduao..."
+        "data": "/eqdh9y9va9sac8udausduasdasdoiabusoduaido..."
     }
     res.download(pdfFile);
 });
@@ -123,11 +123,11 @@ app.get(`/redir`, (req, res) => {
 // MIDDLEWARES
 //////////////////////////////////////////////////////////////
 // Functions that have access to the request and response and
-// the next() method in the application's req response lifecycle.
-// Built in Middlewares in Express.JS framework:
-//      1. express.static - serves static assets
-//      2. express.json   - parses incoming req with JSON payload.
-//      3. express.urlencoded - parses incoming req with url
+// the next() method in the application's req response
+// lifecycle. Built in Middlewares in Express.JS framework:
+//  1. express.static - serves static assets
+//  2. express.json   - parses incoming req with JSON payload.
+//  3. express.urlencoded - parses incoming req with url
 //         encoded payload.
 
 // Syntax to call middlewares:
@@ -136,14 +136,15 @@ app.get(`/redir`, (req, res) => {
 // 1. express.static()
 // Useful for static files, css, images etc.
 app.use(express.static('public')); // no '/' here
-// With this, you can now access anything inside 'public' folder
-// directly from the "root" url. i.e. localhost:9969/<that_file>
-// i.e. localhost:9969/styles.css
+// With this, you can now access anything inside 'public'
+// folder directly from the "root" url. i.e.
+// localhost:9969/<that_file>
+// example: localhost:9969/styles.css, localhost:9969/index.js
 
 // "app.use" also accepts a route as first param.
 app.use('/img', express.static('images'));
-// This will take all the contents of 'images' folder and route
-// it to "localhost:9969/img" url.
+// This will take all the contents of 'images' folder and
+// route it to "localhost:9969/img" url.
 
 // 2. express.json()
 app.use(express.json());
@@ -170,14 +171,14 @@ app.post("/checkData", (req, res) => {
 
 // It can be used to have additional callbacks to the routes.
 app.get(`/test`,
-    (req, res, next) => {
-        console.log(`response will be sent by the next function.`);
-        next(); // called next.
-    }, // adding additional callback to this route.
-    // definition for next()
-    (req, res)=> {
-        res.send('I just set up a route with a 2nd callback.');
-    }
+  (req, res, next) => {
+    console.log(`response will be sent by the next function.`);
+    next(); // called next.
+  }, // adding additional callback to this route.
+  // definition for next()
+  (req, res)=> {
+    res.send('I just set up a route with a 2nd callback.');
+  }
 );
 // We can add any number of additional callbacks using next()
 app.get(`/test`,
@@ -209,7 +210,7 @@ app.use((err, req, res, next) => {
 });
 // Now when you hit a non defined page e.g.
 // localhost:9969/lskshfk
-// it returns this string 'Something went wrong!' as a response
+// it returns this string 'Something went wrong!' as a resp
 // and prints the error stack trace to the server logs.
 
 //////////////////////////////////////////////////////////////
@@ -221,8 +222,9 @@ app.use((err, req, res, next) => {
 
 // use TLS
 
-// use Helmet - protects your app. sets http headers appropriately
-// and securely. collection of middleware functions that does that.
+// use Helmet - protects your app. sets http headers
+// appropriately and securely.
+// collection of middleware functions that does that.
 
 // use cookies securely.
 

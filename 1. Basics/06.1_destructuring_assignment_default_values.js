@@ -2,6 +2,8 @@
 // DESTRUCTURING ASSIGNMENT - DEFAULT VALUES /////////////////
 //////////////////////////////////////////////////////////////
 
+const [user1, user2, user3 = {username: 'admin'}] = users;
+
 // Unpacks(and assigns) values from arrays, or properties from
 // objects, into distinct variables.
 

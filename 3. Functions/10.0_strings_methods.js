@@ -45,12 +45,12 @@ myStr = myStr.join('');
 // And convert the Array back to string.
 
 // IMP: Javascript automatically converts a string primitive
-// into a string Object and operates on it wth different methods.
+// into a string Object and operates on it with different methods.
 console.log( typeof new String("rahul") );
 // Object
 
 // On calling slice(), string primitive is converted into object,
-// the method is applied on that object, and then the obejct
+// the method is applied on that object, and then the object
 // is converted back into string primitive and returned.
 console.log( typeof new String("Rahul").slice(-1) ) ;
 // string

@@ -10,7 +10,9 @@
 // and react accordingly.
 
 // In Node.js, you can implement custom event emitters by
-// creating a class that extends the built-in EventEmitter class.
+// creating a class that extends the built-in EventEmitter
+// class.
+
 // Here are the steps to implement a custom event emitter:
 
 import { EventEmitter } from 'node:events';

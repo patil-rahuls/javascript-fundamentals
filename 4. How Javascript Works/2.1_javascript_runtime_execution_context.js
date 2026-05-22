@@ -8,8 +8,7 @@
 // necessary to execute the code.
 
 // After compilation, when the code is ready to be
-// executed (the machine code).
-
+// executed (the machine code),
 // 1. Exactly ONE *Global Execution Context* is created for
 // the *top level code* i.e. for all outermost declarations
 // and definitions except function calls in a source code.

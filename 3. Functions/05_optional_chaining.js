@@ -46,15 +46,6 @@ console.log(
 // Observe the function parameters.
 // I just have inserted the "?." in between.
 
-// Using optional chaining we not only add a check
-// but also minimize our code.
-console.log(
-      restaurant.orderPaavBhaaji?.(0,1)
-      ??
-      "method doesn’t exist"
-   );
-
-
 // Also works on arrays:
 // It checks if an array element exists,
 // just like checking a method.
@@ -66,3 +57,7 @@ console.log(users[0]?.name ?? "users array empty..." );
 // rahul
 console.log(users[1]?.name ?? "user 1 not found..." );
 // user 1 not found...
+
+// Return an Array's item with an optional check.
+const a = [1,2,3];
+console.log(a?.[0]); // If array 'a' exists, print its 0th item

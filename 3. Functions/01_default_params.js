@@ -26,6 +26,9 @@ function sum(x = 10, y) {
 }
 console.log(sum(undefined, 5));  // 15
 console.log(sum(null, 5));       // 5
+// Default parameters are only triggered if an argument is undefined
+// (or missing). null is treated as a valid, deliberate value, so
+// the default parameter is ignored.
 
 // TIP: Always keep parameters with default values at
 // the end while defining a function.

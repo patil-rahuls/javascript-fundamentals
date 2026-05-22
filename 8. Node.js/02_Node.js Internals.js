@@ -13,9 +13,10 @@
 //    V8       Libuv
 
 // V8 & Libuv are the dependencies of the Node.js environment.
-// We write code in javascript, use the Node.js standard library
-// functionalities like http, fs and such functionalities
-// (not all) are dependent/written in V8 and Libuv (in C++).
+// We write code in javascript, use the Node.js standard
+// library functionalities like http, fs and such
+// functionalities (not all) are dependent/written in V8 and
+// Libuv (in C++).
 
 // V8 Engine (70% C++ 30% JS) -
 // Interprets and Executes the JS code.
@@ -80,12 +81,12 @@
 //   There are 2 ways in which these 'other' functionalities
 //   are offloaded from the main thread.
 
-//   - 1. Thread Pool(Libuv library) - is a series of 4 threads
+//   1. Thread Pool(Libuv library) - is a series of 4 threads
 //   (by default) that is utilized by some functionalities
-//   (like pbdfk2 in crypto, fs functionalities, etc) to run in
-//   more than one thread.
+//   (like pbdfk2 in crypto, fs functionalities, etc) to run
+//   in more than one thread.
 
-//   - 2. OS Async Helpers - Some functionalities run outside of
+//   2. OS Async Helpers - Some functionalities run outside of
 //   the thread pool and event loop. For example, all the
 //   networking level functionalities like http requests, is
 //   handled by the Operating System's special helpers running
@@ -139,11 +140,11 @@ crypto.pbkdf2('a', 'b', 100000, 512, 'sha512', () => {
 // Example 2:
 // OS Tasks:
 import http from 'http';
-const start = Date.now();
+const start2 = Date.now();
 const doRequest = () => {
     http.request('https://google.com', res=>{
         res.on('data', {});
-        res.on('end', console.log(Date.now() - start));
+        res.on('end', console.log(Date.now() - start2));
     });
 };
 doRequest();

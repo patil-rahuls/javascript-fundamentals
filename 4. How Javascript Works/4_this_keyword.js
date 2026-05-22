@@ -21,7 +21,7 @@
 
 // In case of arrow functions' execution context, they do not
 // have their own 'this' object. They get it from their outer
-// regular function's execution context.
+// regular function's execution context.(See the next section)
 // They also don't get their own 'arguments' object.
 
 // In case of Browser's Event Listener's Execution Context,

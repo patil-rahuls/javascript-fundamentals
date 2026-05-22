@@ -1,38 +1,40 @@
 //////////////////////////////////////////////////////////////
 // HTTP BASICS ///////////////////////////////////////////////
 //////////////////////////////////////////////////////////////
-
 /*
-// 1. HTTP is a protocol that sits on the TCP/IP protocol
-// suite's Application layer.
 
-// Also called client-server protocol.
+1. HTTP is a protocol that sits on the TCP/IP protocol
+suite's Application layer.
 
-// 2. HTTP is connectionless - after making the requests, the
-// client disconnects from the server.
-// When response is ready, the server re-establishes connection
-// with client and delivers the response.
+Also called client-server protocol.
 
-// 3. HTTP is stateless - client and server know about each
-// other just during the current  request.
-// Once the request is complete, both the client and the server
-// have no information about each other.
-// To re-connect, both computers need to provide information to
-// each other as if they are connecting for the first time.
+2. HTTP is connectionless - after making the requests, the
+client disconnects from the server.
+When response is ready, the server re-establishes connection
+with client and delivers the response.
 
-// 4. HTTP can be used to send any type of data as long both
-// client and the server are able to read it.
+3. HTTP is stateless - client and server know about each
+other just during the current  request.
+Once the request is complete, both the client and the server
+have no information about each other.
+To re-connect, both computers need to provide information to
+each other as if they are connecting for the first time.
 
-// 5. HTTP request/response cycle.
-        - Client requests a website.
-        - It first makes a request to get the html document.
-        - Then inside the html document, there are links to css files,
-        so client will request the css file while rendering the html.
-        - Similarly fonts, javascript files/libraries are requested
-        from server.
+4. HTTP can be used to send any type of data as long both
+client and the server are able to read it.
+
+5. HTTP request/response cycle.
+  - Client requests a website.
+  - It first makes a request to get the html document.
+  - Then inside the html document, there are links to css
+  files, so client will request the css file while rendering
+  the html.
+  - Similarly fonts, javascript files/libraries are requested
+  from server.
 
 
 //////////////////////////////////////////////////////////////
+
 // A HTTP request message has 3 parts.
 1. start line
     e.g. GET /bg.png HTTP/1.0
@@ -49,7 +51,7 @@
 3. Blank line
 4. Response Body(optional)
 
-// Both Requests and responses share a common structure in HTTP.
+Both Requests and responses share a common structure in HTTP.
 
 
 7. Some more examples of HTTP messages
@@ -112,6 +114,6 @@ Another response with an error like 404.
     X-XSS-Protection: 1; mode=block
     Vary: Accept-Encoding,Cookie
     X-Cache: Error from cloudfront
-    <!DOCTYPE html>... (contains a site-customized page helping
-    the user to find the missing resource)
+    <!DOCTYPE html>... (contains a site-customized page
+    helping the user to find the missing resource)
 */

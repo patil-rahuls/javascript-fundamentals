@@ -4,9 +4,9 @@
 
 // The Module Pattern is a design pattern in JavaScript that
 // allows you to create encapsulated and reusable code by
-// creating a self-contained module that can expose public APIs
-// to the outside world while keeping the implementation details
-// hidden from other parts of your code.
+// creating a self-contained module that can expose public
+// APIs to the outside world while keeping the implementation
+// details hidden from other parts of your code.
 
 // We use IIFE to create a self-contained module.
 var myModule = ( function () {
@@ -28,9 +28,9 @@ var myModule = ( function () {
 myModule.displayMessage(); // outputs "Hello World!"
 
 // In the example above, we create a new module by defining an
-// IIFE that returns an object with the public API of our module.
-// Inside the IIFE, we define private variables and functions
-// that are not exposed to the outside world.
+// IIFE that returns an object with the public API of our
+// module. Inside the IIFE, we define private variables and
+// functions that are not exposed to the outside world.
 
 // The message variable and the showMessage() function are
 // private, meaning they cannot be accessed from outside the
@@ -60,7 +60,7 @@ const ShoppingCart = (function(){
     };
 
     const getCart = function() {
-        console.log(cart.map(p => `${p.product} - ${p.qty}`));
+      console.log(cart.map(p => `${p.product} - ${p.qty}`));
     };
 
     return {

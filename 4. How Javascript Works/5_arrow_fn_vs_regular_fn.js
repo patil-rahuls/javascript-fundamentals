@@ -9,7 +9,8 @@ const obj = {
     name: 'Rahul',
     show: () => console.log(` Hi ${this.name} `),
 };
-obj.show();                 // 'Hi undefined'
+obj.show();
+// 'Hi'
 
 // Because in arrow functions, the 'this' keyword DOES NOT
 // point to current Object.
@@ -22,7 +23,8 @@ const obj = {
     name: 'Rahul',
     show: () => console.log(` Hi ${this.name} `),
 };
-obj.show();                 // 'Hi Hitesh'
+obj.show();
+// 'Hi Hitesh'
 
 // This is because in the first line "var name = "Hitesh";"
 // we have declared a variable on global object
@@ -88,11 +90,13 @@ const obj = {
 // Regular Fn.
 const sum = function(a , b ) {
     console.log(arguments);
-    // Prints the arguments passed to this function
 }
+sum(1,3);
+// Arguments: [1,3]
 
 // Arrow Fn.
-const sum = (a , b ) => {
+const sumArrow = (a , b ) => {
     console.log(arguments);
-    // ReferenceError: arguments is not defined.
 }
+sumArrow(1,3);
+// ReferenceError: arguments is not defined.

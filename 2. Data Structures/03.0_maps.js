@@ -26,16 +26,18 @@ const question = new Map ([
 ]);
 
 console.log(question);
-// Map(8) {
-//    'question' , 'What is the best programming lang in the world?',
-//    1, 'C',
-//    2, 'C++',
-//    3, 'Java',
-//    4, 'Javascript',
-//    'correct' , 2,
-//    true , 'Correct answer',
-//    false , 'Try Again',
-// }
+// Map(8)
+//  [[Entries]]
+//    0:{"question" => "What is the best programming lang in the world?"}
+//    1:{1 => "C"}
+//    2:{2 => "C++"}
+//    3:{3 => "Java"}
+//    4:{4 => "Javascript"}
+//    5:{"correct" => 2}
+//    6:{true => "Correct answer"}
+//    7:{false => "Try Again"}
+//    size:8
+
 
 //////////////////////////////////////////////////////////////
 // When to use Maps instead of Objects?

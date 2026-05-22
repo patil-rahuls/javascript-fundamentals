@@ -17,7 +17,8 @@ console.log(qryParams.firstName); //returns Clark
 // Here is a sample code that returns the value of the
 // "firstName" query object from the given URL.
 const url = require('url');
-let webAddress = 'http://localhost:2000/index.html?lastName=Kent&firstName=Clark';
+let webAddress =
+'localhost:2000/index.html?lastName=Kent&firstName=Clark';
 let qryObj = url.parse(webAddress, true);
 let qrydata = qryObj.query;
 //returns an object: {lastName: 'Kent', firstName: 'Clark'}

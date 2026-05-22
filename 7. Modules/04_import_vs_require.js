@@ -39,16 +39,18 @@ export from a module    "module.exports"      "export"
     static.
     This means, for "require()" the binding errors are not
     identified untill run-time.
-    For "import" the binding errors are identified at compile time.
+    For "import" the binding errors are identified at compile
+    time.
     For "import" the engine "links" the variables before the
     code even runs.
-    For "require()" it just executes the file and returns whatever
-    object was assigned to module.exports at that specific moment.
+    For "require()" it just executes the file and returns
+    whatever object was assigned to module.exports at that
+    specific moment.
 4.  "require()" are synchrounous in nature, means, modules will
     be loaded in sequence(linear fashion).
     "imports" are asynchrounous. Import runs faster in large
-    scale applications where we need to import a large number of
-    modules in a file.
+    scale applications where we need to import a large number
+    of modules in a file.
 5.  If the relative file is not found, require() automatically
     scans 'node_modules' folder and project folders recursively
     to find modules, but import won't.
@@ -93,9 +95,9 @@ Node.js has added support for it.
 Node.js will treat *.cjs* files as CommonJS modules and *.mjs*
 files as ECMAScript modules.
 
-IMP - It will treat *.js* files as whatever the *default module
-system for the project* is (which is CommonJS UNLESS package.json
-says "type": "module").
+IMP - It will treat *.js* files as whatever the *default
+module system for the project* is (which is CommonJS UNLESS
+package.json says "type": "module").
 
 Hence, as long as Node JS doesn't consider *.js* files as
 *ES Modules* BY DEFAULT, we need to keep specifying

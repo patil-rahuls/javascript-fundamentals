@@ -1,12 +1,18 @@
 //////////////////////////////////////////////////////////////
 // LET, CONST, VAR COMPARISION ///////////////////////////////
 //////////////////////////////////////////////////////////////
+// Summary:
+// "var" variables are hoisted to the top of their respective
+// scope with the value 'undefined' before the code is run.
+// "let" & "const" variables are put in ‘Temporal Dead Zone’
+// until the initialization is processed.
+//////////////////////////////////////////////////////////////
 
 // 3. Hoisting
 // Refers to the behavior of variable and function declarations
 // being moved to the top of their scope.
 
-// "var" variables are always hoised to the top of their
+// "var" variables are always hoisted to the top of their
 // respective scope with the value 'undefined' before
 // the code is run.
 // They are accessible in their enclosing function scope even

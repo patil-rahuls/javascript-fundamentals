@@ -1,8 +1,8 @@
 //////////////////////////////////////////////////////////////
 // Improving Node.js Performance /////////////////////////////
 //////////////////////////////////////////////////////////////
-// Cluster Mode //////////////////////////////////////////////
-//////////////////////////////////////////////////////////////
+
+// Cluster Mode
 
 // Clusters of Node.js processes can be used to run multiple
 // instances of Node.js that can distribute workloads among
@@ -54,14 +54,15 @@ if(cluster.isPrimary){
 }
 
 // Downsides of Clustering -
-// If, for a large no. of requests, if we over allocate instances
-// 'cluster.fork()', even though all the requests would be
-// started at the same instant, but the CPU will try to work
-// upon all the threads, and bounce around and process the
-// tasks(requests) at exactly the same time,
-// which will consume time.
+// If, for a large no. of requests, if we over allocate
+// instances 'cluster.fork()', even though all the requests
+// would be started at the same instant, but the CPU will try
+// to work upon all the threads, and bounce around and process
+// the tasks(requests) at exactly the same time, which will
+// consume time.
 
-// This is because of limited physical cores in the server CPU.
+// This is because of limited number of physical cores in the
+// server CPU.
 
 // Solution:
 // Use fewer instances.

@@ -1,9 +1,10 @@
 //////////////////////////////////////////////////////////////
 // FUNCTION DECLARATION AND EXPRESSIONS DIFFERENCE ///////////
 //////////////////////////////////////////////////////////////
-
-// *function-declarations* are hoisted,
-// *function-expressions* are not.
+// Summary:
+// Function declaration are hoisted before any 'var' declaration.
+// Function expressions are not hoisted(unless they are 'var').
+//////////////////////////////////////////////////////////////
 
 // Function-declarations are hoisted. A function call can be
 // written before its declaration inside a JS file.

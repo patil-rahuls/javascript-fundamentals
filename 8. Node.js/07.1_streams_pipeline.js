@@ -8,15 +8,17 @@
 
 // Features:
 // 1. Automatic Data Flow:
-//    pipe() reads data in chunks from the source (readable stream)
-//    and writes it to the destination (writable stream) as it
-//    becomes available, without loading the entire data into memory.
+//    pipe() reads data in chunks from the source (readable
+//    stream) and writes it to the destination (writable
+//    stream) as it becomes available, without loading the
+//    entire data into memory.
 
 // 2. Backpressure Handling:
-//    It automatically manages "backpressure," a mechanism that
-//    ensures a faster readable stream doesn't overwhelm a slower
-//    writable stream by pausing and resuming the data flow as
-//    needed, preventing data loss and memory issues.
+//    It automatically manages "backpressure," a mechanism
+//    that ensures a faster readable stream doesn't overwhelm
+//    a slower writable stream by pausing and resuming the
+//    data flow as needed, preventing data loss and memory
+//    issues.
 
 // 3. Chaining:
 //    The method returns the destination stream, which allows
@@ -26,9 +28,9 @@
 //    compressed data to another file).
 
 // 4. Simplifies Code:
-//    pipe() abstracts away manual event handling (like 'data',
-//    'end', and 'error' events), resulting in cleaner and
-//    more concise code.
+//    pipe() abstracts away manual event handling (like
+//    'data', 'end', and 'error' events), resulting in cleaner
+//    and more concise code.
 
 //  Example 1:
 //  Copying a file programatically.
@@ -46,8 +48,8 @@ fs.readFile('large_video.mp4', (err, data) => {
 //  Correct way - using streams & pipe()
 const fs = require('fs');
 
-const readStream = fs.createReadStream('large_video.mp4');
-const writeStream = fs.createWriteStream('large_video_copy.mp4');
+const readStream = fs.createReadStream('movie.mp4');
+const writeStream = fs.createWriteStream('movie_copy.mp4');
 readStream.pipe(writeStream); // That's it !
 writeStream.on('finish', () => {
   console.log('Finished copying 10GB using almost zero RAM!');
