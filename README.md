@@ -1,26 +1,25 @@
 # Important Javascript Concepts with Codes
 
 ## Basic Concepts
-- var, let **_[ES6]_** and const **_[ES6]_**, and their comparision
-- typeof
+- `let` **_[ES6]_**, `const` **_[ES6]_**, `var` variables and their comparision
+- `typeof`
 - Type Conversion and Coercion
 - Function Declaration and Expression
 - Equality Operators
 - Falsy Values
-- **_[ES6]_** Destructuring Assignment
-- Short Circuiting
+- `||` and `&&` Short Circuiting
 - Nullish Coalescing Operator
+- **_[ES6]_** Template Literals
+- **_[ES6]_** Enhanced Object Literals
+- **_[ES6]_** Arrow Functions
+- for-in loop
+- **_[ES6]_** for-of loop
+- **_[ES6]_** Destructuring Assignment
 - **_[ES6]_** Spread Operator
 - **_[ES6]_** Rest Operator
-- **_[ES6]_** Arrow Functions
-- **_[ES6]_** Enhanced Object Literals
-- **_[ES6]_** Template Literals
-- **_[ES6]_** for-of loop
-- for-in loop
 - Error Types
-- Console methods
-- User Interaction (Browser)
-- DOM Manipulation (Browser)
+- Console - logging and time methods
+- **_(Browser)_** DOM Manipulation & Traversing
 
 ## Data Structures
 - Arrays
