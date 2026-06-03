@@ -65,16 +65,15 @@ for (let i = 0; i < size; i++) {
 }
 
 // --- Benchmark Regular Array ---
-console.time('Regular Array Sum');
 let sum1 = 0;
+console.time('Regular Array Sum');
 for (let i = 0; i < regularArray.length; i++) {
   sum1 += regularArray[i];
-}
-console.timeEnd('Regular Array Sum');
+}console.timeEnd('Regular Array Sum');
 
 // --- Benchmark Typed Array ---
-console.time('Typed Array Sum');
 let sum2 = 0;
+console.time('Typed Array Sum');
 for (let i = 0; i < typedArray.length; i++) {
   sum2 += typedArray[i];
 }

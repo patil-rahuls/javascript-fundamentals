@@ -33,7 +33,6 @@ names.has("hitesh");
 // true
 
 
-
 // 3. delete()
 // Delete item from Set.
 names.delete("kisan");
@@ -48,10 +47,26 @@ names.clear();
 
 // 5. size
 names.size;
-// 5
 // It gives 'unique' count, hence its called "size", and not
-// "length" unlike arrays. arrays can have duplicate values,
-// but sets do not.
+// "length" unlike arrays. arrays have duplicate values, but
+// sets do not.
+
+
+// 6. clear()
+// Truncates the Set
+myMap.clear();
+
+
+// 7. keys()
+myMap.keys();
+
+
+// 8. values()
+myMap.values();
+
+
+// 9. entries()
+myMap.entries();
 
 
 // There is no method to get a specific item from a set.

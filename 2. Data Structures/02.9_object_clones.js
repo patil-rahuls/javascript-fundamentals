@@ -15,8 +15,9 @@ const myObj = {
 // Syntax - Object.assign(target, ...sources)
 const shallowCopy = Object.assign({}, myObj);
 // The Object.assign() invokes the getters on the source
-// objects and setters on the target.
-// It assigns properties only, not copying or defining new properties.
+// objects and setters on the target (if provided).
+// It assigns properties only, not copying or defining new
+// properties.
 // IMP - But be aware this is a shallow copy and
 // 'nested objects' are still copied as reference.
     const x = { name: 'Rahul', dob : { year : 1990 }};
