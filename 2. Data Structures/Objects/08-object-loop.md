@@ -1,0 +1,93 @@
+## Data Structures > Object
+
+### Loop over Objects
+
+Consider this object as an example.
+
+```javascript
+const performance = {
+  rahul: { startedAt : 72 , high : 99},
+  hitesh:{ startedAt : 51 , high : 98},
+  aajesh:{ startedAt : 83 , high : 100}
+};
+```
+
+### 1. `Object.keys()`
+
+```javascript
+const perfomers = Object.keys(performance);
+// returns an array of properties of "performance" object.
+
+console.log(perfromers);
+// ['rahul' , 'hitesh' , 'aajesh']
+
+for (const perfromer of Object.keys(performance)){
+  console.log(perfromer);
+}
+// 'rahul'
+// 'hitesh'
+// 'aajesh'
+
+// This is same as we do with for-in loop.
+// It loops through the properties.
+for (const perfromer in performance){
+  console.log(perfromer);
+}
+```
+
+&nbsp;
+
+### 2. `Object.values()`
+
+```javascript
+const values = Object.values(performance);
+// returns an array of the values of "performance" object.
+
+console.log(values);
+// { startedAt : 72 , high : 99}
+// { startedAt : 51 , high : 98}
+// { startedAt : 83 , high : 100}
+```
+
+&nbsp;
+
+### 3. `Object.entries()`
+
+```javascript
+const entries = Object.entries(performance);
+// array(1) [ "rahul" ,  { startedAt : 72 , high : 99} ]
+// array(2) [ "hitesh" , { startedAt : 51 , high : 98} ]
+// array(3) [ "aajesh" , { startedAt : 83 , high : 100}]
+
+
+// We can loop over the 'entries' and use destructuring.
+// Remember to use correct property names.
+for (const [player, {startedAt, high}] of Object.entries(performance)){
+  console.log(`${player}'s score opened at ${startedAt} and closed at ${high}`);
+}
+```
+
+&nbsp;
+
+> **Object.fromEntries()**
+>
+> Example: Convert an entries list to object
+
+```javascript
+const nameEntries = [
+  ['fname', 'Sachin' ],
+  ['lname', 'Tendulkar' ]
+];
+
+const nameObj = Object.fromEntries(nameEntries);
+
+console.log(nameObj);
+/*
+{
+  fname: 'Sachin',
+  lname: 'Tendulkar'
+}
+*/
+```
+
+---

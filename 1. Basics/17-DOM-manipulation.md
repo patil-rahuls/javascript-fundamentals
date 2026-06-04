@@ -86,9 +86,11 @@ document.getElementsByClassName('account');
 > `labels and non -inputs:`
 ```javascript
 document.querySelector('.messageDiv').textContent;
+
 document.querySelector('.messageDiv').textContent = "Hi!";
 
 document.querySelector('.guess').value;
+
 document.querySelector('.guess').value = 44;
 ```
 
@@ -117,6 +119,7 @@ callback function and re-using it-
 const myFunc = function() {
   console.log("Hi there!");
 }
+
 document
   .querySelector('.myButton')
   .addEventListener('click' , myFunc());
@@ -131,6 +134,7 @@ document
   .querySelector('body')
   .style
   .backgroundColor = '#efefef';
+
 document
   .querySelector('body')
   .style
@@ -146,6 +150,7 @@ document
   .querySelector('body')
   .classList
   .add('newClass');
+
 document
   .querySelector('body')
   .classList
@@ -159,9 +164,9 @@ document
 - Some of them are: 'keydown' , 'keyup' and 'keypress'.
 ```javascript
 document.addEventListener('keydown',
-   function() {
-       console.log("A Key was pressed.");
-   }
+  function() {
+    console.log("A Key was pressed.");
+  }
 );
 ```
 - When an event occurs, Javascript generates an object that contains all info about that event.
@@ -170,8 +175,10 @@ document.addEventListener('keydown',
 ```javascript
 document.addEventListener('keydown',
   function(eventObj) {
+
     console.log(eventObj.key);
     // Access property 'key' of Event Object
+
     if(eventObj.key === "Escape"){
       alert("Escape was pressed.");
     }
@@ -184,13 +191,16 @@ document.addEventListener('keydown',
 > `Creating and Inserting HTML Elements:`
 ```javascript
 const header = document.querySelector('.header');
+
 const msg = document.createElement('div');
 
 msg.classList.add('cookie-msg');
+
 msg.innerHTML = 'Accept Cookies <button> OK </button>';
 
 header.prepend(msg);
 // Adds as a first child to the header element.
+
 header.append(msg);
 // Adds as a last child to the header element.
 // That means it just moved the element, not copied.
@@ -209,16 +219,20 @@ header.append(msg.cloneNode(true));
 
 > `Creating an element before or after an element:`
 ```javascript
-header.before(msg); // Before header element
-header.after(msg);  // After header element
+// Before header element
+header.before(msg);
+
+// After header element
+header.after(msg);
 ```
 
 &nbsp;
 
 > `Deleting an element:`
 ```javascript
-msg.remove();
 // New Way
+msg.remove();
+
 msg.parentElement.removeChild(msg);
 // DOM Traversing. Old Way
 ```
@@ -229,9 +243,11 @@ msg.parentElement.removeChild(msg);
 - Getting style attributes of an element:
 ```javascript
 const msgStyle = getComputedStyle(msg);
+
 if(msgStyle.color == '#000'){
   msgStyle.color = 'red';
 }
+
 msgStyle.height = Number.parseFloat(
   msgStyle.height, 10
 ) + 30 + "px";
@@ -242,10 +258,14 @@ msgStyle.height = Number.parseFloat(
 > `Getting standard attributes of an element:`
 ```javascript
 const loginBTN = document.querySelector('#section-2');
-Standard Attributes.
+// Standard Attributes.
+
 console.log(loginBTN.src);
+
 console.log(loginBTN.alt);
+
 console.log(loginBTN.classList);
+
 console.log(loginBTN.className);
 ```
 
@@ -255,6 +275,7 @@ console.log(loginBTN.className);
 - Getting Non Standard Attributes like the ones defined by user.
 ```javascript
 console.log(loginBTN.getAttribute('data-rel'));
+
 console.log(loginBTN.getAttribute('custom-title'));
 ```
 
@@ -264,6 +285,7 @@ console.log(loginBTN.getAttribute('custom-title'));
 ```javascript
 // Non standard
 loginBTN.setAttribute('data-hidden','3445645645');
+
 // standard
 loginBTN.alt = 'Login key';
 ```
@@ -274,6 +296,7 @@ loginBTN.alt = 'Login key';
 ```javascript
 loginBTN.src;
 // returns complete url 'http://...'
+
 loginBTN.getAttribute('src');
 // returns relative url
 ```
@@ -290,8 +313,11 @@ loginBTN.dataset;
 > `Classes - add / remove classes.`
 ```javascript
 loginBTN.classList.add('btn-dark');
+
 loginBTN.classList.remove('btn-light');
+
 loginBTN.classList.toggle('btn-x'); *
+
 loginBTN.classList.contains('check-class-exists');
 ```
 

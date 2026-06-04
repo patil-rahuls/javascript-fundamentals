@@ -17,6 +17,7 @@ Examples include trying to use a string as a number, or trying to access a prope
 
 ```javascript
 const x = 7;
+
 console.log(x.toUpperCase());
 ```
 
@@ -26,6 +27,7 @@ These occur when the code is trying to access an index outside the range of an a
 
 ```javascript
 const maxNumber = Number.MAX_SAFE_INTEGER;
+
 console.log(maxNumber + 1);
 // Here, the code is trying to add 1 to the maximum safe integer value that JavaScript can represent, which exceeds the maximum value that can be represented and it will cause a range error.
 ```

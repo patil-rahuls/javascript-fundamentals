@@ -7,23 +7,29 @@
 > `undefined` is a type itself while `null` is an object.
 
 
-## Following literals are treated as Falsy in javascript
+Following literals are treated as Falsy in javascript
+
+- `0`
+- `''`
+- `undefined`
+- `null`
+- `NaN`
 
 ```javascript
-// 0
-// ''
-// undefined
-// null
-// NaN
-
 console.log(Boolean(0));         // false
+
 console.log(Boolean(''));        // false
+
 console.log(Boolean(undefined)); // false
+
 console.log(Boolean(null));      // false
+
 console.log(Boolean(NaN));       // false
+
 
 // Empty objects are not Falsy
 console.log(Boolean({}));        // true
+
 console.log(Boolean([]));        // true
 ```
 
@@ -37,7 +43,9 @@ console.log(Boolean([]));        // true
 
 ```javascript
 var testVar;
+
 console.log(testVar);            // undefined
+
 console.log(typeof testVar);     // undefined
 ```
 
@@ -45,7 +53,9 @@ console.log(typeof testVar);     // undefined
 
 ```javascript
 var testVar = null;
+
 console.log(testVar);             // null
+
 console.log(typeof testVar);      // object
 ```
 
@@ -55,7 +65,9 @@ console.log(typeof testVar);      // object
 
 ```javascript
 console.log(null === undefined)   // false-not the same type
+
 console.log(null == undefined)    // true-but the "same value"
+
 console.log(null === null)        // true-both type and value are the same
 ```
 

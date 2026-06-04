@@ -26,7 +26,9 @@ console.dir(object);
 
 ```javascript
 console.time();
+
 console.timeLog();
+
 console.timeEnd();
 ```
 

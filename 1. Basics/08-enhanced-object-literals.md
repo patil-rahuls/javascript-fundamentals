@@ -12,11 +12,13 @@ A better way to write javascript objects with the new `ES6` syntax could be as f
 ```javascript
 const attribute = "make";
 let i = 0;
+
 const laptop = {
   [attribute + ++i]: "Apple",
   [attribute + ++i]: "Dell",
   [attribute + ++i]: "HP"
 }
+
 console.log(laptop.make1);  // "Apple"
 console.log(laptop.make2);  // "Dell"
 console.log(laptop.make3);  // "HP"
@@ -27,6 +29,7 @@ console.log(laptop.make3);  // "HP"
 
 ```javascript
 let film = 'Titanic';
+
 const myObj = {
   myFunc: function(param1, param2){
     return [param1 , param2];
@@ -40,8 +43,9 @@ const myObj = {
 
   film,
   // An outside object
+
   movie: film,
   // An outside object with a different property name.
 };
-
+```
 ---

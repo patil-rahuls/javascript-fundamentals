@@ -16,10 +16,12 @@ There can be more than one spread element in an expression.
 ```javascript
 // Expanding an Array
 const tech = ['JavaScript', 'TypeScript', 'Node.js', 'Express', 'React', 'AWS Cloud'];
+
 const updatedTech = [...tech, 'Docker', 'Redux'];
 
 console.log(updatedTech);
 // ['JavaScript', 'TypeScript', 'Node.js', 'Express', 'React', 'AWS Cloud', 'Docker', 'Redux']
+
 console.log(...updatedTech);
 // 'JavaScript', 'TypeScript', 'Node.js', 'Express', 'React', 'AWS Cloud', 'Docker', 'Redux'
 
@@ -30,7 +32,9 @@ const user = {
   age: 25,
   city: "Pune"
 };
+
 const updatedUser = { country: 'India', ...user };
+
 console.log(updatedUser);
 /*
 {
@@ -50,6 +54,7 @@ console.log(updatedUser);
 // Merging Arrays
 const first = [1, 2, 3, 4];
 const second = ['Admin', 'Root'];
+
 const joinedArr = [...first, ...second];
 
 console.log(joinedArr);
@@ -62,10 +67,13 @@ const user = {
   age: 25,
   city: "Pune"
 };
+
 const extraInfo = {
   country: 'India'
 };
+
 const updatedUser = { ...user, ...extraInfo };
+
 console.log(updatedUser);
 /*
 {
@@ -84,7 +92,9 @@ console.log(updatedUser);
 ```javascript
 // Copy a flat array
 const first = [1, 2, 3, 4];
+
 const firstCopy = [...first];
+
 console.log(firstCopy);
 // [1, 2, 3, 4]
 
@@ -95,7 +105,9 @@ const user = {
   age: 25,
   city: "Pune"
 };
+
 const temp = { ...user };
+
 console.log(temp);
 /*
 {
@@ -117,7 +129,10 @@ However, if the object or array contains nested objects or arrays, it only copie
 const user = {
   name: "Rahul",
   age: 25,
-  address: { city: "Pune" }
+
+  address: {
+    city: "Pune"
+  }
 };
 
 // Shallow copy using the spread operator
@@ -125,11 +140,14 @@ const copy = { ...user };
 
 copy.name = "Raj";
 // Changes top-level primitive
+
 copy.address.city = "Mumbai";
 // Mutates the nested object reference
 
+
 console.log(user.name);
 // "Rahul" (Unchanged)
+
 console.log(user.address.city);
 // "Mumbai" (CHANGED! Both share the reference)
 ```
@@ -142,8 +160,10 @@ console.log(user.address.city);
 function notify(name, msg) {
   console.log(`${name} sent: ${msg}`);
 }
+
 // Using an array
 const payload = ['Admin', 'Hello Rahul!'];
+
 notify(...payload);
 // 'Admin sent: Hello Rahul!'
 
@@ -158,6 +178,7 @@ notify(...objPayload); // ❌ incorrect
 
 // ✅ Fix:
 // Object.values(objPayload) creates ['Admin', 'Hello Rahul!'], which can then be safely spread
+
 notify(...Object.values(payload));
 // 'Admin sent: Hello Rahul!'
 ```

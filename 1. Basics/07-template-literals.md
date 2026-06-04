@@ -7,15 +7,17 @@ These are fixed values not variables that you literally provide in your script.
 ```javascript
 let name = "foo"
 // "foo" is a string literal
+
 let age = 29
 // "29" is a number literal
+
 let stu = { name, age};
 // "{name, age}" is an object literal
 ```
 
 &nbsp;
 
-Template literals are literals delimited with backtick `` allowing for multi-line strings.
+Template literals are literals delimited with backtick ` `` ` allowing for multi-line strings.
 
 ```javascript
 // Old way:
@@ -30,6 +32,8 @@ console.log(`String
 multiple
 lines`);
 ```
+
+&nbsp;
 
 String interpolation with embedded expressions i.e. using variables in a template literal string
 

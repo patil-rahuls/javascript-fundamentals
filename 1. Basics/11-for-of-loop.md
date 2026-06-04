@@ -6,6 +6,7 @@
 
 ```javascript
 const menu = ['North Indian', 'Chinese', 'South Indian'];
+
 for (const item of menu){
   console.log(item);
 }
@@ -17,6 +18,7 @@ for (const item of menu){
 ```javascript
 for(const item of Object.entries(menu)){
   console.log(item); // [index, value]
+
   console.log(`Item number ${item[0]+1} is ${item[1]}`);
 }
 

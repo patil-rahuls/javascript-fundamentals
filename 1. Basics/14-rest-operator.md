@@ -17,11 +17,13 @@ The Rest Operator has to be at the end of any destructuring assignment.
 ```javascript
 // Array
 const arr = [1, 2, 3, 4, 5, 6, 7];
+
 const [ a, b, c, d, ...restValues ] = arr;
 // ‘restValues’ will be an array of the rest of the elements of arr. Hence the name "REST" operator(I believe).
 
 console.log(a, b, c, d, restValues);
 // 1  2  3  4  [5  6  7]
+
 console.log(a, b, c, d, ...restValues);
 // 1  2  3  4  5  6  7
 
@@ -34,7 +36,9 @@ const product = {
   price: 20,
   color: 'Blue'
 };
+
 const { id, title, ...pricingAndDetails } = product;
+
 console.log(pricingAndDetails);
 /*
 {
@@ -53,6 +57,7 @@ IMP: The rest operator has to be at the end of any destructuring assignment, els
 ```javascript
 // Array
 const arr = [1, 2, 3, 4, 5, 6, 7];
+
 const [ a, b, ...someValues, d] = arr;
 // ❌ incorrect. Rest operator has to be at the end.
 // Error : "Rest element must be last element."
@@ -65,6 +70,7 @@ const product = {
   price: 20,
   color: 'Blue'
 };
+
 const { id, ...titleAndPrice, color } = product;
 // ❌ incorrect. Rest operator has to be at the end.
 // Error : "Rest element must be last element."
@@ -87,6 +93,7 @@ console.sumAll(10, 20, 30);
 /* Advantage of Rest Operator as a function parameter:
 The function above can now accept both a single value as well as a spread-array as its input.*/
 let inputArr = [10, 20, 30];
+
 console.sumAll(...inputArr);
 // 60
 
@@ -94,6 +101,7 @@ console.sumAll(...inputArr);
 // Object Example
 function showInfo(rollNo, { name, ...info}){
   console.log(`Roll No. ${rollNo}`);
+
   console.log(`${name} is ${info.age}, and lives in ${info.city}`);
 }
 
@@ -102,6 +110,7 @@ const user = {
   age: 25,
   city: "Pune"
 };
+
 showInfo(76, user);
 ```
 
