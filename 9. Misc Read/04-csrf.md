@@ -11,23 +11,22 @@ It is possible, simply because, any correct request with proper cookies, will ma
 
 
 > Example -
-
-Let's say you are logged in to 'xyz.com'.
-
-If you open a new tab and in its console, send a fetch reques (let's say a POST) to 'xyz.com', it will automatically send the cookies along with that POST request.
-
-Someone can write a (malicious) JavaScript code in an html file and upload it somewhere and trick the logged in user(you) to click on that link.
-
-If 'xyz.com' has not implemented CSRF tokens and if it has a cookie based session handling, then, that POST request will be completed (simply because the cookies will also get sent along with that POST request, and it will appear to be a valid requestfor the 'xyz.com' server).
-
-The malicious JavaScript code can be a form submission with 'onload' attribute of body. It can be hidden in an _`<iframe>`_ to prevent any redirects to be seen by the user.
-
-It can also be added to "onerror" attribute of an <img>.
+>
+> Let's say you are logged in to 'xyz.com'.
+>
+> If you open a new tab and in its console, send a fetch reques (let's say a POST) to 'xyz.com', it will automatically send the cookies along with that POST request.
+>
+> Someone can write a (malicious) JavaScript code in an html file and upload it somewhere and trick the logged in user(you) to click on that link.
+>
+> If 'xyz.com' has not implemented CSRF tokens and if it has a cookie based session handling, then, that POST request will be completed (simply because the cookies will also get sent along with that POST request, and it will appear to be a valid requestfor the 'xyz.com' server).
+>
+> The malicious JavaScript code can be a form submission with 'onload' attribute of body. It can be hidden in an _`<iframe>`_ to prevent any redirects to be seen by the user.
+>
+> It can also be added to "onerror" attribute of an <img>.
 
 IN a nutshell, CSRF is an attack where an attacker causes the victim user to carry out an action unintentionally while that user is authenticated.
 
 &nbsp;
-
 ###  Understanding CSRF
 
 CSRF is basically about an attacker exploiting a user's existing session via the way cookies work in a browser.
@@ -50,7 +49,7 @@ A bit simplified, it means if something is downloaded from one domain (or more p
 ### Preventing CSRF
 
 
-> ### Use of CSRF tokens
+> Use of CSRF tokens
 
 https://www.youtube.com/watch?v=TKyHxceaEVg
 https://www.youtube.com/watch?v=TwG0Rd0hr18

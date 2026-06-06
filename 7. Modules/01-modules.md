@@ -3,26 +3,26 @@
 ### What are Modules?
 
 > Modules are a way to organize code into separate files or units of functionality.
-
+>
 > Benfits of Modules are, we get:
 > -  Reusable code
 > -  Maintainability and
 > -  Scalability
-
-
+>
 > One module should serve a single purpose. It should have related encapsulated js code.
 
 > Every JS file in Node JS is treated as a Module.
 
 > Multiple modules can be grouped into a package.
-
-> Packages - A directory with one or more Modules.
+Package: A directory with one or more Modules.
+---
 
 &nbsp;
 
+### Types of Modules?
 There are two main types of modules in JavaScript based on the Ecmascript specifications:
 
-> 1. CommonJS modules:
+> 1. ***CommonJS modules:***
 >
 >    This is the default module format used in Node.js FOR ALMOST ALL OF ITS IMPLEMENTATION.
 >
@@ -30,7 +30,7 @@ There are two main types of modules in JavaScript based on the Ecmascript specif
 >
 > &nbsp;
 >
-> 2. ES6 modules:
+> 2. ***ES6 modules:***
 >
 >     This is the module format introduced in ES6.
 >
@@ -54,10 +54,9 @@ Functionally there are three types of modules:
 > 3. Third-party modules:
 >
 >     All those which are available online in the public domain. Like `AsyncJS`, `Axios`, and `Express` to name a few.
+---
 
 &nbsp;
-
-
 ### Scopes in Modules
 
 > In a Module, all top level variables are scoped to the Module.

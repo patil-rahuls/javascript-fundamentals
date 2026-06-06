@@ -5,7 +5,6 @@ Running promises in parallel means executing multiple asynchronous operations at
 This can greatly improve performance in situations where there are many independent and time-consuming tasks to be performed.
 
 > Always use `try` `catch` block with `async` functions.
-
 ```javascript
 const myFunc = async function(page1, page2, page3) {
   try{
@@ -84,5 +83,4 @@ const myFunc2 = async function(page1, page2, page3) {
   }
 };
 ```
-
 ---

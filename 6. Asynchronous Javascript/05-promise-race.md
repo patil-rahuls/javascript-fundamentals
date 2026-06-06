@@ -3,9 +3,11 @@
 > **Promise Combinators** are methods that operate on multiple promises and return a new promise.
 
 > Three Promise Combinators:
-  - Promise.race,
-  - Promise.allSettled
-  - Promise.any
+  - ***Promise.race()***,
+  - ***Promise.allSettled()***
+  - ***Promise.any()***
+
+> ***`Promise.race` is settled as soon as any of the promises you feed it `settled`, no matter whether they are _fulfilled_ or _rejected_.***
 
 > Example 1: `Promise.race(iterable)`
 

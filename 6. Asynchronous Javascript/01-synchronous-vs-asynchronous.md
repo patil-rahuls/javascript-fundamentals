@@ -1,12 +1,12 @@
 ## Synchronous vs Asynchronous
 
-### Synchronous
+> ### Synchronous
 
 Synchronous code is executed in sequence. A statement has to wait for the earlier statement to get executed.
 
-> Long runing operations `block` the code execution.
+Long runing operations `block` the code execution.
 
-> Example
+> Example : Blocking code _(synchronous)_
 ```javascript
 console.log('One');
 console.log('Two');
@@ -17,8 +17,7 @@ console.log('Three');``
 ```
 
 &nbsp;
-
-### Asynchronous
+> ### Asynchronous
 Long runing operations can be made to "execute in the background". While rest of the code executes normally without ever being blocked.
 
 > Asynchronous code is `non-blocking`.
@@ -44,15 +43,15 @@ Some examples of this are network requests, long-running calculations, file syst
 &nbsp;
 
 
-### Callback Hell
+> ### Callback Hell
 
 When we have multiple asynchronous operations one after the other by "nesting" the callbacks, we get a a pyramid structure like code called 'callback hell'.
 
-> Every callback depends/waits for the previous callback.
+Every callback depends/waits for the previous callback.
 
-> Affects the readability and maintainability of the code.
+Affects the readability and maintainability of the code.
 
-> Example:
+> Example: Nested Promises' callbacks _(Callback Hell)_
 ```javascript
 asyncOperation1(function(result1) {
   asyncOperation2(result1, function(result2) {
@@ -65,8 +64,7 @@ asyncOperation1(function(result1) {
 });
 ```
 
-> #### We avoid Callback Hell by using `Promises`:
-
+> #### We avoid the Callback Hell by using `Promises`:
 ```javascript
 asyncOperation1()
   .then(result1 => asyncOperation2(result1))
@@ -79,5 +77,4 @@ asyncOperation1()
     // Handle errors
 });
 ```
-
 ---

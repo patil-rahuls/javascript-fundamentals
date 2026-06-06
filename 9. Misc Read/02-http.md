@@ -1,25 +1,27 @@
 ## HTTP Basics
 
-1. HTTP is a protocol that sits on the TCP/IP protocol suite's Application layer.
+> ### Client Server Protocol
+HTTP is a protocol that sits on the TCP/IP protocol suite's Application layer. Also called `client-server protocol`.
 
-    Also called client-server protocol.
+> ### HTTP is connectionless
+After making the requests, the client disconnects from the server. When response is ready, the server re-establishes connection with client and delivers the response.
 
-2. HTTP is connectionless - after making the requests, the client disconnects from the server. When response is ready, the server re-establishes connection with client and delivers the response.
+> ### HTTP is stateless
+Client and server know about each other just during the current  request. Once the request is complete, both the client and the server have no information about each other.
 
-3. HTTP is stateless - client and server know about each other just during the current  request. Once the request is complete, both the client and the server have no information about each other.
-
-      To re-connect, both computers need to provide information to
+To re-connect, both computers need to provide information to
 each other as if they are connecting for the first time.
 
-4. HTTP can be used to send any type of data as long both client and the server are able to read it.
+> ### Content Types
+HTTP can be used to send any type of data as long both client and the server are able to read it.
 
-5. HTTP request/response cycle.
-    - Client requests a website.
-    - It first makes a request to get the html document.
-    - Then inside the html document, there are links to css files, so client will request the css file while rendering the html.
-    - Similarly fonts, javascript files/libraries are requested from server.
+> ### HTTP request/response cycle.
+  - Client requests a website.
+  - It first makes a request to get the html document.
+  - Then inside the html document, there are links to css files, so client will request the css file while rendering the html.
+  - Similarly fonts, javascript files/libraries are requested from server.
 
-6. Both Requests and responses share a common structure in HTTP.
+> ### Both Requests and responses share a common structure in HTTP.
 
 > A HTTP request message has 3 parts.
 >
@@ -33,7 +35,7 @@ each other as if they are connecting for the first time.
 >
 > 4. Request Body
 >
-
+---
 > A HTTP response message has 3 parts.
 >
 > 1. Status line
@@ -48,10 +50,10 @@ each other as if they are connecting for the first time.
 >
 > 4. Response Body(optional)
 >
-
+---
 &nbsp;
 
-7. Some examples of HTTP messages:
+_Some examples of HTTP messages:_
 
 > HTTP Request for getting a root page in Frnech language.
 >
@@ -64,8 +66,7 @@ each other as if they are connecting for the first time.
 >     Content-Length: 64
 >     Content-Type: application/x-www-form-urlencoded
 >     name=Joe%20User&request=Send%20catalogue
-
-
+---
 > Its HTTP Response message looks like this.
 >
 >      HTTP/1.1 200 OK
@@ -94,8 +95,7 @@ each other as if they are connecting for the first time.
 >          <p>Hello, world!</p>
 >      </body>
 >      </html>
-
-
+---
 > 404 response.
 >
 >      HTTP/1.1 404 Not Found

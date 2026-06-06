@@ -1,10 +1,8 @@
 ## `Promise.allSettled()`
 
-`Promise.allSettled(iterable):`
+> ***`Promise.allSettled()` returns a new promise that resolves with an array of objects that describe the outcome of each promise in the iterable, whether fulfilled or rejected.***
 
-> ### Returns a new promise that resolves with an array of objects that describe the outcome of each promise in the iterable, whether fulfilled or rejected.
-
-`Promise.allSettled()` takes an array of promises and returns a new promise that resolves with an array of objects that describe the state of each input promise (whether it resolved or rejected and with what value).
+`Promise.allSettled()` takes an array of promises and returns a new promise that resolves with an array of objects that describe the state of each input promise (whether resolved or rejected and with respective value/reason).
 
 ```javascript
 const promise1 = new Promise((resolve, reject) => {

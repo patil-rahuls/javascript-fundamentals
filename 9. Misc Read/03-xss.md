@@ -3,20 +3,18 @@
 https://www.youtube.com/watch?v=pdC3H8SX-F4
 
 
-Attacks are largely the result of a mistake made on backend web servers where someone fails to escape data that’s submitted by users.
+`XSS` Attacks are largely the result of a mistake made on backend web servers where someone fails to escape data that’s submitted by users.
 
 When that happens it’s possible to inject a tag to load JavaScript code from another web site. That code could be harmless but it could also contain something dangerous, like malware.
 
-Types of XSS attacks
-- Stored XSS -
-
-    Script gets stored on the server through an unescaped form input. Each time a user requests that form, that stored code gets executed.
-- Reflected XSS -
-
-    Script gets executed from another harmful website.
+> ### Types of XSS attacks
+> - ***Stored XSS*** -
+Script gets stored on the server through an unescaped form input. Each time a user requests that form, that stored code gets executed.
+>
+> - ***Reflected XSS*** -
+>    Script gets executed from another harmful website.
 
 &nbsp;
-
 ### How to prevent XSS Attacks?
 
 > ### Set `CSP` (Content Security Policy) headers.

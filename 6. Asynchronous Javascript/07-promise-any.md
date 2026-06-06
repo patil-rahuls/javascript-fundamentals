@@ -1,10 +1,8 @@
 ## `Promise.any()`
 
-`Promise.any(iterable)`:
+> ***`Promise.any` is settled as soon as any of the promises you feed it is `fulfilled` or when they are `all rejected`, in which case it's rejected with an `AggregateError` array.***
 
-Returns a new promise that resolves with the value of the first fulfilled promise in the iterable. If all promises are rejected, it rejects with an `AggregateError` containing an array of rejection reasons.
-
-`Promise.any()` takes an array of promises and returns a new promise that resolves as soon as one of the input promises resolves. If all input promises reject, Promise.any() returns a rejected promise.
+`Promise.any()` takes an array of promises and returns a new promise that resolves as soon as one of the input promises resolves. If all the input promises reject, it returns a rejected promise with an `AggregateError` array.
 
 ```javascript
 const promise1 = new Promise((resolve, reject) => {
