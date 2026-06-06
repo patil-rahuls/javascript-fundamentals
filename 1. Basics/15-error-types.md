@@ -1,16 +1,16 @@
 ## Error Types
 
-### 1. Syntax errors
+> ### 1. Syntax errors
 These occur when the code contains a mistake in the structure or syntax of the language.
 
 Examples include missing punctuation,  incorrect use of keywords, or mismatched parentheses.
 
-### 2. Reference errors
+> ### 2. Reference errors
 These occur when the code is trying to access a variable or function that has not been defined.
 
 This can happen when a variable has not been declared, or when a function is called before it has been defined. Remember TDZ?
 
-### 3. Type errors
+> ### 3. Type errors
 These occur when the code is trying to perform an operation on a variable of the wrong type.
 
 Examples include trying to use a string as a number, or trying to access a property of a non-object.
@@ -21,7 +21,7 @@ const x = 7;
 console.log(x.toUpperCase());
 ```
 
-### 4. Range errors
+> ### 4. Range errors
 
 These occur when the code is trying to access an index outside the range of an array, or when a value is too large or too small to be used.
 
@@ -32,7 +32,7 @@ console.log(maxNumber + 1);
 // Here, the code is trying to add 1 to the maximum safe integer value that JavaScript can represent, which exceeds the maximum value that can be represented and it will cause a range error.
 ```
 
-### 5. Evaluation errors
+> ### 5. Evaluation errors
 These occur when the code is trying to evaluate an expression that is not valid.
 
 Examples include dividing by zero or trying to access a property of undefined.
@@ -42,7 +42,7 @@ eval("hello world");
 // Here, the code is trying to evaluate a string "hello world" which is not a valid JavaScript statement, so it causes an evaluation error.
 ```
 
-### 6. URIError
+> ### 6. URIError
 
 These occur when a malformed URI is passed to the encodeURI() or decodeURI() functions.
 

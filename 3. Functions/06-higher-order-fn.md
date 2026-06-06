@@ -2,13 +2,11 @@
 
 > Fundamental concept of JavaScript.
 
-> Higher Order function - A function that receives another function as an argument, or/and returns a function.
+> ***Higher Order function - A function that receives another function as an argument, or/and returns a function.***
 
-> The functions that are passed/returned are called **First Class Functions/Citizens**.
+> ***The functions that are passed/returned are called **First Class Functions/Citizens**.***
 
 e.g. `addEventListener()` is a higher order function.
-
-
 ```javascript
 function count() {
   let counter = 0;
@@ -20,9 +18,7 @@ function count() {
 ```
 
 ###  More examples:
-
 > Example 1: Functions accepting callback functions:
-
 ```javascript
 // Callback function 1
 const oneWord = function (str) {
@@ -40,21 +36,21 @@ const transform = function (str, fn) {
   console.log(`Original string : ${str} `);
   console.log(`Modified string : ${fn(str)} `);
   console.log(`Modified by function : ${fn.name}`);
-  // A function is also an object and it has ‘name’
-  // as one of its internal properties.
+  // A function is also an object and it
+  // has a ‘name’ as one of its internal
+  // properties.
 }
 
-// Calling `transform` using different methods as parameters.
+// Calling `transform` using different
+// methods as parameters.
 transform("Rahul is greater", UpperFirstWord);
 transform("Rahul is greater", oneWord);
 ```
 
-> In the above example, Abstraction is achieved i.e. hiding the details of implementation. This allows us to think more on an abstract level.
+> _In the above example, Abstraction is achieved i.e. hiding the details of implementation. This allows us to think more on an abstract level._
 
 &nbsp;
-
 > Example 2: Functions returning functions
-
 ```javascript
 const greet = function (greeting) {
   return function (name) {
@@ -63,22 +59,24 @@ const greet = function (greeting) {
 };
 
 const greeterHey = greet('Heyy');
-// greeterHey will now be a function which is
-// returned by greet();
+// greeterHey will now be a function which
+// is returned by greet();
 
 // Let's observe the function call now
 greeterHey('Rahul');
 // "Heyy Rahul"
 
-// How is the greeting 'heyy' coming in the function
-// which is already returned. It's because of 'Closures'.
+// How is the greeting 'heyy' coming in
+// the function which is already returned.
+// It's because of 'Closures'.
 
-// The above function call can be also written in one line.
+// The above function call can be also
+// written in one line.
 greet("Good Morning")("Mr. Rahul");
 
 
-// And the function definition can also be written
-// using the arrow function:
+// And the function definition can also
+// be written using the arrow function:
 const greet = greeting => {
   return function (name) {
     console.log(` ${greeting} ${name}`);
@@ -90,13 +88,12 @@ const greet = greeting => {
 const greetArrow = greeting => name => console.log(`${greeting} ${name}`);
 
 // See the cleanliness in our code.
-// One arrow function returning another arrow function
+// One arrow function returning
+// another arrow function
 ```
 
 &nbsp;
-
 > Example 3: Creating related functions by returning functions.
-
 ```javascript
 const addTax = (rate) => {
   return function (val) {
@@ -116,5 +113,4 @@ gst(cost);
 educationCess(cost);
 // 3673.95
 ```
-
 ---

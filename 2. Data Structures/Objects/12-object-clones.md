@@ -12,18 +12,15 @@ const myObj = {
 };
 ```
 
-### 1. Shallow Copy - Object.assign()
+> ### 1. Shallow Copy - `Object.assign()`
 
 > Syntax: Object.assign(target, ...sources)
-
 ```javascript
 const shallowCopy = Object.assign({}, myObj);
-// The Object.assign() invokes the getters on the source
-// objects and setters on the target (if provided).
-// It assigns properties only, not copying or defining new
-// properties.
 ```
-
+>  The `Object.assign()` invokes the getters on the source objects and setters on the target (if provided).
+>
+>  It assigns properties only, not copying or defining new properties.
 
 **IMP - But beware of the shallow copy because 'nested objects' (if any) are still copied as reference.**
 
@@ -40,10 +37,12 @@ const x = {
 const copy = Object.assign({}, x);
 // copy - { name: 'Rahul', dob : { year : 1990 }}
 
-// Now, in the 'copy' object, all outer most properties
-// i.e. 'name' in this case, are an independent copy.
-// And all the properties with nested objects as their
-// values are references.
+// Now, in the 'copy' object, all
+// outer most properties i.e. 'name'
+// in this case, are an independent copy.
+// And all the properties with nested
+// objects as their values are references.
+
 
 // Copied outermost properties are deep copy.
 x.name = 'patil';
@@ -51,49 +50,43 @@ x.name = 'patil';
 // copy - { name: 'Rahul', dob : { year : 1990 }}
 // i.e. name property remains independent (deep copy).
 
+
 // Nested objects are reference (shallow copy)
 x.dob.year = 1991;
 // x - { name: 'patil', dob : { year : 1991 }}
 // copy - { name: 'Rahul', dob : { year : 1991 }}
 // i.e. the nested object property gets changed.
 ```
-
 ---
+
 &nbsp;
+> ### 2. Deep Copy
 
-### 2. Deep Copy
-
-#### using `JSON`
-
+> #### using `JSON`
 ```javascript
 const deepCopy = JSON.parse(JSON.stringify(myObj));
 ```
 
-#### using `structuredClone()`
-
+> #### using `structuredClone()`
 ```javascript
 const clone = structuredClone(myObj);
-// IMP - does not clones methods and DOM nodes inside the source object.
-
-// We can also use some libraries like lodash or underscore.
+// IMP - does not clones methods and
+// DOM nodes inside the source object.
 ```
-
 ---
+
 &nbsp;
+> ### 3. Merge one or more Objects
 
-### 3. Merge one or more Objects.
-
-#### Using destructuring assignment
-
+> #### Using destructuring assignment
 ```javascript
 let merged = {...obj1, ...obj2};
 ```
 
-#### Using Object.assign()
-
+> #### Using `Object.assign()`
 ```javascript
 const allMerged = Object.assign({}, obj1, obj2, obj3, etc);
-// Properties of 'obj1' will be overwritten by properties of 'obj2' and same happens with obj2 and obj3, and so on.
 ```
+> In the above example, properties of `obj1` will be overwritten by properties of `obj2` and same happens with `obj2` and `obj3`, and so on.
 
 ---

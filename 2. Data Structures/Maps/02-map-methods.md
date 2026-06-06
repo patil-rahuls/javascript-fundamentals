@@ -1,18 +1,14 @@
 ## Data Structures > Maps
 
+> ***Maps are high performance key - value paired data structure.***
+>
+> ***In Objects keys can only be strings (without quotes), but in Maps, keys can be any type.***
+
+&nbsp;
 ### Map Methods
 
-Maps are high performance key - value paired data structure.
-
-In Objects keys can only be strings (without quotes), but in Maps, keys can be any type.
-
-More here : https://dmitripavlutin.com/maps-vs-plain-objects-javascript/
-
-
-### `Map.prototype.set()`
-
+> ### `Map.prototype.set()`
 Adds a pair to the Map and returns updated map.
-
 ```javascript
 const myMap = new Map();
 
@@ -38,12 +34,8 @@ console.log(myMap);
 ```
 
 &nbsp;
-
-
-### `Map.prototype.get()`
-
+> ### `Map.prototype.get()`
 Retrieve data from a Map by value
-
 ```javascript
 myMap.get(true);
 // I am free now.
@@ -54,10 +46,8 @@ myMap.get('age');
 ```
 
 &nbsp;
-
-### `Map.prototype.has()`
+> ### `Map.prototype.has()`
 Checks if a key exists in a Map
-
 ```javascript
 myMap.has('hobbies');
 // false
@@ -67,60 +57,47 @@ myMap.has(2);
 ```
 
 &nbsp;
-
-### `Map.prototype.delete()`
+> ### `Map.prototype.delete()`
 Deletes an item from a Map
-
 ```javascript
 myMap.delete(2);
 myMap.delete(1);
 ```
 
 &nbsp;
-
-
-### `Map.prototype.size`
+> ### `Map.prototype.size`
 Returns size of Map.
 
-**IMP: This is not a method. no parens `()`**
-
+**IMP: This is not a method. no parens `()`.**
 ```javascript
 myMap.size; // no parentheses after size.
 ```
 
 &nbsp;
-
-### `Map.prototype.clear()`
+> ### `Map.prototype.clear()`
 Truncates Map
-
 ```javascript
 myMap.clear();
 ```
+
 &nbsp;
-
-### `Map.prototype.keys()`
+> ### `Map.prototype.keys()`
 Retrieve keys from the Map
-
 ```javascript
 myMap.keys();
 ```
 
 &nbsp;
-
-### `Map.prototype.values()`
+> ### `Map.prototype.values()`
 Retrieve values from the Map
-
 ```javascript
 myMap.values();
 ```
 
 &nbsp;
-
-### `Map.prototype.entries()`
+> ### `Map.prototype.entries()`
 Retrieve entries [key, value] from the Map
-
 ```javascript
 myMap.entries();
 ```
-
 ---

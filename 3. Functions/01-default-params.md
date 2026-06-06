@@ -1,8 +1,6 @@
 ## Default function parameters [ES6]
 
-> ***Always keep parameters with default values at the end while defining a function.***
-
-
+> ### Default value parameters always at the end
 ```javascript
 function sum(x, y = 10) {
   return x + y;
@@ -13,10 +11,8 @@ console.log(sum(5));
 ```
 
 &nbsp;
-
-### Default parameter is ignored when `null` is passed.
+> ### Default parameter is ignored when `null` is passed.
 > ***Default parameters are only triggered if an argument is `undefined` (or missing).***
-
 ```javascript
 function sum(x = 10, y) {
   return x + y;
@@ -27,40 +23,37 @@ console.log(sum(undefined, 5));
 
 console.log(sum(null, 5));
 // 5
-// Default parameters are only triggered if an argument is undefined (or missing).
-
-// null is treated as a valid deliberate value, so the default parameter is ignored.
 ```
+> _Default parameters are only triggered if an argument is `undefined` (or missing)._
+>
+> _`null` is treated as a valid deliberate value, so the default parameter is ignored._
 
 &nbsp;
-
-### We can provide an expression as a parameter's default value
-
+> ### Expression as a parameter's default value
+We can have an expression to compute default value.
 ```javascript
-// We can have an expression to compute default value
 function userName(fullName, nickName = fullName.split(' ')[0]) {
   console.log(`Nickname of ${fullName} is ${nickName}`);
 }
-// Here, the default value to nickName would be computed from fullName if not provided explicitly.
+// Here, the default value to nickName
+// would be computed from fullName if
+// not provided explicitly.
 
 userName('Rahul Patil');
-// Nickname of Rahul Ratil is Rahul
+// 'Nickname of Rahul Ratil is Rahul'
 
 userName('Hitesh Tiwari', 'Lav');
-// Nickname of Hitesh Tiwari is Lav
+// 'Nickname of Hitesh Tiwari is Lav'
 
 myFunc('Aajesh', undefined);
-// Nickname of Aajesh is Aajesh
-
-// Setting default param value as 'undefined' is the same as
-// not setting the value.
-// This means that parameters (without a default value) in a function are set to 'undefined' initialy.
+// 'Nickname of Aajesh is Aajesh'
 ```
+> Setting default param value as `undefined` is the same as not setting the value.
+>
+> _This means that parameters (without a default value) in a function are set to `undefined` initialy._
 
 &nbsp;
-
-### By default, the value of a function parameter is undefined if default values are not provided.
-
+> ### By default, the value of a function parameter is `undefined` if default values are not provided.
 ```javascript
 function show(a, b) {
   if(a){
@@ -83,5 +76,4 @@ show(undefined,1);
 show(1,1);
 // this that
 ```
-
 ---

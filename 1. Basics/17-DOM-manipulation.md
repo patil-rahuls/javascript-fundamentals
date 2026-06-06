@@ -2,9 +2,11 @@
 
 > **HTML Page <---> DOM Tree <---> DOM API <---> Javascript**
 
-DOM Manipulation allows JavaScript to dynamically create, modify, structure, and style elements on a webpage.
+> **DOM Manipulation allows JavaScript to dynamically create, modify, structure, and style elements on a webpage.**
 
-### 1. What is DOM ?
+&nbsp;
+
+> ### 1. What is DOM ?
 
 Document Object Model. It's an interface between the
 javascript code and the browser.
@@ -14,15 +16,13 @@ DOM tree is generated from an HTML document, which we can then interact with, us
 We write javascript code to create, modify and delete HTML elements, set styles, set classes and attributes, and listen and respond to the events that we attach to them.
 
 &nbsp;
-
-### 2. DOM API?
+> ### 2. DOM API?
 Allows you to modify a DOM tree in any way you want.
 
 We can edit the DOM of a document using JavaScript to access the `document` property of the global object.
 
 &nbsp;
-
-### 3. What are NodeList and HTMLCollection?
+> ### 3. What are NodeList and HTMLCollection?
 Both the NodeList and HTMLCollection contain HTML elements that we query from javascript. The
 
 HTMLCollection changes in real time when we make changes in the DOM.
@@ -30,12 +30,11 @@ HTMLCollection changes in real time when we make changes in the DOM.
 But the same does not happen with NodeList.
 
 &nbsp;
+> ### 4. Querying the elements
 
-### 4. Querying the elements
-
-> `document.querySelector()`
-
-- Returns a SINGLE (first matching) element. We provide CSS selectors to these methods.
+> _`document.querySelector()`_
+>
+> _Returns a SINGLE (first matching) element. We provide CSS selectors to these methods._
 ```javascript
 // Selecting by class
 document.querySelector('.messageDiv');
@@ -46,44 +45,44 @@ document.querySelector('#message');
 // multiple selectors
 document.querySelector('.messageDiv, #message, div.main p');
 ```
-- Use querySelector when you need flexibility, such as selecting nested elements, matching complex CSS paths, or writing unified selection code.
+Use querySelector when you need flexibility, such as selecting nested elements, matching complex CSS paths, or writing unified selection code.
 
 &nbsp;
-
-> `document.querySelectorAll()`
-- Returns a NodeList(non-live) of matching elements.
+> _`document.querySelectorAll()`_
+>
+> _Returns a NodeList(non-live) of matching elements._
 ```javascript
 const tblRows = document.querySelectorAll("table tr");
 ```
 
 &nbsp;
-
-> `document.getElementById()`
-- Use getElementById when you want the fastest performance and only need to find an element by its exact ID string.
-- It is highly optimized and noticeably faster because the browser engine uses a direct internal lookup map of ID keys.
+> _`document.getElementById()`_
+>
+> _Use getElementById when you want the fastest performance and only need to find an element by its exact ID string._
+>
+> _It is highly optimized and noticeably faster because the browser engine uses a direct internal lookup map of ID keys._
 ```javascript
 document.getElementById('show');
 ```
 
 &nbsp;
-
-> `document.getElementsByTagName()`
-- This returns an HTMLCollection of matching elements.
+> _`document.getElementsByTagName()`_
+>
+> _This returns an HTMLCollection of matching elements._
 ```javascript
 document.getElementsByTagName('button');
 ```
 
 &nbsp;
-
-> `getElementsByClassName()`
-- This returns an HTMLCollection of matching elements.
+> _`getElementsByClassName()`_
+>
+> _This returns an HTMLCollection of matching elements._
 ```javascript
 document.getElementsByClassName('account');
 ```
 
 &nbsp;
-
-> `labels and non -inputs:`
+> **labels and non -inputs:**
 ```javascript
 document.querySelector('.messageDiv').textContent;
 
@@ -96,11 +95,11 @@ document.querySelector('.guess').value = 44;
 
 &nbsp;
 
-> `Event Listeners:`
-- Clicks, scrolls are some of the events that happen
+> **Event Listeners:**
+>
+> _Clicks, scrolls are some of the events that happen
 on a webpage. We can write functions that react to
-such events that happen on our page.
-
+such events that happen on our page._
 ```javascript
 document
   .querySelector('.myButton')
@@ -111,10 +110,8 @@ document
     }
 );
 ```
-
-- A more cleaner way would be by separately defining a
-callback function and re-using it-
-
+> _A more cleaner way would be by separately defining a
+callback function and re-using it-_
 ```javascript
 const myFunc = function() {
   console.log("Hi there!");
@@ -126,9 +123,7 @@ document
 ```
 
 &nbsp;
-
-> `Changing CSS and classes:`
-
+> **Changing CSS and classes:**
 ```javascript
 document
   .querySelector('body')
@@ -142,9 +137,7 @@ document
 ```
 
 &nbsp;
-
-> `Adding removing class`
-
+> **Adding removing class**
 ```javascript
 document
   .querySelector('body')
@@ -158,10 +151,11 @@ document
 ```
 
 &nbsp;
-
-> `Keypress events:`
-- keyboard events are global events.
-- Some of them are: 'keydown' , 'keyup' and 'keypress'.
+> **Keypress events:**
+>
+> _keyboard events are global events._
+>
+> _Some of them are: 'keydown' , 'keyup' and 'keypress'._
 ```javascript
 document.addEventListener('keydown',
   function() {
@@ -169,9 +163,9 @@ document.addEventListener('keydown',
   }
 );
 ```
-- When an event occurs, Javascript generates an object that contains all info about that event.
-
-- We use that object to handle the event in the handler function. We pass that event object as an argument to the callback function.
+> _When an event occurs, Javascript generates an object that contains all info about that event._
+>
+> _We use that object to handle the event in the handler function. We pass that event object as an argument to the callback function._
 ```javascript
 document.addEventListener('keydown',
   function(eventObj) {
@@ -187,8 +181,7 @@ document.addEventListener('keydown',
 ```
 
 &nbsp;
-
-> `Creating and Inserting HTML Elements:`
+> **Creating and Inserting HTML Elements:**
 ```javascript
 const header = document.querySelector('.header');
 
@@ -207,17 +200,16 @@ header.append(msg);
 ```
 
 &nbsp;
-
-> `cloneNode()`
-- Create multiple copies of same element:
+> _`cloneNode()`_
+>
+> _Create multiple copies of same element:_
 ```javascript
 header.append(msg.cloneNode(true));
 // It now creates its own clone.
 ```
 
 &nbsp;
-
-> `Creating an element before or after an element:`
+> **Creating an element before or after an element:**
 ```javascript
 // Before header element
 header.before(msg);
@@ -227,8 +219,7 @@ header.after(msg);
 ```
 
 &nbsp;
-
-> `Deleting an element:`
+> **Deleting an element:*
 ```javascript
 // New Way
 msg.remove();
@@ -238,9 +229,9 @@ msg.parentElement.removeChild(msg);
 ```
 
 &nbsp;
-
-> `getComputedStyle -`
-- Getting style attributes of an element:
+> _`getComputedStyle()`_
+>
+> _Getting style attributes of an element:_
 ```javascript
 const msgStyle = getComputedStyle(msg);
 
@@ -254,8 +245,7 @@ msgStyle.height = Number.parseFloat(
 ```
 
 &nbsp;
-
-> `Getting standard attributes of an element:`
+> **Getting standard attributes of an element:**
 ```javascript
 const loginBTN = document.querySelector('#section-2');
 // Standard Attributes.
@@ -270,9 +260,9 @@ console.log(loginBTN.className);
 ```
 
 &nbsp;
-
-> `getAttribute`
-- Getting Non Standard Attributes like the ones defined by user.
+> _`getAttribute()`_
+>
+> _Getting Non Standard Attributes like the ones defined by user._
 ```javascript
 console.log(loginBTN.getAttribute('data-rel'));
 
@@ -280,8 +270,9 @@ console.log(loginBTN.getAttribute('custom-title'));
 ```
 
 &nbsp;
-
-> `Setting attributes (Non standard and standard)`
+> _`setAttribute()`_
+>
+> _Setting attributes (Non standard and standard)_
 ```javascript
 // Non standard
 loginBTN.setAttribute('data-hidden','3445645645');
@@ -291,8 +282,7 @@ loginBTN.alt = 'Login key';
 ```
 
 &nbsp;
-
-> `Getting src - Complete and Relative url`
+> **Getting src - Complete and Relative url**
 ```javascript
 loginBTN.src;
 // returns complete url 'http://...'
@@ -302,15 +292,13 @@ loginBTN.getAttribute('src');
 ```
 
 &nbsp;
-
-> `Data Attributes:`
+> **Data Attributes:**
 ```javascript
 loginBTN.dataset;
 ```
 
 &nbsp;
-
-> `Classes - add / remove classes.`
+> **Classes - add / remove classes.**
 ```javascript
 loginBTN.classList.add('btn-dark');
 
@@ -320,5 +308,4 @@ loginBTN.classList.toggle('btn-x'); *
 
 loginBTN.classList.contains('check-class-exists');
 ```
-
 ---

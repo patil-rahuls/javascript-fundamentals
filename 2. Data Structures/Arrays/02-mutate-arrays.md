@@ -3,14 +3,12 @@
 ### Methods that mutate an Array
 
 Consider this array as an example.
-
 ```javascript
 const myArr = ['rahul', 'hitesh', 'aajesh'];
 ```
 
-### `Array.prototype.push()`
+> ### `Array.prototype.push()`
 Adds an element at the end of an array and returns new length of the array.
-
 ```javascript
 const myArr = ['rahul', 'hitesh', 'aajesh']
 
@@ -31,11 +29,8 @@ console.log(myArr);
 ```
 
 &nbsp;
-
-### `Array.prototype.pop()`
-
+> ### `Array.prototype.pop()`
 Removes last element from an array and returns the popped element.
-
 ```javascript
 const myArr = ['rahul', 'hitesh', 'aajesh', 'rishi', 'anil']
 
@@ -57,11 +52,8 @@ console.log(myArr);
 ```
 
 &nbsp;
-
-### `Array.prototype.unshift()`
-
+> ### `Array.prototype.unshift()`
 Add an element at the start of an array and returns new length of the array.
-
 ```javascript
 const myArr = ['rahul', 'hitesh', 'aajesh']
 
@@ -72,11 +64,8 @@ console.log(myArr);
 ```
 
 &nbsp;
-
-### `Array.prototype.shift()`
-
+> ### `Array.prototype.shift()`
 Removes an element from the start of an array and returns the removed element.
-
 ```javascript
 const myArr = ['kisan', 'rahul', 'hitesh', 'aajesh']
 
@@ -90,11 +79,8 @@ console.log(scholar);
 ```
 
 &nbsp;
-
-### `Array.prototype.reverse()`
-
+> ### `Array.prototype.reverse()`
 Mutates the original array and returns the reversed array.
-
 ```javascript
 const myArr = ['rahul', 'hitesh', 'aajesh']
 
@@ -108,13 +94,8 @@ console.log(myArr);
 ```
 
 &nbsp;
-
-### `Array.prototype.sort()`
-
-Sorts the array.
-
-Works only on arrays with homogeneous elements.
-
+> ### `Array.prototype.sort()`
+Sorts the array. Works only on arrays with homogeneous elements.
 ```javascript
 const users = ['Rahul' , 'Hitesh' , 'Aajesh'];
 
@@ -126,9 +107,7 @@ console.log(users);
 ```
 
 `sort()` does not work on numbers properly. The numbers are converted into strings internally and then sorted.
-
 ```javascript
-
 const arr = [200, 450, -400, 3000, -650, -130, 70, 1300];
 
 console.log(arr.sort());
@@ -136,16 +115,15 @@ console.log(arr.sort());
 ```
 
 The numbers are converted to strings and then sorted. This type of sorting is commonly seen in our machines' file manager.
+Its called _ASCII/Lexicographical_ sorting.
 
-> Its called `ASCII`/`Lexicographical` sorting.
-
-IMP: `sort()` accepts a callback function.
-
-- The callback accepts two parameters - two consecutive elements of the given array.
-
-- If the callback function returns positive, then the two consecutive elements are swapped.
-
-- If it returns negative value, the elements remain as is.
+> **`sort()` accepts a callback function.**
+>
+> - **The callback accepts two parameters - two consecutive elements of the given array.**
+>
+> - **If the callback function returns positive, then the two consecutive elements are swapped.**
+>
+> - **If it returns negative value, the elements remain as is.**
 
 ```javascript
 const arr2 = [200, 450, -400, 3000, -650, -130, 70, 1300];
@@ -170,13 +148,11 @@ arr2.sort((a,b) => a - b);
 ```
 
 &nbsp;
+> ### `Array.prototype.fill()`
 
-### `Array.prototype.fill()`
-
-> fill( valToFill , startIndex , endIndex );
-
-_endIndex_ is not included in the result.
-
+> fill( value, startIndex , endIndex )
+>
+> **IMP: 'endIndex' is not included in the result.**
 ```javascript
 const x = new Array(7);
 
@@ -187,17 +163,15 @@ console.log(x) ;
 ```
 
 &nbsp;
-
-### `Array.prototype.splice()`
+> ### `Array.prototype.splice()`
 
 > splice( startIndex , deleteCount, replacementValue )
-
-IMP: its 2nd parameter is the count of items to be removed.
-
-IMP: Third parameter 'replacementValue' is optional. If provided, it is inserted at the startIndex.
+>
+> **IMP: its 2nd parameter is the count of items to be removed.**
+>
+> **IMP: Third parameter 'replacementValue' is optional. If provided, it is inserted at the startIndex.**
 
 > Example 1
-
 ```javascript
 const arr = [11, 22, 33, 44, 55, 66];
 
@@ -219,7 +193,6 @@ console.log(arr);
 ```
 
 > Example 2: Remove a specific item from an array
-
 ```javascript
 const array = [2, 5, 9];
 
@@ -234,7 +207,6 @@ console.log(array);
 ```
 
 > Example 3: Replace a specific item from an array
-
 ```javascript
 const arr1 = [11, 22, 33, 44, 55, 66];
 
@@ -246,7 +218,6 @@ console.log(arr1);
 ```
 
 > Example 4: Insert a specific item inside an array
-
 ```javascript
 const arr2 = [11, 22, 33, 44, 55, 66];
 
@@ -257,8 +228,7 @@ console.log(arr2);
 // [11, 22, 33, 44, 99, 55, 66]
 ```
 
-> Example :5 Replace some values with one specific item inside an array
-
+> Example 5: Replace some values with one specific item inside an array
 ```javascript
 const arr3 = [11, 22, 33, 44, 55, 66];
 
@@ -268,5 +238,4 @@ arr3.splice(4, 2, 99);
 console.log(arr3);
 // [11, 22, 33, 44, 99]
 ```
-
 ---

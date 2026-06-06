@@ -1,6 +1,6 @@
 ## Arrow Function vs Regular Function
 
-`this` keyword in arrow function references its outer scope.
+> ***`this` keyword in arrow function references its outer scope.***
 
 > Example 1
 ```javascript
@@ -18,7 +18,6 @@ Because in arrow functions, the `this` keyword DOES NOT point to current Object.
 It points to outer scope; global object in this case.
 
 &nbsp;
-
 > Example 2: _The fix_
 ```javascript
 var name = "Hitesh";
@@ -43,8 +42,6 @@ console.log(this.name);
 ```
 
 &nbsp;
-
-
 > Example 3
 ```javascript
 const obj = {
@@ -81,9 +78,7 @@ const obj = {
 };
 ```
 &nbsp;
-
 > Example 4: ES6 Solution (Modern): - use arrow functions. Because `this` in arrow function references its outer scope.
-
 ```javascript
 const obj = {
   name: 'Rahul',
@@ -105,9 +100,7 @@ const obj = {
 ```
 
 &nbsp;
-
 > Example 5: `arguments` keyword is not available in arrow function.
-
 ```javascript
 // Regular Fn.
 const sum = function(a , b ) {
@@ -121,7 +114,5 @@ const sumArrow = (a , b ) => {
   console.log(arguments);
   // ReferenceError: arguments is not defined.
 }
-
 ```
-
 ---

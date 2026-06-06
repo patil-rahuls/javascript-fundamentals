@@ -2,11 +2,9 @@
 
 ### `Object.seal()`
 
-Sealed objects are still mutable, meaning you can change the values of the existing properties.
-
-However, you cant add new properties or remove existing ones.
-
-Consider this object as an example.
+> ***Sealed objects are still mutable, meaning you can change the values of the existing properties.***
+>
+> ***However, you cant add new properties or remove existing ones.***
 
 ```javascript
 const person = {
@@ -23,7 +21,7 @@ console.log(Object.isSealed(person));
 // true
 
 
-// ✅ Modifying an existing property is allowed
+// ✅ Modifying an existing property allowed
 person.age = 31;
 
 console.log(person);
@@ -36,7 +34,7 @@ console.log(person);
 */
 
 
-// ❌ Adding new properties is not allowed
+// ❌ Adding new properties not allowed
 person.city = "Mumbai";
 
 console.log(person);
@@ -49,7 +47,7 @@ console.log(person);
 */
 
 
-// ❌ Removing existing properties is not allowed
+// ❌ Removing existing properties not allowed
 delete person.firstName;
 
 console.log(person);
@@ -61,5 +59,4 @@ console.log(person);
 }
 */
 ```
-
 ---

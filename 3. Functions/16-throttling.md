@@ -9,22 +9,20 @@ Throttling is used for "Observational" or "High-Frequency UI" data. This is data
 For e.g. rendering a real time graph and sending its data to some server/logger service.
 
 &nbsp;
-
 ### 1. Real-Time Dashboard Updates (Stock Market/Crypto)
-
 Imagine you are building a dashboard that shows the price of Bitcoin. The price might change 500 times per second in the database.
 
 > The Problem:
-
-If you try to update the user's browser 500 times a second, the screen will flicker, the CPU will max out, and the user won't be able to read anything anyway.
+>
+> If you try to update the user's browser 500 times a second, the screen will flicker, the CPU will max out, and the user won't be able to read anything anyway.
 
 > The Throttled Solution:
+>
+> Throttle the update to once every 200ms.
 
-Throttle the update to once every 200ms.
-
->Why it's okay to skip:
-
-The user only needs to see the current price. They don't need to see the 49 intermediate price micro-movements that happened in the last 0.1 seconds
+> Why it's okay to skip:
+>
+> The user only needs to see the current price. They don't need to see the 49 intermediate price micro-movements that happened in the last 0.1 seconds
 
 &nbsp;
 
@@ -33,16 +31,16 @@ The user only needs to see the current price. They don't need to see the 49 inte
 In a multiplayer online game, your character's position $(x, y)$ is being calculated 60 to 120 times per second.
 
 > The Problem:
-
-Sending 120 packets per second per player to the server would destroy your bandwidth.
+>
+> Sending 120 packets per second per player to the server would destroy your bandwidth.
 
 > The Throttled Solution:
-
-Send the position to the server only 20 times per second (every 50ms).
+>
+> Send the position to the server only 20 times per second (every 50ms).
 
 > Why it's okay to skip:
-
-The server uses "Interpolation" to guess the movement between points. Skipping a few coordinates doesn't break the game; it just saves the network.
+>
+> The server uses "Interpolation" to guess the movement between points. Skipping a few coordinates doesn't break the game; it just saves the network.
 
 &nbsp;
 
@@ -51,16 +49,16 @@ The server uses "Interpolation" to guess the movement between points. Skipping a
 Apps like Slack or Discord need to show if you are "Online." Your app sends a "heartbeat" to the server to say _"I'm still here!"_.
 
 > The Problem:
-
-If a user is actively clicking around the app, you might trigger a "presence check" on every click.
+>
+> If a user is actively clicking around the app, you might trigger a "presence check" on every click.
 
 > The Throttled Solution:
-
-Throttle the "Update Last Seen" API call to once every 30 seconds.
+>
+> Throttle the "Update Last Seen" API call to once every 30 seconds.
 
 > Why it's okay to skip:
-
-Whether the database says you were last seen at 12:00:01 or 12:00:25 doesn't change the fact that you are "Online." The data in between is redundant.
+>
+> Whether the database says you were last seen at 12:00:01 or 12:00:25 doesn't change the fact that you are "Online." The data in between is redundant.
 
 
 &nbsp;
@@ -70,15 +68,15 @@ Whether the database says you were last seen at 12:00:01 or 12:00:25 doesn't cha
 When a user types "JavaScript" into a search bar:
 
 > The Problem:
-
-You don't want to hit your database for "J", then "Ja", then "Jas"...
+>
+> You don't want to hit your database for "J", then "Ja", then "Jas"...
 
 > The Throttled Solution:
-
-(Though often debounced), some systems throttle this to provide "streaming" results while typing.
+>
+> (Though often debounced), some systems throttle this to provide "streaming" results while typing.
 
 > Why it's okay to skip:
-
-If the user types fast, they don't care about the search results for "Jav"—they want the results for "JavaScript."
+>
+> If the user types fast, they don't care about the search results for "Jav"—they want the results for "JavaScript."
 
 ---

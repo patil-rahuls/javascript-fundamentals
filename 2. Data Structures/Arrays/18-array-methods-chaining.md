@@ -2,8 +2,9 @@
 
 ### Array method chaining
 
-Method Chaining forms something called as "pipeline"
+> ***The array transformation methods like `map()`, `filter()`, `reduce()` can be chained together.***
 
+Method Chaining forms something called as _pipeline_.
 ```javascript
 const arr = [122, 24, 355, -55, 780, -999];
 
@@ -23,7 +24,7 @@ But if any error occurs, it's hard to guess from where that error came in this p
 To monitor errors we can check arrays returned at each step
 in this pipeline.
 
-Remember we have the third parameter in the callback function of each of these methods which gives the entire array.
+_Remember, we have the third parameter in the callback function of each of these methods which gives the entire array._
 
 ```javascript
 const transformedData2 = arr
@@ -44,9 +45,9 @@ console.log(transformedData2);
 ```
 
 > Remarks about chaining:
-
-- Never overuse chaining. It can cause real performance issues if we have really huge arrays.
-
-- Be careful when chaining methods that mutate the underlying arrays (like `splice()` or `reverse()`) in large applications.
+>
+> - Never overuse chaining. It can cause real performance issues if we have really huge arrays.
+>
+> - Be careful when chaining methods that mutate the underlying arrays (like `splice()` or `reverse()`) in large applications.
 
 ---

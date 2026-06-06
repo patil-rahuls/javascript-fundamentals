@@ -1,6 +1,6 @@
 ## `Number` & `Date`
 
-### `Number()` Static class
+### `Number()`
 Unlike `parseInt()`, `parseFloat()` which are a `parser` (they
 look for _numbers_ inside _strings_).
 
@@ -41,14 +41,11 @@ Number(new Date()) -> 2849623649823749 (timestamp)
 Number(null)        -> 0
 Number(undefined)   -> NaN
 ```
-
 ---
+
 &nbsp;
-
-### Number Constants (Static Members)
-
+> ### Number Constants (Static Members)
 The built-in Number object has CONSTANT properties for numerical constants, such as max value, not-a-number, and infinity.
-
 ```javascript
 // The largest positive representable number
 const biggestNum = Number.MAX_VALUE;
@@ -75,12 +72,10 @@ Number.MIN_SAFE_INTEGER;
 Number.MAX_SAFE_INTEGER;
 // +9007199254740991
 ```
-
 ---
+
 &nbsp;
-
-## Number Methods (Static Methods)
-
+> ### Number Methods (Static Methods)
 ```javascript
 Number.parseFloat();
 // Parses a string and returns a floating point number.
@@ -141,12 +136,10 @@ console.log(parseInt("10"));
 console.log(Number.parseInt("10"));
 // 10 (Still works perfectly)
 ```
-
 ---
+
 &nbsp;
-
 ## `Date`
-
 ```javascript
 // 1. Current date and time
 const now = new Date();

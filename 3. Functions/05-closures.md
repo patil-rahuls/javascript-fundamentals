@@ -11,16 +11,12 @@ const parentFn = function () {
 };
 
 const booker = parentFn();
-// Here the parent function 'parentFn' has been called and returned.
+// Here the parent function 'parentFn'
+// has been called and returned.
 
-booker();
-// 1
-
-booker();
-// 2
-
-booker();
-// 3
+booker();   // 1
+booker();   // 2
+booker();   // 3
 ```
 
 `booker()` still has access to the variable `users` which was declared in parent function parentFn().
@@ -35,22 +31,25 @@ The function keeps a reference to its outer scope, which preserves the scope cha
 A closure ensures that a function doesn't lose connection to variables that existed at the function's creation scope.
 
 
-> Formal explanation:
-> It is the closed-over variable environment of the execution context in which a function was created, and which exists even after that function execution context is gone.
+> Formal definition:
+>
+> **It is the closed-over variable environment of the execution context in which a function was created, and which exists even after that function execution context is gone.**
 
-> BEST LAYMAN EXPLANATION:
-A closure is like a backpack that a function carries around wherever it goes(from wherever it is being called). This backpack has all the variables that were present in the environment where the function was created.
+> _BEST LAYMAN EXPLANATION:
+A closure is like a backpack that a function carries around wherever it goes(from wherever it is being called). This backpack has all the variables that were present in the environment where the function was created._
 
 &nbsp;
-
 > WE DO NOT CREATE CLOSURES MANUALLY.
+>
 > THEY ARE A JAVASCRIPT FEATURE THAT HAPPENS AUTOMATICALLY.
+>
 > ALSO WE DON'T HAVE ANY ACCESS TO CLOSED-OVER VARIABLES.
+>
 > WE CAN'T GO INTO A CLOSURE AND READ OR WRITE VARIABLES.
+>
 > A CLOSURE IS NOT A TANGIBLE JS OBJECT.
 
-> But we can have a looks at its properties:
-
+> But we can have a look at its properties:
 ```javascript
 console.dir(booker);
 ```
@@ -66,15 +65,13 @@ We can see which variables exist in that VE and that the variables are changing 
 
 The above line means that we have the variable `users` is available from `parentFn`’s execution context
 
-In `Scopes[3]`, `3` is the number of times the child function has been called.
+In _`Scopes[3]`_, `3` is the number of times the child function has been called.
 
-&nbsp;
 ---
 
+&nbsp;
 ### Some more scenarios:
-
 > Example 1:
-
 ```javascript
 let f; // global scope
 
@@ -103,9 +100,7 @@ console.dir(f);
 ```
 
 &nbsp;
-
-> Example 2: Timer Fn. We don't always need to return a function to observe a closure.
-
+> Example 2: Timer Function. We don't always need to return a function to observe a closure.
 ```javascript
 const test = function (n) {
   const twice = n * 2 ;
@@ -118,28 +113,24 @@ const test = function (n) {
 };
 
 test(3);
-
-// On calling this, following events happen:
-// 1. const variable 'twice' is created.
-// 2. timer callback fn is registered- it starts waiting for
-//    its execution for the given time in milliseconds.
-// 3. and the last console.log is executed.
-//    It won't wait for the timer’s callback.
-// 4. test() function has finished executing.
-// 5. after 2 seconds, the callback function gets  executed.
 ```
+> On calling this, following events happen:
+> 1. const variable `twice` is created.
+> 2. timer callback fn is registered- it starts waiting for
+>    its execution for the given time in milliseconds.
+> 3. and the last `console.log` is executed.
+>    It won't wait for the timer’s callback.
+> 4. `test()` function has finished executing.
+> 5. after 2 seconds, the callback function gets executed.
 
-Observe that the callback function of the timer was executed completely independent of the test().
+Observe that the callback function of the timer was executed completely independent of the `test()`.
 
 But still the callback function was able to access all the variables which were created in the test().
 
 This happens because closures have priority over scope chain.
 
 &nbsp;
-
-
 > Example 3: IIFE
-
 ```javascript
 (function() {
   const header = document.querySelector('h1');

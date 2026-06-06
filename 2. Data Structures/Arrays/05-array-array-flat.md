@@ -2,16 +2,13 @@
 
 > Array to new Array
 
-### `Array.prototype.flat()` [ES 2019]
-
-No callback functions.
+### `Array.prototype.flat()`  [ES 2019]
 
 Flattens the nested arrays into one single array.
 
 > flat ( depthArgument )
-
-The parameter 'depthArgument' is optional and is used to provide the depth of the nesting.
-
+>
+> The parameter `depthArgument` is optional and is used to provide the depth of the nesting.
 ```javascript
 const arr = [[1, 2, 3, 4], 5, 6, [7, 8], 9, 10];
 
@@ -33,9 +30,7 @@ console.log(arr2.flat(2));
 ```
 
 &nbsp;
-
 > Calculate Depth of a nested array
-
 ```javascript
 let depth = 0;
 function calcDepth(arr){
@@ -52,5 +47,4 @@ calcDepth([1,2,[3,4], 5,[6,7,8, [9,10]],11]);
 console.log(depth);
 // 3
 ```
-
 ---

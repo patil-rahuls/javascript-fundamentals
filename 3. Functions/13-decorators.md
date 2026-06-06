@@ -1,8 +1,9 @@
 ## Decorator Functions
 
+WIP
 
-> Works with Typescript
+> Work with Typescript
 
 More here - https://www.sitepoint.com/javascript-decorators-what-they-are/
 
---
+---

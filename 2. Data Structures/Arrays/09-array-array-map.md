@@ -6,8 +6,9 @@
 
 A big advantage of using these functions over traditional loops is that we can chain these functions together.
 
-`map()` method transforms data in each iteration without changing/mutating the orignal array.
+> ***`map()` method transforms data in each iteration without changing/mutating the orignal array.***
 
+Method signature is similar to the `forEach()` method.
 ```javascript
 const numbers = [2, 4, 3, 0, 10, 20, 30, 40];
 const power = 3;
@@ -44,5 +45,4 @@ console.log(newArr);
 ]
 */
 ```
-
 ---

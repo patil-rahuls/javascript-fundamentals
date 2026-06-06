@@ -20,5 +20,4 @@ if (!Array.prototype.includes) {
   };
 }
 ```
-
 ---

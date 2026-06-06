@@ -2,18 +2,19 @@
 
 `"..."` is on the LHS of `=` assignment.
 
-The Rest Operator packs elements of a LIST into iterable objects such as Arrays, Sets, Maps and Objects.
+> **The Rest Operator packs elements of a LIST into iterable objects such as Arrays, Sets, Maps and Objects.**
 
-Rest Operator can only be used in following 2 cases:
-1. Packing an iterable.
-2. As a function parameter.
+> **Rest Operator can only be used in following 2 cases:**
+> 1. **Packing an iterable.**
+> 2. **As a function parameter.**
 
-There can only be ONE Rest element in an expression.
+> **There can only be ONE Rest element in an expression.**
 
-The Rest Operator has to be at the end of any destructuring assignment.
+> **The Rest Operator has to be at the end of any destructuring assignment.**
+
+&nbsp;
 
 > Example 1: Packing an iterable
-
 ```javascript
 // Array
 const arr = [1, 2, 3, 4, 5, 6, 7];
@@ -49,11 +50,9 @@ console.log(pricingAndDetails);
 ```
 
 &nbsp;
-
 > Example 2: Rest element must be last element.
 
-IMP: The rest operator has to be at the end of any destructuring assignment, else how will Javascript know until when it has to take the elements? Also there can only be one rest element in any destructuring assignment.
-
+> ***IMP: The rest operator has to be at the end of any destructuring assignment, else how will Javascript know until when it has to take the elements? Also there can only be one rest element in any destructuring assignment.***
 ```javascript
 // Array
 const arr = [1, 2, 3, 4, 5, 6, 7];
@@ -63,7 +62,7 @@ const [ a, b, ...someValues, d] = arr;
 // Error : "Rest element must be last element."
 
 
-// Same applies to Objects too.
+// Object
 const product = {
   id: 1,
   title: 'Shirt',
@@ -77,11 +76,9 @@ const { id, ...titleAndPrice, color } = product;
 ```
 
 &nbsp;
-
-> Example 3: As a function parameter.
-
+> Example 3: As a function parameter
 ```javascript
-// Array Example
+// Array
 function sumAll(...numbers) {
   // All arguments passed to this function would be packed into this array 'numbers'.
   // 'numbers' is now a real array: [10, 20, 30]
@@ -98,7 +95,7 @@ console.sumAll(...inputArr);
 // 60
 
 
-// Object Example
+// Object
 function showInfo(rollNo, { name, ...info}){
   console.log(`Roll No. ${rollNo}`);
 
@@ -113,5 +110,4 @@ const user = {
 
 showInfo(76, user);
 ```
-
 ---

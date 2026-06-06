@@ -4,8 +4,7 @@
 
 ### `String.prototype.split()` String to Array
 
-Splits a string into an array by the provided delimeter.
-
+> ***Splits a string into an array by the provided delimeter.***
 ```javascript
 const str = "11,22,33,44,55,66";
 
@@ -14,17 +13,14 @@ const result = str.split(',');
 console.log(result);
 // [11,22,33,44,55,66]
 ```
-
 ---
 
 &nbsp;
-
 ### `Array.prototype.join()` Array to String
 
-Joins an array items into a string using the provided delimeter.
+> ***Joins an array items into a string using the provided delimeter.***
 
-By default comma `,` will be the delimeter.
-
+> ***IMP: By default comma `,` will be the delimeter.***
 ```javascript
 const arr = [11,22,33,44,55,66];
 
@@ -47,7 +43,5 @@ console.log(result3);
 console.log(typeof result);
 // "string";
 // same for result2 and result2.
-
 ```
-
 ---

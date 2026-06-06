@@ -6,7 +6,10 @@
 
 A big advantage of using these functions over traditional loops is that we can chain these functions together.
 
-`filter()` method filters out elements from an array that do not satisfy a given condition.
+> ***`filter()` method filters out elements from an array that do not satisfy a given condition.***
+
+Method signature is similar to the `forEach()` method.
+
 
 ```javascript
 const txn = [122, 24, 355, -55, 780, -999];

@@ -4,9 +4,9 @@
 
 ### `Array.prototype.some()`
 
-Same signature as that of `forEach()`.
+> ***Checks for an expression at each iteration.***
 
-Checks for an expression at each iteration.
+Method signature is similar to the `forEach()` method.
 
 ```javascript
 const salaries = [39000, 99000, 100000, 178000, 78000, 89900];

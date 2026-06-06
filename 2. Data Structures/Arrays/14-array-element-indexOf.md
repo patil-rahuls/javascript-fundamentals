@@ -2,13 +2,11 @@
 
 > Get element index by value
 
-> Checks for Equality
-
 ### `Array.prototype.indexOf()`
 
-Returns index of element present in the array, `-1` otherwise.
-
-Checks for Equality using Strict Equality `===`.
+> ***Returns index of element present in the array, `-1` otherwise.***
+>
+> ***Checks for Equality using Strict Equality `===`.***
 
 ```javascript
 const myArr = [55, 'rahul', 'hitesh', 'aajesh'];

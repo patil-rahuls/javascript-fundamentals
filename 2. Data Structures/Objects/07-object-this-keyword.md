@@ -27,6 +27,5 @@ myObj.info = function(){
 
 myObj.info();
 // "Rahul is 25 yrs old"
-
 ```
 ---

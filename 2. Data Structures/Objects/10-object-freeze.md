@@ -2,9 +2,7 @@
 
 ### `Object.freeze()`
 
-Frozen objects are read-only, and no modifications, additions, or deletions of properties are allowed.
-
-Consider this object as an example.
+> ***Frozen objects are read-only, and no modifications, additions, or deletions of properties are allowed.***
 
 ```javascript
 const person = {
@@ -21,7 +19,7 @@ console.log(Object.isFrozen(person));
 // true
 
 
-// ❌ Modifying properties is not allowed
+// ❌ Modifying properties not allowed
 person.age = 31;
 console.log(person);
 /*
@@ -33,7 +31,7 @@ console.log(person);
 */
 
 
-// ❌ Adding new properties is not allowed
+// ❌ Adding new properties not allowed
 person.city = "New York";
 
 console.log(person);
@@ -46,7 +44,7 @@ console.log(person);
 */
 
 
-// ❌ Removing properties is not allowed
+// ❌ Removing properties not allowed
 delete person.firstName;
 
 console.log(person);

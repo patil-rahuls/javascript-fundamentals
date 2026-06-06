@@ -4,12 +4,11 @@
 
 ### `Array.prototype.every()`
 
-Same signature as that of `forEach()`.
+> ***Checks for an expression at each iteration.***
+>
+> ***Returns `true` ONLY if ALL the elements of the array satisfy the condition. Hence the name 'every'.***
 
-Checks for an expression at each iteration.
-
-Returns `true` ONLY if ALL the elements of the array satisfy the condition. Hence the name 'every'.
-
+Method signature is similar to the `forEach()` method.
 ```javascript
 const txn = [1900, -99000, 10000, -178000, 78000];
 
@@ -33,7 +32,5 @@ txn.some(deposits);
 
 // Filter positive transactions.
 txn.filter(deposits);
-
 ```
-
 ---

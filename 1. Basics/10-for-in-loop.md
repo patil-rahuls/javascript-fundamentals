@@ -1,9 +1,8 @@
 ## `for...in` Loop
 
-`for...in` iterates over enumerable property i.e. `keys/index` of an object.
+`for...in` iterates over the enumerable property i.e. `keys/index` of an object.
 
 > Example 1: Array
-
 ```javascript
 let list = [4, 5, 6];
 
@@ -15,7 +14,6 @@ for (let i in list) {
 
 &nbsp;
 > Example 2: Object
-
 ```javascript
 var employee = {
   id: "123",
@@ -32,5 +30,4 @@ for(const i in employee){
 // address
 // salary
 ```
-
 ---

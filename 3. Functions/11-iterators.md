@@ -2,10 +2,10 @@
 
 Iterator is an object that follows a specific protocol called `iterator protocol`.
 
-The protocol says that it must have a `next()` method. Every time you call `next()`, it returns an object with two pieces of information:
-
-   1. **value**: actual data.
-   2. **done**: a boolean telling if you've reached the end of the stack.
+> ***The protocol says that it must have a `next()` method. Every time you call `next()`, it returns an object with two pieces of information:***
+>
+>   1. **value**: actual data.
+>   2. **done**: a boolean telling if you've reached the end of the stack.
 
 
 > Example: A manual iterator function to see how it works
@@ -50,28 +50,27 @@ console.log(itr.next());
 >
 > While for-loops are great, iterators provide some unique "superpowers":
 
-> **Memory Efficiency:**
+> ***1. Memory Efficiency:***
+>
+> Imagine working with a large data-set of 1-million-items.
+>
+> You don't need to load an entire 1-million-item list into memory (as it would happen in the case of a loop).
+>
+> You can generate or fetch items one by one as needed (this is called `Lazy Evaluation`).
 
-Imagine working with a large data-set of 1-million-items.
-
-You don't need to load an entire 1-million-item list into memory (as it would happen in the case of a loop).
-
-You can generate or fetch items one by one as needed (this is called `Lazy Evaluation`).
-
-> **Custom Logic:**
+> ***2. Custom Logic:***
 You can create an iterator that never ends (like a "Clock" iterator) or one that skips every second item.
 
-> **Universal Interface:**
+> ***Universal Interface:***
+>
+> Iterators are the engine behind the `for...of` loop and the Spread Operator `...`.
+>
+> When you write ```for (let item of array){ ... }``` JavaScript is actually using an iterator under the hood.
+>
+> Objects like Arrays, Strings, Maps, and Sets are called Iterables for the very same reason.
+>
+> This just means they have a hidden method that automatically creates an iterator for them whenever a loop is used.
 
-Iterators are the engine behind the `for...of` loop and the Spread Operator `...`.
-
-When you write
-```for (let item of array){ ... }``` JavaScript is actually using an iterator under the hood.
-
-Objects like Arrays, Strings, Maps, and Sets are called Iterables for the very same reason.
-
-This just means they have a hidden method that  automatically creates an iterator for them whenever a loop is used.
-
-The simplest way to create iterators are using the `Generator functions`.
+****The simplest way to create iterators are using the `Generator functions`.****
 
 ---

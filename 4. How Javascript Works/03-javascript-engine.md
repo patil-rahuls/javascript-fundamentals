@@ -26,7 +26,7 @@ Because, the Execution Contexts are in stack, once the top most Execution Contex
 
 > Because, JavaScript has A SINGLE THREAD of execution.
 
-> ### IMP: Primtive types are stored in the CALL STACK because that's where the Execution Contexts Run.
+> ***IMP: Primtive types are stored in the CALL STACK because that's where the Execution Contexts Run.***
 
 
 &nbsp;

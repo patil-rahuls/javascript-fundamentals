@@ -1,11 +1,10 @@
 ## Data Structures > Sets
 
+> ***Sets are high performance `unordered unique collection` data structure.***
+
 ### Set use-cases
 
-Sets are high performance unordered unique collection data structure.
-
-### 1. Remove duplicates from an array.
-
+> ### 1. Remove duplicates from an array.
 ```javascript
 const users = ['rahul' , 'hitesh' , 'rahul', 'rahul',  'aajesh' , 'rahul'];
 const unq = new Set(users);
@@ -13,9 +12,7 @@ const unq = new Set(users);
 ```
 
 &nbsp;
-
-### 2. Count of no. of unique items in an Array/String.
-
+> ### 2. Count of no. of unique items in an Array/String.
 ```javascript
 const dupArr = [1,2,3,5,7,8,1,1,2,4,5,2];
 const countUnique = new Set(dupArr).size;
@@ -32,14 +29,11 @@ console.log(chars);
 ```
 
 &nbsp;
-
-### 3. Convert Set to an Array.
+> ### Convert Set to an Array.
 Useful when we want to remove duplicates from an array and want to use it later.
 
 Spread operator works for any iterables and the set is also an iterable.
-
 ```javascript
 const usersUniq = [...new Set(users)];
 ```
-
 ---

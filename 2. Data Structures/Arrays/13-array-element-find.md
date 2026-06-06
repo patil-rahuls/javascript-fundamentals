@@ -2,18 +2,15 @@
 
 > Check if element exists
 
-> Checks for Expression
-
 ### `Array.prototype.find()`
 
-Retrieve an array element that satisfies a certain condition written in the callback function.
-
-The callback function returns a boolean value.
+> ***Retrieve an array element that satisfies a certain condition written in the callback function.***
+>
+> ***The callback function returns a boolean value.***
+>
+> ***Checks for an expression.***
 
 Method signature is similar to the `forEach()` method.
-
-Checks for an expression.
-
 ```javascript
 const myArr = [55, 'rahul', 'hitesh', 'aajesh'];
 
@@ -24,9 +21,9 @@ console.log(foundNum);
 // 55
 ```
 
-`find()` method does not return an array.
+**`find()` method does not return an array.**
 
-Instead it returns THE FIRST ELEMENT which satisfies the condition in the callback function.
+**Instead it returns THE FIRST ELEMENT which satisfies the condition in the callback function.**
 
 > Another example:
 ```javascript

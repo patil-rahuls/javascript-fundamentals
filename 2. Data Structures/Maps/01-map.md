@@ -1,8 +1,8 @@
 ## Data Structures > Maps
 
-Maps are high performance key - value paired data structure.
-
-In Objects keys can only be strings (without quotes), but in Maps, keys can be any type.
+> ***Maps are high performance key - value paired data structure.***
+>
+> ***In Objects keys can only be strings (without quotes), but in Maps, keys can be any type.***
 
 More here : https://dmitripavlutin.com/maps-vs-plain-objects-javascript/
 
@@ -19,9 +19,7 @@ const myMap = new Map(options);
 ```
 
 &nbsp;
-
 > Example 2
-
 ```javascript
 const question = new Map ([
   ['question' , 'Best lang in the world?'],
@@ -49,8 +47,7 @@ console.log(question);
 ```
 
 &nbsp;
-
-###  When to use Maps instead of Objects?
+### When to use Maps instead of Objects?
 
 > ####  1. Map preserves the key type.
 
@@ -74,7 +71,7 @@ for(const property in myObj){
 // 'string'
 // 'string'
 ```
-The properties(i.e. 1, 2) were converted to strings.
+The properties i.e. `1`, `2` were converted to strings.
 
 _**Implicit conversion of keys is tricky because you lose the consistency of the types.**_
 
@@ -93,11 +90,9 @@ typeof [...numbersMap.keys()][0];
 // 'number'
 ```
 
-
+&nbsp;
 > #### 2. When using Objects as Keys.
-
 When you need to store some object-related data, without attaching this data on the object itself.
-
 ```javascript
 const foo = { name: 'foo' };
 const bar = { name: 'bar' };
@@ -107,5 +102,4 @@ const kindOfMap = [
   [bar, 'Bar related data'],
 ];
 ```
-
 ---

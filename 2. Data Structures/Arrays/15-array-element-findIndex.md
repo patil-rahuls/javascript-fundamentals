@@ -2,16 +2,15 @@
 
 > Get element index by expression
 
-> Checks for Expression
-
 ### `Array.prototype.findIndex()`
 
-Works same as `find()` method except that it finds the index of the found element and not the element itself.
+> ***Retrieve the index of the element that satisfies a certain condition written in the callback function.***
+>
+> ***The callback function returns a boolean value.***
+>
+> ***Checks for an expression.***
 
-This also requires a callback function that returns a boolean value.
-
-The method signature is similar to the `forEach()` method.
-
+Method signature is similar to the `forEach()` method.
 
 ```javascript
 const accounts = [

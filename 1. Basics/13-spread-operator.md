@@ -1,18 +1,19 @@
 ## Spread Operator `"..."` [ES6]
 
-> `"..."` is on the RHS of `=` assignment.
+`"..."` is on the RHS of `=` assignment.
 
-The Spread Operator unpacks elements of iterable objects such as Arrays, Sets, Maps and Objects into a list.
+> **The Spread Operator unpacks elements of iterable objects such as Arrays, Sets, Maps and Objects into a list.**
 
-Spread Operator can only be used in following 2 cases:
-1. Expanding/Merging an iterable.
-2. As a function argument.
-3. Copy iterables.
+> **Spread Operator can only be used in the following cases:**
+> 1. **Expanding/Merging an iterable.**
+> 2. **As a function argument.**
+> 3. **Copy iterables.**
 
-There can be more than one spread element in an expression.
+> **There can be more than one spread element in an expression.**
+
+&nbsp;
 
 > Example 1: Expanding an Iterable
-
 ```javascript
 // Expanding an Array
 const tech = ['JavaScript', 'TypeScript', 'Node.js', 'Express', 'React', 'AWS Cloud'];
@@ -47,9 +48,7 @@ console.log(updatedUser);
 ```
 
 &nbsp;
-
 > Example 2: Merging Iterables.
-
 ```javascript
 // Merging Arrays
 const first = [1, 2, 3, 4];
@@ -86,9 +85,7 @@ console.log(updatedUser);
 ```
 
 &nbsp;
-
 > Example 3: Copy Iterables (Deep Copy)
-
 ```javascript
 // Copy a flat array
 const first = [1, 2, 3, 4];
@@ -118,11 +115,13 @@ console.log(temp);
 */
 ```
 
-**In case of flat structures(No nested array/object), this creates a deep copy.**
-The examples above created deep copies.
+> The examples above created deep copies.
+>
+> **In case of flat structures _(no nested array/object)_, this creates a deep copy.**
 
 However, if the object or array contains nested objects or arrays, it only copies the memory reference to those inner elements rather than making fresh duplicates.
 
+&nbsp;
 > Example 4: Copy Iterables (Shallow Copy)
 ```javascript
 // Copy a nested object
@@ -153,9 +152,7 @@ console.log(user.address.city);
 ```
 
 &nbsp;
-
-> Example 5: `"..."` As a Function argument
-
+> Example 5: As a Function argument
 ```javascript
 function notify(name, msg) {
   console.log(`${name} sent: ${msg}`);
@@ -174,7 +171,9 @@ const objPayload = {
   msg: 'Hello Rahul!'
 };
 
-notify(...objPayload); // ❌ incorrect
+// ❌ incorrect
+notify(...objPayload);
+
 
 // ✅ Fix:
 // Object.values(objPayload) creates ['Admin', 'Hello Rahul!'], which can then be safely spread

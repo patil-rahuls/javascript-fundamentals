@@ -13,7 +13,7 @@ const myObj = {
 
 Functions inside an object are called methods.
 
-Methods have a “receiver” while functions do not.
+Methods have a ***receiver*** while functions do not.
 
 ```javascript
 myObj.greet = function(user){

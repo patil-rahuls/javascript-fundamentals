@@ -4,6 +4,7 @@ Literals represent values in javascript.
 
 These are fixed values not variables that you literally provide in your script.
 
+> Example 1: Literals
 ```javascript
 let name = "foo"
 // "foo" is a string literal
@@ -16,9 +17,7 @@ let stu = { name, age};
 ```
 
 &nbsp;
-
-Template literals are literals delimited with backtick ` `` ` allowing for multi-line strings.
-
+> Example 2: Template Literals - are literals delimited with backtick ` `` ` allowing for multi-line strings.
 ```javascript
 // Old way:
 const firstName = "Rahul";
@@ -27,7 +26,7 @@ console.log('String with \n\
 multiple \n\
 lines');
 
-// Use template literal for multiline strings.
+// Use Template Literal for multiline strings.
 console.log(`String
 multiple
 lines`);
@@ -35,8 +34,7 @@ lines`);
 
 &nbsp;
 
-String interpolation with embedded expressions i.e. using variables in a template literal string
-
+> Example 3: String interpolation with embedded expressions i.e. using variables in a template literal string
 ```javascript
 const lastName = 'P';
 const managemenExperience = 2;
@@ -45,6 +43,5 @@ I am ${myName}.
 I am a ${exp} years experienced IT Professional`;
 ```
 
-> #### Use template strings to create multiline HTML code snippets dynamically from code.
-
+***Use template strings to create multiline HTML code snippets dynamically from code.***
 ---

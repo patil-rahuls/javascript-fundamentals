@@ -1,9 +1,8 @@
 ## Data Structures > Object
 
-### Objects Properties Count using `Object.keys().length`
+### Size of an Object using `Object.keys().length`
 
-Consider this object as an example.
-
+> Example: Get size of an Object
 ```javascript
 const myObj = {
   firstName : 'Rahul',
@@ -17,5 +16,4 @@ let size = Object.keys(myObj).length;
 console.log(size);
 // 3
 ```
-
 ---

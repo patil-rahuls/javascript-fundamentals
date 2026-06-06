@@ -7,9 +7,9 @@ A generator function is a special type of function in JavaScript that allows pau
 Unlike regular functions, which run to completion, generator functions can be paused and resumed multiple times, making them particularly useful for dealing with asynchronous operations, handling large datasets, and writing custom iterators.
 
 
-> Generator functions are defined using the `function*` syntax, and they use the `yield` keyword to pause the function's execution and produce(yeild) a value.
+> ***Generator functions are defined using the `function*` syntax, and they use the `yield` keyword to pause the function's execution and produce(yeild) a value.***
 
-When a generator function is called, it returns an iterator object, which can be used to control the function's execution.
+> ***When a generator function is called, it returns an iterator object, which can be used to control the function's execution.***
 
 ```javascript
 function* generatorFunction() {
@@ -23,26 +23,23 @@ function* generatorFunction() {
 }
 ```
 
-RETURNS an `Iterator*` Object.
+> The function above returns an `iterator*` Object.
+>
+> The `iterator` object has two methods -
+>
+> 1. **next()**
+> 2. **return()**
 
-The `iterator` object has two methods -
+### `next()`
 
- 1. **next()**
- 2. **return()**
-
-### *`next()`*
-
-The `next()` method is used to resume the execution of a generator function from where it was paused.
-
-It returns an object with two properties:
-
-> 1. 'value' - value produced by the yield statement.
-> 2. 'done' - boolean indicating whether the generator has completed `true` or is still running `false`.
+> The `next()` method is used to resume the execution of a generator function from where it was paused.
+>
+> It returns an object with two properties:
+> 1. **value** - value produced by the `yield` statement.
+> 2. **done** - boolean indicating whether the generator has completed `true` or is still running `false`.
 
 &nbsp;
-
 > Example 1: `Iterator.next()`
-
 ```javascript
 function* simpleGenerator() {
   yield 1;
@@ -67,13 +64,11 @@ console.log(iterator1.next());
 ```
 
 &nbsp;
-
 > Example 2: `Iterator.return()`
 
 The `return()` method allows us to force a generator to complete before it reaches the end.
 
-It can take an optional argument that will be returned as the final value of the generator.
-
+It can take an optional argument that will be returned as the final `value` of the generator.
 ```javascript
 function* generatorWithReturn() {
   yield 1;
@@ -90,8 +85,8 @@ console.log(iterator2.return("Finished!"));
 // Output: { value: "Finished!", done: true }
 
 
-// Any subsequent next() invokation after return(),
-// will always result in:
+// Any subsequent next() invokation
+// after return(), will always result in:
 // { value: undefined, done: true }
 
 console.log(iterator2.next());
@@ -104,7 +99,6 @@ console.log(iterator2.next());
 &nbsp;
 
 > Example 3: Generator function for asynchronous tasks
-
 ```javascript
 function fetchData(url) {
   return new Promise((resolve, reject) => {
@@ -115,13 +109,13 @@ function fetchData(url) {
 }
 
 function* fetchDataGenerator() {
-  const data1 = yield fetchData('https://api.example.com/data1');
+  const data1 = yield fetchData('.../api/data1');
   console.log(data1);
 
- const data2 = yield fetchData('https://api.example.com/data2');
+ const data2 = yield fetchData('.../api/data2');
   console.log(data2);
 
- const data3 = yield fetchData('https://api.example.com/data3');
+ const data3 = yield fetchData('.../api/data3');
   console.log(data3);
 }
 

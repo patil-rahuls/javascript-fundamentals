@@ -7,7 +7,6 @@
 > `map()` first and then `flat()` the result.
 >
 > Better performance
-
 ```javascript
 // Old way:
 const totalUsersWalletBalance = accounts
@@ -21,8 +20,7 @@ const totalUsersWalletBalance2 = accounts
 
 // Since flatMap() does the map() too, it needs to receive exactly the same arguments as you would pass to the map method.
 ```
-
-_**IMP: flatMap() goes only one level deep.
-Hence if you need to go deeper, then you still need to use the `flat()` method separately with depth argument.**_
+***IMP: `flatMap()` goes only one level deep.
+Hence if you need to go deeper, then you still need to use the `flat()` method separately with depth argument.***
 
 ---

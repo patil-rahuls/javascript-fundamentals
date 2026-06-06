@@ -1,36 +1,43 @@
-//////////////////////////////////////////////////////////////
-// EXPRESS ///////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////
+## Express.js
 
-// npm install express
+> ### `npm install express`
 
+```javascript
 import express from "express";
-import data from "./data/data.json" assert { type: "json" };
-const app = express(); // instantiate express app.
+
+// If using ES6 Modules we need the `with` expression
+// to tell that is needs to be parsed into an object.
+// If using CommonJS Modules (i.e. require()), we
+// don't need it. CommonJS Modules automatically
+// parses the JSON into javascript objects.
+import data from "./data/data.json" with { type: "json" };
+
+// Instantiate express app
+const app = express();
 const PORT = 9969;
 
 app.listen(PORT, "0.0.0.0", () => {
-    console.log(`Listening on port# ${PORT}`);
+  console.log(`Server started on port# ${PORT}`);
 });
+```
 
-//////////////////////////////////////////////////////////////
-// ROUTES & ROUTE HANDLERS
-//////////////////////////////////////////////////////////////
-/*
-    Routes are how an app responds to a client's request
-    to a particular endpoint.
-    It comprises of a 'ROUTING PATH' and an 'HTTP METHOD'.
-    e.g.
-        app.post(`/create`...);
-        // `/create` is the 'ROUTING PATH'
-        // post is the 'HTTP METHOD'
+&nbsp;
 
-    Syntax -
-        app.<http_method>(<route>, <route_handler>)
 
-    ROUTE HANDLER:
-        A callback fn having access to req and res objects.
+> ### Routes & Route Handlers
+
+Routes are how an app responds to a client's request to a particular endpoint.
+
+> It comprises of a `Routing Path` and an `HTTP Method`:
+
+    app.post(`/create`...);
+> `/create` is the ***Routing Path***
+>
+> `post` is the ***HTTP Method***
+
+Route Handlers : A callback fn having access to req and res objects.
 */
+
 app.get(`/`, (req, res) => {
     // querying db and fetching data
     // ...

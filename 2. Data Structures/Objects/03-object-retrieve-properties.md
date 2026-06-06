@@ -10,8 +10,7 @@ const myObj = {
   age : 2049-2024,
 };
 ```
-### 1. Retrieve Object Properties using "DOT" notation:
-
+> ### 1. Retrieve Object Properties using "DOT" notation:
 ```javascript
 console.log(myObj.age);
 // 25
@@ -20,8 +19,8 @@ console.log(myObj.habbits);
 // undefined (when property is not found)
 ```
 
-
-### 2. Retrieve Object Properties using "BRACKET" notation:
+&nbsp;
+> ### 2. Retrieve Object Properties using "BRACKET" notation:
 ```javascript
 console.log(myObj['age']);
 // 25
@@ -47,6 +46,7 @@ myObj.'last'+proprty; // ❌ Incorrect
 // This won't work in DOT notation.
 ```
 
+&nbsp;
 ### When to use which notation?
 
 If we need to compute the property name then use the "BRACKET" notation.

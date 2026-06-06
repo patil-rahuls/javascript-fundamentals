@@ -1,4 +1,4 @@
-#### Command Line Arguments
+## Command Line Arguments
 
 - Getting input from user into your node js application via CLI.
 - Remember we have may "global" objects. We see it by typing global inside node CLI terminal.

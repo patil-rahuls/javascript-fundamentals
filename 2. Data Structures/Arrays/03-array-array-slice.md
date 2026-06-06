@@ -5,11 +5,12 @@
 ### `Array.prototype.slice()`
 
 > `array.slice(start_index , end_index)`
-
-element at 'start_index' is included in result.
-
-element at 'end_index' is not included in result. _('end_index' is optional)_
-
+>
+> element at `start_index` is included in result.
+>
+> element at `end_index` is not included in result.
+>
+> parameter `end_index` is optional.
 ```javascript
 const arr = [11, 22, 33, 44, 55, 66];
 
@@ -31,11 +32,9 @@ arr.slice(-2, -1);
 // [ 55 ]
 ```
 
-
 > Example 1: Deep Clone
 >
 > `slice()` array method can be used to copy arrays by not passing any arguments.
-
 ```javascript
 const arr1 = arr.slice(); // DEEP COPY
 
@@ -57,3 +56,4 @@ const crr = arr2.slice();
 const arr3 = [...arr];
 // This will also create a deep clone if the array is flat.
 ```
+---

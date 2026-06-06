@@ -1,6 +1,6 @@
 ## Currying
 
-> Chain of function calls where each function returns another function untill the final result is returned.
+> ***Chain of function calls where each function returns another function untill the final result is returned.***
 
 ```javascript
 function sum(a){
@@ -19,14 +19,12 @@ console.log(result);
 ```
 
 &nbsp;
-
 ### Real life use case:
-
-> Example 1: Reusable Configuration (The "Logger" Pattern)
+> Example 1: ***Reusable Configuration (The "Logger" Pattern)***
 
 Imagine you have a logging function. You don’t want to manually type "DEBUG" or "ERROR" every single time you log something in a specific module.
 
-Currying lets you create specialized versions of a generic function like logger.
+> ***Currying lets you create specialized versions of a generic function like logger.***
 
 ```javascript
 const logger =
@@ -45,6 +43,8 @@ errorLog("Failed to fetch data");
 // [ERROR] 2026-03-19...: Failed to fetch data
 ```
 
+> **Advantages of Currying:**
+>
 > **DRY**: You stop repeating the same first few arguments.
 
 > **Composition**: It makes your functions easier to pipe into one another.

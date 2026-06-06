@@ -11,10 +11,8 @@ const myObj = {
 };
 ```
 
-### 1. Using `delete` keyword.
-
+> ### 1. Using `delete` keyword.
 Mutates the original Object.
-
 ```javascript
 delete myObj.age;
 
@@ -22,11 +20,10 @@ myObj.hasOwnProperty("age");
 // false
 ```
 
-### 2. Using Destructuring.
+> ### 2. Using Destructuring.
 If you want a new object with all keys except some.
 
 This doesn't mutate the original Object.
-
 ```javascript
 const { age: _, ...newObj } = myObj;
 // _ is a throwaway variable that we use for variables that we don't want to use OR ignore.
@@ -45,5 +42,4 @@ newObj.hasOwnProperty("age");
 console.log(myObj);
 // myObj remains unchanged
 ```
-
 ---

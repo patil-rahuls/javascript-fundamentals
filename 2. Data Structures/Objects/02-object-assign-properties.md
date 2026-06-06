@@ -1,7 +1,6 @@
 ## Data Structures > Object
 
 ### Assign Object Properties
-
 Consider this object as an example.
 ```javascript
 const myObj = {
@@ -11,7 +10,7 @@ const myObj = {
 };
 ```
 
-### Assigning values using DOT notation.
+> ### Assigning values using DOT notation.
 ```javascript
 myObj.habbit = 'eating';
 
@@ -26,7 +25,7 @@ console.log(myObj);
 */
 ```
 
-### Assigning values using bracket notation.
+> ### Assigning values using bracket notation.
 ```javascript
 myObj['veg'] = true;
 
@@ -41,24 +40,22 @@ console.log(myObj);
 }
 */
 ```
-
 ---
-&nbsp;
 
-> IMP: When Object property is a number
+&nbsp;
+> **IMP: When Object property is a number**
 
 ```javascript
-myObj.9820694183  = 'mobile';
 // ❌ Incorrect
+myObj.9820694183  = 'mobile';
 
-myObj[9820694183] = 'mobile';
+
 // ✅ Correct
+myObj[9820694183] = 'mobile';
 ```
 
 &nbsp;
-
-> IMP: Dynamic/Computed property name should always be provided inside [] i.e. using Bracket notation.
-
+> **IMP: Dynamic/Computed property name should always be provided inside `[]` _i.e. using Bracket notation_.**
 ```javascript
 const prop = 'name';
 const obj = {};

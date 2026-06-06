@@ -8,7 +8,6 @@ These are fixed values not variables that you literally provide in your script.
 A better way to write javascript objects with the new `ES6` syntax could be as follows:
 
 > Example 1: Computed Properties
-
 ```javascript
 const attribute = "make";
 let i = 0;
@@ -26,7 +25,6 @@ console.log(laptop.make3);  // "HP"
 
 &nbsp;
 > Example 2: Shorthand for Methods and Properties
-
 ```javascript
 let film = 'Titanic';
 

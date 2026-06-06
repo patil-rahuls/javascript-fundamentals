@@ -1,20 +1,20 @@
 ## Which Data Structure to use ?
 
-### 1. Arrays:
+> ### 1. Arrays:
 > Ordered list of values (might contain duplicates).
 >
 > Use when you want to manipulate data.
 
 &nbsp;
 
-### 2. Sets: (High Performance)
+> ### 2. Sets: (High Performance)
 > Use when you want to work with unique values.
 >
 > Used to remove duplicates from arrays.
 
 &nbsp;
 
-### 3. Objects:
+> ### 3. Objects:
 > key-value pairs with methods.
 >
 > keys can only be string type.
@@ -23,7 +23,7 @@
 
 &nbsp;
 
-### 4. Maps: (Better Performance)
+> ### 4. Maps: (Better Performance)
 > Keys can have any data type.
 >
 > Easy to compute size and iterate.

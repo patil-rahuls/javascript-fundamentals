@@ -1,13 +1,13 @@
 ## Data Structures > Maps
 
+> ***Maps are high performance key - value paired data structure.***
+>
+> ***In Objects keys can only be strings (without quotes), but in Maps, keys can be any type.***
+
+&nbsp;
 ### Iterating over Maps
 
-Maps are high performance key - value paired data structure.
-
-In Objects keys can only be strings (without quotes), but in Maps, keys can be any type.
-
-### Using `for-of` loop
-
+> ### Using `for...of` loop
 ```javascript
 const question = new Map ([
   ['question' , 'Best lang in the world?'],
@@ -34,14 +34,7 @@ console.log([...question.values()]);
 ```
 
 &nbsp;
-
-### Using `forEach()`
-
-`forEach()` takes 3 parameters:
-- Current Item in the iteration
-- Current Key
-- Entire Map
-
+> ### Using `forEach()` method
 ```javascript
 const currencies = new Map([
   ['USD' , 'US Dollars'],

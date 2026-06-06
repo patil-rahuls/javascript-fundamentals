@@ -32,12 +32,11 @@ console.log(newUser.age);   // 30
 // Original object gets mutated.
 ```
 
-> **IMP: Primtive types are stored in the CALL STACK, because that's where the Execution Contexts Run.**
+> ***IMP: Primtive types are stored in the CALL STACK, because that's where the Execution Contexts Run.***
 
-> **IMP: The Reference Values are Objects that are stored in the HEAP.**
+> ***IMP: The Reference Values are Objects that are stored in the HEAP.***
 
 &nbsp;
-
 > ### Let's capture it digramatically.
 
 > #### Primitives
@@ -66,7 +65,7 @@ age = 30;
 
 
 
-> Observe, that primitive values don't get mutated. instead, new value gets stored in the Call stack, and the new variable points to that location.
+> ***Primitive values don't get mutated. instead, new value gets stored in the Call stack, and the new variable points to that location.***
 
 &nbsp;
 

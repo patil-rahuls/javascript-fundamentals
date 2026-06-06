@@ -3,9 +3,12 @@
 `for...of` iterates over a list of `values` of the enumerable properties (`keys/index`) of an object.
 
 > Example 1: Array
-
 ```javascript
-const menu = ['North Indian', 'Chinese', 'South Indian'];
+const menu = [
+  'North Indian',
+  'Chinese',
+  'South Indian'
+];
 
 for (const item of menu){
   console.log(item);
@@ -14,7 +17,6 @@ for (const item of menu){
 
 &nbsp;
 > Example 2: When we want both indices and values.
-
 ```javascript
 for(const item of Object.entries(menu)){
   console.log(item); // [index, value]
@@ -23,15 +25,17 @@ for(const item of Object.entries(menu)){
 }
 
 // And we can always destructure it.
-for (const [index , item] of Object.entries(menu)){
+for (const [index, item] of Object.entries(menu)){
   console.log(`${index+1} : ${item}`);
 }
 ```
 
 &nbsp;
-> Example 3: Iterating over an Object. The `for..of` loop only supports iterable objects like arrays.
-
-> JavaScript objects are not iterable by default.
+> Example 3: Iterating over an Object.
+>
+>_The `for..of` loop only supports iterable objects like arrays._
+>
+> _JavaScript objects are not iterable by default._
 
 ```javascript
 const p = {
@@ -52,8 +56,8 @@ for (var key in p) {
     console.log(key + " -> " + p[key]);
   }
 }
-// We can simply use Object.values(), Object.entries() methods to iterate over an object to get values, and Object.keys() to get properties of the object.
-
 ```
+
+We can simply use `Object.values()`, `Object.entries()` methods to iterate over an object to get values, and `Object.keys()` to get properties of the object.
 
 ---

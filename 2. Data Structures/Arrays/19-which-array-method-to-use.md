@@ -2,14 +2,13 @@
 
 ### Which array method to use and when?
 
-
-> #### To ONLY loop over an array:
+&nbsp;
+> ### To ONLY loop over an array:
 `forEach()`
 
 ---
 &nbsp;
-
-> #### To mutate original array:
+> ### To mutate original array:
 Add elements to original array
 
 `push()`
@@ -38,9 +37,7 @@ Remove a portion from original array
 
 ---
 &nbsp;
-
-
-> #### To get a new array:
+> ### To get a new array:
 Part of an array
 
 `slice()`
@@ -68,9 +65,7 @@ Apply certain logic to all elements of array
 
 ---
 &nbsp;
-
-
-> #### To ONLY check if array includes an element:
+> ### To ONLY check if array includes an element:
 
 Based on a condition
 
@@ -83,14 +78,12 @@ Based on value
 
 ---
 &nbsp;
-
-> #### To get ONE element based on a condition:
+> ### To get ONE element based on a condition:
 `find()`
 
 ---
 &nbsp;
-
-> #### To get index of an array element:
+> ### To get index of an array element:
 
 Based on value
 
@@ -102,20 +95,16 @@ Based on a condtion
 
 ---
 &nbsp;
-
-
-> #### To transform to a single value:
+> ### To transform to a single value:
 `reduce()`
 
 ---
 &nbsp;
-
-
-> #### Array to String:
+> ### Array to String:
 `join()`
 
 
-> #### String to Array:
+> ### String to Array:
 `split()`
 
 ---
