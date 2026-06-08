@@ -91,13 +91,13 @@ class Student {
 Student.hey();
 ```
 
-The `show()` and `show2()` are called instance methods and are added to the prototype property of `Student` class.
-
-On the other hand, `hey()` is a static method and it is added to the `Student` Class iself
+> In the above example, the `show()` and `show2()` are called instance methods and are added to the prototype property of `Student` class.
+>
+> On the other hand, `hey()` is a static method and it is added to the `Student` Class iself
 
 Same applies to classes defined using constructor functions.
 
-> We use static methods to create helpers of class constructor functions.
+We use static methods to create helpers of class constructor functions.
 
 _For Arrays, why there are static methods like  `from()`, `.fill()` etc? Why they were not added to prototype property of Array constructor function? - Homework :)_
 

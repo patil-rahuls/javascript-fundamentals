@@ -33,9 +33,8 @@ s2.getCommisionTax();
 // this will call the overridden method.
 ```
 
-AS SIMPLE AS THAT
 
-`constructor()` is mandatory in parent class or any regular ES6 class, but can be omitted in child class if child class need to have exact same number and name of parameters.
+> `constructor()` is mandatory in parent class or any regular ES6 class, but can be omitted in child class if child class need to have exact same number and name of parameters.
 
 > `super()` -> call to parent class' constructor function. It is necessary with extends.
 

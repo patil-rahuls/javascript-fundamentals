@@ -2,7 +2,7 @@
 
 We can chain the class methods.
 
-> We need to return `this` from the methods to allow chaining
+> ***We need to return `this` from the methods to allow chaining.***
 
 ```javascript
 class User {
