@@ -21,19 +21,21 @@ console.dir(object);
 ```
 
 ---
+
 &nbsp;
-### Methods to capture time metrics
-```javascript
-console.time();
 
-console.timeLog();
+### Methods to capture performance
 
-console.timeEnd();
-```
+_`console.time();`_
 
-> **These methods are used to start a timer in JavaScript, allowing us to measure the duration of a code operation for performance testing.**
+_`console.timeLog();`_
+
+_`console.timeEnd();`_
+
+_These methods are used to start a timer in JavaScript, allowing us to measure the duration of a code operation for performance testing._
 
 > Example 1
+
 ```javascript
 // Starts the timer using a label
 console.time("someLabel");
@@ -51,4 +53,15 @@ console.timeLog("someLabel");
 console.timeEnd("someLabel");
 // someLabel: 123.456ms
 ```
+
 ---
+
+---
+
+<!-- PAGINATION_START -->
+
+**Parent:** [1. Basics](..)  
+**Previous:** [Error Types](15-error-types.md)  
+**Next:** [DOM-manipulation](17-DOM-manipulation.md)
+
+<!-- PAGINATION_END -->

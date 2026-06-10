@@ -2,25 +2,29 @@
 
 `"..."` is on the LHS of `=` assignment.
 
-> **The Rest Operator packs elements of a LIST into iterable objects such as Arrays, Sets, Maps and Objects.**
+> **_packs elements of a LIST into iterable objects such as Arrays, Sets, Maps and Objects._**
 
 > **Rest Operator can only be used in following 2 cases:**
-> 1. **Packing an iterable.**
-> 2. **As a function parameter.**
+>
+> 1. **_Packing an iterable._**
+> 2. **_As a function parameter._**
 
-> **There can only be ONE Rest element in an expression.**
+> **_There can only be ONE Rest element in an expression._**
 
-> **The Rest Operator has to be at the end of any destructuring assignment.**
+> **_The Rest Operator has to be at the end of any destructuring assignment._**
 
 &nbsp;
 
 > Example 1: Packing an iterable
+
 ```javascript
 // Array
 const arr = [1, 2, 3, 4, 5, 6, 7];
 
-const [ a, b, c, d, ...restValues ] = arr;
-// ‘restValues’ will be an array of the rest of the elements of arr. Hence the name "REST" operator(I believe).
+const [a, b, c, d, ...restValues] = arr;
+// ‘restValues’ will be an array of the
+// rest of the elements of arr. Hence
+// the name "REST" operator(I believe).
 
 console.log(a, b, c, d, restValues);
 // 1  2  3  4  [5  6  7]
@@ -28,14 +32,12 @@ console.log(a, b, c, d, restValues);
 console.log(a, b, c, d, ...restValues);
 // 1  2  3  4  5  6  7
 
-
-
 // Object
 const product = {
   id: 1,
-  title: 'Shirt',
+  title: "Shirt",
   price: 20,
-  color: 'Blue'
+  color: "Blue",
 };
 
 const { id, title, ...pricingAndDetails } = product;
@@ -50,15 +52,18 @@ console.log(pricingAndDetails);
 ```
 
 &nbsp;
+
 > Example 2: Rest element must be last element.
 
-> ***IMP: The rest operator has to be at the end of any destructuring assignment, else how will Javascript know until when it has to take the elements? Also there can only be one rest element in any destructuring assignment.***
+> _**IMP: The rest operator has to be at the end of any destructuring assignment**, else how will Javascript know until when it has to take the elements? Also there can only be one rest element in any destructuring assignment._
+
 ```javascript
 // Array
 const arr = [1, 2, 3, 4, 5, 6, 7];
 
 const [ a, b, ...someValues, d] = arr;
-// ❌ incorrect. Rest operator has to be at the end.
+// ❌ incorrect. Rest operator has
+// to be at the end.
 // Error : "Rest element must be last element."
 
 
@@ -71,32 +76,40 @@ const product = {
 };
 
 const { id, ...titleAndPrice, color } = product;
-// ❌ incorrect. Rest operator has to be at the end.
+// ❌ incorrect. Rest operator has
+// to be at the end.
 // Error : "Rest element must be last element."
+
 ```
 
 &nbsp;
+
 > Example 3: As a function parameter
+
 ```javascript
 // Array
 function sumAll(...numbers) {
-  // All arguments passed to this function would be packed into this array 'numbers'.
-  // 'numbers' is now a real array: [10, 20, 30]
+  // All arguments passed to this
+  // function would be packed into
+  // this array 'numbers'.
+  // 'numbers' => [10, 20, 30]
   return numbers.reduce((total, num) => total + num, 0);
 }
 
 console.sumAll(10, 20, 30);
 // 60
-/* Advantage of Rest Operator as a function parameter:
-The function above can now accept both a single value as well as a spread-array as its input.*/
+/* Advantage of Rest Operator as 
+a function parameter:
+The function above can now accept 
+both a single value as well as a 
+spread-array as its input.*/
 let inputArr = [10, 20, 30];
 
 console.sumAll(...inputArr);
 // 60
 
-
 // Object
-function showInfo(rollNo, { name, ...info}){
+function showInfo(rollNo, { name, ...info }) {
   console.log(`Roll No. ${rollNo}`);
 
   console.log(`${name} is ${info.age}, and lives in ${info.city}`);
@@ -105,9 +118,20 @@ function showInfo(rollNo, { name, ...info}){
 const user = {
   name: "Rahul",
   age: 25,
-  city: "Pune"
+  city: "Pune",
 };
 
 showInfo(76, user);
 ```
+
 ---
+
+---
+
+<!-- PAGINATION_START -->
+
+**Parent:** [1. Basics](..)  
+**Previous:** [Spread Operator `"..."` [ES6]](13-spread-operator.md)  
+**Next:** [Error Types](15-error-types.md)
+
+<!-- PAGINATION_END -->
