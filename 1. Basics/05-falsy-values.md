@@ -7,6 +7,9 @@
 > - **_`undefined`_**
 > - **_`null`_**
 > - **_`NaN`_**
+> - **_`false`_**
+> - **_`0n`_** _(`n` represents BigInt type.)_
+> - **_`-0`_** 
 
 `undefined` and `null` are two distinct types.
 
