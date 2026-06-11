@@ -53,9 +53,9 @@ console.log(pricingAndDetails);
 
 &nbsp;
 
-> Example 2: Rest element must be last element.
-
 _**IMP: The rest operator has to be at the end of any destructuring assignment**, else how will Javascript know until when it has to take the elements? Also there can only be one rest element in any destructuring assignment._
+
+> Example 2: Rest element must be last element.
 
 ```javascript
 // Array
