@@ -1,4 +1,4 @@
-## `"..."` Rest Operator [ES6]
+## `"..."` Rest Operator <sup>_ES6_</sup>
 
 `"..."` is on the LHS of `=` assignment.
 

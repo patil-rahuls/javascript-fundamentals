@@ -1,4 +1,4 @@
-## Spread Operator `"..."` [ES6]
+## Spread Operator `"..."` <sup>_ES6_</sup>
 
 `"..."` is on the RHS of `=` assignment.
 

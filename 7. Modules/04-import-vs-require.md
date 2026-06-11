@@ -1,8 +1,8 @@
 ## `import()` vs `require()`
 
-### Difference between Common JS Module & ES6 Module
+### Difference between Common JS Module & ES Module
 
-|                                     | Common JS Module                                                        | ES6 Module                                                     |
+|                                     | Common JS Module                                                        | ES Module                                                     |
 | :---------------------------------- | :---------------------------------------------------------------------- | :------------------------------------------------------------- |
 | _import a module_                   | `require()`                                                             | `import`                                                       |
 | _export from a module_              | `module.exports` and `exports.<data>`                                   | `export`                                                       |
@@ -61,13 +61,19 @@
 
 - If there is no `today.js` file in the current directory, it will assume that `today` is a sub-directory and it will search for `index.js` in that directory.
 
-Why .mjs extension?
-It indicates an ES6 module file.
+&nbsp;
+
+**Why .mjs extension?**
+
+It indicates an ES Module file.
+
 Node.js's original module system is CommonJs _(which uses `require` and `module.exports`)_.
+
 Since Node.js was created, the ECMAScript module system _(which uses `import` and `export`)_ has become standard and Node.js has added support for it.
+
 Node.js will treat `.cjs` files as `CommonJS` modules and `.mjs` files as `ECMAScript` modules.
-_IMP - It will treat `.js` files as whatever the default module system for the project is (which is `CommonJS` UNLESS
-`package.json` says `"type": "module"`)._
+
+_IMP - It will treat `.js` files as whatever the default module system for the project is (which is `CommonJS` UNLESS `package.json` says `"type": "module"`)._
 _Hence, as long as Node JS doesn't consider `.js` files as `ES Modules` BY DEFAULT, we need to keep specifying `"type": "module"` inside the package.json file of our project._
 
 ---
@@ -77,7 +83,7 @@ _Hence, as long as Node JS doesn't consider `.js` files as `ES Modules` BY DEFAU
 <!-- PAGINATION_START -->
 
 **Parent:** [7. Modules](..)
-**Previous:** [ES6 Modules](03.2-modules-ES6-live-bindings.md)
+**Previous:** [ES Modules](03.2-modules-ES-live-bindings.md)
 **Next:** [Module Patterns [ES6]](05-module-pattern.md)
 
 <!-- PAGINATION_END -->

@@ -1,9 +1,12 @@
 ## CommonJS Modules
 
 It uses `require()` and `module.exports`.
+
 It is synchronous, meaning it loads files one by one.
+
 File extension is usually `.js`` (or `.cjs`)
-**IMP: In CommonJS (require), when you import a value, you get a copy of it. If the original file changes that value later, your copy stays the same.**
+
+> **_IMP: In CommonJS (require), when you import a value, you get a copy of it. If the original file changes that value later, your copy stays the same._**
 
 Exporting File: `mathUtils.js` (The Provider)
 
@@ -46,6 +49,6 @@ console.log(res);
 
 **Parent:** [7. Modules](..)
 **Previous:** [Modules - Types & Scopes](01-modules.md)
-**Next:** [ES6 Modules](03.1-modules-ES6.md)
+**Next:** [ES Modules](03.1-modules-ES.md)
 
 <!-- PAGINATION_END -->

@@ -1,4 +1,4 @@
-## Default function parameters [ES6]
+## Default function parameters <sup>_ES6_</sup>
 
 > Example: **_Default value parameters always at the end_**
 >

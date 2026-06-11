@@ -1,4 +1,4 @@
-## Arrow Function [ES6]
+## Arrow Function <sup>_ES6_</sup>
 
 > Example: _An Arrow Function_
 > ```javascript

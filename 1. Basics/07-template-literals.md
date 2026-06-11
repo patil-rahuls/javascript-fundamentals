@@ -1,4 +1,4 @@
-## Strings and Template Literals [ES6]
+## Strings and Template Literals <sup>_ES6_</sup>
 
 Literals represent values in javascript.
 

@@ -1,4 +1,4 @@
-## `for...of` Loop [ES6]
+## `for...of` Loop <sup>_ES6_</sup>
 
 > **_`for...of` iterates over a list of `values` of the enumerable properties (`keys/index`) of an object._**
 

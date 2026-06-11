@@ -1,4 +1,4 @@
-## Generator Function `function*` [ES6]
+## Generator Function `function*` <sup>_ES6_</sup>
 
 Generator `function*`, are the modern, easier way to create iterators.
 

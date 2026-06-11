@@ -1,4 +1,4 @@
-## Enhanced Object Literals [ES6]
+## Enhanced Object Literals <sup>_ES6_</sup>
 
 _Literals represent values in javascript._
 

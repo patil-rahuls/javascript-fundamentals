@@ -1,4 +1,4 @@
-## Iterators
+## Iterators <sup>_ES6_</sup>
 
 Iterator is an object that follows a specific protocol called _`iterator protocol`_.
 
