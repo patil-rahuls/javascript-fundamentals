@@ -132,7 +132,7 @@ document.querySelector("body").style.width = "200px";
 
 > **_`.prepend()`_** & **_`.append()`_**
 >
-> _Inserts element as `Child` under another element at the beginning / end.:_
+> _Inserts element as `Child` under another element at the beginning / end._
 
 ```javascript
 const header = document.querySelector(".header");
@@ -300,32 +300,31 @@ loginBTN.classList.contains('check-class-exists');
 > ```
 > 
 
-&nbsp;
-
-> **Keypress events:**
->
-> **_`keydown`_**, **_`keyup`_** and **_`keypress`_**.
-> 
-
 _When an event occurs, JavaScript generates an event-object that contains all info about that event._
 
 _We pass that event-object as an argument to the callback function._
 
+&nbsp;
+
+**Keypress events:**
+> **_`keydown`_**, **_`keyup`_** and **_`keypress`_**.
 > 
-> ```javascript
-> document.addEventListener("keydown", function (eventObj) {
->   console.log(eventObj.key);
->   // Access property 'key' of Event Object
-> 
->   if (eventObj.key === "Escape") {
->     alert("Escape was pressed.");
->   }
-> });
-> ```
+
+> Example 
+```javascript
+document.addEventListener("keydown", function (eventObj) {
+  console.log(eventObj.key);
+  // Access property 'key' of Event Object
+
+  if (eventObj.key === "Escape") {
+    alert("Escape was pressed.");
+  }
+});
+```
 
 &nbsp;
 
-> **Mouse events:**
+**Mouse events:**
 >
 > **_`click`_** and **_`scroll`_**.
 > 
