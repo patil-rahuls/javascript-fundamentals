@@ -167,8 +167,10 @@ But we can have a look at its properties:
 
 <!-- PAGINATION_START -->
 
-**Parent:** [3. Functions](..)  
-**Previous:** [Optional Chaining [ES 2020]](04-optional-chaining.md)  
-**Next:** [Higher Order Functions](06-higher-order-fn.md)
+**Parent:** [3. Functions](../3.%20Functions/)  
+
+**Previous:** ← [Optional Chaining [ES 2020]](04-optional-chaining.md)  
+
+**Next:** → [Higher Order Functions](06-higher-order-fn.md)
 
 <!-- PAGINATION_END -->

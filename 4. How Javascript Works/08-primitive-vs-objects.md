@@ -123,8 +123,10 @@ In Javascript, we pass references, NOT PASS BY REFERENCES.
 
 <!-- PAGINATION_START -->
 
-**Parent:** [4. How Javascript Works](..)  
-**Previous:** [Hoisting and TDZ Temporal Dead Zone](07-hoisting-TDZ.md)  
-**Next:** [Event Loop](09.1-event-loop.md)
+**Parent:** [4. How Javascript Works](../4.%20How%20Javascript%20Works/)  
+
+**Previous:** ← [Hoisting and TDZ](07-hoisting-TDZ.md)  
+
+**Next:** → [Event Loop](09.1-event-loop.md)
 
 <!-- PAGINATION_END -->

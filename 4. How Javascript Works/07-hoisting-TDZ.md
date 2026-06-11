@@ -36,8 +36,10 @@ Sometimes we might need to use functions before actual declaration. Code can be 
 
 <!-- PAGINATION_START -->
 
-**Parent:** [4. How Javascript Works](..)  
-**Previous:** [Arrow Function vs Regular Function](06-arrow-vs-regular-fn.md)  
-**Next:** [Primitive vs Object References](08-primitive-vs-objects.md)
+**Parent:** [4. How Javascript Works](../4.%20How%20Javascript%20Works/)  
+
+**Previous:** ← [Arrow Function vs Regular Function](06-arrow-vs-regular-fn.md)  
+
+**Next:** → [Primitive vs Object References](08-primitive-vs-objects.md)
 
 <!-- PAGINATION_END -->

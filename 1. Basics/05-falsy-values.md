@@ -88,8 +88,10 @@ console.log(null === null);
 
 <!-- PAGINATION_START -->
 
-**Parent:** [1. Basics](..)  
-**Previous:** [Equality Operators (`==` and `===`)](04-equality-operators.md)  
-**Next:** [Short Circuiting `&&` and `||`](06.1-and-or-short-circuiting.md)
+**Parent:** [1. Basics](../1.%20Basics/)  
+
+**Previous:** ← [Equality Operators](04-equality-operators.md)  
+
+**Next:** → [Short Circuiting `&&` and `||`](06.1-and-or-short-circuiting.md)
 
 <!-- PAGINATION_END -->

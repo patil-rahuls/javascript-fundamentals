@@ -93,8 +93,10 @@ As a user scrolls down a page, the browser calculates the scroll position consta
 
 <!-- PAGINATION_START -->
 
-**Parent:** [3. Functions](..)  
-**Previous:** [Strings - Methods](14.2-strings-methods-2.md)  
-**Next:** [Throttling](16-throttling.md)
+**Parent:** [3. Functions](../3.%20Functions/)  
+
+**Previous:** ← [Strings - Methods](14.2-strings-methods-2.md)  
+
+**Next:** → [Throttling](16-throttling.md)
 
 <!-- PAGINATION_END -->

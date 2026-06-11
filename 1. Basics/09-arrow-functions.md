@@ -48,8 +48,10 @@ console.log(product(4, 5, 7));
 
 <!-- PAGINATION_START -->
 
-**Parent:** [1. Basics](..)  
-**Previous:** [Enhanced Object Literals [ES6]](08-enhanced-object-literals.md)  
-**Next:** [`for...in` Loop](10-for-in-loop.md)
+**Parent:** [1. Basics](../1.%20Basics/)  
+
+**Previous:** ← [Enhanced Object Literals [ES6]](08-enhanced-object-literals.md)  
+
+**Next:** → [`for...in` Loop](10-for-in-loop.md)
 
 <!-- PAGINATION_END -->

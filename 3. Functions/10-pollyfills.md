@@ -28,8 +28,10 @@ if (!Array.prototype.includes) {
 
 <!-- PAGINATION_START -->
 
-**Parent:** [3. Functions](..)  
-**Previous:** [Currying](09-currying.md)  
-**Next:** [Iterators](11-iterators.md)
+**Parent:** [3. Functions](../3.%20Functions/)  
+
+**Previous:** ← [Currying](09-currying.md)  
+
+**Next:** → [Iterators](11-iterators.md)
 
 <!-- PAGINATION_END -->

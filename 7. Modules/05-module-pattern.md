@@ -82,8 +82,10 @@ It also helps to keep our code organized and easier to maintain by hiding implem
 
 <!-- PAGINATION_START -->
 
-**Parent:** [7. Modules](..)
-**Previous:** [`import()` vs `require()`](04-import-vs-require.md)
-**Next:** _None_
+**Parent:** [7. Modules](../7.%20Modules/)
+
+**Previous:** ← [`import()` vs `require()`](04-import-vs-require.md)
+
+**Next:** → [Node.js](../8.%20Node.js/)
 
 <!-- PAGINATION_END -->

@@ -1,4 +1,4 @@
-## Optional Chaining [ES 2020]
+## Optional Chaining <sup>_ES 2020_</sup>
 
 > **_It checks if a property or a method exists on an Object OR if any value exists on a index of an Array._**
 
@@ -128,8 +128,10 @@ console.log(itm);
 
 <!-- PAGINATION_START -->
 
-**Parent:** [3. Functions](..)  
-**Previous:** [Timer Functions - clearInterval()](03.4-timer-functions-clearInterval.md)  
-**Next:** [Closures](05-closures.md)
+**Parent:** [3. Functions](../3.%20Functions/)  
+
+**Previous:** ← [Timer Functions - clearInterval()](03.4-timer-functions-clearInterval.md)  
+
+**Next:** → [Closures](05-closures.md)
 
 <!-- PAGINATION_END -->

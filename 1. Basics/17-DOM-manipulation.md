@@ -354,8 +354,10 @@ document.querySelector(".myButton").addEventListener("click", myFunc());
 
 <!-- PAGINATION_START -->
 
-**Parent:** [1. Basics](..)  
-**Previous:** [Console Methods](16-console.md)  
-**Next:** [2. Data Structures > Array > Initialization](../2.%20Data%20Structures/Arrays/01-initialization.md)
+**Parent:** [1. Basics](../1.%20Basics/)  
+
+**Previous:** ← [Console Methods](16-console.md)  
+
+**Next:** → [2. Data Structures](../2.%20Data%20Structures/)
 
 <!-- PAGINATION_END -->

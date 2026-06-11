@@ -83,8 +83,10 @@ _While for-loops are great, iterators provide some unique "superpowers":_
 
 <!-- PAGINATION_START -->
 
-**Parent:** [3. Functions](..)  
-**Previous:** [Polyfills](10-pollyfills.md)  
-**Next:** [Generator Function `function*` [ES6]](12-generator-yeild.md)
+**Parent:** [3. Functions](../3.%20Functions/)  
+
+**Previous:** ← [Polyfills](10-pollyfills.md)  
+
+**Next:** → [Generator Function `function*` [ES6]](12-generator-yeild.md)
 
 <!-- PAGINATION_END -->

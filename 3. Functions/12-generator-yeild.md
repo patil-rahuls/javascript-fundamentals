@@ -170,8 +170,10 @@ console.log(iterator.next());
 
 <!-- PAGINATION_START -->
 
-**Parent:** [3. Functions](..)  
-**Previous:** [Iterators](11-iterators.md)  
-**Next:** [Decorator Functions](13-decorators.md)
+**Parent:** [3. Functions](../3.%20Functions/)  
+
+**Previous:** ← [Iterators](11-iterators.md)  
+
+**Next:** → [Decorator Functions](13-decorators.md)
 
 <!-- PAGINATION_END -->

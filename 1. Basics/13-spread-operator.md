@@ -205,8 +205,10 @@ notify(...Object.values(payload));
 
 <!-- PAGINATION_START -->
 
-**Parent:** [1. Basics](..)  
-**Previous:** [Nested Destructuring Assignment [ES6]](12.2-nested-destructuring.md)  
-**Next:** [`"..."` Rest Operator [ES6]](14-rest-operator.md)
+**Parent:** [1. Basics](../1.%20Basics/)  
+
+**Previous:** ← [Nested Destructuring Assignment [ES6]](12.2-nested-destructuring.md)  
+
+**Next:** → [`"..."` Rest Operator [ES6]](14-rest-operator.md)
 
 <!-- PAGINATION_END -->

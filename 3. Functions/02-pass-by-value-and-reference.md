@@ -80,8 +80,10 @@ _But in the case of objects, it looks like pass by reference. When we pass an ob
 
 <!-- PAGINATION_START -->
 
-**Parent:** [3. Functions](..)  
-**Previous:** [Default function parameters [ES6]](01-default-params.md)  
-**Next:** [Timer Functions - setTimeout()](03.1-timer-functions-setTimeout.md)
+**Parent:** [3. Functions](../3.%20Functions/)  
+
+**Previous:** ← [Default function parameters [ES6]](01-default-params.md)  
+
+**Next:** → [Timer Functions - setTimeout()](03.1-timer-functions-setTimeout.md)
 
 <!-- PAGINATION_END -->

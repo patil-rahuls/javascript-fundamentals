@@ -57,8 +57,10 @@ I am a ${exp} years experienced IT Professional`;
 
 <!-- PAGINATION_START -->
 
-**Parent:** [1. Basics](..)  
-**Previous:** [Nullish Coalescing Assignment Operator `??=`](06.5-nullish-coalescing-assignment.md)  
-**Next:** [Enhanced Object Literals [ES6]](08-enhanced-object-literals.md)
+**Parent:** [1. Basics](../1.%20Basics/)  
+
+**Previous:** ← [Nullish Coalescing Assignment Operator `??=`](06.5-nullish-coalescing-assignment.md)  
+
+**Next:** → [Enhanced Object Literals [ES6]](08-enhanced-object-literals.md)
 
 <!-- PAGINATION_END -->

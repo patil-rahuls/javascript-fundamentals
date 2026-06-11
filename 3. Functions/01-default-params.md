@@ -92,8 +92,10 @@
 
 <!-- PAGINATION_START -->
 
-**Parent:** [3. Functions](..)  
-**Previous:** [2. Data Structures > Which DS to use](../2.%20Data%20Structures/00-which-ds-to-use.md)  
-**Next:** [Pass by Value and Pass by Reference](02-pass-by-value-and-reference.md)
+**Parent:** [3. Functions](../3.%20Functions/)  
+
+**Previous:** ← [2. Data Structures](../2.%20Data%20Structures/)  
+
+**Next:** → [Pass by Value and Pass by Reference](02-pass-by-value-and-reference.md)
 
 <!-- PAGINATION_END -->

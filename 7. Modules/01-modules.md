@@ -74,8 +74,10 @@ In Node JS, every file that we create is considered as a Module.
 
 <!-- PAGINATION_START -->
 
-**Parent:** [7. Modules](..)
-**Previous:** _None_
-**Next:** [CommonJS Modules](02-modules-CommonJS.md)
+**Parent:** [7. Modules](../)
+
+**Previous:** ← [Asynchronous JavaScript](../6.%20Asynchronous%20Javascript/)
+
+**Next:** → [CommonJS Modules](02-modules-CommonJS.md)
 
 <!-- PAGINATION_END -->

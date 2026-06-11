@@ -75,8 +75,10 @@
 
 <!-- PAGINATION_START -->
 
-**Parent:** [4. How Javascript Works](..)  
-**Previous:** [Compilation, Interpretation and JIT](01-JIT-compilation.md)  
-**Next:** [JavaScript Engine](03-javascript-engine.md)
+**Parent:** [4. How Javascript Works](../4.%20How%20Javascript%20Works/)  
+
+**Previous:** ← [Compilation, Interpretation and JIT](01-JIT-compilation.md)  
+
+**Next:** → [JavaScript Engine](03-javascript-engine.md)
 
 <!-- PAGINATION_END -->

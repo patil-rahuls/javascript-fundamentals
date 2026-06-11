@@ -47,8 +47,10 @@ console.log(res);
 
 <!-- PAGINATION_START -->
 
-**Parent:** [7. Modules](..)
-**Previous:** [Modules - Types & Scopes](01-modules.md)
-**Next:** [ES Modules](03.1-modules-ES.md)
+**Parent:** [7. Modules](../7.%20Modules/)
+
+**Previous:** ← [Modules - Types & Scopes](01-modules.md)
+
+**Next:** → [ES Modules](03.1-modules-ES.md)
 
 <!-- PAGINATION_END -->

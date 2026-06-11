@@ -88,8 +88,10 @@ You don't want to hit your database for "J", then "Ja", then "Jas"... for every 
 
 <!-- PAGINATION_START -->
 
-**Parent:** [3. Functions](..)  
-**Previous:** [Debouncing](15-debouncing.md)  
-**Next:** [`Number` & `Date`](17-Number-date-optional.md)
+**Parent:** [3. Functions](../3.%20Functions/)  
+
+**Previous:** ← [Debouncing](15-debouncing.md)  
+
+**Next:** → [`Number` & `Date`](17-Number-date-optional.md)
 
 <!-- PAGINATION_END -->

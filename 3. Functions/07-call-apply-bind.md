@@ -247,8 +247,10 @@ EducationCess(cost);
 
 <!-- PAGINATION_START -->
 
-**Parent:** [3. Functions](..)  
-**Previous:** [Higher Order Functions](06-higher-order-fn.md)  
-**Next:** [Immediately Invoked Function Expressions - `IIFE`](08-IIFE.md)
+**Parent:** [3. Functions](../3.%20Functions/)  
+
+**Previous:** ← [Higher Order Functions](06-higher-order-fn.md)  
+
+**Next:** → [Immediately Invoked Function Expressions - `IIFE`](08-IIFE.md)
 
 <!-- PAGINATION_END -->

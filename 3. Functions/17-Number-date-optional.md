@@ -232,8 +232,10 @@ More here -> https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Numbe
 
 <!-- PAGINATION_START -->
 
-**Parent:** [3. Functions](..)  
-**Previous:** [Throttling](16-throttling.md)  
-**Next:** [4. How Javascript Works > JIT Compilation](../4.%20How%20Javascript%20Works/01-JIT-compilation.md)
+**Parent:** [3. Functions](../3.%20Functions/)  
+
+**Previous:** ← [Throttling](16-throttling.md)  
+
+**Next:** → [4. How Javascript Works](../4.%20How%20Javascript%20Works/)
 
 <!-- PAGINATION_END -->

@@ -82,8 +82,10 @@ _Hence, as long as Node JS doesn't consider `.js` files as `ES Modules` BY DEFAU
 
 <!-- PAGINATION_START -->
 
-**Parent:** [7. Modules](..)
-**Previous:** [ES Modules](03.2-modules-ES-live-bindings.md)
-**Next:** [Module Patterns [ES6]](05-module-pattern.md)
+**Parent:** [7. Modules](../7.%20Modules/)
+
+**Previous:** ← [ES Modules - Live Bindings](03.2-modules-ES-live-bindings.md)
+
+**Next:** → [Module Patterns [ES6]](05-module-pattern.md)
 
 <!-- PAGINATION_END -->

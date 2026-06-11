@@ -32,8 +32,10 @@ In case of Browser's Event Listener's Execution Context, `this` object points to
 
 <!-- PAGINATION_START -->
 
-**Parent:** [4. How Javascript Works](..)  
-**Previous:** [Execution Context](04.2-execution-context-structure.md)  
-**Next:** [Arrow Function vs Regular Function](06-arrow-vs-regular-fn.md)
+**Parent:** [4. How Javascript Works](../4.%20How%20Javascript%20Works/)  
+
+**Previous:** ← [Execution Context's Structure](04.2-execution-context-structure.md)  
+
+**Next:** → [Arrow Function vs Regular Function](06-arrow-vs-regular-fn.md)
 
 <!-- PAGINATION_END -->

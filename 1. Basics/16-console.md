@@ -60,8 +60,10 @@ console.timeEnd("someLabel");
 
 <!-- PAGINATION_START -->
 
-**Parent:** [1. Basics](..)  
-**Previous:** [Error Types](15-error-types.md)  
-**Next:** [DOM-manipulation](17-DOM-manipulation.md)
+**Parent:** [1. Basics](../1.%20Basics/)  
+
+**Previous:** ← [Error Types](15-error-types.md)  
+
+**Next:** → [DOM-manipulation](17-DOM-manipulation.md)
 
 <!-- PAGINATION_END -->

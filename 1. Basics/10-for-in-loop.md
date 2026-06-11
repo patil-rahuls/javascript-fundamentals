@@ -40,8 +40,10 @@ for (const i in employee) {
 
 <!-- PAGINATION_START -->
 
-**Parent:** [1. Basics](..)  
-**Previous:** [Arrow Function [ES6]](09-arrow-functions.md)  
-**Next:** [`for...of` Loop [ES6]](11-for-of-loop.md)
+**Parent:** [1. Basics](../1.%20Basics/)  
+
+**Previous:** ← [Arrow Function [ES6]](09-arrow-functions.md)  
+
+**Next:** → [`for...of` Loop [ES6]](11-for-of-loop.md)
 
 <!-- PAGINATION_END -->

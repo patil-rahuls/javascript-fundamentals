@@ -58,8 +58,10 @@ const myObj = {
 
 <!-- PAGINATION_START -->
 
-**Parent:** [1. Basics](..)  
-**Previous:** [Strings and Template Literals [ES6]](07-template-literals.md)  
-**Next:** [Arrow Function [ES6]](09-arrow-functions.md)
+**Parent:** [1. Basics](../1.%20Basics/)  
+
+**Previous:** ← [Strings and Template Literals [ES6]](07-template-literals.md)  
+
+**Next:** → [Arrow Function [ES6]](09-arrow-functions.md)
 
 <!-- PAGINATION_END -->

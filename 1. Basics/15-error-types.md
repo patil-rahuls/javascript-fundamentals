@@ -84,8 +84,10 @@ _It's important to note that the JavaScript interpreter will stop executing the 
 
 <!-- PAGINATION_START -->
 
-**Parent:** [1. Basics](..)  
-**Previous:** [`"..."` Rest Operator [ES6]](14-rest-operator.md)  
-**Next:** [Console Methods](16-console.md)
+**Parent:** [1. Basics](../1.%20Basics/)  
+
+**Previous:** ← [`"..."` Rest Operator [ES6]](14-rest-operator.md)  
+
+**Next:** → [Console Methods](16-console.md)
 
 <!-- PAGINATION_END -->

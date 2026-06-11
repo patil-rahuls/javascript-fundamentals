@@ -130,8 +130,10 @@ showInfo(76, user);
 
 <!-- PAGINATION_START -->
 
-**Parent:** [1. Basics](..)  
-**Previous:** [Spread Operator `"..."` [ES6]](13-spread-operator.md)  
-**Next:** [Error Types](15-error-types.md)
+**Parent:** [1. Basics](../1.%20Basics/)  
+
+**Previous:** ← [Spread Operator `"..."` [ES6]](13-spread-operator.md)  
+
+**Next:** → [Error Types](15-error-types.md)
 
 <!-- PAGINATION_END -->

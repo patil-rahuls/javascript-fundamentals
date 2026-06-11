@@ -59,8 +59,10 @@ Advantages of Currying:
 
 <!-- PAGINATION_START -->
 
-**Parent:** [3. Functions](..)  
-**Previous:** [Immediately Invoked Function Expressions - `IIFE`](08-IIFE.md)  
-**Next:** [Polyfills](10-pollyfills.md)
+**Parent:** [3. Functions](../3.%20Functions/)  
+
+**Previous:** ← [Immediately Invoked Function Expressions - `IIFE`](08-IIFE.md)  
+
+**Next:** → [Polyfills](10-pollyfills.md)
 
 <!-- PAGINATION_END -->

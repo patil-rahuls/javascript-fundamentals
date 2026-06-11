@@ -112,8 +112,10 @@ _IIFE can be written to function same as a Namespace in PHP and other langs._
 
 <!-- PAGINATION_START -->
 
-**Parent:** [3. Functions](..)  
-**Previous:** [`call()`, `apply()` and `bind()`](07-call-apply-bind.md)  
-**Next:** [Currying](09-currying.md)
+**Parent:** [3. Functions](../3.%20Functions/)  
+
+**Previous:** ← [`call()`, `apply()` and `bind()`](07-call-apply-bind.md)  
+
+**Next:** → [Currying](09-currying.md)
 
 <!-- PAGINATION_END -->

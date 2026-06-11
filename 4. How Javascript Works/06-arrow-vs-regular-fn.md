@@ -139,8 +139,10 @@ const sumArrow = (a, b) => {
 
 <!-- PAGINATION_START -->
 
-**Parent:** [4. How Javascript Works](..)  
-**Previous:** [`this` Keyword](05-this-keyword.md)  
-**Next:** [Hoisting and TDZ Temporal Dead Zone](07-hoisting-TDZ.md)
+**Parent:** [4. How Javascript Works](../4.%20How%20Javascript%20Works/)  
+
+**Previous:** ← [`this` Keyword](05-this-keyword.md)  
+
+**Next:** → [Hoisting and TDZ](07-hoisting-TDZ.md)
 
 <!-- PAGINATION_END -->

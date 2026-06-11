@@ -128,8 +128,10 @@ educationCess(cost);
 
 <!-- PAGINATION_START -->
 
-**Parent:** [3. Functions](..)  
-**Previous:** [Closures](05-closures.md)  
-**Next:** [`call()`, `apply()` and `bind()`](07-call-apply-bind.md)
+**Parent:** [3. Functions](../3.%20Functions/)  
+
+**Previous:** ← [Closures](05-closures.md)  
+
+**Next:** → [`call()`, `apply()` and `bind()`](07-call-apply-bind.md)
 
 <!-- PAGINATION_END -->

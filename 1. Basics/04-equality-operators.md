@@ -107,8 +107,10 @@ https://stackoverflow.com/questions/359494/which-equals-operator-vs-should-be-us
 
 <!-- PAGINATION_START -->
 
-**Parent:** [1. Basics](..)  
-**Previous:** [Function Declaration & Expression - Differences](03.2-function-declaration-&-expression-diff.md)  
-**Next:** [Falsy Values in JS](05-falsy-values.md)
+**Parent:** [1. Basics](../1.%20Basics/)  
+
+**Previous:** ← [Function Declaration & Expression - Differences](03.2-function-declaration-&-expression-diff.md)  
+
+**Next:** → [Falsy Values in JS](05-falsy-values.md)
 
 <!-- PAGINATION_END -->

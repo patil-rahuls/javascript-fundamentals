@@ -66,8 +66,10 @@ _We can simply use `Object.values()`, `Object.entries()` methods to iterate over
 
 <!-- PAGINATION_START -->
 
-**Parent:** [1. Basics](..)  
-**Previous:** [`for...in` Loop](10-for-in-loop.md)  
-**Next:** [Destructuring Assignment [ES6]](12.1-destructuring-assignment.md)
+**Parent:** [1. Basics](../1.%20Basics/)  
+
+**Previous:** ← [`for...in` Loop](10-for-in-loop.md)  
+
+**Next:** → [Destructuring Assignment [ES6]](12.1-destructuring-assignment.md)
 
 <!-- PAGINATION_END -->

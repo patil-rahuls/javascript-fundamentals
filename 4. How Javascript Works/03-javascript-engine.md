@@ -39,8 +39,10 @@ An unstructured memory pool which stores all the `objects` _(objects, arrays, se
 
 <!-- PAGINATION_START -->
 
-**Parent:** [4. How Javascript Works](..)  
-**Previous:** [Javascript Runtime](02-javascript-runtime.md)  
-**Next:** [Execution Context](04.1-execution-context.md)
+**Parent:** [4. How Javascript Works](../4.%20How%20Javascript%20Works/)  
+
+**Previous:** ← [Javascript Runtime](02-javascript-runtime.md)  
+
+**Next:** → [Execution Context](04.1-execution-context.md)
 
 <!-- PAGINATION_END -->
