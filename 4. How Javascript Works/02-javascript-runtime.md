@@ -45,8 +45,12 @@
    - `Call Stack`
 
 - `C++ bindings(Node.js) & Thread Pool (libuv)`
-   - **C++ Bindings are implemented by Node.js.** _For eaxmple, when you execute a JavaScript function like fs.readFile(), it calls Node's inner C++ binding layer, which is like a wrapper which calls the underlying C-based API in libuv._
-   - **Thread Pool is implemented in libuv.** _The libuv offloads heavy, synchronous, or blocking tasks like file system tasks (fs), cryptographic operations (crypto), compression (zlib), and DNS lookups (dns.lookup) to the threads in Thread Pool, so they do not freeze the main JavaScript execution thread. _
+   - **C++ Bindings are implemented by Node.js.** 
+   
+      _For example, when you execute a JavaScript function like fs.readFile(), it calls Node's inner C++ binding layer, which is like a wrapper which calls the underlying C-based API in libuv._
+   - **Thread Pool is implemented in libuv.** 
+   
+      _The libuv offloads heavy, synchronous, or blocking tasks like file system tasks (fs), cryptographic operations (crypto), compression (zlib), and DNS lookups (dns.lookup) to the threads in Thread Pool, so they do not freeze the main JavaScript execution thread._
 
 - `Queues` - _Datastructure that holds callback functions of the asynchronous tasks that are to be executed._
 
