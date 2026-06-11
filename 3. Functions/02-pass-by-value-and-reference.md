@@ -1,8 +1,8 @@
 ## Pass by Value and Pass by Reference
 
-> **_objects are passed by reference_**
+> **_`objects` are passed by `reference`_**
 
-> **_primitives are passed by value._**
+> **_`primitives` are passed by `value`._**
 
 _Please see the topic "Primitives vs Object References" under "How Javascript Works" section._
 
@@ -36,13 +36,13 @@ _Please see the topic "Primitives vs Object References" under "How Javascript Wo
 >
 > _However, `me` object gets changed, because objects are passed by reference._
 >
-> Object reference:
+> _Object reference:_
 >
 > ```javascript
 > const newObj = me;
 > ```
 >
-> We are just copying the object reference, and not the actual object. i.e. they both point to the same memory location in the heap.
+> _We just copied the object reference, and not the actual object. i.e. they both point to the same memory location in the heap._
 
 **_Summary:_**
 

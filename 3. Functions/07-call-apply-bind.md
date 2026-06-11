@@ -24,9 +24,10 @@ Used to reuse an object's method with different objects.
 > _In the above code, the `this` in the method `checkIn` will point to the `mainAirline` object._
 
 &nbsp;
-Now, suppose a new partner airline is formed and we need to bring in the functionality `checkIn` into it.
 
-We borrow it from the existing `mainAirline` object using `call`, `apply` and `bind` methods.
+_Now, suppose a new partner airline is formed and we need to bring in the functionality `checkIn` into it._
+
+_We borrow it from the existing `mainAirline` object using `call`, `apply` and `bind` methods._
 
 > ```javascript
 > const partnerAirline = {
@@ -74,8 +75,9 @@ We borrow it from the existing `mainAirline` object using `call`, `apply` and `b
 >
 > _After the first argument which is the `partnerAirline` object, the rest of the arguments are exactly in the same order as the parameters of the `checkIn()` method._
 
-Now, we can create any number of partner airlines/carriers/objects. _Just make sure the property names are exactly the same as those of `mainAirline` object._
+_Now, we can create any number of partner airlines/carriers/objects. Just make sure the property names are exactly the same as those of `mainAirline` object._
 
+---
 &nbsp;
 
 ### `apply()`
@@ -112,7 +114,7 @@ Always prefer the above format, so that in future if we need to change any of th
 >   "F23",
 > );
 > ```
-
+---
 &nbsp;
 
 ### `bind()`

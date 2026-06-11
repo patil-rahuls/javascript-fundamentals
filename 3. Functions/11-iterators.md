@@ -43,11 +43,11 @@ console.log(itr.next());
 // { value: undefined, done: true }
 ```
 
-\_Why do we use them? Why not just use a for loop?>
+**_Why do we use them? Why not just use a for loop?_**
 
 _While for-loops are great, iterators provide some unique "superpowers":_
 
-- **_1. Memory Efficiency:_**
+- **_Memory Efficiency:_**
 
   Imagine working with a large data-set of 1-million-items.
 
@@ -55,7 +55,7 @@ _While for-loops are great, iterators provide some unique "superpowers":_
 
   You can generate or fetch items one by one as needed _(this is called `Lazy Evaluation`)_.
 
-- **_2. Custom Logic:_**
+- **_Custom Logic:_**
 
   You can create an iterator that never ends (like a "Clock" iterator) or one that skips every second item.
 
@@ -75,7 +75,7 @@ _While for-loops are great, iterators provide some unique "superpowers":_
 
 &nbsp;
 
-**_The simplest way to create iterators are using the `generator functions`._**
+**_The simplest way to create iterators is using the `generator functions`._**
 
 ---
 

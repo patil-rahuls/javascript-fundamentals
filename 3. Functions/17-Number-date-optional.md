@@ -56,9 +56,9 @@ Number(undefined)   -> NaN
 
 &nbsp;
 
-> ### Number Constants (Static Members)
->
-> _The built-in Number object has CONSTANT properties for numerical constants, such as max value, not-a-number, and infinity._
+> ### Number Constants _(Static Members)_
+
+_The built-in Number object has CONSTANT properties for numerical constants, such as max value, not-a-number, and infinity._
 
 ```javascript
 // The largest positive

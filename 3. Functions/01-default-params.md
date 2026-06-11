@@ -13,7 +13,7 @@
 
 &nbsp;
 
-> Example: **_efault parameter is ignored when `null` is passed._**
+> Example: **_Default parameter is ignored when `null` is passed._**
 >
 > ```javascript
 > function sum(x = 10, y) {

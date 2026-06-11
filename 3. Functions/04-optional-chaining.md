@@ -43,16 +43,16 @@ Directly accessing a property which we don't know whether exists or not is a bad
 
 > Solution:
 >
-> With optional chaining we can reduce the above code to this:
+> _With optional chaining we can reduce the above code to this:_
 >
 > ```javascript
 > console.log(user.workingHours.monday?.start);
 > // undefined
 > ```
 >
-> This returns `undefined` instead of throwing an error.
+> _This returns `undefined` instead of throwing an error._
 
-We can chain the checking of object properties like this.
+We can also chain the checking of object properties like this.
 
 ```javascript
 console.log(user.workingHours?.monday?.start);
@@ -91,7 +91,7 @@ console.log(result);
 
 &nbsp;
 
-> Example: Also works on arrays; it checks if an array element exists, just like checking a method.
+> Example: _Also works on array elements; it checks if an array element exists, just like checking a method._
 
 ```javascript
 const users = [
@@ -110,7 +110,7 @@ console.log(users[1]?.name ?? "user 1 not found!");
 
 &nbsp;
 
-> Example: Also works on arrays; Return an Array's item with an optional check on the array.
+> Example: _Also works on arrays; Return an Array's item with an optional check on the array._
 
 ```javascript
 const arr = [1, 2, 3];

@@ -39,7 +39,7 @@ const show = (function () {
 
 ### IIFE - Modules & Encapsulation
 
-> **IMP: Why are IIFEs in javascript?**
+> **Why are IIFEs in javascript?**
 >
 > **_Variables Scope_**
 >

@@ -41,6 +41,7 @@ A closure is like a backpack that a function carries around wherever it goes(fro
 &nbsp;
 
 ### More about closures:
+---
 
 We do not create closures manually.
 

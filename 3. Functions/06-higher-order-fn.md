@@ -6,7 +6,7 @@ Fundamental concept of JavaScript.
 
 The functions that are passed/returned are called **_First Class Functions/Citizens_**.
 
-e.g. `addEventListener()` is a higher order function.
+_For example, `addEventListener()` is a higher order function._
 
 ```javascript
 function count() {
@@ -20,7 +20,7 @@ function count() {
 
 ### More examples:
 
-> Example 1: Functions accepting callback functions:
+> Example 1: _Functions accepting callback functions:_
 >
 > ```javascript
 > // Callback function 1
@@ -56,7 +56,7 @@ function count() {
 
 &nbsp;
 
-> Example 2: Functions returning functions
+> Example 2: _Functions returning functions_
 
 ```javascript
 const greet = function (greeting) {
@@ -100,7 +100,7 @@ const greetArrow = (greeting) => (name) => console.log(`${greeting} ${name}`);
 
 &nbsp;
 
-> Example 3: Creating related functions by returning functions.
+> Example 3: _Creating related functions by returning functions._
 
 ```javascript
 const addTax = (rate) => {
