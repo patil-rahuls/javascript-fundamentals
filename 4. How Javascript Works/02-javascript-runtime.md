@@ -1,15 +1,15 @@
 ## Javascript Runtime
 
-### 1. Browsers -
+### Browsers -
 
-1. `JS Engine` -
+- `JS Engine` -
    - `Heap`
    - `Call Stack`
 
-2. `Web APIs` to Interact with DOM.
+- `Web APIs` to Interact with DOM.
    - _These functionalities are accessibe on `window` Object._
 
-3. `Queues` - _Datastructure that holds callback functions of the asynchronous tasks that are to be executed._
+- `Queues` - _Datastructure that holds callback functions of the asynchronous tasks that are to be executed._
 
    _Example:_
    - _When an event occur (like `click`), its handler function i.e. `eventhandler` is put into a `Callback Queue`._
@@ -29,7 +29,7 @@
 
    - **_`Idle Task` Queue_** - _Low priority Queue that runs only if browser's main thread is completely free. It takes callbacks of `requestIdleCallback()`._
 
-4. `Event Loop` - \_A mechanism that takes a callback function from a respective callback queue and puts in Call Stack for execution.
+- `Event Loop` - _A mechanism that takes a callback function from a respective callback queue and puts in Call Stack for execution._
    ```
    [ Call Stack Empty ] --> Process ALL items in Microtasks Q --> Check if a UI Repaint is needed --> Process ONE item from Macrotasks Q --> Check if browser is free & run Idle Task Q
    ```
@@ -40,13 +40,15 @@
 
 ### Node.js -
 
-1. `JS Engine` -
+- `JS Engine` -
    - `Heap`
    - `Call Stack`
 
-2. `C++ bindings & Thread Pool`
+- `C++ bindings(Node.js) & Thread Pool (libuv)`
+   - **C++ Bindings are implemented by Node.js.** _For eaxmple, when you execute a JavaScript function like fs.readFile(), it calls Node's inner C++ binding layer, which is like a wrapper which calls the underlying C-based API in libuv._
+   - **Thread Pool is implemented in libuv.** _The libuv offloads heavy, synchronous, or blocking tasks like file system tasks (fs), cryptographic operations (crypto), compression (zlib), and DNS lookups (dns.lookup) to the threads in Thread Pool, so they do not freeze the main JavaScript execution thread. _
 
-3. `Queues` - _Datastructure that holds callback functions of the asynchronous tasks that are to be executed._
+- `Queues` - _Datastructure that holds callback functions of the asynchronous tasks that are to be executed._
 
    There are 6 queues in Node.js runtime:
    - **_`Microtask` Queue_** - _This queue contains two different queues:_
@@ -61,7 +63,7 @@
 
    - **_`Close` Queue_** - _holds the callbacks of the ***close*** event of an async task._
 
-4. `Event Loop` - _A mechanism that takes a callback function from a respective callback queue and puts in Call Stack for execution._
+- `Event Loop` - _A mechanism that takes a callback function from a respective callback queue and puts in Call Stack for execution._
 
 ---
 

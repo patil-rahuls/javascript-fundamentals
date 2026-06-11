@@ -10,13 +10,13 @@ It takes the value of _(points to)_ the "owner" of the function in which it is u
 
 _`this` is NOT STATIC. Its value is ONLY assigned when the function is actually called._
 
-> e.g. in this statement -
+> For example, in this statement:
 >
 > ```
 > myObj.myFunction();
 > ```
 >
-> _The `this` inside the `myFunction` will point to `myObj` object._
+> _the `this` inside the `myFunction` will point to `myObj` object._
 
 &nbsp;
 

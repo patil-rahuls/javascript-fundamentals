@@ -36,11 +36,11 @@ Entire code is converted into machine code **_ALL AT ONCE_** and then executed i
 
 ### 1. Parsing -
 
-Code is Parsed into AST (Read by Javascript Engine)
+Code is Parsed into AST - **Abstract Syntax Tree**
 
-> _AST - Abstract Syntax Tree - Splits each line of code and saves all the peices in a tree like structure._
+_AST - Splits each line of code and saves all the peices in a tree like structure._
 
-This step also checks for any syntax errors.
+It is read by Javascript Engine, which also checks for any syntax errors.
 
 ### 2. Compilation -
 

@@ -41,8 +41,8 @@ console.log(newUser.age); // 30
 
 Let's capture it digramatically.
 
-> ### `Primitives`
->
+### `Primitives`
+
 > ```javascript
 > let age = 29;
 > let oldAge = age;
@@ -70,8 +70,8 @@ Let's capture it digramatically.
 
 &nbsp;
 
-> ### `Objects`
->
+### `Objects`
+
 > ```javascript
 > const user = {
 >   name: "Rahul",
