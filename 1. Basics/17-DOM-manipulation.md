@@ -81,8 +81,8 @@ document.getElementById("show");
 &nbsp;
 
 > **_`document.getElementsByTagName()`_**
-
-_This returns an HTMLCollection of matching elements._
+>
+> _Returns an HTMLCollection of matching elements._
 
 ```javascript
 document.getElementsByTagName("button");
@@ -92,7 +92,7 @@ document.getElementsByTagName("button");
 
 > **_`document.getElementsByClassName()`_**
 
-_This returns an HTMLCollection of matching elements._
+_Returns an HTMLCollection of matching elements._
 
 ```javascript
 document.getElementsByClassName("account");
@@ -102,10 +102,11 @@ document.getElementsByClassName("account");
 > ### 5. DOM Manipulation
 
 > **_`.textContent`_** & **_`.value`_**
+>
+> _Getting and setting labels (non -inputs):_
+>
+> _No Paranthesis `()` around them, i.e. they are `getters` and `setters`._
 
-_No Paranthesis `()` around them, i.e. they are `getters` and `setters`._
-
-_Getting and setting labels (non -inputs):_
 
 ```javascript
 document.querySelector(".messageDiv").textContent;
@@ -130,8 +131,8 @@ document.querySelector("body").style.width = "200px";
 &nbsp;
 
 > **_`.prepend()`_** & **_`.append()`_**
-
-_Creating and Inserting HTML Elements:_
+>
+> _Inserts element as `Child` at the beginning / end of an element.:_
 
 ```javascript
 const header = document.querySelector(".header");
@@ -156,8 +157,8 @@ header.append(msg);
 &nbsp;
 
 > **_`.cloneNode()`_**
-
-_Create multiple copies of same element:_
+>
+> _Creates multiple copies of same element:_
 
 ```javascript
 header.append(msg.cloneNode(true));
@@ -167,8 +168,8 @@ header.append(msg.cloneNode(true));
 &nbsp;
 
 > **_`.before()`_** & **_`.after()`_**
-
-_Creating an element before or after an element:_
+>
+> _Inserts an element before / after an element:_
 
 ```javascript
 // Before header element
@@ -181,8 +182,8 @@ header.after(msg);
 &nbsp;
 
 > **_`.remove()`_** & **_`.removeChild()`_** 
-
-_Deleting an element:_
+>
+> _Delete an element:_
 
 ```javascript
 // New Way
@@ -195,8 +196,8 @@ msg.parentElement.removeChild(msg);
 &nbsp;
 
 > **_`.getComputedStyle()`_**
-
-_Getting style attributes of an element:_
+>
+> _Returns style attributes of an element:_
 
 ```javascript
 const msgStyle = getComputedStyle(msg);
@@ -210,7 +211,7 @@ msgStyle.height = Number.parseFloat(msgStyle.height, 10) + 30 + "px";
 
 &nbsp;
 
-> **Getting standard attributes of an element:**
+> **_Return standard attributes of an element:_**
 
 ```javascript
 const loginBTN = document.querySelector("#section-2");
@@ -228,8 +229,8 @@ console.log(loginBTN.className);
 &nbsp;
 
 > **_`.getAttribute()`_**
-
-_Getting non-standard attributes like the ones defined by user._
+>
+> _Returns non-standard attributes like the ones defined by user._
 
 ```javascript
 console.log(loginBTN.getAttribute("data-rel"));
@@ -240,8 +241,8 @@ console.log(loginBTN.getAttribute("custom-title"));
 &nbsp;
 
 > **_`.setAttribute()`_**
-
-Setting attributes _(non-standard and standard)_
+>
+> _Sets non-standard attributes_
 
 ```javascript
 // Non standard
@@ -253,7 +254,9 @@ loginBTN.alt = "Login key";
 
 &nbsp;
 
-> **_`.src`_ Getting Complete and Relative url**
+> **_`.src`_**
+>
+> _Gets Complete and Relative url._
 
 ```javascript
 loginBTN.src;
@@ -274,8 +277,8 @@ loginBTN.dataset;
 &nbsp;
 
 > **_`classList.add()`_ & _`classList.remove()`_**
-
-Add and remove classes in the HTML element.
+> 
+> _Adds / removes classes in the HTML element._
 
 ```javascript
 loginBTN.classList.add('btn-dark');
@@ -289,7 +292,7 @@ loginBTN.classList.contains('check-class-exists');
 ```
 
 &nbsp;
-> ### 6. Events
+> ### 6. Events & Event Listeners
 
 > **Keypress events:**
 >
@@ -321,8 +324,6 @@ loginBTN.classList.contains('check-class-exists');
 
 &nbsp;
 
-> **Event Listeners:**
->
 > _`clicks`, `scrolls` are some more events that happen
 > on a webpage. We can write functions that react to
 > such events._
