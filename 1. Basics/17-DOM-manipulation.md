@@ -91,8 +91,8 @@ document.getElementsByTagName("button");
 &nbsp;
 
 > **_`document.getElementsByClassName()`_**
-
-_Returns an HTMLCollection of matching elements._
+>
+> _Returns an HTMLCollection of matching elements._
 
 ```javascript
 document.getElementsByClassName("account");
@@ -103,7 +103,7 @@ document.getElementsByClassName("account");
 
 > **_`.textContent`_** & **_`.value`_**
 >
-> _Getting and setting labels (non -inputs):_
+> _Gets and sets labels (non-inputs):_
 >
 > _No Paranthesis `()` around them, i.e. they are `getters` and `setters`._
 
@@ -132,7 +132,7 @@ document.querySelector("body").style.width = "200px";
 
 > **_`.prepend()`_** & **_`.append()`_**
 >
-> _Inserts element as `Child` at the beginning / end of an element.:_
+> _Inserts element as `Child` under another element at the beginning / end.:_
 
 ```javascript
 const header = document.querySelector(".header");
@@ -254,9 +254,7 @@ loginBTN.alt = "Login key";
 
 &nbsp;
 
-> **_`.src`_**
->
-> _Gets Complete and Relative url._
+> **_`Complete and Relative url`_**
 
 ```javascript
 loginBTN.src;
@@ -294,21 +292,25 @@ loginBTN.classList.contains('check-class-exists');
 &nbsp;
 > ### 6. Events & Event Listeners
 
-> **Keypress events:**
->
-> _keyboard events are global events._
->
-> _Some of them are: `keydown` , `keyup` and `keypress`._
-> 
+> Example 
 > ```javascript
 > document.addEventListener("keydown", function () {
 >   console.log("A Key was pressed.");
 > });
 > ```
 > 
-> _When an event occurs, Javascript generates an object that contains all info about that event._
+
+&nbsp;
+
+> **Keypress events:**
 >
-> _We use that object to handle the event in the handler function. We pass that event object as an argument to the callback function._
+> **_`keydown`_**, **_`keyup`_** and **_`keypress`_**.
+> 
+
+_When an event occurs, JavaScript generates an event-object that contains all info about that event._
+
+_We pass that event-object as an argument to the callback function._
+
 > 
 > ```javascript
 > document.addEventListener("keydown", function (eventObj) {
@@ -321,12 +323,12 @@ loginBTN.classList.contains('check-class-exists');
 > });
 > ```
 
-
 &nbsp;
 
-> _`clicks`, `scrolls` are some more events that happen
-> on a webpage. We can write functions that react to
-> such events._
+> **Mouse events:**
+>
+> **_`click`_** and **_`scroll`_**.
+> 
 
 ```javascript
 document.querySelector(".myButton").addEventListener("click", function () {
@@ -334,6 +336,8 @@ document.querySelector(".myButton").addEventListener("click", function () {
   alert("Hi");
 });
 ```
+
+&nbsp;
 
 _A more cleaner way would be by separately defining a callback function and re-using it-_
 
