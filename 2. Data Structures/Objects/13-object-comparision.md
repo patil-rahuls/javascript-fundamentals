@@ -4,17 +4,16 @@
 
 ```javascript
 const myObj = {
-  firstName : 'Rahul',
-  lastName : 'Patil',
-  age : 2049-2021,
+  firstName: "Rahul",
+  lastName: "Patil",
+  age: 2049 - 2021,
 };
 
 const yourObj = {
-  firstName : 'test',
-  lastName : 'Test',
-  age : 2049-2021,
+  firstName: "test",
+  lastName: "Test",
+  age: 2049 - 2021,
 };
-
 
 // A handy way to compare two
 // objects in JS would be:
@@ -35,15 +34,16 @@ JSON.stringify(x) === JSON.stringify(y);
 // false
 ```
 
-
 &nbsp;
+
 > Excercise - Create a function to compare any number of objects. The properties in the objects can be in any order.
+
 ```javascript
-x = {name: 'Rahul', age: 29};
-y = {age: 29, name: 'Rahul'};
+x = { name: "Rahul", age: 29 };
+y = { age: 29, name: "Rahul" };
 
 // Function to compare any numbers of obj
-function areEqual(...objArr){
+function areEqual(...objArr) {
   // Create a deep/independent copy
   // of objArr, so that we dont mutate
   // the passed objArr.
@@ -56,7 +56,7 @@ function areEqual(...objArr){
 
   const lengthComparisionResult = ipArr.reduce((acc, obj) => {
     const currObjLen = Object.keys(obj).length;
-    if(currObjLen === Number(acc)){
+    if (currObjLen === Number(acc)) {
       return currObjLen;
       // Return actual length of keys
       // if all obj sizes are same
@@ -70,18 +70,18 @@ function areEqual(...objArr){
   // This is called a gaurd clause.
   // i.e. checking for errors early
   // and exiting.
-  if(!lengthComparisionResult){
+  if (!lengthComparisionResult) {
     return false;
   }
 
   // Now that we have same length of
   // keys in all obj, check if they
   // all have the same properties.
-  return ipArr.every(obj => {
+  return ipArr.every((obj) => {
     // Compare each obj of ipArr with firstObj.
     let keysComparisionResult = false;
-    for(const [prop,val] of Object.entries(obj)){
-      if(firstObj?.[prop] === val){
+    for (const [prop, val] of Object.entries(obj)) {
+      if (firstObj?.[prop] === val) {
         keysComparisionResult = true;
       } else {
         keysComparisionResult = false;
@@ -91,4 +91,15 @@ function areEqual(...objArr){
   });
 }
 ```
+
 ---
+
+---
+
+<!-- PAGINATION_START -->
+
+**Parent:** [Objects](..)  
+**Previous:** [Data Structures > Objects > Object Clones](12-object-clones.md)  
+**Next:** [Data Structures > Sets > Set](../Sets/01-set.md)
+
+<!-- PAGINATION_END -->

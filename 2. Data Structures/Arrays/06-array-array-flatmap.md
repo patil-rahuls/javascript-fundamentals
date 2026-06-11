@@ -1,26 +1,36 @@
-## Data Structures > ARRAY
+## Data Structures > ARRAY > Flatmap
 
 > Array to new Array
 
 ### `Array.prototype.flatmap()` [ES 2019]
 
 > `map()` first and then `flat()` the result.
->
-> Better performance
+
+_Better performance._
+
 ```javascript
 // Old way:
-const totalUsersWalletBalance = accounts
-   .map(acc => acc.walletBalance)
-   .flat();
+const totalUsersWalletBalance = accounts.map((acc) => acc.walletBalance).flat();
 
 // Using flatmap():
 const totalUsersWalletBalance2 = accounts
-  .flatMap(acc => acc.walletBalance)
-  .reduce((acc, mov) =>  acc+mov , 0);
+  .flatMap((acc) => acc.walletBalance)
+  .reduce((acc, mov) => acc + mov, 0);
 
 // Since flatMap() does the map() too, it needs to receive exactly the same arguments as you would pass to the map method.
 ```
-***IMP: `flatMap()` goes only one level deep.
-Hence if you need to go deeper, then you still need to use the `flat()` method separately with depth argument.***
+
+**_IMP: `flatMap()` goes only one level deep.
+Hence if you need to go deeper, then you still need to use the `flat()` method separately with depth argument._**
 
 ---
+
+---
+
+<!-- PAGINATION_START -->
+
+**Parent:** [Arrays](..)  
+**Previous:** [Data Structures > Arrays > Array Flat](05-array-array-flat.md)  
+**Next:** [Data Structures > Arrays > Array Loop for Each](07-array-loop-forEach.md)
+
+<!-- PAGINATION_END -->

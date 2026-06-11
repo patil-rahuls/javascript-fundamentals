@@ -4,11 +4,11 @@
 
 ### `Array.prototype.findIndex()`
 
-> ***Retrieve the index of the element that satisfies a certain condition written in the callback function.***
+> **_Retrieve the index of the element that satisfies a certain condition written in the callback function._**
 >
-> ***The callback function returns a boolean value.***
+> **_The callback function returns a boolean value._**
 >
-> ***Checks for an expression.***
+> **_Checks for an expression._**
 
 Method signature is similar to the `forEach()` method.
 
@@ -16,14 +16,13 @@ Method signature is similar to the `forEach()` method.
 const accounts = [
   { owner: "rahul", bal: 66345 },
   { owner: "hitesh", bal: 74783 },
-  { owner: "aajesh", bal: 59623 }
+  { owner: "aajesh", bal: 59623 },
 ];
 
-const accIndex = accounts.findIndex(acc => acc.bal > 70000);
+const accIndex = accounts.findIndex((acc) => acc.bal > 70000);
 
 console.log(accIndex);
 // 1
-
 
 const fetchedAccount = accounts.splice(accIndex, 1);
 
@@ -35,7 +34,6 @@ console.log(fetchedAccount);
 }
 */
 
-
 // This looks similar to indexOf() which finds an array element’s index.
 
 // But the main difference is that we can write any complex expression in findIndex() method to retrieve an element’s index.
@@ -43,4 +41,15 @@ console.log(fetchedAccount);
 // indexOf() checks for equality.
 // findIndex() checks for an expression.
 ```
+
 ---
+
+---
+
+<!-- PAGINATION_START -->
+
+**Parent:** [Arrays](..)  
+**Previous:** [Data Structures > Arrays > Array Element Index of](14-array-element-indexOf.md)  
+**Next:** [Data Structures > Arrays > Array Value Reduce](16-array-value-reduce.md)
+
+<!-- PAGINATION_END -->

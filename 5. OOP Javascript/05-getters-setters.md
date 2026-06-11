@@ -12,16 +12,17 @@ class Student {
   }
 
   // getter
-  get info(){
+  get info() {
     return this.name;
   }
 
-  // setter must have exactly ONE parameter COMPULSORY.
-  set info(nm){
+  // setter must have exactly
+  // ONE parameter COMPULSORY.
+  set info(nm) {
     this.name = nm;
     this._name = nm;
   }
-};
+}
 
 const s4 = new Student("Test", 20);
 
@@ -29,9 +30,14 @@ const s4 = new Student("Test", 20);
 s4.info = "Hitesh";
 
 // Invoke getter
-s4.info;      // Hitesh
+s4.info; // Hitesh
 ```
 
+**Use `setters` for input validation. (Real world usage)**
+
+Condition: the `setter` method name should be same as the parameter's name in contructor() which need to be validated.
+
+Also, if valid, we need to set the value to new property, because we can't use the same property name because it will result in error.
 &nbsp;
 
 > ***Real World Use Case - use `setters` for input validation.***
@@ -44,24 +50,24 @@ s4.info;      // Hitesh
 
 ```javascript
 class User {
-  constructor(username){
+  constructor(username) {
     this.username = username;
   }
 
   format = /[ `!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/;
 
-  set username(input){
+  set username(input) {
     this.format.test(input)
-        ? (this.username = input)
-        : console.error("Username should have at least one special character.");
+      ? (this.username = input)
+      : console.error("Username should have at least one special character.");
     // Error - "max stack call size exceed error"
 
     this.format.test(input)
-        ? (this._username = input)
-        : console.error("Username should have at least one special character.");
+      ? (this._username = input)
+      : console.error("Username should have at least one special character.");
     // correct.
   }
-};
+}
 
 const u1 = new User("Deepika");
 const u2 = new User("Deepika@123");
@@ -77,3 +83,13 @@ const u2 = new User("Deepika@123");
 TIP: We can have more than one getters and setters in an ES6 class/Constructor function.
 
 ---
+
+---
+
+<!-- PAGINATION_START -->
+
+**Parent:** [5. OOP Javascript](..)
+**Previous:** [`Object.create()`](04-Object.create.md)
+**Next:** [Static](06-static.md)
+
+<!-- PAGINATION_END -->

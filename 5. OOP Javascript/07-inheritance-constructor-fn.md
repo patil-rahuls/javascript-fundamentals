@@ -1,31 +1,32 @@
 ## Inheritance - Constructor Function
 
-> Example:
+Example:
 
 ```javascript
 // Class - Furniture
-const Furniture = function(brand, margin){
+const Furniture = function (brand, margin) {
   this.brand = brand;
   this.margin = margin;
 };
 
 // Add a method to its prototype object.
-Furniture.prototype.getCommisionTax = function(){
-  console.log(.18*this.margin);
+Furniture.prototype.getCommisionTax = function () {
+  console.log(0.18 * this.margin);
 };
 
-
 // Class - Sofa
-const Sofa = function(brand, margin, returnable){
+const Sofa = function (brand, margin, returnable) {
   // this.brand = brand;
   // this.margin = margin;
 
-  // Calling Parent's constructor fn. using call method.
+  // Calling Parent's constructor
+  // fn. using 'call' method.
   // Remember call(), apply() and bind() ?
 
-  // Furniture(brand, margin);
-  // not correct. because we cant call it like
-  // a regular fn. (it has 'this' keyword).
+  // Furniture(brand, margin); is
+  // not correct. because we cant
+  // call it like a regular fn.
+  // (as it has 'this' keyword).
 
   Furniture.call(this, brand, margin);
   // OR
@@ -34,31 +35,32 @@ const Sofa = function(brand, margin, returnable){
   this.returnable = returnable;
 };
 
-Sofa.prototype.info = function(){
+Sofa.prototype.info = function () {
   console.log(`
     Commision on ${this.brand} Sofa is ${this.margin}
     and it is
-    ${this.returnable
-      ? 'returnable'
-      : 'not returnable'}
+    ${this.returnable ? "returnable" : "not returnable"}
   `);
 };
 
-const s1 = new Sofa('Neelkamal', 15, false);
+const s1 = new Sofa("Neelkamal", 15, false);
 ```
+
 Now we link the `Sofa.prototype` to `Furniture.prototype` object.
 
 ```
-// Furniture.prototype
-//      |
-//      | [.__proto__]
-//      |
-//  Sofa.prototype
-//      |
-//      | [.__proto__]
-//      |
-//   Obj - s1
+   Furniture.prototype
+        |
+        | [.__proto__]
+        |
+    Sofa.prototype
+        |
+        | [.__proto__]
+        |
+     Obj - s1
+
 ```
+
 We need to make `Furniture.prototype` a prototype(`__proto__`) of `Sofa.prototype`
 
 So, we say `Sofa.prototype` is linked to `Furniture.prototype`, and we do that using `Object.create()`
@@ -67,7 +69,8 @@ So, we say `Sofa.prototype` is linked to `Furniture.prototype`, and we do that u
 // ❌ Incorrect
 Sofa.prototype = Furniture.prototype;
 ```
-> If we do this, the constructor functions `Furniture` and `Sofa` will both share same prototype. This is because we are simply assigning an object to another. _Remember obj1 = obj2; (only reference is copied, not the content)_
+
+If we do this, the constructor functions `Furniture` and `Sofa` will both share same prototype. This is because we are simply assigning an object to another. _Remember obj1 = obj2; (only reference is copied, not the content)_
 
 The correct way to do it would be:
 
@@ -75,22 +78,24 @@ The correct way to do it would be:
 // ✅ Correct
 Sofa.prototype = Object.create(Furniture.prototype);
 ```
+
 What we do here is that we LINK `Sofa.prototype` object using a Furniture prototype. (`Furniture.prototype` in this case)
 
 Now, objects created using `Sofa` cnstructor fn, will have direct access to `Furniture` prototype methods.
+`Sofa` object `s1`can now access `Furniture.prototype` methods.
 
-> `Sofa` object `s1`can now  access `Furniture.prototype` methods.
 ```javascript
 s1.getCommisionTax();
 ```
+
 When we call a method using an object, it does a method lookup through prototype chain.
 
 It checks if it is available in object's prototype?
 i.e. `Sofa.prototype`
 
 If not then it checks in the prototype of `Sofa.prototype` i.e. `Furniture.prototype`, hence making a chain of prototypes.
+We can visualize it like this.
 
-> We can visualize it like this.
 ```javascript
 console.log(s1.__proto);
 // Sofa.prototype
@@ -99,7 +104,7 @@ console.log(s1.__proto.__proto__);
 // Furniture.prototype
 ```
 
-> Another IMP point here:
+Another IMP point here:
 
 If we check the constructor property of `Sofa.prototype` object, it should point back to `Sofa constructor`. But because we have used `Object.create(Furniture.prototype)`, it points to `Furniture`.
 
@@ -108,25 +113,28 @@ console.dir(Sofa.prototype.constructor);
 // Furniture
 ```
 
-> Solution:
+Solution:
+
 ```javascript
-Sofa.prototype.constructor = Sofa; // As simple as that.
+Sofa.prototype.constructor = Sofa; // As simple as > that.
 ```
+
 All we are doing is that resetting back the `.constructor` property of `Sofa.prototype`.
 
 Now Lets check:
+
 ```javascript
 console.log(s1 instanceof Sofa);
 //  true
 
 console.log(s1 instanceof Furniture);
 // true -
-// this is correct because Sofa has inherited from Furniture.
+// this is correct because Sofa
+// has inherited from Furniture.
 ```
 
-&nbsp;
+Example 2
 
-> Example 2
 ```javascript
 const Car = function(make, currentSpeed){
   this.make = make;
@@ -145,9 +153,11 @@ const EV = function(this, make, charge){
 
 // Link the prototypes
 EV.prototype = Object.create(Car.prototype);
-// this also changes the .constructor property of EV class to 'Car'
+// this also changes the '.constructor'
+// property of EV class to 'Car'
 
-// Reset child class's .constructor property back to its original.
+// Reset child class's '.constructor'
+// property back to its original.
 // i.e. 'EV'
 EV.prototype.constructor = EV;
 
@@ -164,7 +174,19 @@ EV.prototype.accelerate = function(){
     with a charge of ${this.charge} %
   `;
 };
+
 ```
+
 In the scope chain, `EV.prototype.accelerate` will come first, and it will be called. because as I said earlier, it does a method look-up through prototype chain, up till parent's prototype property.
 
 ---
+
+---
+
+<!-- PAGINATION_START -->
+
+**Parent:** [5. OOP Javascript](..)
+**Previous:** [Static](06-static.md)
+**Next:** [Inheritance - `ES6 Classes`](08-inheritance-ES6-class.md)
+
+<!-- PAGINATION_END -->

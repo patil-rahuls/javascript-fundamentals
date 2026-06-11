@@ -1,28 +1,30 @@
 ## Immediately Invoked Function Expressions - `IIFE`
 
-> ***Functions that execute immediately WITHOUT being SAVED in a variable.***
+> **_Functions that execute immediately WITHOUT being SAVED in a variable._**
 
-> ***Advantages:***
-> - ***Avoids polluting the global scope.***
-> - ***Provides Encapsulation, allowing you to create private scopes for variables and function.***
+> **Advantages:**
+>
+> - **_Avoids polluting the global scope._**
+> - **_Provides Encapsulation, allowing you to create private scopes for variables and function._**
+
 ```javascript
-const show = function (){
+const show = (function () {
   alert("this is not an IIFE");
-}
-
-// Step 1:
-// Put parens ( ) around it to make it
-// a function expression without
-// assigning to any variable.
-(function (){
-  alert("this is an IIFE");
-});
+})(
+  // Step 1:
+  // Put parens ( ) around it to make it
+  // a function expression without
+  // assigning to any variable.
+  function () {
+    alert("this is an IIFE");
+  },
+);
 
 // Step 2:
 // To call it, simply call that
 // expression just like any
 // regular function
-(function (){
+(function () {
   alert("this is an IIFE");
 })();
 // The trailing "()" executes this
@@ -32,76 +34,86 @@ const show = function (){
 // variable, and it is immediately
 // invoked while declared.
 // Same works with an arrow function
-(() => alert("This IIFE is written in arrow form"))();
+(() => alert("IIFE in arrow form"))();
 ```
 
 ### IIFE - Modules & Encapsulation
 
 > **IMP: Why are IIFEs in javascript?**
 >
-> ***Variables Scope***
+> **_Variables Scope_**
 >
-> We use IIFE to just keep some variables hidden in the function scope and not make it available in global scope hence preventing the global scope from getting polluted.
+> _We use IIFE to just keep some variables hidden in the function scope and not make it available in global scope hence preventing the global scope from getting polluted._
 
 IIFE creates a scope. Every function creates its own scope.
 
 _IIFE can be written to function same as a Namespace in PHP and other langs._
 
-> Example: ***Implementation of Modules system in JS. Behind the scenes, Modules are nothing but IIFEs.***
-```javascript
-const CounterModule = (function () {
-  // 1. PRIVATE VARIABLES AND FUNCTIONS
-  // These cannot be accessed directly
-  // from the outside world
-  let count = 0;
-
-  function logCurrentCount() {
-    console.log(`Current Count: ${count}`);
-  }
-
-  // 2. PUBLIC API
-  // We return an object containing
-  // the methods we WANT to expose.
-  return {
-    increment: function () {
-      count++;
-      logCurrentCount();
-    },
-    decrement: function () {
-      count--;
-      logCurrentCount();
-    },
-    reset: function () {
-      count = 0;
-      console.log("Counter has been reset.");
-    }
-  };
-})();
-
-// Usage:
-// Interact with the module
-// via public methods
-
-CounterModule.increment();
-// Current Count: 1
-
-CounterModule.increment();
-// Current Count: 2
-
-CounterModule.decrement();
-// Current Count: 1
-
-
-// Try to access private members directly
-console.log(CounterModule.count);
-// Output: undefined
-
-CounterModule.logCurrentCount();
-// TypeError: CounterModule.logCurrentCount is not a function
-```
-
-> In the above example, we achieved encapsulation.
+> Example: **_Implementation of Modules system in JS. Behind the scenes, Modules are nothing but IIFEs._**
 >
-> Keeping some properties i.e. `count` and method `logCurrentCount()` private and exposing only required properties to the outside world i.e. `CounterModule.decrement()`, `CounterModule.increment()` and `CounterModule.reset()`.
+> ```javascript
+> const CounterModule = (function () {
+>   // 1. PRIVATE VARIABLES AND FUNCTIONS
+>   // These cannot be accessed directly
+>   // from the outside world
+>   let count = 0;
+>
+>   function logCurrentCount() {
+>     console.log(`Current Count: ${count}`);
+>   }
+>
+>   // 2. PUBLIC API
+>   // We return an object containing
+>   // the methods we WANT to expose.
+>   return {
+>     increment: function () {
+>       count++;
+>       logCurrentCount();
+>     },
+>     decrement: function () {
+>       count--;
+>       logCurrentCount();
+>     },
+>     reset: function () {
+>       count = 0;
+>       console.log("Counter has been reset.");
+>     },
+>   };
+> })();
+>
+> // Usage:
+> // Interact with the module
+> // via public methods
+>
+> CounterModule.increment();
+> // Current Count: 1
+>
+> CounterModule.increment();
+> // Current Count: 2
+>
+> CounterModule.decrement();
+> // Current Count: 1
+>
+> // Try to access private members directly
+> console.log(CounterModule.count);
+> // Output: undefined
+>
+> CounterModule.logCurrentCount();
+> // TypeError: CounterModule.logCurrentCount is not a function
+> ```
+>
+> _In the above example, we achieved encapsulation._
+>
+> _Keeping some properties i.e. `count` and method `logCurrentCount()` private and exposing only required properties to the outside world i.e. `CounterModule.decrement()`, `CounterModule.increment()` and `CounterModule.reset()`._
 
 ---
+
+---
+
+<!-- PAGINATION_START -->
+
+**Parent:** [3. Functions](..)  
+**Previous:** [`call()`, `apply()` and `bind()`](07-call-apply-bind.md)  
+**Next:** [Currying](09-currying.md)
+
+<!-- PAGINATION_END -->

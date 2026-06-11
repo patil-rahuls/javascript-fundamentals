@@ -3,20 +3,21 @@
 ### Object Methods
 
 Consider this object as an example.
+
 ```javascript
 const myObj = {
-  firstName : 'Rahul',
-  lastName : 'Patil',
-  age : 2049-2024,
+  firstName: "Rahul",
+  lastName: "Patil",
+  age: 2049 - 2024,
 };
 ```
 
 Functions inside an object are called methods.
 
-Methods have a ***receiver*** while functions do not.
+Methods have a **_receiver_** while functions do not.
 
 ```javascript
-myObj.greet = function(user){
+myObj.greet = function (user) {
   console.log(`Hello '${user}' !! What up !`);
 };
 
@@ -30,7 +31,6 @@ console.log(myObj);
 //   },
 // };
 
-
 // Object method call
 myObj.greet("Reader");
 // "myObj" is the receiver,
@@ -43,11 +43,21 @@ sayHi();
 // Notice, there is no receiver here.
 // The receiver is what separates a function from a method.
 
-
 // Method call using DOT notation is preferred.
-myObj.greet("Reader");    // Easy to read
+myObj.greet("Reader"); // Easy to read
 
 // Method call using BRACKET notation.
-myObj['greet']("Reader"); // Difficult to read
+myObj["greet"]("Reader"); // Difficult to read
 ```
+
 ---
+
+---
+
+<!-- PAGINATION_START -->
+
+**Parent:** [Objects](..)  
+**Previous:** [Data Structures > Objects > Object Retrieve Properties](03-object-retrieve-properties.md)  
+**Next:** [Data Structures > Objects > Object Delete Properties](05-object-delete-properties.md)
+
+<!-- PAGINATION_END -->

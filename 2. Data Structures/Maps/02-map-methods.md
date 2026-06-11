@@ -1,25 +1,28 @@
 ## Data Structures > Maps
 
-> ***Maps are high performance key - value paired data structure.***
->
-> ***In Objects keys can only be strings (without quotes), but in Maps, keys can be any type.***
+Maps are high performance key - value paired data structure.
+
+In Objects keys can only be strings (without quotes), but in Maps, keys can be any type.
 
 &nbsp;
+
 ### Map Methods
 
 > ### `Map.prototype.set()`
-Adds a pair to the Map and returns updated map.
+>
+> Adds a pair to the Map and returns updated map.
+
 ```javascript
 const myMap = new Map();
 
-myMap.set('name' , 'Rahul');
+myMap.set("name", "Rahul");
 
 // We can chain the set() method too
 myMap
-  .set(1 , 'Mumbai')
-  .set(2 , 'India')
-  .set(true , 'I am free now.')
-  .set(false , 'I am busy.');
+  .set(1, "Mumbai")
+  .set(2, "India")
+  .set(true, "I am free now.")
+  .set(false, "I am busy.");
 
 console.log(myMap);
 // Map(3) {
@@ -34,22 +37,28 @@ console.log(myMap);
 ```
 
 &nbsp;
+
 > ### `Map.prototype.get()`
-Retrieve data from a Map by value
+>
+> Retrieve data from a Map by value
+
 ```javascript
 myMap.get(true);
 // I am free now.
 
-myMap.get('age');
+myMap.get("age");
 // undefined
 // Because age key is not present in 'myMap'.
 ```
 
 &nbsp;
+
 > ### `Map.prototype.has()`
-Checks if a key exists in a Map
+>
+> Checks if a key exists in a Map
+
 ```javascript
-myMap.has('hobbies');
+myMap.has("hobbies");
 // false
 
 myMap.has(2);
@@ -57,47 +66,76 @@ myMap.has(2);
 ```
 
 &nbsp;
+
 > ### `Map.prototype.delete()`
-Deletes an item from a Map
+>
+> Deletes an item from a Map
+
 ```javascript
 myMap.delete(2);
 myMap.delete(1);
 ```
 
 &nbsp;
+
 > ### `Map.prototype.size`
-Returns size of Map.
+>
+> Returns size of Map.
 
 **IMP: This is not a method. no parens `()`.**
+
 ```javascript
 myMap.size; // no parentheses after size.
 ```
 
 &nbsp;
+
 > ### `Map.prototype.clear()`
-Truncates Map
+>
+> Truncates Map
+
 ```javascript
 myMap.clear();
 ```
 
 &nbsp;
+
 > ### `Map.prototype.keys()`
-Retrieve keys from the Map
+>
+> Retrieve keys from the Map
+
 ```javascript
 myMap.keys();
 ```
 
 &nbsp;
+
 > ### `Map.prototype.values()`
-Retrieve values from the Map
+>
+> Retrieve values from the Map
+
 ```javascript
 myMap.values();
 ```
 
 &nbsp;
+
 > ### `Map.prototype.entries()`
-Retrieve entries [key, value] from the Map
+>
+> Retrieve entries [key, value] from the Map
+
 ```javascript
 myMap.entries();
 ```
+
 ---
+
+---
+
+<!-- PAGINATION_START -->
+
+**Parent:** [Maps](..)  
+**Previous:** [Data Structures > Maps > Map](01-map.md)  
+**Next:** [Data Structures > Maps > Map Iteration](03-map-iteration.md)
+
+<!-- PAGINATION_END -->

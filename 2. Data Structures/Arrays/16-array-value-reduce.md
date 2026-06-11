@@ -6,13 +6,14 @@
 
 A big advantage of using these functions over traditional loops is that we can chain these functions together.
 
-> ***`reduce()` accumulates down all the array values to one single value. Returns a single value NOT an array.***
+> **_`reduce()` accumulates down all the array values to one single value. Returns a single value NOT an array._**
+
 ```javascript
 const numbers = [34, 5, 6, 7, 8, 88, 2, 89, 100];
 
-const total = numbers.reduce(function(acc, val, index, arr){
+const total = numbers.reduce(function (acc, val, index, arr) {
   return acc + val;
-} , 0);
+}, 0);
 // '0' is default value to the
 // accumulator parameter ‘acc’
 
@@ -29,23 +30,23 @@ parameter here which is an accumulator.
 ```
 
 > Same example using arrow fn.
+
 ```javascript
-const total2 = numbers.reduce((acc,val) => acc+val, 0);
+const total2 = numbers.reduce((acc, val) => acc + val, 0);
 ```
 
 > Another Example: getting maximum value from an array.
+
 ```javascript
 const numbers2 = [34, 5, 6, 7, 8, 88, 2, 89, 100];
 
-const max = numbers2.reduce(
-  (acc, curr_amount) => {
-    if (acc > curr_amount){
-      return acc;
-    } else {
-      return curr_amount;
-    }
+const max = numbers2.reduce((acc, curr_amount) => {
+  if (acc > curr_amount) {
+    return acc;
+  } else {
+    return curr_amount;
   }
-, txn[0]);
+}, txn[0]);
 // here we assign first item of the array
 // as the accumulator initial value.
 
@@ -57,4 +58,15 @@ console.log(max);
 // IMP - We need to return something in the
 // callback which will go into the accumulator.
 ```
+
 ---
+
+---
+
+<!-- PAGINATION_START -->
+
+**Parent:** [Arrays](..)  
+**Previous:** [Data Structures > Arrays > Array Element Find Index](15-array-element-findIndex.md)  
+**Next:** [Data Structures > Arrays > Array String Split Join](17-array-string-split-join.md)
+
+<!-- PAGINATION_END -->

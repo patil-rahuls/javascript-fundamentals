@@ -2,18 +2,19 @@
 
 ### Array method chaining
 
-> ***The array transformation methods like `map()`, `filter()`, `reduce()` can be chained together.***
+> **_The array transformation methods like `map()`, `filter()`, `reduce()` can be chained together._**
 
 Method Chaining forms something called as _pipeline_.
+
 ```javascript
 const arr = [122, 24, 355, -55, 780, -999];
 
 const multiplier = 1.1;
 
 const transformedData = arr
-  .filter(val => val > 0)
-  .map(val => val*multiplier)
-  .reduce((acc, val) => acc+val, 0);
+  .filter((val) => val > 0)
+  .map((val) => val * multiplier)
+  .reduce((acc, val) => acc + val, 0);
 
 console.log(transformedData);
 // 1409.1000000000004
@@ -28,13 +29,13 @@ _Remember, we have the third parameter in the callback function of each of these
 
 ```javascript
 const transformedData2 = arr
-  .filter(mov => mov > 0)
+  .filter((mov) => mov > 0)
   .map((mov, i, arr) => {
     console.log(arr);
     // Now we can monitor how the array.
-    return mov*multiplier;
+    return mov * multiplier;
   })
-  .reduce((acc, val) => acc+val, 0);
+  .reduce((acc, val) => acc + val, 0);
 
 console.log(transformedData2);
 // (4) [122, 24, 355, 780]
@@ -47,7 +48,16 @@ console.log(transformedData2);
 > Remarks about chaining:
 >
 > - Never overuse chaining. It can cause real performance issues if we have really huge arrays.
->
 > - Be careful when chaining methods that mutate the underlying arrays (like `splice()` or `reverse()`) in large applications.
 
 ---
+
+---
+
+<!-- PAGINATION_START -->
+
+**Parent:** [Arrays](..)  
+**Previous:** [Data Structures > Arrays > Array String Split Join](17-array-string-split-join.md)  
+**Next:** [Data Structures > Arrays > Which Array Method to Use](19-which-array-method-to-use.md)
+
+<!-- PAGINATION_END -->

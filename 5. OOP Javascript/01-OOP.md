@@ -1,20 +1,21 @@
 ## OOP Basics
 
->**Objects**   &nbsp;&nbsp;&nbsp;&nbsp;  - Real World Entity
->
->**properties** - State
->
->**methods**  &nbsp;&nbsp;  - Behaviour
+**Objects** - Real World Entity
+
+**properties** - State
+
+**methods** - Behaviour
 
 We use Objects to model real world or abstract features.
 
 OOP's goal is to organize code, make it flexible and easier to maintain.
 
 How do we model real world data into classes ?
-> 1. ***Abstraction*** - Hide details of implementation.
-> 2. ***Encapsulation*** - Keeping some properties and methods private inside a class, so that they are not accessible from outside the world and exposing only essential methods to outside world.
-> 3. ***Inheritance*** - Reusing some properties and methods from different classes _(real world entities - objects)_
-> 4. ***Polymorphism*** - `poly` means many, `morph` means forms. Resuing same methods for different purpose. Override methods from parent class. JS does not support fn overloading that we see in C++.
+
+1. **Abstraction** - Hide details of implementation.
+2. **Encapsulation** - Keeping some properties and methods private inside a class, so that they are not accessible from outside the world and exposing only essential methods to outside world.
+3. **Inheritance** - Reusing some properties and methods from different classes _(real world entities - objects)_
+4. **Polymorphism** - `poly` means many, `morph` means forms. Resuing same methods for different purpose. Override methods from parent class. JS does not support fn overloading that we see in C++.
 
 ---
 
@@ -32,6 +33,7 @@ Instantiation      |    Prototypal Inheritance/Delegation
      |             |                 |
      |             |                 |
   Instance         |       Object (Can access methods)
+
 ```
 
 In Javascript, we say `"Objects are linked to a Prototype Object"`.
@@ -43,28 +45,36 @@ This is called `Prototypal Inheritance`. (This is different than the Inheritance
 ### Delegation:
 
 Behaviour(method) is delagated to the linked `Prototype Object`. Whereas in classic OOP, the methods are actually copied from the class to all instances.
-
-> e.g. Array methods.
->
-> In `Array.prototype.map()`
->
-> Here `Array.prototype` is the `Prototype Object` of all arrays that we create in javascript. Therefore all arrays have access to the prototype methods.
-
-&nbsp;
+e.g. Array methods.
+In `Array.prototype.map()`
+Here `Array.prototype` is the `Prototype Object` of all arrays that we create in javascript. Therefore all arrays have access to the prototype methods.
 
 ### How do we create prototype objects ?
 
-> #### 1. Constructor functions
+#### 1. Constructor functions
+
 Creates objects from function. This is how built-in objects like Arrays, Maps or Sets are actualy implemented.
 
 new Array(...), new Set(...) , new Map(...) etc. These are all constructer function calls.
 
-> #### 2. ES6 Classes
+#### 2. ES6 Classes
+
 Work exactly like constructor functions, but with a cleaner syntax. Not like traditional OOP classes (in Java/PHP/C++). They are just an abstraction over the constructor functions. _(syntactic sugar)_
 
-> #### 3. Object.create()
+#### 3. Object.create()
+
 Easiest and straightforward way to link an object to a prototype object. We directly create the `Prototype Object` and link objec (instance) to it.
 
 _Note that the 4 pillars of OOP are still valid with prototypal inheritance._
 
 ---
+
+---
+
+<!-- PAGINATION_START -->
+
+**Parent:** [5. OOP Javascript](..)
+**Previous:** _None_
+**Next:** [Constructor Functions](02.1-contructor-function.md)
+
+<!-- PAGINATION_END -->

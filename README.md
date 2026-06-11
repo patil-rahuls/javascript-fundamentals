@@ -1,6 +1,7 @@
 # Important Javascript Concepts with Codes
 
 ## Basic Concepts
+
 - `let` **_[ES6]_**, `const` **_[ES6]_**, `var` variables and their comparision
 - `typeof`
 - Type Conversion and Coercion
@@ -18,10 +19,11 @@
 - **_[ES6]_** Spread Operator
 - **_[ES6]_** Rest Operator
 - Error Types
-- Console - logging and time methods
+- Console
 - **_(Browser)_** DOM Manipulation & Traversing
 
 ## Data Structures
+
 - Arrays
 - Array Methods
 - **_[ES6]_** Typed Arrays
@@ -33,6 +35,7 @@
 - Which data structure to use?
 
 ## Functions
+
 - **_[ES6]_** Default parameters
 - Pass by Value OR Pass by Reference
 - setTimeout()
@@ -50,6 +53,7 @@
 - Number & Dates in JS
 
 ## How Javascript Works
+
 - Compilation, Interpretation and JIT-Compilation
 - Javascript Runtime
 - Javascript Engine
@@ -63,12 +67,14 @@
 - Memory Management _(WIP)_
 
 ## Modules
+
 - Introduction & Module Types
 - **_ES6_** Modules
 - Module Pattern & Modules behind the scenes
 - **import vs require**
 
 ## Object Oriented Javascript
+
 - Object Oriented Programming in Javascript
 - Constructor Functions and Prototypes
 - Prototype Chain
@@ -82,6 +88,7 @@
 - Chaining Class Methods
 
 ## Asychronous Javascript
+
 - Synchronous vs Asynchronous
 - Promises
 - **_fetch_** API
@@ -92,6 +99,7 @@
 - Comparision **_Promise.race vs Promise.any_**
 
 ## Node.js
+
 - Basics
 - NPM and Package.json
 - Local and Global package installation
@@ -105,3 +113,13 @@
 - Streams, pipe/pipeline
 - Express.js framework
 - Useful inbuilt node modules
+
+---
+
+<!-- PAGINATION_START -->
+
+**Parent:** [Important Javascript Concepts with Codes](README.md)  
+**Previous:** _None_  
+**Next:** [Extra Markups](extra-markups.md)
+
+<!-- PAGINATION_END -->

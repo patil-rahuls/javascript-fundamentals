@@ -6,33 +6,42 @@ We can chain the class methods.
 
 ```javascript
 class User {
-  constructor(username, name, passkey, license){
+  constructor(username, name, passkey, license) {
     this.username = username;
     this.name = name;
     this.passkey = passkey;
     this.license = license;
   }
 
-  name(){
+  name() {
     console.log(`Name: ${this.name}.  `);
 
     // This is required for chaining to work.
     return this;
   }
 
-  license(){
+  license() {
     console.log(`License: ${this.license}.`);
 
     // This is required for chaining to work.
     return this;
   }
-};
+}
 
-const user2 = new User("rahul.p", "Rahul", 0, 'Valid');
+const user2 = new User("rahul.p", "Rahul", 0, "Valid");
 
 user2.name().license();
 // Name: Rahul.  License: Valid
-
 ```
 
 ---
+
+---
+
+<!-- PAGINATION_START -->
+
+**Parent:** [5. OOP Javascript](..)
+**Previous:** [Inheritance - `Object.create()`](09-inheritance-Object.create.md)
+**Next:** _None_
+
+<!-- PAGINATION_END -->

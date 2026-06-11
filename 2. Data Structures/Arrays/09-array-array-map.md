@@ -6,14 +6,15 @@
 
 A big advantage of using these functions over traditional loops is that we can chain these functions together.
 
-> ***`map()` method transforms data in each iteration without changing/mutating the orignal array.***
+> **_`map()` method transforms data in each iteration without changing/mutating the orignal array._**
 
 Method signature is similar to the `forEach()` method.
+
 ```javascript
 const numbers = [2, 4, 3, 0, 10, 20, 30, 40];
 const power = 3;
 
-const newValues = numbers.map(function(val){
+const newValues = numbers.map(function (val) {
   return val ** power;
   // modify each item and put in new array
 });
@@ -26,9 +27,8 @@ console.log(numbers);
 console.log(newValues);
 // [8, 64, 27, 0, 1000, 8000, 27000, 64000]
 
-
 // Just like forEach(), map() also has 3 three parameters.
-const newArr = numbers.map( (curr, key, arr) => {
+const newArr = numbers.map((curr, key, arr) => {
   return `${key} : ${curr}`;
 });
 
@@ -45,4 +45,15 @@ console.log(newArr);
 ]
 */
 ```
+
 ---
+
+---
+
+<!-- PAGINATION_START -->
+
+**Parent:** [Arrays](..)  
+**Previous:** [Data Structures > Arrays > Array Filter](08-array-array-filter.md)  
+**Next:** [Data Structures > Arrays > Array Elements Some](10-array-elements-some.md)
+
+<!-- PAGINATION_END -->

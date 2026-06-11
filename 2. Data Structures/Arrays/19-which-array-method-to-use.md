@@ -3,13 +3,18 @@
 ### Which array method to use and when?
 
 &nbsp;
+
 > ### To ONLY loop over an array:
-`forEach()`
+>
+> `forEach()`
 
 ---
+
 &nbsp;
+
 > ### To mutate original array:
-Add elements to original array
+>
+> Add elements to original array
 
 `push()`
 `unshift()`
@@ -36,9 +41,12 @@ Remove a portion from original array
 `splice()`
 
 ---
+
 &nbsp;
+
 > ### To get a new array:
-Part of an array
+>
+> Part of an array
 
 `slice()`
 
@@ -62,9 +70,10 @@ Apply certain logic to all elements of array
 
 `map()`
 
-
 ---
+
 &nbsp;
+
 > ### To ONLY check if array includes an element:
 
 Based on a condition
@@ -77,12 +86,17 @@ Based on value
 `includes()`
 
 ---
+
 &nbsp;
+
 > ### To get ONE element based on a condition:
-`find()`
+>
+> `find()`
 
 ---
+
 &nbsp;
+
 > ### To get index of an array element:
 
 Based on value
@@ -94,17 +108,33 @@ Based on a condtion
 `findIndex()`
 
 ---
+
 &nbsp;
+
 > ### To transform to a single value:
-`reduce()`
+>
+> `reduce()`
 
 ---
-&nbsp;
-> ### Array to String:
-`join()`
 
+&nbsp;
+
+> ### Array to String:
+>
+> `join()`
 
 > ### String to Array:
-`split()`
+>
+> `split()`
 
 ---
+
+---
+
+<!-- PAGINATION_START -->
+
+**Parent:** [Arrays](..)  
+**Previous:** [Data Structures > Arrays > Array Methods Chaining](18-array-methods-chaining.md)  
+**Next:** [Data Structures > Arrays > Typed Arrays](20-typed-arrays.md)
+
+<!-- PAGINATION_END -->

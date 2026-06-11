@@ -3,42 +3,41 @@
 Running promises in parallel means executing multiple asynchronous operations at the same time, without waiting for any of them to complete before starting the next one.
 
 This can greatly improve performance in situations where there are many independent and time-consuming tasks to be performed.
+Always use `try` `catch` block with `async` functions.
 
-> Always use `try` `catch` block with `async` functions.
 ```javascript
-const myFunc = async function(page1, page2, page3) {
-  try{
-    const response1 = await fetch(".../api/users?page="+page1);
+const myFunc = async function (page1, page2, page3) {
+  try {
+    const response1 = await fetch(".../api/users?page=" + page1);
 
-    const response2 = await fetch(".../api/users?page="+page2);
+    const response2 = await fetch(".../api/users?page=" + page2);
 
-    const response3 = await fetch(".../api/users?page="+page3);
+    const response3 = await fetch(".../api/users?page=" + page3);
 
     const data1 = await response1.json();
     const data2 = await response2.json();
     const data3 = await response3.json();
 
     console.log([data1, data2, data3]);
-  }catch(err){
+  } catch (err) {
     console.log(err.message);
   }
 };
 
-myFunc("2", "4", '6');
+myFunc("2", "4", "6");
 ```
+
 This will give results as required. However, the latter 'response's will wait for their former 'response's to complete and that is actually looking like synchronous.
 
 However instead of making them run in sequence, we can make them run parallely.
+Solution:
+Promise.all() its a static method.
 
-> Solution:
->
-> Promise.all() its a static method.
-
-> #### It returns an array promise that runs all the promises passed to it in array. If one promise rejects, the whole promise is rejected.
+#### It returns an array promise that runs all the promises passed to it in array. If one promise rejects, the whole promise is rejected.
 
 ```javascript
-const myFunc2 = async function(page1, page2, page3) {
-  try{
+const myFunc2 = async function (page1, page2, page3) {
+  try {
     /*
     const response1 = await fetch(".../api/users?page="+page1);
 
@@ -48,9 +47,9 @@ const myFunc2 = async function(page1, page2, page3) {
     */
 
     const data = await Promise.all([
-      fetch(".../api/users?page="+page1),
-      fetch(".../api/users?page="+page2),
-      fetch(".../api/users?page="+page3)
+      fetch(".../api/users?page=" + page1),
+      fetch(".../api/users?page=" + page2),
+      fetch(".../api/users?page=" + page3),
     ]);
 
     // const data1 = await response1.json();
@@ -64,7 +63,7 @@ const myFunc2 = async function(page1, page2, page3) {
     const finalData = await Promise.all([
       data[0].json(),
       data[1].json(),
-      data[2].json()
+      data[2].json(),
     ]);
 
     console.log(finalData_);
@@ -78,9 +77,20 @@ const myFunc2 = async function(page1, page2, page3) {
     .then(results => console.log(results))
     .catch(err => console.log(err.message));
     */
-  } catch(err){
+  } catch (err) {
     console.log(err.message);
   }
 };
 ```
+
 ---
+
+---
+
+<!-- PAGINATION_START -->
+
+**Parent:** [6. Asynchronous Javascript](..)
+**Previous:** [Returning values from `Async/Await`](03.2-async-await-ES2017-return.md)
+**Next:** [`Promise.race()`](05-promise-race.md)
+
+<!-- PAGINATION_END -->

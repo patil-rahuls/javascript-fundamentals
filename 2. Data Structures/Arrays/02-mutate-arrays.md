@@ -3,23 +3,25 @@
 ### Methods that mutate an Array
 
 Consider this array as an example.
+
 ```javascript
-const myArr = ['rahul', 'hitesh', 'aajesh'];
+const myArr = ["rahul", "hitesh", "aajesh"];
 ```
 
 > ### `Array.prototype.push()`
-Adds an element at the end of an array and returns new length of the array.
-```javascript
-const myArr = ['rahul', 'hitesh', 'aajesh']
+>
+> Adds an element at the end of an array and returns new length of the array.
 
-myArr.push('rishi');
+```javascript
+const myArr = ["rahul", "hitesh", "aajesh"];
+
+myArr.push("rishi");
 
 console.log(myArr);
 // ['rahul', 'hitesh', 'aajesh', 'rishi']
 
-
 // Get length of the mutated array
-const total = myArr.push('anil');
+const total = myArr.push("anil");
 
 console.log(total);
 // 5
@@ -29,17 +31,19 @@ console.log(myArr);
 ```
 
 &nbsp;
+
 > ### `Array.prototype.pop()`
-Removes last element from an array and returns the popped element.
+>
+> Removes last element from an array and returns the popped element.
+
 ```javascript
-const myArr = ['rahul', 'hitesh', 'aajesh', 'rishi', 'anil']
+const myArr = ["rahul", "hitesh", "aajesh", "rishi", "anil"];
 
 const remvd = myArr.pop();
 // Remove last item 'anil'
 
 console.log(remvd);
 // 'anil'
-
 
 // Any arguments to pop() is ignored.
 const removed = myArr.pop(`rahul`);
@@ -52,22 +56,28 @@ console.log(myArr);
 ```
 
 &nbsp;
-> ### `Array.prototype.unshift()`
-Add an element at the start of an array and returns new length of the array.
-```javascript
-const myArr = ['rahul', 'hitesh', 'aajesh']
 
-let newLength = myArr.unshift('kisan');
+> ### `Array.prototype.unshift()`
+>
+> Add an element at the start of an array and returns new length of the array.
+
+```javascript
+const myArr = ["rahul", "hitesh", "aajesh"];
+
+let newLength = myArr.unshift("kisan");
 
 console.log(myArr);
 // ['kisan', 'rahul', 'hitesh', 'aajesh']
 ```
 
 &nbsp;
+
 > ### `Array.prototype.shift()`
-Removes an element from the start of an array and returns the removed element.
+>
+> Removes an element from the start of an array and returns the removed element.
+
 ```javascript
-const myArr = ['kisan', 'rahul', 'hitesh', 'aajesh']
+const myArr = ["kisan", "rahul", "hitesh", "aajesh"];
 
 let scholar = myArr.shift();
 
@@ -79,10 +89,13 @@ console.log(scholar);
 ```
 
 &nbsp;
+
 > ### `Array.prototype.reverse()`
-Mutates the original array and returns the reversed array.
+>
+> Mutates the original array and returns the reversed array.
+
 ```javascript
-const myArr = ['rahul', 'hitesh', 'aajesh']
+const myArr = ["rahul", "hitesh", "aajesh"];
 
 const newArr = myArr.reverse();
 
@@ -94,10 +107,13 @@ console.log(myArr);
 ```
 
 &nbsp;
+
 > ### `Array.prototype.sort()`
-Sorts the array. Works only on arrays with homogeneous elements.
+>
+> Sorts the array. Works only on arrays with homogeneous elements.
+
 ```javascript
-const users = ['Rahul' , 'Hitesh' , 'Aajesh'];
+const users = ["Rahul", "Hitesh", "Aajesh"];
 
 console.log(users.sort());
 // ['Aajesh', 'Hitesh', 'Rahul']
@@ -107,6 +123,7 @@ console.log(users);
 ```
 
 `sort()` does not work on numbers properly. The numbers are converted into strings internally and then sorted.
+
 ```javascript
 const arr = [200, 450, -400, 3000, -650, -130, 70, 1300];
 
@@ -120,21 +137,19 @@ Its called _ASCII/Lexicographical_ sorting.
 > **`sort()` accepts a callback function.**
 >
 > - **The callback accepts two parameters - two consecutive elements of the given array.**
->
 > - **If the callback function returns positive, then the two consecutive elements are swapped.**
->
 > - **If it returns negative value, the elements remain as is.**
 
 ```javascript
 const arr2 = [200, 450, -400, 3000, -650, -130, 70, 1300];
 
 arr2.sort((a, b) => {
-  if(a < b) {
+  if (a < b) {
     return -1;
     // position of a and b remain same.
   }
 
-  if(a > b) {
+  if (a > b) {
     return 1;
     // swaps a and b in the array.
   }
@@ -144,34 +159,38 @@ console.log(arr2);
 // [-650, -400, -130, 70, 200, 450, 1300, 3000]
 
 // Can also be written using arrow function as:
-arr2.sort((a,b) => a - b);
+arr2.sort((a, b) => a - b);
 ```
 
 &nbsp;
+
 > ### `Array.prototype.fill()`
 
 > fill( value, startIndex , endIndex )
->
-> **IMP: 'endIndex' is not included in the result.**
+
+_'endIndex' is not included in the result._
+
 ```javascript
 const x = new Array(7);
 
 x.fill(1, 3, 6);
 
-console.log(x) ;
+console.log(x);
 // [<3 empty items>, 1, 1, 1, <1 empty item>]
 ```
 
 &nbsp;
+
 > ### `Array.prototype.splice()`
 
 > splice( startIndex , deleteCount, replacementValue )
->
-> **IMP: its 2nd parameter is the count of items to be removed.**
->
-> **IMP: Third parameter 'replacementValue' is optional. If provided, it is inserted at the startIndex.**
+
+_'deleteCount' is the count of items to be removed._
+
+_'replacementValue' is optional. If provided, it is inserted at the 'startIndex'._
 
 > Example 1
+
 ```javascript
 const arr = [11, 22, 33, 44, 55, 66];
 
@@ -183,7 +202,6 @@ console.log(arr);
 
 // The extracted/taken-out elements are now gone, the remaining elements are what our array is mutated with.
 
-
 arr.splice(1, 2);
 // 2 is no. of values to take out.
 // Returns [ 22, 33 ]
@@ -193,6 +211,7 @@ console.log(arr);
 ```
 
 > Example 2: Remove a specific item from an array
+
 ```javascript
 const array = [2, 5, 9];
 
@@ -207,6 +226,7 @@ console.log(array);
 ```
 
 > Example 3: Replace a specific item from an array
+
 ```javascript
 const arr1 = [11, 22, 33, 44, 55, 66];
 
@@ -218,6 +238,7 @@ console.log(arr1);
 ```
 
 > Example 4: Insert a specific item inside an array
+
 ```javascript
 const arr2 = [11, 22, 33, 44, 55, 66];
 
@@ -229,6 +250,7 @@ console.log(arr2);
 ```
 
 > Example 5: Replace some values with one specific item inside an array
+
 ```javascript
 const arr3 = [11, 22, 33, 44, 55, 66];
 
@@ -238,4 +260,15 @@ arr3.splice(4, 2, 99);
 console.log(arr3);
 // [11, 22, 33, 44, 99]
 ```
+
 ---
+
+---
+
+<!-- PAGINATION_START -->
+
+**Parent:** [Arrays](..)  
+**Previous:** [Data Structures > Arrays > Initialization](01-initialization.md)  
+**Next:** [Data Structures > Arrays > Array Slice](03-array-array-slice.md)
+
+<!-- PAGINATION_END -->

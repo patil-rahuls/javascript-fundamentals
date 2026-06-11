@@ -1,28 +1,29 @@
 ## Closures
 
-```javascript
-const parentFn = function () {
-  let users = 0;
-
-  return function () {
-    users++;
-    console.log(users);
-  }
-};
-
-const booker = parentFn();
-// Here the parent function 'parentFn'
-// has been called and returned.
-
-booker();   // 1
-booker();   // 2
-booker();   // 3
-```
-
-`booker()` still has access to the variable `users` which was declared in parent function parentFn().
-
-And `parentFn()` has already been executed and has returned
-to `booker()`.
+> ```javascript
+> const parentFn = function () {
+>   let users = 0;
+>
+>   return function () {
+>     users++;
+>     console.log(users);
+>   };
+> };
+>
+> const booker = parentFn();
+> // Here the parent function 'parentFn'
+> // has been called and returned.
+>
+> booker(); // 1
+> booker(); // 2
+> booker(); // 3
+> ```
+>
+> _In the above example,_
+>
+> _`booker()` still has access to the variable `users` which was declared in parent function parentFn()._
+>
+> _And `parentFn()` has already been executed and has returned to `booker()`._
 
 A closure gives a function access to all the variables of its parent function, even after that parent function has finished executing and returned.
 
@@ -30,123 +31,143 @@ The function keeps a reference to its outer scope, which preserves the scope cha
 
 A closure ensures that a function doesn't lose connection to variables that existed at the function's creation scope.
 
-
 > Formal definition:
 >
-> **It is the closed-over variable environment of the execution context in which a function was created, and which exists even after that function execution context is gone.**
+> **_It is the closed-over variable environment of the execution context in which a function was created, and which exists even after that function execution context is gone._**
 
-> _BEST LAYMAN EXPLANATION:
+_Layman Explanation:
 A closure is like a backpack that a function carries around wherever it goes(from wherever it is being called). This backpack has all the variables that were present in the environment where the function was created._
 
 &nbsp;
-> WE DO NOT CREATE CLOSURES MANUALLY.
+
+### More about closures:
+
+We do not create closures manually.
+
+They are a javascript feature that happens automatically.
+
+Also we don't have any access to closed-over variables. We can't go into a closure and read or write variables.
+
+A closure is not a tangible js object.
+
+But we can have a look at its properties:
+
+> ```javascript
+> console.dir(booker);
+> ```
 >
-> THEY ARE A JAVASCRIPT FEATURE THAT HAPPENS AUTOMATICALLY.
+> _It gives the function details. where it shows the `'scopes'` property which is the variable environment._
 >
-> ALSO WE DON'T HAVE ANY ACCESS TO CLOSED-OVER VARIABLES.
+> _We can see which variables exist in that VE and that the variables are changing in it based on the no. of times I am calling `booker()`._
 >
-> WE CAN'T GO INTO A CLOSURE AND READ OR WRITE VARIABLES.
+> ```
+> [[Scopes]] : Scopes[3]
+> // Double brackets [[...]] means
+> // its an internal JavaScript property.
 >
-> A CLOSURE IS NOT A TANGIBLE JS OBJECT.
-
-> But we can have a look at its properties:
-```javascript
-console.dir(booker);
-```
-It gives the function details. where it shows the `'scopes'` property which is the variable environment.
-
-We can see which variables exist in that VE and that the variables are changing in it based on the no. of times I am calling `booker()`.
-
-```
-  [[Scopes]] : Scopes[3]
-  // [[Scopes]] double bracket is an internal js property
-  0: Closure (parentFn) { users:... }
-```
-
-The above line means that we have the variable `users` is available from `parentFn`’s execution context
-
-In _`Scopes[3]`_, `3` is the number of times the child function has been called.
+> 0: Closure (parentFn) { users:... }
+>
+> ```
+>
+> _The last line means that the variable `users` is available from `parentFn`’s execution context via `Closure`._
+>
+> _In _`Scopes[3]`_, the number `3` is the times the child function has been called._
 
 ---
 
 &nbsp;
+
 ### Some more scenarios:
+
 > Example 1:
-```javascript
-let f; // global scope
-
-const g = function () {
-  const a = 23;
-  f = function (){
-    console.log(a*2);
-  }
-};
-
-const h = function () {
-   const b = 777;
-   f = function (){
-    console.log(b*2);
-  }
-};
-
-g();
-f();            // 23*2
-console.dir(f); // Observe the o/p
-
-// re-assigning the f function
-h();
-f();            // 777*2
-console.dir(f);
-```
-
-&nbsp;
-> Example 2: Timer Function. We don't always need to return a function to observe a closure.
-```javascript
-const test = function (n) {
-  const twice = n * 2 ;
-
-  setTimeout (function(){
-    console.log( `The double of ${n} is ${twice}.` );
-  }, 2000) ;
-
-  console.log(`Starting....`);
-};
-
-test(3);
-```
-> On calling this, following events happen:
-> 1. const variable `twice` is created.
-> 2. timer callback fn is registered- it starts waiting for
->    its execution for the given time in milliseconds.
-> 3. and the last `console.log` is executed.
->    It won't wait for the timer’s callback.
-> 4. `test()` function has finished executing.
-> 5. after 2 seconds, the callback function gets executed.
-
-Observe that the callback function of the timer was executed completely independent of the `test()`.
-
-But still the callback function was able to access all the variables which were created in the test().
-
-This happens because closures have priority over scope chain.
+>
+> ```javascript
+> let f; // global scope
+>
+> const g = function () {
+>   const a = 23;
+>   f = function () {
+>     console.log(a * 2);
+>   };
+> };
+>
+> const h = function () {
+>   const b = 777;
+>   f = function () {
+>     console.log(b * 2);
+>   };
+> };
+>
+> g();
+> f(); // 23*2
+> console.dir(f); // Observe the o/p
+>
+> // re-assigning the f function
+> h();
+> f(); // 777*2
+> console.dir(f);
+> ```
 
 &nbsp;
+
+> Example 2: _Timer Function. We don't always need to return a function to observe a closure._
+>
+> ```javascript
+> const test = function (n) {
+>   const twice = n * 2;
+>
+>   setTimeout(function () {
+>     console.log(`The double of ${n} is ${twice}.`);
+>   }, 2000);
+>
+>   console.log(`Starting....`);
+> };
+>
+> test(3);
+> ```
+>
+> _On calling this, following events happen:_
+>
+> 1. _`const twice` is initialized._
+> 2. _The timer callback fn is registered- it starts waiting for its execution for the given time in milliseconds._
+> 3. _And the last `console.log` is executed. It won't wait for the timer’s callback._
+> 4. _The `test()` function has now finished executing and its EC is popped-off the call stack._
+> 5. _After 2 seconds, the callback function gets executed._
+>
+> _Observe that the callback function of the timer was executed completely independent of the `test()`._
+>
+> _But still the callback function was able to access all the variables which were created in the `test()`._
+>
+> _This happens because **closures have priority over scope chain.**_
+
+&nbsp;
+
 > Example 3: IIFE
-```javascript
-(function() {
-  const header = document.querySelector('h1');
-  header.style.color = 'red';
-
-  header.addEventListener('click' ,
-    function () {
-      this.style.color = 'blue';
-      // ‘this’ points to the 'header' element.
-    }
-  );
-})();
-```
-
-This is an IIFE, and it is invoked immediately.
-
-But the eventlistner's callback function will be on call stack and waiting for the 'click' event to occur and even though the IIFE has finished executing, the callback function will still have access to the 'header' element.
+>
+> ```javascript
+> (function () {
+>   const header = document.querySelector("h1");
+>   header.style.color = "red";
+>
+>   header.addEventListener("click", function () {
+>     this.style.color = "blue";
+>     // ‘this’ points to the 'header' element.
+>   });
+> })();
+> ```
+>
+> _This is an IIFE, and it is invoked immediately._
+>
+> _But the eventlistner's callback function will be on call stack and waiting for the `click` event to occur and even though the IIFE has finished executing, the callback function will still have access to the `header` element._
 
 ---
+
+---
+
+<!-- PAGINATION_START -->
+
+**Parent:** [3. Functions](..)  
+**Previous:** [Optional Chaining [ES 2020]](04-optional-chaining.md)  
+**Next:** [Higher Order Functions](06-higher-order-fn.md)
+
+<!-- PAGINATION_END -->

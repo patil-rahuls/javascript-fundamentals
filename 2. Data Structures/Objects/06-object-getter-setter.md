@@ -11,18 +11,18 @@
 
 ```javascript
 const myObj = {
-  firstName : 'Rahul',
-  lastName : 'Patil',
+  firstName: "Rahul",
+  lastName: "Patil",
 
   // getter
-  get info(){
+  get info() {
     return `Full Name : ${this.lastName}  ${this.firstName}`;
   },
 
   // setter must have exactly ONE parameter COMPULSORY.
-  set info(lName){
+  set info(lName) {
     this.lastName = lName;
-  }
+  },
 };
 
 myObj.info;
@@ -32,8 +32,18 @@ myObj.info = "P";
 // No parens here too.
 ```
 
-***Is Poymorphism achieved here?***
+**_Is Poymorphism achieved here?_**
 
-***I know 'info' here is a property and not function, but at the end, what we get is a 'functionality' out of it !!***
+**_I know 'info' here is a property and not function, but at the end, what we get is a 'functionality' out of it !!_**
 
 ---
+
+---
+
+<!-- PAGINATION_START -->
+
+**Parent:** [Objects](..)  
+**Previous:** [Data Structures > Objects > Object Delete Properties](05-object-delete-properties.md)  
+**Next:** [Data Structures > Objects > Object This Keyword](07-object-this-keyword.md)
+
+<!-- PAGINATION_END -->

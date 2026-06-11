@@ -4,20 +4,31 @@
 
 ### `Array.prototype.indexOf()`
 
-> ***Returns index of element present in the array, `-1` otherwise.***
+> **_Returns index of element present in the array, `-1` otherwise._**
 >
-> ***Checks for Equality using Strict Equality `===`.***
+> **_Checks for Equality using Strict Equality `===`._**
 
 ```javascript
-const myArr = [55, 'rahul', 'hitesh', 'aajesh'];
+const myArr = [55, "rahul", "hitesh", "aajesh"];
 
-myArr.indexOf('rahul');
+myArr.indexOf("rahul");
 // 1
 
-myArr.indexOf('milan');
+myArr.indexOf("milan");
 // -1
 
-myArr.indexOf('55');
+myArr.indexOf("55");
 // -1 (string ‘55’ is passed. No Type Coercion occurs)
 ```
+
 ---
+
+---
+
+<!-- PAGINATION_START -->
+
+**Parent:** [Arrays](..)  
+**Previous:** [Data Structures > Arrays > Array Element Find](13-array-element-find.md)  
+**Next:** [Data Structures > Arrays > Array Element Find Index](15-array-element-findIndex.md)
+
+<!-- PAGINATION_END -->

@@ -1,20 +1,22 @@
 ## Data Structures > Sets
 
-> ***Sets are high performance `unordered unique collection` data structure.***
+> **_Sets are high performance `unordered unique collection` data structure._**
 
 ### Iterating over Sets
+
 Consider this Set as an example
+
 ```javascript
-const names = new Set (
-  ['rahul' , 'hitesh' , 'rahul', 'rahul',  'aajesh' , 'rahul']
-); // duplicate item 'rahul'
+const names = new Set(["rahul", "hitesh", "rahul", "rahul", "aajesh", "rahul"]); // duplicate item 'rahul'
 
 console.log(names);
 // set(3) {'hitesh', 'aajesh' , 'rahul'}
 ```
 
 > ### Using `for-of` loop
-Sets are iterables. We can loop over them using for-of loop.
+>
+> Sets are iterables. We can loop over them using for-of loop.
+
 ```javascript
 for (const itm of names) {
   console.log(itm);
@@ -25,9 +27,11 @@ for (const itm of names) {
 ```
 
 &nbsp;
+
 > ### Using `forEach()` method
+
 ```javascript
-names.forEach(function(val, key, set){
+names.forEach(function (val, key, set) {
   console.log(`${key} : ${val}`);
   // will print key as same as val
 });
@@ -44,7 +48,7 @@ names.forEach(function(val, key, set){
 
 // For such values we can use
 // the throwaway variable ‘_’
-names.forEach(function(val , _ , set){
+names.forEach(function (val, _, set) {
   console.log(`${val}`);
 });
 // hitesh
@@ -57,3 +61,13 @@ Disadvantages of using `forEach()`:
 `break` and `continue` does not work! So if you need to break out of the loop, then use the `for-of` loop.
 
 ---
+
+---
+
+<!-- PAGINATION_START -->
+
+**Parent:** [Sets](..)  
+**Previous:** [Data Structures > Sets > Set Methods](02-set-methods.md)  
+**Next:** [Data Structures > Sets > Set Use Case](04-set-use-case.md)
+
+<!-- PAGINATION_END -->

@@ -3,14 +3,17 @@
 ### Retrieve Object Properties
 
 Consider this object as an example.
+
 ```javascript
 const myObj = {
-  firstName : 'Rahul',
-  lastName : 'Patil',
-  age : 2049-2024,
+  firstName: "Rahul",
+  lastName: "Patil",
+  age: 2049 - 2024,
 };
 ```
+
 > ### 1. Retrieve Object Properties using "DOT" notation:
+
 ```javascript
 console.log(myObj.age);
 // 25
@@ -20,9 +23,11 @@ console.log(myObj.habbits);
 ```
 
 &nbsp;
+
 > ### 2. Retrieve Object Properties using "BRACKET" notation:
+
 ```javascript
-console.log(myObj['age']);
+console.log(myObj["age"]);
 // 25
 ```
 
@@ -44,9 +49,11 @@ console.log(myObj['last'+proprty]);
 
 myObj.'last'+proprty; // ❌ Incorrect
 // This won't work in DOT notation.
+
 ```
 
 &nbsp;
+
 ### When to use which notation?
 
 If we need to compute the property name then use the "BRACKET" notation.
@@ -54,3 +61,13 @@ If we need to compute the property name then use the "BRACKET" notation.
 Else use the easier and straight-forward "DOT" notation.
 
 ---
+
+---
+
+<!-- PAGINATION_START -->
+
+**Parent:** [Objects](..)  
+**Previous:** [Data Structures > Objects > Object Assign Properties](02-object-assign-properties.md)  
+**Next:** [Data Structures > Objects > Object Methods](04-object-methods.md)
+
+<!-- PAGINATION_END -->

@@ -1,69 +1,76 @@
 ## Higher Order Functions
 
-> Fundamental concept of JavaScript.
+Fundamental concept of JavaScript.
 
-> ***Higher Order function - A function that receives another function as an argument, or/and returns a function.***
+> **_A function that receives another function as an argument, or/and returns a function._**
 
-> ***The functions that are passed/returned are called **First Class Functions/Citizens**.***
+The functions that are passed/returned are called **_First Class Functions/Citizens_**.
 
 e.g. `addEventListener()` is a higher order function.
+
 ```javascript
 function count() {
   let counter = 0;
 
-  return function(){
+  return function () {
     counter++;
-  }
+  };
 }
 ```
 
-###  More examples:
+### More examples:
+
 > Example 1: Functions accepting callback functions:
-```javascript
-// Callback function 1
-const oneWord = function (str) {
-  return str.replace(/ /g, '').toLowerCase();
-};
-
-// Callback function 2
-const UpperFirstWord = function (str) {
-  const [first, ...restWords] = str.split(' ');
-  return [first.toUpperCase(), ...restWords].toString();
-}
-
-// Higher order function:
-const transform = function (str, fn) {
-  console.log(`Original string : ${str} `);
-  console.log(`Modified string : ${fn(str)} `);
-  console.log(`Modified by function : ${fn.name}`);
-  // A function is also an object and it
-  // has a ‘name’ as one of its internal
-  // properties.
-}
-
-// Calling `transform` using different
-// methods as parameters.
-transform("Rahul is greater", UpperFirstWord);
-transform("Rahul is greater", oneWord);
-```
-
-> _In the above example, Abstraction is achieved i.e. hiding the details of implementation. This allows us to think more on an abstract level._
+>
+> ```javascript
+> // Callback function 1
+> const oneWord = function (str) {
+>   return str.replace(/ /g, "").toLowerCase();
+> };
+>
+> // Callback function 2
+> const UpperFirstWord = function (str) {
+>   const [first, ...restWords] = str.split(" ");
+>   return [first.toUpperCase(), ...restWords].toString();
+> };
+>
+> // Higher order function:
+> const transform = function (str, fn) {
+>   console.log(`Original string : ${str} `);
+>   console.log(`Modified string : ${fn(str)} `);
+>   console.log(`Modified by function : ${fn.name}`);
+>   // A function is also an object and it
+>   // has a ‘name’ as one of its internal
+>   // properties.
+> };
+>
+> // Calling `transform` using different
+> // methods as parameters.
+> transform("Rahul is greater", UpperFirstWord);
+> transform("Rahul is greater", oneWord);
+> ```
+>
+> _In the above example, Abstraction is achieved i.e._
+>
+> _hiding the details of implementation. This allows us to think more on an abstract level._
 
 &nbsp;
+
 > Example 2: Functions returning functions
+
 ```javascript
 const greet = function (greeting) {
   return function (name) {
-    console.log( `${greeting} ${name}` );
-  }
+    console.log(`${greeting} ${name}`);
+  };
 };
 
-const greeterHey = greet('Heyy');
+const greeterHey = greet("Heyy");
 // greeterHey will now be a function which
 // is returned by greet();
 
 // Let's observe the function call now
-greeterHey('Rahul');
+greeterHey("Rahul");
 // "Heyy Rahul"
 
 // How is the greeting 'heyy' coming in
@@ -74,18 +81,17 @@ greeterHey('Rahul');
 // written in one line.
 greet("Good Morning")("Mr. Rahul");
 
-
 // And the function definition can also
 // be written using the arrow function:
-const greet = greeting => {
+const greet = (greeting) => {
   return function (name) {
     console.log(` ${greeting} ${name}`);
-  }
-}
+  };
+};
 
 // OR simply
 
-const greetArrow = greeting => name => console.log(`${greeting} ${name}`);
+const greetArrow = (greeting) => (name) => console.log(`${greeting} ${name}`);
 
 // See the cleanliness in our code.
 // One arrow function returning
@@ -93,12 +99,14 @@ const greetArrow = greeting => name => console.log(`${greeting} ${name}`);
 ```
 
 &nbsp;
+
 > Example 3: Creating related functions by returning functions.
+
 ```javascript
 const addTax = (rate) => {
   return function (val) {
-    return val+ val*rate;
-  }
+    return val + val * rate;
+  };
 };
 
 const gst = addTax(18);
@@ -113,4 +121,15 @@ gst(cost);
 educationCess(cost);
 // 3673.95
 ```
+
 ---
+
+---
+
+<!-- PAGINATION_START -->
+
+**Parent:** [3. Functions](..)  
+**Previous:** [Closures](05-closures.md)  
+**Next:** [`call()`, `apply()` and `bind()`](07-call-apply-bind.md)
+
+<!-- PAGINATION_END -->

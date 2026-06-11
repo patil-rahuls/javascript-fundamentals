@@ -1,22 +1,25 @@
 ## Data Structures > Sets
 
-> ***Sets are high performance `unordered unique collection` data structure.***
+> **_Sets are high performance `unordered unique collection` data structure._**
 
 ### Set Methods
+
 Consider this Set as an example
+
 ```javascript
-const names = new Set (
-  ['rahul' , 'hitesh' , 'rahul', 'rahul',  'aajesh' , 'rahul']
-); // duplicate item 'rahul'
+const names = new Set(["rahul", "hitesh", "rahul", "rahul", "aajesh", "rahul"]); // duplicate item 'rahul'
 
 console.log(names);
 // set(3) {'hitesh', 'aajesh' , 'rahul'}
 ```
 
 &nbsp;
+
 > ### `Set.prototype.add()`
-_In Map we have `map.set()` method.
-That's the only distinction in their methods. Rest all the methods are same._
+>
+> _In Map we have `map.set()` method.
+> That's the only distinction in their methods. Rest all the methods are same._
+
 ```javascript
 names.add("anil");
 names.add("milan");
@@ -33,8 +36,11 @@ console.log(names);
 ```
 
 &nbsp;
+
 > ### `Set.prototype.has()`
-Checks if an element exists in a Set.
+>
+> Checks if an element exists in a Set.
+
 ```javascript
 names.has("anil");
 // false
@@ -44,8 +50,11 @@ names.has("hitesh");
 ```
 
 &nbsp;
+
 > ### `Set.prototype.delete()`
-Delete item from Set.
+>
+> Delete item from Set.
+
 ```javascript
 names.delete("kisan");
 
@@ -54,35 +63,55 @@ console.log(names);
 ```
 
 &nbsp;
+
 > ### `Set.prototype.clear()`
-Empty/Truncate the Set.
+>
+> Empty/Truncate the Set.
+
 ```javascript
 names.clear();
 ```
 
 &nbsp;
+
 > ### `Set.prototype.keys()`
+
 ```javascript
 names.keys();
 ```
 
 &nbsp;
+
 > ### `Set.prototype.values()`
+
 ```javascript
 names.values();
 ```
 
 &nbsp;
+
 > ### `Set.prototype.entries()`
+
 ```javascript
 names.entries();
 ```
+
 ---
 
 &nbsp;
 
-***There is no method to get a specific item from a set. Because, there is no order(index) defined in which the items are stored in a Set unlike arrays.***
+**_There is no method to get a specific item from a set. Because, there is no order(index) defined in which the items are stored in a Set unlike arrays._**
 
-***When using Sets, we just care about uniqueness and whether the item is present or not(in the Set).***
+**_When using Sets, we just care about uniqueness and whether the item is present or not(in the Set)._**
 
 ---
+
+---
+
+<!-- PAGINATION_START -->
+
+**Parent:** [Sets](..)  
+**Previous:** [Data Structures > Sets > Set](01-set.md)  
+**Next:** [Data Structures > Sets > Set Iteration](03-set-iteration.md)
+
+<!-- PAGINATION_END -->
