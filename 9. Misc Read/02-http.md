@@ -19,12 +19,67 @@ each other as if they are connecting for the first time.
 
 HTTP can be used to send any type of data as long both client and the server are able to read it.
 
-### HTTP request/response cycle.
+> ### HTTP request/response cycle.
+1. TCP Handshake (Creates a connection).
 
-- Client requests a website.
-- It first makes a request to get the html document.
-- Then inside the html document, there are links to css files, so client will request the css file while rendering the html.
-- Similarly fonts, javascript files/libraries are requested from server.
+    DNS Lookup: Browser converts the URL domain name (e.g., xyz.com) into an IP address to communicate with the server.
+
+    TCP Port is selected: HTTP - 80; HTTPS - 443.
+
+    TCP 3-Way Handshake happens:
+    - Client sends a SYN (Synchronise) packet.
+    - Server replies with a SYN-ACK (Synchronise-Acknowledge) packet.
+    - Client sends an ACK (Acknowledge) packet.
+
+2. TLS Handshake (Only for HTTPS)
+
+    Client sends supported encryption algorithms (cipher suites) and a random string.
+
+    Server chooses the cipher suite and sends back its SSL/TLS Certificate (containing its public key).
+
+    Client checks with a Certificate Authority (CA) to ensure the certificate is valid and trusted.
+
+    Key Exchange: Client generates a secret pre-master key, encrypts it with the server's public key, and sends it to the server. Only the server can decrypt this using its private key (Asymmetric Encryption).
+
+    Session Keys: Both sides use that secret pre-master key to generate identical Symmetric Session Keys. All future data is encrypted using these keys.
+
+    At this point of time, a connection is established (and secured, if using HTTPS).
+
+3. Data Exchange (HTTP Request & HTTP Response)
+
+    The HTTP Request: The browser sends a text command(HTTP request message) over the connection.
+
+    The HTTP Response: The server processes the request and sends data back(HTTP response message). (raw bytes).
+
+4. Closing the Connection
+
+    Keep-Alive: Modern connections usually stay open (Connection: keep-alive) to reuse the same TCP/TLS channel for multiple files (like CSS, JS, and images).
+
+    Termination: Once finished, a 4-way TCP teardown closing handshake terminates the connection.
+
+Data exchange for static assets does not happen all at once. It is triggered progressively as the browser reads the HTML document from top to bottom.
+
+- When the client recieves the HTTP response, it is parsed into characters and tags(converts the raw bytes into characters), and it starts building a DOM tree.
+
+- A background thread called the `Preload Scanner` looks for URLs (href, src) and immediately requests them in parallel while the main thread is still processing the DOM.
+
+- Multiplexing: The browser opens one single connection to the server.
+
+  Interleaving: All static assets (CSS, JS, images) are broken into tiny frames and downloaded simultaneously over this single connection. No queuing or waiting for other files to finish.
+
+  However, they are set with a priority.
+
+  > CSS files get the highest priority,
+
+  > then the synchronous \<script> tags,
+
+  > and finally, the images, videos, and scripts marked with async or defer.
+
+- The web-application is rendered/painted on the screen.
+
+
+---
+&nbsp;
 
 ### Both Requests and responses share a common structure in HTTP.
 
@@ -49,18 +104,19 @@ A HTTP response message has 3 parts.
 
 ---
 
-_Some examples of HTTP messages:_
-HTTP Request for getting a root page in Frnech language.
-GET / HTTP/1.1
-Host: developer.mozilla.org
-Accept-Language: fr
-POST - Sending a form data to server.
-POST /contact_form.php HTTP/1.1
-Host: developer.mozilla.org
-Content-Length: 64
-Content-Type: application/x-www-form-urlencoded
-name=Joe%20User&request=Send%20catalogue
+> ### Examples of HTTP messages:
 
+> HTTP Request for getting a root page in Frnech language.
+>
+>     GET / HTTP/1.1
+>     Host: developer.mozilla.org
+>     Accept-Language: fr
+>     POST - Sending a form data to server.
+>     POST /contact_form.php HTTP/1.1
+>     Host: developer.mozilla.org
+>     Content-Length: 64
+>     Content-Type: application/x-www-form-urlencoded
+>     name=Joe%20User&request=Send%20catalogue
 ---
 
 Its HTTP Response message looks like this.
@@ -114,13 +170,4 @@ X-Cache: Error from cloudfront
 helping the user to find the missing resource)
 
 ---
-
 ---
-
-<!-- PAGINATION_START -->
-
-**Parent:** [9. Misc Read](..)
-**Previous:** [Some Tricky Javascript Problems](01-tricky-js-questions.md)
-**Next:** [Cross-site scripting (`XSS`) Attacks](03-xss.md)
-
-<!-- PAGINATION_END -->

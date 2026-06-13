@@ -167,6 +167,8 @@ Because `b = 5` is executed without a declaring keyword (`let`, `const`, or `var
 Therefore, `a` dies with the function scope, but `b` leaks out and is accessible globally as a number.
 
 ---
+---
+---
 
 ---
 
