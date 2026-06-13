@@ -19,7 +19,7 @@ each other as if they are connecting for the first time.
 
 HTTP can be used to send any type of data as long both client and the server are able to read it.
 
-> ### HTTP request/response cycle.
+### HTTP request/response cycle.
 1. TCP Handshake (Creates a connection).
 
     DNS Lookup: Browser converts the URL domain name (e.g., xyz.com) into an IP address to communicate with the server.
@@ -119,55 +119,56 @@ A HTTP response message has 3 parts.
 >     name=Joe%20User&request=Send%20catalogue
 ---
 
-Its HTTP Response message looks like this.
-HTTP/1.1 200 OK
-Content-Type: text/html; charset=utf-8
-Content-Length: 55743
-Connection: keep-alive
-Cache-Control: s-maxage=300, public, max-age=0
-Content-Language: en-US
-Date: Thu, 06 Dec 2018 17:37:18 GMT
-ETag: "2e77ad1dc6ab0b53a2996dfd4653c1c3"
-Server: meinheld/0.6.1
-Strict-Transport-Security: max-age=63072000
-X-Content-Type-Options: nosniff
-X-Frame-Options: DENY
-X-XSS-Protection: 1; mode=block
-Vary: Accept-Encoding,Cookie
-Age: 7
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<title>A simple webpage</title>
-</head>
-<body>
-<h1>Simple HTML webpage</h1>
-<p>Hello, world!</p>
-</body>
-</html>
+> Its HTTP Response message looks like this.
+>
+>     HTTP/1.1 200 OK
+>     Content-Type: text/html; charset=utf-8
+>     Content-Length: 55743
+>     Connection: keep-alive
+>     Cache-Control: s-maxage=300, public, max-age=0
+>     Content-Language: en-US
+>     Date: Thu, 06 Dec 2018 17:37:18 GMT
+>     ETag: "2e77ad1dc6ab0b53a2996dfd4653c1c3"
+>     Server: meinheld/0.6.1
+>     Strict-Transport-Security: max-age=63072000
+>     X-Content-Type-Options: nosniff
+>     X-Frame-Options: DENY
+>     X-XSS-Protection: 1; mode=block
+>     Vary: Accept-Encoding,Cookie
+>     Age: 7
+>     <!DOCTYPE html>
+>     <html lang="en">
+>     <head>
+>     <meta charset="utf-8">
+>     <title>A simple webpage</title>
+>     </head>
+>     <body>
+>     <h1>Simple HTML webpage</h1>
+>     <p>Hello, world!</p>
+>     </body>
+>     </html>
 
 ---
 
-404 response.
-HTTP/1.1 404 Not Found
-Content-Type: text/html; charset=utf-8
-Content-Length: 38217
-Connection: keep-alive
-Cache-Control: no-cache, no-store, must-revalidate, max-
-age=0
-Content-Language: en-US
-Date: Thu, 06 Dec 2018 17:35:13 GMT
-Expires: Thu, 06 Dec 2018 17:35:13 GMT
-Server: meinheld/0.6.1
-Strict-Transport-Security: max-age=63072000
-X-Content-Type-Options: nosniff
-X-Frame-Options: DENY
-X-XSS-Protection: 1; mode=block
-Vary: Accept-Encoding,Cookie
-X-Cache: Error from cloudfront
-<!DOCTYPE html>... (contains a site-customized page
-helping the user to find the missing resource)
+> 404 response.
+>
+>     HTTP/1.1 404 Not Found
+>     Content-Type: text/html; charset=utf-8
+>     Content-Length: 38217
+>     Connection: keep-alive
+>     Cache-Control: no-cache, no-store, must-revalidate, max-
+>     age=0
+>     Content-Language: en-US
+>     Date: Thu, 06 Dec 2018 17:35:13 GMT
+>     Expires: Thu, 06 Dec 2018 17:35:13 GMT
+>     Server: meinheld/0.6.1
+>     Strict-Transport-Security: max-age=63072000
+>     X-Content-Type-Options: nosniff
+>     X-Frame-Options: DENY
+>     X-XSS-Protection: 1; mode=block
+>     Vary: Accept-Encoding,Cookie
+>     X-Cache: Error from cloudfront
+>     <!DOCTYPE html>...
 
 ---
 ---
