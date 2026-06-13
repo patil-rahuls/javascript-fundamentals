@@ -67,6 +67,35 @@
 - [Primitives and References](4.%20How%20Javascript%20Works/08-primitive-vs-objects.md)
 - [Node.js Event Loop](4.%20How%20Javascript%20Works/09.1-event-loop.md)
 
+## Object Oriented Javascript
+
+- [Object Oriented Programming in Javascript]()
+- [Constructor Functions and Prototypes](./5.%20OOP%20Javascript/02.1-contructor-function.md)
+- [Prototype Chain](./5.%20OOP%20Javascript/02.2-prototype-chain.md)
+- [Prototypal Inheritance](./5.%20OOP%20Javascript/02.3-prototypal-inheritance.md)
+- [**_ES6_** Classes](./5.%20OOP%20Javascript/03-ES6-class.md)
+- [**_ES6_** Classes - getters and setters](./5.%20OOP%20Javascript/05-getters-setters.md)
+- [Object.create](./5.%20OOP%20Javascript/04-Object.create.md)
+- [Static Methods](./5.%20OOP%20Javascript/06-static.md)
+- _Inheritance_
+  - [using Constructor Functions](./5.%20OOP%20Javascript/07-inheritance-constructor-fn.md)
+  - [using ES6 Classes](./5.%20OOP%20Javascript/08-inheritance-ES6-class.md)
+  - [using Object.create](./5.%20OOP%20Javascript/09-inheritance-Object.create.md)
+- [Chaining Class Methods](./5.%20OOP%20Javascript/10-chaining-class-methods.md)
+
+## Asychronous Javascript
+
+- [Synchronous vs Asynchronous](./6.%20Asynchronous%20Javascript/01-synchronous-vs-asynchronous.md)
+- [Promises, Promisify](./6.%20Asynchronous%20Javascript/02.1-promise.md)
+- [**_fetch_** API, chained promises](./6.%20Asynchronous%20Javascript/02.3-promise-fetch-API.md)
+- [**_[ES2017]_** async/await](./6.%20Asynchronous%20Javascript/03.1-async-await-ES2017.md)
+- _Promise static methods_
+  - [**_Promise.all_** ](./6.%20Asynchronous%20Javascript/04-promises-all.md)
+  - [**_Promise.race_**](./6.%20Asynchronous%20Javascript/05-promise-race.md)
+  - [**_Promise.allSettled_**](./6.%20Asynchronous%20Javascript/06-promise-allSettled.md)
+  - [**_Promise.any_** ](./6.%20Asynchronous%20Javascript/07-promise-any.md)
+- [Comparision **_Promise.race_** vs **_Promise.any_**](./6.%20Asynchronous%20Javascript/08-promise-race-vs-any.md)
+
 ## Modules
 
 - [Introduction & Module Types](7.%20Modules/01-modules.md)
@@ -75,53 +104,34 @@
 - [**import vs require**](7.%20Modules/04-import-vs-require.md)
 - [Module Pattern & Modules behind the scenes](7.%20Modules/05-module-pattern.md)
 
-## Object Oriented Javascript
-
-- Object Oriented Programming in Javascript
-- Constructor Functions and Prototypes
-- Prototype Chain
-- Prototypal Inheritance
-- **_ES6_** Classes
-- **_ES6_** Classes - getters and setters
-- Object.create
-- Static Methods
-- Inheritance
-- Encapsulation
-- Chaining Class Methods
-
-## Asychronous Javascript
-
-- Synchronous vs Asynchronous
-- Promises
-- **_fetch_** API
-- Event loop, Behind the scenes
-- Promisify
-- **_[ES2017]_** async/await
-- Promise static methods - **_Promise.race, Promise.all, Promise.any and Promise.allSettled_**
-- Comparision **_Promise.race vs Promise.any_**
-
 ## Node.js
 
-- Basics
-- NPM and Package.json
-- Local and Global package installation
-- Cluster
-- Worker Threads
-- CLI
-- **_fs_** module
-- **_http_** module
-- Event Emitters, CaptureRejection, AbortController
-- Buffer
-- Streams, pipe/pipeline
-- Express.js framework
-- Useful inbuilt node modules
+- [Basics](./8.%20Node.js/01-nodejs.md)
+- [NPM, **_package.json_** and **_package-lock.json_**](./8.%20Node.js/02-npm.md)
+- [libuv](./8.%20Node.js/03-libuv.md)
+- [Improve Node.js application performance](./8.%20Node.js/04-improve-performance.md)
+- [Cluster](./8.%20Node.js/05-cluster.md)
+- [PM2](./8.%20Node.js/06-pm2.md)
+- [Worker Threads](./8.%20Node.js/07-worker-threads.md)
+- [Child Processes](./8.%20Node.js/08-child-process.md)
+- [**_fs_** module](./8.%20Node.js/09-file-system.md)
+- [**_http_** module](./8.%20Node.js/10-http.md)
+- [Event Emitters, CaptureRejection, AbortController](./8.%20Node.js/11-event-emitters.md)
+- [Express.js](./8.%20Node.js/16-express.md)
+- [Buffer](./8.%20Node.js/17-buffer.md)
+- [Streams, **_pipe()_** and **_pipeline()_**](./8.%20Node.js/19-streams.md)
+- [CLI](./8.%20Node.js/22-cli-arguments.md)
+- Deployment _WIP_
+
+## Misc Read
+
+- [Tricky JavaScript Interview Problems](./9.%20Misc%20Read/01-tricky-js-questions.md)
+- [HTTP Basics](./9.%20Misc%20Read/02-http.md)
+- [XSS Attacks and Prevention](./9.%20Misc%20Read/03-xss.md)
+- [CSRF Attacks and Prevention](./9.%20Misc%20Read/04-csrf.md)
+- [Securing REST APIs](./9.%20Misc%20Read/05-rest-apis.md)
+- Scaling REST APIs - _WIP_
+- REST APIs Problems & Fixes _WIP_
 
 ---
-
-<!-- PAGINATION_START -->
-
-**Parent:** [Important Javascript Concepts with Codes](README.md)  
-**Previous:** _None_  
-**Next:** [Extra Markups](extra-markups.md)
-
-<!-- PAGINATION_END -->
+---
