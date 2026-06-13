@@ -73,11 +73,11 @@ const u1 = new User("Deepika");
 const u2 = new User("Deepika@123");
 ```
 
-> In the above code(first `this.format.test...` line) will give error because, the same class variable `username` is being initialized by two methods: the constructor and the setter.
+> _In the above code(first `this.format.test...` line) will give error because, the same class variable `username` is being initialized by two methods: the constructor and the setter._
 >
-> This results in "max stack call size exceed error".
+> _This results in "max stack call size exceed error"._
 >
-> Hence inside setter, we assign the value to a new variable `_username` _(adding a `_` is a convention to create a new variable)_.
+> _Hence inside setter, we assign the value to a new variable `_username` _(adding a `_` is a convention to create a new variable)_._
 
 
 TIP: We can have more than one getters and setters in an ES6 class/Constructor function.
@@ -88,8 +88,10 @@ TIP: We can have more than one getters and setters in an ES6 class/Constructor f
 
 <!-- PAGINATION_START -->
 
-**Parent:** [5. OOP Javascript](..)
-**Previous:** [`Object.create()`](04-Object.create.md)
-**Next:** [Static](06-static.md)
+**Parent:** [5. OOP Javascript](../5.%20OOP%20Javascript/)
+
+**Previous:** ← [`Object.create()`](04-Object.create.md)
+
+**Next:** → [Static](06-static.md)
 
 <!-- PAGINATION_END -->

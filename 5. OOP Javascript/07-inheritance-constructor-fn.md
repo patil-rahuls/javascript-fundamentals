@@ -1,6 +1,6 @@
 ## Inheritance - Constructor Function
 
-Example:
+> Example:
 
 ```javascript
 // Class - Furniture
@@ -46,31 +46,31 @@ Sofa.prototype.info = function () {
 const s1 = new Sofa("Neelkamal", 15, false);
 ```
 
-Now we link the `Sofa.prototype` to `Furniture.prototype` object.
+_Now we link the `Sofa.prototype` to `Furniture.prototype` object._
 
 ```
-   Furniture.prototype
-        |
-        | [.__proto__]
-        |
-    Sofa.prototype
-        |
-        | [.__proto__]
-        |
-     Obj - s1
+Furniture.prototype
+     |
+     | [.__proto__]
+     |
+ Sofa.prototype
+     |
+     | [.__proto__]
+     |
+  Obj - s1
 
 ```
 
-We need to make `Furniture.prototype` a prototype(`__proto__`) of `Sofa.prototype`
+_We need to make `Furniture.prototype` a prototype(`__proto__`) of `Sofa.prototype`_
 
-So, we say `Sofa.prototype` is linked to `Furniture.prototype`, and we do that using `Object.create()`
+_So, we say `Sofa.prototype` is linked to `Furniture.prototype`, and we do that using `Object.create()`_
 
 ```javascript
 // ❌ Incorrect
 Sofa.prototype = Furniture.prototype;
 ```
 
-If we do this, the constructor functions `Furniture` and `Sofa` will both share same prototype. This is because we are simply assigning an object to another. _Remember obj1 = obj2; (only reference is copied, not the content)_
+_If we do this, the constructor functions `Furniture` and `Sofa` will both share same prototype. This is because we are simply assigning an object to another. _Remember obj1 = obj2; (only reference is copied, not the content)__
 
 The correct way to do it would be:
 
@@ -133,7 +133,7 @@ console.log(s1 instanceof Furniture);
 // has inherited from Furniture.
 ```
 
-Example 2
+> Example 2
 
 ```javascript
 const Car = function(make, currentSpeed){
@@ -177,7 +177,7 @@ EV.prototype.accelerate = function(){
 
 ```
 
-In the scope chain, `EV.prototype.accelerate` will come first, and it will be called. because as I said earlier, it does a method look-up through prototype chain, up till parent's prototype property.
+_In the scope chain, `EV.prototype.accelerate` will come first, and it will be called. because as I said earlier, it does a method look-up through prototype chain, up till parent's prototype property._
 
 ---
 
@@ -185,8 +185,10 @@ In the scope chain, `EV.prototype.accelerate` will come first, and it will be ca
 
 <!-- PAGINATION_START -->
 
-**Parent:** [5. OOP Javascript](..)
-**Previous:** [Static](06-static.md)
-**Next:** [Inheritance - `ES6 Classes`](08-inheritance-ES6-class.md)
+**Parent:** [5. OOP Javascript](../5.%20OOP%20Javascript/)
+
+**Previous:** ← [Static](06-static.md)
+
+**Next:** → [Inheritance - `ES6 Classes`](08-inheritance-ES6-class.md)
 
 <!-- PAGINATION_END -->

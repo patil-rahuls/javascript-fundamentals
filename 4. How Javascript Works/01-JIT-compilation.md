@@ -84,7 +84,7 @@ More about javascript JIT compilation here - https://medium.com/@aamchora/what-e
 
 **Parent:** [4. How Javascript Works](../4.%20How%20Javascript%20Works/)  
 
-**Previous:** ← [3. Functions](../3.%20Functions/)
+**Previous:** ← [Functions](../3.%20Functions/)
 
 **Next:** → [Javascript Runtime](02-javascript-runtime.md)
 

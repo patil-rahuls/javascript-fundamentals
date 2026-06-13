@@ -1,12 +1,12 @@
 ## Inheritance - `ES6 Classes`
 
-Earlier we saw how we deal with inheritance using constructor functions.
+_Earlier we saw how we deal with inheritance using constructor functions._
 
-1. Create Parent constructor Fn.
-2. Create Child constructor Fn. and Call Parent constructor inside Child.
-3. Create/Instantiate Child obj.
-4. Child.prototype is linked to Parent.prototype
-5. And finally, reset our Child's constructor property.
+1. _Create Parent constructor Fn._
+2. _Create Child constructor Fn. and Call Parent constructor inside Child._
+3. _Create/Instantiate Child obj._
+4. _Child.prototype is linked to Parent.prototype_
+5. _And finally, reset our Child's constructor property._
 
 With ES6 Classes, these steps are automatically taken care of.
 **`extends` keword automatically sets up the prototype chain.**
@@ -50,8 +50,10 @@ s2.getCommisionTax();
 
 <!-- PAGINATION_START -->
 
-**Parent:** [5. OOP Javascript](..)
-**Previous:** [Inheritance - Constructor Function](07-inheritance-constructor-fn.md)
-**Next:** [Inheritance - `Object.create()`](09-inheritance-Object.create.md)
+**Parent:** [5. OOP Javascript](../5.%20OOP%20Javascript/)
+
+**Previous:** ← [Inheritance - Constructor Function](07-inheritance-constructor-fn.md)
+
+**Next:** → [Inheritance - `Object.create()`](09-inheritance-Object.create.md)
 
 <!-- PAGINATION_END -->

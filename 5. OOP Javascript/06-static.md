@@ -1,6 +1,6 @@
 ## Static
 
-Example 1:
+> Example 1:
 
 ```javascript
 Array.from();
@@ -14,7 +14,7 @@ The `Array.from()` is a static function of Array constructor function it is not 
 
 This means, its not accesible to objects created from Array constructor fn. But it is accesible directly from Array constructor fn.
 
-Example 2:
+> Example 2:
 
 ```javascript
 Array.isArray();
@@ -24,7 +24,7 @@ These(static methods) are made so as to keep them linked to Array only.
 
 We can have such static methods in our user defined ES6 classes or constructor functions.
 
-Example 3: Static method in constructor function.
+> Example 3: Static method in constructor function.
 
 ```javascript
 const Student = function () {
@@ -68,40 +68,40 @@ Student.hey = function () {
 };
 ```
 
-Example 4: Static method in ES6 Classes
-
-```javascript
-class Student {
-  constructor(name, rollNo) {
-    this.name = name;
-    this.rollNo = rollNo;
-  }
-
-  // Methods in ES6 classes are
-  // added to .prototype property
-  // of the Class automatically.
-  show() {
-    console.log(`${this.name}'s Roll No. is ${this.rollNo}`);
-  }
-
-  // No comma here OR after
-  // a method in ES6 class
-  show2() {
-    // ...
-  }
-
-  // static mehod
-  static hey() {
-    console.log("Heyy");
-  }
-}
-
-Student.hey();
-```
-
-> In the above example, the `show()` and `show2()` are called instance methods and are added to the prototype property of `Student` class.
+> Example 4: Static method in ES6 Classes
+> 
+> ```javascript
+> class Student {
+>   constructor(name, rollNo) {
+>     this.name = name;
+>     this.rollNo = rollNo;
+>   }
+> 
+>   // Methods in ES6 classes are
+>   // added to .prototype property
+>   // of the Class automatically.
+>   show() {
+>     console.log(`${this.name}'s Roll No. is ${this.rollNo}`);
+>   }
+> 
+>   // No comma here OR after
+>   // a method in ES6 class
+>   show2() {
+>     // ...
+>   }
+> 
+>   // static mehod
+>   static hey() {
+>     console.log("Heyy");
+>   }
+> }
+> 
+> Student.hey();
+> ```
+> 
+> _In the above example, the `show()` and `show2()` are called instance methods and are added to the prototype property of `Student` class._
 >
-> On the other hand, `hey()` is a static method and it is added to the `Student` Class iself
+> _On the other hand, `hey()` is a static method and it is added to the `Student` Class iself._
 
 Same applies to classes defined using constructor functions.
 
@@ -115,8 +115,10 @@ _For Arrays, why there are static methods like `from()`, `.fill()` etc? Why they
 
 <!-- PAGINATION_START -->
 
-**Parent:** [5. OOP Javascript](..)
-**Previous:** [ES6 Class's `getter` and `setter`](05-getters-setters.md)
-**Next:** [Inheritance - Constructor Function](07-inheritance-constructor-fn.md)
+**Parent:** [5. OOP Javascript](../5.%20OOP%20Javascript/)
+
+**Previous:** ← [ES6 Class's `getter` and `setter`](05-getters-setters.md)
+
+**Next:** → [Inheritance - Constructor Function](07-inheritance-constructor-fn.md)
 
 <!-- PAGINATION_END -->

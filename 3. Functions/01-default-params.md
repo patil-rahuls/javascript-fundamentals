@@ -94,7 +94,7 @@
 
 **Parent:** [3. Functions](../3.%20Functions/)  
 
-**Previous:** ← [2. Data Structures](../2.%20Data%20Structures/)  
+**Previous:** ← [Data Structures](../2.%20Data%20Structures/)  
 
 **Next:** → [Pass by Value and Pass by Reference](02-pass-by-value-and-reference.md)
 

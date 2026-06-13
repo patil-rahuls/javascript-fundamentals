@@ -16,6 +16,8 @@ console.log("Three");
 // 'One', 'Two', 'Three'
 ```
 
+---
+&nbsp;
 ### Asynchronous
 
 Long runing operations can be made to "execute in the background". While rest of the code executes normally without ever being blocked.
@@ -31,11 +33,13 @@ console.log("Three");
 // 'One', 'Three', 'Two'
 ```
 
-AJAX(Asynchronous Javascript and XML) is asynchronous.
+_AJAX(Asynchronous Javascript and XML) is asynchronous._
 
 Some examples of this are network requests, long-running calculations, file system operations etc. Using asynchronous code in the browser ensures that the page remains responsive and the user experience is mostly unaffected.
 Not all callback functions make code asynchronous.
 
+---
+&nbsp;
 ### Callback Hell
 
 When we have multiple asynchronous operations one after the other by "nesting" the callbacks, we get a a pyramid structure like code called 'callback hell'.
@@ -43,7 +47,8 @@ When we have multiple asynchronous operations one after the other by "nesting" t
 Every callback depends/waits for the previous callback.
 
 Affects the readability and maintainability of the code.
-Example: Nested Promises' callbacks _(Callback Hell)_
+
+>Example: Nested Promises' callbacks _(Callback Hell)_
 
 ```javascript
 asyncOperation1(function (result1) {
@@ -57,7 +62,7 @@ asyncOperation1(function (result1) {
 });
 ```
 
-#### We avoid the Callback Hell by using `Promises`:
+We avoid the Callback Hell by using `Promises`:
 
 ```javascript
 asyncOperation1()
@@ -78,8 +83,10 @@ asyncOperation1()
 
 <!-- PAGINATION_START -->
 
-**Parent:** [6. Asynchronous Javascript](..)
-**Previous:** _None_
-**Next:** [Promises [ES6]](02.1-promise.md)
+**Parent:** [6. Asynchronous Javascript](../6.%20Asynchronous%20Javascript/)
+
+**Previous:** ← [`OOP JavaScript`](../5.%20OOP%20Javascript/)
+
+**Next:** → [Promises [ES6]](02.1-promise.md)
 
 <!-- PAGINATION_END -->

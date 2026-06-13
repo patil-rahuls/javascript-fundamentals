@@ -236,6 +236,6 @@ More here -> https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Numbe
 
 **Previous:** ← [Throttling](16-throttling.md)  
 
-**Next:** → [4. How Javascript Works](../4.%20How%20Javascript%20Works/)
+**Next:** → [How Javascript Works](../4.%20How%20Javascript%20Works/)
 
 <!-- PAGINATION_END -->

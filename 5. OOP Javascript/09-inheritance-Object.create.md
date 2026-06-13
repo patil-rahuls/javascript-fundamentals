@@ -46,17 +46,17 @@ user1.show();
 The prototype chain formed looks like this:
 
 ```
-   ParentProto (prototype)
-           ^
-           |
-           | [.__proto__]
-           |
-     UserProto (prototype)
-           ^
-           |
-           | [.__proto__]
-           |
-         user1
+ParentProto (prototype)
+        ^
+        |
+        | [.__proto__]
+        |
+  UserProto (prototype)
+        ^
+        |
+        | [.__proto__]
+        |
+      user1
 
 ```
 
@@ -68,8 +68,10 @@ Observe that this method is also a lot simpler than using constructor functions.
 
 <!-- PAGINATION_START -->
 
-**Parent:** [5. OOP Javascript](..)
-**Previous:** [Inheritance - `ES6 Classes`](08-inheritance-ES6-class.md)
-**Next:** [Chaining Class Methods](10-chaining-class-methods.md)
+**Parent:** [5. OOP Javascript](../5.%20OOP%20Javascript/)
+
+**Previous:** ← [Inheritance - `ES6 Classes`](08-inheritance-ES6-class.md)
+
+**Next:** → [Chaining Class Methods](10-chaining-class-methods.md)
 
 <!-- PAGINATION_END -->

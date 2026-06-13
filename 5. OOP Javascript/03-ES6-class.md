@@ -1,15 +1,15 @@
 ## ES6 Classes
 
 **`Classes` in ES6 javascript are just syntactic sugars to Constructor functions.**
-Example 1: Class Expression
 
+> Example 1: Class Expression
 ```javascript
 Student = class {
   // ...
 };
 ```
 
-Example 2: Class Declaration
+> Example 2: Class Declaration
 
 ```javascript
 class Student {
@@ -48,7 +48,7 @@ Student.prototype.greet = function () {
 // functions behind the scenes.
 ```
 
-Example
+> Example
 
 ```javascript
 class Car {
@@ -88,8 +88,10 @@ Constructor functions vs ES6 Classes ?
 
 <!-- PAGINATION_START -->
 
-**Parent:** [5. OOP Javascript](..)
-**Previous:** [Prototypes & Prototypal Inheritance](02.3-prototypal-inheritance.md)
-**Next:** [`Object.create()`](04-Object.create.md)
+**Parent:** [5. OOP Javascript](../5.%20OOP%20Javascript/)
+
+**Previous:** ← [Prototypes & Prototypal Inheritance](02.3-prototypal-inheritance.md)
+
+**Next:** → [`Object.create()`](04-Object.create.md)
 
 <!-- PAGINATION_END -->

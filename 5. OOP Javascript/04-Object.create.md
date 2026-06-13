@@ -60,8 +60,10 @@ The `prototype` property which is automatically created in the case of construct
 
 <!-- PAGINATION_START -->
 
-**Parent:** [5. OOP Javascript](..)
-**Previous:** [ES6 Classes](03-ES6-class.md)
-**Next:** [ES6 Class's `getter` and `setter`](05-getters-setters.md)
+**Parent:** [5. OOP Javascript](../5.%20OOP%20Javascript/)
+
+**Previous:** ← [ES6 Classes](03-ES6-class.md)
+
+**Next:** → [ES6 Class's `getter` and `setter`](05-getters-setters.md)
 
 <!-- PAGINATION_END -->

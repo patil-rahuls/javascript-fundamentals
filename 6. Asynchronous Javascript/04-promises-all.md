@@ -3,6 +3,7 @@
 Running promises in parallel means executing multiple asynchronous operations at the same time, without waiting for any of them to complete before starting the next one.
 
 This can greatly improve performance in situations where there are many independent and time-consuming tasks to be performed.
+
 Always use `try` `catch` block with `async` functions.
 
 ```javascript
@@ -30,8 +31,10 @@ myFunc("2", "4", "6");
 This will give results as required. However, the latter 'response's will wait for their former 'response's to complete and that is actually looking like synchronous.
 
 However instead of making them run in sequence, we can make them run parallely.
+
 Solution:
-Promise.all() its a static method.
+
+`Promise.all()` _(its a static method)_
 
 #### It returns an array promise that runs all the promises passed to it in array. If one promise rejects, the whole promise is rejected.
 
@@ -83,14 +86,17 @@ const myFunc2 = async function (page1, page2, page3) {
 };
 ```
 
+&nbsp;
 ---
 
 ---
 
 <!-- PAGINATION_START -->
 
-**Parent:** [6. Asynchronous Javascript](..)
-**Previous:** [Returning values from `Async/Await`](03.2-async-await-ES2017-return.md)
-**Next:** [`Promise.race()`](05-promise-race.md)
+**Parent:** [6. Asynchronous Javascript](../6.%20Asynchronous%20Javascript/)
+
+**Previous:** ← [Returning values from `Async/Await`](03.2-async-await-ES2017-return.md)
+
+**Next:** → [`Promise.race()`](05-promise-race.md)
 
 <!-- PAGINATION_END -->

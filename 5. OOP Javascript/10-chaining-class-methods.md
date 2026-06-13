@@ -40,8 +40,10 @@ user2.name().license();
 
 <!-- PAGINATION_START -->
 
-**Parent:** [5. OOP Javascript](..)
-**Previous:** [Inheritance - `Object.create()`](09-inheritance-Object.create.md)
-**Next:** _None_
+**Parent:** [5. OOP Javascript](../5.%20OOP%20Javascript/)
+
+**Previous:** ← [Inheritance - `Object.create()`](09-inheritance-Object.create.md)
+
+**Next:** → [`Asynchronous JavaScript`](../6.%20Asynchronous%20Javascript/)
 
 <!-- PAGINATION_END -->
