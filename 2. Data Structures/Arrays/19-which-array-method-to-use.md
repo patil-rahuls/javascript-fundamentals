@@ -2,8 +2,6 @@
 
 ### Which array method to use and when?
 
-&nbsp;
-
 > ### To ONLY loop over an array:
 >
 > `forEach()`
@@ -13,62 +11,62 @@
 &nbsp;
 
 > ### To mutate original array:
->
+
 > Add elements to original array
+> 
+> `push()`
+> `unshift()`
 
-`push()`
-`unshift()`
+> Remove elements from orignal array
+> 
+> `pop()`
+> `shift()`
 
-Remove elements from orignal array
+> Reverse the original array
+> 
+> `reverse()`
 
-`pop()`
-`shift()`
+> Sort the original array
+> 
+> `sort()`
 
-Reverse the original array
+> Fill with some values in the original array
+> 
+> `fill()`
 
-`reverse()`
-
-Sort the original array
-
-`sort()`
-
-Fill with some values in the original array
-
-`fill()`
-
-Remove a portion from original array
-
-`splice()`
+> Remove a portion from original array
+> 
+> `splice()`
 
 ---
 
 &nbsp;
 
 > ### To get a new array:
->
+
 > Part of an array
+> 
+> `slice()`
 
-`slice()`
+> Concatenating an array
+> 
+> `concat()`
 
-Concatenating an array
+> Flattening original array
+> 
+> `flat()`
 
-`concat()`
+> Combination of map() and flat()
+> 
+> `flatMap()`
 
-Flattening original array
+> Filtered using a condition
+> 
+> `filter()`
 
-`flat()`
-
-Combination of map() and flat()
-
-`flatMap()`
-
-Filtered using a condition
-
-`filter()`
-
-Apply certain logic to all elements of array
-
-`map()`
+> Apply certain logic to all elements of array
+> 
+> `map()`
 
 ---
 
@@ -76,14 +74,14 @@ Apply certain logic to all elements of array
 
 > ### To ONLY check if array includes an element:
 
-Based on a condition
+> Based on a condition
+> 
+> `some()`
+> `every()`
 
-`some()`
-`every()`
-
-Based on value
-
-`includes()`
+> Based on value
+> 
+> `includes()`
 
 ---
 
@@ -99,13 +97,13 @@ Based on value
 
 > ### To get index of an array element:
 
-Based on value
+> Based on value
+> 
+> `indexOf()`
 
-`indexOf()`
-
-Based on a condtion
-
-`findIndex()`
+> Based on a condtion
+> 
+> `findIndex()`
 
 ---
 
@@ -127,14 +125,17 @@ Based on a condtion
 >
 > `split()`
 
+&nbsp;
 ---
 
 ---
 
 <!-- PAGINATION_START -->
 
-**Parent:** [Arrays](..)  
-**Previous:** [Data Structures > Arrays > Array Methods Chaining](18-array-methods-chaining.md)  
-**Next:** [Data Structures > Arrays > Typed Arrays](20-typed-arrays.md)
+**Parent:** [Data Structures](../../2.%20Data%20Structures/) → [Arrays](../Arrays/)
+  
+**Previous:** ← [Data Structures > Arrays > Array Methods Chaining](18-array-methods-chaining.md)  
+
+**Next:** → [Data Structures > Arrays > Typed Arrays](20-typed-arrays.md)
 
 <!-- PAGINATION_END -->

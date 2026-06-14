@@ -54,14 +54,17 @@ console.log(person);
 */
 ```
 
+&nbsp;
 ---
 
 ---
 
 <!-- PAGINATION_START -->
 
-**Parent:** [Objects](..)  
-**Previous:** [Data Structures > Objects > Object Properties Count](09-object-properties-count.md)  
-**Next:** [Data Structures > Objects > Object Seal](11-object-seal.md)
+**Parent:** [Data Structures](../../2.%20Data%20Structures/) → [Objects](../Objects/)
+  
+**Previous:** ← [Data Structures > Objects > Object Properties Count](09-object-properties-count.md)  
+
+**Next:** → [Data Structures > Objects > Object Seal](11-object-seal.md)
 
 <!-- PAGINATION_END -->

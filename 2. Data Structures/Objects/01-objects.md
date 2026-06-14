@@ -1,10 +1,10 @@
 ## Data Structures > Object
 
-> **_Object is the most fundamental concept in JS._**
->
-> **_Objects are key-value paired data structure._**
->
-> **_Keys are called 'property' and are written as strings without quotes._**
+Object is the most fundamental concept in JS.
+
+Objects are key-value paired data structure.
+
+Keys are called 'property' and are written as strings without quotes.
 
 ```javascript
 const myObj = {
@@ -14,14 +14,18 @@ const myObj = {
 };
 ```
 
+&nbsp;
+
 ---
 
 ---
 
 <!-- PAGINATION_START -->
 
-**Parent:** [Objects](..)  
-**Previous:** [Data Structures > Maps > Maps Key References](../Maps/05-maps-key-references.md)  
-**Next:** [Data Structures > Objects > Object Assign Properties](02-object-assign-properties.md)
+**Parent:** [Data Structures](../../2.%20Data%20Structures/) → [Objects](../Objects/)
+
+**Previous:** ← [Data Structures > Maps](../Maps/)  
+
+**Next:** → [Data Structures > Objects > Object Assign Properties](02-object-assign-properties.md)
 
 <!-- PAGINATION_END -->

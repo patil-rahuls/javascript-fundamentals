@@ -13,16 +13,16 @@ const myObj = {
 ```
 
 > ### 1. Shallow Copy - `Object.assign()`
-
-> Syntax: Object.assign(target, ...sources)
-
-```javascript
-const shallowCopy = Object.assign({}, myObj);
-```
-
-> The `Object.assign()` invokes the getters on the source objects and setters on the target (if provided).
 >
-> It assigns properties only, not copying or defining new properties.
+> **Object.assign(target, ...sources)**
+> 
+> ```javascript
+> const shallowCopy = Object.assign({}, myObj);
+> ```
+> 
+> _The `Object.assign()` invokes the getters on the source objects and setters on the target (if provided)._
+>
+> _It assigns properties only, not copying or defining new properties._
 
 **IMP - But beware of the shallow copy because 'nested objects' (if any) are still copied as reference.**
 
@@ -91,21 +91,24 @@ let merged = { ...obj1, ...obj2 };
 ```
 
 > #### Using `Object.assign()`
+> 
+> ```javascript
+> const allMerged = Object.assign({}, obj1, obj2,  obj3, etc);
+> ```
+> 
+> _In the above example, properties of `obj1` will be overwritten by properties of `obj2` and same happens with `obj2` and `obj3`, and so on._
 
-```javascript
-const allMerged = Object.assign({}, obj1, obj2, obj3, etc);
-```
-
-> In the above example, properties of `obj1` will be overwritten by properties of `obj2` and same happens with `obj2` and `obj3`, and so on.
-
+&nbsp;
 ---
 
 ---
 
 <!-- PAGINATION_START -->
 
-**Parent:** [Objects](..)  
-**Previous:** [Data Structures > Objects > Object Seal](11-object-seal.md)  
-**Next:** [Data Structures > Objects > Object Comparision](13-object-comparision.md)
+**Parent:** [Data Structures](../../2.%20Data%20Structures/) → [Objects](../Objects/)
+  
+**Previous:** ← [Data Structures > Objects > Object Seal](11-object-seal.md)  
+
+**Next:** → [Data Structures > Objects > Object Comparision](13-object-comparision.md)
 
 <!-- PAGINATION_END -->

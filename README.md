@@ -24,15 +24,13 @@
 
 ## Data Structures
 
-- Arrays
-- Array Methods
-- **_[ES6]_** Typed Arrays
-- Objects, properties retrieval, removal, iteration, clone and methods
-- Objects' **_this_** keyword
-- **_[ES6]_** Maps, iteration and methods
-- **_[ES6]_** Sets, methods and use cases
-- Symbols _(WIP)_
-- Which data structure to use?
+- [Arrays](./2.%20Data%20Structures/Arrays/)
+- [Objects](./2.%20Data%20Structures/Objects/)
+- [**_[ES6]_** Maps](./2.%20Data%20Structures/Maps/)
+- [**_[ES6]_** Sets](./2.%20Data%20Structures/Sets/)
+- [WeakMaps & WeakSets](./2.%20Data%20Structures/WeakMap-WeakSet/)
+- [**_[ES6]_** Typed Arrays](./2.%20Data%20Structures/Arrays/20-typed-arrays.md)
+- [Which data structure to use?](./2.%20Data%20Structures/00-which-ds-to-use.md)
 
 ## Functions
 

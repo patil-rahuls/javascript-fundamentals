@@ -8,27 +8,29 @@ In Objects keys can only be strings (without quotes), but in Maps, keys can be a
 
 ### Objects as Keys in Maps
 
-Retrieving data from map when key is an array/object.
-
-```javascript
-myMap.set([1, 2], "Test");
-
-myMap.get([1, 2]);
-// undefined.
-```
-
-Due to incorrect referencing the array `[1,2]` passed to `myMap.get()` and the array used in `myMap.set()` are at different locations in Heap.
-
+> _Retrieving data from map when key is an array/object._
+> 
+> ```javascript
+> myMap.set([1, 2], "Test");
+> 
+> myMap.get([1, 2]);
+> // undefined.
+> ```
+>
+> _In the above example, due to incorrect referencing the array `[1,2]` passed to `myMap.get()` and the array used in `myMap.set()` are at different locations in Heap._
+>
 > Correct way:
+>
+> ```javascript
+> const arr = [1, 2];
+> 
+> myMap.set(arr, "Test");
+> 
+> myMap.get(arr);
+> ```
+> _Now the 'arr' passed in both myMap.set() and myMap.get() refer to the same location in Heap._
 
-```javascript
-const arr = [1, 2];
-
-myMap.set(arr, "Test");
-
-myMap.get(arr);
-// Now the 'arr' passed in both myMap.set() and myMap.get() refer to the same location in Heap.
-```
+&nbsp;
 
 ---
 
@@ -36,8 +38,10 @@ myMap.get(arr);
 
 <!-- PAGINATION_START -->
 
-**Parent:** [Maps](..)  
-**Previous:** [Data Structures > Maps > Maps Conversion](04-maps-conversion.md)  
-**Next:** [Data Structures > Objects > Objects](../Objects/01-objects.md)
+**Parent:** [Data Structures](../../2.%20Data%20Structures/) → [Maps](../Maps/)
+  
+**Previous:** ← [Data Structures > Maps > Maps Conversion](04-maps-conversion.md)  
+
+**Next:** → [Data Structures > Objects](../Objects/)
 
 <!-- PAGINATION_END -->

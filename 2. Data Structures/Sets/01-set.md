@@ -9,9 +9,9 @@ console.log(names);
 // set(3) {'hitesh', 'aajesh' , 'rahul'}
 ```
 
-While defining duplicates can be added, but it boils down to an unordered set of unique values.
+_While defining duplicates can be added, but it boils down to an unordered set of unique values._
 
-Mixed data type are allowed. (Heterogenous elements)
+_Mixed data type are allowed. (Heterogenous elements)._
 
 > Size of a Set:
 >
@@ -22,14 +22,17 @@ Mixed data type are allowed. (Heterogenous elements)
 >
 > It gives _unique_ count, hence its called _size_, and not _length_ unlike arrays because arrays can have duplicate values.
 
+&nbsp;
 ---
 
 ---
 
 <!-- PAGINATION_START -->
 
-**Parent:** [Sets](..)  
-**Previous:** [Data Structures > Objects > Object Comparision](../Objects/13-object-comparision.md)  
-**Next:** [Data Structures > Sets > Set Methods](02-set-methods.md)
+**Parent:** [Data Structures](../../2.%20Data%20Structures/) → [Sets](../Sets/)  
+
+**Previous:** ← [Data Structures > Objects](../Objects/)  
+
+**Next:** → [Data Structures > Sets > Set Methods](02-set-methods.md)
 
 <!-- PAGINATION_END -->

@@ -6,11 +6,11 @@
 
 > **_Retrieve the index of the element that satisfies a certain condition written in the callback function._**
 >
-> **_The callback function returns a boolean value._**
->
 > **_Checks for an expression._**
 
-Method signature is similar to the `forEach()` method.
+_The callback function returns a boolean value._
+
+_Method signature is similar to the `forEach()` method._
 
 ```javascript
 const accounts = [
@@ -41,15 +41,17 @@ console.log(fetchedAccount);
 // indexOf() checks for equality.
 // findIndex() checks for an expression.
 ```
-
+&nbsp;
 ---
 
 ---
 
 <!-- PAGINATION_START -->
 
-**Parent:** [Arrays](..)  
-**Previous:** [Data Structures > Arrays > Array Element Index of](14-array-element-indexOf.md)  
-**Next:** [Data Structures > Arrays > Array Value Reduce](16-array-value-reduce.md)
+**Parent:** [Data Structures](../../2.%20Data%20Structures/) → [Arrays](../Arrays/)
+  
+**Previous:** ← [Data Structures > Arrays > Array Element Index of](14-array-element-indexOf.md)  
+
+**Next:** → [Data Structures > Arrays > Array Value Reduce](16-array-value-reduce.md)
 
 <!-- PAGINATION_END -->

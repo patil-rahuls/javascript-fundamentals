@@ -17,14 +17,17 @@ console.log(newArr);
 const newArr2 = [...arr1, ...arr2];
 ```
 
+&nbsp; 
 ---
 
 ---
 
 <!-- PAGINATION_START -->
 
-**Parent:** [Arrays](..)  
-**Previous:** [Data Structures > Arrays > Array Slice](03-array-array-slice.md)  
-**Next:** [Data Structures > Arrays > Array Flat](05-array-array-flat.md)
+**Parent:** [Data Structures](../../2.%20Data%20Structures/) → [Arrays](../Arrays/)
+  
+**Previous:** ← [Data Structures > Arrays > Array Slice](03-array-array-slice.md)  
+
+**Next:** → [Data Structures > Arrays > Array Flat](05-array-array-flat.md)
 
 <!-- PAGINATION_END -->

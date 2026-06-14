@@ -6,9 +6,9 @@
 
 Flattens the nested arrays into one single array.
 
-> `arr.flat (depthArgument)`
-
-_`depthArgument` is optional and is used to provide the depth of the nesting._
+> **arr.flat ( depthArgument )**
+> 
+> _`depthArgument` is optional and is used to provide the depth of the nesting._
 
 ```javascript
 const arr = [[1, 2, 3, 4], 5, 6, [7, 8], 9, 10];
@@ -30,6 +30,8 @@ console.log(arr2.flat(2));
 
 &nbsp;
 
+_(Optional Read)_
+
 > Calculate Depth of a nested array
 
 ```javascript
@@ -49,14 +51,18 @@ console.log(depth);
 // 3
 ```
 
+&nbsp;
+
 ---
 
 ---
 
 <!-- PAGINATION_START -->
 
-**Parent:** [Arrays](..)  
-**Previous:** [Data Structures > Arrays > Array Concat](04-array-array-concat.md)  
-**Next:** [Data Structures > Arrays > Array Flatmap](06-array-array-flatmap.md)
+**Parent:** [Data Structures](../../2.%20Data%20Structures/) → [Arrays](../Arrays/)
+  
+**Previous:** ← [Data Structures > Arrays > Array Concat](04-array-array-concat.md)  
+
+**Next:** → [Data Structures > Arrays > Array Flatmap](06-array-array-flatmap.md)
 
 <!-- PAGINATION_END -->

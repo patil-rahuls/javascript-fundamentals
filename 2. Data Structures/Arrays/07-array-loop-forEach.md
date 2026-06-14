@@ -40,14 +40,17 @@ Disadvantages of using `forEach()`:
 
 `break` and `continue` does not work! So if you need to break out of the loop, then use the `for-of` loop.
 
+&nbsp;
 ---
 
 ---
 
 <!-- PAGINATION_START -->
 
-**Parent:** [Arrays](..)  
-**Previous:** [Data Structures > Arrays > Array Flatmap](06-array-array-flatmap.md)  
-**Next:** [Data Structures > Arrays > Array Filter](08-array-array-filter.md)
+**Parent:** [Data Structures](../../2.%20Data%20Structures/) → [Arrays](../Arrays/)
+  
+**Previous:** ← [Data Structures > Arrays > Array Flatmap](06-array-array-flatmap.md)  
+
+**Next:** → [Data Structures > Arrays > Array Filter](08-array-array-filter.md)
 
 <!-- PAGINATION_END -->

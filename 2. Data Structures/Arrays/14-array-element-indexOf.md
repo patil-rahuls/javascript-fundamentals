@@ -20,15 +20,17 @@ myArr.indexOf("milan");
 myArr.indexOf("55");
 // -1 (string ‘55’ is passed. No Type Coercion occurs)
 ```
-
+&nbsp;
 ---
 
 ---
 
 <!-- PAGINATION_START -->
 
-**Parent:** [Arrays](..)  
-**Previous:** [Data Structures > Arrays > Array Element Find](13-array-element-find.md)  
-**Next:** [Data Structures > Arrays > Array Element Find Index](15-array-element-findIndex.md)
+**Parent:** [Data Structures](../../2.%20Data%20Structures/) → [Arrays](../Arrays/)
+  
+**Previous:** ← [Data Structures > Arrays > Array Element Find](13-array-element-find.md)  
+
+**Next:** → [Data Structures > Arrays > Array Element Find Index](15-array-element-findIndex.md)
 
 <!-- PAGINATION_END -->

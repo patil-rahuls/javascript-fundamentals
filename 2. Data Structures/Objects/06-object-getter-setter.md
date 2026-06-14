@@ -2,12 +2,12 @@
 
 ### Object Getter & Setter
 
-> **Every Object in Javascript has two important properies :**
->
-> - **getter** "get"
-> - **setter** "set"
->
-> **IMP: Remember! they are "properties", not "methods"**
+Every Object in Javascript has two important properies:
+
+- **getter** "get"
+- **setter** "set"
+
+_IMP: Remember! they are "properties", not "methods"_
 
 ```javascript
 const myObj = {
@@ -36,14 +36,18 @@ myObj.info = "P";
 
 **_I know 'info' here is a property and not function, but at the end, what we get is a 'functionality' out of it !!_**
 
+&nbsp;
+
 ---
 
 ---
 
 <!-- PAGINATION_START -->
 
-**Parent:** [Objects](..)  
-**Previous:** [Data Structures > Objects > Object Delete Properties](05-object-delete-properties.md)  
-**Next:** [Data Structures > Objects > Object This Keyword](07-object-this-keyword.md)
+**Parent:** [Data Structures](../../2.%20Data%20Structures/) → [Objects](../Objects/)
+  
+**Previous:** ← [Data Structures > Objects > Object Delete Properties](05-object-delete-properties.md)  
+
+**Next:** → [Data Structures > Objects > Object This Keyword](07-object-this-keyword.md)
 
 <!-- PAGINATION_END -->

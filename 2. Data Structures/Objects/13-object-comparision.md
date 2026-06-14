@@ -36,7 +36,9 @@ JSON.stringify(x) === JSON.stringify(y);
 
 &nbsp;
 
-> Excercise - Create a function to compare any number of objects. The properties in the objects can be in any order.
+_(Optional Read)_
+
+> Excercise - _Create a function to compare any number of objects. The properties in the objects can be in any order._
 
 ```javascript
 x = { name: "Rahul", age: 29 };
@@ -92,14 +94,18 @@ function areEqual(...objArr) {
 }
 ```
 
+&nbsp;
+
 ---
 
 ---
 
 <!-- PAGINATION_START -->
 
-**Parent:** [Objects](..)  
-**Previous:** [Data Structures > Objects > Object Clones](12-object-clones.md)  
-**Next:** [Data Structures > Sets > Set](../Sets/01-set.md)
+**Parent:** [Data Structures](../../2.%20Data%20Structures/) → [Objects](../Objects/)
+  
+**Previous:** ← [Data Structures > Objects > Object Clones](12-object-clones.md)  
+
+**Next:** → [Data Structures > Sets](../Sets/)
 
 <!-- PAGINATION_END -->

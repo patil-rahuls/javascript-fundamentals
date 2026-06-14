@@ -4,9 +4,7 @@ Maps are high performance key - value paired data structure.
 
 In Objects keys can only be strings (without quotes), but in Maps, keys can be any type.
 
-More here : https://dmitripavlutin.com/maps-vs-plain-objects-javascript/
-
-> `new Map([ [k , v], [k , v], [k , v] , ...]);`
+> **new Map([ [k , v], [k , v], [k , v] , ...]);**
 
 > Example 1
 
@@ -55,9 +53,9 @@ console.log(question);
 
 > #### 1. Map preserves the key type.
 
-That's the map's main benefit.
+_That's the map's main benefit._
 
-Observe this object with properties as number type.
+_Observe this object with properties as number type._
 
 ```javascript
 const myObj = {
@@ -66,40 +64,40 @@ const myObj = {
 };
 ```
 
-Now we log and check the datatype of the properties of this object.
-
-```javascript
-for (const property in myObj) {
-  console.log(typeof property);
-}
-// 'string'
-// 'string'
-```
-
-The properties i.e. `1`, `2` were converted to strings.
+> _Now we log and check the datatype of the properties of this object._
+>
+> ```javascript
+> for (const property in myObj) {
+>   console.log(typeof property);
+> }
+> // 'string'
+> // 'string'
+> ```
+> 
+> _The properties i.e. `1`, `2` were converted to strings._
 
 _**Implicit conversion of keys is tricky because you lose the consistency of the types.**_
 
-But if you use a number as a key inside a map, it will remain a number:
-
-```javascript
-const numbersMap = new Map();
-
-numbersMap.set(1, "one");
-numbersMap.set(2, "two");
-
-[...numbersMap.keys()];
-// => [1, 2]
-
-typeof [...numbersMap.keys()][0];
-// 'number'
-```
+> _But if you use a number as a key inside a map, it will remain a number:_
+>
+> ```javascript
+> const numbersMap = new Map();
+> 
+> numbersMap.set(1, "one");
+> numbersMap.set(2, "two");
+> 
+> [...numbersMap.keys()];
+> // => [1, 2]
+> 
+> typeof [...numbersMap.keys()][0];
+> // 'number'
+> ```
 
 &nbsp;
 
 > #### 2. When using Objects as Keys.
 >
-> When you need to store some object-related data, without attaching this data on the object itself.
+> _When you need to store some object-related data, without attaching this data on the object itself._
 
 ```javascript
 const foo = { name: "foo" };
@@ -111,14 +109,19 @@ const kindOfMap = [
 ];
 ```
 
+More here : https://dmitripavlutin.com/maps-vs-plain-objects-javascript/
+
+&nbsp;
 ---
 
 ---
 
 <!-- PAGINATION_START -->
 
-**Parent:** [Maps](..)  
-**Previous:** [Data Structures > Arrays > Typed Arrays](../Arrays/20-typed-arrays.md)  
-**Next:** [Data Structures > Maps > Map Methods](02-map-methods.md)
+**Parent:** [Data Structures](../../2.%20Data%20Structures/) → [Maps](../Maps/)
+
+**Previous:** ← [Data Structures > Arrays](../Arrays/)  
+
+**Next:** → [Data Structures > Maps > Map Methods](02-map-methods.md)
 
 <!-- PAGINATION_END -->

@@ -24,15 +24,17 @@ myArr.includes("55");
 // false
 // Because string ‘55’ is passed.
 ```
-
+&nbsp;
 ---
 
 ---
 
 <!-- PAGINATION_START -->
 
-**Parent:** [Arrays](..)  
-**Previous:** [Data Structures > Arrays > Array Elements Every](11-array-elements-every.md)  
-**Next:** [Data Structures > Arrays > Array Element Find](13-array-element-find.md)
+**Parent:** [Data Structures](../../2.%20Data%20Structures/) → [Arrays](../Arrays/)
+  
+**Previous:** ← [Data Structures > Arrays > Array Elements Every](11-array-elements-every.md)  
+
+**Next:** → [Data Structures > Arrays > Array Element Find](13-array-element-find.md)
 
 <!-- PAGINATION_END -->

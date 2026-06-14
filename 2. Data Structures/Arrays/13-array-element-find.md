@@ -10,7 +10,7 @@
 >
 > **_Checks for an expression._**
 
-Method signature is similar to the `forEach()` method.
+_Method signature is similar to the `forEach()` method._
 
 ```javascript
 const myArr = [55, "rahul", "hitesh", "aajesh"];
@@ -21,9 +21,9 @@ console.log(foundNum);
 // 55
 ```
 
-**`find()` method does not return an array.**
+_`find()` method does not return an array._
 
-**Instead it returns THE FIRST ELEMENT which satisfies the condition in the callback function.**
+_Instead it returns THE FIRST ELEMENT which satisfies the condition in the callback function._
 
 > Another example:
 
@@ -47,15 +47,17 @@ console.log(account);
 // filter() returns an array
 // find() returns an element
 ```
-
+&nbsp;
 ---
 
 ---
 
 <!-- PAGINATION_START -->
 
-**Parent:** [Arrays](..)  
-**Previous:** [Data Structures > Arrays > Array Element Includes](12-array-element-includes.md)  
-**Next:** [Data Structures > Arrays > Array Element Index of](14-array-element-indexOf.md)
+**Parent:** [Data Structures](../../2.%20Data%20Structures/) → [Arrays](../Arrays/)
+  
+**Previous:** ← [Data Structures > Arrays > Array Element Includes](12-array-element-includes.md)  
+
+**Next:** → [Data Structures > Arrays > Array Element Index of](14-array-element-indexOf.md)
 
 <!-- PAGINATION_END -->

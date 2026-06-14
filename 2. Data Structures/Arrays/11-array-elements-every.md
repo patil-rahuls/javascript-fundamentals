@@ -8,7 +8,7 @@
 >
 > **_Returns `true` ONLY if ALL the elements of the array satisfy the condition. Hence the name 'every'._**
 
-Method signature is similar to the `forEach()` method.
+_Method signature is similar to the `forEach()` method._
 
 ```javascript
 const txn = [1900, -99000, 10000, -178000, 78000];
@@ -33,15 +33,17 @@ txn.some(deposits);
 // Filter positive transactions.
 txn.filter(deposits);
 ```
-
+&nbsp;
 ---
 
 ---
 
 <!-- PAGINATION_START -->
 
-**Parent:** [Arrays](..)  
-**Previous:** [Data Structures > Arrays > Array Elements Some](10-array-elements-some.md)  
-**Next:** [Data Structures > Arrays > Array Element Includes](12-array-element-includes.md)
+**Parent:** [Data Structures](../../2.%20Data%20Structures/) → [Arrays](../Arrays/)
+  
+**Previous:** ← [Data Structures > Arrays > Array Elements Some](10-array-elements-some.md)  
+
+**Next:** → [Data Structures > Arrays > Array Element Includes](12-array-element-includes.md)
 
 <!-- PAGINATION_END -->

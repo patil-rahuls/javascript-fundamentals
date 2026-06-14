@@ -36,14 +36,17 @@
 >
 > Use when you simply need to map keys to values.
 
+&nbsp;
 ---
 
 ---
 
 <!-- PAGINATION_START -->
 
-**Parent:** [2. Data Structures](..)  
-**Previous:** [2. Data Structures > WeakMap-WeakSets](./WeakMap-WeakSet/01-memory-leak.md)
-**Next:** [3. Functions > Default Parameters](../3.%20Functions/01-default-params.md)
+**Parent:** [Data Structures](../2.%20Data%20Structures/)
+
+**Previous:** ← [Data Structures > WeakMap-WeakSets](./WeakMap-WeakSet/01-memory-leak.md)
+
+**Next:** → [Functions](../3.%20Functions/)
 
 <!-- PAGINATION_END -->

@@ -358,6 +358,6 @@ document.querySelector(".myButton").addEventListener("click", myFunc());
 
 **Previous:** ← [Console Methods](16-console.md)  
 
-**Next:** → [2. Data Structures](../2.%20Data%20Structures/)
+**Next:** → [Data Structures](../2.%20Data%20Structures/)
 
 <!-- PAGINATION_END -->

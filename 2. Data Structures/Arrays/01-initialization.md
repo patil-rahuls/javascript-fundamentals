@@ -16,39 +16,39 @@
 
 3.  Using static method `Array.from()`
 
-        `Array` is a constructor function and `from()` is `Array`'s static function.
+    `Array` is a constructor function and `from()` is `Array`'s static function.
 
-        ```javascript
-        const num = Array.from({length : 7} , () => 1);
-        // [1, 1, 1, 1, 1, 1, 1]
+    ```javascript
+    const num = Array.from({length : 7} , () => 1);
+    // [1, 1, 1, 1, 1, 1, 1]
 
-        const numSerial = Array.from({length : 7} , (curr , i ) => i+1);
-        // [1, 2, 3, 4, 5, 6, 7]
+    const numSerial = Array.from({length : 7} , (curr , i ) => i+1);
+    // [1, 2, 3, 4, 5, 6, 7]
 
-        // We can omit the 'curr' parameter
-        // above and rewrite the expression as :
-        const numSerial2 = Array.from({length : 7} , ( _ , i ) => i+1);
+    // We can omit the 'curr' parameter
+    // above and rewrite the expression as :
+    const numSerial2 = Array.from({length : 7} , ( _ , i ) => i+1);
 
 
-        // Select all of the HTML elements
-        // that has a specific class name
-        const users = Array.from(document.querySelectorAll('.user_name'));
+    // Select all of the HTML elements
+    // that has a specific class name
+    const users = Array.from(document.querySelectorAll('.user_name'));
 
-        ```
+    ```
 
-        > Arrays in JavaScript may be homogeneous or heterogeneous.
-        >
-        > _i.e. composed of just one data type(homogeneous), or a mix of data type (heterogeneous)._
-        >
-        > ```javascript
-        > const heterogeneousArr = ["rahul", "hitesh", > 1990 - 1000];
-        >
-        > // In fact, arrays can even have other arrays as their elements.
-        > const newArr = ['Planes', 'Bus', 'Cars', heterogeneousArr];
-        >
-        >```
+> Arrays in JavaScript may be homogeneous or heterogeneous.
+>
+> _i.e. composed of just one data type(homogeneous), or mix of data type (heterogeneous)._
+>
+> ```javascript
+> const heterogeneousArr = ["rahul", "hitesh", 1990 1000];
+>
+> // In fact, arrays can even have other arrays as theielements.
+> const newArr = ['Planes', 'Bus', 'Cars'heterogeneousArr];
+>
+> ```
 
-    &nbsp;
+&nbsp;
 
 ### Length of an Array
 
@@ -60,7 +60,8 @@ console.log(myArr[myArr.length - 1]);
 // expressions are allowed inside [ ]
 
 console.log(typeof myArr);
-// "object" because Array is special type of Object.
+// "object" because Array is 
+// a special type of Object.
 ```
 
 &nbsp;
@@ -101,14 +102,17 @@ console.log(typeof removedItem);
 // filter() or map() methods can also be used.
 ```
 
+&nbsp;
 ---
 
 ---
 
 <!-- PAGINATION_START -->
 
-**Parent:** [Arrays](..)  
-**Previous:** [1. Basics > DOM Manipulation](../../1.%20Basics/17-DOM-manipulation.md)  
-**Next:** [Data Structures > Arrays > Mutate Arrays](02-mutate-arrays.md)
+**Parent:** [Data Structures](../../2.%20Data%20Structures/) → [Arrays](../Arrays/)
+
+**Previous:** ← [Basics](../../1.%20Basics/)  
+
+**Next:** → [Data Structures > Arrays > Mutate Arrays](02-mutate-arrays.md)
 
 <!-- PAGINATION_END -->

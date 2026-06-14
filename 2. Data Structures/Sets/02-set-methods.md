@@ -16,85 +16,84 @@ console.log(names);
 &nbsp;
 
 > ### `Set.prototype.add()`
->
-> _In Map we have `map.set()` method.
-> That's the only distinction in their methods. Rest all the methods are same._
-
-```javascript
-names.add("anil");
-names.add("milan");
-
-console.log(names);
-// set(5) {'hitesh', 'aajesh' , 'rahul', 'anil', 'milan'}
-
-names.add("kisan");
-names.add("kisan");
-// Will get added only once (Set has to have unique values)
-
-console.log(names);
-// set(6) {'hitesh', 'aajesh' , 'rahul', 'anil', 'milan', 'kisan'}
-```
+> 
+> _In Map we have `map.set()` method. That's the only distinction in their methods. Rest all the methods are same._
+> 
+> ```javascript
+> names.add("anil");
+> names.add("milan");
+> 
+> console.log(names);
+> // set(5) {'hitesh', 'aajesh' , 'rahul', 'anil', 'milan'}
+> 
+> names.add("kisan");
+> names.add("kisan");
+> // Will get added only once (Set has to have unique values)
+> 
+> console.log(names);
+> // set(6) {'hitesh', 'aajesh' , 'rahul', 'anil', 'milan', 'kisan'}
+> ```
 
 &nbsp;
 
 > ### `Set.prototype.has()`
 >
-> Checks if an element exists in a Set.
-
-```javascript
-names.has("anil");
-// false
-
-names.has("hitesh");
-// true
-```
+> _Checks if an element exists in a Set._
+> 
+> ```javascript
+> names.has("anil");
+> // false
+> 
+> names.has("hitesh");
+> // true
+> ```
 
 &nbsp;
 
 > ### `Set.prototype.delete()`
 >
-> Delete item from Set.
-
-```javascript
-names.delete("kisan");
-
-console.log(names);
-// set(5) {'hitesh', 'aajesh' , 'rahul', 'anil', 'milan'}
-```
+> _Delete item from Set._
+> 
+> ```javascript
+> names.delete("kisan");
+> 
+> console.log(names);
+> // set(5) {'hitesh', 'aajesh' , 'rahul', 'anil', 'milan'}
+> ```
 
 &nbsp;
 
 > ### `Set.prototype.clear()`
 >
-> Empty/Truncate the Set.
-
-```javascript
-names.clear();
-```
+> _Empty/Truncate the Set._
+> 
+> ```javascript
+> names.clear();
+> ```
 
 &nbsp;
 
 > ### `Set.prototype.keys()`
-
-```javascript
-names.keys();
-```
+> 
+> ```javascript
+> names.keys();
+> ```
 
 &nbsp;
 
 > ### `Set.prototype.values()`
-
-```javascript
-names.values();
-```
+> 
+> ```javascript
+> names.values();
+> ```
 
 &nbsp;
 
 > ### `Set.prototype.entries()`
-
-```javascript
-names.entries();
-```
+> 
+> ```javascript
+> names.entries();
+> ```
 
 ---
 
@@ -104,14 +103,17 @@ names.entries();
 
 **_When using Sets, we just care about uniqueness and whether the item is present or not(in the Set)._**
 
+&nbsp;
 ---
 
 ---
 
 <!-- PAGINATION_START -->
 
-**Parent:** [Sets](..)  
-**Previous:** [Data Structures > Sets > Set](01-set.md)  
-**Next:** [Data Structures > Sets > Set Iteration](03-set-iteration.md)
+**Parent:** [Data Structures](../../2.%20Data%20Structures/) → [Sets](../Sets/)  
+
+**Previous:** ← [Data Structures > Sets > Set](01-set.md)  
+
+**Next:** → [Data Structures > Sets > Set Iteration](03-set-iteration.md)
 
 <!-- PAGINATION_END -->

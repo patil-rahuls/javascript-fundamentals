@@ -50,14 +50,17 @@ myObj.greet("Reader"); // Easy to read
 myObj["greet"]("Reader"); // Difficult to read
 ```
 
+&nbsp;
 ---
 
 ---
 
 <!-- PAGINATION_START -->
 
-**Parent:** [Objects](..)  
-**Previous:** [Data Structures > Objects > Object Retrieve Properties](03-object-retrieve-properties.md)  
-**Next:** [Data Structures > Objects > Object Delete Properties](05-object-delete-properties.md)
+**Parent:** [Data Structures](../../2.%20Data%20Structures/) → [Objects](../Objects/)
+  
+**Previous:** ← [Data Structures > Objects > Object Retrieve Properties](03-object-retrieve-properties.md)  
+
+**Next:** → [Data Structures > Objects > Object Delete Properties](05-object-delete-properties.md)
 
 <!-- PAGINATION_END -->

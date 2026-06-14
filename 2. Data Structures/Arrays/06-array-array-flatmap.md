@@ -5,8 +5,8 @@
 ### `Array.prototype.flatmap()` [ES 2019]
 
 > `map()` first and then `flat()` the result.
-
-_Better performance._
+>
+> _Better performance._
 
 ```javascript
 // Old way:
@@ -23,14 +23,17 @@ const totalUsersWalletBalance2 = accounts
 **_IMP: `flatMap()` goes only one level deep.
 Hence if you need to go deeper, then you still need to use the `flat()` method separately with depth argument._**
 
+&nbsp;
 ---
 
 ---
 
 <!-- PAGINATION_START -->
 
-**Parent:** [Arrays](..)  
-**Previous:** [Data Structures > Arrays > Array Flat](05-array-array-flat.md)  
-**Next:** [Data Structures > Arrays > Array Loop for Each](07-array-loop-forEach.md)
+**Parent:** [Data Structures](../../2.%20Data%20Structures/) → [Arrays](../Arrays/)
+  
+**Previous:** ← [Data Structures > Arrays > Array Flat](05-array-array-flat.md)  
+
+**Next:** → [Data Structures > Arrays > Array Loop for Each](07-array-loop-forEach.md)
 
 <!-- PAGINATION_END -->

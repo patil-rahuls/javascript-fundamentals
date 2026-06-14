@@ -23,7 +23,7 @@ console.log(result);
 
 > **_Joins an array items into a string using the provided delimeter._**
 
-> **_IMP: By default comma `,` will be the delimeter._**
+By default comma `,` will be the delimeter._
 
 ```javascript
 const arr = [11, 22, 33, 44, 55, 66];
@@ -47,14 +47,17 @@ console.log(typeof result);
 // same for result2 and result2.
 ```
 
+&nbsp;
 ---
 
 ---
 
 <!-- PAGINATION_START -->
 
-**Parent:** [Arrays](..)  
-**Previous:** [Data Structures > Arrays > Array Value Reduce](16-array-value-reduce.md)  
-**Next:** [Data Structures > Arrays > Array Methods Chaining](18-array-methods-chaining.md)
+**Parent:** [Data Structures](../../2.%20Data%20Structures/) → [Arrays](../Arrays/)
+  
+**Previous:** ← [Data Structures > Arrays > Array Value Reduce](16-array-value-reduce.md)  
+
+**Next:** → [Data Structures > Arrays > Array Methods Chaining](18-array-methods-chaining.md)
 
 <!-- PAGINATION_END -->

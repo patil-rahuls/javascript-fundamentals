@@ -4,7 +4,7 @@
 
 > **_The array transformation methods like `map()`, `filter()`, `reduce()` can be chained together._**
 
-Method Chaining forms something called as _pipeline_.
+_Method Chaining forms something called as _pipeline_._
 
 ```javascript
 const arr = [122, 24, 355, -55, 780, -999];
@@ -20,10 +20,9 @@ console.log(transformedData);
 // 1409.1000000000004
 ```
 
-But if any error occurs, it's hard to guess from where that error came in this pipeline.
+_But if any error occurs, it's hard to guess from where that error came in this pipeline._
 
-To monitor errors we can check arrays returned at each step
-in this pipeline.
+_To monitor errors we can check arrays returned at each step in this pipeline._
 
 _Remember, we have the third parameter in the callback function of each of these methods which gives the entire array._
 
@@ -45,19 +44,22 @@ console.log(transformedData2);
 // 1409.1000000000004
 ```
 
-> Remarks about chaining:
+> _Remarks about chaining:_
 >
-> - Never overuse chaining. It can cause real performance issues if we have really huge arrays.
-> - Be careful when chaining methods that mutate the underlying arrays (like `splice()` or `reverse()`) in large applications.
+> - _Never overuse chaining. It can cause real performance issues if we have really huge arrays._
+> - _Be careful when chaining methods that mutate the underlying arrays (like `splice()` or `reverse()`) in large applications._
 
+&nbsp;
 ---
 
 ---
 
 <!-- PAGINATION_START -->
 
-**Parent:** [Arrays](..)  
-**Previous:** [Data Structures > Arrays > Array String Split Join](17-array-string-split-join.md)  
-**Next:** [Data Structures > Arrays > Which Array Method to Use](19-which-array-method-to-use.md)
+**Parent:** [Data Structures](../../2.%20Data%20Structures/) → [Arrays](../Arrays/)
+  
+**Previous:** ← [Data Structures > Arrays > Array String Split Join](17-array-string-split-join.md)  
+
+**Next:** → [Data Structures > Arrays > Which Array Method to Use](19-which-array-method-to-use.md)
 
 <!-- PAGINATION_END -->

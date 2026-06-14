@@ -58,14 +58,18 @@ john = null;
 
 > size of `visitsCountWeakMap` -> `0`
 
----
+&nbsp;
 
 ---
 
-<!-- PAGINATION_START -->
+---
 
-**Parent:** [WeakMap-WeakSet](..)  
-**Previous:** [Data Structures > Sets > Set Use Case](../Sets/04-set-use-case.md)  
-**Next:** [2. Data Structures > Which DS to Use](../00-which-ds-to-use.md)
+<!-- PAGINATION_START -->  
+
+**Parent:** [Data Structures](../../2.%20Data%20Structures/) → [WeakMap-WeakSet](..)
+
+**Previous:** ← [Data Structures > Sets](../Sets/)
+
+**Next:** → [Data Structures > Which DS to Use](../00-which-ds-to-use.md)
 
 <!-- PAGINATION_END -->

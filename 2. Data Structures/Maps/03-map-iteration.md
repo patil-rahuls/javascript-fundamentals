@@ -58,14 +58,17 @@ Disadvantages of using `forEach()`:
 
 `break` and `continue` does not work! So if you need to break out of the loop, then use the `for-of` loop.
 
+&nbsp;
 ---
 
 ---
 
 <!-- PAGINATION_START -->
 
-**Parent:** [Maps](..)  
-**Previous:** [Data Structures > Maps > Map Methods](02-map-methods.md)  
-**Next:** [Data Structures > Maps > Maps Conversion](04-maps-conversion.md)
+**Parent:** [Data Structures](../../2.%20Data%20Structures/) → [Maps](../Maps/)
+  
+**Previous:** ← [Data Structures > Maps > Map Methods](02-map-methods.md)  
+
+**Next:** → [Data Structures > Maps > Maps Conversion](04-maps-conversion.md)
 
 <!-- PAGINATION_END -->

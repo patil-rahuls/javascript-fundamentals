@@ -4,11 +4,11 @@
 
 ### `Array.prototype.map()` - Array data transformation method
 
-A big advantage of using these functions over traditional loops is that we can chain these functions together.
+_A big advantage of using these functions over traditional loops is that we can chain these functions together._
 
 > **_`map()` method transforms data in each iteration without changing/mutating the orignal array._**
 
-Method signature is similar to the `forEach()` method.
+_Method signature is similar to the `forEach()` method._
 
 ```javascript
 const numbers = [2, 4, 3, 0, 10, 20, 30, 40];
@@ -45,15 +45,17 @@ console.log(newArr);
 ]
 */
 ```
-
+&nbsp;
 ---
 
 ---
 
 <!-- PAGINATION_START -->
 
-**Parent:** [Arrays](..)  
-**Previous:** [Data Structures > Arrays > Array Filter](08-array-array-filter.md)  
-**Next:** [Data Structures > Arrays > Array Elements Some](10-array-elements-some.md)
+**Parent:** [Data Structures](../../2.%20Data%20Structures/) → [Arrays](../Arrays/)
+  
+**Previous:** ← [Data Structures > Arrays > Array Filter](08-array-array-filter.md)  
+
+**Next:** → [Data Structures > Arrays > Array Elements Some](10-array-elements-some.md)
 
 <!-- PAGINATION_END -->

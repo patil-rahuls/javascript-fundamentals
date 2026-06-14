@@ -57,14 +57,17 @@ console.log(person);
 */
 ```
 
+&nbsp;
 ---
 
 ---
 
 <!-- PAGINATION_START -->
 
-**Parent:** [Objects](..)  
-**Previous:** [Data Structures > Objects > Object Freeze](10-object-freeze.md)  
-**Next:** [Data Structures > Objects > Object Clones](12-object-clones.md)
+**Parent:** [Data Structures](../../2.%20Data%20Structures/) → [Objects](../Objects/)
+  
+**Previous:** ← [Data Structures > Objects > Object Freeze](10-object-freeze.md)  
+
+**Next:** → [Data Structures > Objects > Object Clones](12-object-clones.md)
 
 <!-- PAGINATION_END -->
