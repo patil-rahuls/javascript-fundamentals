@@ -8,6 +8,31 @@ _If a function is being called 100 times per second (like a user scrolling or a 
 >
 > _For e.g. rendering a real time graph and sending its data to some server/logger service._
 
+```javascript
+// A Higher Order Function that returns
+// a throttled version of another function
+function throttle(func, limit) {
+  let isThrottled;
+
+  return function(...args) {
+    if (!isThrottled) {
+      func.apply(this, args);
+      isThrottled = true;
+      setTimeout(() => isThrottled = false, limit);
+    }
+  }
+}
+
+// Usage:
+// 1. The function you want to throttle
+function getData() {
+  // ... some fetch logic
+}
+
+// 2. Wrap it in the throttle function
+const throttledGetData = throttle(getData, 2000);
+
+```
 ---
 
 &nbsp;
@@ -88,9 +113,9 @@ You don't want to hit your database for "J", then "Ja", then "Jas"... for every 
 
 <!-- PAGINATION_START -->
 
-**Parent:** [3. Functions](../3.%20Functions/)  
+**Parent:** [3. Functions](../3.%20Functions/)
 
-**Previous:** ← [Debouncing](15-debouncing.md)  
+**Previous:** ← [Debouncing](15-debouncing.md)
 
 **Next:** → [`Number` & `Date`](17-Number-date-optional.md)
 
