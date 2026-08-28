@@ -1,35 +1,29 @@
-## Data Structures > ARRAY
+## Data Structures > Array > Return new Array > _map()_
 
-> Array to new Array
+### Array.prototype.**map()**
 
-### `Array.prototype.map()` - Array data transformation method
+_A big advantage of using these array data transformation methods over traditional loops is that we can chain these functions together._
 
-_A big advantage of using these functions over traditional loops is that we can chain these functions together._
+**map()** method transforms data in each iteration without changing/mutating the orignal array.
 
-> **_`map()` method transforms data in each iteration without changing/mutating the orignal array._**
-
-_Method signature is similar to the `forEach()` method._
+_Method signature is similar to the **forEach()** method._
 
 ```javascript
 const numbers = [2, 4, 3, 0, 10, 20, 30, 40];
 const power = 3;
 
-const newValues = numbers.map(function (val) {
-  return val ** power;
-  // modify each item and put in new array
-});
-// arrow fn
-// const newValues2 = numbers.map(mov => mov * power);
+const newValues = numbers.map(val => val ** power);
 
-console.log(numbers);
-// [2, 4, 3, 0, 10, 20, 30, 40]
+// numbers = [2, 4, 3, 0, 10, 20, 30, 40]
 
-console.log(newValues);
-// [8, 64, 27, 0, 1000, 8000, 27000, 64000]
+// newValues = [8, 64, 27, 0, 1000, 8000, 27000, 64000]
 
-// Just like forEach(), map() also has 3 three parameters.
+```
+
+Just like forEach(), map() also has 3 three parameters.
+```javascript
 const newArr = numbers.map((curr, key, arr) => {
-  return `${key} : ${curr}`;
+  return **${key} : ${curr}**;
 });
 
 console.log(newArr);
@@ -44,18 +38,17 @@ console.log(newArr);
   "7 : 40"
 ]
 */
+
 ```
+---
 &nbsp;
----
-
----
-
 <!-- PAGINATION_START -->
 
-**Parent:** [Data Structures](../../2.%20Data%20Structures/) → [Arrays](../Arrays/)
+📁 [Data Structures](../../2.%20Data%20Structures/) → [Arrays](../Arrays/)
   
-**Previous:** ← [Data Structures > Arrays > Array Filter](08-array-array-filter.md)  
+◀️ [Data Structures > Arrays > Array Filter](08-array-array-filter.md)  
 
-**Next:** → [Data Structures > Arrays > Array Elements Some](10-array-elements-some.md)
+▶️ [Data Structures > Arrays > Array Elements Some](10-array-elements-some.md)
 
 <!-- PAGINATION_END -->
+&nbsp;

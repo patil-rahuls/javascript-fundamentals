@@ -1,12 +1,12 @@
-## Data Structures > Maps
+## Data Structures > Map 
 
 Maps are high performance key - value paired data structure.
 
 In Objects keys can only be strings (without quotes), but in Maps, keys can be any type.
 
-> **new Map([ [k , v], [k , v], [k , v] , ...]);**
+`new Map([[k , v], [k , v], [k , v] , ...]);`
 
-> Example 1
+Example 1
 
 ```javascript
 const options = [
@@ -14,12 +14,14 @@ const options = [
   ["no", 2],
   ["may be", 3],
 ];
+
 const myMap = new Map(options);
+
 ```
 
 &nbsp;
 
-> Example 2
+Example 2
 
 ```javascript
 const question = new Map([
@@ -34,24 +36,26 @@ const question = new Map([
 ]);
 
 console.log(question);
-// Map(8)
-//  [[Entries]]
-//    0:{"question" => "Best lang in the world?"}
-//    1:{1 => "C"}
-//    2:{2 => "C++"}
-//    3:{3 => "Java"}
-//    4:{4 => "Javascript"}
-//    5:{"correct" => 2}
-//    6:{true => "Correct answer"}
-//    7:{false => "Try Again"}
-//    size:8
+/* Map(8)
+  [[Entries]]
+    0:{"question" ="Best lang in the world?"}
+    1:{1 ="C"}
+    2:{2 ="C++"}
+    3:{3 ="Java"}
+    4:{4 ="Javascript"}
+    5:{"correct" =2}
+    6:{true ="Correct answer"}
+    7:{false ="Try Again"}
+    size:8
+*/
+
 ```
 
 &nbsp;
 
 ### When to use Maps instead of Objects?
 
-> #### 1. Map preserves the key type.
+#### 1. Map preserves the key type.
 
 _That's the map's main benefit._
 
@@ -62,42 +66,45 @@ const myObj = {
   1: "one",
   2: "two",
 };
+
 ```
 
-> _Now we log and check the datatype of the properties of this object._
->
-> ```javascript
-> for (const property in myObj) {
->   console.log(typeof property);
-> }
-> // 'string'
-> // 'string'
-> ```
-> 
-> _The properties i.e. `1`, `2` were converted to strings._
+_Now we log and check the datatype of the properties of this object._
+
+```javascript
+for (const property in myObj) {
+  console.log(typeof property);
+}
+// 'string'
+// 'string'
+
+```
+
+_The properties i.e. **1**, **2** were converted to strings._
 
 _**Implicit conversion of keys is tricky because you lose the consistency of the types.**_
 
-> _But if you use a number as a key inside a map, it will remain a number:_
->
-> ```javascript
-> const numbersMap = new Map();
-> 
-> numbersMap.set(1, "one");
-> numbersMap.set(2, "two");
-> 
-> [...numbersMap.keys()];
-> // => [1, 2]
-> 
-> typeof [...numbersMap.keys()][0];
-> // 'number'
-> ```
+_But if you use a number as a key inside a map, it will remain a number:_
+
+```javascript
+const numbersMap = new Map();
+
+numbersMap.set(1, "one");
+numbersMap.set(2, "two");
+
+[...numbersMap.keys()];
+// [1, 2]
+
+typeof [...numbersMap.keys()][0];
+// 'number'
+
+```
 
 &nbsp;
 
-> #### 2. When using Objects as Keys.
->
-> _When you need to store some object-related data, without attaching this data on the object itself._
+#### 2. When using Objects as Keys.
+
+When you need to store some object-related data, without attaching this data on the object itself.
 
 ```javascript
 const foo = { name: "foo" };
@@ -107,21 +114,20 @@ const kindOfMap = [
   [foo, "Foo related data"],
   [bar, "Bar related data"],
 ];
+
 ```
 
 More here : https://dmitripavlutin.com/maps-vs-plain-objects-javascript/
 
+---
 &nbsp;
----
-
----
-
 <!-- PAGINATION_START -->
 
-**Parent:** [Data Structures](../../2.%20Data%20Structures/) → [Maps](../Maps/)
+📁 [Data Structures](../../2.%20Data%20Structures/) → [Maps](../Maps/)
 
-**Previous:** ← [Data Structures > Arrays](../Arrays/)  
+◀️ [Data Structures Arrays](../Arrays/)  
 
-**Next:** → [Data Structures > Maps > Map Methods](02-map-methods.md)
+▶️ [Data Structures Maps Map Methods](02-map-methods.md)
 
 <!-- PAGINATION_END -->
+&nbsp;

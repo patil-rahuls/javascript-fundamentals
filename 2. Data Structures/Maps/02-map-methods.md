@@ -1,145 +1,131 @@
-## Data Structures > Maps
+## Data Structures > Map > Methods
 
 Maps are high performance key - value paired data structure.
 
 In Objects keys can only be strings (without quotes), but in Maps, keys can be any type.
 
-&nbsp;
+### Map.prototype.**set()**
 
-### Map Methods
+Adds a pair to the Map and returns updated map.
 
-> ### `Map.prototype.set()`
->
-> _Adds a pair to the Map and returns updated map._
-> 
-> ```javascript
-> const myMap = new Map();
-> 
-> myMap.set("name", "Rahul");
-> 
-> // We can chain the set() method too
-> myMap
->   .set(1, "Mumbai")
->   .set(2, "India")
->   .set(true, "I am free now.")
->   .set(false, "I am busy.");
-> 
-> console.log(myMap);
-> // Map(3) {
-> //    "name" => "Rahul",
-> //    1 => "Mumbai",
-> //    2 => "India",
-> //    true => 'I am free now.',
-> //    false => 'I am busy.',
-> // }
-> 
-> // Observe that the key types are preserved in Map.
-> ```
+```javascript
+const myMap = new Map();
 
-&nbsp;
+myMap.set("name", "Rahul");
 
-> ### `Map.prototype.get()`
->
-> _Retrieve data from a Map by value._
-> 
-> ```javascript
-> myMap.get(true);
-> // I am free now.
-> 
-> myMap.get("age");
-> // undefined
-> // Because age key is not present in 'myMap'.
-> ```
+// We can chain the set() method too
+myMap
+  .set(1, "Mumbai")
+  .set(2, "India")
+  .set(true, "I am free now.")
+  .set(false, "I am busy.");
 
-&nbsp;
+console.log(myMap);
+/* Map(3) {
+    "name" ="Rahul",
+    1 ="Mumbai",
+    2 ="India",
+    true ='I am free now.',
+    false ='I am busy.',
+ }
+*/
 
-> ### `Map.prototype.has()`
->
-> _Checks if a key exists in a Map._
-> 
-> ```javascript
-> myMap.has("hobbies");
-> // false
-> 
-> myMap.has(2);
-> // true
-> ```
+```
+_Observe that the key types are preserved in Map._
 
-&nbsp;
+### Map.prototype.**get()**
 
-> ### `Map.prototype.delete()`
->
-> _Deletes an item from a Map._
-> 
-> ```javascript
-> myMap.delete(2);
-> myMap.delete(1);
-> ```
+Retrieve data from a Map by value.
 
-&nbsp;
+```javascript
+myMap.get(true);
+// I am free now.
 
-> ### `Map.prototype.size`
->
-> _Returns size of Map._
->
-> _IMP: This is not a method. no parens `()`._
-> 
-> ```javascript
-> myMap.size; // no parentheses after size.
-> ```
+myMap.get("age");
+// undefined
+// Because 'age' key is not present in 'myMap'.
 
-&nbsp;
+```
 
-> ### `Map.prototype.clear()`
->
-> _Truncates Map._
-> 
-> ```javascript
-> myMap.clear();
-> ```
+### Map.prototype.**has()**
 
-&nbsp;
+Checks if a key exists in a Map.
 
-> ### `Map.prototype.keys()`
->
-> _Retrieve keys from the Map._
-> 
-> ```javascript
-> myMap.keys();
-> ```
+```javascript
+myMap.has("hobbies");
+// false
 
-&nbsp;
+myMap.has(2);
+// true
 
-> ### `Map.prototype.values()`
->
-> _Retrieve values from the Map._
-> 
-> ```javascript
-> myMap.values();
-> ```
+```
 
-&nbsp;
+### Map.prototype.**delete()**
 
-> ### `Map.prototype.entries()`
->
-> _Retrieve entries [key, value] from the Map._
-> 
-> ```javascript
-> myMap.entries();
-> ```
+Deletes an item from a Map.
 
-&nbsp;
+```javascript
+myMap.delete(2);
+myMap.delete(1);
+
+```
+
+### Map.prototype.**size**
+
+Returns size of Map.
+
+***IMP***: _This is not a method. no parens **()**._
+
+```javascript
+myMap.size;
+
+```
+
+### Map.prototype.**clear()**
+
+Truncates Map.
+
+```javascript
+myMap.clear();
+
+```
+
+### Map.prototype.**keys()**
+
+Retrieve keys from the Map.
+
+```javascript
+myMap.keys();
+
+```
+
+### Map.prototype.**values()**
+
+Retrieve values from the Map.
+
+```javascript
+myMap.values();
+
+```
+
+### Map.prototype.**entries()**
+
+Retrieve entries _[key, value]_ from the Map.
+
+```javascript
+myMap.entries();
+
+```
 
 ---
-
----
-
+&nbsp;
 <!-- PAGINATION_START -->
 
-**Parent:** [Data Structures](../../2.%20Data%20Structures/) → [Maps](../Maps/)
+📁 [Data Structures](../../2.%20Data%20Structures/) → [Maps](../Maps/)
   
-**Previous:** ← [Data Structures > Maps > Map](01-map.md)  
+◀️ [Data Structures Maps Map](01-map.md)  
 
-**Next:** → [Data Structures > Maps > Map Iteration](03-map-iteration.md)
+▶️ [Data Structures Maps Map Iteration](03-map-iteration.md)
 
 <!-- PAGINATION_END -->
+&nbsp;

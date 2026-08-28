@@ -2,22 +2,20 @@
 
 ```javascript
 console.warn("This is a warning");
-// Use for warnings
 
 console.error("An Error Occured");
-// Use for logging erors
 
 console.table(myObject);
-// prints tabular form of object
+// prints tabular form of the passed object
 
 console.log("Server Logs");
 
 console.info("General Information");
 
 console.dir(object);
-// prints Object's properties
-// hierarchically.
-// Use it to observe "Closure".
+// prints Object's properties hierarchically.
+// Use it to observe closures.
+
 ```
 
 ---
@@ -26,13 +24,13 @@ console.dir(object);
 
 ### Methods to capture performance
 
-_`console.time();`_
+console.time();
 
-_`console.timeLog();`_
+console.timeLog();
 
-_`console.timeEnd();`_
+console.timeEnd();
 
-_These methods are used to start a timer in JavaScript, allowing us to measure the duration of a code operation for performance testing._
+These methods are used to start a timer in JavaScript, allowing us to measure the duration of a code operation for performance testing.
 
 > Example 1
 
@@ -48,22 +46,21 @@ for (let i = 0; i < 100000; i++) {
 // Logs an intermediate time
 console.timeLog("someLabel");
 
-// Stops the timer and prints the
-// final elapsed time in miliseconds
+// Stops the timer and prints the final elapsed time in miliseconds
 console.timeEnd("someLabel");
 // someLabel: 123.456ms
+
 ```
 
 ---
-
----
-
+&nbsp;
 <!-- PAGINATION_START -->
 
-**Parent:** [1. Basics](../1.%20Basics/)  
+📁 [1. Basics](../1.%20Basics/)  
 
-**Previous:** ← [Error Types](15-error-types.md)  
+◀️ [Error Types](15-error-types.md)  
 
-**Next:** → [DOM-manipulation](17-DOM-manipulation.md)
+▶️ [DOM-manipulation](17-DOM-manipulation.md)
 
 <!-- PAGINATION_END -->
+&nbsp;

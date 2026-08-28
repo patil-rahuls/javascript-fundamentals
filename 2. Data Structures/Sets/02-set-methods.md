@@ -1,119 +1,101 @@
-## Data Structures > Sets
+## Data Structures > Set > Methods
 
-> **_Sets are high performance `unordered unique collection` data structure._**
+Sets are high performance **unordered unique collection** data structure.
 
-### Set Methods
-
-Consider this Set as an example
+Consider this set as an example.
 
 ```javascript
 const names = new Set(["rahul", "hitesh", "rahul", "rahul", "aajesh", "rahul"]); // duplicate item 'rahul'
 
 console.log(names);
 // set(3) {'hitesh', 'aajesh' , 'rahul'}
+
 ```
 
-&nbsp;
+### Set.prototype.**add()**
 
-> ### `Set.prototype.add()`
-> 
-> _In Map we have `map.set()` method. That's the only distinction in their methods. Rest all the methods are same._
-> 
-> ```javascript
-> names.add("anil");
-> names.add("milan");
-> 
-> console.log(names);
-> // set(5) {'hitesh', 'aajesh' , 'rahul', 'anil', 'milan'}
-> 
-> names.add("kisan");
-> names.add("kisan");
-> // Will get added only once (Set has to have unique values)
-> 
-> console.log(names);
-> // set(6) {'hitesh', 'aajesh' , 'rahul', 'anil', 'milan', 'kisan'}
-> ```
+_In Map we have **map.set()** method. That's the only distinction in their methods. Rest all the methods of sets are same._
 
-&nbsp;
+```javascript
+names.add("anil");
+names.add("milan");
 
-> ### `Set.prototype.has()`
->
-> _Checks if an element exists in a Set._
-> 
-> ```javascript
-> names.has("anil");
-> // false
-> 
-> names.has("hitesh");
-> // true
-> ```
+console.log(names);
+// set(5) {'hitesh', 'aajesh' , 'rahul', 'anil', 'milan'}
 
-&nbsp;
+names.add("kisan");
+names.add("kisan");
+// Will get added only once (Set has to have unique values)
 
-> ### `Set.prototype.delete()`
->
-> _Delete item from Set._
-> 
-> ```javascript
-> names.delete("kisan");
-> 
-> console.log(names);
-> // set(5) {'hitesh', 'aajesh' , 'rahul', 'anil', 'milan'}
-> ```
+console.log(names);
+// set(6) {'hitesh', 'aajesh' , 'rahul', 'anil', 'milan', 'kisan'}
 
-&nbsp;
+```
 
-> ### `Set.prototype.clear()`
->
-> _Empty/Truncate the Set._
-> 
-> ```javascript
-> names.clear();
-> ```
+### Set.prototype.**has()** - _checks if an element exists in a set._
 
-&nbsp;
+```javascript
+names.has("anil");
+// false
 
-> ### `Set.prototype.keys()`
-> 
-> ```javascript
-> names.keys();
-> ```
+names.has("hitesh");
+// true
 
-&nbsp;
+```
 
-> ### `Set.prototype.values()`
-> 
-> ```javascript
-> names.values();
-> ```
+### Set.prototype.**delete()** - _delete item from set_
 
-&nbsp;
+```javascript
+names.delete("kisan");
 
-> ### `Set.prototype.entries()`
-> 
-> ```javascript
-> names.entries();
-> ```
+console.log(names);
+// set(5) {'hitesh', 'aajesh' , 'rahul', 'anil', 'milan'}
+
+```
+
+### Set.prototype.**clear()** - _empty/truncate the set_
+
+```javascript
+names.clear();
+
+```
+
+### Set.prototype.**keys()**
+
+```javascript
+names.keys();
+
+```
+
+### Set.prototype.**values()**
+
+```javascript
+names.values();
+
+```
+
+### Set.prototype.**entries()**
+
+```javascript
+names.entries();
+
+```
+
+_There is no method to get a specific item from a set._
+
+_Because, there is no order(index) defined in which the items are stored in a Set unlike arrays._
+
+**_When using Sets, we just care about uniqueness and whether the item is present or not._**
 
 ---
-
 &nbsp;
-
-**_There is no method to get a specific item from a set. Because, there is no order(index) defined in which the items are stored in a Set unlike arrays._**
-
-**_When using Sets, we just care about uniqueness and whether the item is present or not(in the Set)._**
-
-&nbsp;
----
-
----
-
 <!-- PAGINATION_START -->
 
-**Parent:** [Data Structures](../../2.%20Data%20Structures/) → [Sets](../Sets/)  
+📁 [Data Structures](../../2.%20Data%20Structures/) → [Sets](../Sets/)  
 
-**Previous:** ← [Data Structures > Sets > Set](01-set.md)  
+◀️ [Data Structures Sets Set](01-set.md)  
 
-**Next:** → [Data Structures > Sets > Set Iteration](03-set-iteration.md)
+▶️ [Data Structures Sets Set Iteration](03-set-iteration.md)
 
 <!-- PAGINATION_END -->
+&nbsp;

@@ -2,20 +2,20 @@
 
 A program that reads, interprets and executes Javascript code.
 
-All browsers have their own Javascript Engines that execute Javascript code. Well known is the `v8` used in Google Chrome and Node.js.
+All browsers have their own Javascript Engines that execute Javascript code. Well known is the **v8** used in Google Chrome and Node.js.
 
 A JS Engine comprises of :
 
-- `Call Stack`
-- `Heap`
+- **Call Stack**
+- **Heap**
 
 &nbsp;
 
-### `Call Stack` -
+### **Call Stack** -
 
-_It's where our code gets executed using `Execution Contexts`._
+_It's where our code gets executed using **Execution Contexts**._
 
-_It is a data structure _`(stack)`_ where `Execution Contexts` get stacked on top of each other, to keep track of where we are in the program execution._
+_It is a data structure _**(stack)**_ where **Execution Contexts** get stacked on top of each other, to keep track of where we are in the program execution._
 
 _When a function is finished executing, it's Execution Context is popped off the Call Stack, so, that the next Execution Context's function can be executed._
 
@@ -25,24 +25,23 @@ _Because, the Execution Contexts are in stack, once the top most Execution Conte
 
 _Because, JavaScript has A SINGLE THREAD of execution._
 
-> **_IMP: Primtive types are stored in the CALL STACK because that's where the Execution Contexts Run._**
+> IMP: Primtive types are stored in the CALL STACK. That's where the Execution Contexts Run.
 
 &nbsp;
 
-### `Heap` -
+### **Heap** -
 
-An unstructured memory pool which stores all the `objects` _(objects, arrays, sets, maps etc) (not primitives)_ that our application uses.
-
----
+An unstructured memory pool which stores all the **objects** _(objects, arrays, sets, maps etc) (not primitives)_ that our application uses.
 
 ---
-
+&nbsp;
 <!-- PAGINATION_START -->
 
-**Parent:** [4. How Javascript Works](../4.%20How%20Javascript%20Works/)  
+📁 [4. How Javascript Works](../4.%20How%20Javascript%20Works/)  
 
-**Previous:** ← [Javascript Runtime](02-javascript-runtime.md)  
+◀️ [Javascript Runtime](02-javascript-runtime.md)  
 
-**Next:** → [Execution Context](04.1-execution-context.md)
+▶️ [Execution Context](04.1-execution-context.md)
 
 <!-- PAGINATION_END -->
+&nbsp;

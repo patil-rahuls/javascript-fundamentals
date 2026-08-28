@@ -2,11 +2,11 @@
 
 Fundamental concept of JavaScript.
 
-> **_A function that receives another function as an argument, or/and returns a function._**
+> A function that receives another function as an argument, or/and returns a function.
 
 The functions that are passed/returned are called **_First Class Functions/Citizens_**.
 
-_For example, `addEventListener()` is a higher order function._
+_For example, **addEventListener()** is a higher order function._
 
 ```javascript
 function count() {
@@ -16,43 +16,42 @@ function count() {
     counter++;
   };
 }
+
 ```
 
 ### More examples:
 
 > Example 1: _Functions accepting callback functions:_
->
-> ```javascript
-> // Callback function 1
-> const oneWord = function (str) {
->   return str.replace(/ /g, "").toLowerCase();
-> };
->
-> // Callback function 2
-> const UpperFirstWord = function (str) {
->   const [first, ...restWords] = str.split(" ");
->   return [first.toUpperCase(), ...restWords].toString();
-> };
->
-> // Higher order function:
-> const transform = function (str, fn) {
->   console.log(`Original string : ${str} `);
->   console.log(`Modified string : ${fn(str)} `);
->   console.log(`Modified by function : ${fn.name}`);
->   // A function is also an object and it
->   // has a ‘name’ as one of its internal
->   // properties.
-> };
->
-> // Calling `transform` using different
-> // methods as parameters.
-> transform("Rahul is greater", UpperFirstWord);
-> transform("Rahul is greater", oneWord);
-> ```
->
-> _In the above example, Abstraction is achieved i.e._
->
-> _hiding the details of implementation. This allows us to think more on an abstract level._
+
+```javascript
+// Callback function 1
+const oneWord = function (str) {
+  return str.replace(/ /g, "").toLowerCase();
+};
+
+// Callback function 2
+const UpperFirstWord = function (str) {
+  const [first, ...restWords] = str.split(" ");
+  return [first.toUpperCase(), ...restWords].toString();
+};
+
+// Higher order function:
+const transform = function (str, fn) {
+  console.log(`Original string : ${str} `);
+  console.log(`Modified string : ${fn(str)} `);
+  console.log(`Modified by function : ${fn.name}`);
+  // A function is also an object and it has a ‘name’ as one of its internal properties.
+};
+
+// Calling transform() using different methods as parameters.
+transform("Rahul is greater", UpperFirstWord);
+transform("Rahul is greater", oneWord);
+
+```
+
+_In the above example, Abstraction is achieved i.e._
+
+_hiding the details of implementation. This allows us to think more on an abstract level._
 
 &nbsp;
 
@@ -66,44 +65,47 @@ const greet = function (greeting) {
 };
 
 const greeterHey = greet("Heyy");
-// greeterHey will now be a function which
-// is returned by greet();
+// greeterHey will now be a function which is returned by greet();
 
 // Let's observe the function call now
 greeterHey("Rahul");
 // "Heyy Rahul"
 
-// How is the greeting 'heyy' coming in
-// the function which is already returned.
+// How is the greeting 'heyy' coming in the function which is already returned.
 // It's because of 'Closures'.
 
-// The above function call can be also
-// written in one line.
+```
+
+_The above function calls can be also written in one line._
+```javascript
 greet("Good Morning")("Mr. Rahul");
 
-// And the function definition can also
-// be written using the arrow function:
-const greet = (greeting) => {
+```
+
+_Its called currying._
+
+_And the function definition can also be written using the arrow function:_
+```javascript
+const greet = (greeting) ={
   return function (name) {
     console.log(` ${greeting} ${name}`);
   };
 };
 
-// OR simply
-
-const greetArrow = (greeting) => (name) => console.log(`${greeting} ${name}`);
-
-// See the cleanliness in our code.
-// One arrow function returning
-// another arrow function
 ```
+_OR simply like this:_
+```javascript
+const greetArrow = (greeting) = (name) = console.log(`${greeting} ${name}`);
+
+```
+_See the cleanliness in our code. One arrow function returning another arrow function._
 
 &nbsp;
 
 > Example 3: _Creating related functions by returning functions._
 
 ```javascript
-const addTax = (rate) => {
+const addTax = (rate) ={
   return function (val) {
     return val + val * rate;
   };
@@ -120,18 +122,17 @@ gst(cost);
 
 educationCess(cost);
 // 3673.95
+
 ```
-
 ---
-
----
-
+&nbsp;
 <!-- PAGINATION_START -->
 
-**Parent:** [3. Functions](../3.%20Functions/)  
+📁 [3. Functions](../3.%20Functions/)  
 
-**Previous:** ← [Closures](05-closures.md)  
+◀️ [Closures](05-closures.md)  
 
-**Next:** → [`call()`, `apply()` and `bind()`](07-call-apply-bind.md)
+▶️ [**call()**, **apply()** and **bind()**](07-call-apply-bind.md)
 
 <!-- PAGINATION_END -->
+&nbsp;

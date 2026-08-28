@@ -1,8 +1,10 @@
-## Data Structures > Object
+## Data Structures > Object > Size
 
-### Size of an Object using `Object.keys().length`
+### Object.keys().length
 
-> Example: Get size of an Object
+> Example: Get size of an object
+
+Size of an object is the number of properties it holds.
 
 ```javascript
 const myObj = {
@@ -11,26 +13,21 @@ const myObj = {
   age: 2049 - 2024,
 };
 
-// Size of an object is the 
-// number of properties it holds.
 let size = Object.keys(myObj).length;
 
 console.log(size);
 // 3
+
 ```
-
+---
 &nbsp;
-
----
-
----
-
 <!-- PAGINATION_START -->
 
-**Parent:** [Data Structures](../../2.%20Data%20Structures/) → [Objects](../Objects/)
+📁 [Data Structures](../../2.%20Data%20Structures/) → [Objects](../Objects/)
   
-**Previous:** ← [Data Structures > Objects > Object Loop](08-object-loop.md)  
+◀️ [Data Structures > Objects > Object Loop](08-object-loop.md)  
 
-**Next:** → [Data Structures > Objects > Object Freeze](10-object-freeze.md)
+▶️ [Data Structures > Objects > Object Freeze](10-object-freeze.md)
 
 <!-- PAGINATION_END -->
+&nbsp;

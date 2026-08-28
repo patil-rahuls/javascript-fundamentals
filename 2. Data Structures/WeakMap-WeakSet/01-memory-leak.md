@@ -1,75 +1,50 @@
-## Data Structures > WeakMap
+## Data Structures > Memory Leak
 
-> **_Memory leak - when memory stays allocated even when not needed._**
+Memory leak - when memory stays allocated even when not needed.
 
 In JavaScript, memory management & GC is mostly implicit.
 
-> Example: Inefficient with Map (manual cleanup required):
->
-> _If a regular Map is used, the john object remains in memory even after it is set to null because the map still holds a strong reference to it, potentially causing a memory leak._
+> Example: 
 
 ```javascript
 let john = {
-  name: "John",
+  name: "John"
 };
 
 const visitsCountMap = new Map();
 
 visitsCountMap.set(john, 1);
+// size of visitsCountMap -> 1
 
 // ... later ...
 john = null;
 
 // size of visitsCountMap -> 1
+
 ```
 
-In the above example, `John` is still in memory because `visitsCountMap` references it!
+_In the example above, if a regular Map is used, the 'john' object remains in memory even after it is set to `null` because the map still holds a strong reference to it, potentially causing a memory leak._
 
-The map's size remains `1`, and the entry is not removed automatically.
+Using Map is inefficient in such cases, and manual cleanup is required.
+
+_In the above example, **John** is still in memory because **visitsCountMap** references it!_
+
+_The map's size remains **1**, and the entry is not removed automatically._
 
 **_This is called a Memory Leak._**
 
-> ### Solution: `WeakMap` & `WeakSet`
+Solution: **WeakMap** & **WeakSet**
 
-They are Data structures for Better Memory Management.
-
-> **_They hold `weak references` to objects. If an object is only held inside a `WeakMap`, the garbage collector is allowed to delete it._**
-
-This is perfect for things like caching or DOM metadata.
-
-> Solution: Efficient with WeakMap (automatic cleanup)
->
-> _In the following example, by using a `WeakMap`, the entry for `john` is automatically removed when it becomes unreachable, ensuring efficient memory usage._
-
-```javascript
-let john = {
-  name: "John",
-};
-
-const visitsCountWeakMap = new WeakMap();
-
-visitsCountWeakMap.set(john, 1);
-
-// ... later ...
-john = null;
-```
-
-> **`John` is garbage collected, and the entry in `visitsCountWeakMap` is automatically removed. No memory leak.**
-
-> size of `visitsCountWeakMap` -> `0`
-
+---
 &nbsp;
-
----
-
----
 
 <!-- PAGINATION_START -->  
 
-**Parent:** [Data Structures](../../2.%20Data%20Structures/) → [WeakMap-WeakSet](..)
+📁 [Data Structures](../../2.%20Data%20Structures/) → [WeakMap-WeakSet](..)
 
-**Previous:** ← [Data Structures > Sets](../Sets/)
+◀️ [Data Structures > Sets](../Sets/)
 
-**Next:** → [Data Structures > Which DS to Use](../00-which-ds-to-use.md)
+▶️ [Data Structures > WeakMap-WeakSet > WeakMap](./02-weakmap.md)
 
 <!-- PAGINATION_END -->
+&nbsp;

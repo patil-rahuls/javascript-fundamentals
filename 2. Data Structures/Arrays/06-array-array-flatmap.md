@@ -1,39 +1,48 @@
-## Data Structures > ARRAY > Flatmap
+## Data Structures > Array > Return new Array > _flatmap()_
 
-> Array to new Array
+### Array.prototype.**flatmap()** _[ES 2019]_
 
-### `Array.prototype.flatmap()` [ES 2019]
+It **map()** first and then **flat()** the result. Better performance.
 
-> `map()` first and then `flat()` the result.
->
-> _Better performance._
-
+> Example
 ```javascript
-// Old way:
-const totalUsersWalletBalance = accounts.map((acc) => acc.walletBalance).flat();
+const authors = [
+  {
+    name: "rahul",
+    posts: ["JS Basics", "Advanced JS"]
+  },
+  {
+    name: "hitesh",
+    posts: ["DB Tricks"]
+  },
+  {
+    name: "aajesh",
+    posts: [".NET Basics", "Web API Guide"]
+  },
+  {
+    name: "rishi",
+    posts: ["Promos", "Sales Guide"]
+  }
+];
 
-// Using flatmap():
-const totalUsersWalletBalance2 = accounts
-  .flatMap((acc) => acc.walletBalance)
-  .reduce((acc, mov) => acc + mov, 0);
+const allPosts = authors.flatMap(author => author.posts);
 
-// Since flatMap() does the map() too, it needs to receive exactly the same arguments as you would pass to the map method.
+console.log(globalFeed);
+// ["JS Basics", "Advanced JS", "DB Tricks", ".NET Basics", "Web API Guide", "Promos", "Sales Guide"]
+
 ```
 
-**_IMP: `flatMap()` goes only one level deep.
-Hence if you need to go deeper, then you still need to use the `flat()` method separately with depth argument._**
+***IMP***: flatMap() goes only one level deep. Hence if you need to go deeper, then you still need to use the **flat()** method separately with depth argument.
 
+---
 &nbsp;
----
-
----
-
 <!-- PAGINATION_START -->
 
-**Parent:** [Data Structures](../../2.%20Data%20Structures/) → [Arrays](../Arrays/)
+📁 [Data Structures](../../2.%20Data%20Structures/) → [Arrays](../Arrays/)
   
-**Previous:** ← [Data Structures > Arrays > Array Flat](05-array-array-flat.md)  
+◀️ [Data Structures > Arrays > Array Flat](05-array-array-flat.md)  
 
-**Next:** → [Data Structures > Arrays > Array Loop for Each](07-array-loop-forEach.md)
+▶️ [Data Structures > Arrays > Array Loop for Each](07-array-loop-forEach.md)
 
 <!-- PAGINATION_END -->
+&nbsp;

@@ -1,8 +1,8 @@
-## Data Structures > Object
+## Data Structures > Object > _freeze()_
 
-### `Object.freeze()`
+### Object.**freeze()**
 
-> **_Frozen objects are read-only, and no modifications, additions, or deletions of properties are allowed._**
+Frozen objects are read-only, and no modifications, additions, or deletions of properties are allowed.
 
 ```javascript
 const person = {
@@ -11,60 +11,74 @@ const person = {
   age: 2049 - 2024,
 };
 
-// Freeze the Object
+```
+
+Freeze the Object
+```javascript
 Object.freeze(person);
 
-// Check if the Object is Frozen
+```
+
+Check if the Object is Frozen
+```javascript
 console.log(Object.isFrozen(person));
 // true
 
-// ❌ Modifying properties not allowed
-person.age = 31;
-console.log(person);
-/*
-{
-  firstName : 'Rahul',
-  lastName : 'Patil',
-  age : 25
-}
-*/
-
-// ❌ Adding new properties not allowed
-person.city = "New York";
-
-console.log(person);
-/*
-{
-  firstName : 'Rahul',
-  lastName : 'Patil',
-  age : 25
-}
-*/
-
-// ❌ Removing properties not allowed
-delete person.firstName;
-
-console.log(person);
-/*
-{
-  firstName : 'Rahul',
-  lastName : 'Patil',
-  age : 25
-}
-*/
 ```
 
+❌ Modifying properties of frozen objects are not allowed.
+```javascript
+person.age = 31;
+
+console.log(person);  // Remains unchanged
+/*
+{
+  firstName : 'Rahul',
+  lastName : 'Patil',
+  age : 25
+}
+*/
+
+```
+
+❌ Adding new properties not allowed.
+```javascript
+person.city = "New York";
+
+console.log(person);  // Remains unchanged
+/*
+{
+  firstName : 'Rahul',
+  lastName : 'Patil',
+  age : 25
+}
+*/
+
+```
+
+❌ Removing properties not allowed.
+```javascript
+delete person.firstName;
+
+console.log(person);  // Remains unchanged
+/*
+{
+  firstName : 'Rahul',
+  lastName : 'Patil',
+  age : 25
+}
+*/
+
+```
+---
 &nbsp;
----
-
----
-
 <!-- PAGINATION_START -->
 
-**Parent:** [Data Structures](../../2.%20Data%20Structures/) → [Objects](../Objects/)
+📁 [Data Structures](../../2.%20Data%20Structures/) → [Objects](../Objects/)
   
-**Previous:** ← [Data Structures > Objects > Object Properties Count](09-object-properties-count.md)  
+◀️ [Data Structures > Objects > Object Properties Count](09-object-properties-count.md)  
 
-**Next:** → [Data Structures > Objects > Object Seal](11-object-seal.md)
+▶️ [Data Structures > Objects > Object Seal](11-object-seal.md)
 
 <!-- PAGINATION_END -->
+&nbsp;

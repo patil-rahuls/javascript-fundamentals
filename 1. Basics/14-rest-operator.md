@@ -1,30 +1,27 @@
-## `"..."` Rest Operator <sup>_ES6_</sup>
+## **"..."** Rest Operator (ES6)
 
-`"..."` is on the LHS of `=` assignment.
+**"..."** is on the LHS of **=** assignment.
 
-> **_packs elements of a LIST into iterable objects such as Arrays, Sets, Maps and Objects._**
+> packs elements of a LIST into iterable objects such as Arrays, Sets, Maps and Objects.
 
 > **Rest Operator can only be used in following 2 cases:**
 >
-> 1. **_Packing an iterable._**
-> 2. **_As a function parameter._**
+> 1. Packing an iterable.
+> 2. As a function parameter.
 
-> **_There can only be ONE Rest element in an expression._**
+> There can only be ONE Rest element in an expression.
 
-> **_The Rest Operator has to be at the end of any destructuring assignment._**
+> The Rest Operator has to be at the end of any destructuring assignment.
 
 &nbsp;
 
 > Example 1: Packing an iterable
 
+***Array***
 ```javascript
-// Array
 const arr = [1, 2, 3, 4, 5, 6, 7];
 
 const [a, b, c, d, ...restValues] = arr;
-// ‘restValues’ will be an array of the
-// rest of the elements of arr. Hence
-// the name "REST" operator(I believe).
 
 console.log(a, b, c, d, restValues);
 // 1  2  3  4  [5  6  7]
@@ -32,7 +29,11 @@ console.log(a, b, c, d, restValues);
 console.log(a, b, c, d, ...restValues);
 // 1  2  3  4  5  6  7
 
-// Object
+```
+_'restValues' will be an array of the rest of the elements of arr. Hence the name "REST" operator(I believe)._
+
+***Object***
+```javascript
 const product = {
   id: 1,
   title: "Shirt",
@@ -48,12 +49,15 @@ console.log(pricingAndDetails);
  price: 20,
  color: 'Blue'
 }
- */
+*/
+
 ```
 
 &nbsp;
 
-_**IMP: The rest operator has to be at the end of any destructuring assignment**, else how will Javascript know until when it has to take the elements? Also there can only be one rest element in any destructuring assignment._
+_**IMP: The rest operator has to be at the end of any destructuring assignment**, else how will Javascript know until when it has to take the elements?_
+
+_Also there can only be one rest element in any destructuring assignment._
 
 > Example 2: Rest element must be last element.
 
@@ -62,10 +66,7 @@ _**IMP: The rest operator has to be at the end of any destructuring assignment**
 const arr = [1, 2, 3, 4, 5, 6, 7];
 
 const [ a, b, ...someValues, d] = arr;
-// ❌ incorrect. Rest operator has
-// to be at the end.
-// Error : "Rest element must be last element."
-
+// ❌ Error : "Rest element must be last element."
 
 // Object
 const product = {
@@ -76,9 +77,7 @@ const product = {
 };
 
 const { id, ...titleAndPrice, color } = product;
-// ❌ incorrect. Rest operator has
-// to be at the end.
-// Error : "Rest element must be last element."
+// ❌ Error : "Rest element must be last element."
 
 ```
 
@@ -86,29 +85,33 @@ const { id, ...titleAndPrice, color } = product;
 
 > Example 3: As a function parameter
 
+***Array***
 ```javascript
-// Array
 function sumAll(...numbers) {
-  // All arguments passed to this
-  // function would be packed into
-  // this array 'numbers'.
-  // 'numbers' => [10, 20, 30]
   return numbers.reduce((total, num) => total + num, 0);
 }
 
 console.sumAll(10, 20, 30);
 // 60
-/* Advantage of Rest Operator as 
-a function parameter:
-The function above can now accept 
-both a single value as well as a 
-spread-array as its input.*/
+
+```
+_In the above code, all arguments passed to this function would be packed into this array 'numbers'._
+
+_Advantage of Rest Operator as a function parameter:_
+
+_The function above can now accept both a single value as well as a spread-array as its input._
+
+```javascript
 let inputArr = [10, 20, 30];
 
 console.sumAll(...inputArr);
-// 60
+console.sumAll(12, 13, 14);
 
-// Object
+```
+
+
+***Object***
+```javascript
 function showInfo(rollNo, { name, ...info }) {
   console.log(`Roll No. ${rollNo}`);
 
@@ -122,18 +125,18 @@ const user = {
 };
 
 showInfo(76, user);
+
 ```
 
 ---
-
----
-
+&nbsp;
 <!-- PAGINATION_START -->
 
-**Parent:** [1. Basics](../1.%20Basics/)  
+📁 [1. Basics](../1.%20Basics/)  
 
-**Previous:** ← [Spread Operator `"..."` [ES6]](13-spread-operator.md)  
+◀️ [Spread Operator **"..."** [ES6]](13-spread-operator.md)  
 
-**Next:** → [Error Types](15-error-types.md)
+▶️ [Error Types](15-error-types.md)
 
 <!-- PAGINATION_END -->
+&nbsp;

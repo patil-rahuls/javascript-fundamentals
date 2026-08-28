@@ -1,41 +1,59 @@
-## `this` Keyword
+## **this** Keyword
 
-> **_`this` refers to the object currently executing the code._**
+> **this** refers to the object currently executing the code.
 
 Its value depends on how the function is called.
 
-`this` is a special object that is created for every function's Execution Context. Its one of the three components of the function's Execution Context.
+It is a special object that is created for every function's Execution Context. Its one of the three components of the function's Execution Context.
 
-It takes the value of _(points to)_ the "owner" of the function in which it is used.
+```
+///////////////////////////////////////////////////////
+//  Execution Context                                //
+///////////////////////////////////////////////////////
+//                                                   //
+//  1. Variable Environment                          //
+//         -let, const and var declarations.         //
+//         -Functions                                //
+//         -'arguments' object -                     //
+//           (all arguments passed into the fn.)     //
+//  2. Scope Chain -                                 //
+//          A reference to variables located outside //
+//          of this function.                        //
+//  3. 'this' keyword                                //
+//                                                   //
+///////////////////////////////////////////////////////
 
-_`this` is NOT STATIC. Its value is ONLY assigned when the function is actually called._
+```
 
-> For example, in this statement:
->
-> ```
-> myObj.myFunction();
-> ```
->
-> _the `this` inside the `myFunction` will point to `myObj` object._
 
+It _points to_ the "owner" of the function in which it is used.
+
+It is NOT STATIC. Its value is ONLY assigned when the function is actually called.
+
+For example, in the following statement: _(assuming that myFunction has 'this' used)_
+
+```
+myObj.myFunction();
+
+```
+_the **this** inside the **myFunction** will point to **myObj** object._
+
+---
 &nbsp;
 
-> **_In case of arrow functions' execution context, they do not have their own `this` object. They get it from their outer regular function's execution context._** (See the next section)
+In case of arrow functions' execution context, they do not have their own **this** object. They get it from their outer regular function's execution context. (See the next section)
 
-> **_They also don't get their own 'arguments' object._**
-
-In case of Browser's Event Listener's Execution Context, `this` object points to DOM element that the handler is attached to.
+In case of Browser's Event Listener's Execution Context, **this** object points to DOM element that the handler is attached to.
 
 ---
-
----
-
+&nbsp;
 <!-- PAGINATION_START -->
 
-**Parent:** [4. How Javascript Works](../4.%20How%20Javascript%20Works/)  
+📁 [4. How Javascript Works](../4.%20How%20Javascript%20Works/)  
 
-**Previous:** ← [Execution Context's Structure](04.2-execution-context-structure.md)  
+◀️ [Execution Context's Structure](04.2-execution-context-structure.md)  
 
-**Next:** → [Arrow Function vs Regular Function](06-arrow-vs-regular-fn.md)
+▶️ [Arrow Function vs Regular Function](06-arrow-vs-regular-fn.md)
 
 <!-- PAGINATION_END -->
+&nbsp;

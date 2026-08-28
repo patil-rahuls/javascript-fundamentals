@@ -8,30 +8,29 @@ In many parts of the world, older mobile devices with outdated browsers are stil
 
 However, if our application is using the latest version of JavaScript (which may not be fully supported on older devices), some inbuilt features may break.
 
-To fix that, we use **_`pollyfills`_**, which is nothing but defining those inbuilt functionalities manually in the code.
+To fix that, we use **pollyfills**, which is nothing but defining those inbuilt functionalities manually in the code.
 
 > Example:
 
+If the browser doesn't have it, we write the logic ourselves.
+
 ```javascript
-if (!Array.prototype.includes) {
-  // If the browser doesn't have it,
-  // we write the logic ourselves
+if (!Array.prototype.includes) {  
   Array.prototype.includes = function (searchElement) {
     return this.indexOf(searchElement) !== -1;
   };
 }
+
 ```
-
 ---
-
----
-
+&nbsp;
 <!-- PAGINATION_START -->
 
-**Parent:** [3. Functions](../3.%20Functions/)  
+📁 [3. Functions](../3.%20Functions/)  
 
-**Previous:** ← [Currying](09-currying.md)  
+◀️ [Currying](09-currying.md)  
 
-**Next:** → [Iterators](11-iterators.md)
+▶️ [Iterators](11-iterators.md)
 
 <!-- PAGINATION_END -->
+&nbsp;

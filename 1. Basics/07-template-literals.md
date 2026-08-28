@@ -1,8 +1,8 @@
-## Strings and Template Literals <sup>_ES6_</sup>
+## Strings and Template Literals (ES6)
 
 Literals represent values in javascript.
 
-These are fixed values not variables that you literally provide in your script.
+These are fixed values not variables that you _literally_ provide in your script.
 
 > Example 1: Literals
 
@@ -15,11 +15,12 @@ let age = 29;
 
 let stu = { name, age };
 // "{name, age}" is an object literal
+
 ```
 
 &nbsp;
 
-> Example 2: _Template Literals - are literals delimited with backtick ` `` ` allowing for multi-line strings._
+> Example 2: Template Literals - _delimited with backtick ` `` ` allowing for multi-line strings._
 
 ```javascript
 // Old way:
@@ -35,11 +36,12 @@ lines",
 console.log(`String
 multiple
 lines`);
+
 ```
 
 &nbsp;
 
-> Example 3: _String interpolation with embedded expressions i.e. using variables in a template literal string._
+> Example 3: String interpolation with embedded expressions _i.e. using variables in a template literal string._
 
 ```javascript
 const lastName = "P";
@@ -47,20 +49,20 @@ const managemenExperience = 2;
 const show = `Hello.
 I am ${myName}.
 I am a ${exp} years experienced IT Professional`;
+
 ```
 
-**_Use template strings to create multiline HTML code snippets dynamically from code._**
+Template literals are used to create multiline HTML code snippets dynamically from code.
 
 ---
-
----
-
+&nbsp;
 <!-- PAGINATION_START -->
 
-**Parent:** [1. Basics](../1.%20Basics/)  
+📁 [1. Basics](../1.%20Basics/)  
 
-**Previous:** ← [Nullish Coalescing Assignment Operator `??=`](06.5-nullish-coalescing-assignment.md)  
+◀️ [Nullish Coalescing Assignment Operator **??=**](06.5-nullish-coalescing-assignment.md)  
 
-**Next:** → [Enhanced Object Literals [ES6]](08-enhanced-object-literals.md)
+▶️ [Enhanced Object Literals [ES6]](08-enhanced-object-literals.md)
 
 <!-- PAGINATION_END -->
+&nbsp;

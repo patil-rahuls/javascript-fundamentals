@@ -1,6 +1,6 @@
-## `for...of` Loop <sup>_ES6_</sup>
+## **for...of** Loop (ES6)
 
-> **_`for...of` iterates over a list of `values` of the enumerable properties (`keys/index`) of an object._**
+> **for...of** iterates over a list of **values** of the enumerable properties (**keys/index**) of an object.
 
 > Example 1: Array
 
@@ -10,6 +10,7 @@ const menu = ["North Indian", "Chinese", "South Indian"];
 for (const item of menu) {
   console.log(item);
 }
+
 ```
 
 &nbsp;
@@ -18,24 +19,27 @@ for (const item of menu) {
 
 ```javascript
 for (const item of Object.entries(menu)) {
-  console.log(item); // [index, value]
+  console.log(item); 
+  // [index, value]
 
   console.log(`Item number ${item[0] + 1} is ${item[1]}`);
 }
 
-// And we can always destructure it.
+```
+
+And we can always destructure it.
+```javascript
 for (const [index, item] of Object.entries(menu)) {
   console.log(`${index + 1} : ${item}`);
 }
-```
 
+```
+---
 &nbsp;
 
+**_IMP_** - _The **for..of** loop only supports iterable objects like arrays. JavaScript objects are not iterable by default._
+
 > Example 3: Iterating over an Object.
->
-> **_The `for..of` loop only supports iterable objects like arrays._**
->
-> **_JavaScript objects are not iterable by default._**
 
 ```javascript
 const p = {
@@ -45,31 +49,32 @@ const p = {
 };
 
 // ❌ Incorrect for objects.
-for (var val of p) {
-  // ...
+for (const val of p) {
+
   // TypeError: p is not iterable
+
 }
 
 // ✅ Correct:
-for (var key in p) {
+for (const key in p) {
   if (p.hasOwnProperty(key)) {
     console.log(key + " -> " + p[key]);
   }
 }
+
 ```
 
-_We can simply use `Object.values()`, `Object.entries()` methods to iterate over an object to get values, and `Object.keys()` to get properties of the object._
+_We can simply use **Object.values()**, **Object.entries()** methods to iterate over an object to get values, and **Object.keys()** to get properties of the object._
 
 ---
-
----
-
+&nbsp;
 <!-- PAGINATION_START -->
 
-**Parent:** [1. Basics](../1.%20Basics/)  
+📁 [1. Basics](../1.%20Basics/)  
 
-**Previous:** ← [`for...in` Loop](10-for-in-loop.md)  
+◀️ [**for...in** Loop](10-for-in-loop.md)  
 
-**Next:** → [Destructuring Assignment [ES6]](12.1-destructuring-assignment.md)
+▶️ [Destructuring Assignment [ES6]](12.1-destructuring-assignment.md)
 
 <!-- PAGINATION_END -->
+&nbsp;

@@ -1,6 +1,6 @@
 ## Throttling
 
-> **_Throttling is controlling the rate of execution of a function._**
+> Throttling is controlling the rate of execution of a function.
 
 _If a function is being called 100 times per second (like a user scrolling or a high-speed sensor sending data), throttling steps in and says: "I hear you, but we are only actually going to run this code once every 200 milliseconds."_
 
@@ -8,9 +8,8 @@ _If a function is being called 100 times per second (like a user scrolling or a 
 >
 > _For e.g. rendering a real time graph and sending its data to some server/logger service._
 
+> Example: A higher order function that returns a throttled version of another function.
 ```javascript
-// A Higher Order Function that returns
-// a throttled version of another function
 function throttle(func, limit) {
   let isThrottled;
 
@@ -33,8 +32,6 @@ function getData() {
 const throttledGetData = throttle(getData, 2000);
 
 ```
----
-
 &nbsp;
 
 ### 1. Real-Time Dashboard Updates (Stock Market/Crypto)
@@ -108,15 +105,14 @@ You don't want to hit your database for "J", then "Ja", then "Jas"... for every 
 > _If the user types fast, they don't care about the search results for "Jav"—they want the results for "JavaScript."_
 
 ---
-
----
-
+&nbsp;
 <!-- PAGINATION_START -->
 
-**Parent:** [3. Functions](../3.%20Functions/)
+📁 [3. Functions](../3.%20Functions/)
 
-**Previous:** ← [Debouncing](15-debouncing.md)
+◀️ [Debouncing](15-debouncing.md)
 
-**Next:** → [`Number` & `Date`](17-Number-date-optional.md)
+▶️ [**Number** & **Date**](17-Number-date-optional.md)
 
 <!-- PAGINATION_END -->
+&nbsp;

@@ -1,6 +1,4 @@
-## Data Structures > Object
-
-### Retrieve Object Properties
+## Data Structures > Object > Retrieve Properties
 
 Consider this object as an example.
 
@@ -10,30 +8,31 @@ const myObj = {
   lastName: "Patil",
   age: 2049 - 2024,
 };
+
 ```
 
-> ### 1. Retrieve Object Properties using "DOT" notation:
-> 
-> ```javascript
-> console.log(myObj.age);
-> // 25
-> 
-> console.log(myObj.habbits);
-> // undefined (when property is not found)
-> ```
+### 1. Using dot notation:
 
-&nbsp;
+```javascript
+console.log(myObj.age);
+// 25
 
-> ### 2. Retrieve Object Properties using "BRACKET" notation:
-> 
-> ```javascript
-> console.log(myObj["age"]);
-> // 25
-> ```
+console.log(myObj.habbits);
+// undefined (when property is not found)
 
-_In bracket notation `[]`, we can put an expression instead of just the property._
+```
 
-_`obj.[<expresssion>]`_
+### 2. Using bracket notation:
+
+```javascript
+console.log(myObj["age"]);
+// 25
+
+```
+
+In bracket notation **[]**, we can put an expression instead of just the property.
+
+`obj.[<expresssion>]`
 
 _That's the advantage of this type of retrieval._
 
@@ -47,31 +46,27 @@ console.log(myObj['last'+proprty]);
 // 'Patil'
 
 
-myObj.'last'+proprty; // ❌ Incorrect
+// ❌ Incorrect
+myObj.'last'+proprty;
 // This won't work in DOT notation.
 
 ```
 
-&nbsp;
-
 ### When to use which notation?
 
-If we need to compute the property name then use the "BRACKET" notation.
+If we need to compute the property name then use the bracket notation.
 
-Else use the easier and straight-forward "DOT" notation.
+Else use the easier and straight-forward dot notation.
 
+---
 &nbsp;
-
----
-
----
-
 <!-- PAGINATION_START -->
 
-**Parent:** [Data Structures](../../2.%20Data%20Structures/) → [Objects](../Objects/)
+📁 [Data Structures](../../2.%20Data%20Structures/) → [Objects](../Objects/)
   
-**Previous:** ← [Data Structures > Objects > Object Assign Properties](02-object-assign-properties.md)  
+◀️ [Data Structures Objects Object Assign Properties](02-object-assign-properties.md)  
 
-**Next:** → [Data Structures > Objects > Object Methods](04-object-methods.md)
+▶️ [Data Structures Objects Object Methods](04-object-methods.md)
 
 <!-- PAGINATION_END -->
+&nbsp;

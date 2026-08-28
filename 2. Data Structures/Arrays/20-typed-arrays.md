@@ -1,6 +1,6 @@
-## Data Structures > ARRAY > Typed Array
+## Data Structures > Array > Typed Array
 
-_Standard JavaScript arrays are **flexible**. They can hold a `string`, a `number`, a `boolean` and an `object` all at once._
+_Standard JavaScript arrays are **flexible**. They can hold a **string**, a **number**, a **boolean** and an **object** all at once._
 
 ```
 arr = [1, 2, 'Rahul', true, { age: 25 }, [ PORT, id ]];
@@ -9,25 +9,25 @@ arr = [1, 2, 'Rahul', true, { age: 25 }, [ PORT, id ]];
 
 _To achieve this flexibility, JavaScript adds a lot of overhead._
 
-_You can `push()` elements indefinitely. To handle this, the JavaScript engine allocates extra memory upfront. When the array grows past that cushion, the engine must allocate a larger chunk of memory and copy all elements over. This reduces the performance._
+_You can **push()** elements indefinitely. To handle this, the JavaScript engine allocates extra memory upfront. When the array grows past that cushion, the engine must allocate a larger chunk of memory and copy all elements over. This reduces the performance._
 
-_Regular Arrays use `pointers` to store the items in NON-CONTIGUOUS memory locations. Hence, accessing an element everytime becomes slower, because it requires pointer re-directions._
+_Regular Arrays use **pointers** to store the items in NON-CONTIGUOUS memory locations. Hence, accessing an element everytime becomes slower, because it requires pointer re-directions._
 
 ---
 &nbsp;
 
-Typed Arrays, however, are rigid, high-performance objects designed specifically for handling raw binary data.
+**Typed Arrays**, however, are rigid, high-performance objects designed specifically for handling raw binary data.
 
-> **_Typed Arrays are stored in contiguous memory locations._**
+Typed Arrays are stored in contiguous memory locations.
 
 A Typed Array isn't just one object; it’s a two-part system.
 
-1. The ArrayBuffer (The Memory)
+1. The ArrayBuffer _(The Memory)_
 
+   ***ArrayBuffer*** - Allocates 'n' bytes of memory.
    ```javascript
    const buffer = new ArrayBuffer(16);
-   // (Allocates 16 bytes of memory).
-   // It is just a box of bits.
+
    ```
 
 2. The Typed Array View (The Interpreter)
@@ -35,6 +35,7 @@ A Typed Array isn't just one object; it’s a two-part system.
    ```javascript
    const view = new Uint8Array(buffer);
    // (Reads from the memory).
+
    ```
 
 &nbsp;
@@ -56,19 +57,19 @@ A Typed Array isn't just one object; it’s a two-part system.
 
 1. Fixed Length:
 
-   _Once you create a Typed Array, you cannot `push()` or `pop()`. Its size is locked._
+   _Once you create a Typed Array, you cannot **push()** or **pop()**. Its size is locked._
 
 2. No Mixed Types:
 
-   _Typed arrays are homogenous. For Example, if you create a `Uint8Array`, every single element must be an integer between `0` and `255`._
+   _Typed arrays are homogenous. For Example, if you create a **Uint8Array**, every single element must be an integer between **0** and **255**._
 
 3. High Performance:
 
-   _Because the memory is pre-allocated and the type is known, the CPU can process Typed Arrays much faster than regular arrays._
+   _Because the memory is pre-allocated and the type is known, the CPU can process Typed Arrays much faster than regular arrays by skipping the checks/overheads._
 
 4. Zero-initialized:
 
-   _When created, they are automatically filled with `0`s._
+   _When created, they are automatically filled with **0**s._
 
 ---
 
@@ -77,22 +78,23 @@ A Typed Array isn't just one object; it’s a two-part system.
 > Example: _Typed Arrays can be faster than regular arrays for numerical computations._
 
 ```javascript
-const size = 10_000_000; // 10 million elements
+const size = 10_000_000; // 10 million
 
-// 1. Setup Regular Array
+// 1. Setup a regular array
 const regularArray = new Array(size);
 
 for (let i = 0; i < size; i++) {
   regularArray[i] = Math.random();
 }
 
-// 2. Setup Typed Array
+// 2. Setup a typed array
 // (64-bit floats, same as JS numbers)
 const typedArray = new Float64Array(size);
 
 for (let i = 0; i < size; i++) {
   typedArray[i] = regularArray[i];
 }
+
 
 // --- Benchmark Regular Array ---
 let sum1 = 0;
@@ -114,6 +116,7 @@ for (let i = 0; i < typedArray.length; i++) {
 }
 
 console.timeEnd("Typed Array Sum");
+
 ```
 
 ### Why Typed Arrays are faster?
@@ -132,22 +135,19 @@ console.timeEnd("Typed Array Sum");
 
 &nbsp;
 
-> **_Use Regular Arrays ([] / number[])_** _for 95% of your code, even for homogeneous data. It keeps your code flexible, readable, and perfectly fast enough._
->
-> **_Use Typed Arrays (Int32Array, etc.)_** _only if you are building audio/video processing tools, working with web workers passing raw data buffers, dealing with files/crypto, or if profiling shows a massive memory/GC bottleneck._
+Use Regular Arrays for 95% of your code, even for homogeneous data. It keeps your code flexible, readable, and perfectly fast enough.
 
+Use Typed Arrays only if you are building audio/video processing tools, working with web workers passing raw data buffers, dealing with files/crypto, or if profiling shows a massive memory/GC bottleneck.
+
+---
 &nbsp;
-
----
-
----
-
 <!-- PAGINATION_START -->
 
-**Parent:** [Data Structures](../../2.%20Data%20Structures/) → [Arrays](../Arrays/)
+📁 [Data Structures](../../2.%20Data%20Structures/) → [Arrays](../Arrays/)
  
-**Previous:** ← [Data Structures > Arrays > Which Array Method to Use](19-which-array-method-to-use.md)  
+◀️ [Data Structures > Arrays > Which Array Method to Use](19-which-array-method-to-use.md)  
 
-**Next:** → [Data Structures > Maps](../Maps/)
+▶️ [Data Structures > Maps](../Maps/)
 
 <!-- PAGINATION_END -->
+&nbsp;

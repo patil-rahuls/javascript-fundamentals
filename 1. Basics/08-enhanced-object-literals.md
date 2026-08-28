@@ -1,10 +1,10 @@
-## Enhanced Object Literals <sup>_ES6_</sup>
+## Enhanced Object Literals (ES6)
 
-_Literals represent values in javascript._
+Literals represent values in javascript.
 
-_These are fixed values not variables that you literally provide in your script._
+These are fixed values not variables that you _literally_ provide in your script.
 
-A better way to write javascript objects with the new `ES6` syntax could be as follows:
+A better way to write javascript objects with the new **ES6** syntax could be as follows:
 
 > Example 1: Computed Properties
 
@@ -21,6 +21,7 @@ const laptop = {
 console.log(laptop.make1); // "Apple"
 console.log(laptop.make2); // "Dell"
 console.log(laptop.make3); // "HP"
+
 ```
 
 &nbsp;
@@ -35,33 +36,28 @@ const myObj = {
     return [param1, param2];
   },
 
-  // method 'myFunc()' can be
-  // re-written as follows.
+  // above method can be re-written as:
   myFunc(param1, param2) {
     return [param1, param2];
   },
-  // i.e. removed the colon and
-  // function keyword
 
+  // an outer variable
   film,
-  // An outside object
 
   movie: film,
-  // An outside object with a
-  // different property name.
+  // an outer variable with a different property name.
 };
+
 ```
-
 ---
-
----
-
+&nbsp;
 <!-- PAGINATION_START -->
 
-**Parent:** [1. Basics](../1.%20Basics/)  
+📁 [1. Basics](../1.%20Basics/)  
 
-**Previous:** ← [Strings and Template Literals [ES6]](07-template-literals.md)  
+◀️ [Strings and Template Literals [ES6]](07-template-literals.md)  
 
-**Next:** → [Arrow Function [ES6]](09-arrow-functions.md)
+▶️ [Arrow Function [ES6]](09-arrow-functions.md)
 
 <!-- PAGINATION_END -->
+&nbsp;

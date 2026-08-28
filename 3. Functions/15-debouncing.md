@@ -1,20 +1,18 @@
 ## Debouncing
 
-> **_used to limit how often a function can fire._**
+> Used to limit how often a function can fire.
+
+Note - This is a frontend code:
 
 ```javascript
-// Note - This is a frontend code:
 const saveBtn = document.querySelector("#save");
 saveBtn.addEventListener("input", saveData);
-// saveData() is a debouced function
-// defined below.
+// saveData() is a debouced function defined below.
 
 let saveTimer;
 
 function saveData(event) {
-  // Clear the previous timer if
-  // the function is called again
-  // before the delay finishes.
+  // Clear the previous timer if the function is called again before the delay finishes.
   clearTimeout(saveTimer);
 
   // Start a new timer
@@ -27,6 +25,7 @@ function saveData(event) {
 function saveDataAPI(data) {
   console.log(`💾 Saved to cloud: ${data}`);
 }
+
 ```
 
 ### 1. Search Bar Auto-Complete (Typeahead):
@@ -88,15 +87,14 @@ As a user scrolls down a page, the browser calculates the scroll position consta
 > _You debounce the scroll listener so that the code checks your page position only every 100–200ms, heavily reducing the browser's workload while still loading new content seamlessly._
 
 ---
-
----
-
+&nbsp;
 <!-- PAGINATION_START -->
 
-**Parent:** [3. Functions](../3.%20Functions/)  
+📁 [3. Functions](../3.%20Functions/)  
 
-**Previous:** ← [Strings - Methods](14.2-strings-methods-2.md)  
+◀️ [Strings - Methods](14.2-strings-methods-2.md)  
 
-**Next:** → [Throttling](16-throttling.md)
+▶️ [Throttling](16-throttling.md)
 
 <!-- PAGINATION_END -->
+&nbsp;

@@ -1,16 +1,16 @@
-## Spread Operator `"..."` <sup>_ES6_</sup>
+## Spread Operator **"..."** (ES6)
 
-`"..."` is on the RHS of `=` assignment.
+**"..."** is on the RHS of **=** assignment.
 
-> **_unpacks elements of iterable objects such as Arrays, Sets, Maps and Objects into a list._**
+> unpacks elements of iterable objects such as Arrays, Sets, Maps and Objects into a list.
 
 > **Spread Operator can only be used in the following cases:**
 >
-> 1. **_Expanding/Merging an iterable._**
-> 2. **_As a function argument._**
-> 3. **_Copy iterables._**
+> 1. Expanding/Merging an iterable.
+> 2. As a function argument.
+> 3. Copy iterables.
 
-> **_There can be more than one spread element in an expression._**
+> There can be more than one spread element in an expression.
 
 &nbsp;
 
@@ -57,6 +57,7 @@ console.log(updatedUser);
   city: "Pune"
 }
 */
+
 ```
 
 &nbsp;
@@ -95,43 +96,45 @@ console.log(updatedUser);
   country: 'India',
 }
 */
+
 ```
 
 &nbsp;
 
 > Example 3: Copy Iterables (Deep Copy)
->
-> ```javascript
-> // Copy a flat array
-> const first = [1, 2, 3, 4];
->
-> const firstCopy = [...first];
->
-> console.log(firstCopy);
-> // [1, 2, 3, 4]
->
-> // Copy a flat object
-> const user = {
->   name: "Rahul",
->   age: 25,
->   city: "Pune",
-> };
->
-> const temp = { ...user };
->
-> console.log(temp);
-> /*
-> {
->   name: "Rahul",
->   age: 25,
->   city: "Pune"
-> }
-> */
-> ```
->
-> _The examples above created deep copies._
->
-> _In case of flat structures (no nested array/object), this creates a deep copy._
+
+```javascript
+// Copy a flat array
+const first = [1, 2, 3, 4];
+
+const firstCopy = [...first];
+
+console.log(firstCopy);
+// [1, 2, 3, 4]
+
+// Copy a flat object
+const user = {
+  name: "Rahul",
+  age: 25,
+  city: "Pune",
+};
+
+const temp = { ...user };
+
+console.log(temp);
+/*
+{
+  name: "Rahul",
+  age: 25,
+  city: "Pune"
+}
+*/
+
+```
+
+_The examples above created deep copies._
+
+**_In case of flat structures (no nested array/object), this creates a deep copy._**
 
 However, if the object or array contains nested objects or arrays, it only copies the memory reference to those inner elements rather than making fresh duplicates.
 
@@ -150,7 +153,7 @@ const user = {
   },
 };
 
-// Shallow copy using the spread operator
+// Using the spread operator
 const copy = { ...user };
 
 copy.name = "Raj";
@@ -164,6 +167,7 @@ console.log(user.name);
 
 console.log(user.address.city);
 // "Mumbai" (CHANGED! Both share the reference)
+
 ```
 
 &nbsp;
@@ -191,24 +195,22 @@ const objPayload = {
 notify(...objPayload);
 
 // ✅ Fix:
-// Object.values(objPayload) creates
-// ['Admin', 'Hello Rahul!'], which
-// can then be safely spread.
+// Object.values(objPayload) creates ['Admin', 'Hello Rahul!'], which can then be safely spread.
 
 notify(...Object.values(payload));
 // 'Admin sent: Hello Rahul!'
+
 ```
 
 ---
-
----
-
+&nbsp;
 <!-- PAGINATION_START -->
 
-**Parent:** [1. Basics](../1.%20Basics/)  
+📁 [1. Basics](../1.%20Basics/)  
 
-**Previous:** ← [Nested Destructuring Assignment [ES6]](12.2-nested-destructuring.md)  
+◀️ [Nested Destructuring Assignment [ES6]](12.2-nested-destructuring.md)  
 
-**Next:** → [`"..."` Rest Operator [ES6]](14-rest-operator.md)
+▶️ [**"..."** Rest Operator [ES6]](14-rest-operator.md)
 
 <!-- PAGINATION_END -->
+&nbsp;

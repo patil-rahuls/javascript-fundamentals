@@ -1,12 +1,12 @@
-## Data Structures > ARRAY
+## Data Structures > Array > Check Equality > _indexOf()_
 
-> Get element index by value
+Gets element index by value.
 
-### `Array.prototype.indexOf()`
+### Array.prototype.**indexOf()** - _checks for equality_
 
-> **_Returns index of element present in the array, `-1` otherwise._**
->
-> **_Checks for Equality using Strict Equality `===`._**
+Returns index of the element present in the array, **-1** otherwise.
+
+Uses Strict Equality (**===**)
 
 ```javascript
 const myArr = [55, "rahul", "hitesh", "aajesh"];
@@ -19,18 +19,17 @@ myArr.indexOf("milan");
 
 myArr.indexOf("55");
 // -1 (string ‘55’ is passed. No Type Coercion occurs)
+
 ```
+---
 &nbsp;
----
-
----
-
 <!-- PAGINATION_START -->
 
-**Parent:** [Data Structures](../../2.%20Data%20Structures/) → [Arrays](../Arrays/)
+📁 [Data Structures](../../2.%20Data%20Structures/) → [Arrays](../Arrays/)
   
-**Previous:** ← [Data Structures > Arrays > Array Element Find](13-array-element-find.md)  
+◀️ [Data Structures > Arrays > Array Element Find](13-array-element-find.md)  
 
-**Next:** → [Data Structures > Arrays > Array Element Find Index](15-array-element-findIndex.md)
+▶️ [Data Structures > Arrays > Array Element Find Index](15-array-element-findIndex.md)
 
 <!-- PAGINATION_END -->
+&nbsp;

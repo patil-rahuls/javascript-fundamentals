@@ -7,15 +7,14 @@ _WIP_
 More here - https://www.sitepoint.com/javascript-decorators-what-they-are/
 
 ---
-
----
-
+&nbsp;
 <!-- PAGINATION_START -->
 
-**Parent:** [3. Functions](../3.%20Functions/)  
+📁 [3. Functions](../3.%20Functions/)  
 
-**Previous:** ← [Generator Function `function*` [ES6]](12-generator-yeild.md)  
+◀️ [Generator Function **function*** [ES6]](12-generator-yeild.md)  
 
-**Next:** → [Strings - Methods](14.1-strings-methods.md)
+▶️ [Strings - Methods](14.1-strings-methods.md)
 
 <!-- PAGINATION_END -->
+&nbsp;

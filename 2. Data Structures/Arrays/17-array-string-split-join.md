@@ -1,63 +1,55 @@
-## Data Structures > ARRAY
+## Data Structures > Array > String to Array > _split()_
 
-> Array <--> String
+### String.prototype.**split()** - _String to Array_
 
-### `String.prototype.split()` String to Array
-
-> **_Splits a string into an array by the provided delimeter._**
+Splits a string into an array by the provided delimeter.
 
 ```javascript
-const str = "11,22,33,44,55,66";
+const str = "11,22,33,44,55,66"; // string
 
 const result = str.split(",");
 
 console.log(result);
 // [11,22,33,44,55,66]
+
 ```
-
 ---
-
 &nbsp;
 
-### `Array.prototype.join()` Array to String
+## Data Structures > Array > Array to String > _join()_
 
-> **_Joins an array items into a string using the provided delimeter._**
+### Array.prototype.**join()** - _Array to String_
 
-By default comma `,` will be the delimeter._
+Joins an array items into a string using the provided delimeter.
+
+By default **,** _(comma)_ will be the delimeter.
 
 ```javascript
 const arr = [11, 22, 33, 44, 55, 66];
 
 const result = arr.join("-");
-console.log(result);
-// "11-22-33-44-55-66"
+// result = "11-22-33-44-55-66"
 
 const result2 = arr.join("");
-console.log(result2);
-// "112233445566"
+// result2 = "112233445566"
 
-// By default comma will be the delimeter.
-const result3 = arr.join();
-
-console.log(result3);
-// "11,22,33,44,55,66"
-
-console.log(typeof result);
-// "string";
-// same for result2 and result2.
 ```
 
+By default comma will be the delimeter.
+```javascript
+const result3 = arr.join();
+// result3 = "11,22,33,44,55,66"
+
+```
+---
 &nbsp;
----
-
----
-
 <!-- PAGINATION_START -->
 
-**Parent:** [Data Structures](../../2.%20Data%20Structures/) → [Arrays](../Arrays/)
+📁 [Data Structures](../../2.%20Data%20Structures/) → [Arrays](../Arrays/)
   
-**Previous:** ← [Data Structures > Arrays > Array Value Reduce](16-array-value-reduce.md)  
+◀️ [Data Structures > Arrays > Array Value Reduce](16-array-value-reduce.md)  
 
-**Next:** → [Data Structures > Arrays > Array Methods Chaining](18-array-methods-chaining.md)
+▶️ [Data Structures > Arrays > Array Methods Chaining](18-array-methods-chaining.md)
 
 <!-- PAGINATION_END -->
+&nbsp;

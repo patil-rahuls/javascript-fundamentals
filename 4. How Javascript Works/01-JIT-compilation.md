@@ -1,16 +1,16 @@
 ## Compilation, Interpretation and JIT
 
-## `Compilation`
+### **Compilation**
 
-Entire source code is compiled into Machine Code (Assembly Code) at once and written to a binary file that can be executed by a computer. This **_binary file (Machine Code)_** is portable and can be executed way after compilation.
+Entire source code is compiled into Machine Code (Assembly Code) at once and written to a binary file that can be executed by a computer. This **binary file (Machine Code)** is portable and can be executed way after compilation.
 
 **_Compilation is much faster._**
 
 &nbsp;
 
-## `Interpretation`
+### **Interpretation**
 
-Interpreter runs **_line by line_** through the source code and compiles into Machine Code and executes.
+Interpreter runs **line by line** through the source code and compiles into Machine Code and executes.
 
 During execution it still needs to convert the source code to Machine Code line by line. However it happens RIGHT BEFORE its executed, and not AHEAD OF TIME.
 
@@ -20,13 +20,13 @@ So, no portable file exists to be executed way after compilation unlike in compi
 
 &nbsp;
 
-## `Just-In-Time` (JIT) Compilation
+### **Just-In-Time** (JIT) Compilation
 
-Entire code is converted into machine code **_ALL AT ONCE_** and then executed immediately. There is no portable file for execution, and the execution happens immediately after compilation.
+Entire code is converted into machine code **ALL AT ONCE** and then executed immediately. There is no portable file for execution, and the execution happens immediately after compilation.
 
-**_lot faster than compiling and executing line by line._**
+**_Lot faster than compiling and executing line by line._**
 
-**_Javascript is a `Just-In-Time (JIT) compiled` language._**
+Javascript is a **Just-In-Time (JIT) compiled** language.
 
 ---
 
@@ -62,13 +62,13 @@ _This makes modern JS engine like V8 so powerful and fast._
 
 While the interpreter runs the code, a built-in monitor **_(profiler)_** watches how often different sections of code are executed.
 
-> _Code that runs a few times is called `warm` and code that runs repeatedly, especially in loops or frequently called functions, is called `hot`._
+> _Code that runs a few times is called **warm** and code that runs repeatedly, especially in loops or frequently called functions, is called **hot**._
 
-### 6. Compilation of `Hot` code -
+### 6. Compilation of **Hot** code -
 
-Once a section of code is identified as `hot`, the JIT compiler takes that specific code and compiles it into highly optimized version in machine code.
+Once a section of code is identified as **hot**, the JIT compiler takes that specific code and compiles it into highly optimized version in machine code.
 
-This is always faster because, its the `machine-code` that is getting optimized, avoiding the line-by-line translation overhead in subsequent runs.
+This is always faster because, its the **machine-code** that is getting optimized, avoiding the line-by-line translation overhead in subsequent runs.
 
 &nbsp;
 
@@ -77,15 +77,14 @@ _All these JIT processes happen in special threads that we can't access which ar
 More about javascript JIT compilation here - https://medium.com/@aamchora/what-exactly-just-in-time-jit-compilation-is-in-javascript-f7aea482843f
 
 ---
-
----
-
+&nbsp;
 <!-- PAGINATION_START -->
 
-**Parent:** [4. How Javascript Works](../4.%20How%20Javascript%20Works/)  
+📁 [4. How Javascript Works](../4.%20How%20Javascript%20Works/)  
 
-**Previous:** ← [Functions](../3.%20Functions/)
+◀️ [Functions](../3.%20Functions/)
 
-**Next:** → [Javascript Runtime](02-javascript-runtime.md)
+▶️ [Javascript Runtime](02-javascript-runtime.md)
 
 <!-- PAGINATION_END -->
+&nbsp;

@@ -4,11 +4,11 @@
 [HTML]<->[DOM Tree]<->[DOM-API]<->{JS Code}
 ```
 
-_**DOM Manipulation**: allows JavaScript to dynamically create, modify, structure, and style elements on a webpage._
+_DOM Manipulation allows JavaScript to dynamically create, modify, structure, and style elements on a webpage._
 
 &nbsp;
 
-> ### 1. What is DOM ?
+### 1. What is DOM ?
 
 Document Object Model. It's an interface between the
 javascript code and the browser.
@@ -19,15 +19,15 @@ We write javascript code to create, modify and delete HTML elements, set styles,
 
 &nbsp;
 
-> ### 2. DOM API?
+### 2. DOM API?
 
 Allows you to modify a DOM tree in any way you want.
 
-We can edit the DOM of a document using JavaScript to access the `document` property of the global object.
+We can edit the DOM of a document using JavaScript to access the **document** property of the global object.
 
 &nbsp;
 
-> ### 3. What are NodeList and HTMLCollection?
+### 3. What are NodeList and HTMLCollection?
 
 Both the NodeList and HTMLCollection contain HTML elements that we query from javascript. The
 
@@ -37,11 +37,11 @@ But the same does not happen with NodeList.
 
 &nbsp;
 
-> ### 4. Querying the elements
+### 4. Querying the elements
 
-> **_`document.querySelector()`_**
->
-> _Returns a SINGLE (first matching) element. We provide CSS selectors to these methods._
+**document.querySelector()**
+
+_Returns a SINGLE (first matching) element. Accepts CSS selectors as parameters._
 
 ```javascript
 // Selecting by class
@@ -52,60 +52,65 @@ document.querySelector("#message");
 
 // multiple selectors
 document.querySelector(".messageDiv, #message, div.main p");
+
 ```
 
-_Use querySelector when you need flexibility, such as selecting nested elements, matching complex CSS paths, or writing unified selection code._
+Use querySelector when you need flexibility, such as selecting nested elements, matching complex CSS paths, or writing unified selection code.
 
 &nbsp;
 
-> **_`document.querySelectorAll()`_**
->
-> _Returns a NodeList(non-live) of matching elements._
+**document.querySelectorAll()**
+
+_Returns a NodeList(non-live) of matching elements._
 
 ```javascript
 const tblRows = document.querySelectorAll("table tr");
+
 ```
 
 &nbsp;
 
-> **_`document.getElementById()`_**
->
-> _Use getElementById when you want the fastest performance and only need to find an element by its exact ID string._
->
-> _It is highly optimized and noticeably faster because the browser engine uses a direct internal lookup map of ID keys._
+**document.getElementById()**
+
+Use getElementById when you want the fastest performance and only need to find an element by its exact ID string.
+
+It is highly optimized and noticeably faster because the browser engine uses a direct internal lookup map of ID keys.
 
 ```javascript
 document.getElementById("show");
+
 ```
 
 &nbsp;
 
-> **_`document.getElementsByTagName()`_**
->
-> _Returns an HTMLCollection of matching elements._
+**document.getElementsByTagName()**
+
+_Returns an HTMLCollection of matching elements._
 
 ```javascript
 document.getElementsByTagName("button");
+
 ```
 
 &nbsp;
 
-> **_`document.getElementsByClassName()`_**
->
-> _Returns an HTMLCollection of matching elements._
+**document.getElementsByClassName()**
+
+_Returns an HTMLCollection of matching elements._
 
 ```javascript
 document.getElementsByClassName("account");
+
 ```
 
 &nbsp;
-> ### 5. DOM Manipulation
+### 5. DOM Manipulation
 
-> **_`.textContent`_** & **_`.value`_**
->
-> _Gets and sets labels (non-inputs):_
->
-> _No Paranthesis `()` around them, i.e. they are `getters` and `setters`._
+**.textContent** & **.value**
+
+_Gets and sets labels (non-inputs):_
+
+_No Paranthesis **()** around them, i.e. they are **getters** and **setters**._
 
 
 ```javascript
@@ -116,23 +121,25 @@ document.querySelector(".messageDiv").textContent = "Hi!";
 document.querySelector(".guess").value;
 
 document.querySelector(".guess").value = 44;
+
 ```
 
 &nbsp;
 
-> **Changing CSS properties:**
+**Changing CSS properties:**
 
 ```javascript
 document.querySelector("body").style.backgroundColor = "#efefef";
 
 document.querySelector("body").style.width = "200px";
+
 ```
 
 &nbsp;
 
-> **_`.prepend()`_** & **_`.append()`_**
->
-> _Inserts element as `Child` under another element at the beginning / end._
+**.prepend()** & **.append()**
+
+_Inserts element as **Child** under another element at the beginning / end._
 
 ```javascript
 const header = document.querySelector(".header");
@@ -141,35 +148,34 @@ const msg = document.createElement("div");
 
 msg.classList.add("cookie-msg");
 
-msg.innerHTML = "Accept Cookies <button> OK </button>";
+msg.innerHTML = "Accept Cookies <buttonOK </button>";
 
 header.prepend(msg);
-// Adds as a first child
-// to the header element.
+// Adds as a first child to the header element.
 
 header.append(msg);
-// Adds as a last child
-// to the header element.
-// That means it just moved
-// the element, not copied.
+// Adds as a last child to the header element.
+// That means it just moved the element, not copied.
+
 ```
 
 &nbsp;
 
-> **_`.cloneNode()`_**
->
-> _Creates multiple copies of same element:_
+**.cloneNode()**
+
+_Creates multiple copies of same element:_
 
 ```javascript
 header.append(msg.cloneNode(true));
 // It now creates its own clone.
+
 ```
 
 &nbsp;
 
-> **_`.before()`_** & **_`.after()`_**
->
-> _Inserts an element before / after an element:_
+**.before()** & **.after()**
+
+_Inserts an element before / after an element:_
 
 ```javascript
 // Before header element
@@ -177,13 +183,14 @@ header.before(msg);
 
 // After header element
 header.after(msg);
+
 ```
 
 &nbsp;
 
-> **_`.remove()`_** & **_`.removeChild()`_** 
->
-> _Delete an element:_
+**.remove()** & **.removeChild()** 
+
+_Delete an element:_
 
 ```javascript
 // New Way
@@ -191,13 +198,14 @@ msg.remove();
 
 msg.parentElement.removeChild(msg);
 // DOM Traversing. Old Way
+
 ```
 
 &nbsp;
 
-> **_`.getComputedStyle()`_**
->
-> _Returns style attributes of an element:_
+**.getComputedStyle()**
+
+_Returns style attributes of an element:_
 
 ```javascript
 const msgStyle = getComputedStyle(msg);
@@ -207,11 +215,12 @@ if (msgStyle.color == "#000") {
 }
 
 msgStyle.height = Number.parseFloat(msgStyle.height, 10) + 30 + "px";
+
 ```
 
 &nbsp;
 
-> **_Return standard attributes of an element:_**
+Return standard attributes of an element:
 
 ```javascript
 const loginBTN = document.querySelector("#section-2");
@@ -224,25 +233,27 @@ console.log(loginBTN.alt);
 console.log(loginBTN.classList);
 
 console.log(loginBTN.className);
+
 ```
 
 &nbsp;
 
-> **_`.getAttribute()`_**
->
-> _Returns non-standard attributes like the ones defined by user._
+**.getAttribute()**
+
+_Returns non-standard attributes like the ones defined by user._
 
 ```javascript
 console.log(loginBTN.getAttribute("data-rel"));
 
 console.log(loginBTN.getAttribute("custom-title"));
+
 ```
 
 &nbsp;
 
-> **_`.setAttribute()`_**
->
-> _Sets non-standard attributes_
+**.setAttribute()**
+
+_Sets non-standard attributes_
 
 ```javascript
 // Non standard
@@ -250,11 +261,12 @@ loginBTN.setAttribute("data-hidden", "3445645645");
 
 // standard
 loginBTN.alt = "Login key";
+
 ```
 
 &nbsp;
 
-> **_`Complete and Relative url`_**
+**Complete and Relative url**
 
 ```javascript
 loginBTN.src;
@@ -262,21 +274,23 @@ loginBTN.src;
 
 loginBTN.getAttribute("src");
 // returns relative url
+
 ```
 
 &nbsp;
 
-> **Data Attributes:**
+**Data Attributes:**
 
 ```javascript
 loginBTN.dataset;
+
 ```
 
 &nbsp;
 
-> **_`classList.add()`_ & _`classList.remove()`_**
-> 
-> _Adds / removes classes in the HTML element._
+**classList.add() & classList.remove()**
+
+_Adds / removes classes in the HTML element._
 
 ```javascript
 loginBTN.classList.add('btn-dark');
@@ -290,27 +304,26 @@ loginBTN.classList.contains('check-class-exists');
 ```
 
 &nbsp;
-> ### 6. Events & Event Listeners
+### 6. Events & Event Listeners
 
-> Example 
-> ```javascript
-> document.addEventListener("keydown", function () {
->   console.log("A Key was pressed.");
-> });
-> ```
-> 
+Example 
+```javascript
+document.addEventListener("keydown", function () {
+  console.log("A Key was pressed.");
+});
 
-_When an event occurs, JavaScript generates an event-object that contains all info about that event._
+```
+When an event occurs, JavaScript generates an event-object that contains all info about that event.
 
-_We pass that event-object as an argument to the callback function._
+We pass that event-object as an argument to the callback function.
 
 &nbsp;
 
 **Keypress events:**
-> **_`keydown`_**, **_`keyup`_** and **_`keypress`_**.
-> 
+**keydown**, **keyup** and **keypress**.
 
-> Example 
+
+Example 
 ```javascript
 document.addEventListener("keydown", function (eventObj) {
   console.log(eventObj.key);
@@ -320,24 +333,23 @@ document.addEventListener("keydown", function (eventObj) {
     alert("Escape was pressed.");
   }
 });
+
 ```
 
 &nbsp;
 
 **Mouse events:**
->
-> **_`click`_** and **_`scroll`_**.
-> 
+
+**click** and **scroll**.
+
 
 ```javascript
 document.querySelector(".myButton").addEventListener("click", function () {
-  // This is called a callback function
+  // This is a callback function
   alert("Hi");
 });
+
 ```
-
-&nbsp;
-
 _A more cleaner way would be by separately defining a callback function and re-using it-_
 
 ```javascript
@@ -346,18 +358,18 @@ const myFunc = function () {
 };
 
 document.querySelector(".myButton").addEventListener("click", myFunc());
+
 ```
 
 ---
-
----
-
+&nbsp;
 <!-- PAGINATION_START -->
 
-**Parent:** [1. Basics](../1.%20Basics/)  
+📁 [1. Basics](../1.%20Basics/)  
 
-**Previous:** ← [Console Methods](16-console.md)  
+◀️ [Console Methods](16-console.md)  
 
-**Next:** → [Data Structures](../2.%20Data%20Structures/)
+▶️ [Data Structures](../2.%20Data%20Structures/)
 
 <!-- PAGINATION_END -->
+&nbsp;

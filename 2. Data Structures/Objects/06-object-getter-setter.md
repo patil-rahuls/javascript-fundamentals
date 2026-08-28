@@ -1,13 +1,12 @@
-## Data Structures > Object
-
-### Object Getter & Setter
+## Data Structures > Object > Getter & Setter
 
 Every Object in Javascript has two important properies:
 
-- **getter** "get"
-- **setter** "set"
+> **getter** is invoked by ***get***.
 
-_IMP: Remember! they are "properties", not "methods"_
+> **setter** is invoked by ***set***.
+
+***IMP***: _They are "properties", not "methods"_
 
 ```javascript
 const myObj = {
@@ -26,28 +25,27 @@ const myObj = {
 };
 
 myObj.info;
-// We didn't use parens here like 'myObj.info()'. We access the getter just like a property.
+// No parens here.
 
 myObj.info = "P";
 // No parens here too.
+
 ```
+_We didn't use parens with the getters and setters. We access them just like a property._
 
-**_Is Poymorphism achieved here?_**
+_Is Poymorphism achieved here?_
 
-**_I know 'info' here is a property and not function, but at the end, what we get is a 'functionality' out of it !!_**
+_I know 'info' here is a property and not function, but at the end, what we get is a similar 'functionality' out of it !!_
 
+---
 &nbsp;
-
----
-
----
-
 <!-- PAGINATION_START -->
 
-**Parent:** [Data Structures](../../2.%20Data%20Structures/) → [Objects](../Objects/)
+📁 [Data Structures](../../2.%20Data%20Structures/) → [Objects](../Objects/)
   
-**Previous:** ← [Data Structures > Objects > Object Delete Properties](05-object-delete-properties.md)  
+◀️ [Data Structures > Objects > Object Delete Properties](05-object-delete-properties.md)  
 
-**Next:** → [Data Structures > Objects > Object This Keyword](07-object-this-keyword.md)
+▶️ [Data Structures > Objects > Object This Keyword](07-object-this-keyword.md)
 
 <!-- PAGINATION_END -->
+&nbsp;

@@ -1,77 +1,107 @@
-## Data Structures > ARRAY > Slice
+## Data Structures > Array > Return new Array > _slice()_
 
-> Array to new Array
+### Array.prototype.**slice()**
 
-### `Array.prototype.slice()`
+Syntaxt - `array.slice(start_index, end_index)`
 
-> **array.slice ( start_index , end_index )**
-> 
-> _element at `start_index` is included in result._
-> 
-> _element at `end_index` is not included in result._
-> 
-> _parameter `end_index` is optional._
-> 
-> ```javascript
-> const arr = [11, 22, 33, 44, 55, 66];
-> 
-> arr.slice(2);
-> // [33, 44, 55, 66] (element at index 2 is included)
-> 
-> arr.slice(2, 4);
-> // [33, 44] (element at index 4 is not included)
-> 
-> // Start from end of an array
-> arr.slice(-2);
-> // [ 55, 66 ] (Start from 2nd last element.)
-> 
-> arr.slice(1, -2);
-> // [ 22, 33, 44 ]
-> 
-> arr.slice(-2, -1);
-> // [ 55 ]
-> ```
+_element at the **start_index** is included in the result._
 
-> Example 1: Deep Clone
->
-> _`slice()` can be used to copy arrays by not passing any arguments._
-> 
-> ```javascript
-> const arr1 = arr.slice(); // DEEP COPY
-> 
-> // But why copy arrays this way?
-> // Observe this :
-> const arr2 = [1, 2, 3];
-> const brr = arr2;
-> arr2[0] = 99; // Changed arr2
-> console.log(brr);
-> // brr also gets changed, because 
-> // both have same references.
-> 
-> // Hence use slice method to get 
-> // an 'independent' copy of the array.
-> const crr = arr2.slice();
-> // "Deep copy"
-> 
-> // Deep clone a flat array 
-> // using spread operator.
-> const arr3 = [...arr];
-> // This will also create a deep 
-> // clone if the array is flat.
-> ```
+_element at the **end_index** (optional) is not included in the result._
 
+```javascript
+const arr = [11, 22, 33, 44, 55, 66];
+
+const newArr = arr.slice(2);
+
+// arr = [11, 22, 33, 44, 55, 66] (Unchanged)
+// newArr = [33, 44, 55, 66]
+
+```
+
+```javascript
+const arr = [11, 22, 33, 44, 55, 66];
+
+const newArr = arr.slice(2, 4);
+
+// arr = [11, 22, 33, 44, 55, 66] (Unchanged)
+// newArr = [33, 44] 
+// (element at index - 4 is not included)
+
+```
+
+Start from the end of the array
+```javascript
+const arr = [11, 22, 33, 44, 55, 66];
+
+const newArr = arr.slice(-2);
+
+// arr = [11, 22, 33, 44, 55, 66] (Unchanged)
+// newArr = [55, 66] 
+// (grabs items from 2nd last element.)
+
+```
+
+```javascript
+const arr = [11, 22, 33, 44, 55, 66];
+
+const newArr = arr.slice(1, -2);
+// newArr = [22, 33, 44]
+
+const newArr1 = arr.slice(-2, -1);
+// [ 55 ]
+
+```
 
 &nbsp;
----
 
----
+> Example: Deep Clone
 
+**slice()** can be used to copy arrays by not passing any arguments.
+
+```javascript
+const arr = [11, 22, 33, 44, 55, 66];
+
+// DEEP COPY
+const copyArr = arr.slice(); 
+
+```
+
+_But why copy arrays this way?_
+
+_Observe this :_
+```javascript
+const a = [1, 2, 3];
+const b = a;
+
+a[0] = 99;
+
+// a = [99, 2, 3]
+// b = [99, 2, 3]
+
+```
+_In the example above, array 'b' also gets changed, because both have the same reference._
+
+_Hence use **slice()** method to get an 'independent' copy of the array._
+
+```javascript
+const a = [1, 2, 3];
+const c = a.slice();
+
+a[0] = 100;
+
+// a = [100, 2, 3]
+// c = [1, 2, 3]
+
+```
+---
+&nbsp;
 <!-- PAGINATION_START -->
 
-**Parent:** [Data Structures](../../2.%20Data%20Structures/) → [Arrays](../Arrays/)
+📁 [Data Structures](../../2.%20Data%20Structures/) → [Arrays](../Arrays/)
   
-**Previous:** ← [Data Structures > Arrays > Mutate Arrays](02-mutate-arrays.md)  
+◀️ [Data Structures Arrays Mutate Arrays](02-mutate-arrays.md)  
 
-**Next:** → [Data Structures > Arrays > Array Concat](04-array-array-concat.md)
+▶️ [Data Structures Arrays Array Concat](04-array-array-concat.md)
 
 <!-- PAGINATION_END -->
+&nbsp;

@@ -1,14 +1,12 @@
-## Data Structures > ARRAY
+## Data Structures > Array > Check Equality > _includes()_
 
-> Check if element exists
+Checks if element exists
 
-### `Array.prototype.includes()`
+### Array.prototype.**includes()** - _checks for equality_
 
-We pass the element to the function.
+Returns **true** if the element is present in the array, returns **false** otherwise.
 
-> **_Returns `true` *(Boolean)* if the element is present in the array, returns `false` otherwise._**
->
-> **_Checks for Equality using Strict Equality `===`._**
+Uses Strict Equality (**===**)
 
 ```javascript
 const myArr = [55, "rahul", "hitesh", "aajesh"];
@@ -16,25 +14,23 @@ const myArr = [55, "rahul", "hitesh", "aajesh"];
 myArr.includes("rahul");
 // true
 
-myArr.includes("anish");
+myArr.includes("anil");
 // false
 
 // No Type Coercion occurs
 myArr.includes("55");
 // false
-// Because string ‘55’ is passed.
+
 ```
+---
 &nbsp;
----
-
----
-
 <!-- PAGINATION_START -->
 
-**Parent:** [Data Structures](../../2.%20Data%20Structures/) → [Arrays](../Arrays/)
+📁 [Data Structures](../../2.%20Data%20Structures/) → [Arrays](../Arrays/)
   
-**Previous:** ← [Data Structures > Arrays > Array Elements Every](11-array-elements-every.md)  
+◀️ [Data Structures > Arrays > Array Elements Every](11-array-elements-every.md)  
 
-**Next:** → [Data Structures > Arrays > Array Element Find](13-array-element-find.md)
+▶️ [Data Structures > Arrays > Array Element Find](13-array-element-find.md)
 
 <!-- PAGINATION_END -->
+&nbsp;

@@ -1,20 +1,20 @@
 ## Error Types
 
-> ### 1. Syntax errors
+### 1. Syntax errors
 
 These occur when the code contains a mistake in the structure or syntax of the language.
 
 Examples include missing punctuation, incorrect use of keywords, or mismatched parentheses.
 
 &nbsp;
-> ### 2. Reference errors
+### 2. Reference errors
 
 These occur when the code is trying to access a variable or function that has not been defined.
 
 This can happen when a variable has not been declared, or when a function is called before it has been defined. Remember TDZ?
 
 &nbsp;
-> ### 3. Type errors
+### 3. Type errors
 
 These occur when the code is trying to perform an operation on a variable of the wrong type.
 
@@ -24,10 +24,11 @@ Examples include trying to use a string as a number, or trying to access a prope
 const x = 7;
 
 console.log(x.toUpperCase());
+
 ```
 
 &nbsp;
-> ### 4. Range errors
+### 4. Range errors
 
 These occur when the code is trying to access an index outside the range of an array, or when a value is too large or too small to be used.
 
@@ -35,17 +36,12 @@ These occur when the code is trying to access an index outside the range of an a
 const maxNumber = Number.MAX_SAFE_INTEGER;
 
 console.log(maxNumber + 1);
-// Here, the code is trying
-// to add 1 to the maximum
-// safe integer value that
-// JavaScript can represent,
-// which exceeds the maximum
-// value that can be represented
-// and it will cause a range error.
+
 ```
+_Here, the code is trying to add 1 to the maximum safe integer value that JavaScript can represent, which exceeds the maximum value that can be represented and it will cause a range error._
 
 &nbsp;
-> ### 5. Evaluation errors
+### 5. Evaluation errors
 
 These occur when the code is trying to evaluate an expression that is not valid.
 
@@ -53,41 +49,32 @@ Examples include dividing by zero or trying to access a property of undefined.
 
 ```javascript
 eval("hello world");
-// Here, the code is trying
-// to evaluate a string
-// "hello world" which is
-// not a valid JavaScript
-// statement, so it causes
-// an evaluation error.
+
 ```
+_Here, the code is trying to evaluate a string "hello world" which is not a valid JavaScript statement, so it causes an evaluation error._
 
 &nbsp;
-> ### 6. URIError
+### 6. URIError
 
 These occur when a malformed URI is passed to the encodeURI() or decodeURI() functions.
 
 ```javascript
 encodeURI("http://mywebsite.com/path?name=value#fragment");
-// Here, the code is trying
-// to encode the following
-// URI: "http://mywebsite.com/path?name=value#fragment"
-// which contains some
-// reserved characters,
-// that are not allowed to be encoded.
+
 ```
+_Here, the code is trying to encode the following URI: "http://mywebsite.com/path?name=value#fragment" which contains some reserved characters, that are not allowed to be encoded._
 
 _It's important to note that the JavaScript interpreter will stop executing the code as soon as it encounters a URIError, so it's essential to check your code for URI errors before running it to ensure it will execute correctly._
 
 ---
-
----
-
+&nbsp;
 <!-- PAGINATION_START -->
 
-**Parent:** [1. Basics](../1.%20Basics/)  
+📁 [1. Basics](../1.%20Basics/)  
 
-**Previous:** ← [`"..."` Rest Operator [ES6]](14-rest-operator.md)  
+◀️ [**"..."** Rest Operator [ES6]](14-rest-operator.md)  
 
-**Next:** → [Console Methods](16-console.md)
+▶️ [Console Methods](16-console.md)
 
 <!-- PAGINATION_END -->
+&nbsp;

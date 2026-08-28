@@ -1,46 +1,42 @@
-## Generator Function `function*` <sup>_ES6_</sup>
+## Generator Function **function*** (ES6)
 
-Generator `function*`, are the modern, easier way to create iterators.
+Generator **function***, are the modern, easier way to create iterators.
 
 A generator function is a special type of function in JavaScript that allows pausing and resuming its execution during runtime.
 
 Unlike regular functions, which run to completion, generator functions can be paused and resumed multiple times, making them particularly useful for dealing with asynchronous operations, handling large datasets, and writing custom iterators.
 
-_Generator functions are defined using the `function*` syntax, and they use the `yield` keyword to pause the function's execution and produce(yeild) a value._
+_Generator functions are defined using the **function*** syntax, and they use the **yield** keyword to pause the function's execution and produce(yeild) a value._
 
-> **_When a generator function is called, it returns an iterator object, which can be used to control(pause/resume) the function's execution._**
+When a generator function is called, it returns an **iterator object**, which can be used to control(pause/resume) the function's execution.
 
-> ```javascript
-> function* generatorFunction() {
->   // Generator function body
->   yield value1;
->   yield value2;
->
->   // ...
-> }
-> ```
->
-> _The function above returns an `iterator*` Object._
->
-> The `iterator` object has two methods -
->
-> - **next()**
-> - **return()**
+```javascript
+function* generatorFunction() {
+  yield value1;
+  yield value2;
+}
+
+```
+
+_The function above returns an **iterator*** Object._
+
+The **iterator** object has two methods -
+
+- **next()**
+- **return()**
 
 &nbsp;
 
-### 1. `next()`
+### **next()**
 
-The `next()` method is used to resume the execution of a generator function from where it was paused.
+The **next()** method is used to resume the execution of a generator function from where it was paused.
 
 It returns an object with two properties:
 
-- **value** - _value produced by the `yield` statement._
-- **done** - _a boolean indicating whether the generator has completed `true` or is still running `false`._
+- **value** - _value produced by the **yield** statement._
+- **done** - _a boolean indicating whether the generator has completed **true** or is still running **false**._
 
-&nbsp;
-
-> Example 1: `Iterator.next()`
+> Example 1: **Iterator.next()**
 
 ```javascript
 function* simpleGenerator() {
@@ -63,17 +59,18 @@ console.log(iterator1.next());
 
 console.log(iterator1.next());
 // Output: { value: undefined, done: true }
+
 ```
 
 &nbsp;
 
-### 2. `return()`
+### **return()**
 
-> Example 2: _`Iterator.return()`_
+> Example 2: Iterator.return()
 
-The `return()` method allows us to force a generator to complete before it reaches the end.
+The **return()** method allows us to force a generator to complete before it reaches the end.
 
-It can take an optional argument that will be returned as the final `value` of the generator.
+It can take an optional argument that will be returned as the final **value** of the generator.
 
 ```javascript
 function* generatorWithReturn() {
@@ -90,8 +87,7 @@ console.log(iterator2.next());
 console.log(iterator2.return("Finished!"));
 // Output: { value: "Finished!", done: true }
 
-// Any subsequent next() invokation
-// after return(), will always result in:
+// Any subsequent next() invokation after return(), will always result in: 
 // { value: undefined, done: true }
 
 console.log(iterator2.next());
@@ -99,9 +95,8 @@ console.log(iterator2.next());
 
 console.log(iterator2.next());
 // Output: { value: undefined, done: true }
-```
 
-&nbsp;
+```
 
 > Example 3: Generator function for asynchronous tasks
 
@@ -136,9 +131,8 @@ promise.then((data) => {
     });
   });
 });
-```
 
-&nbsp;
+```
 
 > Example 4: Infinite Generator Example
 
@@ -160,20 +154,18 @@ console.log(iterator.next());
 
 console.log(iterator.next());
 // Output: { value: 3, done: false }
-...
 
 ```
 
 ---
-
----
-
+&nbsp;
 <!-- PAGINATION_START -->
 
-**Parent:** [3. Functions](../3.%20Functions/)  
+📁 [3. Functions](../3.%20Functions/)  
 
-**Previous:** ← [Iterators](11-iterators.md)  
+◀️ [Iterators](11-iterators.md)  
 
-**Next:** → [Decorator Functions](13-decorators.md)
+▶️ [Decorator Functions](./13-_WIP_-decorators.md)
 
 <!-- PAGINATION_END -->
+&nbsp;
