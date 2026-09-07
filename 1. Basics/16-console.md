@@ -1,41 +1,38 @@
 ## Console Methods
 
+> 🎯 The **`console`** object provides access to the debugging console, offering various methods to output messages, inspect data structures, and measure performance.
+
+---
+&nbsp;
+
+### 1. General Logging & Inspection Methods
+
 ```javascript
-console.warn("This is a warning");
+console.log("Server Logs");          // Standard logging
+console.info("General Information"); // Informational logging
 
-console.error("An Error Occured");
+console.warn("This is a warning");   // Outputs a warning message 
+console.error("An Error Occurred");  // Outputs an error message 
 
-console.table(myObject);
-// prints tabular form of the passed object
+console.table(myObject);             // Prints a tabular form of the passed object or array
 
-console.log("Server Logs");
-
-console.info("General Information");
-
-console.dir(object);
-// prints Object's properties hierarchically.
-// Use it to observe closures.
-
+console.dir(object);                 
+// Prints an object's properties hierarchically.
+// Highly useful to deeply inspect objects and observe closures.
 ```
 
 ---
 
-&nbsp;
+### 2. Methods to Capture Performance
 
-### Methods to capture performance
+These methods are used to start a timer in JavaScript, allowing you to measure the duration of a code operation for performance testing.
 
-console.time();
-
-console.timeLog();
-
-console.timeEnd();
-
-These methods are used to start a timer in JavaScript, allowing us to measure the duration of a code operation for performance testing.
-
-> Example 1
+*   **`console.time(label)`**: Starts the timer.
+*   **`console.timeLog(label)`**: Logs the current time elapsed *without* stopping the timer.
+*   **`console.timeEnd(label)`**: Stops the timer and prints the final elapsed time.
 
 ```javascript
-// Starts the timer using a label
+// Starts the timer using a unique label
 console.time("someLabel");
 
 // Code to be measured
@@ -43,15 +40,13 @@ for (let i = 0; i < 100000; i++) {
   // some expensive operation
 }
 
-// Logs an intermediate time
+// Logs an intermediate time (optional)
 console.timeLog("someLabel");
 
-// Stops the timer and prints the final elapsed time in miliseconds
-console.timeEnd("someLabel");
-// someLabel: 123.456ms
-
+// Stops the timer and prints the final elapsed time in milliseconds
+console.timeEnd("someLabel"); 
+// Output: someLabel: 123.456ms
 ```
-
 ---
 &nbsp;
 <!-- PAGINATION_START -->

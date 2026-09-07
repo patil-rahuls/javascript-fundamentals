@@ -1,70 +1,59 @@
 ## Error Types
 
-### 1. Syntax errors
+> 🎯 JavaScript throws specific types of errors based on what went wrong during parsing or execution. Understanding these categories is crucial for debugging.
 
-These occur when the code contains a mistake in the structure or syntax of the language.
-
-Examples include missing punctuation, incorrect use of keywords, or mismatched parentheses.
-
+---
 &nbsp;
-### 2. Reference errors
 
-These occur when the code is trying to access a variable or function that has not been defined.
+### 1. Syntax Errors
+These occur when the code contains a mistake in the **structure or syntax** of the language.
+*   *Examples:* Missing punctuation, incorrect use of keywords, or mismatched parentheses.
 
-This can happen when a variable has not been declared, or when a function is called before it has been defined. Remember TDZ?
+### 2. Reference Errors
+These occur when the code is trying to access a variable or function that has **not been defined**.
+*   *Examples:* Using a variable that hasn't been declared, calling a function before it is defined, or accessing variables in the **Temporal Dead Zone (TDZ)**.
 
-&nbsp;
-### 3. Type errors
+### 3. Type Errors
+These occur when the code is trying to perform an operation on a variable of the **wrong type**.
 
-These occur when the code is trying to perform an operation on a variable of the wrong type.
-
-Examples include trying to use a string as a number, or trying to access a property of a non-object.
+*Example:* Trying to use a string as a number, or trying to access a property of a non-object (like a primitive number).
 
 ```javascript
 const x = 7;
 
 console.log(x.toUpperCase());
-
+// ❌ TypeError (x is a number, not a string)
 ```
 
-&nbsp;
-### 4. Range errors
-
-These occur when the code is trying to access an index outside the range of an array, or when a value is too large or too small to be used.
+### 4. Range Errors
+These occur when the code is trying to access an index **outside the allowed range**, or when a value is too large or too small to be used.
 
 ```javascript
 const maxNumber = Number.MAX_SAFE_INTEGER;
 
 console.log(maxNumber + 1);
-
 ```
-_Here, the code is trying to add 1 to the maximum safe integer value that JavaScript can represent, which exceeds the maximum value that can be represented and it will cause a range error._
+*Here, the code is trying to add 1 to the maximum safe integer value that JavaScript can represent, which exceeds the maximum value that can be safely represented and causes a range error.*
 
-&nbsp;
-### 5. Evaluation errors
+### 5. Evaluation Errors
+These occur when the code is trying to **evaluate an expression that is not valid**.
 
-These occur when the code is trying to evaluate an expression that is not valid.
-
-Examples include dividing by zero or trying to access a property of undefined.
+*Example:* Dividing by zero or trying to access a property of `undefined`.
 
 ```javascript
 eval("hello world");
-
 ```
-_Here, the code is trying to evaluate a string "hello world" which is not a valid JavaScript statement, so it causes an evaluation error._
+*Here, the code is trying to evaluate a string `"hello world"` which is not a valid JavaScript statement, so it causes an evaluation error.*
 
-&nbsp;
 ### 6. URIError
-
-These occur when a malformed URI is passed to the encodeURI() or decodeURI() functions.
+These occur when a **malformed URI** is passed to the `encodeURI()` or `decodeURI()` functions.
 
 ```javascript
-encodeURI("http://mywebsite.com/path?name=value#fragment");
-
+encodeURI("[http://mywebsite.com/path?name=value#fragment](http://mywebsite.com/path?name=value#fragment)");
 ```
-_Here, the code is trying to encode the following URI: "http://mywebsite.com/path?name=value#fragment" which contains some reserved characters, that are not allowed to be encoded._
+*Here, the code is trying to encode the URI which contains some reserved characters that are not allowed to be encoded.*
 
-_It's important to note that the JavaScript interpreter will stop executing the code as soon as it encounters a URIError, so it's essential to check your code for URI errors before running it to ensure it will execute correctly._
+*⚠️ **Note:** The JavaScript interpreter will stop executing the code as soon as it encounters a `URIError`. It's essential to check your code for URI errors before running it to ensure it will execute correctly.*
 
 ---
 &nbsp;

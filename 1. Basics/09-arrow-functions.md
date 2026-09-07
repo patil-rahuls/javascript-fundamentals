@@ -1,22 +1,26 @@
 ## Arrow Function (ES6)
 
+> 🎯 Arrow functions provide a concise syntax for writing function expressions. 
+> *   **Implicit Return:** If the function is a single expression without curly braces **`{ }`**, the value is returned automatically.
+> *   **Explicit Return:** If you use a block body with **`{ }`**, you must explicitly use the **`return`** keyword.
+
+---
+&nbsp;
+
+### 1. Implicit Return (Single Line)
+For simple, one-line functions, you can omit the curly braces and the `return` keyword.
+
 ```javascript
 const calcAge = (birthYear) => 2037 - birthYear;
 
 const age = calcAge(1990);
-
 ```
-_calcAge_ is the function name.
+*   **`calcAge`** is the function name (variable).
+*   **`birthYear`** is the parameter.
+*   **`2037 - birthYear`** is the expression that is evaluated and returned implicitly.
 
-_birthYear_ is a parameter.
-
-_2037 - birthYear_ is the the expression which is evaluated and returned.
-
-&nbsp;
-
-The return happens implicitly in case of single line arrow function without **{ }**.
-
-We need to explicitly return value from an arrow function when using function blocks **{ }**.
+### 2. Explicit Return (Block Body)
+When using curly braces **`{ }`** to write multiple lines of logic, the implicit return is disabled. You must explicitly return the value.
 
 ```javascript
 const fiveTimes = (parameter) => {
@@ -26,20 +30,20 @@ const fiveTimes = (parameter) => {
   return x * parameter;
 };
 
-console.log(fiveTimes(4));
+console.log(fiveTimes(4)); 
 // 20
-
 ```
 
-For more than one parameters we enclose them in parentheses.
+### 3. Multiple Parameters
+For more than one parameter, you must enclose them in parentheses **`( )`**.
 
 ```javascript
 const product = (x, y, parameter3) => {
   return x * y * parameter3;
 };
 
-console.log(product(4, 5, 7));
-
+console.log(product(4, 5, 7)); 
+// 140
 ```
 ---
 &nbsp;

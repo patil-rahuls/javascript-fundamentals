@@ -1,23 +1,26 @@
-## **for...in** Loop
+## **`for...in`** Loop
 
-> **for...in** iterates over the enumerable property i.e. **keys/index** of an object.
+> 🎯 The **`for...in`** loop iterates over the enumerable properties (i.e., the **keys** or **indices**) of an object.
 
-> Example 1: Array
+---
+&nbsp;
+
+### 1. Iterating over an Array
+When used with an array, it iterates over the **indices** (as strings).
 
 ```javascript
 let list = [4, 5, 6];
 
 for (let i in list) {
-  console.log(i); // prints indices
+  console.log(i); // Prints indices
 }
-
-// "0", "1", "2"
-
+// "0"
+// "1"
+// "2"
 ```
 
-&nbsp;
-
-> Example 2: Object
+### 2. Iterating over an Object
+When used with an object, it iterates over the **keys** (property names).
 
 ```javascript
 var employee = {
@@ -27,14 +30,15 @@ var employee = {
   salary: "LOL",
 };
 
-for (const i in employee) {
-  console.log(i); // prints keys
+for (const key in employee) {
+  console.log(key); // Prints keys
 }
-// id
-// name
-// address
-// salary
-
+/*
+id
+name
+address
+salary
+*/
 ```
 ---
 &nbsp;

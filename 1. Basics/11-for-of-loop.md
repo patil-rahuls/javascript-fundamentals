@@ -1,8 +1,11 @@
-## **for...of** Loop (ES6)
+## **`for...of`** Loop (ES6)
 
-> **for...of** iterates over a list of **values** of the enumerable properties (**keys/index**) of an object.
+> 🎯 The **`for...of`** loop iterates over the **values** of an iterable object _(like Arrays, Strings, Maps, Sets, etc.)_.
 
-> Example 1: Array
+---
+&nbsp;
+
+### 1. Iterating over an Array
 
 ```javascript
 const menu = ["North Indian", "Chinese", "South Indian"];
@@ -10,36 +13,34 @@ const menu = ["North Indian", "Chinese", "South Indian"];
 for (const item of menu) {
   console.log(item);
 }
-
+// "North Indian"
+// "Chinese"
+// "South Indian"
 ```
 
-&nbsp;
+### 2. Getting Both Indices and Values
 
-> Example 2: When we want both indices and values.
+When you want to access both the index and the value, you can use **`Object.entries()`** _(or array entries)_.
 
 ```javascript
 for (const item of Object.entries(menu)) {
   console.log(item); 
-  // [index, value]
+  // e.g., ['0', 'North Indian'] (returns an array of [index, value])
 
-  console.log(`Item number ${item[0] + 1} is ${item[1]}`);
+  console.log(`Item number ${item[0] + 1} is${item[1]}`);
 }
-
 ```
 
-And we can always destructure it.
+#### Cleaner approach using Destructuring:
 ```javascript
 for (const [index, item] of Object.entries(menu)) {
-  console.log(`${index + 1} : ${item}`);
+  console.log(`${index + 1} :${item}`);
 }
-
 ```
----
-&nbsp;
 
-**_IMP_** - _The **for..of** loop only supports iterable objects like arrays. JavaScript objects are not iterable by default._
+### 3. Iterating over Objects _(Not Iterable)_
 
-> Example 3: Iterating over an Object.
+> ⚠️ **Important Note:** The **`for...of`** loop *only* supports iterable objects. Standard JavaScript objects are **not iterable** by default.
 
 ```javascript
 const p = {
@@ -48,24 +49,24 @@ const p = {
   p3: "value3",
 };
 
-// ❌ Incorrect for objects.
+// ❌ Incorrect for objects
 for (const val of p) {
-
   // TypeError: p is not iterable
-
 }
 
-// ✅ Correct:
+// ✅ Correct approach (Fallback to for...in)
 for (const key in p) {
   if (p.hasOwnProperty(key)) {
     console.log(key + " -> " + p[key]);
   }
 }
-
 ```
 
-_We can simply use **Object.values()**, **Object.entries()** methods to iterate over an object to get values, and **Object.keys()** to get properties of the object._
-
+**💡 Alternative:** 
+Instead of `for...in`, you can make objects iterable by using built-in methods:
+*   **`Object.values(p)`** to iterate over values.
+*   **`Object.keys(p)`** to iterate over keys/properties.
+*   **`Object.entries(p)`** to iterate over `[key, value]` pairs.
 ---
 &nbsp;
 <!-- PAGINATION_START -->

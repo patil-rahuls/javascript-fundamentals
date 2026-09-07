@@ -1,109 +1,75 @@
-## Equality Operators (**==** and **===**)
+## Equality Operators (**`==`** and **`===`**)
 
-### **'=='** Abstract/Loose equality operator
-
-> Type Coercion is applied
-
-```javascript
-console.log("18" == 18);
-// true (because of implicit type coercion)
-
-```
-
-&nbsp;
-
-### **'==='** Strict Equality Operator
-
-> No Type Coercion occurs
-
-```javascript
-console.log("18" === 18);
-// false
-
-```
-
+> 🎯
+> *   **`==`** (Loose Equality): Applies **Type Coercion** before comparing.
+> *   **`===`** (Strict Equality): Compares value *and* type. **No Type Coercion** occurs.
 ---
 
-&nbsp;
+## **`==`** Abstract / Loose Equality
+```javascript
+console.log("18" == 18);
+// true (string "18" is implicitly coerced to number 18)
+```
 
-### Object References
+## **`===`** Strict Equality
+```javascript
+console.log("18" === 18);
+// false (different types: string vs number)
+```
+---
 
-***Objects and Arrays are references in the HEAP and references are always different.***
 
-> Example 1
+### Object References (Heap Memory)
+
+> **Rule:** *Objects and Arrays are references in the HEAP. Comparing them compares their **memory references**, not their actual contents.*
+
+#### Arrays and Objects
+Even if the content is identical, the references are different.
 
 ```javascript
 var a = [1, 2, 3];
 var b = [1, 2, 3];
 
-a == b;     // false
-a === b;    // false
-// type is same, but values ('references') are different
+a == b;  // false
+a === b; // false (types are the same, but memory references differ)
 
-```
-
-&nbsp;
-
-> Example 2
-
-```javascript
 var c = { x: 1, y: 2 };
 var d = { x: 1, y: 2 };
 
-c == d;     // false
-c === d;    // false
-// type is same, but values ('references') are different
-
+c == d;  // false
+c === d; // false
 ```
 
-&nbsp;
-
-> Example 3: Strings with same resulting values are equal if they are primitive.
-
+#### Strings (Primitives vs. Objects)
 ```javascript
+// ✅ Primitive strings with the same resulting values are equal
 var e = "text";
 var f = "te" + "xt";
-// "te" & "xt" are both primitive
 
-e == f;     // true
-e === f;    // true
+e == f;  // true
+e === f; // true
 
+// ❌ String Object vs Primitive String
+"abc" == new String("abc");  // true  (values are the same after coercion)
+"abc" === new String("abc"); // false ('new String()' returns an Object type)
+
+// ❌ String Object vs String Object
+new String("rahul") == new String("rahul");  // false (different references)
+new String("rahul") === new String("rahul"); // false
 ```
 
-&nbsp;
-
-> Example 4: String primitive and String Object Comparision.
-
+#### Comparing Object Contents (Workaround)
+A handy way to strictly compare the contents of two objects *(assuming the same order of properties)*:
 ```javascript
-// 'new String()' returns an Object
-"abc" == new String("abc");
-// true (value is same)
-
-"abc" === new String("abc");
-// false ('new String()' returns an Object)
-
-new String("rahul") == new String("rahul");
-// false
-
-new String("rahul") === new String("rahul");
-// false
-
-```
-
-&nbsp;
-
-> Example 5: A handy way to compare two objects _(with same order of properties)_ in JS would be:
-
-```javascript
-JSON.stringify(a) === JSON.stringify(b);
+JSON.stringify(a) === JSON.stringify(b); 
 // true
-
 ```
 
+---
 
-**_IMP_** - _Switch statement performs an **'==='** based comparison when matching the expression in a case._
+> ⚠️ **Important Note:** A `switch` statement performs a strict **`===`** based comparison when matching the expression against a `case`.
 
-Read More here - https://stackoverflow.com/questions/359494/which-equals-operator-vs-should-be-used-in-javascript-comparisons
+*Read More: [StackOverflow - Which equals operator (== vs ===) should be used?](https://stackoverflow.com/questions/359494/which-equals-operator-vs-should-be-used-in-javascript-comparisons)*
 
 ---
 &nbsp;
