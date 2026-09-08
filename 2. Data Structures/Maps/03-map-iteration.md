@@ -1,10 +1,13 @@
 ## Data Structures > Map > Iteration
 
-Maps are high performance key - value paired data structure.
+> 🎯 Unlike standard Objects, Maps are inherently **iterable**. This means you can iterate through their key-value pairs directly using traditional loops or functional methods without needing helper methods like `Object.keys()`.
 
-In Objects keys can only be strings (without quotes), but in Maps, keys can be any type.
+---
+&nbsp;
 
-### Using **for...of** loop
+### 1. Using a **`for...of`** loop
+
+Because iterating over a Map yields an array of `[key, value]`, you can cleanly destructure these directly inside the loop signature.
 
 ```javascript
 const question = new Map([
@@ -18,24 +21,32 @@ const question = new Map([
   [false, "Try Again"],
 ]);
 
-// Maps are iterable objects
+// Destructuring the [key, value] pair directly
 for (const [key, value] of question) {
+  // Filtering to only log numeric keys
   if (typeof key === "number") {
-    console.log(`Option : ${key} : ${value}`);
+    console.log(`Option ${key}:${value}`);
   }
 }
-
 ```
 
-We can also use the following methods to iterate:
+### 2. Spreading Iterators into Arrays
+
+You can use the spread operator (`...`) with Map iterators to quickly convert keys, values, or entries into standard JavaScript Arrays.
+
 ```javascript
-console.log([...question.entries()]);
-console.log([...question.keys()]);
-console.log([...question.values()]);
-
+console.log([...question.entries()]); // Array of [key, value] arrays
+console.log([...question.keys()]);    // Array of just the keys
+console.log([...question.values()]);  // Array of just the values
 ```
 
-> ### Using **forEach()** method
+---
+
+### 3. Using the **`forEach()`** method
+
+Maps also have a built-in `forEach()` method. 
+
+> ⚠️ **Important Parameter Order:** The callback function receives the **value** first, then the **key**, and finally the entire **map** object: `(value, key, map)`.
 
 ```javascript
 const currencies = new Map([
@@ -44,17 +55,17 @@ const currencies = new Map([
   ["INR", "INDIAN Rupees"],
 ]);
 
-currencies.forEach(function (val, key, map) {
-  console.log(`${key} : ${val}`);
+// Cleaner approach using an Arrow Function
+currencies.forEach((val, key) => {
+  console.log(`${key} :${val}`);
 });
 // USD : US Dollars
 // EUR : Euros
 // INR : INDIAN Rupees
-
 ```
 
-Disadvantages: **break** and **continue** does not work with **forEach()**! So if you need to break out of the loop, then use the **for-of** loop.
-
+> 🚨 **Crucial Disadvantage of `forEach()`:**
+> Just like with an Array's `forEach()`, you **CANNOT** use **`break`** or **`continue`** statements inside a Map's `forEach()` loop. If your logic requires breaking out of the loop early or skipping iterations, you **must** use the **`for...of`** loop instead.
 ---
 &nbsp;
 <!-- PAGINATION_START -->

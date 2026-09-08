@@ -1,6 +1,11 @@
-## Data Structures > Object > Delete Properties 
+## Data Structures > Object > Delete Properties
 
-Consider this object as an example.
+> 🎯 There are two primary ways to remove a property from an object: destructively (which mutates the original object using the **`delete`** operator) or non-destructively (which creates a brand new object using destructuring).
+
+---
+&nbsp;
+
+Consider this object as our example:
 
 ```javascript
 const myObj = {
@@ -8,49 +13,49 @@ const myObj = {
   lastName: "Patil",
   age: 2049 - 2024,
 };
-
 ```
 
-### 1. Using **delete** keyword.
+### 1. Using the **`delete`** keyword
 
-Mutates the original object.
+This method directly **mutates** the original object by removing the specified property permanently.
 
 ```javascript
+// Remove the 'age' property
 delete myObj.age;
 
-myObj.hasOwnProperty("age");
+console.log(myObj.hasOwnProperty("age"));
 // false
-
 ```
 
-### 2. Using Destructuring.
+### 2. Using Object Destructuring (Non-mutating)
 
-If you want a new object with all keys except some.
-
-This doesn't mutate the original object.
+If you need a new object with all the keys *except* specific ones, use the rest operator (`...`) during destructuring. This ensures the original object remains completely **unchanged**.
 
 ```javascript
+// Destructure 'age' out, and collect the rest of the properties into 'newObj'
 const { age: _, ...newObj } = myObj;
 
 console.log(newObj);
 /*
 {
-  firstname: 'Rahul',
-  lastname: 'Patil'
+  firstName: 'Rahul',
+  lastName: 'Patil'
 }
 */
 
-newObj.hasOwnProperty("age");
+console.log(newObj.hasOwnProperty("age"));
 // false
 
-console.log(myObj);
-// myObj remains unchanged
-
+// The original object is completely unaffected
+console.log(myObj.age); 
+// 25
 ```
-_In the example above, `_` is a throwaway variable that we use for variables that we don't want to use OR ignore._
+
+> 💡 **Pro-Tip:** In the destructuring example above, `_` (underscore) is a widely used convention for a **throwaway variable**. It signals to other developers that the extracted `age` value is being intentionally ignored and won't be used anywhere else in the code.
 
 ---
 &nbsp;
+
 <!-- PAGINATION_START -->
 
 📁 [Data Structures](../../2.%20Data%20Structures/) → [Objects](../Objects/)

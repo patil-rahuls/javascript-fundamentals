@@ -1,39 +1,48 @@
 ## Data Structures > Map > Conversion
 
-Maps are high performance key - value paired data structure.
+> 🎯 In real-world applications, you will frequently need to move data between Maps, Objects, and Arrays (e.g., when receiving JSON payloads from an API). JavaScript provides built-in methods to transition between these structures seamlessly.
 
-In Objects keys can only be strings (without quotes), but in Maps, keys can be any type.
+---
+&nbsp;
 
-## Converting Maps to Objects & Arrays
+### 1. Maps ↔ Arrays
 
-### _Convert Map to Array_
-
-_Spread Operator **...** is used to convert a Map to an Array._
+#### Convert Map to Array
+Use the Spread Operator (`...`) to unpack a Map. This converts the Map into an array of `[key, value]` entry arrays.
 
 ```javascript
-const myMap = new Map(...);
+const myMap = new Map([
+  ["name", "Rahul"],
+  ["age", 25]
+]);
 
 const myArr = [...myMap];
 
+console.log(myArr);
+// [ ["name", "Rahul"], ["age", 25] ]
 ```
 
-### _Convert Array to Map_
-
-_Array has to be of 'entries' items, i.e. each item should be an array of exactly 2 items._
+#### Convert Array to Map
+To convert an array into a Map, the array **must** be an array of "entries" (meaning each item is a 2-element array containing exactly a `[key, value]`).
 
 ```javascript
 const entriesArr = [
   ["name", "Rahul"],
-  ["age", 25],
+  ["age", 25]
 ];
 
+// Pass the entries array directly into the Map constructor
 const myMap = new Map(entriesArr);
-
 ```
 
-### _Convert Map to Object_
+---
 
-_**Object.fromEntries()** is used to convert a Map to an Object._
+### 2. Maps ↔ Objects
+
+#### Convert Map to Object
+Use **`Object.fromEntries()`** to transform a Map (or any list of key-value pairs) back into a standard Object.
+
+> ⚠️ **Warning:** If your Map contains non-string keys (like numbers or booleans), they will be automatically coerced into strings during this conversion, as standard Objects only support string or Symbol keys.
 
 ```javascript
 const userMap = new Map([
@@ -42,18 +51,18 @@ const userMap = new Map([
 ]);
 
 const myObj = Object.fromEntries(userMap);
+
+console.log(myObj);
 /*
 {
   name: 'Rahul',
   age: 25
 }
 */
-
 ```
 
-### _Convert Object to Map_
-
-_**Object.entries()** is used to convert an Object to a Map._
+#### Convert Object to Map
+Because the `Map` constructor expects an array of entries, you can use **`Object.entries()`** to convert a standard Object into the required format, and pass it directly to `new Map()`.
 
 ```javascript
 const myObj = {
@@ -61,16 +70,16 @@ const myObj = {
   age: 25
 };
 
-const myMap = new Map(Object.entries(myObj)));
+// Object.entries(myObj) returns: [ ["name", "Rahul"], ["age", 25] ]
+const myMap = new Map(Object.entries(myObj));
 
 console.log(myMap);
 /*
-[
-  [ 'name' , 'Rahul'],
-  [ 'age' , 25],
-]
+Map(2) {
+  "name" => "Rahul",
+  "age" => 25
+}
 */
-
 ```
 
 ---

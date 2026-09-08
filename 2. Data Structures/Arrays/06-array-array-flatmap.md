@@ -1,10 +1,14 @@
-## Data Structures > Array > Return new Array > _flatmap()_
+## Data Structures > Array > Return new Array > **`flatMap()`**
 
-### Array.prototype.**flatmap()** _[ES 2019]_
+> 🎯 The **`flatMap()`** method (introduced in ES2019) is a combination of **`map()`** followed by a **`flat()`** of depth 1. It is more efficient and slightly faster than calling `map()` and `flat()` separately because the array is only iterated over once.
 
-It **map()** first and then **flat()** the result. Better performance.
+---
+&nbsp;
 
-> Example
+### 1. Extracting and Flattening Data
+
+A very common use case is extracting arrays of data from a list of objects and merging them into a single, flat array.
+
 ```javascript
 const authors = [
   {
@@ -25,15 +29,35 @@ const authors = [
   }
 ];
 
+// Maps over the authors, returns the 'posts' array for each, 
+// and immediately flattens the result into one array.
 const allPosts = authors.flatMap(author => author.posts);
 
-console.log(globalFeed);
+console.log(allPosts);
 // ["JS Basics", "Advanced JS", "DB Tricks", ".NET Basics", "Web API Guide", "Promos", "Sales Guide"]
-
 ```
 
-***IMP***: flatMap() goes only one level deep. Hence if you need to go deeper, then you still need to use the **flat()** method separately with depth argument.
+---
 
+### 2. The Depth Limitation
+
+> ⚠️ **Important:** **`flatMap()`** only flattens **one level deep**. 
+> 
+> If your mapped results contain nested arrays that go deeper than 1 level, `flatMap()` will leave those deeper arrays intact. In such cases, you must fall back to using `map()` and `flat(depth)` separately.
+
+```javascript
+const numbers = [1, 2, 3];
+
+// ❌ flatMap only goes 1 level deep
+const result1 = numbers.flatMap(num => [[num * 2]]);
+console.log(result1); 
+// [ [2], [4], [6] ] (Still contains nested arrays!)
+
+// ✅ For deeper nesting, chain map() and flat() with a specific depth
+const result2 = numbers.map(num => [[num * 2]]).flat(2);
+console.log(result2); 
+// [ 2, 4, 6 ]
+```
 ---
 &nbsp;
 <!-- PAGINATION_START -->

@@ -1,6 +1,11 @@
-## Data Structures > Object > Clone/Copy
+## Data Structures > Object > Clone / Copy
 
-Consider this object as an example.
+> 🎯 Duplicating objects in JavaScript requires understanding the difference between references and actual data. Simple variable assignment only copies the memory reference. To copy the actual data, you must use specific methods to create either a **Shallow Copy** or a **Deep Copy**.
+
+---
+&nbsp;
+
+Consider this object as our starting example:
 
 ```javascript
 const myObj = {
@@ -8,27 +13,23 @@ const myObj = {
   lastName: "Patil",
   age: 27,
 };
-
 ```
 
 ### 1. Shallow Copy
 
-Shallow copy duplicates only the top-level properties of an object. Nested objects (if any) are still copied as reference.
+A shallow copy duplicates only the top-level properties of an object. If the object contains nested objects (or arrays), those nested structures are **not** duplicated; they are copied as references.
 
-#### Object.**assign()**
+#### `Object.assign()`
 
-Syntax - `Object.assign(target, ...sources)`
+Syntax: `Object.assign(target, ...sources)`
 
 ```javascript
+// Target is an empty object {}, source is myObj
 const shallowCopy = Object.assign({}, myObj);
-
 ```
+*(Note: `Object.assign()` assigns properties only; it invokes getters on the source and setters on the target, but does not copy property definitions/descriptors.)*
 
-_The **Object.assign()** invokes the getters on the source objects and setters on the target (if provided)._
-
-_It assigns properties only, not copying or defining new properties._
-
-> Example:
+**The Reference Trap in Shallow Copies:**
 
 ```javascript
 const x = {
@@ -39,74 +40,68 @@ const x = {
 };
 
 const copy = Object.assign({}, x);
-// copy - { name: 'Rahul', dob : { year : 1990 }}
-
 ```
+In the `copy` object, all outermost properties (like `name`) are strictly independent. However, properties with nested objects (like `dob`) share the exact same memory reference as the original object.
 
-Now, in the 'copy' object, all outer most properties i.e. 'name' in this case, are an independent copy. And all the properties with nested objects as their values are references.
-
-_If we change the outer properties in original object._
 ```javascript
-x.name = "patil";
-// x - { name: 'patil', dob : { year : 1990 }}
-// copy - { name: 'Rahul', dob : { year : 1990 }}
+// 1. Changing a top-level property
+x.name = "Patil";
+// x    -> { name: 'Patil', dob: { year: 1990 } }
+// copy -> { name: 'Rahul', dob: { year: 1990 } } 
+// ✅ The 'name' property remains independent.
 
-```
-_The 'name' property remains independent._
-
-_And if we change the nested objects property in the original object._
-```javascript
+// 2. Changing a nested object property
 x.dob.year = 1991;
-// x - { name: 'patil', dob : { year : 1991 }}
-// copy - { name: 'Rahul', dob : { year : 1991 }}
-
+// x    -> { name: 'Patil', dob: { year: 1991 } }
+// copy -> { name: 'Rahul', dob: { year: 1991 } } 
+// ❌ The nested object property changes in the 'copy' too!
 ```
-_The nested object property gets changed in 'copy' object too._
 
 ---
-
 &nbsp;
 
 ### 2. Deep Copy
 
-#### **JSON**
+A deep copy duplicates the object and all nested objects completely, severing all reference ties.
+
+#### The JSON Method
+A quick, older technique. It works well for pure data but strips out functions, `undefined`, and Symbols.
 
 ```javascript
 const deepCopy = JSON.parse(JSON.stringify(myObj));
-
 ```
 
-#### **structuredClone()**
+#### `structuredClone()`
+The modern, native way to deep copy in JavaScript. 
 
-***IMP*** - _It does not clones methods and DOM nodes inside the source object._
+> ⚠️ **Important:** It does **not** clone methods (functions) or DOM nodes inside the source object. It will throw an error if it encounters them.
 
 ```javascript
 const clone = structuredClone(myObj);
-
 ```
----
 
+---
 &nbsp;
 
-### 3. Merge objects
+### 3. Merging Objects
 
-#### Using destructuring assignment
+#### Using Destructuring (Spread Operator)
+The cleanest syntax for merging multiple objects into a new one.
 
 ```javascript
 let merged = { ...obj1, ...obj2 };
-
 ```
 
-#### Object.**assign()**
-
+#### `Object.assign()`
 ```javascript
-const allMerged = Object.assign({}, obj1, obj2,  obj3, etc);
-
+const allMerged = Object.assign({}, obj1, obj2, obj3);
 ```
-_In the above example, properties of **obj1** will be overwritten by properties of **obj2** and same happens with **obj2** and **obj3**, and so on._
+
+*Note: In both merge methods, properties are evaluated from left to right. If multiple objects share the same property key, the property from the **last** object (furthest right) will permanently overwrite the earlier ones.*
 
 ---
 &nbsp;
+
 <!-- PAGINATION_START -->
 
 📁 [Data Structures](../../2.%20Data%20Structures/) → [Objects](../Objects/)

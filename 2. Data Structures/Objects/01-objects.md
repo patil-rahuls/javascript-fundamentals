@@ -1,18 +1,20 @@
 ## Data Structures > Object
 
-Object is the most fundamental concept in JS.
+> 🎯 Objects are the most fundamental concept and data structure in JavaScript. They store data in **key-value pairs**. The keys (commonly referred to as **properties**) are implicitly treated as strings and can typically be written without quotes.
 
-Objects are key-value paired data structure.
+---
+&nbsp;
 
-Keys are called **property** and are written as strings without quotes.
+### 1. Basic Syntax
+
+You can assign almost any valid JavaScript data type as a value within an object, including the results of evaluated expressions.
 
 ```javascript
 const myObj = {
   firstName: "Rahul",
   lastName: "Patil",
-  age: 2049 - 2021, // expression allowed
+  age: 2049 - 2021, // Expressions are evaluated and stored as values
 };
-
 ```
 ---
 &nbsp;

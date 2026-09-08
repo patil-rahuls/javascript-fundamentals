@@ -1,112 +1,66 @@
 ## Data Structures > Array > Which array method to use and when?
 
-### To ONLY loop over an array:
-    forEach()
+> 🎯 Use this quick reference cheat sheet to select the exact array method you need based on your data manipulation goal. 
+
+---
+&nbsp;
+
+### 1. To Mutate the Original Array
+
+| Goal | Method |
+| :--- | :--- |
+| Add element(s) to the end | **`push()`** |
+| Add element(s) to the start | **`unshift()`** |
+| Remove an element from the end | **`pop()`** |
+| Remove an element from the start | **`shift()`** |
+| Reverse the order of elements | **`reverse()`** |
+| Sort the elements | **`sort()`** |
+| Fill array slots with a specific value | **`fill()`** |
+| Add, remove, or replace a specific portion | **`splice()`** |
 
 ---
 
+### 2. To Return a New Array
 
-### To mutate original array:
-Add elements to original array
-
-    push()
-    unshift()
-
-Remove elements from orignal array
-
-    pop()
-    shift()
-
-Reverse the original array
-
-    reverse()
-
-Sort the original array
-
-    sort()
-
-Fill with some values in the original array
-
-    fill()
-
-Remove a portion from original array
-
-    splice()
+| Goal | Method |
+| :--- | :--- |
+| Extract a portion of the array | **`slice()`** |
+| Merge or concatenate multiple arrays | **`concat()`** |
+| Flatten nested arrays | **`flat()`** |
+| Map logic and flatten (1 level deep) | **`flatMap()`** |
+| Extract elements that satisfy a condition | **`filter()`** |
+| Transform or apply logic to all elements | **`map()`** |
 
 ---
 
-### To get a new array:
+### 3. To Search or Check Elements (Returns a Boolean)
 
-Part of an array
-
-    slice()
-
-Concatenating an array
-
-    concat()
-
-Flattening original array
-
-    flat()
-
-Combination of map() and flat()
-
-    flatMap()
-
-Filtered using a condition
-
-    filter()
-
-Apply certain logic to all elements of array
-
-    map()
+| Goal | Method |
+| :--- | :--- |
+| Check if *any* element satisfies a condition | **`some()`** |
+| Check if *all* elements satisfy a condition | **`every()`** |
+| Check if an exact value exists (Equality) | **`includes()`** |
 
 ---
 
-### To ONLY check if array includes an element:
+### 4. To Retrieve an Element or Index
 
-Based on a condition
-
-    some()
-    every()
-
-Based on value
-
-    includes()
+| Goal | Method |
+| :--- | :--- |
+| Get the *first element* matching a condition | **`find()`** |
+| Get the *index* of an exact value (Equality) | **`indexOf()`** |
+| Get the *index* matching a condition | **`findIndex()`** |
 
 ---
 
-### To get ONE element based on a condition:
+### 5. To Transform, Loop, or Convert
 
-    find()
-
----
-
-### To get index of an array element:
-
-Based on value
-
-    indexOf()
-
-Based on a condtion
-
-    findIndex()
-
----
-
-### To transform to a single value:
-
-    reduce()
-
----
-
-### Array to String:
-
-    join()
-
-### String to Array:
-
-    split()
+| Goal | Method |
+| :--- | :--- |
+| Accumulate all elements down to a *single value* | **`reduce()`** |
+| *Only* loop over the array (no new array returned) | **`forEach()`** |
+| Convert Array ➡️ String | **`join()`** |
+| Convert String ➡️ Array | **`String.prototype.split()`** |
 
 ---
 &nbsp;

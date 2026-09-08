@@ -1,26 +1,26 @@
-## Data Structures > Array > Check Equality > _includes()_
+## Data Structures > Array > Check Equality > **`includes()`**
 
-Checks if element exists
+> 🎯 The **`includes()`** method checks whether an array includes a certain value among its entries, returning **`true`** or **`false`**.
+>
+> *It uses **Strict Equality (`===`)**, meaning it does **not** perform type coercion.*
 
-### Array.prototype.**includes()** - _checks for equality_
+---
+&nbsp;
 
-Returns **true** if the element is present in the array, returns **false** otherwise.
-
-Uses Strict Equality (**===**)
+### Using **`includes()`**
 
 ```javascript
 const myArr = [55, "rahul", "hitesh", "aajesh"];
 
-myArr.includes("rahul");
+console.log(myArr.includes("rahul"));
 // true
 
-myArr.includes("anil");
+console.log(myArr.includes("anil"));
 // false
 
-// No Type Coercion occurs
-myArr.includes("55");
+// ⚠️ No Type Coercion occurs (String "55" !== Number 55)
+console.log(myArr.includes("55"));
 // false
-
 ```
 ---
 &nbsp;

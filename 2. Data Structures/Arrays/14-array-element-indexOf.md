@@ -1,25 +1,26 @@
-## Data Structures > Array > Check Equality > _indexOf()_
+## Data Structures > Array > Check Equality > **`indexOf()`**
 
-Gets element index by value.
+> 🎯 The **`indexOf()`** method returns the first index at which a given element can be found in the array. If the element is not present, it returns **`-1`**.
+>
+> *Like `includes()`, it uses **Strict Equality (`===`)**, meaning it does **not** perform type coercion.*
 
-### Array.prototype.**indexOf()** - _checks for equality_
+---
+&nbsp;
 
-Returns index of the element present in the array, **-1** otherwise.
-
-Uses Strict Equality (**===**)
+### Using **`indexOf()`**
 
 ```javascript
 const myArr = [55, "rahul", "hitesh", "aajesh"];
 
-myArr.indexOf("rahul");
+console.log(myArr.indexOf("rahul"));
 // 1
 
-myArr.indexOf("milan");
-// -1
+console.log(myArr.indexOf("milan"));
+// -1 (Element does not exist in the array)
 
-myArr.indexOf("55");
-// -1 (string ‘55’ is passed. No Type Coercion occurs)
-
+// ⚠️ No Type Coercion occurs (String "55" !== Number 55)
+console.log(myArr.indexOf("55"));
+// -1 
 ```
 ---
 &nbsp;

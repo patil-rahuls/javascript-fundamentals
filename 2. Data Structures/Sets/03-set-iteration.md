@@ -1,61 +1,68 @@
 ## Data Structures > Set > Iteration
 
-Sets are high performance **unordered unique collection** data structure.
+> 🎯 Sets are inherently iterable. Because they are designed as high-performance, unordered collections of unique values, you can seamlessly iterate through them using standard loops or functional methods.
 
-Consider this set as an example.
+---
+&nbsp;
+
+Consider this Set as our starting example:
 
 ```javascript
-const names = new Set(["rahul", "hitesh", "rahul", "rahul", "aajesh", "rahul"]); // duplicate item 'rahul'
+// The duplicate item 'rahul' is automatically ignored
+const names = new Set(["rahul", "hitesh", "rahul", "rahul", "aajesh", "rahul"]); 
 
 console.log(names);
-// set(3) {'hitesh', 'aajesh' , 'rahul'}
-
+// Set(3) { 'rahul', 'hitesh', 'aajesh' }
 ```
 
-### **for-of** loop
+### 1. The **`for...of`** loop
 
-Sets are iterables. We can loop over them using for-of loop.
+Since Sets are iterable objects, the most straightforward way to loop over their elements is using a `for...of` loop.
 
 ```javascript
 for (const itm of names) {
   console.log(itm);
 }
+// 'rahul'
 // 'hitesh'
 // 'aajesh'
-// 'rahul'
-
 ```
+*(Note: Sets iterate their elements in insertion order.)*
 
-### **forEach()** method
+### 2. The **`forEach()`** method
+
+Sets also have a built-in `forEach()` method. However, its parameter signature `(value, key, set)` is kept identical to Maps and Arrays to ensure API consistency across all iterables. 
+
+Because Sets **do not have keys**, the `key` parameter is simply assigned the exact same value as the `value` parameter.
 
 ```javascript
 names.forEach(function (val, key, set) {
-  console.log(`${key} : ${val}`);
-  // will print key as same as val
+  console.log(`${key} :${val}`);
 });
+// rahul : rahul
 // hitesh : hitesh
 // aajesh : aajesh
-// rahul : rahul
 ```
 
+#### Using a Throwaway Variable
 
-The key in forEach() over a Set does not make any sense there. But to make this as a common function available to all iterables, its signature is kept same across all iterables.
+Since the second parameter (`key`) is redundant when working with Sets, it is a common best practice to use an underscore (`_`) as a throwaway variable. This signals to other developers that the parameter is intentionally being ignored.
 
-For such values we can use the throwaway variable ‘_’
 ```javascript
 names.forEach(function (val, _, set) {
-  console.log(`${val}`);
+  console.log(val);
 });
+// rahul
 // hitesh
 // aajesh
-// rahul
-
 ```
 
-Disadvantages: **break** and **continue** does not work in **forEach()**! So if you need to break out of the loop, then use the **for-of** loop.
+> 🚨 **Crucial Disadvantage of `forEach()`:**
+> Just like with Arrays and Maps, you **CANNOT** use **`break`** or **`continue`** statements inside a Set's `forEach()` loop. If your logic requires breaking out of the loop early, you **must** use the **`for...of`** loop instead.
 
 ---
 &nbsp;
+
 <!-- PAGINATION_START -->
 
 📁 [Data Structures](../../2.%20Data%20Structures/) → [Sets](../Sets/)  

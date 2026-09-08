@@ -1,6 +1,13 @@
 ## Data Structures > Object > Assign Properties
 
-Consider this object as an example.
+> 🎯 You can dynamically add or update properties in an existing JavaScript Object using either **Dot Notation** (`.`) or **Bracket Notation** (`[]`).
+
+---
+&nbsp;
+
+### 1. Dot Notation
+
+This is the most common and readable way to assign a property.
 
 ```javascript
 const myObj = {
@@ -9,71 +16,74 @@ const myObj = {
   age: 2049 - 2024,
 };
 
-```
-
-### Assigning values using dot notation.
-
-```javascript
-myObj.habbit = "eating";
+// Adding a new property
+myObj.habit = "eating";
 
 console.log(myObj);
 /*
 {
-  firstName : 'Rahul',
-  lastName : 'Patil',
-  age : 25,
-  habbit:'eating'
+  firstName: 'Rahul',
+  lastName: 'Patil',
+  age: 25,
+  habit: 'eating'
 }
 */
-
 ```
 
-### Assigning values using bracket notation.
+### 2. Bracket Notation
+
+Bracket notation allows you to assign properties by passing the key as a string.
 
 ```javascript
-myObj["veg"] = true;
+myObj["isVeg"] = true;
 
 console.log(myObj);
 /*
 {
-  firstName : 'Rahul',
-  lastName : 'Patil',
-  age : 25,
-  habbit:'eating',
-  veg:true,
+  firstName: 'Rahul',
+  lastName: 'Patil',
+  age: 25,
+  habit: 'eating',
+  isVeg: true
 }
 */
-
 ```
 
-&nbsp;
+---
 
-***IMP***: _When property is a number._
+### 3. When to use Bracket Notation instead of Dot Notation?
+
+While dot notation is cleaner, **Bracket Notation is strictly required** in the following edge cases:
+
+#### (a). When the property name is a number or contains special characters (like spaces)
 
 ```javascript
-// ❌ Incorrect
-myObj.9820694183  = 'mobile';
+// ❌ Incorrect: Dot notation cannot handle numbers or invalid identifiers
+// myObj.9820694183 = 'mobile'; // Throws a SyntaxError
 
-
-// ✅ Correct
+// ✅ Correct: Bracket notation handles it perfectly
 myObj[9820694183] = 'mobile';
-
+myObj["favorite color"] = "blue";
 ```
 
-***IMP***: _Dynamic/computed property name should always be provided inside **[]** i.e. using bracket notation._
+#### (b). When using Dynamic / Computed Property Names
+
+If the property key is stored inside a variable, you *must* use bracket notation. Using dot notation will literally assign the property name as the variable's identifier, not the variable's actual value.
 
 ```javascript
 const prop = "name";
 const obj = {};
 
+// ❌ Dot Notation assigns the literal string "prop"
 obj.prop = "Rahul";
-// obj - { prop: 'Rahul' }
+console.log(obj); 
+// { prop: 'Rahul' }
 
+// ✅ Bracket Notation evaluates the variable 'prop'
 obj[prop] = "Rahul";
-// obj - { name: 'Rahul' }
-
+console.log(obj); 
+// { name: 'Rahul' }
 ```
-
 ---
 &nbsp;
 <!-- PAGINATION_START -->

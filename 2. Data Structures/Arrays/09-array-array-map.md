@@ -1,33 +1,45 @@
-## Data Structures > Array > Return new Array > _map()_
+## Data Structures > Array > Return new Array > **`map()`**
 
-### Array.prototype.**map()**
+> 🎯 The **`map()`** method creates a **new array** populated with the results of calling a provided function on every element in the calling array. It transforms data in each iteration without changing (mutating) the original array.
+>
+> *A big advantage of using array data transformation methods like `map()` over traditional loops is that they return arrays, allowing us to **chain** multiple functions together.*
 
-_A big advantage of using these array data transformation methods over traditional loops is that we can chain these functions together._
+---
+&nbsp;
 
-**map()** method transforms data in each iteration without changing/mutating the orignal array.
+### 1. Basic Transformation
 
-_Method signature is similar to the **forEach()** method._
+The method signature is exactly the same as `forEach()` and `filter()`. 
 
 ```javascript
 const numbers = [2, 4, 3, 0, 10, 20, 30, 40];
 const power = 3;
 
+// Implicit return using an arrow function
 const newValues = numbers.map(val => val ** power);
 
-// numbers = [2, 4, 3, 0, 10, 20, 30, 40]
+console.log(numbers);
+// [2, 4, 3, 0, 10, 20, 30, 40] (Original remains unchanged)
 
-// newValues = [8, 64, 27, 0, 1000, 8000, 27000, 64000]
-
+console.log(newValues);
+// [8, 64, 27, 0, 1000, 8000, 27000, 64000]
 ```
 
-Just like forEach(), map() also has 3 three parameters.
+### 2. Using All Parameters
+
+Just like `forEach()`, the callback function in `map()` accepts 3 parameters: `(currentItem, index, entireArray)`.
+
 ```javascript
+const numbers = [2, 4, 3, 0, 10, 20, 30, 40];
+
+// Explicit return using block syntax
 const newArr = numbers.map((curr, key, arr) => {
-  return **${key} : ${curr}**;
+  return `${key} :${curr}`;
 });
 
 console.log(newArr);
-/* [
+/* 
+[
   "0 : 2",
   "1 : 4",
   "2 : 3",
@@ -38,7 +50,6 @@ console.log(newArr);
   "7 : 40"
 ]
 */
-
 ```
 ---
 &nbsp;

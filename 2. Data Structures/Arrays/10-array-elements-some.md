@@ -1,21 +1,30 @@
-## Data Structures > Array > Check Expression > _some()_
+## Data Structures > Array > Check Expression > **`some()`**
 
-Checks if some elements satisfy a condition.
+> 🎯 The **`some()`** method tests whether *at least one* element in the array passes the test implemented by the provided callback function. It returns a boolean value (`true` or `false`).
+> 
+> *The method signature is similar to the `forEach()` method.*
 
-### Array.prototype.**some()** - _checks for an expression_
+---
+&nbsp;
 
-_Method signature is similar to the **forEach()** method._
+### 1. Using **`some()`**
+
+While `includes()` is great for finding specific values, it only checks for strict equality. **`some()`** is much more powerful because it evaluates an **expression or condition**.
 
 ```javascript
 const salaries = [39, 99, 100, 178, 78, 89.9];
 
-const higherSalariesExists = movements.some((mov) => mov > 100);
+// Checks if any salary in the array is greater than 100
+const higherSalariesExists = salaries.some((mov) => mov > 100);
 
+console.log(higherSalariesExists); 
+// true (because 178 > 100)
 ```
 
-**includes()** checks for equality.
+### 💡 `includes()` vs. `some()`
 
-**some()** checks for an expression.
+*   **`includes(value)`** checks for strict equality (e.g., "Does this array contain exactly the number `100`?").
+*   **`some(callback)`** checks for a condition (e.g., "Does this array contain *any* number greater than `100`?").
 
 ---
 &nbsp;

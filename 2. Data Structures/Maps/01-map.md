@@ -1,27 +1,29 @@
 ## Data Structures > Map 
 
-Maps are high performance key - value paired data structure.
+> 🎯 Maps are high-performance key-value paired data structures. While standard JavaScript Object keys are strictly coerced into strings (or Symbols), **Maps allow keys of any data type**, including numbers, booleans, arrays, and even other objects.
 
-In Objects keys can only be strings (without quotes), but in Maps, keys can be any type.
+---
+&nbsp;
 
-`new Map([[k , v], [k , v], [k , v] , ...]);`
+### 1. Initialization & Syntax
 
-Example 1
+You can initialize a Map by passing an iterable (like an array of arrays) where each sub-array represents a `[key, value]` pair.
+
+> **Syntax:** `new Map([[k, v], [k, v], [k, v], ...]);`
 
 ```javascript
 const options = [
   ["yes", 1],
   ["no", 2],
-  ["may be", 3],
+  ["maybe", 3],
 ];
 
 const myMap = new Map(options);
-
 ```
 
-&nbsp;
+### 2. Example: Mixed Key Types
 
-Example 2
+Notice how we can seamlessly mix strings, numbers, and booleans as keys within the exact same Map.
 
 ```javascript
 const question = new Map([
@@ -36,55 +38,45 @@ const question = new Map([
 ]);
 
 console.log(question);
-/* Map(8)
-  [[Entries]]
-    0:{"question" ="Best lang in the world?"}
-    1:{1 ="C"}
-    2:{2 ="C++"}
-    3:{3 ="Java"}
-    4:{4 ="Javascript"}
-    5:{"correct" =2}
-    6:{true ="Correct answer"}
-    7:{false ="Try Again"}
-    size:8
+/* 
+Map(8) {
+  "question" => "Best lang in the world?",
+  1 => "C",
+  2 => "C++",
+  3 => "Java",
+  4 => "Javascript",
+  "correct" => 2,
+  true => "Correct answer",
+  false => "Try Again"
+}
 */
-
 ```
 
-&nbsp;
+---
 
-### When to use Maps instead of Objects?
+### 3. When to use Maps instead of Objects?
 
-#### 1. Map preserves the key type.
+#### Benefit 1: Maps Preserve the Key Type
 
-_That's the map's main benefit._
+This is the primary advantage of a Map. When you use an Object, any non-string key is implicitly converted into a string. This implicit conversion is tricky because you lose type consistency.
 
-_Observe this object with properties as number type._
-
+**The Object Problem (Type Coercion):**
 ```javascript
 const myObj = {
   1: "one",
   2: "two",
 };
 
-```
-
-_Now we log and check the datatype of the properties of this object._
-
-```javascript
+// Logging the datatype of the object's properties
 for (const property in myObj) {
   console.log(typeof property);
 }
 // 'string'
-// 'string'
-
+// 'string' (The numbers 1 and 2 were coerced into "1" and "2")
 ```
 
-_The properties i.e. **1**, **2** were converted to strings._
-
-_**Implicit conversion of keys is tricky because you lose the consistency of the types.**_
-
-_But if you use a number as a key inside a map, it will remain a number:_
+**The Map Solution (Strict Typing):**
+If you use a number as a key inside a Map, it remains a number.
 
 ```javascript
 const numbersMap = new Map();
@@ -92,32 +84,29 @@ const numbersMap = new Map();
 numbersMap.set(1, "one");
 numbersMap.set(2, "two");
 
-[...numbersMap.keys()];
+console.log([...numbersMap.keys()]);
 // [1, 2]
 
-typeof [...numbersMap.keys()][0];
+console.log(typeof [...numbersMap.keys()][0]);
 // 'number'
-
 ```
 
-&nbsp;
+#### Benefit 2: Using Objects as Keys
 
-#### 2. When using Objects as Keys.
-
-When you need to store some object-related data, without attaching this data on the object itself.
+Maps shine when you need to associate some metadata or object-related data with a specific object, *without* mutating the original object by attaching new properties to it. 
 
 ```javascript
 const foo = { name: "foo" };
 const bar = { name: "bar" };
 
-const kindOfMap = [
+// Using objects themselves as the keys
+const objectDataMap = new Map([
   [foo, "Foo related data"],
   [bar, "Bar related data"],
-];
-
+]);
 ```
 
-More here : https://dmitripavlutin.com/maps-vs-plain-objects-javascript/
+> 📖 **Further Reading:** For a deeper dive into performance and specific use cases, check out: [Maps vs Plain Objects in JavaScript](https://dmitripavlutin.com/maps-vs-plain-objects-javascript/)
 
 ---
 &nbsp;

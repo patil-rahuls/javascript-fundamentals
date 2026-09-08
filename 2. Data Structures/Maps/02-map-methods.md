@@ -1,19 +1,20 @@
 ## Data Structures > Map > Methods
 
-Maps are high performance key - value paired data structure.
+> 🎯 The `Map` object provides built-in methods and properties to add, retrieve, check, and delete key-value pairs efficiently. Unlike standard Objects, Map methods strictly preserve the exact data type of your keys.
 
-In Objects keys can only be strings (without quotes), but in Maps, keys can be any type.
+---
 
-### Map.prototype.**set()**
+### 1. `Map.prototype.set(key, value)`
 
-Adds a pair to the Map and returns updated map.
+Adds a new key-value pair to the Map and returns the updated Map object. 
+*Because it returns the Map itself, you can chain multiple `.set()` calls together.*
 
 ```javascript
 const myMap = new Map();
 
 myMap.set("name", "Rahul");
 
-// We can chain the set() method too
+// Chaining set() methods
 myMap
   .set(1, "Mumbai")
   .set(2, "India")
@@ -21,101 +22,77 @@ myMap
   .set(false, "I am busy.");
 
 console.log(myMap);
-/* Map(3) {
-    "name" ="Rahul",
-    1 ="Mumbai",
-    2 ="India",
-    true ='I am free now.',
-    false ='I am busy.',
- }
+/* 
+Map(5) {
+  "name" => "Rahul",
+  1 => "Mumbai",
+  2 => "India",
+  true => "I am free now.",
+  false => "I am busy."
+}
 */
-
-```
-_Observe that the key types are preserved in Map._
-
-### Map.prototype.**get()**
-
-Retrieve data from a Map by value.
-
-```javascript
-myMap.get(true);
-// I am free now.
-
-myMap.get("age");
-// undefined
-// Because 'age' key is not present in 'myMap'.
-
 ```
 
-### Map.prototype.**has()**
+### 2. `Map.prototype.get(key)`
 
-Checks if a key exists in a Map.
+Retrieves the data associated with a specific key. Returns `undefined` if the key does not exist.
 
 ```javascript
-myMap.has("hobbies");
+console.log(myMap.get(true));
+// "I am free now."
+
+console.log(myMap.get("age"));
+// undefined (Because 'age' key is not present)
+```
+
+### 3. `Map.prototype.has(key)`
+
+Checks if a specific key exists in the Map. Returns a boolean (`true` or `false`).
+
+```javascript
+console.log(myMap.has("hobbies")); 
 // false
 
-myMap.has(2);
+console.log(myMap.has(2)); 
 // true
-
 ```
 
-### Map.prototype.**delete()**
+### 4. `Map.prototype.delete(key)`
 
-Deletes an item from a Map.
+Deletes a specific key-value pair from the Map. Returns `true` if successful, or `false` if the key didn't exist.
 
 ```javascript
 myMap.delete(2);
 myMap.delete(1);
-
 ```
 
-### Map.prototype.**size**
+### 5. `Map.prototype.size`
 
-Returns size of Map.
+> ⚠️ **Important:** `size` is a property, **not** a method. Do not use parentheses `()`.
 
-***IMP***: _This is not a method. no parens **()**._
+Returns the total number of key-value pairs currently in the Map.
 
 ```javascript
-myMap.size;
-
+console.log(myMap.size);
 ```
 
-### Map.prototype.**clear()**
+### 6. `Map.prototype.clear()`
 
-Truncates Map.
+Truncates the Map, completely removing all key-value pairs.
 
 ```javascript
 myMap.clear();
-
 ```
 
-### Map.prototype.**keys()**
+---
 
-Retrieve keys from the Map.
+### 7. Iterators: `keys()`, `values()`, & `entries()`
 
-```javascript
-myMap.keys();
+These methods return iterable iterator objects containing the Map's data, which can be looped over (e.g., using `for...of`).
 
-```
-
-### Map.prototype.**values()**
-
-Retrieve values from the Map.
-
-```javascript
-myMap.values();
-
-```
-
-### Map.prototype.**entries()**
-
-Retrieve entries _[key, value]_ from the Map.
-
-```javascript
-myMap.entries();
-
-```
+*   **`myMap.keys()`**: Retrieves an iterator of all the *keys*.
+*   **`myMap.values()`**: Retrieves an iterator of all the *values*.
+*   **`myMap.entries()`**: Retrieves an iterator of all the `[key, value]` pairs.
 
 ---
 &nbsp;

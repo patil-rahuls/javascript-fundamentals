@@ -1,6 +1,11 @@
-## Data Structures > Object > Comparision
+## Data Structures > Object > Comparison
 
-Consider this object as an example.
+> 🎯 Because objects are reference types, standard equality operators (`==` or `===`) will only return `true` if two variables point to the exact same memory location. Comparing the actual *contents* of two distinct objects requires a different approach.
+
+---
+&nbsp;
+
+Consider these objects as an example:
 
 ```javascript
 const myObj = {
@@ -14,79 +19,86 @@ const yourObj = {
   lastName: "Test",
   age: 2049 - 2021,
 };
-
 ```
 
-A handy way to compare two objects in JS would be:
+### The Quick Way (with Caveats)
+
+A handy, built-in way to compare two objects by their content is to stringify them:
+
 ```javascript
 JSON.stringify(a) === JSON.stringify(b);
-// true
-
+// true (if contents and order are identical)
 ```
-_Works when you have simple same-order JSON-style objects without methods and DOM nodes inside._
 
-_Also, the ORDER of the properties is important. Following objects comparision will return false._
+> ⚠️ **Important Caveats:**
+> * This only works for simple, JSON-safe objects (no methods, `undefined`, or DOM nodes inside).
+> * **The ORDER of the properties is strictly evaluated.** The following object comparison will return `false` because the keys were inserted in a different order:
 
 ```javascript
-x = { a: 1, b: 2 };
-y = { b: 2, a: 1 };
+const x = { a: 1, b: 2 };
+const y = { b: 2, a: 1 };
 
-JSON.stringify(x) === JSON.stringify(y);
+console.log(JSON.stringify(x) === JSON.stringify(y));
 // false
-
 ```
+
 ---
 &nbsp;
 
-_(Optional Read)_
+### *(Optional Read)*
 
-> Interview Question - _Create a function to compare any number of objects. The properties in the objects can be in any order._
+> **Interview Question:** *Create a function to compare any number of objects. The properties in the objects can be in any order.*
 
 ```javascript
-x = { name: "Rahul", age: 29 };
-y = { age: 29, name: "Rahul" };
+const x = { name: "Rahul", age: 29 };
+const y = { age: 29, name: "Rahul" };
 
 function areEqual(...objArr) {
-  // Create a deep/independent copy of objArr, so that we dont mutate the passed objArr.
+  // Create a shallow copy of objArr, so that we don't mutate the passed arguments.
   const ipArr = [...objArr];
 
-  // Get first obj from the objArr
+  // Get the first object from the array to act as our baseline for comparison.
   const firstObj = ipArr.shift();
-  // Now ipArr will be left with the remaining obj except first.
+  // Now ipArr is left with the remaining objects to compare against the first.
 
+  // 1. Check if all objects have the exact same number of properties
   const lengthComparisionResult = ipArr.reduce((acc, obj) => {
     const currObjLen = Object.keys(obj).length;
     if (currObjLen === Number(acc)) {
-      return currObjLen;
-      // Return actual length of keys if all obj sizes are same
+      return currObjLen; // Return actual length of keys if sizes match
     } else {
-      return false;
-      // Return boolean type for incorrect obj sizes
+      return false;      // Return boolean false for size mismatch
     }
   }, Object.keys(firstObj).length);
 
-  // This is called a gaurd clause. i.e. checking for errors early and exiting.
+  // Guard Clause: Check for errors early and exit if lengths don't match.
   if (!lengthComparisionResult) {
     return false;
   }
 
-  // Now that we have same length of keys in all obj, check if they all have the same properties.
+  // 2. Now that we know they have the same length, check if they have identical properties and values.
   return ipArr.every((obj) => {
-    // Compare each obj of ipArr with firstObj.
-    let keysComparisionResult = false;
+    // Compare each object in ipArr with firstObj.
+    let keysComparisionResult = true;
+    
     for (const [prop, val] of Object.entries(obj)) {
-      if (firstObj?.[prop] === val) {
-        keysComparisionResult = true;
-      } else {
+      if (firstObj?.[prop] !== val) {
         keysComparisionResult = false;
+        break; // Exit the loop early if a mismatch is found
       }
     }
+    
     return keysComparisionResult;
   });
 }
+
+console.log(areEqual(x, y)); 
+// true
 ```
+
 ---
 &nbsp;
+
 <!-- PAGINATION_START -->
 
 📁 [Data Structures](../../2.%20Data%20Structures/) → [Objects](../Objects/)

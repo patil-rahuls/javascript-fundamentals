@@ -1,6 +1,11 @@
-## Data Structures > Array > Return new Array > _concat()_
+## Data Structures > Array > Return new Array > **`concat()`**
 
-### Array.prototype.**concat()**
+> 🎯 The **`concat()`** method is used to merge two or more arrays. This method does not change (mutate) the existing arrays, but instead returns a **new array**.
+
+---
+&nbsp;
+
+### 1. Using **`concat()`**
 
 ```javascript
 const arr1 = [11, 22, 33, 44, 55, 66];
@@ -8,14 +13,25 @@ const arr2 = [111, 222];
 
 const newArr = arr1.concat(arr2);
 
-// newArr = [11, 22, 33, 44, 55, 66, 111, 222]
+console.log(newArr); 
+// [11, 22, 33, 44, 55, 66, 111, 222]
 
+console.log(arr1);
+// [11, 22, 33, 44, 55, 66] (Original remains unchanged)
 ```
 
-Concatenating arrays using spread operator
+### 2. Using the Spread Operator (Modern Alternative)
+
+You can achieve the exact same result using the ES6 spread operator (`...`). It is often preferred for its clean and highly readable syntax.
+
 ```javascript
+const arr1 = [11, 22, 33, 44, 55, 66];
+const arr2 = [111, 222];
+
 const newArr2 = [...arr1, ...arr2];
 
+console.log(newArr2); 
+// [11, 22, 33, 44, 55, 66, 111, 222]
 ```
 ---
 &nbsp;

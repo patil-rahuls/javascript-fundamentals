@@ -1,31 +1,33 @@
 ## Data Structures > Set
 
-Sets are high performance **unordered unique collection** data structure.
-
-```javascript
-const names = new Set(["rahul", "hitesh", "rahul", "rahul", "aajesh", "rahul"]); // duplicate item 'rahul' added
-
-console.log(names);
-// set(3) {'hitesh', 'aajesh' , 'rahul'}
-
-```
-
-_While defining duplicates can be added, but it boils down to an unordered set of unique values._
-
-_Mixed data type are allowed. (Heterogenous elements)._
-
-Size of a Set:
-
-```javascript
-names.size;
-// 3
-
-```
-
-It gives _unique_ count, hence its called _size_, and not _length_ unlike arrays because arrays can have duplicate values.
+> 🎯 Sets are high-performance data structures that represent an **unordered collection of unique values**. While you can attempt to pass duplicate items during initialization, a Set will automatically filter them out, boiling down to only the unique elements. Sets can also store mixed data types (heterogeneous elements).
 
 ---
 &nbsp;
+
+### 1. Initialization & Syntax
+
+You can initialize a Set by passing an iterable (like an array) to the `new Set()` constructor. Notice how the duplicate entries of `"rahul"` are automatically removed.
+
+```javascript
+const names = new Set(["rahul", "hitesh", "rahul", "rahul", "aajesh", "rahul"]); 
+
+console.log(names);
+// Set(3) { 'rahul', 'hitesh', 'aajesh' }
+```
+
+### 2. Size of a Set
+
+Unlike arrays, which use the `length` property because they can contain duplicate values and gaps, Sets use the **`size`** property. It specifically represents the *unique count* of elements currently inside the collection.
+
+```javascript
+console.log(names.size);
+// 3
+```
+
+---
+&nbsp;
+
 <!-- PAGINATION_START -->
 
 📁 [Data Structures](../../2.%20Data%20Structures/) → [Sets](../Sets/)  

@@ -1,31 +1,46 @@
-## Data Structures > Array > Return new Array > _filter()_
+## Data Structures > Array > Return new Array > **`filter()`**
 
-### Array.prototype.**filter()**
+> 🎯 The **`filter()`** method creates a **new array** containing only the elements that pass a specific condition (i.e., the callback function evaluates to a truthy value).
+>
+> *A major advantage of using array data transformation methods like `filter()` over traditional loops is that they return arrays, allowing us to **chain** multiple methods together.*
 
-_A big advantage of using these array data transformation methods over traditional loops is that we can chain these functions together._
+---
+&nbsp;
 
-It filters out elements from an array that do not satisfy a given condition.
+## Using **`filter()`**
 
-_Method signature is similar to the **forEach()** method._
+The method signature is similar to `forEach()`—the callback receives `(currentItem, index, entireArray)`.
+
+> ⚠️ **Crucial Rule:** The callback function *must* return a **boolean** (or a truthy/falsy condition). 
+> *   If `true` ➡️ the current item is kept in the new array.
+> *   If `false` ➡️ the current item is filtered out.
+
+### 1. Implicit Return _(Concise Arrow Function)_
+When omitting the curly braces `{ }`, the arrow function returns the evaluation automatically.
 
 ```javascript
 const txn = [122, 24, 355, -55, 780, -999];
 
-const positives = txn.filter(
-  (amount, index, arr) => {
-    amount > 0;
-  }
-);
+const positives = txn.filter((amount) => amount > 0);
 
 console.log(positives);
 // [122, 24, 355, 780]
-
 ```
 
-_Observe that filter’s Callback function need to return a boolean and NOT a value._
+### 2. Explicit Return _(Block Body)_
+If you use curly braces `{ }` for your callback function, you **must** explicitly use the `return` keyword. *(Note: Omitting `return` here will return `undefined`, which is falsy, resulting in an empty array!)*
 
-_If that condition returns **true** for the current item then that item is returned to the new array._
+```javascript
+const txn = [122, 24, 355, -55, 780, -999];
 
+const positivesBlock = txn.filter((amount, index, arr) => {
+  // Explicit return is required when using { }
+  return amount > 0; 
+});
+
+console.log(positivesBlock);
+// [122, 24, 355, 780]
+```
 ---
 &nbsp;
 <!-- PAGINATION_START -->

@@ -1,10 +1,13 @@
 ## Data Structures > Object > Size
 
-### Object.keys().length
+> 🎯 Unlike Arrays (which have a `.length` property) or Maps (which have a `.size` property), standard JavaScript Objects do not have a built-in property to check their size. The size of an object is determined by the number of properties (keys) it holds.
 
-> Example: Get size of an object
+---
+&nbsp;
 
-Size of an object is the number of properties it holds.
+### `Object.keys().length`
+
+To find the size of an object, you first convert its keys into an array using `Object.keys()`, and then check the `.length` of that resulting array.
 
 ```javascript
 const myObj = {
@@ -13,14 +16,17 @@ const myObj = {
   age: 2049 - 2024,
 };
 
-let size = Object.keys(myObj).length;
+// 1. Object.keys(myObj) returns ['firstName', 'lastName', 'age']
+// 2. .length returns the count of items in that array
+const size = Object.keys(myObj).length;
 
 console.log(size);
 // 3
-
 ```
+
 ---
 &nbsp;
+
 <!-- PAGINATION_START -->
 
 📁 [Data Structures](../../2.%20Data%20Structures/) → [Objects](../Objects/)

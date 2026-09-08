@@ -1,10 +1,13 @@
 ## Data Structures > Memory Leak
 
-Memory leak - when memory stays allocated even when not needed.
+> 🎯 A **Memory Leak** occurs when memory remains allocated even after it is no longer needed. While JavaScript handles memory management and Garbage Collection (GC) implicitly, holding strong references to objects (like storing them in a standard Map or Set) can prevent the GC from freeing up memory, leading to leaks.
 
-In JavaScript, memory management & GC is mostly implicit.
+---
+&nbsp;
 
-> Example: 
+### The Problem: Strong References
+
+Consider this example using a standard `Map`:
 
 ```javascript
 let john = {
@@ -13,27 +16,28 @@ let john = {
 
 const visitsCountMap = new Map();
 
+// Using the 'john' object as a key
 visitsCountMap.set(john, 1);
-// size of visitsCountMap -> 1
 
-// ... later ...
+console.log(visitsCountMap.size); 
+// 1
+
+// ... later in the code ...
+
+// We remove our primary reference to the 'john' object
 john = null;
 
-// size of visitsCountMap -> 1
-
+console.log(visitsCountMap.size); 
+// 1
 ```
 
-_In the example above, if a regular Map is used, the 'john' object remains in memory even after it is set to `null` because the map still holds a strong reference to it, potentially causing a memory leak._
+In the example above, even though we explicitly set the `john` variable to `null`, the object itself **remains in memory**. Why? Because `visitsCountMap` still holds a strong reference to it as a key. 
 
-Using Map is inefficient in such cases, and manual cleanup is required.
+The Map's size remains `1`, and the entry is not removed automatically. If you are tracking many objects this way, it becomes highly inefficient and requires manual cleanup (`visitsCountMap.delete(john)`). If left unchecked in a large application, this is exactly how a **Memory Leak** happens.
 
-_In the above example, **John** is still in memory because **visitsCountMap** references it!_
+### The Solution
 
-_The map's size remains **1**, and the entry is not removed automatically._
-
-**_This is called a Memory Leak._**
-
-Solution: **WeakMap** & **WeakSet**
+To solve this issue without needing manual cleanup, JavaScript provides two specific data structures designed to hold "weak" references to objects, allowing them to be automatically garbage collected: **`WeakMap`** and **`WeakSet`**.
 
 ---
 &nbsp;

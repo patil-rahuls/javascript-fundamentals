@@ -1,10 +1,11 @@
-## Data Structures > Object > _seal()_
+## Data Structures > Object > `seal()`
 
-### Object.**seal()**
+> 🎯 The **`Object.seal()`** method "seals" an object. Unlike a frozen object, a sealed object is still **mutable**—you can update the values of its existing properties. However, you are completely restricted from adding new properties or deleting existing ones.
 
-Sealed objects are still mutable, meaning you can change the values of the existing properties.
+---
+&nbsp;
 
-However, you can't add new properties or remove existing ones.
+### 1. Sealing an Object
 
 ```javascript
 const person = {
@@ -13,67 +14,50 @@ const person = {
   age: 2049 - 2024,
 };
 
-```
-
-Seal the object.
-```javascript
+// Seal the object
 Object.seal(person);
-
 ```
 
-Check if the Object is sealed.
+### 2. Checking if an Object is Sealed
+
+You can easily verify the state of an object using `Object.isSealed()`.
+
 ```javascript
 console.log(Object.isSealed(person));
 // true
-
 ```
 
-✅ Modifying an existing property allowed.
+### 3. The Effects of Sealing
+
+> 💡 **Note:** Just like with `Object.freeze()`, attempting to add or remove properties on a sealed object will fail silently in standard execution, but will throw a `TypeError` if your code is running in Strict Mode (`"use strict";`).
+
 ```javascript
+// ✅ Modifying an existing property IS allowed
 person.age = 31;
 
-console.log(person);
-/*
-{
-  firstName : 'Rahul',
-  lastName : 'Patil',
-  age : 31
-}
-*/
 
-```
-
-❌ Adding new properties not allowed.
-```javascript
+// ❌ Adding new properties is NOT allowed
 person.city = "Mumbai";
 
-console.log(person);
-/*
-{
-  firstName : 'Rahul',
-  lastName : 'Patil',
-  age : 31
-}
-*/
 
-```
-
-❌ Removing existing properties not allowed.
-```javascript
+// ❌ Removing existing properties is NOT allowed
 delete person.firstName;
 
-console.log(person);
+
+console.log(person);  
+// The object retains its original structure, but with the modified age:
 /*
 {
-  firstName : 'Rahul',
-  lastName : 'Patil',
-  age : 31
+  firstName: 'Rahul',
+  lastName: 'Patil',
+  age: 31
 }
 */
-
 ```
+
 ---
 &nbsp;
+
 <!-- PAGINATION_START -->
 
 📁 [Data Structures](../../2.%20Data%20Structures/) → [Objects](../Objects/)

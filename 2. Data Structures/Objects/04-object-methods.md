@@ -1,6 +1,13 @@
 ## Data Structures > Object > Methods
 
-Consider this object as an example.
+> 🎯 Any function attached to an object as a property is called a **method**. The key distinction between a standard function and a method is that a method is invoked upon an object, which acts as its **receiver**.
+
+---
+&nbsp;
+
+### 1. Defining a Method
+
+You can assign a function to an object property just like any other value.
 
 ```javascript
 const myObj = {
@@ -9,55 +16,55 @@ const myObj = {
   age: 2049 - 2024,
 };
 
-```
-
-Functions inside an object are called methods.
-
-Methods have a **_receiver_** while functions do not.
-
-```javascript
+// Adding a method to the object
 myObj.greet = function (user) {
   console.log(`Hello '${user}' !! What up !`);
 };
 
 console.log(myObj);
-/* Object {
-   firstName : 'Rahul',
-   lastName : 'Patil',
-   age : 25,
-   greet: function(user){
-     console.log(`Hello '${user}' !! What up !`);
-   },
- };
+/* 
+{
+  firstName: 'Rahul',
+  lastName: 'Patil',
+  age: 25,
+  greet: [Function (anonymous)]
+}
 */
-
-// Object method call
-myObj.greet("Reader");
-
 ```
-_'myObj' is the receiver and 'greet()' is the method_
 
-A method is associated with an object. Compare that with a function invocation:
+### 2. Method vs. Function (The "Receiver")
+
+A method is strongly associated with the object it belongs to. When you call it, the object before the dot acts as the **receiver**.
+
+```javascript
+// Method Invocation: 'myObj' is the receiver, 'greet' is the method
+myObj.greet("Reader");
+// "Hello 'Reader' !! What up !"
+```
+
+Compare this with a standard function invocation:
+
 ```javascript
 const sayHi = () => console.log(`Hi there !!`);
 
-sayHi();
-
+// Function Invocation: There is no receiver (no object before a dot)
+sayHi(); 
+// "Hi there !!"
 ```
-_Notice, there is no receiver here. The receiver is what separates a function from a method._
 
-Method call using dot notation is preferred - _easy to read_
+---
+
+### 3. Invoking Methods
+
+Just like retrieving standard properties, you can invoke methods using either Dot Notation or Bracket Notation. Dot notation is the standard and preferred approach because it is significantly easier to read.
+
 ```javascript
+// ✅ Preferred: Dot notation (Clean and readable)
 myObj.greet("Reader");
 
-```
-
-Method call using bracket notation - _difficult to read_
-```javascript
+// ⚠️ Valid, but difficult to read: Bracket notation
 myObj["greet"]("Reader");
-
 ```
-
 ---
 &nbsp;
 <!-- PAGINATION_START -->

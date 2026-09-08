@@ -1,5 +1,42 @@
-## Data Structures > Array > String to Array > _split()_
+## Data Structures > Array > String ↔ Array Conversion
 
+> 🎯 You will frequently need to convert strings into arrays for manipulation, and then convert those arrays back into strings for display. The **`split()`** (String method) and **`join()`** (Array method) act as perfect opposites for these tasks.
+
+---
+&nbsp;
+
+### 1. **`String.prototype.split()`** (String to Array)
+
+Splits a string into an array of substrings based on a specified delimiter.
+
+```javascript
+const str = "11,22,33,44,55,66"; // Type: String
+
+// Split the string at every comma
+const result = str.split(",");
+
+console.log(result);
+// ["11", "22", "33", "44", "55", "66"] 
+// 💡 Note: The resulting array elements are always strings, not numbers!
+```
+
+---
+
+### 2. **`Array.prototype.join()`** (Array to String)
+
+Joins all items of an array into a single continuous string using a provided delimiter. 
+
+> ⚠️ **Default Behavior:** If no delimiter is explicitly provided, it defaults to using a comma (`,`).
+
+```javascript
+const arr = [11, 22, 33, 44, 55, 66];
+
+// Join with a hyphen
+const result = arr.join("-");
+console.log(result); 
+// "11-22-33-44-55-66"
+
+// Join with an empty string (no spaces
 ### String.prototype.**split()** - _String to Array_
 
 Splits a string into an array by the provided delimeter.

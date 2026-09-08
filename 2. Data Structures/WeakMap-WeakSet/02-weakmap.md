@@ -1,14 +1,15 @@
 ## Data Structures > WeakMap
 
-They are Data structures for Better Memory Management.
+> 🎯 **WeakMaps** are data structures designed specifically for better memory management. They hold **weak references** to objects. If an object is only referenced as a key inside a WeakMap (and no longer used anywhere else in your code), the JavaScript garbage collector is allowed to automatically delete it.
 
-> They hold **weak references** to objects. If an object is only held inside a **WeakMap**, the garbage collector is allowed to delete it.
+---
+&nbsp;
 
-This is perfect for things like caching or DOM metadata.
+This behavior makes WeakMaps perfect for use cases like caching data or attaching metadata to DOM elements without having to worry about manual cleanup.
 
-***Solution: Efficient with WeakMap (automatic cleanup)***
+### The Solution: Efficient Memory Management
 
-_In the following example, by using a **WeakMap**, the entry for **john** is automatically removed when it becomes unreachable, ensuring efficient memory usage._
+Let's revisit our memory leak problem, but this time using a **WeakMap**. By doing so, the entry for our object is automatically removed when it becomes unreachable, ensuring perfectly efficient memory usage.
 
 ```javascript
 let john = {
@@ -17,19 +18,25 @@ let john = {
 
 const visitsCountWeakMap = new WeakMap();
 
+// The object 'john' is used as the key
 visitsCountWeakMap.set(john, 1);
 
-// ... later ...
+// ... later in the code ...
+
+// We remove our primary reference to the 'john' object
 john = null;
 
-// size of visitsCountWeakMap = 0
-
+// The 'john' object is now eligible for Garbage Collection.
+// The entry in visitsCountWeakMap is automatically removed!
 ```
 
-_'John' is garbage collected, and the entry in **visitsCountWeakMap** is automatically removed. No memory leak happens._
+> 💡 **Key Insight:** Once `john` is set to `null`, the object is garbage collected. The corresponding entry inside `visitsCountWeakMap` evaporates automatically, completely preventing the memory leak. 
+> 
+> *(Note: Because of this unpredictable automatic cleanup process, WeakMaps do not have a `.size` property or any iteration methods like `.keys()` or `.values()`)*.
 
 ---
 &nbsp;
+
 <!-- PAGINATION_START -->  
 
 📁 [Data Structures](../../2.%20Data%20Structures/) → [WeakMap-WeakSet](..)

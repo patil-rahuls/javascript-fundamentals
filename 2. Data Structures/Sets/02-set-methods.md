@@ -1,94 +1,87 @@
 ## Data Structures > Set > Methods
 
-Sets are high performance **unordered unique collection** data structure.
+> 🎯 Sets share almost identical built-in methods with Maps, with one key distinction: you use **`.add()`** to insert values into a Set instead of `.set()`. Because Sets are strictly unordered, there is no way to retrieve a specific element by index—when using Sets, we only care about **uniqueness** and checking **if an item is present**.
 
-Consider this set as an example.
+---
+&nbsp;
+
+Consider this Set as our starting example:
 
 ```javascript
-const names = new Set(["rahul", "hitesh", "rahul", "rahul", "aajesh", "rahul"]); // duplicate item 'rahul'
+const names = new Set(["rahul", "hitesh", "rahul", "rahul", "aajesh", "rahul"]); 
+// Duplicates of 'rahul' are ignored
 
 console.log(names);
-// set(3) {'hitesh', 'aajesh' , 'rahul'}
-
+// Set(3) { 'rahul', 'hitesh', 'aajesh' }
 ```
 
-### Set.prototype.**add()**
+### 1. `Set.prototype.add(value)`
 
-_In Map we have **map.set()** method. That's the only distinction in their methods. Rest all the methods of sets are same._
+Appends a new element to the Set. If you try to add a value that already exists, the Set will simply ignore it, maintaining its unique nature.
 
 ```javascript
 names.add("anil");
 names.add("milan");
 
 console.log(names);
-// set(5) {'hitesh', 'aajesh' , 'rahul', 'anil', 'milan'}
+// Set(5) { 'rahul', 'hitesh', 'aajesh', 'anil', 'milan' }
 
+// Attempting to add duplicates
 names.add("kisan");
-names.add("kisan");
-// Will get added only once (Set has to have unique values)
+names.add("kisan"); // Ignored
 
 console.log(names);
-// set(6) {'hitesh', 'aajesh' , 'rahul', 'anil', 'milan', 'kisan'}
-
+// Set(6) { 'rahul', 'hitesh', 'aajesh', 'anil', 'milan', 'kisan' }
 ```
 
-### Set.prototype.**has()** - _checks if an element exists in a set._
+### 2. `Set.prototype.has(value)`
+
+Returns a boolean indicating whether an element with the specified value exists in the Set or not. 
 
 ```javascript
-names.has("anil");
-// false
-
-names.has("hitesh");
+console.log(names.has("anil"));
 // true
 
+console.log(names.has("john"));
+// false
 ```
 
-### Set.prototype.**delete()** - _delete item from set_
+### 3. `Set.prototype.delete(value)`
+
+Removes the specified element from the Set.
 
 ```javascript
 names.delete("kisan");
 
 console.log(names);
-// set(5) {'hitesh', 'aajesh' , 'rahul', 'anil', 'milan'}
-
+// Set(5) { 'rahul', 'hitesh', 'aajesh', 'anil', 'milan' }
 ```
 
-### Set.prototype.**clear()** - _empty/truncate the set_
+### 4. `Set.prototype.clear()`
+
+Truncates the Set entirely, removing all elements.
 
 ```javascript
 names.clear();
-
+console.log(names.size); // 0
 ```
-
-### Set.prototype.**keys()**
-
-```javascript
-names.keys();
-
-```
-
-### Set.prototype.**values()**
-
-```javascript
-names.values();
-
-```
-
-### Set.prototype.**entries()**
-
-```javascript
-names.entries();
-
-```
-
-_There is no method to get a specific item from a set._
-
-_Because, there is no order(index) defined in which the items are stored in a Set unlike arrays._
-
-**_When using Sets, we just care about uniqueness and whether the item is present or not._**
 
 ---
 &nbsp;
+
+### 5. Iterators: `keys()`, `values()`, & `entries()`
+
+Just like Maps, Sets provide methods that return iterable objects. However, because Sets do not have keys, `.keys()` and `.values()` are functionally identical (both yield the values). The `.entries()` method yields an array of `[value, value]` for each element, primarily to keep the API compatible with Maps.
+
+```javascript
+names.keys();
+names.values();
+names.entries();
+```
+
+---
+&nbsp;
+
 <!-- PAGINATION_START -->
 
 📁 [Data Structures](../../2.%20Data%20Structures/) → [Sets](../Sets/)  

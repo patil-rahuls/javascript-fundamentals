@@ -1,8 +1,11 @@
-## Data Structures > Object > _freeze()_
+## Data Structures > Object > `freeze()`
 
-### Object.**freeze()**
+> 🎯 The **`Object.freeze()`** method completely locks down an object. A frozen object is strictly read-only: you cannot modify existing properties, add new properties, or delete current ones.
 
-Frozen objects are read-only, and no modifications, additions, or deletions of properties are allowed.
+---
+&nbsp;
+
+### 1. Freezing an Object
 
 ```javascript
 const person = {
@@ -11,67 +14,49 @@ const person = {
   age: 2049 - 2024,
 };
 
-```
-
-Freeze the Object
-```javascript
+// Freeze the object
 Object.freeze(person);
-
 ```
 
-Check if the Object is Frozen
+### 2. Checking if an Object is Frozen
+
+You can verify the state of an object using `Object.isFrozen()`.
+
 ```javascript
 console.log(Object.isFrozen(person));
 // true
-
 ```
 
-❌ Modifying properties of frozen objects are not allowed.
+### 3. The Effects of Freezing
+
+Once an object is frozen, any attempt to alter it will fail. 
+
+> 💡 **Note:** These operations will fail *silently* in standard execution, but will throw a `TypeError` if your code is running in Strict Mode (`"use strict";`).
+
 ```javascript
+// ❌ Modifying properties is not allowed
 person.age = 31;
 
-console.log(person);  // Remains unchanged
-/*
-{
-  firstName : 'Rahul',
-  lastName : 'Patil',
-  age : 25
-}
-*/
-
-```
-
-❌ Adding new properties not allowed.
-```javascript
+// ❌ Adding new properties is not allowed
 person.city = "New York";
 
-console.log(person);  // Remains unchanged
-/*
-{
-  firstName : 'Rahul',
-  lastName : 'Patil',
-  age : 25
-}
-*/
-
-```
-
-❌ Removing properties not allowed.
-```javascript
+// ❌ Removing properties is not allowed
 delete person.firstName;
 
-console.log(person);  // Remains unchanged
+console.log(person);  
+// The object remains completely unchanged:
 /*
 {
-  firstName : 'Rahul',
-  lastName : 'Patil',
-  age : 25
+  firstName: 'Rahul',
+  lastName: 'Patil',
+  age: 25
 }
 */
-
 ```
+
 ---
 &nbsp;
+
 <!-- PAGINATION_START -->
 
 📁 [Data Structures](../../2.%20Data%20Structures/) → [Objects](../Objects/)
