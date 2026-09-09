@@ -1,8 +1,13 @@
-## Chaining Class Methods
+## OOP Javascript > Chaining Class Methods
 
-We can chain the class methods.
+> 🎯 Chaining class methods allows you to call multiple methods sequentially on the same object instance in a single statement. This creates clean, fluent, and highly readable code.
 
-> ***We need to return `this` from the methods to allow chaining.***
+---
+&nbsp;
+
+### 1. Returning `this` to Enable Chaining
+
+> ⚠️ **Important:** You **must** return the current object instance (`this`) at the end of your methods to allow chaining. If a method doesn't return `this`, it returns `undefined` by default, causing any subsequent method calls in the chain to throw an error.
 
 ```javascript
 class User {
@@ -30,20 +35,21 @@ class User {
 
 const user2 = new User("rahul.p", "Rahul", 0, "Valid");
 
+// Methods are chained together sequentially
 user2.name().license();
-// Name: Rahul.  License: Valid
+// Name: Rahul.  
+// License: Valid
 ```
 
 ---
-
----
-
+&nbsp;
 <!-- PAGINATION_START -->
 
-**Parent:** [5. OOP Javascript](../5.%20OOP%20Javascript/)
+📁 [5. OOP Javascript](../5.%20OOP%20Javascript/)
 
-**Previous:** ← [Inheritance - `Object.create()`](09-inheritance-Object.create.md)
+◀️ [Inheritance - **Object.create()**](09-inheritance-Object.create.md)
 
-**Next:** → [`Asynchronous JavaScript`](../6.%20Asynchronous%20Javascript/)
+▶️ [**Asynchronous JavaScript**](../6.%20Asynchronous%20Javascript/)
 
 <!-- PAGINATION_END -->
+&nbsp;

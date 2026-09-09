@@ -1,261 +1,143 @@
-## **call()**, **apply()** and **bind()**
+## Functions > call(), apply() and bind()
 
-Used to reuse an object's method with different objects.
+> 🎯 These built-in JavaScript methods are used to control the `this` context of a function. `call()` and `apply()` invoke a function immediately with a specified `this` value, while `bind()` creates and returns a new function with a permanently bound `this` value.
 
-> **call()** and **apply()** call a function.
+---
+&nbsp;
 
-> **bind()** creates a new function.
+### 1. The Problem: Borrowing Methods
+
+When we want to reuse an object's method for a different object, we can't just copy the function into a variable. If we do, the function loses its receiver object, and the `this` keyword becomes `undefined`.
 
 ```javascript
 const mainAirline = {
   airlineCode: "AA",
-
   checkIn(passengerName, seatNumber) {
-    console.log(
-      **[${this.airlineCode}] - Boarding pass issued for ${passengerName}. Seat: ${seatNumber}.**,
-    );
-    // Here, 'this' points to the calling object.
+    // 'this' points to the calling object
+    console.log(`[${this.airlineCode}] - Boarding pass issued for ${passengerName}. Seat: ${seatNumber}.`);
   },
 };
 
-mainAirline.checkIn("Rahul P", "A01");
+mainAirline.checkIn("Rahul P", "A01"); 
+// Works perfectly. 'this' is mainAirline.
 
-```
-
-_In the above code, the **this** in the method **checkIn** will point to the **mainAirline** object._
-
-_Now, suppose a new partner airline is formed and we need to bring in the functionality **checkIn** into it._
-
-_We won't copy the function definition of checkIn() method inside the object of this new partner airline object._
-
-_We borrow it from the existing **mainAirline** object using **call**, **apply** and **bind** methods._
-
-```javascript
 const partnerAirline = {
   airlineCode: "BB",
 };
 
-```
-
-_What if we copy the checkIn() from mainAirline outside in a variable ?_
-```javascript
+// Copying the function outside the object
 const checkInFn = mainAirline.checkIn;
 
+// checkInFn("Hitesh T", "B22"); 
+// ❌ ERROR: 'this' is undefined because checkInFn is now a regular function call.
 ```
-_In the example above, remember **mainAirline.checkIn()** is a method. But now, after copying, **checkInFn()** is a regular function and not related to any object._
 
-_Since **mainAirline.checkIn()** uses **this** keyword which refers to an object, we can't simply use the **checkInFn()** without its 'reciever' object._
+*To make `checkInFn()` a common function available to all airlines, we borrow it using `call()`, `apply()`, or `bind()`.*
 
-_To make the **checkInFn()** a common function available to all airlines/objects we can use - **call()**, **apply()** and **bind()** methods._
+### 2. `Function.prototype.call()`
 
-Functions are still JS objects. They have some internally _inherited methods_ like **call()**, **apply()** and **bind()**.
-
-### Function.prototype.**call()**
+The `call()` method immediately executes the function. The first argument explicitly sets the `this` keyword, and subsequent arguments are passed exactly as the function expects them.
 
 ```javascript
-const partnerAirline = {
-  airlineCode: "BB",
-};
-
-const checkInFn = mainAirline.checkIn;
-
+// 1st arg: 'partnerAirline' becomes 'this'
+// Remaining args: passed directly to the checkIn function
 checkInFn.call(partnerAirline, "Hitesh T", "B22");
 
+// We can also create an anonymous object directly inside call()
+checkInFn.call(
+  { airlineCode: "FG" }, 
+  "Rucha S", 
+  "F23"
+);
 ```
 
-_In the code above, the **this** keyword in **checkIn()** will now point to the new **partnerAirline** object. It calls the checkIn() method in 'mainAirline' BUT with 'partnerAirline' object._
+### 3. `Function.prototype.apply()`
 
-_We didn't call the **checkIn()** directly, instead we called the **call()** method which calls the **checkIn()** with the passed object._
-
-_Also note that the first argument of **call()** is the **partnerAirline** object, so that the **this** keyword in **checkIn()** method can refer to that object._
-
-_After the first argument which is the **partnerAirline** object, the rest of the arguments are exactly in the same order as the parameters of the **checkIn()** method._
-
-_Now, we can create any number of partner airlines/carriers objects. Just make sure the property names are exactly the same as those of **mainAirline** object._
-
-&nbsp;
-
-### Function.prototype.**apply()**
-
-This is exactly same as the **call()**, except that we pass the arguments in an array after the first parameter.
+This is exactly the same as `call()`, except that the arguments (after the `this` context) must be passed as an **array**. 
 
 ```javascript
+// Arguments passed inside an array
 checkInFn.apply(partnerAirline, ["Aajesh V", "H02"]);
-// arguments - 'Aajesh V', 'H02' passed in an array.
 
-```
-
-Better approach would be to put params into an array and then we can re-use it.
-
-```javascript
+// Modern Alternative: Using call() with the spread operator
 const passenger = ["Raj S", "D23"];
 
-```
-
-Now we can use this array with both apply() and call()
-
-```javascript
 checkInFn.apply(partnerAirline, passenger);
-
-checkInFn.call(partnerAirline, ...passenger);
-
+checkInFn.call(partnerAirline, ...passenger); // Preferred modern approach
 ```
 
-Always prefer the above format, so that in future if we need to change any of the two **apply()** or **call()**, we need to do a very little change in our code.
+### 4. `Function.prototype.bind()`
 
-We can also create an **anonymous object** while using **apply()** or **call()**:
-
-```javascript
-checkInFn.call(
-  {
-    airlineCode: "FG",
-  },
-  "Rucha S",
-  "F23",
-);
-
-```
-
-&nbsp;
-
-### Function.prototype.**bind()**
-
-It creates a new function by binding an object to the method.
+Unlike `call()` and `apply()`, `bind()` **does not execute the function immediately**. Instead, it creates and returns a brand new function where the `this` keyword is permanently bound to the passed object.
 
 ```javascript
+// Creates a new function bound to partnerAirline
 const partnerCheckIn = checkInFn.bind(partnerAirline);
 
-// OR
-
-const partnerCheckIn = mainAirline.checkIn.bind(partnerAirline);
-
-```
-
-_**partnerCheckIn** can be called without a reciever object._
-
-```javascript
+// Can now be called without a receiver object
 partnerCheckIn("Vijay N", "B12");
-
 ```
 
-_This is how we simply copy a method from an object and \_bind_ it to another object (**partnerAirline** in our case).\_
-
-Let’s modify the **partnerCheckIn** method for one object. (lets say- to accept only Seat Number)
+**Partial Application:** `bind()` can also preset default parameters. 
 
 ```javascript
+// Presetting "Mr. PM" as the first argument
 const partnerCheckInPM = checkInFn.bind(partnerAirline, "Mr. PM");
 
+// Now we only need to pass the seat number
+partnerCheckInPM("A02"); 
+// Same as: checkInFn.call(partnerAirline, "Mr. PM", "A02");
 ```
 
-_Now if I call **partnerCheckInPM**, I just need to pass the 'Seat Number', because I have preset Name "Mr. PM" as the first argument using **bind()**._
+### 5. Using `bind()` with Event Listeners
+
+In an event handler function, the `this` keyword automatically points to the HTML element that triggered the event. `bind()` is the standard solution to fix this when you need `this` to point to your object.
 
 ```javascript
-partnerCheckInPM("A02");
-
-```
-
-_This is same as:_
-```javascript
-checkInFn.call(partnerAirline, 'Mr. PM', 'A02');
-
-```
-
-_**bind()** can be useful if we want to use default parameter values in the same method for different objects._
-
-&nbsp;
-
-> Example: Using **bind()** with Event Listeners:
-
-```javascript
-const mainAirline = {
+const myAirline = {
   airlineCode: "AA",
   book() {
-    console.log(`Booking made for ${airlineCode}`);
+    console.log(`Booking made for ${this.airlineCode}`);
   },
 };
 
-// Now attach 'book()' to a button click action
-document.querSelector(".book").addEventListener("click", mainAirline.book());
+// ❌ Incorrect: 'this' will point to the button element, resulting in 'undefined'
+// document.querySelector(".book").addEventListener("click", myAirline.book);
 
-```
-
-_In the above example, when a click event occurs on the element it prints **NAN**. Because the **this** keyword in **book()** is now the button element which is pressed._
-
-_In an eventhandler function, the **this** keyword always points to the html element on which the handler is attached._
-
-_So in the above case, **this** refers to the button element, and not the **mainAirline** object._
-
-Solution: **bind()** - as it returns a function.
-
-_Here, we are not using **call()** & **apply()** because they both simply call the function._
-
-_We just need to pass a function value as an event handler function()_
-
-```javascript
+// ✅ Correct: bind() returns a new function with 'this' explicitly set to myAirline
 document
-  .querSelector(".book")
-  .addEventListener("click", mainAirline.book.bind(mainAirline));
-
+  .querySelector(".book")
+  .addEventListener("click", myAirline.book.bind(myAirline));
 ```
 
-_Now the **this** keyword in **book()** will point to the **mainAirline** object._
+### 6. Partial Application without Objects (Currying)
 
-&nbsp;
-
-> Example: Creating new functions using **bind()**
-
-This is a big use case for the **bind()**
+A powerful use case for `bind()` is creating new specialized functions from a general one, even if you don't care about the `this` keyword (passing `null`).
 
 ```javascript
-const addTax = (rate, val) =rate + rate * val;
+const addTax = (rate, val) => val + val * rate;
 
-const VAT = addTax.bind(null, 0.23);
+// We set 'this' to null, and permanently set 'rate' (the first param) to 0.23
+const calcVAT = addTax.bind(null, 0.23);
 
+console.log(calcVAT(100)); 
+// 123 (100 + 100 * 0.23)
 ```
 
-_We set the **rate** (default param) as **0.23** and the object passed is **null**. Since, in the **addTax()** there is no **this** keyword, we can simply pass **null** and it will work._
+*(Optional Read: The above scenario achieves the same result as returning functions from higher-order functions).*
 
 ```javascript
-VAT(3299);
-// 3299 + 3299*0.23
-
-```
-
-IMP: Using **bind()** gives us a new function.
-
-_There might be cases where you need a specific function instead of default params._
-
-_Like from the above case, we can create different functions for calculating \_VAT_, _GST_ etc.\_
-
-&nbsp;
-
-_(Optional Read)_
-
-_The above scenario is similar to using fn returning fn and can be re-written as:_
-
-```javascript
-const addTax = (rate) ={
+// Equivalent using Higher Order Functions
+const createTaxCalculator = (rate) => {
   return function (val) {
     return val + val * rate;
   };
 };
 
-// A function for GST
-const GST = addTax(18);
-
-// A function for EducationCess
-const EducationCess = addTax(0.05);
-
-// Usage:
-let cost = 3349;
-
-GST(cost);
-// 66481
-
-EducationCess(cost);
-// 3673.95
-
+const calcGST = createTaxCalculator(0.18);
+console.log(calcGST(100)); // 118
 ```
+
 ---
 &nbsp;
 <!-- PAGINATION_START -->

@@ -1,4 +1,16 @@
-## Closures
+## Functions > Closures
+
+> 🎯 A **closure** gives a function access to all the variables of its parent function, even after that parent function has finished executing and returned. It ensures that a function doesn't lose connection to the variables that existed in its creation scope.
+
+---
+&nbsp;
+
+### Understanding Closures
+
+When a function is returned from another function, it keeps a reference to its outer scope. This preserves the scope chain over time.
+
+*   **Formal definition:** It is the closed-over variable environment of the execution context in which a function was created, and which exists even after that function's execution context is gone.
+*   **Layman Explanation:** A closure is like a "backpack" that a function carries around wherever it goes. This backpack holds all the variables that were present in the environment where the function was created.
 
 ```javascript
 const parentFn = function () {
@@ -10,75 +22,40 @@ const parentFn = function () {
   };
 };
 
-const booker = parentFn();
 // Here the parent function 'parentFn' has been called and returned.
+const booker = parentFn();
 
 booker(); // 1
 booker(); // 2
 booker(); // 3
 ```
 
-_In the above example, **booker()** still has access to the variable **users** which was declared in parent function parentFn()._
+*In the above example, `booker()` still has access to the variable `users` declared in `parentFn()`, even though `parentFn()` has already finished executing.*
 
-_And **parentFn()** has already been executed and has returned to **booker()**._
+### Properties of Closures
 
-&nbsp;
-
-A closure gives a function access to all the variables of its parent function, even after that parent function has finished executing and returned.
-
-The function keeps a reference to its outer scope, which preserves the scope chain throughout the time.
-
-A closure ensures that a function doesn't lose connection to variables that existed at the function's creation scope.
-
-**Formal definition**: It is the closed-over variable environment of the execution context in which a function was created, and which exists even after that function execution context is gone.
-
-_Layman Explanation: A closure is like a backpack that a function carries around wherever it goes(from wherever it is being called). This backpack has all the variables that were present in the environment where the function was created._
-
----
-&nbsp;
-
-### More about closures:
-
-We do not create closures manually.
-
-They are a javascript feature that happens automatically.
-
-Also we don't have any access to closed-over variables. We can't go into a closure and read or write variables.
-
-A closure is not a tangible js object.
-
-But we can have a look at its properties:
+*   **Automatic:** We do not create closures manually. They are a built-in JavaScript feature that happens automatically.
+*   **Inaccessible:** We don't have direct access to closed-over variables. We can't dive into a closure and read or write its variables directly.
+*   **Introspection:** While not a tangible JS object, we can observe a closure using `console.dir()`.
 
 ```javascript
 console.dir(booker);
-
 ```
 
-_It gives the function details. where it shows the **'scopes'** property which is the variable environment._
+*Viewing this in the console reveals the function details, including the `[[Scopes]]` property (the variable environment).*
 
-_We can see which variables exist in that VE and that the variables are changing in it based on the no. of times I am calling **booker()**._
-
-```
+```text
 [[Scopes]] : Scopes[3]
-// Double brackets [[...]] means
-// its an internal JavaScript property.
+// Double brackets [[...]] mean it's an internal JavaScript property.
 >
-0: Closure (parentFn) { users:... }
+0: Closure (parentFn) { users: ... }
 >
-
 ```
+*This output confirms that the variable `users` is available from `parentFn`’s execution context via a **Closure**.*
 
-_The last line means that the variable **users** is available from **parentFn**’s execution context via **Closure**._
+### Scenario 1: Re-assigning Functions
 
-_In Scopes[3], the number **3** is the times the child function has been called._
-
----
-
-&nbsp;
-
-### Some more scenarios:
-
-> Example 1:
+Closures work even when re-assigning a globally scoped variable to different functions.
 
 ```javascript
 let f; // global scope
@@ -98,69 +75,57 @@ const h = function () {
 };
 
 g();
-f(); // 23*2
-console.dir(f); // Observe the o/p
+f(); // 46 (23 * 2)
+console.dir(f); // Check the console to see the closure containing 'a'
 
-// re-assigning the f function
+// Re-assigning the 'f' function
 h();
-f(); // 777*2
-console.dir(f);
-
+f(); // 1554 (777 * 2)
+console.dir(f); // Check the console to see the new closure containing 'b'
 ```
 
-&nbsp;
+### Scenario 2: Timer Functions
 
-> Example 2: _Timer Function. We don't always need to return a function to observe a closure._
+We don't always need to `return` a function to observe a closure. Timer callbacks are a great example.
 
 ```javascript
 const test = function (n) {
   const twice = n * 2;
 
   setTimeout(function () {
-    console.log(`The double of ${n} is ${twice}.`);
+    console.log(`The double of ${n} is${twice}.`);
   }, 2000);
 
   console.log(`Starting....`);
 };
 
 test(3);
-
 ```
 
-_On calling this, following events happen:_
+*When `test(3)` runs:*
+1. `twice` is initialized.
+2. The `setTimeout` callback is registered and waits in the background.
+3. The last `console.log` executes immediately.
+4. The `test()` function finishes executing and is popped off the call stack.
+5. After 2 seconds, the callback runs independently but still accesses `n` and `twice` because **closures have priority over the scope chain**.
 
-1. **const twice** is initialized.
-2. _The timer callback fn is registered- it starts waiting for its execution for the given time in milliseconds._
-3. _And the last **console.log** is executed. It won't wait for the timer’s callback._
-4. _The **test()** function has now finished executing and its EC is popped-off the call stack._
-5. _After 2 seconds, the callback function gets executed._
+### Scenario 4: IIFE and Event Listeners
 
-_Observe that the callback function of the timer was executed completely independent of the **test()**._
-
-_But still the callback function was able to access all the variables which were created in the **test()**._
-
-This happens because closures have priority over scope chain.
-
-&nbsp;
-
-> Example 3: IIFE
+Closures are extremely useful for maintaining state in event listeners attached inside Immediately Invoked Function Expressions (IIFEs).
 
 ```javascript
 (function () {
   const header = document.querySelector("h1");
   header.style.color = "red";
 
-    header.addEventListener("click", function () {
+  header.addEventListener("click", function () {
     this.style.color = "blue";
-    // ‘this’ points to the 'header' element.
+    // 'this' points to the 'header' element.
   });
 })();
-
 ```
 
-_This is an IIFE, and it is invoked immediately._
-
-_But the eventlistner's callback function will be on call stack and waiting for the **click** event to occur and even though the IIFE has finished executing, the callback function will still have access to the **header** element._
+*The IIFE executes immediately and is gone. However, the event listener's callback function sits on the call stack waiting for a click. Even though the IIFE has finished, the callback still retains access to the `header` element via its closure.*
 
 ---
 &nbsp;

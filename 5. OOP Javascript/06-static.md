@@ -1,124 +1,103 @@
-## Static
+## OOP Javascript > Static
 
-> Example 1:
+> 🎯 **Static methods** are functions attached directly to a class or constructor function rather than to its `prototype` object. Because of this, they are called directly on the class itself and are not accessible by the instantiated objects. They are typically used as utility or helper functions related to the class.
+
+---
+&nbsp;
+
+### 1. Built-in Static Methods
+
+JavaScript has many built-in static methods. For example, `Array.from()` and `Array.isArray()` are static methods attached directly to the `Array` constructor. 
 
 ```javascript
-Array.from();
+// Calling the static method directly on the Array constructor
+Array.from("123"); 
+// ["1", "2", "3"]
+
+// ❌ Incorrect: Trying to call it on an instance
+[1, 2, 3, 4].from(); 
+// TypeError: [1, 2, 3, 4].from is not a function
 ```
 
-The `Array.from()` is a static function of Array constructor function it is not present on the prototype property of Array.
+*These methods are designed this way to keep utility functions securely namespaced to the `Array` constructor rather than polluting the prototype of every single array instance.*
+
+### 2. Static Methods in Constructor Functions
+
+You can easily create your own static methods on custom constructor functions simply by attaching a function directly to the constructor object, bypassing the `prototype`.
 
 ```javascript
-[1, 2, 3, 4].from(); // will not work
-```
-
-This means, its not accesible to objects created from Array constructor fn. But it is accesible directly from Array constructor fn.
-
-> Example 2:
-
-```javascript
-Array.isArray();
-```
-
-These(static methods) are made so as to keep them linked to Array only.
-
-We can have such static methods in our user defined ES6 classes or constructor functions.
-
-> Example 3: Static method in constructor function.
-
-```javascript
-const Student = function () {
-  let age = 0;
-  // ...
+const Student = function (name) {
+  this.name = name;
 };
 
-// Add a static method.
+// Attaching a static method directly to the constructor
 Student.hey = function () {
-  console.log("Hey There !");
-
-  this.age = 29;
-  // 'this' inside a static method
-  // points to current
-  // CLASS/Constructor Function.
+  console.log("Hey There!");
+  
+  // 'this' inside a static method points to the Constructor Function itself, 
+  // NOT to any specific instance.
+  console.log(this); 
 };
 
-// Static method call
+// ✅ Correct: Calling it through the Class/Constructor directly
 Student.hey();
-// We are calling it through Class
-// and not by any object.
+// "Hey There!"
+// [Function: Student]
 
-// ❌ Incorrect
+const s1 = new Student("Rahul");
+
+// ❌ Incorrect: Calling it on an instance
 s1.hey();
-// Error: s1.hey is not a function.
-// Because hey() is simply not
-// in Student prototype object.
-
-// Static methods just like in
-// any other programming languages,
-// are called by the Class directly.
-
-// 'this' in static method points
-// to the constructor fn.
-Student.hey = function () {
-  console.log("Hey There !");
-  console.log(this);
-  // Prints the constructor function.
-  // Because, its the constructor
-  // that's calling this method.
-};
+// TypeError: s1.hey is not a function.
+// (Because hey() is not in Student.prototype)
 ```
 
-> Example 4: Static method in ES6 Classes
-> 
-> ```javascript
-> class Student {
->   constructor(name, rollNo) {
->     this.name = name;
->     this.rollNo = rollNo;
->   }
-> 
->   // Methods in ES6 classes are
->   // added to .prototype property
->   // of the Class automatically.
->   show() {
->     console.log(`${this.name}'s Roll No. is ${this.rollNo}`);
->   }
-> 
->   // No comma here OR after
->   // a method in ES6 class
->   show2() {
->     // ...
->   }
-> 
->   // static mehod
->   static hey() {
->     console.log("Heyy");
->   }
-> }
-> 
-> Student.hey();
-> ```
-> 
-> _In the above example, the `show()` and `show2()` are called instance methods and are added to the prototype property of `Student` class._
->
-> _On the other hand, `hey()` is a static method and it is added to the `Student` Class iself._
+### 3. Static Methods in ES6 Classes
 
-Same applies to classes defined using constructor functions.
+ES6 makes defining static methods much cleaner by providing the `static` keyword.
 
-We use static methods to create helpers of class constructor functions.
+```javascript
+class Student {
+  constructor(name, rollNo) {
+    this.name = name;
+    this.rollNo = rollNo;
+  }
 
-_For Arrays, why there are static methods like `from()`, `.fill()` etc? Why they were not added to prototype property of Array constructor function? - Homework :)_
+  // Instance Method: 
+  // Automatically added to the Student.prototype property.
+  show() {
+    console.log(`${this.name}'s Roll No. is ${this.rollNo}`);
+  }
+
+  // Static Method:
+  // Added directly to the Student Class itself, NOT the prototype.
+  static hey() {
+    console.log("Heyy");
+  }
+}
+
+// Accessing the static method
+Student.hey(); 
+// "Heyy"
+
+const s2 = new Student("Raj", 42);
+
+// Accessing the instance method
+s2.show(); 
+// "Raj's Roll No. is 42"
+```
+
+*Whether you use Constructor Functions or ES6 Classes, the underlying mechanics remain identical: static methods act as dedicated helpers bound strictly to the class level.*
 
 ---
-
----
-
+&nbsp;
 <!-- PAGINATION_START -->
 
-**Parent:** [5. OOP Javascript](../5.%20OOP%20Javascript/)
+📁 [5. OOP Javascript](../5.%20OOP%20Javascript/)
 
-**Previous:** ← [ES6 Class's `getter` and `setter`](05-getters-setters.md)
+◀️ [ES6 Class's **getter** and **setter**](05-getters-setters.md)
 
-**Next:** → [Inheritance - Constructor Function](07-inheritance-constructor-fn.md)
+▶️ [Inheritance - Constructor Function](07-inheritance-constructor-fn.md)
 
 <!-- PAGINATION_END -->
+&nbsp;

@@ -1,12 +1,43 @@
-## Higher Order Functions
+## Functions > Higher Order Functions
 
-Fundamental concept of JavaScript.
+> 🎯 A **Higher Order Function** is a fundamental concept in JavaScript. It is a function that either receives another function as an argument, returns a function, or both. The functions being passed or returned are referred to as **First-Class Functions** (or First-Class Citizens).
 
-> A function that receives another function as an argument, or/and returns a function.
+---
+&nbsp;
 
-The functions that are passed/returned are called **_First Class Functions/Citizens_**.
+### 1. Functions Accepting Callback Functions
 
-_For example, **addEventListener()** is a higher order function._
+A common example of a built-in higher-order function is `addEventListener()`. Passing functions as arguments allows us to hide the implementation details (abstraction) and structure our code on a higher level.
+
+```javascript
+// Callback function 1
+const oneWord = function (str) {
+  return str.replace(/ /g, "").toLowerCase();
+};
+
+// Callback function 2
+const upperFirstWord = function (str) {
+  const [first, ...restWords] = str.split(" ");
+  return [first.toUpperCase(), ...restWords].toString();
+};
+
+// Higher-order function:
+const transform = function (str, fn) {
+  console.log(`Original string : ${str} `);
+  console.log(`Modified string : ${fn(str)} `);
+  
+  // A function is also an object and has 'name' as an internal property.
+  console.log(`Modified by function : ${fn.name}`);
+};
+
+// Calling transform() using different methods as parameters
+transform("Rahul is greater", upperFirstWord);
+transform("Rahul is greater", oneWord);
+```
+
+### 2. Functions Returning Functions
+
+Higher-order functions can also return new functions. The returned function remembers the variables from its parent scope even after the parent has finished executing, thanks to **Closures**.
 
 ```javascript
 function count() {
@@ -17,113 +48,70 @@ function count() {
   };
 }
 
-```
-
-### More examples:
-
-> Example 1: _Functions accepting callback functions:_
-
-```javascript
-// Callback function 1
-const oneWord = function (str) {
-  return str.replace(/ /g, "").toLowerCase();
-};
-
-// Callback function 2
-const UpperFirstWord = function (str) {
-  const [first, ...restWords] = str.split(" ");
-  return [first.toUpperCase(), ...restWords].toString();
-};
-
-// Higher order function:
-const transform = function (str, fn) {
-  console.log(`Original string : ${str} `);
-  console.log(`Modified string : ${fn(str)} `);
-  console.log(`Modified by function : ${fn.name}`);
-  // A function is also an object and it has a ‘name’ as one of its internal properties.
-};
-
-// Calling transform() using different methods as parameters.
-transform("Rahul is greater", UpperFirstWord);
-transform("Rahul is greater", oneWord);
-
-```
-
-_In the above example, Abstraction is achieved i.e._
-
-_hiding the details of implementation. This allows us to think more on an abstract level._
-
-&nbsp;
-
-> Example 2: _Functions returning functions_
-
-```javascript
 const greet = function (greeting) {
   return function (name) {
-    console.log(`${greeting} ${name}`);
+    console.log(`${greeting}${name}`);
   };
 };
 
+// greeterHey is now a function returned by greet()
 const greeterHey = greet("Heyy");
-// greeterHey will now be a function which is returned by greet();
 
 // Let's observe the function call now
 greeterHey("Rahul");
 // "Heyy Rahul"
-
-// How is the greeting 'heyy' coming in the function which is already returned.
-// It's because of 'Closures'.
-
 ```
 
-_The above function calls can be also written in one line._
+*These function calls can also be chained in a single line (a technique related to **currying**):*
+
 ```javascript
 greet("Good Morning")("Mr. Rahul");
-
+// "Good Morning Mr. Rahul"
 ```
 
-_Its called currying._
+### 3. Arrow Function Syntax
 
-_And the function definition can also be written using the arrow function:_
+Writing functions that return functions can be streamlined using ES6 arrow functions, leading to very clean and concise code.
+
 ```javascript
-const greet = (greeting) ={
+// Standard arrow function returning a function
+const greet = (greeting) => {
   return function (name) {
-    console.log(` ${greeting} ${name}`);
+    console.log(`${greeting}${name}`);
   };
 };
 
+// Simplified to a one-liner returning another arrow function
+const greetArrow = (greeting) => (name) => console.log(`${greeting}${name}`);
+
+greetArrow("Hello")("Rahul");
+// "Hello Rahul"
 ```
-_OR simply like this:_
-```javascript
-const greetArrow = (greeting) = (name) = console.log(`${greeting} ${name}`);
 
-```
-_See the cleanliness in our code. One arrow function returning another arrow function._
+### 4. Creating Related Functions
 
-&nbsp;
-
-> Example 3: _Creating related functions by returning functions._
+Returning functions allows us to create related, specialized functions based on a common template (often called Factory Functions).
 
 ```javascript
-const addTax = (rate) ={
+const addTax = (rate) => {
   return function (val) {
     return val + val * rate;
   };
 };
 
+// Creating specialized tax calculators based on different rates
 const gst = addTax(18);
-
 const educationCess = addTax(0.05);
 
 let cost = 3499;
 
-gst(cost);
+console.log(gst(cost));
 // 66481
 
-educationCess(cost);
+console.log(educationCess(cost));
 // 3673.95
-
 ```
+
 ---
 &nbsp;
 <!-- PAGINATION_START -->

@@ -1,19 +1,21 @@
-## Optional Chaining (ES 2020)
+## Functions > Optional Chaining (ES 2020)
 
-> It checks if a property or a method exists on an object OR if any value exists on a index of an array.
+> 🎯 Optional chaining (`?.`) allows you to safely access deeply nested properties, methods, or array elements without throwing an error. If the reference is `null` or `undefined`, the expression short-circuits and returns `undefined`.
 
-When checking nested objects, we might come to a point where we have to check if a property/method exists, and if it exists, call/return its value.
+---
+&nbsp;
 
-But then our code gets really messy and cluttered.
+### 1. The Problem: Accessing Nested Properties
 
-Directly accessing a property which we don't know whether exists or not is a bad idea.
+When checking nested objects, we often need to verify if a property or method exists before retrieving its value. Directly accessing a deeply nested property that doesn't exist throws an error _(e.g., `Cannot read property of undefined`)_. 
+
+*Without optional chaining, adding checks for every nested level makes the code messy and cluttered.*
 
 ```javascript
 const user = {
   name: "Rahul",
   age: 25,
   city: "Pune",
-
   workingHours: {
     weekdays: {
       start: 10,
@@ -26,75 +28,62 @@ const user = {
   },
 };
 
-console.log(user.workingHours.monday.start);
+// If 'monday' doesn't exist, this throws an error.
+// console.log(user.workingHours.monday.start); 
 
-```
-
-_In the above example, if **monday** doesn't exist, we get error: `cannot read property of type 'undefined'`
-
-_So we add a check, it works, but it looks little cluttered._
-
-```javascript
+// The old workaround: functional, but cluttered
 if (user.workingHours && user.workingHours.monday) {
   console.log(user.workingHours.monday.start);
 }
-
 ```
 
-Solution:
+### 2. The Solution: `?.` Operator
 
-_With optional chaining we can reduce the above code to this:_
+With optional chaining, you can safely access nested properties in a single line. It returns `undefined` instead of throwing an error. You can also chain multiple optional checks together.
 
 ```javascript
+// Safely accessing a nested property
 console.log(user.workingHours.monday?.start);
 // undefined
 
-```
-
-_This returns **undefined** instead of throwing an error._
-
-We can also chain the checking of object properties like this.
-
-```javascript
+// Chaining multiple optional checks
 console.log(user.workingHours?.monday?.start);
-
+// undefined
 ```
 
-&nbsp;
+### 3. Combining with Nullish Coalescing (`??`)
 
-> Example 1
+Optional chaining works perfectly alongside the nullish coalescing operator (`??`) to provide a default fallback value when a property doesn't exist.
 
 ```javascript
 const days = ["monday", "friday", "weekdays", "weekends"];
 
 for (const day of days) {
+  // Using both operators together
   const startsAt = user.workingHours[day]?.start ?? false;
-  // nullish coalescing operator and optional chaining together.
 
   if (startsAt) {
-    console.log(`On ${day} user starts at ${startsAt}!`);
+    console.log(`On ${day} user starts at${startsAt}!`);
   } else {
     console.log(`On ${day} user doesn't work.`);
   }
 }
-
 ```
 
-&nbsp;
+### 4. Checking if a Method Exists
 
-> Example: Checking if a method exists:
+You can use optional chaining to safely invoke a method only if it actually exists on the object.
 
 ```javascript
 const result = user.showInfo?.(0, 1) ?? "No such method";
 
 console.log(result);
-// 'No such method'
-
+// "No such method"
 ```
 
-&nbsp;
+### 5. Checking Array Elements
 
-> Example: _Also works on array elements; it checks if an array element exists, just like checking a method._
+Optional chaining applies to array elements as well. It safely checks if an array element exists at a specific index, or if the array itself exists before trying to retrieve an item.
 
 ```javascript
 const users = [
@@ -104,28 +93,23 @@ const users = [
   },
 ];
 
+// Checking if a property exists on a specific array index
 console.log(users[0]?.name ?? "users array is empty!");
-// rahul
+// "rahul"
 
 console.log(users[1]?.name ?? "user 1 not found!");
-// user 1 not found
+// "user 1 not found!"
 
-```
 
-&nbsp;
-
-> Example: _Also works on arrays; Return an Array's item with an optional check on the array._
-
-```javascript
 const arr = [1, 2, 3];
 
-// If array 'arr' exists, get its 0th item
+// Checking if the array 'arr' itself exists before accessing its 0th item
 const itm = arr?.[0];
 
 console.log(itm);
-//  1
-
+// 1
 ```
+
 ---
 &nbsp;
 <!-- PAGINATION_START -->

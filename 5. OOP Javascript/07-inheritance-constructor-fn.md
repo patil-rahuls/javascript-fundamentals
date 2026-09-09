@@ -1,194 +1,132 @@
-## Inheritance - Constructor Function
+## OOP Javascript > Inheritance - Constructor Function
 
-> Example:
+> 🎯 Inheritance between constructor functions allows a child class to inherit properties and methods from a parent class. This is achieved by calling the parent constructor using `call()` (to inherit instance properties) and explicitly linking their prototypes using `Object.create()` (to inherit methods).
+
+---
+&nbsp;
+
+### 1. Inheriting Properties (Constructor Borrowing)
+
+To inherit properties from a parent constructor, we call the parent function from inside the child function using the `call()` or `apply()` methods. This ensures the `this` keyword correctly points to the newly created child instance.
 
 ```javascript
-// Class - Furniture
+// Parent Class
 const Furniture = function (brand, margin) {
   this.brand = brand;
   this.margin = margin;
 };
 
-// Add a method to its prototype object.
 Furniture.prototype.getCommisionTax = function () {
   console.log(0.18 * this.margin);
 };
 
-// Class - Sofa
+// Child Class
 const Sofa = function (brand, margin, returnable) {
-  // this.brand = brand;
-  // this.margin = margin;
-
-  // Calling Parent's constructor
-  // fn. using 'call' method.
-  // Remember call(), apply() and bind() ?
-
-  // Furniture(brand, margin); is
-  // not correct. because we cant
-  // call it like a regular fn.
-  // (as it has 'this' keyword).
-
+  // Calling Parent's constructor function using 'call'
+  // We cannot use Furniture(brand, margin) directly because it's a regular function call and 'this' would be undefined.
   Furniture.call(this, brand, margin);
-  // OR
-  Furniture.apply(this, [brand, margin]);
-
+  
+  // Child-specific property
   this.returnable = returnable;
 };
-
-Sofa.prototype.info = function () {
-  console.log(`
-    Commision on ${this.brand} Sofa is ${this.margin}
-    and it is
-    ${this.returnable ? "returnable" : "not returnable"}
-  `);
-};
-
-const s1 = new Sofa("Neelkamal", 15, false);
 ```
 
-_Now we link the `Sofa.prototype` to `Furniture.prototype` object._
+### 2. Inheriting Methods (Linking Prototypes)
 
-```
-Furniture.prototype
-     |
-     | [.__proto__]
-     |
- Sofa.prototype
-     |
-     | [.__proto__]
-     |
-  Obj - s1
-
-```
-
-_We need to make `Furniture.prototype` a prototype(`__proto__`) of `Sofa.prototype`_
-
-_So, we say `Sofa.prototype` is linked to `Furniture.prototype`, and we do that using `Object.create()`_
+To inherit methods, we need to make `Furniture.prototype` the prototype (`__proto__`) of `Sofa.prototype`. 
 
 ```javascript
 // ❌ Incorrect
-Sofa.prototype = Furniture.prototype;
-```
+// Sofa.prototype = Furniture.prototype;
+// This assigns the exact same object reference. Modifying Sofa's prototype would also modify Furniture's prototype!
 
-_If we do this, the constructor functions `Furniture` and `Sofa` will both share same prototype. This is because we are simply assigning an object to another. _Remember obj1 = obj2; (only reference is copied, not the content)__
-
-The correct way to do it would be:
-
-```javascript
 // ✅ Correct
 Sofa.prototype = Object.create(Furniture.prototype);
+
+// Now we can add child-specific methods to the successfully linked prototype chain
+Sofa.prototype.info = function () {
+  console.log(`Commission on ${this.brand} Sofa is${this.margin}`);
+};
+
+const s1 = new Sofa("Neelkamal", 15, false);
+s1.getCommisionTax(); // Successfully inherited from Furniture.prototype
 ```
 
-What we do here is that we LINK `Sofa.prototype` object using a Furniture prototype. (`Furniture.prototype` in this case)
+*When we call a method, JavaScript performs a lookup through the prototype chain. It checks `Sofa.prototype` first, and if it's not there, it travels up the chain to `Furniture.prototype`.*
 
-Now, objects created using `Sofa` cnstructor fn, will have direct access to `Furniture` prototype methods.
-`Sofa` object `s1`can now access `Furniture.prototype` methods.
+### 3. Resetting the Constructor Property
 
-```javascript
-s1.getCommisionTax();
-```
+When we use `Object.create(Furniture.prototype)`, we completely overwrite `Sofa.prototype`. Because of this, its `.constructor` property incorrectly points to the parent (`Furniture`). 
 
-When we call a method using an object, it does a method lookup through prototype chain.
-
-It checks if it is available in object's prototype?
-i.e. `Sofa.prototype`
-
-If not then it checks in the prototype of `Sofa.prototype` i.e. `Furniture.prototype`, hence making a chain of prototypes.
-We can visualize it like this.
-
-```javascript
-console.log(s1.__proto);
-// Sofa.prototype
-
-console.log(s1.__proto.__proto__);
-// Furniture.prototype
-```
-
-Another IMP point here:
-
-If we check the constructor property of `Sofa.prototype` object, it should point back to `Sofa constructor`. But because we have used `Object.create(Furniture.prototype)`, it points to `Furniture`.
+We must manually reset this back to the child constructor.
 
 ```javascript
 console.dir(Sofa.prototype.constructor);
-// Furniture
+// Furniture (Incorrect!)
+
+// Resetting back to original
+Sofa.prototype.constructor = Sofa;
+
+// Checking instances works correctly because the prototype chain is intact:
+console.log(s1 instanceof Sofa);      // true
+console.log(s1 instanceof Furniture); // true
 ```
 
-Solution:
+### 4. Putting It All Together & Function Overriding
+
+Here is a complete example showing property inheritance, method inheritance, constructor resetting, and **function overriding** (where a child provides its own implementation of a parent method).
 
 ```javascript
-Sofa.prototype.constructor = Sofa; // As simple as > that.
-```
-
-All we are doing is that resetting back the `.constructor` property of `Sofa.prototype`.
-
-Now Lets check:
-
-```javascript
-console.log(s1 instanceof Sofa);
-//  true
-
-console.log(s1 instanceof Furniture);
-// true -
-// this is correct because Sofa
-// has inherited from Furniture.
-```
-
-> Example 2
-
-```javascript
-const Car = function(make, currentSpeed){
+// 1. Parent Constructor
+const Car = function(make, currentSpeed) {
   this.make = make;
   this.currentSpeed = currentSpeed;
 };
 
-Car.prototype.accelerate = function(){
+Car.prototype.accelerate = function() {
   this.currentSpeed += 20;
   console.log(`${this.make} is going @ ${this.currentSpeed} KM/H`);
 };
 
-const EV = function(this, make, charge){
-  Car.call(this, make, currentSpeed);
-  this.charge
+// 2. Child Constructor
+const EV = function(make, currentSpeed, charge) {
+  Car.call(this, make, currentSpeed); // Inherit properties
+  this.charge = charge;
 };
 
-// Link the prototypes
+// 3. Link the Prototypes
 EV.prototype = Object.create(Car.prototype);
-// this also changes the '.constructor'
-// property of EV class to 'Car'
 
-// Reset child class's '.constructor'
-// property back to its original.
-// i.e. 'EV'
+// 4. Reset the constructor property
 EV.prototype.constructor = EV;
 
-EV.prototype.chargeBattery = function(chargeTo){
+// 5. Add Child-specific methods
+EV.prototype.chargeBattery = function(chargeTo) {
   this.charge = chargeTo;
 };
 
-// Function overriding.
-EV.prototype.accelerate = function(){
+// 6. Function Overriding
+// JavaScript finds this method first on EV.prototype before reaching Car.prototype
+EV.prototype.accelerate = function() {
   this.currentSpeed += 20;
   this.charge--;
-  return `${this.make} is going at
-    ${this.currentSpeed} KM/H,
-    with a charge of ${this.charge} %
-  `;
+  return `${this.make} is going at ${this.currentSpeed} KM/H, with a charge of${this.charge} %`;
 };
 
+const myTesla = new EV("Tesla", 120, 90);
+console.log(myTesla.accelerate());
+// "Tesla is going at 140 KM/H, with a charge of 89 %"
 ```
 
-_In the scope chain, `EV.prototype.accelerate` will come first, and it will be called. because as I said earlier, it does a method look-up through prototype chain, up till parent's prototype property._
-
 ---
-
----
-
+&nbsp;
 <!-- PAGINATION_START -->
 
-**Parent:** [5. OOP Javascript](../5.%20OOP%20Javascript/)
+📁 [5. OOP Javascript](../5.%20OOP%20Javascript/)
 
-**Previous:** ← [Static](06-static.md)
+◀️ [Static](06-static.md)
 
-**Next:** → [Inheritance - `ES6 Classes`](08-inheritance-ES6-class.md)
+▶️ [Inheritance - **ES6 Classes**](08-inheritance-ES6-class.md)
 
 <!-- PAGINATION_END -->
+&nbsp;

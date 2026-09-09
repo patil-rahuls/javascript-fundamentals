@@ -1,17 +1,23 @@
-## `Promise.any()`
+## Asynchronous Javascript > **`Promise.any()`**
 
-**Promise Combinators** are methods that operate on multiple promises and return a new promise.
+> 🎯 **Promise combinators** are methods that operate on **multiple promises** and return a **new promise**.  
+> **`Promise.any()`** is settled as soon as **any** of the promises you feed it is **fulfilled**.  
+> If **all** of them are **rejected**, it rejects with an **`AggregateError`**.
+
 Three Promise Combinators:
+- **`Promise.race()`**
+- **`Promise.allSettled()`**
+- **`Promise.any()`**
 
-- **Promise.race()**,
-- **Promise.allSettled()**
-- **Promise.any()**
+---
+&nbsp;
 
-**`Promise.any` is settled as soon as any of the promises you feed it is `fulfilled` or when they are `all rejected`, in which case it's rejected with an `AggregateError` array.**
+### 1. How **`Promise.any()`** Works
 
-It takes an array of promises and returns a new promise that resolves as soon as one of the input promises resolves. 
+It takes an **array of promises** and returns a **new promise** that:
 
-If all the input promises reject, it returns a rejected promise with an `AggregateError` array.
+- **resolves** as soon as **one** input promise **fulfills** (with that value)
+- **rejects** only if **every** input promise **rejects** — with an **`AggregateError`** containing all rejection reasons
 
 ```javascript
 const promise1 = new Promise((resolve, reject) => {
@@ -24,22 +30,43 @@ const promise2 = new Promise((resolve, reject) => {
 
 Promise.any([promise1, promise2]).then((result) => console.log(result));
 
-// Output
-//  'Promise 2'
+// Output:
+// "Promise 2"
 ```
+
+> ⚠️ **Important Note:**  
+> Rejections are **ignored** until a fulfillment happens.  
+> Only when **all** promises reject does **`Promise.any()`** reject (with **`AggregateError`**).
+
+### 2. Compared with **`Promise.race()`**
+
+| Method | Wins on | Rejects when |
+|---|---|---|
+| **`Promise.race()`** | First to **settle** (fulfill *or* reject) | That first settlement is a rejection |
+| **`Promise.any()`** | First to **fulfill** | **All** promises reject |
+---
 
 &nbsp;
 
----
+**💡 Tip:**  
+Use **`Promise.any()`** when you only care about the **first success**.  
+Use **`Promise.race()`** when you care about the **first settlement**, success or failure.
+
+
+> ⚠️ 
+>
+>Handle rejection with **`.catch()`** or **`try...catch`**.  
+> On total failure, inspect **`error.errors`** on the **`AggregateError`** to see every rejection reason.
 
 ---
-
+&nbsp;
 <!-- PAGINATION_START -->
 
-**Parent:** [6. Asynchronous Javascript](../6.%20Asynchronous%20Javascript/)
+📁 [6. Asynchronous Javascript](../6.%20Asynchronous%20Javascript/)
 
-**Previous:** ← [`Promise.allSettled()`](06-promise-allSettled.md)
+◀️ [**Promise.allSettled()**](06-promise-allSettled.md)
 
-**Next:** → [`Promise.race()` vs `Promise.any()`](08-promise-race-vs-any.md)
+▶️ [**Promise.race()** vs **Promise.any()**](08-promise-race-vs-any.md)
 
 <!-- PAGINATION_END -->
+&nbsp;

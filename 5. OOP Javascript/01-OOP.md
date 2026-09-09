@@ -1,86 +1,65 @@
-## OOP Basics
+## OOP Javascript > OOP Basics
 
-**Objects** - Real World Entity
-
-**properties** - State
-
-**methods** - Behaviour
-
-We use Objects to model real world or abstract features.
-
-OOP's goal is to organize code, make it flexible and easier to maintain.
-
-How do we model real world data into classes ?
-
-1. **Abstraction** - Hide details of implementation.
-
-2. **Encapsulation** - Keeping some properties and methods private inside a class, so that they are not accessible from outside the world and exposing only essential methods to outside world.
-
-3. **Inheritance** - Reusing some properties and methods from different classes _(real world entities - objects)_
-
-4. **Polymorphism** - `poly` means many, `morph` means forms. Resuing same methods for different purpose. Override methods from parent class. JS does not support fn overloading that we see in C++.
+> 🎯 Object-Oriented Programming (OOP) is a paradigm used to organize code, make it flexible, and easier to maintain. We use **Objects** to model real-world entities, where **properties** represent the state and **methods** represent the behavior.
 
 ---
+&nbsp;
 
-### OOP IN Javascript
+### 1. The 4 Pillars of OOP
 
-```
-Traditional OOP  |        Javascript OOP
+When modeling real-world data into classes, we rely on four core principles:
+
+*   **Abstraction:** Hiding the complex details of the implementation and showing only the essential features to the user.
+*   **Encapsulation:** Keeping some properties and methods private inside a class so they are not accessible from the outside world. We only expose essential methods (the public API) to interact with the object.
+*   **Inheritance:** Reusing properties and methods from parent classes to create specialized child classes.
+*   **Polymorphism:** (*poly* = many, *morph* = forms) Reusing the same method names for different purposes, typically by overriding methods from a parent class. *(Note: JavaScript does not support function overloading like C++ or Java).*
+
+### 2. Traditional OOP vs. JavaScript OOP
+
+JavaScript does not have traditional classes. Instead, it relies on a concept called **Prototypal Inheritance**.
+
+```text
+Traditional OOP  |      Javascript OOP
                  |  
-   Class         |      Prototype (Contain methods)
+   Class         |      Prototype (Contains methods)
      |           |               ^
      |           |               |
      |           |               |
-Instantiation    |  Prototypal Inheritance/Delegation
+Instantiation    |  Prototypal Inheritance / Delegation
      |           |               ^
      |           |               |
      |           |               |
-  Instance       |     Object (Can access methods)
-
+  Instance       |      Object (Can access methods)
 ```
 
-In Javascript, we say `"Objects are linked to a Prototype Object"`.
+In JavaScript, we say **"Objects are linked to a Prototype Object"**.
 
-A `Prototype Object` contains properties(states) and methods (behaviours) that are accessible to all objects linked to it.
+*   A **Prototype Object** contains properties and methods that are accessible to all objects linked to it.
+*   **Delegation:** Behavior (methods) is delegated to the linked Prototype Object. In classic OOP, methods are physically copied from the class to every single instance. In JS, the instances simply look up the chain to the prototype.
+*   *Example:* When you use an array method like `Array.prototype.map()`, `Array.prototype` is the Prototype Object. All arrays you create in JavaScript are linked to it, giving them access to those methods without copying them.
 
-This is called `Prototypal Inheritance`. (This is different than the Inheritance in Java/PHP/C++)
+### 3. How Do We Create Prototype Objects?
 
-### Delegation:
+There are three primary ways to implement prototypal inheritance in JavaScript:
 
-Behaviour(method) is delagated to the linked `Prototype Object`. Whereas in classic OOP, the methods are actually copied from the class to all instances.
-e.g. Array methods.
-In `Array.prototype.map()`
-Here `Array.prototype` is the `Prototype Object` of all arrays that we create in javascript. Therefore all arrays have access to the prototype methods.
+1.  **Constructor Functions:**
+    Creates objects from a standard function. This is how built-in objects like Arrays, Maps, or Sets are actually implemented under the hood (e.g., `new Array(...)`, `new Map(...)`).
+2.  **ES6 Classes:**
+    These work exactly like constructor functions but provide a cleaner, more modern syntax. They are *not* like traditional OOP classes found in Java or C++—they are simply "syntactic sugar" over constructor functions.
+3.  **`Object.create()`:**
+    The most straightforward way to link an object to a prototype. You directly create the Prototype Object and link the new object (instance) to it.
 
-### How do we create prototype objects ?
-
-1. Constructor functions
-
-    Creates objects from function. This is how built-in objects like Arrays, Maps or Sets are actualy implemented.
-
-    `new Array(...)`, `new Set(...)`, `new Map(...)` etc. These are all constructer function calls.
-
-
-2. ES6 Classes
-
-    Work exactly like constructor functions, but with a cleaner syntax. Not like traditional OOP classes (in Java/PHP/C++). They are just an abstraction over the constructor functions. _(syntactic sugar)_
-
-3. Object.create()
-
-    Easiest and straightforward way to link an object to a prototype object. We directly create the `Prototype Object` and link objec (instance) to it.
-
-_Note that the 4 pillars of OOP are still valid with prototypal inheritance._
+*Note: The 4 pillars of OOP are still completely valid and applicable when using JavaScript's prototypal inheritance.*
 
 ---
-
----
-
+&nbsp;
 <!-- PAGINATION_START -->
 
-**Parent:** [5. OOP Javascript](../5.%20OOP%20Javascript/)
+📁 [5. OOP Javascript](../5.%20OOP%20Javascript/)
 
-**Previous:** ← [`How JavaScript Works`](../4.%20How%20Javascript%20Works/)
+◀️ [**How JavaScript Works**](../4.%20How%20Javascript%20Works/)
 
-**Next:** → [Constructor Functions](02.1-contructor-function.md)
+▶️ [Constructor Functions](02.1-contructor-function.md)
 
 <!-- PAGINATION_END -->
+&nbsp;

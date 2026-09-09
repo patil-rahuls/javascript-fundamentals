@@ -1,27 +1,36 @@
-## Polyfills
+## Functions > Polyfills
 
-Intended for Front-end applications.
+> 🎯 A **polyfill** is a piece of code used to provide modern functionality on older browsers that do not natively support it. By manually defining built-in features, you ensure your front-end application remains functional for users on legacy devices or outdated browser versions.
 
-Even though most people use modern browsers. Some users stay on older versions of browsers for stability.
+---
+&nbsp;
 
-In many parts of the world, older mobile devices with outdated browsers are still the primary way people access the web.
+### 1. The Need for Polyfills
 
-However, if our application is using the latest version of JavaScript (which may not be fully supported on older devices), some inbuilt features may break.
+While most users operate on modern browsers, some remain on older versions for system stability. Furthermore, in many parts of the world, older mobile devices with outdated browsers are still the primary way people access the web. 
 
-To fix that, we use **pollyfills**, which is nothing but defining those inbuilt functionalities manually in the code.
+*If your front-end application relies on the latest JavaScript features, those built-in methods will throw errors in older environments. Polyfills fix this by acting as a manual fallback.*
 
-> Example:
+### 2. How a Polyfill Works
 
-If the browser doesn't have it, we write the logic ourselves.
+To write a polyfill, you first check if the browser already supports the specific feature. If it doesn't exist, you manually inject your own logic into the global object or its prototype to mimic the modern behavior.
+
+*Example: Creating a fallback for `Array.prototype.includes` if the browser is too old to have it natively.*
 
 ```javascript
+// 1. Check if the native method is missing from the environment
 if (!Array.prototype.includes) {  
+  
+  // 2. If missing, define it manually on the Array prototype
   Array.prototype.includes = function (searchElement) {
+    // 'this' refers to the array calling the method.
+    // indexOf returns -1 if the element is not found.
     return this.indexOf(searchElement) !== -1;
   };
+  
 }
-
 ```
+
 ---
 &nbsp;
 <!-- PAGINATION_START -->
