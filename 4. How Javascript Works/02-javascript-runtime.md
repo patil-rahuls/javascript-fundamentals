@@ -1,5 +1,7 @@
 ## Javascript Runtime
 
+> 🎯 Understanding how the JavaScript runtime functions in different environments—whether in web browsers or Node.js—helps clarify how asynchronous operations, thread pools, and event loops coordinate execution.
+
 ### Browsers -
 
 - **JS Engine** -

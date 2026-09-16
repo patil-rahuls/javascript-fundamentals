@@ -1,8 +1,10 @@
 ## Arrow Function vs Regular Function
 
-> **this** keyword in arrow function references its outer scope.
+> 🎯 **this** keyword in arrow function references its outer scope.
+---
+&nbsp;
 
-> Example 1
+Example 1
 
 ```javascript
 const obj = {
@@ -17,7 +19,7 @@ obj.show();
 
 _Because in arrow functions, the **this** keyword DOES NOT point to current Object, it points to outer scope; global object in this case._
 
-Solution:
+_Solution:_
 
 ```javascript
 var name = "Hitesh";
@@ -46,7 +48,7 @@ console.log(this.name);
 
 &nbsp;
 
-> Example 3
+Example 3
 
 ```javascript
 const obj = {
@@ -65,7 +67,7 @@ const obj = {
 ```
 _In the example above, we get the error: `Error: Cannot read property 'name' of undefined` because we are calling **innerFn** directly and its **this** keyword is not able refer to any object._
 
-Solution:
+_Solution:_
 
 ```javascript
 const obj = {
@@ -88,7 +90,7 @@ const obj = {
 
 &nbsp;
 
-> Example 4: _ES6 Solution (Modern): - using arrow functions._
+Example 4: _ES6 Solution (Modern): - using arrow functions._
 
 _Because **this** in arrow function references its outer scope._
 
@@ -114,7 +116,7 @@ const obj = {
 
 &nbsp;
 
-> Example 5: _**arguments** keyword is not available in arrow function._
+Example 5: _**arguments** keyword is not available in arrow function._
 
 ```javascript
 // Regular Fn.

@@ -66,6 +66,7 @@ Inside Call Stack
 |  **oldAge**  | **points^** |    29 |             oldAge** points to ****0001****, so **oldAge**=**29 |
 |   **age**    | ****0002****  |    30 | 30** stored @ ****0002**** and **age** now points to ****0002** |
 |            |             |       |
+
 Primitive values don't get mutated. instead, new value gets stored in the Call stack, and the new variable points to that location.
 
 &nbsp;

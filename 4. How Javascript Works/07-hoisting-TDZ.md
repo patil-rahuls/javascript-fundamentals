@@ -1,6 +1,8 @@
 ## Hoisting and TDZ Temporal Dead Zone
 
-> Behavior of variable and function declarations being moved to the top of their scope.
+> 🎯 Behavior of variable and function declarations being moved to the top of their scope.
+---
+&nbsp;
 
 This means that a **var** variable or a **function declaration** can be accessed before it is declared in the code.
 

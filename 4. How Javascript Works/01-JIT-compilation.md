@@ -1,83 +1,63 @@
-## Compilation, Interpretation and JIT
+## Compilation, Interpretation, and JIT
 
-### **Compilation**
-
-Entire source code is compiled into Machine Code (Assembly Code) at once and written to a binary file that can be executed by a computer. This **binary file (Machine Code)** is portable and can be executed way after compilation.
-
-**_Compilation is much faster._**
-
-&nbsp;
-
-### **Interpretation**
-
-Interpreter runs **line by line** through the source code and compiles into Machine Code and executes.
-
-During execution it still needs to convert the source code to Machine Code line by line. However it happens RIGHT BEFORE its executed, and not AHEAD OF TIME.
-
-So, no portable file exists to be executed way after compilation unlike in compiled languages.
-
-**_Slower than compiled languages._**
-
-&nbsp;
-
-### **Just-In-Time** (JIT) Compilation
-
-Entire code is converted into machine code **ALL AT ONCE** and then executed immediately. There is no portable file for execution, and the execution happens immediately after compilation.
-
-**_Lot faster than compiling and executing line by line._**
-
-Javascript is a **Just-In-Time (JIT) compiled** language.
-
----
-
-&nbsp;
-
-## How Javascript's JIT-Compilation process looks like.
-
-### 1. Parsing -
-
-Code is Parsed into AST - **Abstract Syntax Tree**
-
-_AST - Splits each line of code and saves all the peices in a tree like structure._
-
-It is read by Javascript Engine, which also checks for any syntax errors.
-
-### 2. Compilation -
-
-Takes the generated AST and compile it into Machine Code all at once.
-
-### 3. Execution -
-
-The compiled Machine code gets executed immediately. The execution happens in Javascript Engine's **_Call Stack_**.
-
-### 4. Optimization -
-
-During execution, the frequently executed sections of the machine code is identified and optimized and re-compiled during already running program execution multiple times.
-
-After each optimization, the unoptimized code is replaced with the more optimised code, without ever stopping the execution.
-
-_This makes modern JS engine like V8 so powerful and fast._
-
-### 5. Monitoring and Profiling -
-
-While the interpreter runs the code, a built-in monitor **_(profiler)_** watches how often different sections of code are executed.
-
-> _Code that runs a few times is called **warm** and code that runs repeatedly, especially in loops or frequently called functions, is called **hot**._
-
-### 6. Compilation of **Hot** code -
-
-Once a section of code is identified as **hot**, the JIT compiler takes that specific code and compiles it into highly optimized version in machine code.
-
-This is always faster because, its the **machine-code** that is getting optimized, avoiding the line-by-line translation overhead in subsequent runs.
-
-&nbsp;
-
-_All these JIT processes happen in special threads that we can't access which are completely separated from the main thread which executes code in the Call Stack._
-
-More about javascript JIT compilation here - https://medium.com/@aamchora/what-exactly-just-in-time-jit-compilation-is-in-javascript-f7aea482843f
+> 🎯 Understanding how code is executed—whether through ahead-of-time translation, line-by-line interpretation, or advanced Just-In-Time compilation—is fundamental to optimizing performance and understanding modern programming language engines.
 
 ---
 &nbsp;
+
+### 1. Compilation
+*   Entire source code is translated into Machine Code (Assembly Code) all at once and written to a standalone binary file.
+*   Results in a portable binary file that can be executed long after compilation. **_Compilation execution is much faster._**
+
+### 2. Interpretation
+*   Code is read and translated into Machine Code line by line during execution.
+*   No portable file exists for later execution since translation happens right before execution rather than ahead of time. **_Slower than compiled languages._**
+
+### 3. Just-In-Time (JIT) Compilation
+*   Entire code is converted into machine code all at once and executed immediately without creating a portable file.
+*   **_Much faster than compiling and executing line by line._** JavaScript is a **Just-In-Time (JIT) compiled** language.
+
+---
+&nbsp;
+
+## How JavaScript's JIT-Compilation Process Works
+
+> 🎯 Modern JavaScript engines rely on a multi-stage pipeline combining parsing, compilation, execution, optimization, and profiling to achieve near-native execution speeds.
+
+---
+&nbsp;
+
+### 1. Parsing
+*   Code is split and saved into a tree-like structure called an **Abstract Syntax Tree (AST)**.
+*   Read by the JavaScript engine while simultaneously checking for any syntax errors.
+
+### 2. Compilation
+*   Takes the generated AST and compiles it directly into Machine Code all at once.
+*   Prepares the raw machine instructions before handing them over to the execution phase.
+
+### 3. Execution
+*   The compiled machine code executes immediately.
+*   The execution takes place inside the JavaScript engine's **_Call Stack_**.
+
+### 4. Optimization
+*   Frequently executed sections of machine code are identified, optimized, and re-compiled while the program is running.
+*   Unoptimized code is seamlessly replaced with optimized code without stopping execution, making modern engines like V8 extremely fast.
+
+### 5. Monitoring and Profiling
+*   A built-in monitor (**_profiler_**) tracks how often different code sections run.
+*   Code that runs a few times is **warm**, while code running repeatedly (e.g., in loops) is **hot**.
+
+### 6. Compilation of **Hot** Code
+*   The JIT compiler targets identified **hot** code and compiles it into a highly optimized machine-code version.
+*   Avoids line-by-line translation overhead in subsequent runs, maximizing runtime performance.
+
+> _Note: All JIT processes happen in separate background threads, completely isolated from the main thread executing code in the Call Stack._
+
+More about JavaScript JIT compilation [here](https://medium.com/@aamchora/what-exactly-just-in-time-jit-compilation-is-in-javascript-f7aea482843f).
+
+---
+&nbsp;
+
 <!-- PAGINATION_START -->
 
 📁 [4. How Javascript Works](../4.%20How%20Javascript%20Works/)  

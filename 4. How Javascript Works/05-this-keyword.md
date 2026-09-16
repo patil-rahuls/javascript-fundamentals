@@ -1,6 +1,9 @@
 ## **this** Keyword
 
-> **this** refers to the object currently executing the code.
+> 🎯 **this** refers to the object currently executing the code.
+
+---
+&nbsp;
 
 Its value depends on how the function is called.
 
